@@ -1,6 +1,6 @@
 const ABADDON_CONFIG = {
   botInviteUrl: "https://discord.com/oauth2/authorize?client_id=1532237253944934431&permissions=0&integration_type=0&scope=bot%20applications.commands",
-  supportServerUrl: "#",
+  supportServerUrl: "https://discord.gg/Tsy448tje",
 
   version: "v3.3",
   statusText: "ONLINE",
