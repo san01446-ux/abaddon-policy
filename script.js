@@ -1,6 +1,19 @@
 "use strict";
 
 const commands = [
+  {"c": "스토리", "cmd": "!시즌2", "d": "스토리 시즌 2 백색 방주의 현재 진행 상태와 선택지를 확인합니다."},
+  {"c": "스토리", "cmd": "!시즌2 시작", "d": "시즌 1 선택 기록을 계승해 백색 방주 후속 캠페인을 시작합니다."},
+  {"c": "스토리", "cmd": "!시즌2 선택 번호", "d": "현재 장면에서 조건에 맞는 선택지를 골라 이야기를 진행합니다."},
+  {"c": "스토리", "cmd": "!시즌2 기록", "d": "현재 회차의 선택 기록과 발견한 시즌 2 엔딩을 확인합니다."},
+  {"c": "스토리", "cmd": "!시즌2 재시작", "d": "발견 엔딩과 보상 수령 기록을 유지한 채 다른 분기를 시작합니다."},
+  {"c": "원정", "cmd": "!원정 도움말", "d": "턴제 원정 전투의 공격·방어·집중·응급·도주 행동을 안내합니다."},
+  {"c": "원정", "cmd": "!원정 목록", "d": "원정 지역별 레벨, 평판, 스태미나 조건과 위험도를 확인합니다."},
+  {"c": "원정", "cmd": "!원정 출발 지역명", "d": "스태미나를 사용해 선택한 지역의 턴제 전투를 시작합니다."},
+  {"c": "원정", "cmd": "!원정 행동 공격", "d": "진행 중인 원정에서 공격, 방어, 집중, 응급 또는 도주 행동을 수행합니다."},
+  {"c": "원정", "cmd": "!원정 보급", "d": "하루 한 번 원정 응급 키트와 평판 기반 식량 보급을 받습니다."},
+  {"c": "원정", "cmd": "!원정 유물", "d": "원정과 스토리에서 발견한 희귀 유물과 설명을 확인합니다."},
+  {"c": "원정", "cmd": "!원정 기록", "d": "최근 원정의 승리, 실패, 도주와 획득 보상을 확인합니다."},
+  {"c": "원정", "cmd": "!원정 랭킹", "d": "현재 Discord 서버의 원정 평판 상위 생존자를 확인합니다."},
   {"c": "관리", "cmd": "!접수센터도움말", "d": "문의·신고·건의 처리센터의 설치와 운영 명령을 안내합니다."},
   {"c": "관리", "cmd": "!접수초기설정", "d": "문의 카테고리와 처리 로그를 연결하고 유형별 접수 패널을 설치합니다."},
   {"c": "관리", "cmd": "!접수패널", "d": "문의·신고·건의·버그·이의신청 버튼이 있는 비공개 접수 패널을 만듭니다."},
@@ -74,7 +87,7 @@ const categories = ["전체", ...new Set(commands.map((item) => item.c))];
 
 function initSharedUI() {
   const cfg = window.ABADDON_CONFIG || {};
-  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v4.2.3"; });
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v4.3.0"; });
   document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = cfg.statusText || "ONLINE"; });
   document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
   document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
