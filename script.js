@@ -1,15 +1,37 @@
 "use strict";
 
 const commands = [
+  {"c": "장비", "cmd": "!강화 장비명", "d": "고딕 대장간 카드로 강화 결과, 비용, 잔액, 확률, 장인의 열기를 표시하고 재강화·자랑하기 버튼을 제공합니다."},
+  {"c": "장비", "cmd": "!강화기록", "d": "최근 강화 성공·실패·단계 하락 기록 10개를 확인합니다."},
+  {"c": "장비", "cmd": "!강화연출", "d": "강화 단계별 표시 이름 진화와 연속 실패 확률 보정인 장인의 열기를 안내합니다."},
+  {"c": "관리", "cmd": "!실시간피드상태", "d": "홈페이지 공개 API 서버, 봇 연결 상태, 저장된 공개 이벤트와 연동 주소를 확인합니다."},
+  {"c": "관리", "cmd": "!실시간피드 켜기/끄기", "d": "홈페이지에 강화 이정표와 운영진 공개 공지를 표시할지 설정합니다."},
+  {"c": "관리", "cmd": "!실시간공지 내용", "d": "공식 홈페이지 실시간 기록에 공개 운영 공지를 등록합니다. 보안·문의 로그와는 분리됩니다."},
+  {"c": "장비", "cmd": "!신규장비 [티어]", "d": "v4.3.1에 추가된 7티어 신규 장비 21종과 가격·전투력을 확인합니다."},
+  {"c": "경제", "cmd": "!경제밸런스", "d": "장비·의료·펫·기지 성장 비용과 일반 도박·BLACK CASINO 조정 내용을 확인합니다."},
+  {"c": "원정", "cmd": "!유물", "d": "보유 유물, 장착 슬롯, 강화 단계, 유물 가루와 합산 효과를 확인합니다."},
+  {"c": "원정", "cmd": "!유물 장착 이름", "d": "보유한 원정 유물을 최대 2개까지 장착해 전투·보상 효과를 적용합니다."},
+  {"c": "원정", "cmd": "!유물 해제 이름", "d": "장착 중인 원정 유물을 장착 해제합니다."},
+  {"c": "원정", "cmd": "!유물 강화 이름", "d": "유물 가루와 식량을 사용해 유물을 최대 +5까지 강화합니다."},
+  {"c": "원정", "cmd": "!유물 분해 이름 수량", "d": "중복 유물을 분해해 강화에 사용하는 유물 가루를 얻습니다."},
+  {"c": "원정", "cmd": "!원정 장비", "d": "현재 장착한 유물과 공격·방어·회복·보상 합산 효과를 확인합니다."},
+  {"c": "원정", "cmd": "!원정 임무 [주간]", "d": "현재 일일 또는 주간 원정 임무 3개와 진행도를 확인합니다."},
+  {"c": "원정", "cmd": "!원정 임무보상 일일/주간 번호", "d": "완료한 원정 임무의 식량·유물 가루·응급 키트 보상을 수령합니다."},
+  {"c": "원정", "cmd": "!원정 복구", "d": "6시간 이상 방치됐거나 재시작 후 남은 원정 전투 상태를 점검·복구합니다."},
+  {"c": "스토리", "cmd": "!시즌2 장면 [번호]", "d": "지나간 시즌 2 선택 장면 목록과 원문을 다시 확인합니다."},
+  {"c": "스토리", "cmd": "!시즌2 수집", "d": "백색 방주 엔딩 4종의 수집 현황을 확인합니다."},
+  {"c": "스토리", "cmd": "!시즌2 계승", "d": "시즌 1 완료·엔딩·핵심 선택이 시즌 2에 어떻게 계승되는지 확인합니다."},
+  {"c": "스토리", "cmd": "!시즌2 복구", "d": "손상된 시즌 2 장면 포인터를 안전하게 프롤로그로 복구합니다."},
   {"c": "스토리", "cmd": "!시즌2", "d": "스토리 시즌 2 백색 방주의 현재 진행 상태와 선택지를 확인합니다."},
   {"c": "스토리", "cmd": "!시즌2 시작", "d": "시즌 1 선택 기록을 계승해 백색 방주 후속 캠페인을 시작합니다."},
   {"c": "스토리", "cmd": "!시즌2 선택 번호", "d": "현재 장면에서 조건에 맞는 선택지를 골라 이야기를 진행합니다."},
   {"c": "스토리", "cmd": "!시즌2 기록", "d": "현재 회차의 선택 기록과 발견한 시즌 2 엔딩을 확인합니다."},
   {"c": "스토리", "cmd": "!시즌2 재시작", "d": "발견 엔딩과 보상 수령 기록을 유지한 채 다른 분기를 시작합니다."},
-  {"c": "원정", "cmd": "!원정 도움말", "d": "턴제 원정 전투의 공격·방어·집중·응급·도주 행동을 안내합니다."},
+  {"c": "원정", "cmd": "!원정 도움말", "d": "공격·전술 기술·방어·집중·응급·도주와 상태이상·보스 전투를 안내합니다."},
   {"c": "원정", "cmd": "!원정 목록", "d": "원정 지역별 레벨, 평판, 스태미나 조건과 위험도를 확인합니다."},
   {"c": "원정", "cmd": "!원정 출발 지역명", "d": "스태미나를 사용해 선택한 지역의 턴제 전투를 시작합니다."},
-  {"c": "원정", "cmd": "!원정 행동 공격", "d": "진행 중인 원정에서 공격, 방어, 집중, 응급 또는 도주 행동을 수행합니다."},
+  {"c": "원정", "cmd": "!원정 행동 공격", "d": "진행 중인 원정에서 기본 공격을 수행합니다. 전술 기술은 `!원정 행동 기술`을 사용합니다."},
+  {"c": "원정", "cmd": "!원정 행동 기술", "d": "강한 피해와 적 상태이상을 부여하고 3턴 재사용 대기에 들어갑니다."},
   {"c": "원정", "cmd": "!원정 보급", "d": "하루 한 번 원정 응급 키트와 평판 기반 식량 보급을 받습니다."},
   {"c": "원정", "cmd": "!원정 유물", "d": "원정과 스토리에서 발견한 희귀 유물과 설명을 확인합니다."},
   {"c": "원정", "cmd": "!원정 기록", "d": "최근 원정의 승리, 실패, 도주와 획득 보상을 확인합니다."},
@@ -87,7 +109,7 @@ const categories = ["전체", ...new Set(commands.map((item) => item.c))];
 
 function initSharedUI() {
   const cfg = window.ABADDON_CONFIG || {};
-  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v4.3.0"; });
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v4.3.2"; });
   document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = cfg.statusText || "ONLINE"; });
   document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
   document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
@@ -161,4 +183,200 @@ function initCommandPage() {
   renderCommands();
 }
 
-document.addEventListener("DOMContentLoaded", () => { initSharedUI(); initCommandPage(); });
+
+function normalizeFeedBase(value) {
+  return String(value || "").trim().replace(/\/+$/, "");
+}
+
+function formatLiveTime(value) {
+  if (!value) return "방금 전";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "시간 미상";
+  return new Intl.DateTimeFormat("ko-KR", {
+    month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit"
+  }).format(date);
+}
+
+function eventRune(type) {
+  if (type === "enhance") return "⚒";
+  if (type === "announcement") return "☩";
+  if (type === "system") return "†";
+  return "◆";
+}
+
+function renderLiveEvents(events) {
+  const root = document.getElementById("live-events");
+  if (!root) return;
+  root.innerHTML = "";
+  if (!Array.isArray(events) || !events.length) {
+    const empty = document.createElement("article");
+    empty.className = "feed-event feed-placeholder";
+    const rune = document.createElement("span");
+    rune.className = "feed-rune";
+    rune.textContent = "†";
+    const body = document.createElement("div");
+    const title = document.createElement("b");
+    title.textContent = "아직 공개된 종말 기록이 없습니다.";
+    const desc = document.createElement("p");
+    desc.textContent = "강화 이정표 달성 또는 운영진 공개 공지가 등록되면 이곳에 표시됩니다.";
+    body.append(title, desc);
+    empty.append(rune, body);
+    root.appendChild(empty);
+    return;
+  }
+
+  events.forEach((event) => {
+    const card = document.createElement("article");
+    card.className = "feed-event";
+    card.style.setProperty("--event-accent", event.accent || "#a51f36");
+
+    const rune = document.createElement("span");
+    rune.className = "feed-rune";
+    rune.textContent = eventRune(event.type);
+
+    const body = document.createElement("div");
+    const title = document.createElement("b");
+    title.textContent = event.title || "종말 기록";
+    const desc = document.createElement("p");
+    desc.textContent = event.message || "";
+    body.append(title, desc);
+    if (event.actor) {
+      const actor = document.createElement("p");
+      actor.className = "feed-actor";
+      actor.textContent = `— ${event.actor}`;
+      body.appendChild(actor);
+    }
+
+    const meta = document.createElement("span");
+    meta.className = "feed-meta";
+    meta.textContent = formatLiveTime(event.created_at);
+    card.append(rune, body, meta);
+    root.appendChild(card);
+  });
+}
+
+function setLiveState(state, note, mode) {
+  const stateEl = document.getElementById("live-state");
+  const noteEl = document.getElementById("live-state-note");
+  const dot = document.querySelector("[data-live-dot]");
+  if (stateEl) stateEl.textContent = state;
+  if (noteEl) noteEl.textContent = note;
+  if (dot) {
+    dot.classList.remove("online", "offline");
+    if (mode) dot.classList.add(mode);
+  }
+}
+
+async function fetchJson(url, timeoutMs = 6500) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const response = await fetch(url, { cache: "no-store", signal: controller.signal });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return await response.json();
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+
+function initNotificationButton() {
+  const button = document.getElementById("notify-toggle");
+  if (!button) return;
+  if (!("Notification" in window)) {
+    button.textContent = "브라우저 알림 미지원";
+    button.disabled = true;
+    return;
+  }
+  function sync() {
+    if (Notification.permission === "granted") button.textContent = "브라우저 알림 켜짐";
+    else if (Notification.permission === "denied") button.textContent = "브라우저 알림 차단됨";
+    else button.textContent = "브라우저 알림 켜기";
+  }
+  button.addEventListener("click", async () => {
+    try { await Notification.requestPermission(); } catch (_) { /* browser denied */ }
+    sync();
+  });
+  sync();
+}
+
+function notifyNewLiveEvents(events) {
+  if (!("Notification" in window) || Notification.permission !== "granted" || !Array.isArray(events) || !events.length) return;
+  const key = "abaddon-live-last-event";
+  const lastSeen = localStorage.getItem(key);
+  const newest = events[0] && events[0].id;
+  if (!newest) return;
+  if (!lastSeen) {
+    localStorage.setItem(key, newest);
+    return;
+  }
+  const unseen = [];
+  for (const event of events) {
+    if (event.id === lastSeen) break;
+    unseen.push(event);
+  }
+  unseen.reverse().slice(-3).forEach((event) => {
+    try {
+      new Notification(event.title || "ABADDON 실시간 기록", {
+        body: `${event.message || ""}${event.actor ? ` — ${event.actor}` : ""}`,
+        tag: event.id || undefined
+      });
+    } catch (_) { /* notification creation can be blocked */ }
+  });
+  localStorage.setItem(key, newest);
+}
+
+function initLiveFeed() {
+  const root = document.getElementById("live-events");
+  if (!root) return;
+  const cfg = window.ABADDON_CONFIG || {};
+  const base = normalizeFeedBase(cfg.eventFeedUrl);
+  const refreshMs = Math.max(10000, Number(cfg.liveRefreshMs) || 15000);
+  const guilds = document.getElementById("live-guilds");
+  const members = document.getElementById("live-members");
+  const latency = document.getElementById("live-latency");
+  const updated = document.getElementById("live-updated");
+
+  if (!base) {
+    setLiveState("연동 대기", "config.js의 eventFeedUrl에 Render 공개 주소를 입력하세요.", "");
+    return;
+  }
+
+  let running = false;
+  async function refresh() {
+    if (running || document.hidden) return;
+    running = true;
+    try {
+      const [status, feed] = await Promise.all([
+        fetchJson(`${base}/api/status`),
+        fetchJson(`${base}/api/events?limit=8`)
+      ]);
+      const online = Boolean(status.online);
+      setLiveState(
+        online ? "종말 네트워크 연결" : "봇 기동 중",
+        online ? `${status.version || "ABADDON"} · 공개 피드 ${feed.feed_enabled ? "활성" : "정지"}` : "Render가 시작 중이거나 Discord에 재연결 중입니다.",
+        online ? "online" : "offline"
+      );
+      document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = online ? "ONLINE" : "STARTING"; });
+      if (guilds) guilds.textContent = Number(status.guilds || 0).toLocaleString("ko-KR");
+      if (members) members.textContent = Number(status.members || 0).toLocaleString("ko-KR");
+      if (latency) latency.textContent = `${Number(status.latency_ms || 0).toLocaleString("ko-KR")}ms`;
+      if (updated) updated.textContent = formatLiveTime(status.generated_at);
+      renderLiveEvents(feed.events || []);
+      notifyNewLiveEvents(feed.events || []);
+    } catch (error) {
+      setLiveState("신호 두절", "봇 주소, Render 상태와 CORS 설정을 확인하세요.", "offline");
+      document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = "OFFLINE"; });
+      if (updated) updated.textContent = "연결 실패";
+    } finally {
+      running = false;
+    }
+  }
+
+  refresh();
+  const timer = window.setInterval(refresh, refreshMs);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) refresh(); });
+  window.addEventListener("beforeunload", () => window.clearInterval(timer), { once: true });
+}
+
+document.addEventListener("DOMContentLoaded", () => { initSharedUI(); initCommandPage(); initNotificationButton(); initLiveFeed(); });
