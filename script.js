@@ -16,7 +16,7 @@ const commands = [
   {"c": "대화", "cmd": "!교감", "d": "대화, 승인된 기억 등록과 오늘의 질문 참여로 쌓은 사용자별 교감 단계와 진행도를 확인합니다."},
   {"c": "대화", "cmd": "!한마디", "d": "ABADDON 프로젝트에서 새로 작성한 세계관 원문 한마디를 표시합니다."},
   {"c": "대화", "cmd": "!응원 [@유저]", "d": "자신 또는 선택한 멤버에게 짧은 응원 메시지와 자동 리액션을 전합니다."},
-  {"c": "게임", "cmd": "!게임", "d": "191개 기능을 9개 카테고리·즐겨찾기·최근 실행·검색으로 찾고, 상세 미리보기 후 실행합니다. 입력값은 모달 창에서 받습니다."},
+  {"c": "게임", "cmd": "!게임", "d": "195개 기능을 10개 카테고리·즐겨찾기·최근 실행·검색으로 찾고, 상세 미리보기 후 실행합니다. 굴착·보물 카테고리에서 땅파기와 감정 기능을 바로 찾을 수 있습니다."},
   {"c": "스토리", "cmd": "!시즌3", "d": "신규 스토리 시즌 3 종말의 왕좌의 현재 장면과 선택지 드롭다운을 표시합니다."},
   {"c": "스토리", "cmd": "!시즌3 시작", "d": "시즌 1 검은 주파수와 시즌 2 백색 방주의 선택 기록을 계승해 종말의 왕좌 캠페인을 시작합니다."},
   {"c": "스토리", "cmd": "!시즌3 선택 번호", "d": "드롭다운 대신 번호로 현재 장면의 선택지를 진행합니다."},
@@ -193,7 +193,7 @@ const categories = ["전체", ...new Set(commands.map((item) => item.c))];
 
 function initSharedUI() {
   const cfg = window.ABADDON_CONFIG || {};
-  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v6.2.2"; });
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v6.2.3"; });
   document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = cfg.statusText || "ONLINE"; });
   document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
   document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });

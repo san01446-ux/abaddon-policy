@@ -1,6 +1,6 @@
-ABADDON 공식 홈페이지 v6.2.2 업로드 안내
+ABADDON 공식 홈페이지 v6.2.3 업로드 안내
 
 1. 이 ZIP의 파일을 abaddon-policy 저장소 최상위 루트에 덮어씁니다.
 2. config.js의 기존 Discord 초대 링크와 실시간 피드 주소는 유지되어 있습니다.
-3. GitHub Pages 배포가 끝난 뒤 index.html, updates.html, commands.html에서 v6.2.2 표시를 확인합니다.
+3. GitHub Pages 배포가 끝난 뒤 index.html, updates.html, commands.html에서 v6.2.3 표시를 확인합니다.
 4. survival_data.json과 봇 저장소 파일은 이 홈페이지 ZIP에 포함되지 않습니다.
