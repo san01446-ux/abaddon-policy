@@ -1,10 +1,27 @@
 "use strict";
 
 const commands = [
+  {"c": "음성", "cmd": "!음성입장", "d": "현재 들어가 있는 음성 채널로 아바돈을 연결합니다."},
+  {"c": "음성", "cmd": "!말해 내용", "d": "같은 음성 채널에서 입력한 문장을 한국어 TTS로 읽습니다."},
+  {"c": "음성", "cmd": "!음성퇴장", "d": "TTS 대기열을 정리하고 음성 채널에서 퇴장합니다."},
+  {"c": "음성", "cmd": "!TTS 켜기", "d": "현재 텍스트 채널의 일반 메시지를 현재 음성 채널에서 자동 낭독하도록 설정합니다."},
+  {"c": "음성", "cmd": "!TTS 끄기", "d": "자동 낭독을 중지하고 남은 대기열을 비웁니다."},
+  {"c": "음성", "cmd": "!TTS 채널 #채널", "d": "자동 낭독에 사용할 텍스트 채널을 관리자 전용으로 지정합니다."},
+  {"c": "음성", "cmd": "!TTS 목소리 [서현/인준/봉진/국민]", "d": "한국어 TTS 목소리 목록을 확인하거나 서버 목소리를 변경합니다."},
+  {"c": "음성", "cmd": "!TTS 속도 1.0", "d": "TTS 재생 속도를 0.7배부터 1.5배 사이로 설정합니다."},
+  {"c": "음성", "cmd": "!TTS 볼륨 100", "d": "TTS 볼륨을 10%부터 200% 사이로 설정합니다."},
+  {"c": "음성", "cmd": "!TTS 상태", "d": "음성 연결, 자동 낭독 채널, 목소리, 대기열과 의존성 상태를 확인합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 미리보기 고딕", "d": "기존 채널 삭제 없이 고딕·깔끔·커뮤니티 테마 적용 계획을 미리 확인합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 적용 고딕", "d": "인식한 기존 채널의 이름·카테고리·순서를 정돈하고 부족한 필수 채널만 생성합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 되돌리기", "d": "적용 전 자동 백업을 사용해 기존 채널 이름과 위치를 복구합니다."},
+  {"c": "관리", "cmd": "!서버메뉴 생성 [#채널]", "d": "공지·규칙·역할·채팅·봇·문의 채널로 이동하는 링크 버튼 패널을 생성합니다."},
+  {"c": "관리", "cmd": "!서버메뉴 갱신", "d": "현재 채널 구조를 다시 분석해 저장된 서버 이동 메뉴를 갱신합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 빈카테고리", "d": "리뉴얼 뒤 비어 있는 기존 카테고리를 확인하고, 확인 명령으로 빈 카테고리만 안전하게 정리합니다."},
   {"c": "장비", "cmd": "!강화 장비명", "d": "고딕 대장간 카드로 강화 결과, 비용, 잔액, 확률, 장인의 열기를 표시하고 재강화·자랑하기 버튼을 제공합니다."},
   {"c": "장비", "cmd": "!강화기록", "d": "최근 강화 성공·실패·단계 하락 기록 10개를 확인합니다."},
   {"c": "장비", "cmd": "!강화연출", "d": "강화 단계별 표시 이름 진화와 연속 실패 확률 보정인 장인의 열기를 안내합니다."},
-  {"c": "관리", "cmd": "!실시간피드상태", "d": "홈페이지 공개 API 서버, 봇 연결 상태, 저장된 공개 이벤트와 연동 주소를 확인합니다."},
+  {"c": "관리", "cmd": "!실시간피드상태", "d": "Background Worker와 별도 실시간 피드 Web Service의 연결·심박·최근 전송 상태를 확인합니다."},
+  {"c": "관리", "cmd": "!실시간피드테스트", "d": "비밀키 인증으로 테스트 이벤트와 상태 심박을 Web Service에 직접 전송해 연동을 검사합니다."},
   {"c": "관리", "cmd": "!실시간피드 켜기/끄기", "d": "홈페이지에 강화 이정표와 운영진 공개 공지를 표시할지 설정합니다."},
   {"c": "관리", "cmd": "!실시간공지 내용", "d": "공식 홈페이지 실시간 기록에 공개 운영 공지를 등록합니다. 보안·문의 로그와는 분리됩니다."},
   {"c": "장비", "cmd": "!신규장비 [티어]", "d": "v4.3.1에 추가된 7티어 신규 장비 21종과 가격·전투력을 확인합니다."},
@@ -109,7 +126,7 @@ const categories = ["전체", ...new Set(commands.map((item) => item.c))];
 
 function initSharedUI() {
   const cfg = window.ABADDON_CONFIG || {};
-  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v4.3.2"; });
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v4.3.3"; });
   document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = cfg.statusText || "ONLINE"; });
   document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
   document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
@@ -338,7 +355,7 @@ function initLiveFeed() {
   const updated = document.getElementById("live-updated");
 
   if (!base) {
-    setLiveState("연동 대기", "config.js의 eventFeedUrl에 Render 공개 주소를 입력하세요.", "");
+    setLiveState("연동 대기", "config.js의 eventFeedUrl에 별도 피드 Web Service 주소를 입력하세요.", "");
     return;
   }
 
@@ -354,7 +371,7 @@ function initLiveFeed() {
       const online = Boolean(status.online);
       setLiveState(
         online ? "종말 네트워크 연결" : "봇 기동 중",
-        online ? `${status.version || "ABADDON"} · 공개 피드 ${feed.feed_enabled ? "활성" : "정지"}` : "Render가 시작 중이거나 Discord에 재연결 중입니다.",
+        online ? `${status.version || "ABADDON"} · 공개 피드 ${feed.feed_enabled ? "활성" : "정지"}` : "피드 Web Service가 깨어나는 중이거나 Background Worker 심박이 아직 도착하지 않았습니다.",
         online ? "online" : "offline"
       );
       document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = online ? "ONLINE" : "STARTING"; });
@@ -365,7 +382,7 @@ function initLiveFeed() {
       renderLiveEvents(feed.events || []);
       notifyNewLiveEvents(feed.events || []);
     } catch (error) {
-      setLiveState("신호 두절", "봇 주소, Render 상태와 CORS 설정을 확인하세요.", "offline");
+      setLiveState("신호 두절", "피드 Web Service 주소, Render 상태와 CORS 허용 주소를 확인하세요.", "offline");
       document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = "OFFLINE"; });
       if (updated) updated.textContent = "연결 실패";
     } finally {
