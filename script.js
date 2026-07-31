@@ -20,8 +20,9 @@ const commands = [
   {"c": "음성", "cmd": "!TTS 기본목소리 이름", "d": "관리자가 접두사 명령으로 서버 기본 목소리를 변경합니다."},
   {"c": "음성", "cmd": "!TTS 속도 1.0", "d": "TTS 재생 속도를 0.7배부터 1.5배 사이로 설정합니다."},
   {"c": "음성", "cmd": "!TTS 볼륨 100", "d": "TTS 볼륨을 10%부터 200% 사이로 설정합니다."},
-  {"c": "음성", "cmd": "!TTS 상태", "d": "음성 연결, 자동 입장, 낭독 채널, 목소리와 대기열 상태를 확인합니다."},
+  {"c": "음성", "cmd": "!TTS 상태", "d": "음성 연결, 자동 입장, 낭독 채널, 최근 대체 음성과 Edge 임시 격리 상태를 확인합니다."},
   {"c": "음성", "cmd": "!TTS 진단", "d": "PyNaCl·davey·edge-tts·FFmpeg와 Python 음성 실행 환경을 진단합니다."},
+  {"c": "음성", "cmd": "!TTS 음성격리초기화", "d": "관리자가 반복 실패로 임시 격리된 Edge 목소리와 전체 합성 백오프를 초기화합니다."},
   {"c": "관리", "cmd": "!인삿말설정 #환영 #공지 #규칙 [#가입]", "d": "신규 멤버 환영 메시지에 공지사항·기본규칙·가입 채널 링크를 설정합니다."},
   {"c": "관리", "cmd": "!인삿말미리보기", "d": "현재 신규 멤버 환영 메시지를 실제 전송 전에 확인합니다."},
   {"c": "관리", "cmd": "!인삿말상태", "d": "환영·공지·규칙·가입 안내 채널 설정을 확인합니다."},
@@ -38,6 +39,9 @@ const commands = [
   {"c": "관리", "cmd": "!서버리뉴얼 복구상태", "d": "단계별 복구 진행률, 다음 항목, 재실행 가능 시간을 확인합니다."},
   {"c": "관리", "cmd": "!서버리뉴얼 다음", "d": "승인된 테마 계획에서 Discord 변경 한 개만 실행합니다. 안내된 안전 대기시간 뒤 반복합니다."},
   {"c": "관리", "cmd": "!서버리뉴얼 계획상태", "d": "테마 적용 계획의 진행률, 다음 작업과 재실행 가능 시간을 확인합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 자동시작", "d": "현재 미완료 리뉴얼 또는 복구 계획을 5분 안전 간격으로 한 단계씩 자동 진행합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 자동상태", "d": "자동 진행 모드, 진행률, 다음 실행시간과 마지막 중지 이유를 확인합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 자동중지", "d": "자동 실행만 일시정지하고 현재 계획과 진행률은 그대로 보존합니다."},
   {"c": "관리", "cmd": "!서버리뉴얼 계획취소", "d": "남은 테마 적용 계획을 취소하고 추가 변경을 막습니다."},
   {"c": "관리", "cmd": "!서버리뉴얼 중지", "d": "현재 단계별 리뉴얼·복구 작업을 안전하게 중지합니다."},
   {"c": "관리", "cmd": "!서버리뉴얼 작업상태", "d": "리뉴얼 작업 진행 여부와 마지막 종료 상태를 확인합니다."},
@@ -156,7 +160,7 @@ const categories = ["전체", ...new Set(commands.map((item) => item.c))];
 
 function initSharedUI() {
   const cfg = window.ABADDON_CONFIG || {};
-  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v5.0.4"; });
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v5.2.0"; });
   document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = cfg.statusText || "ONLINE"; });
   document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
   document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
