@@ -1,6 +1,12 @@
 "use strict";
 
 const commands = [
+  {"c": "게임", "cmd": "!게임", "d": "9개 카테고리에서 주요 RPG·전투·원정·카지노·생활·길드·펫 기능을 드롭다운으로 실행합니다. 입력값은 모달 창에서 받습니다."},
+  {"c": "스토리", "cmd": "!시즌3", "d": "신규 스토리 시즌 3 종말의 왕좌의 현재 장면과 선택지 드롭다운을 표시합니다."},
+  {"c": "스토리", "cmd": "!시즌3 시작", "d": "시즌 1 검은 주파수와 시즌 2 백색 방주의 선택 기록을 계승해 종말의 왕좌 캠페인을 시작합니다."},
+  {"c": "스토리", "cmd": "!시즌3 선택 번호", "d": "드롭다운 대신 번호로 현재 장면의 선택지를 진행합니다."},
+  {"c": "스토리", "cmd": "!시즌3 기록", "d": "현재 회차의 선택 기록과 발견한 시즌 3 엔딩 4종을 확인합니다."},
+  {"c": "스토리", "cmd": "!시즌3 재시작", "d": "발견 엔딩과 이미 받은 선택 보상을 유지한 채 다른 분기를 시작합니다."},
   {"c": "관리", "cmd": "!아바돈진단", "d": "Discord 연결·데이터 파일·TTS·서버 리뉴얼·슬래시·홈페이지 피드·봇 권한을 드롭다운에서 통합 점검합니다."},
   {"c": "관리", "cmd": "!설정", "d": "TTS 채널·엔진·기본 목소리, 환영 안내 채널, 운영 로그, 자동 이모지와 홈페이지 공개 피드를 드롭다운에서 관리합니다."},
   {"c": "음성", "cmd": "!음성입장", "d": "현재 들어가 있는 음성 채널로 아바돈을 연결합니다."},
@@ -162,7 +168,7 @@ const categories = ["전체", ...new Set(commands.map((item) => item.c))];
 
 function initSharedUI() {
   const cfg = window.ABADDON_CONFIG || {};
-  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v5.2.1"; });
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v6.0.0"; });
   document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = cfg.statusText || "ONLINE"; });
   document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
   document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
