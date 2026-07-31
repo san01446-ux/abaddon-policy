@@ -1,5 +1,6 @@
-ABADDON 공식 홈페이지 v5.0.2 업로드 안내
+ABADDON 공식 홈페이지 v5.0.3 업로드 안내
 
-1. ZIP 안의 파일을 abaddon-policy 저장소 최상위 루트에 덮어씁니다.
-2. config.js의 기존 liveFeedUrl 및 공개 피드 설정은 유지되어 있습니다.
-3. GitHub Pages 배포가 끝나면 최신 버전 v5.0.2와 TTS 내용 전용 낭독 기록을 확인합니다.
+1. 이 ZIP의 파일을 abaddon-policy 저장소 최상위 루트에 덮어씁니다.
+2. 기존 config.js의 publicFeedUrl/publicFeedRelayUrl 값이 커스텀되어 있다면 업로드 전 해당 값을 보존합니다.
+3. GitHub Pages 배포가 끝나면 최신 버전 v5.0.3과 TTS 합성 복구 기록을 확인합니다.
+4. 이 홈페이지 ZIP에는 봇 데이터와 survival_data.json이 포함되지 않습니다.
