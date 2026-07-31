@@ -1,3 +1,7 @@
-ABADDON 공식 홈페이지 v5.2.0
-abaddon-policy 저장소 최상위 루트에 파일을 덮어쓰세요.
-config.js의 기존 Discord 초대 링크와 실시간 피드 주소는 유지됩니다.
+ABADDON 공식 홈페이지 v5.2.1 업로드 안내
+
+1. 이 ZIP의 index.html, commands.html, updates.html, config.js, script.js, style.css를 abaddon-policy 저장소 최상위 루트에 덮어씁니다.
+2. 기존 실시간 피드 주소와 Discord 초대 링크는 유지되어 있습니다.
+3. GitHub Pages 배포가 끝나면 홈페이지에 v5.2.1과 !아바돈진단, !설정 명령이 표시되는지 확인합니다.
+
+주의: 이 ZIP은 홈페이지 전용입니다. Discord 봇 저장소에는 업로드하지 마세요.

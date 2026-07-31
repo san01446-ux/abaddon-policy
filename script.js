@@ -1,6 +1,8 @@
 "use strict";
 
 const commands = [
+  {"c": "관리", "cmd": "!아바돈진단", "d": "Discord 연결·데이터 파일·TTS·서버 리뉴얼·슬래시·홈페이지 피드·봇 권한을 드롭다운에서 통합 점검합니다."},
+  {"c": "관리", "cmd": "!설정", "d": "TTS 채널·엔진·기본 목소리, 환영 안내 채널, 운영 로그, 자동 이모지와 홈페이지 공개 피드를 드롭다운에서 관리합니다."},
   {"c": "음성", "cmd": "!음성입장", "d": "현재 들어가 있는 음성 채널로 아바돈을 연결합니다."},
   {"c": "음성", "cmd": "!말해 내용", "d": "같은 음성 채널에서 입력한 내용만 한국어 TTS로 읽으며 닉네임은 생략합니다."},
   {"c": "음성", "cmd": "!음성퇴장", "d": "TTS 대기열을 정리하고 음성 채널에서 퇴장합니다."},
@@ -160,7 +162,7 @@ const categories = ["전체", ...new Set(commands.map((item) => item.c))];
 
 function initSharedUI() {
   const cfg = window.ABADDON_CONFIG || {};
-  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v5.2.0"; });
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v5.2.1"; });
   document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = cfg.statusText || "ONLINE"; });
   document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
   document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
