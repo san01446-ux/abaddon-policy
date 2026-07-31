@@ -193,7 +193,7 @@ const categories = ["전체", ...new Set(commands.map((item) => item.c))];
 
 function initSharedUI() {
   const cfg = window.ABADDON_CONFIG || {};
-  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v6.2.3"; });
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v6.2.4"; });
   document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = cfg.statusText || "ONLINE"; });
   document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
   document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
