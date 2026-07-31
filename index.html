@@ -26,23 +26,23 @@
       <div class="hero-copy-wrap">
         <div class="eyebrow">THE BLACK CATHEDRAL · VOICE PROTOCOL</div>
         <h1>검은 성역에<br><span>목소리를 깨워라.</span></h1>
-        <p class="hero-copy">지정한 텍스트 채널의 대화를 감지해 아바돈이 음성 채널로 자동 입장하고 읽습니다. 신규 멤버 인삿말에는 공지사항·서버 기본규칙·생존자 등록 안내가 바로 연결되며, 서버 리뉴얼은 Discord 제한을 고려해 안전한 속도로 진행됩니다.</p>
+        <p class="hero-copy">사용자별 TTS 목소리는 그대로 유지하면서, 서버 리뉴얼은 7종 테마·다중 복구 지점·생성 항목 추적·선택형 빈 카테고리 삭제로 더 안전해졌습니다.</p>
         <div class="hero-actions"><a class="button primary" data-bot-link href="#">＋ 아바돈 소환하기</a><a class="button secondary" href="#live">실시간 기록 보기 →</a></div>
-        <div class="status-row"><span class="pill"><span class="status-dot" data-live-dot></span><b data-status>AWAITING SIGNAL</b></span><span class="pill">LATEST <b data-version>v4.3.3.2</b></span><span class="pill" data-status-note>AUTO VOICE · WELCOME GUIDE HOTFIX</span></div>
+        <div class="status-row"><span class="pill"><span class="status-dot" data-live-dot></span><b data-status>AWAITING SIGNAL</b></span><span class="pill">LATEST <b data-version>v4.3.3.4</b></span><span class="pill" data-status-note>RENEWAL RECOVERY · 7 THEMES</span></div>
       </div>
       <div class="core-card gothic-arch">
         <div class="core-card-inner">
-          <span class="version-chip" data-version>v4.3.3.2</span>
+          <span class="version-chip" data-version>v4.3.3.4</span>
           <div class="sigil" aria-hidden="true"><span></span></div>
           <h2>ABADDON<br>VOICE</h2>
-          <p>텍스트가 음성으로 흐르고, 새 생존자는 공지와 규칙을 한눈에 확인하며 성역에 들어옵니다.</p>
+          <p>채널을 정돈한 뒤에도 복구 지점을 고를 수 있고, 봇이 만든 빈 항목만 추적해 안전하게 되돌립니다.</p>
           <div class="check-list">
-            <div class="check-item"><span class="check-icon">†</span><span>지정 채널 메시지 감지 · 음성방 자동 입장 낭독</span></div>
-            <div class="check-item"><span class="check-icon">†</span><span>대기열·쿨다운·링크·멘션 안전 필터</span></div>
-            <div class="check-item"><span class="check-icon">†</span><span>BOT GAME·말해라·테스트 구역 자동 인식</span></div>
-            <div class="check-item"><span class="check-icon">†</span><span>채널 이동 버튼이 있는 서버 메뉴</span></div>
+            <div class="check-item"><span class="check-icon">†</span><span>사용자별 목소리 저장 · 자동 입장 낭독</span></div>
+            <div class="check-item"><span class="check-icon">†</span><span>10종 한국어 음성 · 드롭다운 미리듣기</span></div>
+            <div class="check-item"><span class="check-icon">†</span><span>7종 테마 · 일반·게임·음성 구역 통합 정리</span></div>
+            <div class="check-item"><span class="check-icon">†</span><span>복구 지점 선택 · 빈 카테고리 드롭다운 삭제</span></div>
           </div>
-          <div class="mini-stats"><div class="mini-stat"><b>5</b><span>정리 구역</span></div><div class="mini-stat"><b>3</b><span>서버 테마</span></div><div class="mini-stat"><b>0</b><span>슬래시 증가</span></div></div>
+          <div class="mini-stats"><div class="mini-stat"><b>7</b><span>리뉴얼 테마</span></div><div class="mini-stat"><b>5</b><span>복구 지점</span></div><div class="mini-stat"><b>0</b><span>데이터 초기화</span></div></div>
         </div>
       </div>
     </div>
@@ -76,11 +76,11 @@
     <div class="container">
       <div class="section-head"><div><div class="eyebrow">VOICE & SANCTUARY</div><h2>목소리와 질서가 깨어나는 성역</h2></div><p>검은 성역의 기록이 실시간으로 깨어나고, 서버의 길은 더 짧고 선명하게 이어집니다.</p></div>
       <div class="card-grid">
-        <article class="feature-card"><div class="feature-icon">🔊</div><h3>자동 입장 TTS</h3><p>텍스트 채널과 음성 채널을 한 번 지정하면, 작성자가 음성방에 없어도 아바돈이 자동 입장해 읽습니다.</p><div class="command-sample">!채널설정 #텍스트 음성채널</div></article>
-        <article class="feature-card"><div class="feature-icon">🩺</div><h3>TTS 실행 진단</h3><p>Python·PyNaCl·edge-tts·FFmpeg 상태를 확인하고 실제 음성 오류를 정확히 표시합니다.</p><div class="command-sample">!TTS 진단</div></article>
+        <article class="feature-card"><div class="feature-icon">🎙️</div><h3>사용자별 목소리 10종</h3><p>일반 사용자가 자신의 음성을 드롭다운으로 선택하며 다른 사람이나 서버 기본값은 변경하지 않습니다.</p><div class="command-sample">/tts 목소리</div></article>
+        <article class="feature-card"><div class="feature-icon">▶️</div><h3>목소리 미리듣기</h3><p>선택 전 음성을 지정된 음성 채널에서 시험하고, 개인 설정을 초기화해 서버 기본값으로 돌아갈 수 있습니다.</p><div class="command-sample">/tts 미리듣기</div></article>
         <article class="feature-card"><div class="feature-icon">👋</div><h3>신규 생존자 인삿말</h3><p>환영 메시지에 공지사항·서버 기본규칙·가입 채널을 연결하고 `!가입 생존자` 시작법을 안내합니다.</p><div class="command-sample">!인삿말설정</div></article>
-        <article class="feature-card"><div class="feature-icon">🧭</div><h3>서버 이동 메뉴</h3><p>공지·규칙·역할·채팅·봇·문의 채널로 바로 이동하는 링크 버튼 패널을 만듭니다.</p><div class="command-sample">!서버메뉴 생성</div></article>
-        <article class="feature-card"><div class="feature-icon">⚒️</div><h3>검은 대장간</h3><p>고딕 강화 카드, 장인의 열기, 재강화·자랑하기 버튼과 공개 강화 기록을 이어갑니다.</p><div class="command-sample">!강화 장비명</div></article>
+        <article class="feature-card"><div class="feature-icon">🎨</div><h3>서버 리뉴얼 7테마</h3><p>깔끔·고딕·커뮤니티·미니멀·사이버·아포칼립스·판타지 테마를 미리보고 적용합니다.</p><div class="command-sample">!서버리뉴얼 테마목록</div></article>
+        <article class="feature-card"><div class="feature-icon">↩️</div><h3>복구 지점과 선택 삭제</h3><p>최근 복구 지점 최대 5개를 보관하고, 빈 카테고리는 드롭다운이나 번호로 골라 삭제합니다.</p><div class="command-sample">!서버리뉴얼 빈카테고리선택</div></article>
         <article class="feature-card"><div class="feature-icon">📡</div><h3>실시간 종말 기록</h3><p>봇 상태와 공개 강화·공지 이벤트가 별도 피드 서비스에서 홈페이지로 안전하게 흐릅니다.</p><div class="command-sample">!실시간피드테스트</div></article>
       </div>
     </div>
