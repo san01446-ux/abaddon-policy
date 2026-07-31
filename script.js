@@ -1,55 +1,161 @@
 const commands = [
- {c:"시작",cmd:"!가입 생존자",d:"아바돈 생존자 계정을 생성합니다."},
- {c:"시작",cmd:"!튜토리얼",d:"초보자 튜토리얼 진행 상황을 확인합니다."},
- {c:"캐릭터",cmd:"!정보",d:"레벨, 경험치, 체력, 감염도 등 내 상태를 확인합니다."},
- {c:"캐릭터",cmd:"!인벤토리",d:"보유 아이템과 장비를 확인합니다."},
- {c:"전투",cmd:"!탐색",d:"지역을 탐색하고 전투와 보상을 획득합니다."},
- {c:"전투",cmd:"!던전",d:"던전 콘텐츠와 관련 명령을 확인합니다."},
- {c:"전투",cmd:"!침공",d:"현재 진행 중인 서버 침공을 확인합니다."},
- {c:"수집",cmd:"!도감",d:"몬스터, 아이템, 펫 수집 현황을 확인합니다."},
- {c:"수집",cmd:"!도감보상",d:"도감 달성 보상을 수령합니다."},
- {c:"스토리",cmd:"!스토리",d:"스토리 시즌과 현재 진행도를 확인합니다."},
- {c:"스토리",cmd:"!스토리 시작",d:"검은 주파수 스토리를 시작합니다."},
- {c:"스토리",cmd:"!스토리 선택 1",d:"현재 장면에서 선택지를 결정합니다."},
- {c:"생활",cmd:"!제작",d:"보유 재료로 아이템을 제작합니다."},
- {c:"생활",cmd:"!상점",d:"상점의 판매 아이템을 확인합니다."},
- {c:"생활",cmd:"!출석",d:"일일 출석 보상을 받습니다."},
- {c:"커뮤니티",cmd:"!길드",d:"길드 관련 기능을 확인합니다."},
- {c:"커뮤니티",cmd:"!파티",d:"파티 관련 기능을 확인합니다."},
- {c:"이벤트",cmd:"!퀴즈알림상태",d:"서버의 일일 퀴즈 알림 상태를 확인합니다."},
- {c:"관리",cmd:"!서버설정",d:"현재 서버에 적용된 설정을 확인합니다."},
- {c:"도움말",cmd:"!명령어",d:"봇의 전체 명령어 안내를 확인합니다."}
+  {"c": "시작", "cmd": "!가입 생존자", "d": "생존자 계정을 생성하고 아바돈 RPG를 시작합니다."},
+  {"c": "시작", "cmd": "!튜토리얼", "d": "초보자 튜토리얼 진행 상황과 다음 목표를 확인합니다."},
+  {"c": "시작", "cmd": "!도움말", "d": "카테고리별 핵심 명령어를 확인합니다."},
+  {"c": "캐릭터", "cmd": "!정보", "d": "레벨, 경험치, 체력, 감염도와 성장 정보를 확인합니다."},
+  {"c": "캐릭터", "cmd": "!지갑", "d": "보유 식량과 경제 상태를 확인합니다."},
+  {"c": "캐릭터", "cmd": "!인벤토리", "d": "보유 아이템, 재료와 장비를 확인합니다."},
+  {"c": "캐릭터", "cmd": "!장비", "d": "현재 장착 장비와 능력치를 확인합니다."},
+  {"c": "캐릭터", "cmd": "!칭호", "d": "보유 칭호를 확인하거나 장착합니다."},
+  {"c": "전투", "cmd": "!탐색", "d": "폐허를 탐색하고 전투, 이벤트와 보상을 획득합니다."},
+  {"c": "전투", "cmd": "!던전 약함", "d": "약함 난이도 던전에 입장합니다."},
+  {"c": "전투", "cmd": "!던전 보통", "d": "보통 난이도 던전에 입장합니다."},
+  {"c": "전투", "cmd": "!심층던전", "d": "층이 올라갈수록 강해지는 심층 던전에 도전합니다."},
+  {"c": "전투", "cmd": "!던전기록", "d": "던전 클리어와 보스 처치 기록을 확인합니다."},
+  {"c": "전투", "cmd": "!월드보스", "d": "현재 월드 보스 상태와 남은 체력을 확인합니다."},
+  {"c": "전투", "cmd": "!월드보스공격", "d": "월드 보스를 공격하고 기여도를 획득합니다."},
+  {"c": "전투", "cmd": "!침공", "d": "서버 침공 현황을 확인합니다."},
+  {"c": "전투", "cmd": "!참전", "d": "진행 중인 서버 침공에 참가합니다."},
+  {"c": "전투", "cmd": "!침공공격", "d": "침공 보스를 공격합니다."},
+  {"c": "장비", "cmd": "!상점", "d": "구매 가능한 장비와 물품을 확인합니다."},
+  {"c": "장비", "cmd": "!구매", "d": "상점에서 장비나 물품을 구매합니다."},
+  {"c": "장비", "cmd": "!장착", "d": "보유 장비를 착용합니다."},
+  {"c": "장비", "cmd": "!해제", "d": "현재 장착한 장비를 해제합니다."},
+  {"c": "장비", "cmd": "!강화", "d": "장비 강화에 도전합니다."},
+  {"c": "장비", "cmd": "!보호강화", "d": "보호권을 사용해 강화 파괴 위험을 줄입니다."},
+  {"c": "장비", "cmd": "!장비옵션", "d": "장비의 추가 옵션을 확인합니다."},
+  {"c": "장비", "cmd": "!옵션재설정", "d": "옵션 재설정권으로 장비 옵션을 변경합니다."},
+  {"c": "장비", "cmd": "!세트효과", "d": "장착 중인 장비의 세트 효과를 확인합니다."},
+  {"c": "생활", "cmd": "!출석", "d": "일일 출석 보상을 받습니다."},
+  {"c": "생활", "cmd": "!알바", "d": "식량을 얻는 일일 알바에 도전합니다."},
+  {"c": "생활", "cmd": "!직업목록", "d": "선택 가능한 생존 직업을 확인합니다."},
+  {"c": "생활", "cmd": "!직업선택", "d": "생존 직업을 선택합니다."},
+  {"c": "생활", "cmd": "!직업정보", "d": "현재 직업의 효과와 성장 정보를 확인합니다."},
+  {"c": "생활", "cmd": "!제작", "d": "재료를 사용해 생존 아이템을 제작합니다."},
+  {"c": "생활", "cmd": "!생활숙련도", "d": "생활 콘텐츠 숙련도와 보너스를 확인합니다."},
+  {"c": "상태", "cmd": "!상태", "d": "허기, 갈증, 피로 등 생존 상태를 확인합니다."},
+  {"c": "상태", "cmd": "!휴식", "d": "휴식하여 일부 생존 수치를 회복합니다."},
+  {"c": "상태", "cmd": "!의약품", "d": "보유 의약품을 확인합니다."},
+  {"c": "상태", "cmd": "!사용", "d": "아이템이나 의약품을 사용합니다."},
+  {"c": "상태", "cmd": "!병원", "d": "병원 치료 기능을 이용합니다."},
+  {"c": "펫", "cmd": "!펫", "d": "현재 동행 펫의 상태와 펫 메뉴를 확인합니다."},
+  {"c": "펫", "cmd": "!펫상점", "d": "구매 가능한 펫과 고유 능력을 확인합니다."},
+  {"c": "펫", "cmd": "!펫구매", "d": "새로운 펫을 구매합니다."},
+  {"c": "펫", "cmd": "!펫목록", "d": "보유한 모든 펫과 성장 상태를 확인합니다."},
+  {"c": "펫", "cmd": "!펫장착", "d": "동행할 펫을 교체합니다."},
+  {"c": "펫", "cmd": "!펫먹이", "d": "펫에게 먹이를 주어 친밀도와 경험치를 올립니다."},
+  {"c": "펫", "cmd": "!펫모험", "d": "펫을 모험에 보내 보상을 획득합니다."},
+  {"c": "펫", "cmd": "!펫진화", "d": "조건을 충족한 펫을 진화시킵니다."},
+  {"c": "카지노", "cmd": "!카지노", "d": "BLACK CASINO 로비와 전체 콘텐츠를 확인합니다."},
+  {"c": "카지노", "cmd": "!카지노칩", "d": "카지노 칩 보유량과 교환 정보를 확인합니다."},
+  {"c": "카지노", "cmd": "!카지노환전", "d": "식량과 카지노 칩을 교환합니다."},
+  {"c": "카지노", "cmd": "!블랙잭", "d": "히트, 스탠드, 더블다운이 가능한 블랙잭입니다."},
+  {"c": "카지노", "cmd": "!하이로우", "d": "다음 카드가 높을지 낮을지 맞혀 연승 배당을 노립니다."},
+  {"c": "카지노", "cmd": "!슬롯", "d": "릴 애니메이션과 누적 잭팟이 있는 슬롯입니다."},
+  {"c": "카지노", "cmd": "!다이스", "d": "주사위 결과에 배팅합니다."},
+  {"c": "카지노", "cmd": "!바카라", "d": "플레이어, 뱅커 또는 타이에 배팅합니다."},
+  {"c": "카지노", "cmd": "!럭키휠", "d": "보상과 위험이 섞인 럭키휠을 돌립니다."},
+  {"c": "카지노", "cmd": "!코인플립", "d": "앞면과 뒷면 중 하나에 배팅합니다."},
+  {"c": "카지노", "cmd": "!올인", "d": "보유 칩을 모두 거는 고위험 게임입니다."},
+  {"c": "카지노", "cmd": "!카지노VIP", "d": "VIP 등급과 혜택을 확인합니다."},
+  {"c": "카지노", "cmd": "!카지노잭팟", "d": "전 서버 공용 누적 잭팟을 확인합니다."},
+  {"c": "카지노", "cmd": "!카지노미션", "d": "일일 카지노 미션을 확인합니다."},
+  {"c": "카지노", "cmd": "!카지노업적", "d": "카지노 업적 진행 상황을 확인합니다."},
+  {"c": "카지노", "cmd": "!카지노상점", "d": "카지노 전용 아이템을 구매합니다."},
+  {"c": "도박", "cmd": "!룰렛", "d": "죽을 확률이 높아질수록 보상과 손실이 함께 커집니다."},
+  {"c": "도박", "cmd": "!주파수", "d": "세 개의 검은 신호 결과에 식량을 배팅합니다."},
+  {"c": "도박", "cmd": "!파산신청", "d": "식량 잔액이 마이너스일 때 일부 탕감을 신청합니다."},
+  {"c": "암시장", "cmd": "!암시장", "d": "실시간 암시장 시세와 거래 메뉴를 확인합니다."},
+  {"c": "암시장", "cmd": "!시세", "d": "코인별 현재 가격과 등락률을 확인합니다."},
+  {"c": "암시장", "cmd": "!매수", "d": "현재 시세로 코인을 매수합니다."},
+  {"c": "암시장", "cmd": "!매도", "d": "보유 코인을 드롭다운으로 선택해 판매합니다."},
+  {"c": "암시장", "cmd": "!자산", "d": "보유 코인의 평가금과 손익을 확인합니다."},
+  {"c": "암시장", "cmd": "!코인", "d": "일일 한도 내에서 랜덤 코인 채굴에 도전합니다."},
+  {"c": "은행", "cmd": "!은행", "d": "예금, 대출, 신용과 거래 내역을 확인합니다."},
+  {"c": "은행", "cmd": "!입금", "d": "보유 식량을 은행에 예금합니다."},
+  {"c": "은행", "cmd": "!출금", "d": "은행 예금을 출금합니다."},
+  {"c": "은행", "cmd": "!대출", "d": "신용과 한도에 따라 은행 대출을 받습니다."},
+  {"c": "은행", "cmd": "!상환", "d": "은행 대출금을 상환합니다."},
+  {"c": "은행", "cmd": "!은행이자", "d": "적용된 예금·대출 이자를 확인합니다."},
+  {"c": "은행", "cmd": "!신용", "d": "신용점수와 대출 한도를 확인합니다."},
+  {"c": "사채", "cmd": "!사채", "d": "사채 잔액과 추심 위험을 확인합니다."},
+  {"c": "사채", "cmd": "!사채빌리기", "d": "신용 심사 없이 고금리 사채를 빌립니다."},
+  {"c": "사채", "cmd": "!사채상환", "d": "사채 빚을 상환합니다."},
+  {"c": "사채", "cmd": "!사채추심", "d": "현재 추심 단계와 위험을 확인합니다."},
+  {"c": "커뮤니티", "cmd": "!길드", "d": "길드 콘텐츠와 길드 정보를 확인합니다."},
+  {"c": "커뮤니티", "cmd": "!파티", "d": "파티를 만들거나 파티 정보를 확인합니다."},
+  {"c": "커뮤니티", "cmd": "!pvp", "d": "다른 생존자와 PvP에 도전합니다."},
+  {"c": "수집", "cmd": "!도감", "d": "몬스터, 장비, 아이템과 펫 도감을 확인합니다."},
+  {"c": "수집", "cmd": "!도감보상", "d": "도감 수집률 달성 보상을 받습니다."},
+  {"c": "수집", "cmd": "!보스도감", "d": "던전과 월드 보스 도감을 확인합니다."},
+  {"c": "랭킹", "cmd": "!종합랭킹", "d": "여러 성장 지표를 합산한 종합 랭킹을 확인합니다."},
+  {"c": "랭킹", "cmd": "!강화랭킹", "d": "장비 강화 랭킹을 확인합니다."},
+  {"c": "랭킹", "cmd": "!카지노랭킹", "d": "카지노 누적 성적 랭킹을 확인합니다."},
+  {"c": "랭킹", "cmd": "!침공랭킹", "d": "서버 침공 기여도 랭킹을 확인합니다."},
+  {"c": "스토리", "cmd": "!스토리", "d": "검은 주파수 스토리 진행 상태를 확인합니다."},
+  {"c": "스토리", "cmd": "!스토리 시작", "d": "선택형 스토리를 시작합니다."},
+  {"c": "스토리", "cmd": "!스토리 선택 1", "d": "현재 장면의 선택지를 결정합니다."},
+  {"c": "스토리", "cmd": "!스토리 기록", "d": "진행한 장면과 엔딩 기록을 확인합니다."},
+  {"c": "거래", "cmd": "!거래검색", "d": "등록된 장비와 거래 물품을 검색합니다."},
+  {"c": "거래", "cmd": "!경매등록", "d": "보유 장비를 경매에 등록합니다."},
+  {"c": "거래", "cmd": "!입찰", "d": "등록된 경매에 입찰합니다."},
+  {"c": "거래", "cmd": "!거래기록", "d": "최근 거래와 경매 기록을 확인합니다."},
+  {"c": "관리", "cmd": "!서버세팅 미리보기", "d": "자동 생성될 역할과 채널 구성을 미리 확인합니다."},
+  {"c": "관리", "cmd": "!서버세팅 실행", "d": "ABADDON 전용 서버 구조를 자동으로 생성합니다."},
+  {"c": "관리", "cmd": "!서버세팅 상태", "d": "서버 자동 세팅 완성도를 확인합니다."},
+  {"c": "관리", "cmd": "!퀴즈알림설정", "d": "일일 퀴즈 자동 알림 채널을 설정합니다."},
+  {"c": "관리", "cmd": "!관리자명령어", "d": "서버 관리자용 명령어 목록을 확인합니다."}
 ];
 
-const cats = ["전체","시작","캐릭터","전투","수집","스토리","생활","커뮤니티","이벤트","관리","도움말"];
+const cats = ["전체", "시작", "캐릭터", "전투", "장비", "생활", "상태", "펫", "카지노", "도박", "암시장", "은행", "사채", "커뮤니티", "수집", "랭킹", "스토리", "거래", "관리"];
 let active = "전체";
 
-function renderCommands(){
- const list = document.querySelector("#commandList");
- if(!list) return;
- const q = (document.querySelector("#commandSearch")?.value || "").trim().toLowerCase();
- const filtered = commands.filter(x => (active==="전체" || x.c===active) &&
-   (`${x.cmd} ${x.d} ${x.c}`).toLowerCase().includes(q));
- list.innerHTML = filtered.map(x => `<div class="command"><div><code>${x.cmd}</code><p>${x.d}</p></div><span class="tag">${x.c}</span></div>`).join("")
-   || `<div class="command"><div><code>검색 결과 없음</code><p>다른 검색어를 입력해 보세요.</p></div></div>`;
+function escapeHtml(value) {
+  return String(value).replace(/[&<>'"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
 }
-function mountCategories(){
- const box=document.querySelector("#commandCats"); if(!box)return;
- box.innerHTML=cats.map(c=>`<button class="cat-btn ${c===active?"active":""}" data-cat="${c}">${c}</button>`).join("");
- box.addEventListener("click",e=>{
-   const b=e.target.closest("[data-cat]"); if(!b)return;
-   active=b.dataset.cat; mountCategories(); renderCommands();
- });
+
+function renderCommands() {
+  const list = document.querySelector("#commandList");
+  if (!list) return;
+  const q = (document.querySelector("#commandSearch")?.value || "").trim().toLowerCase();
+  const filtered = commands.filter(x =>
+    (active === "전체" || x.c === active) &&
+    (`${x.cmd} ${x.d} ${x.c}`).toLowerCase().includes(q)
+  );
+  list.innerHTML = filtered.map(x => `
+    <div class="command">
+      <div><code>${escapeHtml(x.cmd)}</code><p>${escapeHtml(x.d)}</p></div>
+      <span class="tag">${escapeHtml(x.c)}</span>
+    </div>`).join("") || `
+    <div class="command"><div><code>검색 결과 없음</code><p>다른 검색어를 입력해 보세요.</p></div></div>`;
+  const count = document.querySelector("#commandCount");
+  if (count) count.textContent = `${filtered.length}개 표시 중 · 전체 ${commands.length}개`;
 }
-function applyConfig(){
- document.querySelectorAll("[data-invite]").forEach(a=>a.href=ABADDON_CONFIG.botInviteUrl);
- document.querySelectorAll("[data-support]").forEach(a=>a.href=ABADDON_CONFIG.supportServerUrl);
- document.querySelectorAll("[data-version]").forEach(e=>e.textContent=ABADDON_CONFIG.version);
- document.querySelectorAll("[data-status]").forEach(e=>e.textContent=ABADDON_CONFIG.statusText);
- document.querySelectorAll("[data-status-note]").forEach(e=>e.textContent=ABADDON_CONFIG.statusNote);
- document.querySelectorAll("[data-github]").forEach(a=>a.href=ABADDON_CONFIG.githubUrl);
+
+function mountCategories() {
+  const box = document.querySelector("#commandCats");
+  if (!box) return;
+  box.innerHTML = cats.map(c => `<button class="cat-btn ${c===active?'active':''}" data-cat="${escapeHtml(c)}">${escapeHtml(c)}</button>`).join("");
+  box.addEventListener("click", e => {
+    const button = e.target.closest("[data-cat]");
+    if (!button) return;
+    active = button.dataset.cat;
+    mountCategories();
+    renderCommands();
+  }, {once:true});
 }
-document.addEventListener("DOMContentLoaded",()=>{
- applyConfig(); mountCategories(); renderCommands();
- document.querySelector("#commandSearch")?.addEventListener("input",renderCommands);
+
+function applyConfig() {
+  document.querySelectorAll("[data-invite]").forEach(a => a.href = ABADDON_CONFIG.botInviteUrl);
+  document.querySelectorAll("[data-support]").forEach(a => a.href = ABADDON_CONFIG.supportServerUrl);
+  document.querySelectorAll("[data-version]").forEach(e => e.textContent = ABADDON_CONFIG.version);
+  document.querySelectorAll("[data-status]").forEach(e => e.textContent = ABADDON_CONFIG.statusText);
+  document.querySelectorAll("[data-status-note]").forEach(e => e.textContent = ABADDON_CONFIG.statusNote);
+  document.querySelectorAll("[data-github]").forEach(a => a.href = ABADDON_CONFIG.githubUrl);
+  document.querySelectorAll("[data-site-url]").forEach(e => e.textContent = ABADDON_CONFIG.officialSiteUrl);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  applyConfig(); mountCategories(); renderCommands();
+  document.querySelector("#commandSearch")?.addEventListener("input", renderCommands);
 });

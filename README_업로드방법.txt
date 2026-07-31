@@ -1,20 +1,21 @@
-ABADDON 공식 홈페이지 업로드 방법
+ABADDON 공식 홈페이지 v4.0.5 최종 업로드본
 
-1. config.js를 메모장으로 엽니다.
-2. YOUR_APPLICATION_ID를 Discord Developer Portal의 Application ID로 바꿉니다.
-3. YOUR_INVITE_CODE를 공식 Discord 서버 초대 코드로 바꿉니다.
-4. 이 폴더 안의 파일과 assets 폴더를 모두 GitHub 저장소 최상위에 업로드합니다.
-5. GitHub → Settings → Pages에서
-   Source: Deploy from a branch
-   Branch: main
-   Folder: /(root)
-   로 설정합니다.
+공식 주소
+https://san01446-ux.github.io/abaddon-policy/
 
-기존 abaddon-policy 저장소에 그대로 덮어써도 됩니다.
-정책 URL은 계속 아래 주소를 사용할 수 있습니다.
-- /terms.html
-- /privacy.html
+봇 Application ID와 공식 서버 초대 링크가 이미 적용되어 있습니다.
 
-중요:
-- ZIP 파일 자체를 GitHub에 올리지 말고 압축을 푼 내용물을 올리세요.
-- 봇 초대 권한 값(permissions)은 필요한 권한에 맞게 Discord OAuth2 URL Generator에서 다시 만들 수 있습니다.
+업로드 방법
+1. 이 ZIP 파일의 압축을 풉니다.
+2. 압축을 푼 폴더 안의 파일 전체와 assets 폴더를 기존 abaddon-policy GitHub 저장소 최상위에 덮어씁니다.
+3. GitHub에서 Commit changes를 누릅니다.
+4. 보통 1~3분 뒤 기존 공식 주소에 최신 홈페이지가 표시됩니다.
+
+적용된 값
+- Application ID: 1532237253944934431
+- 공식 서버: https://discord.gg/FN2tX7TVMz
+
+중요
+- ZIP 파일 자체를 저장소에 올리지 말고, 반드시 압축을 푼 파일들을 올리세요.
+- 기존 GitHub Pages 주소는 변경할 필요가 없습니다.
+- terms.html과 privacy.html 주소도 그대로 유지됩니다.
