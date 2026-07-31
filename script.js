@@ -1,4 +1,22 @@
+"use strict";
+
 const commands = [
+  {"c": "관리", "cmd": "!접수센터도움말", "d": "문의·신고·건의 처리센터의 설치와 운영 명령을 안내합니다."},
+  {"c": "관리", "cmd": "!접수초기설정", "d": "문의 카테고리와 처리 로그를 연결하고 유형별 접수 패널을 설치합니다."},
+  {"c": "관리", "cmd": "!접수패널", "d": "문의·신고·건의·버그·이의신청 버튼이 있는 비공개 접수 패널을 만듭니다."},
+  {"c": "관리", "cmd": "!접수센터상태", "d": "접수 카테고리, 처리 로그, 열린 접수와 누적 통계를 확인합니다."},
+  {"c": "관리", "cmd": "!접수현황 [상태]", "d": "열린 접수를 우선순위와 처리 상태 순으로 확인합니다."},
+  {"c": "관리", "cmd": "!접수정보", "d": "현재 접수의 번호, 유형, 담당자, 상태와 우선순위를 표시합니다."},
+  {"c": "관리", "cmd": "!접수담당 [@운영자]", "d": "현재 접수의 담당 운영자를 지정합니다."},
+  {"c": "관리", "cmd": "!접수담당해제", "d": "현재 접수의 담당자 배정을 해제합니다."},
+  {"c": "관리", "cmd": "!접수상태 처리중", "d": "접수 상태를 접수, 확인중, 처리중, 사용자대기 또는 보류로 변경합니다."},
+  {"c": "관리", "cmd": "!접수우선순위 긴급", "d": "접수 우선순위를 낮음, 보통, 높음 또는 긴급으로 변경합니다."},
+  {"c": "관리", "cmd": "!접수메모 내용", "d": "사용자에게 노출되지 않는 운영진 내부 처리 메모를 저장합니다."},
+  {"c": "관리", "cmd": "!답변양식추가 이름 | 내용", "d": "자주 사용하는 안내문을 빠른 답변 양식으로 등록합니다."},
+  {"c": "관리", "cmd": "!답변양식목록", "d": "현재 서버에 등록된 빠른 답변 양식을 확인합니다."},
+  {"c": "관리", "cmd": "!빠른답변 이름", "d": "현재 접수 채널에 저장된 답변 양식을 전송합니다."},
+  {"c": "편의", "cmd": "!내접수", "d": "자신의 현재 열린 접수 상태를 DM으로 확인합니다."},
+  {"c": "관리", "cmd": "!접수종료 [사유]", "d": "대화 기록을 처리 로그에 보관하고 현재 접수를 종료합니다."},
   {"c": "관리", "cmd": "!보안센터도움말", "d": "통합 보안센터, 분리 로그와 자동관리 설정 명령을 안내합니다."},
   {"c": "관리", "cmd": "!보안초기설정", "d": "운영진 전용 보안센터와 로그 채널 4개를 자동 생성·연결합니다."},
   {"c": "관리", "cmd": "!보안상태", "d": "분리 로그, 자동관리, 초대 예외와 신생 계정 알림 상태를 표시합니다."},
@@ -52,4 +70,82 @@ const commands = [
   {"c": "관리", "cmd": "!비상모드 켜기", "d": "안티레이드, 인증 강화, 서버 잠금과 신규 격리를 함께 적용합니다."},
   {"c": "관리", "cmd": "!서버점검", "d": "역할 서열, 권한, 로그 채널과 주요 운영 설정을 점검합니다."}
 ];
-const cats = ["전체", "기본", "관리", "편의"];
+const categories = ["전체", ...new Set(commands.map((item) => item.c))];
+
+function initSharedUI() {
+  const cfg = window.ABADDON_CONFIG || {};
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v4.2.3"; });
+  document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = cfg.statusText || "ONLINE"; });
+  document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
+  document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
+  document.querySelectorAll("[data-bot-link]").forEach((el) => { el.href = cfg.botInvite || cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
+
+  const current = location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".site-nav a").forEach((link) => {
+    const target = (link.getAttribute("href") || "").split("#")[0];
+    if (target === current) link.classList.add("active");
+  });
+
+  const button = document.querySelector("[data-menu-button]");
+  const nav = document.querySelector("[data-site-nav]");
+  if (button && nav) {
+    button.addEventListener("click", () => nav.classList.toggle("open"));
+    nav.addEventListener("click", () => nav.classList.remove("open"));
+  }
+}
+
+function initCommandPage() {
+  const grid = document.getElementById("command-grid");
+  if (!grid) return;
+  const search = document.getElementById("command-search");
+  const tabs = document.getElementById("category-tabs");
+  const meta = document.getElementById("command-meta");
+  const empty = document.getElementById("empty-state");
+  let category = "전체";
+
+  function renderTabs() {
+    tabs.innerHTML = "";
+    categories.forEach((name) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "category-button" + (name === category ? " active" : "");
+      button.textContent = name;
+      button.addEventListener("click", () => { category = name; renderTabs(); renderCommands(); });
+      tabs.appendChild(button);
+    });
+  }
+
+  function renderCommands() {
+    const query = (search.value || "").trim().toLocaleLowerCase("ko-KR");
+    const filtered = commands.filter((item) => {
+      const categoryOk = category === "전체" || item.c === category;
+      const text = `${item.cmd} ${item.d} ${item.c}`.toLocaleLowerCase("ko-KR");
+      return categoryOk && (!query || text.includes(query));
+    });
+    grid.innerHTML = "";
+    filtered.forEach((item) => {
+      const card = document.createElement("article");
+      card.className = "command-card";
+      const top = document.createElement("div");
+      top.className = "command-top";
+      const code = document.createElement("code");
+      code.textContent = item.cmd;
+      const label = document.createElement("span");
+      label.className = "category-label";
+      label.textContent = item.c;
+      top.append(code, label);
+      const desc = document.createElement("p");
+      desc.textContent = item.d;
+      card.append(top, desc);
+      grid.appendChild(card);
+    });
+    meta.textContent = `전체 ${commands.length}개 중 ${filtered.length}개 표시`;
+    empty.style.display = filtered.length ? "none" : "block";
+  }
+
+  search.addEventListener("input", renderCommands);
+  renderTabs();
+  renderCommands();
+}
+
+document.addEventListener("DOMContentLoaded", () => { initSharedUI(); initCommandPage(); });
