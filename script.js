@@ -2,9 +2,9 @@
 
 const commands = [
   {"c": "음성", "cmd": "!음성입장", "d": "현재 들어가 있는 음성 채널로 아바돈을 연결합니다."},
-  {"c": "음성", "cmd": "!말해 내용", "d": "같은 음성 채널에서 입력한 문장을 한국어 TTS로 읽습니다."},
+  {"c": "음성", "cmd": "!말해 내용", "d": "같은 음성 채널에서 입력한 내용만 한국어 TTS로 읽으며 닉네임은 생략합니다."},
   {"c": "음성", "cmd": "!음성퇴장", "d": "TTS 대기열을 정리하고 음성 채널에서 퇴장합니다."},
-  {"c": "음성", "cmd": "!TTS 켜기", "d": "저장된 TTS 채팅 채널에서 작성자의 현재 음성방 자동 감지를 켭니다."},
+  {"c": "음성", "cmd": "!TTS 켜기", "d": "저장된 TTS 채널에서 작성자의 현재 음성방을 감지하고 채팅 내용만 낭독합니다."},
   {"c": "음성", "cmd": "!TTS 끄기", "d": "자동 낭독을 중지하고 남은 대기열을 비웁니다."},
   {"c": "음성", "cmd": "!TTS 채널 [#채널]", "d": "현재 채널 또는 선택한 텍스트 채널을 TTS 채팅방으로 지정하고 작성자 음성방 자동 감지를 켭니다."},
   {"c": "음성", "cmd": "!TTS채널", "d": "TTS로 사용할 텍스트 채널 안에서 실행하는 가장 짧은 관리자 설정 명령입니다."},
@@ -156,7 +156,7 @@ const categories = ["전체", ...new Set(commands.map((item) => item.c))];
 
 function initSharedUI() {
   const cfg = window.ABADDON_CONFIG || {};
-  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v5.0.1"; });
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v5.0.2"; });
   document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = cfg.statusText || "ONLINE"; });
   document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
   document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
