@@ -1,7 +1,7 @@
 window.ABADDON_CONFIG = Object.freeze({
-  version: "v5.0.0",
+  version: "v5.0.1",
   statusText: "AWAITING SIGNAL",
-  statusNote: "SAFE PLAN ENGINE · AUTHOR VOICE TTS",
+  statusNote: "DAVE VOICE · RENEWAL DROPDOWN",
   discordInvite: "https://discord.gg/FN2tX7TVMz",
   botInvite: "https://discord.com/oauth2/authorize?client_id=1532237253944934431&permissions=8&integration_type=0&scope=bot+applications.commands",
 

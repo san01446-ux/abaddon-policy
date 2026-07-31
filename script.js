@@ -21,10 +21,11 @@ const commands = [
   {"c": "음성", "cmd": "!TTS 속도 1.0", "d": "TTS 재생 속도를 0.7배부터 1.5배 사이로 설정합니다."},
   {"c": "음성", "cmd": "!TTS 볼륨 100", "d": "TTS 볼륨을 10%부터 200% 사이로 설정합니다."},
   {"c": "음성", "cmd": "!TTS 상태", "d": "음성 연결, 자동 입장, 낭독 채널, 목소리와 대기열 상태를 확인합니다."},
-  {"c": "음성", "cmd": "!TTS 진단", "d": "PyNaCl·edge-tts·FFmpeg와 Python 실행 환경을 진단합니다."},
+  {"c": "음성", "cmd": "!TTS 진단", "d": "PyNaCl·davey·edge-tts·FFmpeg와 Python 음성 실행 환경을 진단합니다."},
   {"c": "관리", "cmd": "!인삿말설정 #환영 #공지 #규칙 [#가입]", "d": "신규 멤버 환영 메시지에 공지사항·기본규칙·가입 채널 링크를 설정합니다."},
   {"c": "관리", "cmd": "!인삿말미리보기", "d": "현재 신규 멤버 환영 메시지를 실제 전송 전에 확인합니다."},
   {"c": "관리", "cmd": "!인삿말상태", "d": "환영·공지·규칙·가입 안내 채널 설정을 확인합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼", "d": "관리자용 드롭다운 제어실을 열어 테마 미리보기·적용 계획·백업·복구·다음 단계·빈 카테고리 정리를 선택합니다."},
   {"c": "관리", "cmd": "!서버리뉴얼 테마목록", "d": "깔끔·고딕·커뮤니티·미니멀·사이버·아포칼립스·판타지 7종 테마를 확인합니다."},
   {"c": "관리", "cmd": "!서버리뉴얼 미리보기 아포칼립스", "d": "기존 채널 삭제 없이 선택한 테마의 적용 계획을 미리 확인합니다."},
   {"c": "관리", "cmd": "!서버리뉴얼 적용 아포칼립스", "d": "현재 서버를 자동 백업하고 적용 계획만 생성합니다. 이 명령 자체는 채널을 수정하지 않습니다."},
@@ -155,7 +156,7 @@ const categories = ["전체", ...new Set(commands.map((item) => item.c))];
 
 function initSharedUI() {
   const cfg = window.ABADDON_CONFIG || {};
-  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v5.0.0"; });
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v5.0.1"; });
   document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = cfg.statusText || "ONLINE"; });
   document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
   document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
