@@ -7,6 +7,6 @@ window.ABADDON_CONFIG = Object.freeze({
 
   // Render의 공개 봇 주소를 입력하세요. 예: "https://abaddon-bot.onrender.com"
   // 비워두면 홈페이지는 정상 작동하고 실시간 패널만 "연동 대기"로 표시됩니다.
-  eventFeedUrl: "",
+  eventFeedUrl: "https://abaddon-live-feed.onrender.com",
   liveRefreshMs: 15000
 });
