@@ -1,10 +1,6 @@
-ABADDON 공식 홈페이지 v6.2.0 업로드 안내
+ABADDON 공식 홈페이지 v6.2.1 업로드 안내
 
-1. 이 ZIP의 파일들을 abaddon-policy 저장소 최상위 루트에 덮어씁니다.
-2. 기존 GitHub Pages 설정과 실시간 피드 주소는 유지합니다.
-3. config.js의 Discord 초대 링크와 eventFeedUrl은 기존 값을 유지한 통합본입니다.
-4. 업로드 후 index.html, updates.html, commands.html에서 v6.2.0 표시를 확인합니다.
-
-주요 안내: 채널 규칙 25종 안전 일괄설치, 땅파기 50회, A~E 보물, 감정사 4명.
-
-이번 버전: 대화·기억 제어실, 기억 공방, 운영진 검수, 오늘의 질문·교감 기록이 추가되었습니다.
+1. 이 ZIP의 파일을 abaddon-policy 저장소 최상위 루트에 덮어씁니다.
+2. config.js의 기존 Discord 초대 링크와 실시간 피드 주소는 유지되어 있습니다.
+3. GitHub Pages 배포가 끝난 뒤 index.html, updates.html, commands.html에서 v6.2.1 표시를 확인합니다.
+4. survival_data.json과 봇 저장소 파일은 이 홈페이지 ZIP에 포함되지 않습니다.

@@ -3,6 +3,8 @@
 const commands = [
   {"c": "대화", "cmd": "!대화", "d": "아바돈 말 걸기, 기억 등록·검색, 내 제출 기록, 오늘의 질문, 생존 밸런스와 교감 기록을 드롭다운에서 선택합니다."},
   {"c": "대화", "cmd": "!아바돈 내용", "d": "승인된 서버 기억을 먼저 검색하고, 없으면 ABADDON 전용 기본 대화 코어가 질문 의도에 맞춰 답합니다."},
+  {"c": "대화", "cmd": "!말걸기", "d": "모달 없이 현재 채널에서 15분 동안 자연스러운 연속 대화를 시작합니다. 일반 채팅과 아바돈 메시지 답글로 대화를 이어갑니다."},
+  {"c": "대화", "cmd": "!대화종료", "d": "현재 채널에서 진행 중인 개인 연속 대화를 종료합니다."},
   {"c": "대화", "cmd": "!가르치기", "d": "원본 기억 공방 모달을 열어 호출 문장과 답변을 제출합니다. 일반 사용자는 검수 대기, 운영진은 즉시 승인됩니다."},
   {"c": "대화", "cmd": "!지식", "d": "서버 승인 기억 수, 검수 대기 수, 자동 정확일치 응답 상태와 관리 명령을 확인합니다."},
   {"c": "대화", "cmd": "!지식 검색 단어", "d": "승인된 서버 기억의 호출 문장과 답변을 키워드로 검색합니다."},
@@ -25,7 +27,7 @@ const commands = [
   {"c": "관리", "cmd": "!채널규칙 일괄상태", "d": "일괄설치 진행 수, 성공·실패 수와 채널별 추천 템플릿을 확인합니다."},
   {"c": "관리", "cmd": "!채널규칙 일괄중지", "d": "진행 중인 규칙 일괄설치를 안전하게 멈춥니다. 일괄시작 명령으로 남은 지점부터 재개할 수 있습니다."},
   {"c": "관리", "cmd": "!채널규칙 일괄시작", "d": "재시작 또는 중지 후 남아 있는 규칙 일괄설치 계획을 이어서 실행합니다."},
-  {"c": "생활", "cmd": "!땅파기", "d": "하루 50회, 1분 간격으로 폐허를 파서 식량·고철·광석·고대파편과 미감정 보물을 찾습니다."},
+  {"c": "생활", "cmd": "!땅파기", "d": "하루 50회, 1분 간격으로 폐허를 파며 매번 8~35 식량의 소량 생존 자금과 자원·미감정 보물을 찾습니다."},
   {"c": "생활", "cmd": "!보물감정", "d": "미감정 보물의 감정사를 드롭다운에서 선택합니다. 감정 결과는 A~E 등급이며 감정과 동시에 식량으로 매입됩니다."},
   {"c": "생활", "cmd": "!보물감정 감정사이름", "d": "마르코·세라·라울·이리스 중 감정사를 직접 지정해 가장 오래된 미감정 보물을 감정합니다."},
   {"c": "생활", "cmd": "!감정사", "d": "감정사 4명의 비용, 매입 배율과 등급 상승 확률을 확인합니다."},
@@ -190,7 +192,7 @@ const categories = ["전체", ...new Set(commands.map((item) => item.c))];
 
 function initSharedUI() {
   const cfg = window.ABADDON_CONFIG || {};
-  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v6.2.0"; });
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v6.2.1"; });
   document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = cfg.statusText || "ONLINE"; });
   document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
   document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
