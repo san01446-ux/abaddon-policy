@@ -1,6 +1,7 @@
 "use strict";
 
 const commands = [
+  {"c": "기본", "cmd": "!패치노트 · /패치노트", "d": "최신 버전과 이전 주요 통합 패치를 드롭다운 및 이전·다음·최신 버튼으로 열람합니다. !업데이트와 !변경내역도 같은 기록실을 엽니다."},
   {"c": "대화", "cmd": "!대화", "d": "아바돈 말 걸기, 기억 등록·검색, 내 제출 기록, 오늘의 질문, 생존 밸런스와 교감 기록을 드롭다운에서 선택합니다."},
   {"c": "대화", "cmd": "!아바돈 내용", "d": "승인된 서버 기억을 먼저 검색하고, 없으면 ABADDON 전용 기본 대화 코어가 질문 의도에 맞춰 답합니다."},
   {"c": "대화", "cmd": "!말걸기", "d": "모달 없이 현재 채널에서 15분 동안 자연스러운 연속 대화를 시작합니다. 일반 채팅과 아바돈 메시지 답글로 대화를 이어갑니다."},
@@ -192,7 +193,7 @@ const categories = ["전체", ...new Set(commands.map((item) => item.c))];
 
 function initSharedUI() {
   const cfg = window.ABADDON_CONFIG || {};
-  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v6.2.1"; });
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v6.2.2"; });
   document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = cfg.statusText || "ONLINE"; });
   document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
   document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
