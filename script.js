@@ -7,12 +7,21 @@ const commands = [
   {"c": "음성", "cmd": "!TTS 켜기", "d": "현재 텍스트 채널의 일반 메시지를 현재 음성 채널에서 자동 낭독하도록 설정합니다."},
   {"c": "음성", "cmd": "!TTS 끄기", "d": "자동 낭독을 중지하고 남은 대기열을 비웁니다."},
   {"c": "음성", "cmd": "!TTS 채널 #채널", "d": "자동 낭독에 사용할 텍스트 채널을 관리자 전용으로 지정합니다."},
+  {"c": "음성", "cmd": "!TTS 채널설정 #텍스트채널 음성채널", "d": "텍스트·음성 채널을 함께 지정하고 자동 낭독을 켭니다. 작성자가 음성방에 없어도 봇이 자동 입장합니다."},
+  {"c": "음성", "cmd": "!채널설정 #텍스트채널 음성채널", "d": "TTS 채널설정의 짧은 관리자 명령어입니다."},
+  {"c": "음성", "cmd": "!TTS 음성채널 음성채널", "d": "자동 입장할 음성 채널만 따로 변경합니다."},
   {"c": "음성", "cmd": "!TTS 목소리 [서현/인준/봉진/국민]", "d": "한국어 TTS 목소리 목록을 확인하거나 서버 목소리를 변경합니다."},
   {"c": "음성", "cmd": "!TTS 속도 1.0", "d": "TTS 재생 속도를 0.7배부터 1.5배 사이로 설정합니다."},
   {"c": "음성", "cmd": "!TTS 볼륨 100", "d": "TTS 볼륨을 10%부터 200% 사이로 설정합니다."},
-  {"c": "음성", "cmd": "!TTS 상태", "d": "음성 연결, 자동 낭독 채널, 목소리, 대기열과 의존성 상태를 확인합니다."},
+  {"c": "음성", "cmd": "!TTS 상태", "d": "음성 연결, 자동 입장, 낭독 채널, 목소리와 대기열 상태를 확인합니다."},
+  {"c": "음성", "cmd": "!TTS 진단", "d": "PyNaCl·edge-tts·FFmpeg와 Python 실행 환경을 진단합니다."},
+  {"c": "관리", "cmd": "!인삿말설정 #환영 #공지 #규칙 [#가입]", "d": "신규 멤버 환영 메시지에 공지사항·기본규칙·가입 채널 링크를 설정합니다."},
+  {"c": "관리", "cmd": "!인삿말미리보기", "d": "현재 신규 멤버 환영 메시지를 실제 전송 전에 확인합니다."},
+  {"c": "관리", "cmd": "!인삿말상태", "d": "환영·공지·규칙·가입 안내 채널 설정을 확인합니다."},
   {"c": "관리", "cmd": "!서버리뉴얼 미리보기 고딕", "d": "기존 채널 삭제 없이 고딕·깔끔·커뮤니티 테마 적용 계획을 미리 확인합니다."},
   {"c": "관리", "cmd": "!서버리뉴얼 적용 고딕", "d": "인식한 기존 채널의 이름·카테고리·순서를 정돈하고 부족한 필수 채널만 생성합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 게임미리보기 깔끔", "d": "BOT GAME·말해라·테스트 구역의 RPG·퀴즈·도박·음악·음성 채널 정리 계획을 미리 확인합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 게임정리 깔끔", "d": "사용 중인 봇 게임과 음성 채널을 삭제 없이 RPG·성장, 게임·도박, 음악·미디어, 테스트, 음성 라운지로 나눕니다."},
   {"c": "관리", "cmd": "!서버리뉴얼 되돌리기", "d": "적용 전 자동 백업을 사용해 기존 채널 이름과 위치를 복구합니다."},
   {"c": "관리", "cmd": "!서버메뉴 생성 [#채널]", "d": "공지·규칙·역할·채팅·봇·문의 채널로 이동하는 링크 버튼 패널을 생성합니다."},
   {"c": "관리", "cmd": "!서버메뉴 갱신", "d": "현재 채널 구조를 다시 분석해 저장된 서버 이동 메뉴를 갱신합니다."},
@@ -126,7 +135,7 @@ const categories = ["전체", ...new Set(commands.map((item) => item.c))];
 
 function initSharedUI() {
   const cfg = window.ABADDON_CONFIG || {};
-  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v4.3.3"; });
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v4.3.3.2"; });
   document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = cfg.statusText || "ONLINE"; });
   document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
   document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });

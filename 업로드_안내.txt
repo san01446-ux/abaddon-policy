@@ -1,13 +1,9 @@
-ABADDON 공식 홈페이지 v4.3.3 업로드 안내
+ABADDON 공식 홈페이지 v4.3.3.2 업로드 안내
 
-1. 이 폴더 안의 파일들을 홈페이지 GitHub 저장소 최상위 루트에 덮어쓰세요.
-2. config.js에는 이미 https://abaddon-live-feed.onrender.com 주소가 연결되어 있습니다.
-3. 시크릿키는 홈페이지 파일에 절대 넣지 마세요.
-4. GitHub Pages 배포 완료 후 Ctrl+F5로 새로고침하세요.
-5. 기존 privacy.html, terms.html, assets 폴더는 삭제하지 말고 유지하세요.
+1. 이 ZIP의 파일을 압축 해제합니다.
+2. GitHub Pages 홈페이지 저장소 최상위 루트에 파일을 덮어씁니다.
+3. privacy.html, terms.html, assets 폴더처럼 ZIP에 없는 기존 파일은 삭제하지 않습니다.
+4. config.js의 실시간 피드 주소는 https://abaddon-live-feed.onrender.com 으로 유지됩니다.
+5. GitHub Pages 배포 후 Ctrl+F5로 새로고침합니다.
 
-이번 변경
-- v4.3.3 TTS 음성 성역 소개
-- 서버 리뉴얼·서버 이동 메뉴 소개
-- 이전의 “기존 기능 유지” 설명 문구 삭제
-- 실시간 피드 주소 유지
+이번 반영: 자동 입장 TTS, TTS 진단, 신규 생존자 인삿말 채널 링크, 429 안내.
