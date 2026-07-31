@@ -27,11 +27,14 @@ const commands = [
   {"c": "관리", "cmd": "!인삿말상태", "d": "환영·공지·규칙·가입 안내 채널 설정을 확인합니다."},
   {"c": "관리", "cmd": "!서버리뉴얼 테마목록", "d": "깔끔·고딕·커뮤니티·미니멀·사이버·아포칼립스·판타지 7종 테마를 확인합니다."},
   {"c": "관리", "cmd": "!서버리뉴얼 미리보기 아포칼립스", "d": "기존 채널 삭제 없이 선택한 테마의 적용 계획을 미리 확인합니다."},
-  {"c": "관리", "cmd": "!서버리뉴얼 적용 아포칼립스", "d": "인식한 기존 채널의 이름·카테고리·순서를 정돈하고 부족한 필수 채널만 생성합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 적용 아포칼립스", "d": "인식한 기존 채널의 이름·카테고리를 정돈하고 필요한 카테고리만 재사용하거나 생성합니다. 카테고리 순서 대량 변경은 하지 않습니다."},
   {"c": "관리", "cmd": "!서버리뉴얼 게임미리보기 깔끔", "d": "BOT GAME·말해라·테스트 구역의 RPG·퀴즈·도박·음악·음성 채널 정리 계획을 미리 확인합니다."},
   {"c": "관리", "cmd": "!서버리뉴얼 게임정리 깔끔", "d": "사용 중인 봇 게임과 음성 채널을 삭제 없이 RPG·성장, 게임·도박, 음악·미디어, 테스트, 음성 라운지로 나눕니다."},
   {"c": "관리", "cmd": "!서버리뉴얼 백업목록", "d": "최근 서버 리뉴얼 복구 지점을 최대 5개까지 확인합니다."},
-  {"c": "관리", "cmd": "!서버리뉴얼 되돌리기 [번호]", "d": "선택한 복구 지점으로 이름·위치를 복원하고 추적된 빈 신규 항목을 정리합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 되돌리기 [번호]", "d": "선택한 복구 지점으로 이름·카테고리를 안전 복원하고 추적된 빈 신규 항목을 정리합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 중지", "d": "현재 진행 중인 리뉴얼·복구·긴급 정리 작업을 즉시 취소합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 작업상태", "d": "리뉴얼 작업 진행 여부와 마지막 종료 상태를 확인합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 긴급정리", "d": "리뉴얼 도중 남은 빈 테마 카테고리를 미리보기 후 한 번에 최대 12개씩 안전하게 삭제합니다."},
   {"c": "관리", "cmd": "!서버메뉴 생성 [#채널]", "d": "공지·규칙·역할·채팅·봇·문의 채널로 이동하는 링크 버튼 패널을 생성합니다."},
   {"c": "관리", "cmd": "!서버메뉴 갱신", "d": "현재 채널 구조를 다시 분석해 저장된 서버 이동 메뉴를 갱신합니다."},
   {"c": "관리", "cmd": "!서버리뉴얼 빈카테고리", "d": "비어 있는 카테고리의 번호와 ID를 확인합니다."},
@@ -146,7 +149,7 @@ const categories = ["전체", ...new Set(commands.map((item) => item.c))];
 
 function initSharedUI() {
   const cfg = window.ABADDON_CONFIG || {};
-  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v4.3.3.4"; });
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v4.3.3.5"; });
   document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = cfg.statusText || "ONLINE"; });
   document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
   document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
