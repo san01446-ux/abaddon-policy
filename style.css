@@ -301,13 +301,3 @@ button, input { font: inherit; }
 .raid-command-row code { padding:8px 11px; border:1px solid rgba(200,170,98,.24); background:rgba(126,19,43,.12); color:var(--gold-soft); border-radius:3px; }
 @media (max-width: 900px) { .boss-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (max-width: 560px) { .boss-grid { grid-template-columns:1fr; } }
-
-/* v6.4.0 visual archive */
-.visual-section { background: radial-gradient(circle at 20% 20%, rgba(40,112,91,.12), transparent 34%), linear-gradient(180deg, rgba(7,8,9,.98), rgba(16,9,13,.98)); border-block: 1px solid var(--line); }
-.visual-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
-.visual-card { margin: 0; overflow: hidden; border: 1px solid rgba(200,170,98,.2); border-radius: 3px 3px 16px 16px; background: rgba(6,7,8,.9); box-shadow: 0 18px 42px rgba(0,0,0,.22); }
-.visual-card img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; filter: saturate(.9) contrast(1.03); transition: transform .35s ease, filter .35s ease; }
-.visual-card:hover img { transform: scale(1.025); filter: saturate(1.05) contrast(1.08); }
-.visual-card figcaption { padding: 10px 12px; color: var(--gold-soft); font-family: var(--serif); font-size: 13px; border-top: 1px solid var(--line); }
-@media (max-width: 960px) { .visual-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
-@media (max-width: 560px) { .visual-grid { grid-template-columns: 1fr; } }

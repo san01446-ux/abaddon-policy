@@ -1,6 +1,6 @@
-ABADDON 공식 홈페이지 v6.4.0 업로드 안내
+ABADDON 공식 홈페이지 v6.3.0 업로드 안내
 
 1. 이 ZIP의 파일과 assets 폴더를 abaddon-policy 저장소 최상위 루트에 덮어씁니다.
-2. 기존 Discord 초대 링크와 실시간 피드 주소는 config.js에 유지되어 있습니다.
-3. 커밋/푸시 후 정적 사이트 배포 상태를 확인합니다.
-4. index.html, commands.html, updates.html과 assets/v640_gallery를 함께 올려야 이미지가 표시됩니다.
+2. 봇 ZIP은 봇 저장소에, 홈페이지 ZIP은 abaddon-policy 저장소에 각각 적용합니다.
+3. 기존 Discord 초대 링크와 abaddon-live-feed Web Service 주소는 유지됩니다.
+4. 배포 후 index.html, updates.html, commands.html의 v6.3.0 표시와 월드보스 이미지 6종을 확인합니다.

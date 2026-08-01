@@ -1,0 +1,6 @@
+ABADDON 공식 홈페이지 v6.3.0 업로드 안내
+
+1. 이 ZIP의 파일과 assets 폴더를 abaddon-policy 저장소 최상위 루트에 덮어씁니다.
+2. 기존 Discord 초대 링크와 실시간 피드 주소는 config.js에서 유지됩니다.
+3. GitHub에 커밋/푸시한 뒤 배포 서비스의 갱신을 확인합니다.
+4. index.html, commands.html, updates.html과 월드보스 이미지 14개가 함께 올라갔는지 확인합니다.
