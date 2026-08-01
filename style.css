@@ -306,3 +306,50 @@ button, input { font: inherit; }
 @media (max-width: 560px) { .boss-grid { grid-template-columns:1fr; } }
 
 .v636-section { background: linear-gradient(180deg, rgba(30,20,44,.20), rgba(8,6,9,.02)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+
+/* v6.5.0 responsive media and theme showcase */
+img { max-width: 100%; height: auto; }
+.card-grid, .boss-grid, .boss-card, .feature-card { min-width: 0; max-width: 100%; }
+.boss-card { isolation: isolate; }
+.boss-card > div { padding: 16px 17px 19px; min-width: 0; }
+.boss-card h3 { margin: 0 0 8px; overflow-wrap: anywhere; }
+.boss-card p { margin: 0; color: var(--ash); overflow-wrap: anywhere; }
+.boss-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  background: #07080b;
+  overflow: hidden;
+}
+.media-contain-section .boss-card img,
+.boss-card.media-contain img,
+.equipment-visual-section .boss-card img,
+.v635-section .boss-card img {
+  object-fit: contain;
+  padding: clamp(5px, .8vw, 10px);
+  background: radial-gradient(circle at 50% 45%, #17151a, #050609 72%);
+}
+.life-visual-section .boss-card img,
+.pet-visual-section .boss-card img { object-fit: cover; padding: 0; }
+.theme-showcase-section { border-block: 1px solid var(--line); background: linear-gradient(180deg,rgba(99,65,130,.10),rgba(255,185,205,.035)); }
+.theme-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+.theme-card { min-width:0; min-height:180px; padding:22px; border:1px solid var(--line); border-radius:18px 4px 18px 4px; display:flex; flex-direction:column; gap:9px; justify-content:flex-end; overflow:hidden; box-shadow:0 20px 50px rgba(0,0,0,.22); }
+.theme-card span { font-size:34px; }
+.theme-card b { font-family:var(--serif); font-size:19px; }
+.theme-card small { color:rgba(255,255,255,.74); line-height:1.55; }
+.theme-card.dark { background:linear-gradient(145deg,#26131e,#08090d 72%); }
+.theme-card.gothic { color:#2c2732; background:linear-gradient(145deg,#f5f3f7,#bfc1cd); border-color:rgba(255,255,255,.55); }
+.theme-card.gothic small { color:#4f4b59; }
+.theme-card.bright { color:#263238; background:linear-gradient(145deg,#ffe4ef,#d8fff0 52%,#d9ebff); border-color:rgba(255,255,255,.7); }
+.theme-card.bright small { color:#44535b; }
+.theme-card.modern { background:linear-gradient(145deg,#1a3e82,#6e2ba7 55%,#0c101a); }
+@media (max-width: 980px) { .theme-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width: 620px) {
+  .theme-grid { grid-template-columns:1fr; }
+  .boss-card img { aspect-ratio: 16/9; }
+  .equipment-visual-section .boss-card img, .v635-section .boss-card img { padding:4px; }
+}
