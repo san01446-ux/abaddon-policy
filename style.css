@@ -128,7 +128,7 @@ button, input { font: inherit; }
   font-family: var(--serif);
   text-wrap: balance;
 }
-.hero h1 { margin: 19px 0 20px; font-size: clamp(45px, 7vw, 86px); line-height: 1.03; letter-spacing: -.045em; font-weight: 900; }
+.hero h1 { margin: 19px 0 20px; font-size: clamp(40px, 5.5vw, 72px); line-height: 1.03; letter-spacing: -.045em; font-weight: 900; }
 .hero h1 span { display: block; color: transparent; background: linear-gradient(90deg, #f2eadf 6%, #c8aa62 45%, #cf3152 100%); background-clip: text; -webkit-background-clip: text; text-shadow: 0 0 58px rgba(170,45,66,.15); }
 .hero-copy { color: var(--ash); font-size: clamp(15px, 1.8vw, 18px); max-width: 720px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 31px; }
@@ -156,7 +156,10 @@ button, input { font: inherit; }
 .sigil::after { width: 42px; height: 2px; top: 26px; }
 .sigil span::before { width: 30px; height: 2px; transform: rotate(45deg); }
 .sigil span::after { width: 30px; height: 2px; transform: rotate(-45deg); }
-.core-card h2 { margin: 0 0 12px; text-align: center; font-size: 32px; line-height: 1.05; letter-spacing: .09em; color: var(--gold-soft); }
+.core-card h2 { margin: 0 0 12px; text-align: center; font-size: 26px; line-height: 1.12; letter-spacing: .055em; color: var(--gold-soft); }
+.core-title-inline { display: flex; justify-content: center; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.core-title-inline b { font-size: 30px; }
+.core-title-inline span { font-family: var(--sans); font-size: 12px; letter-spacing: .13em; color: var(--ash); }
 .core-card p { color: var(--ash); margin: 0; text-align: center; }
 .check-list { display: grid; gap: 11px; margin-top: 25px; position: relative; z-index: 2; }
 .check-item { display: flex; gap: 10px; align-items: flex-start; color: #ddd4ca; font-size: 13px; }
@@ -301,3 +304,5 @@ button, input { font: inherit; }
 .raid-command-row code { padding:8px 11px; border:1px solid rgba(200,170,98,.24); background:rgba(126,19,43,.12); color:var(--gold-soft); border-radius:3px; }
 @media (max-width: 900px) { .boss-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (max-width: 560px) { .boss-grid { grid-template-columns:1fr; } }
+
+.v636-section { background: linear-gradient(180deg, rgba(30,20,44,.20), rgba(8,6,9,.02)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
