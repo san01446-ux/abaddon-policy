@@ -1,7 +1,7 @@
 window.ABADDON_CONFIG = Object.freeze({
-  version: "v6.4.0a",
+  version: "v6.4.0b",
   statusText: "AWAITING SIGNAL",
-  statusNote: "DARKZONE · SUPPLY FEVER · MAIL & ALERTS · v6.4.0a",
+  statusNote: "DARKZONE · SUPPLY FEVER · MAIL & ALERTS · v6.4.0b",
   discordInvite: "https://discord.gg/FN2tX7TVMz",
   botInvite: "https://discord.com/oauth2/authorize?client_id=1532237253944934431&permissions=8&integration_type=0&scope=bot+applications.commands",
 
