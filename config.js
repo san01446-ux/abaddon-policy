@@ -1,7 +1,7 @@
 window.ABADDON_CONFIG = Object.freeze({
-  version: "v6.3.6",
+  version: "v6.3.7",
   statusText: "AWAITING SIGNAL",
-  statusNote: "WORLD CONDITIONS · TACTICAL COMBAT · WEAPON FX · v6.3.6",
+  statusNote: "DYNAMIC WEATHER · SOS · FORTUNE · MAINTENANCE · v6.3.7",
   discordInvite: "https://discord.gg/FN2tX7TVMz",
   botInvite: "https://discord.com/oauth2/authorize?client_id=1532237253944934431&permissions=8&integration_type=0&scope=bot+applications.commands",
 
