@@ -1,7 +1,7 @@
 window.ABADDON_CONFIG = Object.freeze({
-  version: "v6.3.1",
+  version: "v6.3.2",
   statusText: "AWAITING SIGNAL",
-  statusNote: "LIFE VISUALS · BUTTON ENCOUNTERS · 48 UNIQUE SCENES",
+  statusNote: "LIFE VISUALS STAGE 2 · 48 NEW SCENES · 0 NEW SLASH",
   discordInvite: "https://discord.gg/FN2tX7TVMz",
   botInvite: "https://discord.com/oauth2/authorize?client_id=1532237253944934431&permissions=8&integration_type=0&scope=bot+applications.commands",
 
