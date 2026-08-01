@@ -1,7 +1,7 @@
 window.ABADDON_CONFIG = Object.freeze({
-  version: "v6.2.4",
+  version: "v6.4.0",
   statusText: "AWAITING SIGNAL",
-  statusNote: "VISUAL RESULTS · DIGGING · FAILURE COST",
+  statusNote: "21 ENCOUNTERS · 269 VISUALS · WASTELAND CHOICES",
   discordInvite: "https://discord.gg/FN2tX7TVMz",
   botInvite: "https://discord.com/oauth2/authorize?client_id=1532237253944934431&permissions=8&integration_type=0&scope=bot+applications.commands",
 
