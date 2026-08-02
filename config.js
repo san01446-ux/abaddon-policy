@@ -1,7 +1,7 @@
 window.ABADDON_CONFIG = Object.freeze({
-  version: "v7.8.0",
+  version: "v7.9.0",
   statusText: "AWAITING SIGNAL",
-  statusNote: "SERVER DISASTER · FARMING ROUTE FX · 2026-08-03",
+  statusNote: "OPERATIONS HUB · AUTO DISASTER · TEMP VOICE · 2026-08-03",
   discordInvite: "https://discord.gg/FN2tX7TVMz",
   botInvite: "https://discord.com/oauth2/authorize?client_id=1532237253944934431&permissions=8&integration_type=0&scope=bot+applications.commands",
 

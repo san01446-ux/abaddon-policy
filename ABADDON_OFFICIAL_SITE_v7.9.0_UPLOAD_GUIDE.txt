@@ -1,0 +1,6 @@
+ABADDON 공식 홈페이지 v7.9.0 업로드 안내
+
+1. ZIP의 파일을 웹 호스팅 루트에 업로드합니다.
+2. config.js의 Discord 초대 주소와 실시간 피드 주소를 확인합니다.
+3. index.html, commands.html, updates.html, style.css, script.js, config.js를 함께 교체합니다.
+4. 브라우저 캐시를 지운 뒤 표시 버전 v7.9.0과 명령 검색을 확인합니다.
