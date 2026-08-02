@@ -1,7 +1,7 @@
 window.ABADDON_CONFIG = Object.freeze({
-  version: "v6.5.3",
+  version: "v7.0.0",
   statusText: "AWAITING SIGNAL",
-  statusNote: "OFFICIAL BOT · HOMEPAGE QUALITY · 28 THEMES · 2026-08-02",
+  statusNote: "WORLD BOSS REBUILD · SAFE REWARD QUEUE · 2026-08-03",
   discordInvite: "https://discord.gg/FN2tX7TVMz",
   botInvite: "https://discord.com/oauth2/authorize?client_id=1532237253944934431&permissions=8&integration_type=0&scope=bot+applications.commands",
 

@@ -386,3 +386,17 @@ img { max-width: 100%; height: auto; }
 .base-stage-card img{filter:contrast(1.035) saturate(1.04);image-rendering:auto}
 @media(max-width:900px){.official-bot-grid{grid-template-columns:1fr}.approval-card{max-width:none}}
 @media(max-width:560px){.official-bot-grid h2{font-size:38px}.official-bot-grid p,.official-lead{font-size:15px!important}.approval-card{padding:22px}.quality-media-card img{aspect-ratio:16/9}}
+
+
+/* v7.0.0 world boss rebuild */
+.v700-section { position: relative; overflow: hidden; }
+.v700-section::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 50% 8%, rgba(145, 24, 36, .16), transparent 38%); }
+.world-boss-showcase .boss-card img { aspect-ratio: 16 / 9; width: 100%; object-fit: cover; object-position: center; }
+.world-boss-showcase .boss-card { overflow: hidden; }
+.world-boss-showcase .boss-card div { padding-top: 18px; }
+.world-boss-showcase b { color: var(--gold-soft); }
+.v700-mechanics-grid { margin-top: 24px; }
+@media (max-width: 720px) {
+  .world-boss-showcase { grid-template-columns: 1fr; }
+  .world-boss-showcase .boss-card img { min-height: 190px; }
+}
