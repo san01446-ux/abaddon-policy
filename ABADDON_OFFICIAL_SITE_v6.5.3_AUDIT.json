@@ -1,0 +1,32 @@
+{
+  "version": "6.5.3",
+  "patch_date": "2026-08-02",
+  "python_source_files": 56,
+  "python_compile_errors": [],
+  "activity_gallery_counts": {
+    "fishing": 10,
+    "gathering": 10,
+    "merchant": 10,
+    "coin": 10
+  },
+  "activity_gallery_unique_hashes": {
+    "fishing": 10,
+    "gathering": 10,
+    "merchant": 10,
+    "coin": 10
+  },
+  "activity_gallery_dimensions_1280x720": true,
+  "category_pools": {
+    "fishing": "v632/activities/fishing/gallery",
+    "gathering": "v631/activities/gathering/gallery",
+    "merchant_support": "v632/activities/support/gallery",
+    "coin": "v632/activities/coin/gallery"
+  },
+  "recent_repeat_guard": 3,
+  "approval_phrase_remaining_bot": [],
+  "approval_phrase_remaining_site": [],
+  "site_missing_local_refs": [],
+  "game_rules_changed": false,
+  "korean_commands_preserved": true,
+  "english_commands_preserved": true
+}

@@ -1,0 +1,162 @@
+{
+  "version": "6.5.2",
+  "patch_date": "2026-08-02",
+  "scope": [
+    "Discord support-image safe replacement",
+    "Lv.0-Lv.5 base visual reprocessing",
+    "website quality panels",
+    "English prefix aliases",
+    "help/dropdown/bot description sync",
+    "Korean command compatibility"
+  ],
+  "python_source_files": 56,
+  "python_compile_errors": [],
+  "english_alias_targets": 104,
+  "english_alias_tokens": 134,
+  "english_alias_missing_targets": [],
+  "english_alias_internal_duplicates": [],
+  "korean_commands_preserved": true,
+  "save_schema_changed": false,
+  "economy_or_probability_changed": false,
+  "discord_support_failure_image": {
+    "size": [
+      1280,
+      720
+    ],
+    "sha256": "862ee4bf90129f444759be5d662483a784a1903eed5dfa63758c89c945108489"
+  },
+  "bot_base_stages": [
+    {
+      "file": "apocalypse_bot/assets/v635/base/stages/level_0.jpg",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "a9a556607b33b6e4b9b3a5af341d5ea84d6b447ffaaa279bdd677c6955b9f72a"
+    },
+    {
+      "file": "apocalypse_bot/assets/v635/base/stages/level_1.jpg",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "d5886a46c9c9039c1eb1bc50c99cc84c2638d960c2a84b5184e5b35987efdd6b"
+    },
+    {
+      "file": "apocalypse_bot/assets/v635/base/stages/level_2.jpg",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "505a1a853f05fd751b6c0662d273c4299212d71c635e9b929bfbfb0e113fe423"
+    },
+    {
+      "file": "apocalypse_bot/assets/v635/base/stages/level_3.jpg",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "84202b97ee06fb043a7004e034cb485e6b942a2d95381db5588fbc74e8549f48"
+    },
+    {
+      "file": "apocalypse_bot/assets/v635/base/stages/level_4.jpg",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "0ca1f0c4cd5793437c27402fa50a474279deb1cd398c839f23038e56ee9c5800"
+    },
+    {
+      "file": "apocalypse_bot/assets/v635/base/stages/level_5.jpg",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "1168cbc1dd14cf51c5f314e3fea97fd8d96b52f7400380e52134da06df9021f6"
+    }
+  ],
+  "site_base_stages": [
+    {
+      "file": "assets/v652/base_stages/level_0.webp",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "919886121c2161e92a1ceedc62a4c8db2a13916c51c38275cb4c420bfd344299"
+    },
+    {
+      "file": "assets/v652/base_stages/level_1.webp",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "c5a21b8884cc95d70d5f4283d1c9ca9edd7851cb4170c7db65153fdd747eb7ab"
+    },
+    {
+      "file": "assets/v652/base_stages/level_2.webp",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "d39c33088eb499148ebaf8e641bd0b9fbb5dc460ca5d252e6d131da611a26ee8"
+    },
+    {
+      "file": "assets/v652/base_stages/level_3.webp",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "211e4edbaa8d3fb2130ca763a636f5cb564d378e0ae39c06f631acc4a5b6c369"
+    },
+    {
+      "file": "assets/v652/base_stages/level_4.webp",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "b14361059d79ad165fa177449d7ea585a738209e96b09ddcf9223d0dad9246a9"
+    },
+    {
+      "file": "assets/v652/base_stages/level_5.webp",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "16f78c7d9061edc2e172b4891924db54b4acea5d04b29a926c63a22134bc9684"
+    }
+  ],
+  "bot_base_stage_unique_hashes": 6,
+  "site_base_stage_unique_hashes": 6,
+  "website_quality_files": [
+    {
+      "file": "assets/v652/base_defense_hd.webp",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "35233f5563c7ac995c1156b949279d693e53509fb1107d564868a9bf94057f55"
+    },
+    {
+      "file": "assets/v652/resource_market_hd.webp",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "bc230e39ce25a3ee778364ead181848a217db1541ef14cb0ec9eaa2b12afdb1b"
+    },
+    {
+      "file": "assets/v652/enhancement_fx_hd.webp",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "9bbe8af33fcd93b3452ddde6aaf79df61ecf291bfb9803e6a4deef190a88d7b4"
+    }
+  ],
+  "website_local_references": 69,
+  "website_missing_local_references": [],
+  "website_v652_asset_references": 9,
+  "website_english_command_entries": 8,
+  "discord_component_known_bad_emoji_in_component_modules": false,
+  "notes": "Runtime Discord multi-user interactions require a deployment smoke test; static source, image, reference and archive checks passed."
+}
