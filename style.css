@@ -353,3 +353,22 @@ img { max-width: 100%; height: auto; }
   .boss-card img { aspect-ratio: 16/9; }
   .equipment-visual-section .boss-card img, .v635-section .boss-card img { padding:4px; }
 }
+
+
+/* v6.5.1a visual QA hotfix */
+.boss-grid{align-items:stretch}
+.boss-card{display:flex;flex-direction:column;min-height:0}
+.boss-card>div{flex:1 1 auto}
+.icon-card{min-height:190px;justify-content:center;background:linear-gradient(145deg,rgba(32,17,27,.96),rgba(8,7,10,.98))}
+.icon-card>div{display:flex;flex-direction:column;justify-content:center}
+.feature-emoji{display:block;font-size:34px;margin-bottom:12px;filter:drop-shadow(0 6px 18px rgba(0,0,0,.45))}
+.visual-summary-grid .icon-card{min-height:180px}
+.asset-preview-card img{object-fit:cover!important;padding:0!important;background:#07080b!important}
+.base-stage-card img{object-fit:cover!important;padding:0!important;background:#07080b!important}
+.v635-section .base-stage-card img{object-fit:cover!important;padding:0!important}
+.equipment-visual-section .asset-preview-card img{object-fit:cover!important;padding:0!important}
+.boss-card img[src*="v651a/equipment_clean"],
+.boss-card img[src*="v651a/treasure_clean"],
+.boss-card img[src*="v651a/enhancement_clear"],
+.boss-card img[src*="v651a/pet_clean"]{object-fit:cover!important;padding:0!important}
+@media(max-width:560px){.icon-card,.visual-summary-grid .icon-card{min-height:145px}.feature-emoji{font-size:29px}}
