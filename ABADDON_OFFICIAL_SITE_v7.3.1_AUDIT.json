@@ -1,0 +1,206 @@
+{
+  "version": "7.3.1",
+  "deletions_performed": 0,
+  "checks": {
+    "python_compile": {
+      "ok": true,
+      "files": 63,
+      "errors": []
+    },
+    "command_audit": {
+      "ok": true,
+      "top_level_registrations": 523,
+      "unique_names_aliases": 797,
+      "intentional_runtime_replacement": [
+        {
+          "token": "help",
+          "first": {
+            "name": "도움말",
+            "aliases": [
+              "help"
+            ],
+            "file": "apocalypse_bot/commands/v30_invasion.py",
+            "line": 215
+          },
+          "second": {
+            "name": "help",
+            "aliases": [
+              "commands",
+              "english",
+              "enhelp",
+              "englishhelp",
+              "guide"
+            ],
+            "file": "apocalypse_bot/commands/v652_english_access.py",
+            "line": 493
+          }
+        }
+      ],
+      "unresolved_collisions": [],
+      "parse_errors": []
+    },
+    "event_audit": {
+      "ok": true,
+      "events": {
+        "on_ready": [
+          {
+            "kind": "event",
+            "file": "apocalypse_bot/core/bot.py",
+            "function": "on_ready"
+          },
+          {
+            "kind": "listen",
+            "file": "apocalypse_bot/commands/v731_duplicate_stability.py",
+            "function": "v731_startup_audit"
+          },
+          {
+            "kind": "listen",
+            "file": "apocalypse_bot/commands/v36_gambling_market.py",
+            "function": "start_v36_market_loop"
+          },
+          {
+            "kind": "listen",
+            "file": "apocalypse_bot/commands/v432_forge_live.py",
+            "function": "v432_public_ready_event"
+          }
+        ],
+        "on_message": [
+          {
+            "kind": "event",
+            "file": "apocalypse_bot/core/bot.py",
+            "function": "on_message"
+          }
+        ],
+        "on_command_error": [
+          {
+            "kind": "event",
+            "file": "apocalypse_bot/core/bot.py",
+            "function": "on_command_error"
+          }
+        ],
+        "on_raw_reaction_add": [
+          {
+            "kind": "listen",
+            "file": "apocalypse_bot/commands/v421_utility_pack.py",
+            "function": "self_role_reaction_add"
+          }
+        ],
+        "on_raw_reaction_remove": [
+          {
+            "kind": "listen",
+            "file": "apocalypse_bot/commands/v421_utility_pack.py",
+            "function": "self_role_reaction_remove"
+          }
+        ],
+        "on_command": [
+          {
+            "kind": "listen",
+            "file": "apocalypse_bot/commands/v710_growth_loop.py",
+            "function": "growth_activity_before"
+          }
+        ],
+        "on_command_completion": [
+          {
+            "kind": "listen",
+            "file": "apocalypse_bot/commands/v710_growth_loop.py",
+            "function": "growth_activity_listener"
+          }
+        ],
+        "on_guild_channel_delete": [
+          {
+            "kind": "listen",
+            "file": "apocalypse_bot/commands/v423_intake_center.py",
+            "function": "reconcile_deleted_intake"
+          }
+        ]
+      },
+      "core_event_duplicates": {}
+    },
+    "story_gate_sources": {
+      "ok": true,
+      "gate_reference_counts": {
+        "2": 6,
+        "3": 6,
+        "4": 7
+      },
+      "admin_helper_present": true
+    },
+    "story_progression_logic": {
+      "ok": true,
+      "cases": [
+        {
+          "name": "season1 open",
+          "ok": true
+        },
+        {
+          "name": "season2 locked",
+          "ok": true
+        },
+        {
+          "name": "season2 unlock",
+          "ok": true
+        },
+        {
+          "name": "season3 unlock",
+          "ok": true
+        },
+        {
+          "name": "legacy season3 preserved",
+          "ok": true
+        },
+        {
+          "name": "season4 unlock",
+          "ok": true
+        }
+      ]
+    },
+    "no_bot_file_deletion": {
+      "ok": true,
+      "removed": [],
+      "added": [
+        "ABADDON_BOT_DESCRIPTION_v7.3.1.txt",
+        "ABADDON_v7.3.1_DEPLOY_TEST_GUIDE_KO.txt",
+        "ABADDON_v7.3.1_DUPLICATE_AUDIT_KO.md",
+        "ABADDON_v7.3.1_PATCH_NOTES_KO.txt",
+        "ABADDON_v7.3.1_STORY_PROGRESSION_SPEC_KO.md",
+        "apocalypse_bot/commands/__pycache__/story_progression.cpython-313.pyc",
+        "apocalypse_bot/commands/story_progression.py",
+        "apocalypse_bot/commands/v731_duplicate_stability.py"
+      ]
+    },
+    "no_site_file_deletion": {
+      "ok": true,
+      "removed": [],
+      "added": [
+        "ABADDON_BOT_DESCRIPTION_v7.3.1.txt",
+        "ABADDON_OFFICIAL_SITE_v7.3.1_PATCH_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v7.3.1_UPLOAD_GUIDE.txt"
+      ]
+    },
+    "images_unchanged": {
+      "ok": true,
+      "changed": []
+    },
+    "javascript_syntax": {
+      "ok": true,
+      "script": "",
+      "config": ""
+    },
+    "html_and_links": {
+      "ok": true,
+      "html_files": 3,
+      "parse_errors": [],
+      "missing_local_refs": []
+    },
+    "version_sync": {
+      "ok": true,
+      "files": {
+        "package": true,
+        "config": true,
+        "index": true,
+        "updates": true
+      }
+    }
+  },
+  "ok": true
+}
