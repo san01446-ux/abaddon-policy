@@ -1,6 +1,0 @@
-ABADDON OFFICIAL SITE v6.5.2 UPLOAD GUIDE
-
-Upload the CONTENTS of the ZIP so index.html is at the deployment root.
-Required root entries: index.html, style.css, script.js, config.js, commands.html, updates.html, assets/.
-The new assets/v652/ directory is required.
-After deployment use Ctrl+F5 or clear the CDN cache. Image URLs use ?v=652 to bypass old browser caches.
