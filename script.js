@@ -1,0 +1,540 @@
+"use strict";
+
+const commands = [
+  {"c": "서버", "cmd": "!서버리뉴얼", "d": "28종 테마·채널 구조·게임 구역·서버 브리핑·이벤트 채널·개인 알림·백업·복구를 통합 드롭다운에서 관리합니다."},
+  {"c": "서버", "cmd": "!서버리뉴얼 테마목록 · !서버리뉴얼 상태", "d": "최신 28종 테마의 구조 매핑과 현재 테마·계획·백업·안전 자동 진행 상태를 확인합니다."},
+  {"c": "카드게임", "cmd": "!카드게임", "d": "포커·원카드·조커잡기를 선택하고 참가비를 입력해 버튼형 모집방을 만듭니다."},
+  {"c": "카드게임", "cmd": "!포커 [참가비]", "d": "2~6명이 비공개 5장을 확인하고 한 장을 한 번 교환한 뒤 족보로 승부합니다."},
+  {"c": "카드게임", "cmd": "!원카드 [참가비]", "d": "2~6명 턴제 카드게임입니다. 같은 무늬·숫자와 2·J·A·조커 특수 효과를 사용합니다."},
+  {"c": "카드게임", "cmd": "!조커잡기 [참가비]", "d": "2~8명이 짝을 자동 제거하고 옆 사람 패에서 한 장씩 뽑아 마지막 조커를 피합니다."},
+  {"c": "안정화", "cmd": "!안정화상태 · !테스트 상세", "d": "현재 버전, 데이터 저장, 명령·별칭 충돌, 드롭다운 누락, 텍스트 우선 정책을 읽기 전용으로 검사합니다."},
+  {"c": "안정화", "cmd": "!오늘할일", "d": "출석·운세·오늘의 퀴즈·일일 퀘스트와 추천 생활·전투 루틴을 한 화면에 정리합니다."},
+  {"c": "서버", "cmd": "!서버브리핑", "d": "현재 날씨, 돌연변이 위험구역, 보급선, 주간 기지 방어 상태를 텍스트 브리핑으로 확인합니다."},
+  {"c": "서버", "cmd": "!서버테마 · !서버테마미리보기 [테마명]", "d": "검은 성당·폐허 도시·격리 연구소 등 28종 서버 테마를 확인합니다."},
+  {"c": "관리", "cmd": "!서버테마설정 테마명 · !데이터백업", "d": "서버 브리핑 테마를 변경하고 현재 생존 데이터의 수동 백업을 생성합니다."},
+  {"c": "미니게임", "cmd": "!미니게임", "d": "지뢰찾기·실시간 선물거래·반응속도·기억회로·참가형 생존자 레이스를 한 번에 확인합니다."},
+  {"c": "미니게임", "cmd": "!지뢰찾기 지뢰수 배팅액", "d": "시작 전 보유, 현재 보유, 현금화 총액, 순손익, 지뢰 폭발 손실을 명확히 분리해 표시합니다."},
+  {"c": "미니게임", "cmd": "!선물거래 [배팅액] [5/10/20]", "d": "롱·숏 버튼으로 진입하고 16틱 실시간 이모지 차트와 미실현 손익을 보며 직접 청산합니다."},
+  {"c": "미니게임", "cmd": "!반응속도 [배팅액] · !기억회로 [배팅액]", "d": "버튼 반응 시간과 이모지 배열 기억력을 겨루는 개인 미니게임입니다."},
+  {"c": "미니게임", "cmd": "!생존자레이스 [참가비]", "d": "참가를 원하는 사람만 버튼으로 입장하고, 방장이 인원을 확정하면 이모지 트랙 레이스를 시작합니다."},
+  {"c": "특수 작전", "cmd": "!다크존 · !다크존진입 · !다크존탐색 · !다크존탈출 · !다크존상태", "d": "작전 가방에 획득물을 쌓고 3분 탈출을 시도합니다. 기존 인벤토리와 장착 장비는 안전합니다."},
+  {"c": "특수 작전", "cmd": "!다크존공격 @유저", "d": "탈출 대기 중인 생존자의 작전 가방만 습격합니다. 한 작전당 공격자는 한 번만 시도할 수 있습니다."},
+  {"c": "특수 작전", "cmd": "!밀수품운반 · !밀수품상태 · !밀수품습격 @유저 · !밀수품납품", "d": "10분 공개 운반을 버티면 계약 화물을 2배 정산합니다. 실패해도 기존 자산은 잃지 않습니다."},
+  {"c": "서버 이벤트", "cmd": "!보급선 · !보급선수색", "d": "하루 1~2회 10분 피버가 열립니다. 생활 보상 2배와 희귀 발견 보정을 받고 이벤트당 한 번 수색합니다."},
+  {"c": "장비", "cmd": "!고철갈갈이 자원 수량 · !장비갈갈이 장비명", "d": "잉여 기지 자원과 비장착 일반·고급·희귀 장비를 칩과 강화석으로 재활용합니다."},
+  {"c": "기본", "cmd": "!우편함 [페이지] · !받기 번호/all", "d": "시간형 작전과 서버 이벤트 정산을 확인하고 한 번에 수령합니다."},
+  {"c": "관리", "cmd": "!알림설정 · !이벤트채널설정 #채널", "d": "날씨·보급선·밀수품 알림을 DM·멘션으로 선택하고 관리자는 공개 이벤트 채널을 지정합니다."},
+
+  {"c": "하드코어", "cmd": "!괴질탈출 배팅액 · !크래시 배팅액", "d": "실시간으로 상승하는 배당을 감염체 충돌 전에 탈출 버튼으로 현금화하는 고난도 칩 게임입니다."},
+  {"c": "하드코어", "cmd": "!비상주파수 배팅액", "d": "움직이는 주파수 게이지를 좁은 목표 구간에서 멈추며 오차에 따라 0·2·4·8배로 정산합니다."},
+  {"c": "하드코어", "cmd": "!지뢰찾기 지뢰수 배팅액", "d": "20칸 폐허에서 3~10개의 감염자 지뢰를 피합니다. 안전 칸을 열수록 현금화 배당이 상승합니다."},
+  {"c": "하드코어", "cmd": "!돌연변이경주 · !돌연변이배팅 번호 배팅액", "d": "서버 채널에서 25초간 배팅을 받고 5종 돌연변이의 경주 결과를 공동 정산합니다."},
+  {"c": "하드코어", "cmd": "!오염문", "d": "식량을 지불하고 보급품·잭팟·변이체 매복이 숨은 세 문 중 하나를 선택합니다."},
+  {"c": "하드코어", "cmd": "!비상보급상자", "d": "하루 1개, 높은 비용, 개인 천장과 서버 주간 한정 전리품을 사용하는 후반용 보급상자입니다."},
+  {"c": "하드코어", "cmd": "!선물거래 상승/하락 배팅액 5/10/20", "d": "암시장 지수의 방향을 예측하는 고위험 레버리지 칩 거래입니다. 실패 시 추가 청산 손실이 발생할 수 있습니다."},
+  {"c": "하드코어", "cmd": "!괴수투기장 @유저 배팅액 · !영혼결투 @유저 배팅액", "d": "상대가 수락해야 시작되는 동의형 결투입니다. 펫 삭제 대신 부상·영혼 상처와 제한적 잔해 드롭을 적용합니다."},
+  {"c": "하드코어", "cmd": "!벙커개설 · !벙커참가 · !벙커투표 · !벙커진행 · !벙커상태", "d": "3~8명이 참가해 투표로 한 명씩 탈락시키고 최후의 1명이 상금을 가져가는 서버 이벤트입니다."},
+  {"c": "하드코어", "cmd": "!금고개설 · !금고참가 · !금고시작", "d": "3~4명이 공동 참가비를 내고 세 선택지의 보안 관문 4개를 연속 통과하는 협동 금고 침투입니다."},
+  {"c": "하드코어", "cmd": "!하이에나", "d": "고위험 게임과 결투에서 생성된 서버 잔해 풀을 약탈합니다. 감염체 매복 위험이 있습니다."},
+  {"c": "하드코어", "cmd": "!생물테러준비 · !생물테러수신 켜기/끄기 · !생물테러 @유저", "d": "대상이 명시적으로 수신 동의를 켠 경우에만 작동하는 고비용 감염 상호작용입니다."},
+  {"c": "환경", "cmd": "!날씨", "d": "서버별로 2~5시간 사이에서 불규칙하게 바뀌는 12종 종말 날씨와 생활·전투 보정을 확인합니다."},
+  {"c": "환경", "cmd": "!무전 · !무전해독 · !SOS", "d": "현재 날씨 구간에 수신된 구조 신호를 주파수·좌표·긴급응답 버튼 중 하나로 해독합니다."},
+  {"c": "환경", "cmd": "!위험구역 · !돌연변이구역", "d": "매일 지정되는 고위험·고보상 지역과 성공 페널티·보상 배율을 확인합니다."},
+  {"c": "생활", "cmd": "!오늘의 운세 · !오늘의운세", "d": "오늘의 등급·행운 아이템·음식·방향과 작은 전투·생활·시장 보정을 확인하고 첫 확인 보상을 받습니다."},
+  {"c": "장비", "cmd": "!내구도 [장비명] · !무기수리 [장비명]", "d": "무기 내구도와 출력 감소 상태를 확인하고 수리 키트·자원으로 복구합니다."},
+  {"c": "장비", "cmd": "!개조목록 · !개조부품제작 부품명 · !무기개조 장비명 부품명", "d": "6종 파츠를 제작하고 보유 무기에 장착하거나 해제합니다."},
+  {"c": "경제", "cmd": "!까마귀 · !까마귀구매 번호", "d": "날씨 구간마다 낮은 확률로 등장하는 칩 전용 떠돌이 상인의 한정 재고를 확인·구매합니다."},
+  {"c": "생활", "cmd": "!랜덤박스 [1~3]", "d": "식량을 지불해 하루 최대 3개의 대형 보급 상자를 개봉합니다. 오늘의 운세가 상위 결과 확률을 소폭 보정합니다."},
+  {"c": "관리", "cmd": "!테스트 · !테스트 상세", "d": "재화와 전투 상태를 바꾸지 않고 v6.5.1 명령·별칭 충돌, 28종 서버리뉴얼, 카드게임, 이미지 정책를 점검합니다."},
+  {"c": "기지", "cmd": "!기지방어 · !기지방어공격", "d": "기지 레벨과 장비 전투력을 합산하는 주간 서버 협동 방어전입니다."},
+  {"c": "경제", "cmd": "!자원시장 · !자원구매 · !자원판매", "d": "나무·광석·고철의 수요와 공급에 따라 가격이 변하는 기지 자원 전용 시장입니다."},
+  {"c": "기지", "cmd": "!기지칩교환 자원 수량", "d": "카지노 칩을 나무·광석·고철로 교환합니다. 식량 시장과 별도의 고정 칩 환율을 사용합니다."},
+  {"c": "전투", "cmd": "!전투 [난이도] · !던전전술 [난이도]", "d": "공격·기술·방어·응급·도주 버튼으로 진행하는 공용 전술 전투입니다. 기존 !던전은 빠른 자동전투입니다."},
+  {"c": "스토리", "cmd": "!스토리 전투 [난이도] · !rpg 전투 [난이도]", "d": "스토리와 RPG에서 공용 전술 전투 엔진을 시작합니다."},
+  {"c": "생활", "cmd": "!인카운트도감", "d": "알바·땅파기·채집·벌목에서 발견한 12종 랜덤 인카운트와 수집률을 확인합니다."},
+  {"c": "월드보스", "cmd": "!월드보스", "d": "현재 출현한 서버 공동 월드보스의 이미지, HP, 페이즈, 파괴 부위와 전투 상태를 확인합니다."},
+  {"c": "월드보스", "cmd": "!월드보스공격", "d": "하루 최대 10회, 45초 간격으로 보스를 공격합니다. 치명타·회피·반격·부위 파괴와 페이즈 전환이 적용됩니다."},
+  {"c": "월드보스", "cmd": "!월드보스기여도", "d": "현재 전투의 내 누적 피해, 공격 횟수, 순위와 수령 가능한 보상을 확인합니다."},
+  {"c": "월드보스", "cmd": "!보스랭킹", "d": "현재 월드보스 서버 기여도 상위 생존자와 누적 피해량을 확인합니다."},
+  {"c": "월드보스", "cmd": "!월드보스보상", "d": "참가·누적 피해·처치·순위 보상을 전투별로 한 번만 수령합니다."},
+  {"c": "월드보스", "cmd": "!월드보스목록", "d": "검은 성역의 문지기부터 종말의 왕 아바돈까지 월드보스 6종과 약점·특성을 확인합니다."},
+  {"c": "월드보스", "cmd": "!월드보스도감", "d": "직접 참가하거나 처치한 보스의 발견 기록과 개인 토벌 통계를 확인합니다."},
+  {"c": "관리", "cmd": "!월드보스리셋 보스이름", "d": "관리자가 선택한 월드보스를 새 전투 ID로 소환합니다. !월드보스소환 별칭도 유지됩니다."},
+  {"c": "관리", "cmd": "!월드보스테스트 보스이름", "d": "관리자가 짧은 체력의 테스트 월드보스를 소환해 페이즈·보상 흐름을 점검합니다."},
+  {"c": "기본", "cmd": "!패치노트 · /패치노트", "d": "최신 v6.5.1 서버리뉴얼 28종 테마·포커·원카드·조커잡기 패치 내용을 확인합니다. !업데이트와 !변경내역도 같은 기록실을 엽니다."},
+  {"c": "대화", "cmd": "!대화", "d": "아바돈 말 걸기, 기억 등록·검색, 내 제출 기록, 오늘의 질문, 생존 밸런스와 교감 기록을 드롭다운에서 선택합니다."},
+  {"c": "대화", "cmd": "!아바돈 내용", "d": "승인된 서버 기억을 먼저 검색하고, 없으면 ABADDON 전용 기본 대화 코어가 질문 의도에 맞춰 답합니다."},
+  {"c": "대화", "cmd": "!말걸기", "d": "모달 없이 현재 채널에서 15분 동안 자연스러운 연속 대화를 시작합니다. 일반 채팅과 아바돈 메시지 답글로 대화를 이어갑니다."},
+  {"c": "대화", "cmd": "!대화종료", "d": "현재 채널에서 진행 중인 개인 연속 대화를 종료합니다."},
+  {"c": "대화", "cmd": "!가르치기", "d": "원본 기억 공방 모달을 열어 호출 문장과 답변을 제출합니다. 일반 사용자는 검수 대기, 운영진은 즉시 승인됩니다."},
+  {"c": "대화", "cmd": "!지식", "d": "서버 승인 기억 수, 검수 대기 수, 자동 정확일치 응답 상태와 관리 명령을 확인합니다."},
+  {"c": "대화", "cmd": "!지식 검색 단어", "d": "승인된 서버 기억의 호출 문장과 답변을 키워드로 검색합니다."},
+  {"c": "관리", "cmd": "!지식 검수", "d": "운영진이 일반 사용자가 제출한 기억을 드롭다운에서 확인하고 승인 또는 반려합니다."},
+  {"c": "관리", "cmd": "!지식 자동반응 켜기/끄기", "d": "일반 채팅이 승인 기억의 호출 문장과 정확히 일치할 때 자동 응답할지 설정합니다. 기본값은 꺼짐입니다."},
+  {"c": "대화", "cmd": "!오늘의질문", "d": "날짜와 서버 기준으로 선택된 오늘의 질문을 열고 구성원이 모달로 답변을 남기게 합니다."},
+  {"c": "대화", "cmd": "!밸런스게임", "d": "ABADDON 세계관의 두 생존 선택지를 게시하고 A/B 반응 투표를 엽니다."},
+  {"c": "대화", "cmd": "!교감", "d": "대화, 승인된 기억 등록과 오늘의 질문 참여로 쌓은 사용자별 교감 단계와 진행도를 확인합니다."},
+  {"c": "대화", "cmd": "!한마디", "d": "ABADDON 프로젝트에서 새로 작성한 세계관 원문 한마디를 표시합니다."},
+  {"c": "대화", "cmd": "!응원 [@유저]", "d": "자신 또는 선택한 멤버에게 짧은 응원 메시지와 자동 리액션을 전합니다."},
+  {"c": "게임", "cmd": "!게임", "d": "월드보스·굴착·보물을 포함한 기능을 11개 카테고리·즐겨찾기·최근 실행·검색으로 찾고, 상세 미리보기 후 실행합니다. 월드보스·레이드와 굴착·보물 카테고리를 바로 찾을 수 있습니다."},
+  {"c": "경제", "cmd": "!돈주세요", "d": "보급 담당자·암시장 상인·버려진 배급소·특별 지원 물자 상황을 거쳐 지원금을 받습니다."},
+  {"c": "생활", "cmd": "!알바", "d": "작업 배정·진행·완료 또는 사고를 단계형으로 보여주고 임금·수리비·추가 자원·현재 잔액을 한눈에 표시합니다."},
+  {"c": "카지노", "cmd": "!카지노", "d": "v6.5.1 카지노 로비입니다. 결과 이미지는 사용하지 않으며 손익·배팅·승패 판정과 펫 시너지는 텍스트로 표시됩니다."},
+  {"c": "카지노", "cmd": "!블랙잭 금액", "d": "일반 승리·내추럴 블랙잭·무승부·패배·버스트 결과에 맞는 카드 테이블 결과를 텍스트 임베드로 표시합니다."},
+  {"c": "카지노", "cmd": "!슬롯 금액", "d": "부분 일치·일반 당첨·대승·잭팟·실패·치명 실패를 실제 릴 결과와 손익 기준으로 구분합니다."},
+  {"c": "카지노", "cmd": "!하이로우 금액", "d": "예측 성공·연승 현금화·최대 연승·실패를 결과 강도에 맞는 텍스트 결과로 표시합니다."},
+  {"c": "카지노", "cmd": "!바카라 플레이어/뱅커/타이 금액", "d": "플레이어·뱅커·타이 판정과 실제 당첨·미당첨 결과에 맞는 카드 결과 텍스트 결과를 사용합니다."},
+  {"c": "카지노", "cmd": "!다이스 홀/짝/1~6 금액", "d": "숫자 적중·홀짝 적중·실패를 배당과 순손익 기준으로 분리해 표시합니다."},
+  {"c": "카지노", "cmd": "!룰렛 배팅액", "d": "생존 성공과 탄환 피격을 서로 다른 텍스트 결과로 표시하며 위험 단계의 손실 강도도 반영합니다."},
+  {"c": "기지", "cmd": "!기지", "d": "현재 기지 단계, 시간당 생산량, 다음 업그레이드 비용과 남은 공사 시간을 단계별 이미지와 이모지 상태표로 확인합니다."},
+  {"c": "기지", "cmd": "!기지건설", "d": "나무 120·광석 80·고철 100·식량 100,000을 사용해 Lv.1 야영지를 건설합니다."},
+  {"c": "기지", "cmd": "!기지강화", "d": "상위 단계일수록 대량의 자원과 30분·2시간·8시간·24시간의 실제 공사 시간이 필요한 고난도 업그레이드를 시작하거나 완료 확인합니다."},
+  {"c": "기지", "cmd": "!기지수확", "d": "기지 단계별 시간당 생산량을 기준으로 최대 24시간 누적 식량을 수확합니다."},
+  {"c": "스토리", "cmd": "!시즌3", "d": "신규 스토리 시즌 3 종말의 왕좌의 현재 장면과 선택지 드롭다운을 표시합니다."},
+  {"c": "스토리", "cmd": "!시즌3 시작", "d": "시즌 1 검은 주파수와 시즌 2 백색 방주의 선택 기록을 계승해 종말의 왕좌 캠페인을 시작합니다."},
+  {"c": "스토리", "cmd": "!시즌3 선택 번호", "d": "드롭다운 대신 번호로 현재 장면의 선택지를 진행합니다."},
+  {"c": "스토리", "cmd": "!시즌3 기록", "d": "현재 회차의 선택 기록과 발견한 시즌 3 엔딩 4종을 확인합니다."},
+  {"c": "스토리", "cmd": "!시즌3 재시작", "d": "발견 엔딩과 이미 받은 선택 보상을 유지한 채 다른 분기를 시작합니다."},
+  {"c": "관리", "cmd": "!아바돈진단", "d": "Discord 연결·데이터 파일·TTS·서버 리뉴얼·슬래시·홈페이지 피드·봇 권한을 드롭다운에서 통합 점검합니다."},
+  {"c": "관리", "cmd": "!채널규칙", "d": "현재 채널에 맞는 25종 규칙 템플릿을 자동 추천하고, 미리보기 후 작성·고정합니다. 기존 규칙 메시지는 중복 없이 갱신합니다."},
+  {"c": "관리", "cmd": "!채널규칙 일괄설치", "d": "최대 25개 텍스트 채널을 선택하고 채널별 자동 추천 결과를 확인한 뒤 20초 안전 간격으로 작성·고정합니다."},
+  {"c": "관리", "cmd": "!채널규칙 일괄상태", "d": "일괄설치 진행 수, 성공·실패 수와 채널별 추천 템플릿을 확인합니다."},
+  {"c": "관리", "cmd": "!채널규칙 일괄중지", "d": "진행 중인 규칙 일괄설치를 안전하게 멈춥니다. 일괄시작 명령으로 남은 지점부터 재개할 수 있습니다."},
+  {"c": "관리", "cmd": "!채널규칙 일괄시작", "d": "재시작 또는 중지 후 남아 있는 규칙 일괄설치 계획을 이어서 실행합니다."},
+  {"c": "생활", "cmd": "!땅파기", "d": "40%·80% 진행 연출 뒤 고철·광석·식량·고대파편·미감정 보물과 8~35 식량의 굴착 잔돈을 항목별로 표시합니다."},
+  {"c": "생활", "cmd": "!보물감정", "d": "미감정 보물의 감정사를 드롭다운에서 선택합니다. 감정 결과는 A~E 등급이며 감정과 동시에 식량으로 매입됩니다."},
+  {"c": "생활", "cmd": "!보물감정 감정사이름", "d": "마르코·세라·라울·이리스 중 감정사를 직접 지정해 가장 오래된 미감정 보물을 감정합니다."},
+  {"c": "생활", "cmd": "!감정사", "d": "감정사 4명의 비용, 매입 배율과 등급 상승 확률을 확인합니다."},
+  {"c": "생활", "cmd": "!보물함", "d": "오늘 남은 땅파기 횟수, 미감정 보물, A~E 감정 누계와 누적 매입액을 확인합니다."},
+  {"c": "관리", "cmd": "!설정", "d": "TTS 채널·엔진·기본 목소리, 환영 안내 채널, 운영 로그, 자동 이모지와 홈페이지 공개 피드를 드롭다운에서 관리합니다."},
+  {"c": "음성", "cmd": "!음성입장", "d": "현재 들어가 있는 음성 채널로 아바돈을 연결합니다."},
+  {"c": "음성", "cmd": "!말해 내용", "d": "같은 음성 채널에서 입력한 내용만 한국어 TTS로 읽으며 닉네임은 생략합니다."},
+  {"c": "음성", "cmd": "!음성퇴장", "d": "TTS 대기열을 정리하고 음성 채널에서 퇴장합니다."},
+  {"c": "음성", "cmd": "!TTS 켜기", "d": "저장된 TTS 채널에서 작성자의 현재 음성방을 감지하고 채팅 내용만 낭독합니다."},
+  {"c": "음성", "cmd": "!TTS 끄기", "d": "자동 낭독을 중지하고 남은 대기열을 비웁니다."},
+  {"c": "음성", "cmd": "!TTS 채널 [#채널]", "d": "현재 채널 또는 선택한 텍스트 채널을 TTS 채팅방으로 지정하고 작성자 음성방 자동 감지를 켭니다."},
+  {"c": "음성", "cmd": "!TTS채널", "d": "TTS로 사용할 텍스트 채널 안에서 실행하는 가장 짧은 관리자 설정 명령입니다."},
+  {"c": "음성", "cmd": "!TTS채널 #텍스트채널", "d": "다른 텍스트 채널을 지정할 때 사용하는 짧은 관리자 설정 명령입니다."},
+  {"c": "음성", "cmd": "!TTS 음성채널 음성채널", "d": "호환용 고정 음성방 모드입니다. !TTS채널을 다시 실행하면 작성자 음성방 자동 감지로 돌아갑니다."},
+  {"c": "음성", "cmd": "/tts 목소리", "d": "일반 사용자가 한국어 음성 10종 중 자신의 목소리를 드롭다운으로 선택합니다."},
+  {"c": "음성", "cmd": "/tts 내설정", "d": "내 개인 목소리와 서버 기본 목소리 상속 여부를 비공개로 확인합니다."},
+  {"c": "음성", "cmd": "/tts 미리듣기", "d": "내가 현재 들어가 있는 음성 채널에서 선택한 목소리를 시험 재생합니다."},
+  {"c": "음성", "cmd": "/tts 초기화", "d": "개인 목소리 설정을 지우고 서버 기본 목소리를 다시 사용합니다."},
+  {"c": "음성", "cmd": "/tts 기본목소리", "d": "관리자가 개인 설정이 없는 사용자의 서버 기본 목소리를 정합니다."},
+  {"c": "음성", "cmd": "/tts 채널", "d": "현재 텍스트 채널을 TTS 채팅방으로 지정합니다. 음성방은 메시지 작성자를 기준으로 자동 감지합니다."},
+  {"c": "음성", "cmd": "!TTS 목소리 [이름/초기화]", "d": "접두사 명령으로 개인 목소리를 선택하거나 서버 기본값으로 되돌립니다."},
+  {"c": "음성", "cmd": "!TTS 기본목소리 이름", "d": "관리자가 접두사 명령으로 서버 기본 목소리를 변경합니다."},
+  {"c": "음성", "cmd": "!TTS 속도 1.0", "d": "TTS 재생 속도를 0.7배부터 1.5배 사이로 설정합니다."},
+  {"c": "음성", "cmd": "!TTS 볼륨 100", "d": "TTS 볼륨을 10%부터 200% 사이로 설정합니다."},
+  {"c": "음성", "cmd": "!TTS 상태", "d": "음성 연결, 자동 입장, 낭독 채널, 최근 대체 음성과 Edge 임시 격리 상태를 확인합니다."},
+  {"c": "음성", "cmd": "!TTS 진단", "d": "PyNaCl·davey·edge-tts·FFmpeg와 Python 음성 실행 환경을 진단합니다."},
+  {"c": "음성", "cmd": "!TTS 음성격리초기화", "d": "관리자가 반복 실패로 임시 격리된 Edge 목소리와 전체 합성 백오프를 초기화합니다."},
+  {"c": "관리", "cmd": "!인삿말설정 #환영 #공지 #규칙 [#가입]", "d": "신규 멤버 환영 메시지에 공지사항·기본규칙·가입 채널 링크를 설정합니다."},
+  {"c": "관리", "cmd": "!인삿말미리보기", "d": "현재 신규 멤버 환영 메시지를 실제 전송 전에 확인합니다."},
+  {"c": "관리", "cmd": "!인삿말상태", "d": "환영·공지·규칙·가입 안내 채널 설정을 확인합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼", "d": "28종 테마·채널 구조·게임 구역·서버 브리핑·이벤트 채널·개인 알림·백업·복구·429 상태를 통합 드롭다운에서 관리합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 테마목록", "d": "아포칼립스 12종·깔끔고딕 4종·화사자연 6종·모던판타지 6종, 총 28종 테마와 구조 매핑을 확인합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 미리보기 벚꽃정원", "d": "기존 채널 삭제 없이 선택한 테마의 적용 계획을 미리 확인합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 적용 깔끔고딕", "d": "현재 서버를 자동 백업하고 적용 계획만 생성합니다. 이 명령 자체는 채널을 수정하지 않습니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 게임미리보기 네온아카데미", "d": "BOT GAME·말해라·테스트 구역의 RPG·퀴즈·도박·음악·음성 채널 정리 계획을 미리 확인합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 게임정리 순백성당", "d": "게임·음성 구역의 안전 적용 계획만 생성하고, 실제 변경은 다음 명령으로 한 단계씩 진행합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 백업 현재정상", "d": "현재 카테고리·채널 구조를 이름과 함께 수동 백업합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 백업목록", "d": "최근 복구 지점을 최대 10개까지 확인하고 Discord 선택 목록에서 복구 기준을 고릅니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 되돌리기 [번호]", "d": "채널을 바로 수정하지 않고 단계별 안전 복구 계획만 생성합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 복구다음", "d": "Discord 429 방지를 위해 한 번에 채널 변경 1개만 복구합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 복구상태", "d": "단계별 복구 진행률, 다음 항목, 재실행 가능 시간을 확인합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 다음", "d": "승인된 테마 계획에서 Discord 변경 한 개만 실행합니다. 안내된 안전 대기시간 뒤 반복합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 계획상태", "d": "테마 적용 계획의 진행률, 다음 작업과 재실행 가능 시간을 확인합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 자동시작", "d": "현재 미완료 리뉴얼 또는 복구 계획을 5분 안전 간격으로 한 단계씩 자동 진행합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 자동상태", "d": "자동 진행 모드, 진행률, 다음 실행시간과 마지막 중지 이유를 확인합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 자동중지", "d": "자동 실행만 일시정지하고 현재 계획과 진행률은 그대로 보존합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 계획취소", "d": "남은 테마 적용 계획을 취소하고 추가 변경을 막습니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 중지", "d": "현재 단계별 리뉴얼·복구 작업을 안전하게 중지합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 작업상태", "d": "리뉴얼 작업 진행 여부와 마지막 종료 상태를 확인합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 긴급정리", "d": "리뉴얼 도중 남은 빈 테마 카테고리를 미리보고 실행할 때마다 1개만 삭제합니다."},
+  {"c": "관리", "cmd": "!서버메뉴 생성 [#채널]", "d": "공지·규칙·역할·채팅·봇·문의 채널로 이동하는 링크 버튼 패널을 생성합니다."},
+  {"c": "관리", "cmd": "!서버메뉴 갱신", "d": "현재 채널 구조를 다시 분석해 저장된 서버 이동 메뉴를 갱신합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 빈카테고리", "d": "비어 있는 카테고리의 번호와 ID를 확인합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 빈카테고리선택", "d": "Discord 드롭다운에서 삭제할 빈 카테고리를 여러 개 직접 선택합니다."},
+  {"c": "관리", "cmd": "!서버리뉴얼 빈카테고리삭제 1,3 확인", "d": "목록 번호를 지정해 선택한 빈 카테고리만 삭제합니다."},
+  {"c": "장비", "cmd": "!강화 장비명", "d": "고딕 대장간 카드로 강화 결과, 비용, 잔액, 확률, 장인의 열기를 표시하고 재강화·자랑하기 버튼을 제공합니다."},
+  {"c": "장비", "cmd": "!강화기록", "d": "최근 강화 성공·실패·단계 하락 기록 10개를 확인합니다."},
+  {"c": "장비", "cmd": "!강화연출", "d": "강화 단계별 표시 이름 진화와 연속 실패 확률 보정인 장인의 열기를 안내합니다."},
+  {"c": "장비", "cmd": "!장비외형 장비명", "d": "현재 보유 장비의 강화 단계별 외형과 다음 시각 변화 단계를 확인합니다."},
+  {"c": "관리", "cmd": "!실시간피드상태", "d": "Background Worker와 별도 실시간 피드 Web Service의 연결·심박·최근 전송 상태를 확인합니다."},
+  {"c": "관리", "cmd": "!실시간피드테스트", "d": "비밀키 인증으로 테스트 이벤트와 상태 심박을 Web Service에 직접 전송해 연동을 검사합니다."},
+  {"c": "관리", "cmd": "!실시간피드 켜기/끄기", "d": "홈페이지에 강화 이정표와 운영진 공개 공지를 표시할지 설정합니다."},
+  {"c": "관리", "cmd": "!실시간공지 내용", "d": "공식 홈페이지 실시간 기록에 공개 운영 공지를 등록합니다. 보안·문의 로그와는 분리됩니다."},
+  {"c": "장비", "cmd": "!신규장비 [티어]", "d": "v4.3.1에 추가된 7티어 신규 장비 21종과 가격·전투력을 확인합니다."},
+  {"c": "경제", "cmd": "!경제밸런스", "d": "장비·의료·펫·기지 성장 비용과 일반 도박·BLACK CASINO 조정 내용을 확인합니다."},
+  {"c": "원정", "cmd": "!유물", "d": "보유 유물, 장착 슬롯, 강화 단계, 유물 가루와 합산 효과를 확인합니다."},
+  {"c": "원정", "cmd": "!유물 장착 이름", "d": "보유한 원정 유물을 최대 2개까지 장착해 전투·보상 효과를 적용합니다."},
+  {"c": "원정", "cmd": "!유물 해제 이름", "d": "장착 중인 원정 유물을 장착 해제합니다."},
+  {"c": "원정", "cmd": "!유물 강화 이름", "d": "유물 가루와 식량을 사용해 유물을 최대 +5까지 강화합니다."},
+  {"c": "원정", "cmd": "!유물 분해 이름 수량", "d": "중복 유물을 분해해 강화에 사용하는 유물 가루를 얻습니다."},
+  {"c": "원정", "cmd": "!원정 장비", "d": "현재 장착한 유물과 공격·방어·회복·보상 합산 효과를 확인합니다."},
+  {"c": "원정", "cmd": "!원정 임무 [주간]", "d": "현재 일일 또는 주간 원정 임무 3개와 진행도를 확인합니다."},
+  {"c": "원정", "cmd": "!원정 임무보상 일일/주간 번호", "d": "완료한 원정 임무의 식량·유물 가루·응급 키트 보상을 수령합니다."},
+  {"c": "원정", "cmd": "!원정 복구", "d": "6시간 이상 방치됐거나 재시작 후 남은 원정 전투 상태를 점검·복구합니다."},
+  {"c": "스토리", "cmd": "!시즌2 장면 [번호]", "d": "지나간 시즌 2 선택 장면 목록과 원문을 다시 확인합니다."},
+  {"c": "스토리", "cmd": "!시즌2 수집", "d": "백색 방주 엔딩 4종의 수집 현황을 확인합니다."},
+  {"c": "스토리", "cmd": "!시즌2 계승", "d": "시즌 1 완료·엔딩·핵심 선택이 시즌 2에 어떻게 계승되는지 확인합니다."},
+  {"c": "스토리", "cmd": "!시즌2 복구", "d": "손상된 시즌 2 장면 포인터를 안전하게 프롤로그로 복구합니다."},
+  {"c": "스토리", "cmd": "!시즌2", "d": "스토리 시즌 2 백색 방주의 현재 진행 상태와 선택지를 확인합니다."},
+  {"c": "스토리", "cmd": "!시즌2 시작", "d": "시즌 1 선택 기록을 계승해 백색 방주 후속 캠페인을 시작합니다."},
+  {"c": "스토리", "cmd": "!시즌2 선택 번호", "d": "현재 장면에서 조건에 맞는 선택지를 골라 이야기를 진행합니다."},
+  {"c": "스토리", "cmd": "!시즌2 기록", "d": "현재 회차의 선택 기록과 발견한 시즌 2 엔딩을 확인합니다."},
+  {"c": "스토리", "cmd": "!시즌2 재시작", "d": "발견 엔딩과 보상 수령 기록을 유지한 채 다른 분기를 시작합니다."},
+  {"c": "원정", "cmd": "!원정 도움말", "d": "공격·전술 기술·방어·집중·응급·도주와 상태이상·보스 전투를 안내합니다."},
+  {"c": "원정", "cmd": "!원정 목록", "d": "원정 지역별 레벨, 평판, 스태미나 조건과 위험도를 확인합니다."},
+  {"c": "원정", "cmd": "!원정 출발 지역명", "d": "스태미나를 사용해 선택한 지역의 턴제 전투를 시작합니다."},
+  {"c": "원정", "cmd": "!원정 행동 공격", "d": "진행 중인 원정에서 기본 공격을 수행합니다. 전술 기술은 `!원정 행동 기술`을 사용합니다."},
+  {"c": "원정", "cmd": "!원정 행동 기술", "d": "강한 피해와 적 상태이상을 부여하고 3턴 재사용 대기에 들어갑니다."},
+  {"c": "원정", "cmd": "!원정 보급", "d": "하루 한 번 원정 응급 키트와 평판 기반 식량 보급을 받습니다."},
+  {"c": "원정", "cmd": "!원정 유물", "d": "원정과 스토리에서 발견한 희귀 유물과 설명을 확인합니다."},
+  {"c": "원정", "cmd": "!원정 기록", "d": "최근 원정의 승리, 실패, 도주와 획득 보상을 확인합니다."},
+  {"c": "원정", "cmd": "!원정 랭킹", "d": "현재 Discord 서버의 원정 평판 상위 생존자를 확인합니다."},
+  {"c": "관리", "cmd": "!접수센터도움말", "d": "문의·신고·건의 처리센터의 설치와 운영 명령을 안내합니다."},
+  {"c": "관리", "cmd": "!접수초기설정", "d": "문의 카테고리와 처리 로그를 연결하고 유형별 접수 패널을 설치합니다."},
+  {"c": "관리", "cmd": "!접수패널", "d": "문의·신고·건의·버그·이의신청 버튼이 있는 비공개 접수 패널을 만듭니다."},
+  {"c": "관리", "cmd": "!접수센터상태", "d": "접수 카테고리, 처리 로그, 열린 접수와 누적 통계를 확인합니다."},
+  {"c": "관리", "cmd": "!접수현황 [상태]", "d": "열린 접수를 우선순위와 처리 상태 순으로 확인합니다."},
+  {"c": "관리", "cmd": "!접수정보", "d": "현재 접수의 번호, 유형, 담당자, 상태와 우선순위를 표시합니다."},
+  {"c": "관리", "cmd": "!접수담당 [@운영자]", "d": "현재 접수의 담당 운영자를 지정합니다."},
+  {"c": "관리", "cmd": "!접수담당해제", "d": "현재 접수의 담당자 배정을 해제합니다."},
+  {"c": "관리", "cmd": "!접수상태 처리중", "d": "접수 상태를 접수, 확인중, 처리중, 사용자대기 또는 보류로 변경합니다."},
+  {"c": "관리", "cmd": "!접수우선순위 긴급", "d": "접수 우선순위를 낮음, 보통, 높음 또는 긴급으로 변경합니다."},
+  {"c": "관리", "cmd": "!접수메모 내용", "d": "사용자에게 노출되지 않는 운영진 내부 처리 메모를 저장합니다."},
+  {"c": "관리", "cmd": "!답변양식추가 이름 | 내용", "d": "자주 사용하는 안내문을 빠른 답변 양식으로 등록합니다."},
+  {"c": "관리", "cmd": "!답변양식목록", "d": "현재 서버에 등록된 빠른 답변 양식을 확인합니다."},
+  {"c": "관리", "cmd": "!빠른답변 이름", "d": "현재 접수 채널에 저장된 답변 양식을 전송합니다."},
+  {"c": "편의", "cmd": "!내접수", "d": "자신의 현재 열린 접수 상태를 DM으로 확인합니다."},
+  {"c": "관리", "cmd": "!접수종료 [사유]", "d": "대화 기록을 처리 로그에 보관하고 현재 접수를 종료합니다."},
+  {"c": "관리", "cmd": "!보안센터도움말", "d": "통합 보안센터, 분리 로그와 자동관리 설정 명령을 안내합니다."},
+  {"c": "관리", "cmd": "!보안초기설정", "d": "운영진 전용 보안센터와 로그 채널 4개를 자동 생성·연결합니다."},
+  {"c": "관리", "cmd": "!보안상태", "d": "분리 로그, 자동관리, 초대 예외와 신생 계정 알림 상태를 표시합니다."},
+  {"c": "관리", "cmd": "!보안테스트", "d": "보안·메시지·멤버·운영 로그 채널 연결을 테스트합니다."},
+  {"c": "관리", "cmd": "!로그채널설정 보안 #채널", "d": "로그 종류별 전송 채널을 개별 지정합니다."},
+  {"c": "관리", "cmd": "!자동관리모드 삭제", "d": "자동관리 처리 방식을 알림, 삭제 또는 누적 타임아웃으로 선택합니다."},
+  {"c": "관리", "cmd": "!자동관리기준 6 8 5 3 10", "d": "도배 개수·시간, 멘션 수, 누적 횟수와 타임아웃 시간을 설정합니다."},
+  {"c": "관리", "cmd": "!초대허용채널 #채널", "d": "Discord 초대 링크 차단에서 제외할 채널을 등록합니다."},
+  {"c": "관리", "cmd": "!초대허용해제 #채널", "d": "등록된 초대 링크 허용 채널을 해제합니다."},
+  {"c": "관리", "cmd": "!초대허용목록", "d": "Discord 초대 링크가 허용된 채널을 확인합니다."},
+  {"c": "관리", "cmd": "!신생계정알림 켜기 7", "d": "기준 일수보다 새 계정이 가입하면 보안 로그로 알립니다."},
+  {"c": "편의", "cmd": "!내경고", "d": "자신의 활성 경고와 최근 제재 기록을 DM으로 확인합니다."},
+  {"c": "관리", "cmd": "!제재기록 [@멤버] 10", "d": "운영진이 서버 전체 또는 특정 멤버의 최근 제재 기록을 확인합니다."},
+  {"c": "관리", "cmd": "!운영편의도움말", "d": "셀프 역할, 가입자 점검과 일반 편의 명령을 안내합니다."},
+  {"c": "관리", "cmd": "!셀프역할추가 🎮 @역할 설명", "d": "셀프 역할 패널에 사용할 이모지, 역할과 설명을 등록합니다."},
+  {"c": "관리", "cmd": "!셀프역할삭제 🎮", "d": "등록된 셀프 역할 항목을 이모지로 삭제합니다."},
+  {"c": "관리", "cmd": "!셀프역할목록", "d": "현재 등록된 셀프 역할 항목을 확인합니다."},
+  {"c": "관리", "cmd": "!셀프역할패널 제목", "d": "현재 채널에 반응형 셀프 역할 패널을 생성합니다."},
+  {"c": "관리", "cmd": "!셀프역할패널목록", "d": "저장된 셀프 역할 패널의 채널과 메시지 ID를 확인합니다."},
+  {"c": "관리", "cmd": "!셀프역할패널삭제 메시지ID", "d": "셀프 역할 패널 등록과 메시지를 삭제합니다."},
+  {"c": "관리", "cmd": "!최근가입 10", "d": "최근 서버에 가입한 멤버와 계정 나이를 확인합니다."},
+  {"c": "관리", "cmd": "!의심계정 7 20", "d": "생성된 지 얼마 안 된 계정을 운영 점검용으로 표시합니다."},
+  {"c": "관리", "cmd": "!역할멤버 @역할 30", "d": "특정 역할을 가진 멤버 목록을 확인합니다."},
+  {"c": "편의", "cmd": "!아바타 [@멤버]", "d": "자신 또는 멘션한 멤버의 프로필 이미지를 표시합니다."},
+  {"c": "편의", "cmd": "!서버아이콘", "d": "현재 서버 아이콘의 원본 이미지를 표시합니다."},
+  {"c": "편의", "cmd": "!가입일 [@멤버]", "d": "Discord 계정 생성일과 현재 서버 가입일을 표시합니다."},
+  {"c": "편의", "cmd": "!핑", "d": "아바돈의 Discord 연결 지연시간을 표시합니다."},
+  {"c": "기본", "cmd": "!명령어", "d": "목록"},
+  {"c": "관리", "cmd": "!운영초기설정", "d": "SERVER GUARD 운영 채널과 기본 설정을 초기 연결합니다."},
+  {"c": "관리", "cmd": "!운영진단", "d": "운영 모듈 등록 상태와 필요한 권한을 진단합니다."},
+  {"c": "관리", "cmd": "!운영강화설정", "d": "자동 이모지, 첨부 스마트 반응과 격리 역할을 자동 구성합니다."},
+  {"c": "관리", "cmd": "!운영대시보드", "d": "SERVER GUARD 설정과 자동 기능 상태를 한 화면에 표시합니다."},
+  {"c": "관리", "cmd": "!봇권한", "d": "현재 서버와 채널에서 아바돈의 관리 권한을 점검합니다."},
+  {"c": "관리", "cmd": "!운영설정내보내기", "d": "게임 데이터 없이 현재 서버 운영 설정만 JSON 파일로 내보냅니다."},
+  {"c": "관리", "cmd": "!운영메모 내용", "d": "관리자 로그용 운영 메모를 번호와 함께 저장합니다."},
+  {"c": "관리", "cmd": "!운영메모목록", "d": "최근 저장된 운영 메모를 확인합니다."},
+  {"c": "관리", "cmd": "!채널정보 #채널", "d": "채널 주제, 슬로우모드와 주요 권한을 확인합니다."},
+  {"c": "관리", "cmd": "!역할정보 @역할", "d": "역할 서열, 인원, 핵심 권한과 봇 관리 가능 여부를 확인합니다."},
+  {"c": "관리", "cmd": "!대화금지 @유저 사유", "d": "현재 채널에서 특정 멤버의 메시지와 반응을 제한합니다."},
+  {"c": "관리", "cmd": "!대화허용 @유저", "d": "대화금지 전의 채널 권한 상태로 복구합니다."},
+  {"c": "관리", "cmd": "!투표종료 메시지ID", "d": "아바돈이 만든 투표의 반응 수를 집계하고 결과를 표시합니다."},
+  {"c": "관리", "cmd": "!자동이모지 상태", "d": "자동 반응의 채널·키워드·첨부·프리셋 설정을 확인합니다."},
+  {"c": "관리", "cmd": "!이모지자동설정", "d": "채널 이름을 분석해 적절한 자동 이모지 프리셋을 연결합니다."},
+  {"c": "관리", "cmd": "!이모지프리셋목록", "d": "기본 프리셋과 서버 사용자 프리셋을 확인합니다."},
+  {"c": "관리", "cmd": "!이모지프리셋추가 이름 | 이모지", "d": "서버 전용 자동 반응 프리셋을 추가하거나 갱신합니다."},
+  {"c": "관리", "cmd": "!이모지프리셋삭제 이름", "d": "서버 전용 자동 반응 프리셋을 삭제합니다."},
+  {"c": "관리", "cmd": "!이모지첨부반응 켜기", "d": "사진, 영상, 음성, 파일 유형별 스마트 자동 반응을 켭니다."},
+  {"c": "관리", "cmd": "!이모지최대개수 5", "d": "메시지 하나에 추가할 자동 반응 최대 개수를 설정합니다."},
+  {"c": "관리", "cmd": "!이모지웹훅 켜기", "d": "웹훅 메시지에도 자동 이모지를 추가할지 설정합니다."},
+  {"c": "관리", "cmd": "!안티레이드 켜기", "d": "짧은 시간의 대량 가입을 감지하는 안티레이드를 활성화합니다."},
+  {"c": "관리", "cmd": "!비상모드 켜기", "d": "안티레이드, 인증 강화, 서버 잠금과 신규 격리를 함께 적용합니다."},
+  {"c": "관리", "cmd": "!서버점검", "d": "역할 서열, 권한, 로그 채널과 주요 운영 설정을 점검합니다."}
+];
+const categories = ["전체", ...new Set(commands.map((item) => item.c))];
+
+function initSharedUI() {
+  const cfg = window.ABADDON_CONFIG || {};
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v6.3.0"; });
+  document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = cfg.statusText || "ONLINE"; });
+  document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
+  document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
+  document.querySelectorAll("[data-bot-link]").forEach((el) => { el.href = cfg.botInvite || cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
+
+  const current = location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".site-nav a").forEach((link) => {
+    const target = (link.getAttribute("href") || "").split("#")[0];
+    if (target === current) link.classList.add("active");
+  });
+
+  const button = document.querySelector("[data-menu-button]");
+  const nav = document.querySelector("[data-site-nav]");
+  if (button && nav) {
+    button.addEventListener("click", () => nav.classList.toggle("open"));
+    nav.addEventListener("click", () => nav.classList.remove("open"));
+  }
+}
+
+function initCommandPage() {
+  const grid = document.getElementById("command-grid");
+  if (!grid) return;
+  const search = document.getElementById("command-search");
+  const tabs = document.getElementById("category-tabs");
+  const meta = document.getElementById("command-meta");
+  const empty = document.getElementById("empty-state");
+  let category = "전체";
+
+  function renderTabs() {
+    tabs.innerHTML = "";
+    categories.forEach((name) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "category-button" + (name === category ? " active" : "");
+      button.textContent = name;
+      button.addEventListener("click", () => { category = name; renderTabs(); renderCommands(); });
+      tabs.appendChild(button);
+    });
+  }
+
+  function renderCommands() {
+    const query = (search.value || "").trim().toLocaleLowerCase("ko-KR");
+    const filtered = commands.filter((item) => {
+      const categoryOk = category === "전체" || item.c === category;
+      const text = `${item.cmd} ${item.d} ${item.c}`.toLocaleLowerCase("ko-KR");
+      return categoryOk && (!query || text.includes(query));
+    });
+    grid.innerHTML = "";
+    filtered.forEach((item) => {
+      const card = document.createElement("article");
+      card.className = "command-card";
+      const top = document.createElement("div");
+      top.className = "command-top";
+      const code = document.createElement("code");
+      code.textContent = item.cmd;
+      const label = document.createElement("span");
+      label.className = "category-label";
+      label.textContent = item.c;
+      top.append(code, label);
+      const desc = document.createElement("p");
+      desc.textContent = item.d;
+      card.append(top, desc);
+      grid.appendChild(card);
+    });
+    meta.textContent = `전체 ${commands.length}개 중 ${filtered.length}개 표시`;
+    empty.style.display = filtered.length ? "none" : "block";
+  }
+
+  search.addEventListener("input", renderCommands);
+  renderTabs();
+  renderCommands();
+}
+
+
+function normalizeFeedBase(value) {
+  return String(value || "").trim().replace(/\/+$/, "");
+}
+
+function formatLiveTime(value) {
+  if (!value) return "방금 전";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "시간 미상";
+  return new Intl.DateTimeFormat("ko-KR", {
+    month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit"
+  }).format(date);
+}
+
+function eventRune(type) {
+  if (type === "enhance") return "⚒";
+  if (type === "announcement") return "☩";
+  if (type === "system") return "†";
+  return "◆";
+}
+
+function renderLiveEvents(events) {
+  const root = document.getElementById("live-events");
+  if (!root) return;
+  root.innerHTML = "";
+  if (!Array.isArray(events) || !events.length) {
+    const empty = document.createElement("article");
+    empty.className = "feed-event feed-placeholder";
+    const rune = document.createElement("span");
+    rune.className = "feed-rune";
+    rune.textContent = "†";
+    const body = document.createElement("div");
+    const title = document.createElement("b");
+    title.textContent = "아직 공개된 종말 기록이 없습니다.";
+    const desc = document.createElement("p");
+    desc.textContent = "강화 이정표 달성 또는 운영진 공개 공지가 등록되면 이곳에 표시됩니다.";
+    body.append(title, desc);
+    empty.append(rune, body);
+    root.appendChild(empty);
+    return;
+  }
+
+  events.forEach((event) => {
+    const card = document.createElement("article");
+    card.className = "feed-event";
+    card.style.setProperty("--event-accent", event.accent || "#a51f36");
+
+    const rune = document.createElement("span");
+    rune.className = "feed-rune";
+    rune.textContent = eventRune(event.type);
+
+    const body = document.createElement("div");
+    const title = document.createElement("b");
+    title.textContent = event.title || "종말 기록";
+    const desc = document.createElement("p");
+    desc.textContent = event.message || "";
+    body.append(title, desc);
+    if (event.actor) {
+      const actor = document.createElement("p");
+      actor.className = "feed-actor";
+      actor.textContent = `— ${event.actor}`;
+      body.appendChild(actor);
+    }
+
+    const meta = document.createElement("span");
+    meta.className = "feed-meta";
+    meta.textContent = formatLiveTime(event.created_at);
+    card.append(rune, body, meta);
+    root.appendChild(card);
+  });
+}
+
+function setLiveState(state, note, mode) {
+  const stateEl = document.getElementById("live-state");
+  const noteEl = document.getElementById("live-state-note");
+  const dot = document.querySelector("[data-live-dot]");
+  if (stateEl) stateEl.textContent = state;
+  if (noteEl) noteEl.textContent = note;
+  if (dot) {
+    dot.classList.remove("online", "offline");
+    if (mode) dot.classList.add(mode);
+  }
+}
+
+async function fetchJson(url, timeoutMs = 6500) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const response = await fetch(url, { cache: "no-store", signal: controller.signal });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return await response.json();
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+
+function initNotificationButton() {
+  const button = document.getElementById("notify-toggle");
+  if (!button) return;
+  if (!("Notification" in window)) {
+    button.textContent = "브라우저 알림 미지원";
+    button.disabled = true;
+    return;
+  }
+  function sync() {
+    if (Notification.permission === "granted") button.textContent = "브라우저 알림 켜짐";
+    else if (Notification.permission === "denied") button.textContent = "브라우저 알림 차단됨";
+    else button.textContent = "브라우저 알림 켜기";
+  }
+  button.addEventListener("click", async () => {
+    try { await Notification.requestPermission(); } catch (_) { /* browser denied */ }
+    sync();
+  });
+  sync();
+}
+
+function notifyNewLiveEvents(events) {
+  if (!("Notification" in window) || Notification.permission !== "granted" || !Array.isArray(events) || !events.length) return;
+  const key = "abaddon-live-last-event";
+  const lastSeen = localStorage.getItem(key);
+  const newest = events[0] && events[0].id;
+  if (!newest) return;
+  if (!lastSeen) {
+    localStorage.setItem(key, newest);
+    return;
+  }
+  const unseen = [];
+  for (const event of events) {
+    if (event.id === lastSeen) break;
+    unseen.push(event);
+  }
+  unseen.reverse().slice(-3).forEach((event) => {
+    try {
+      new Notification(event.title || "ABADDON 실시간 기록", {
+        body: `${event.message || ""}${event.actor ? ` — ${event.actor}` : ""}`,
+        tag: event.id || undefined
+      });
+    } catch (_) { /* notification creation can be blocked */ }
+  });
+  localStorage.setItem(key, newest);
+}
+
+function initLiveFeed() {
+  const root = document.getElementById("live-events");
+  if (!root) return;
+  const cfg = window.ABADDON_CONFIG || {};
+  const base = normalizeFeedBase(cfg.eventFeedUrl);
+  const refreshMs = Math.max(10000, Number(cfg.liveRefreshMs) || 15000);
+  const guilds = document.getElementById("live-guilds");
+  const members = document.getElementById("live-members");
+  const latency = document.getElementById("live-latency");
+  const updated = document.getElementById("live-updated");
+
+  if (!base) {
+    setLiveState("연동 대기", "config.js의 eventFeedUrl에 별도 피드 Web Service 주소를 입력하세요.", "");
+    return;
+  }
+
+  let running = false;
+  async function refresh() {
+    if (running || document.hidden) return;
+    running = true;
+    try {
+      const [status, feed] = await Promise.all([
+        fetchJson(`${base}/api/status`),
+        fetchJson(`${base}/api/events?limit=8`)
+      ]);
+      const online = Boolean(status.online);
+      setLiveState(
+        online ? "종말 네트워크 연결" : "봇 기동 중",
+        online ? `${status.version || "ABADDON"} · 공개 피드 ${feed.feed_enabled ? "활성" : "정지"}` : "피드 Web Service가 깨어나는 중이거나 Background Worker 심박이 아직 도착하지 않았습니다.",
+        online ? "online" : "offline"
+      );
+      document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = online ? "ONLINE" : "STARTING"; });
+      if (guilds) guilds.textContent = Number(status.guilds || 0).toLocaleString("ko-KR");
+      if (members) members.textContent = Number(status.members || 0).toLocaleString("ko-KR");
+      if (latency) latency.textContent = `${Number(status.latency_ms || 0).toLocaleString("ko-KR")}ms`;
+      if (updated) updated.textContent = formatLiveTime(status.generated_at);
+      renderLiveEvents(feed.events || []);
+      notifyNewLiveEvents(feed.events || []);
+    } catch (error) {
+      setLiveState("신호 두절", "피드 Web Service 주소, Render 상태와 CORS 허용 주소를 확인하세요.", "offline");
+      document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = "OFFLINE"; });
+      if (updated) updated.textContent = "연결 실패";
+    } finally {
+      running = false;
+    }
+  }
+
+  refresh();
+  const timer = window.setInterval(refresh, refreshMs);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) refresh(); });
+  window.addEventListener("beforeunload", () => window.clearInterval(timer), { once: true });
+}
+
+document.addEventListener("DOMContentLoaded", () => { initSharedUI(); initCommandPage(); initNotificationButton(); initLiveFeed(); });

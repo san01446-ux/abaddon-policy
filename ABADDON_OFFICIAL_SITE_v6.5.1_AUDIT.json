@@ -1,0 +1,47 @@
+{
+  "version": "6.5.1",
+  "patch_date": "2026-08-02",
+  "scope": "server renewal 28 themes, server settings integration, Discord card games, command/help/site sync",
+  "python_source_files": 55,
+  "python_compile_errors": 0,
+  "server_theme_count": 28,
+  "server_theme_groups": {
+    "아포칼립스": 12,
+    "깔끔·고딕": 4,
+    "화사·자연": 6,
+    "모던·판타지": 6
+  },
+  "server_renewal_main_dropdown_options": 20,
+  "server_renewal_dropdown_within_discord_limit": true,
+  "legacy_structure_styles_preserved": 7,
+  "new_card_games": [
+    "포커",
+    "원카드",
+    "조커잡기"
+  ],
+  "card_game_command_duplicate_count": 0,
+  "command_dropdown_card_category": true,
+  "game_center_card_category": true,
+  "patch_note_date_synced": true,
+  "homepage_version_synced": true,
+  "homepage_javascript_syntax": true,
+  "homepage_missing_local_assets": 0,
+  "homepage_desktop": {
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "bodyScroll": 1440,
+    "overflowing": [],
+    "broken": 0
+  },
+  "homepage_mobile": {
+    "viewport": 390,
+    "scrollWidth": 390,
+    "bodyScroll": 390,
+    "overflowing": [],
+    "broken": 0
+  },
+  "casino_image_policy": "unchanged: casino only has no result images",
+  "live_runtime_limitations": [
+    "Actual Discord multi-user button, ephemeral hand, permissions, and timeout/refund behavior require a deployment smoke test."
+  ]
+}
