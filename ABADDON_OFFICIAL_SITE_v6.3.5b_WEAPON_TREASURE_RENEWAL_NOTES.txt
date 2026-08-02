@@ -1,0 +1,16 @@
+ABADDON v6.3.5b — 무기/보물 리뉴얼 + 카지노 이미지 제거
+
+포함 내용
+- 장비 70종 이미지 교체
+- 보물 20종 이미지 교체
+- 카지노 결과 임베드 이미지 제거 (로직 유지)
+- 공식 홈페이지 index/updates 장비·보물 미리보기 갱신 및 카지노 섹션 정리
+- !패치노트 문구 v6.3.5b 기준으로 최신화
+
+파일 경로
+- bot assets: apocalypse_bot/assets/v633/equipment/*.webp
+- bot assets: apocalypse_bot/assets/v633/treasures/*.webp
+- bot command patch: apocalypse_bot/commands/v635_visuals.py
+- bot patch note text: apocalypse_bot/commands/v635_casino_base.py
+- site preview: assets/equipment_v633/named_equipment.webp, named_treasure.webp
+- site pages: index.html, updates.html

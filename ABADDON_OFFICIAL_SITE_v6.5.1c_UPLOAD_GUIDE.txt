@@ -1,0 +1,17 @@
+ABADDON 공식 홈페이지 v6.5.1c 업로드 안내
+패치 날짜: 2026-08-02
+
+1. ZIP을 풀고, ZIP 내부의 index.html이 사이트 배포 루트에 오도록 전체 내용을 업로드합니다.
+   잘못된 예: /public/ABADDON_OFFICIAL_SITE.../index.html
+   올바른 예: /public/index.html
+2. index.html, style.css, script.js, config.js, updates.html, commands.html을 전부 덮어씁니다.
+3. assets/v651c 폴더를 반드시 새로 업로드합니다. 기존 v651a 파일만 올리면 새 이미지가 보이지 않습니다.
+4. 배포 플랫폼에서 새 배포 또는 캐시 삭제를 실행합니다.
+5. 브라우저에서 Ctrl+F5(모바일은 사이트 데이터 삭제 후 재접속)로 확인합니다.
+
+적용 확인
+- 페이지 상단 LATEST가 v6.5.1c
+- ABADDON 소개 섹션 표시
+- 주간 기지 방어·변동 자원 시장 이미지에 잘린 한글 제목 없음
+- 무기 강화 카드가 +0/+5/+10/+15/+20 다섯 장으로 선명하게 표시
+- 개발자 도구 Network에서 base_defense_hd.webp?v=651c 응답 200

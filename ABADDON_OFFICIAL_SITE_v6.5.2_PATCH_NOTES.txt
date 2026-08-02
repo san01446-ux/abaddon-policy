@@ -1,0 +1,11 @@
+ABADDON v6.5.2 — English Access & Visual Quality Patch
+Date: 2026-08-02
+
+- Existing Korean commands preserved.
+- Major user-facing commands receive English prefix aliases.
+- Added !english / !enhelp and an English Commands dropdown category.
+- Replaced the cropped !돈주세요 failure image with a safe full-scene image.
+- Reprocessed and synchronized Lv.0–Lv.5 base-stage images for bot and website.
+- Replaced website base-defense, resource-market, and enhancement preview files under assets/v652/.
+- Updated !봇소개, !패치노트, website command search, updates page, and official bot description.
+- No economy, probability, cooldown, inventory, or save-schema changes.

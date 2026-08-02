@@ -1,0 +1,7 @@
+ABADDON 공식 홈페이지 v6.3.1 업로드 안내
+
+1. 이 ZIP의 파일과 assets 폴더를 abaddon-policy 저장소 최상위 루트에 덮어씁니다.
+2. 봇 ZIP은 봇 저장소에, 홈페이지 ZIP은 abaddon-policy 저장소에 각각 적용합니다.
+3. 기존 Discord 초대 링크와 abaddon-live-feed Web Service 주소는 유지됩니다.
+4. 배포 후 index.html, updates.html, commands.html의 v6.3.1 표시를 확인합니다.
+5. 홈페이지에는 알바·땅파기·채집·벌목 대표 이미지 4장만 미리보기로 포함되며, 실제 봇 ZIP에는 결과 풀 48장이 들어 있습니다.
