@@ -463,3 +463,5 @@ img { max-width: 100%; height: auto; }
 .v711-section .boss-card:nth-child(3n) .feature-emoji { animation-delay:.9s; }
 @keyframes v711-float { 0%,100% { transform:translateY(0) rotate(-2deg); } 50% { transform:translateY(-5px) rotate(2deg); } }
 @media (prefers-reduced-motion: reduce) { .v711-section .feature-emoji { animation:none; } }
+
+/* v7.2.0 unified welcome, patch channel and AI companion sections reuse existing responsive cards. */
