@@ -451,3 +451,8 @@ img { max-width: 100%; height: auto; }
 @media(max-width:900px){.goal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.family-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:680px){.beginner-command-strip{grid-template-columns:1fr}.command-section-head{align-items:flex-start;flex-direction:column}.family-grid{grid-template-columns:1fr}.command-toolbar-actions{width:100%}.command-toolbar-actions button{flex:1}.command-card-footer{align-items:flex-start;flex-direction:column}.command-card-footer span{text-align:left}.command-copy{max-width:100%}}
 @media(max-width:480px){.goal-grid{grid-template-columns:1fr 1fr}.goal-card{min-height:112px;padding:14px}.goal-card span{font-size:22px;margin-bottom:9px}.command-grid{grid-template-columns:1fr}}
+
+/* v7.0.2 operations stability */
+.v702-section{border-block:1px solid var(--line);background:radial-gradient(circle at 84% 14%,rgba(69,147,118,.13),transparent 32%),linear-gradient(180deg,rgba(12,37,32,.2),rgba(8,6,9,.03));}
+.v702-grid .boss-card{border-color:rgba(100,190,155,.22);}
+.v702-grid .feature-emoji{filter:drop-shadow(0 0 12px rgba(100,190,155,.28));}

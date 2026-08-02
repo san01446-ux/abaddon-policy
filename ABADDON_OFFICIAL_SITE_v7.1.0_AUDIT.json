@@ -1,0 +1,206 @@
+{
+  "python_compile": {
+    "files": 58,
+    "passed": true,
+    "errors": []
+  },
+  "website_local_references": {
+    "count": 77,
+    "passed": true,
+    "missing": []
+  },
+  "website_commands": {
+    "cards": 289,
+    "categories": 25,
+    "required": {
+      "!성장보드": true,
+      "!미션보상": true,
+      "!누적보상": true,
+      "!장비프리셋": true,
+      "!월드보스주간랭킹": true,
+      "!월드보스주간보상": true,
+      "!복귀보급": true
+    },
+    "passed": true
+  },
+  "version_sync": {
+    "bot_init": "__version__ = \"7.1.0\"",
+    "site_config": true,
+    "cache_v710": true,
+    "latest_page": true,
+    "passed": true
+  },
+  "website_images": {
+    "old_count": 127,
+    "new_count": 127,
+    "added": [],
+    "removed": [],
+    "changed": [],
+    "passed": true
+  },
+  "english_module": {
+    "old_sha256": "1d59f7241932201452a3e891902077c36469afce5b20281df447e9697ea02c35",
+    "new_sha256": "1d59f7241932201452a3e891902077c36469afce5b20281df447e9697ea02c35",
+    "passed": true
+  },
+  "game_center": {
+    "categories": 12,
+    "actions": 234,
+    "sections": 34,
+    "max_section_items": 14,
+    "missing": [],
+    "duplicates": [],
+    "unassigned": [],
+    "passed": true
+  },
+  "top_level_duplicate_delta": {
+    "old_count": 10,
+    "new_count": 10,
+    "new_tokens": [],
+    "passed": true
+  },
+  "v710_runtime": {
+    "commands": {
+      "성장보드": true,
+      "미션보상": true,
+      "누적보상": true,
+      "장비프리셋": true,
+      "월드보스주간랭킹": true,
+      "월드보스주간보상": true,
+      "복귀보급": true
+    },
+    "daily_completed": true,
+    "duplicate_reward_blocked": true,
+    "preset_applied": true,
+    "worldboss_rows": {
+      "1001": [
+        12345,
+        1
+      ],
+      "2002": [
+        5000,
+        2
+      ]
+    },
+    "migration_seeded": true,
+    "guide_first": "growth_loop_v710",
+    "passed": true
+  },
+  "passed": true,
+  "javascript_syntax": {
+    "script_js": true,
+    "config_js": true,
+    "passed": true
+  },
+  "release": {
+    "version": "7.1.0",
+    "created_at_kst": "2026-08-03T02:24:43+09:00",
+    "new_image_assets": 0,
+    "emoji_progress_ui": true
+  },
+  "live_environment": {
+    "discord_login": "not_run",
+    "render_boot": "not_run",
+    "reason": "discord.py runtime was not installable in the isolated build environment; deployment staging test required"
+  },
+  "zip_checks": {
+    "bot": {
+      "size": 62680913,
+      "files": 476,
+      "testzip_bad": null,
+      "roots": [
+        "ABADDON_BOT_DESCRIPTION_v6.5.1c.txt",
+        "ABADDON_BOT_DESCRIPTION_v6.5.2.txt",
+        "ABADDON_BOT_DESCRIPTION_v7.0.1.txt",
+        "ABADDON_BOT_DESCRIPTION_v7.0.2.txt",
+        "ABADDON_BOT_DESCRIPTION_v7.1.0.txt",
+        "ABADDON_v6.3.1_CHECK_REPORT.json",
+        "ABADDON_v6.3.1_Ω▓Ç∞é¼Ω▓░Ω│╝.txt",
+        "ABADDON_v6.3.1_δ╣áδÑ╕Ω░Ç∞¥┤δô£.txt",
+        "ABADDON_v6.3.1_∞¥┤δ»╕∞ºÇ_∞ù░Ω▓░φæ£.csv",
+        "ABADDON_v6.3.1_∞ùàδì░∞¥┤φè╕_∞òêδé┤.txt",
+        "ABADDON_v6.3.2_ACTION_MATCH_PATCH_NOTES.txt",
+        "ABADDON_v6.3.2_COMMAND_BROWSER_AND_IMAGE_FIX_NOTES.txt",
+        "ABADDON_v6.3.2_COMMAND_SEARCH_BUTTON_NOTES.txt",
+        "ABADDON_v6.3.2_FINAL_AUDIT.json",
+        "ABADDON_v6.3.2_FINAL_PATCH_NOTES.txt",
+        "ABADDON_v6.3.2_IMAGE_CONNECTIONS.csv",
+        "ABADDON_v6.3.3_AUDIT.json",
+        "ABADDON_v6.3.3_EQUIPMENT_TREASURE_IMAGE_LIST.txt",
+        "ABADDON_v6.3.3_LATEST_FULL_BOT_NOTES.txt",
+        "ABADDON_v6.3.3_NAMED_EQUIPMENT_TREASURE_PATCH_NOTES.txt",
+        "ABADDON_v6.3.3_NAMED_VISUALS_AUDIT.json",
+        "ABADDON_v6.3.3_PATCH_NOTES.txt",
+        "ABADDON_v6.3.3_PIL_IMPORT_HOTFIX_NOTES.txt",
+        "ABADDON_v6.3.3_REBUILT_VISUALS_AUDIT.json",
+        "ABADDON_v6.3.3_REBUILT_VISUALS_PATCH_NOTES.txt",
+        "ABADDON_v6.3.3_VISUAL_PREVIEW.jpg",
+        "ABADDON_v6.3.4_AUDIT.json",
+        "ABADDON_v6.3.4_PATCH_NOTES.txt",
+        "ABADDON_v6.3.4_PET12_EXPANSION_AUDIT.json",
+        "ABADDON_v6.3.4_PET12_EXPANSION_PATCH_NOTES.txt",
+        "ABADDON_v6.3.4_PET_FULL_VISUAL_RENEWAL_AUDIT.json",
+        "ABADDON_v6.3.4_PET_FULL_VISUAL_RENEWAL_NOTES.txt",
+        "ABADDON_v6.3.4_PET_PRICE_REBALANCE_AUDIT.json",
+        "ABADDON_v6.3.4_PET_PRICE_REBALANCE_NOTES.txt",
+        "ABADDON_v6.3.5_CASINO_BASE_AUDIT.json",
+        "ABADDON_v6.3.5_PATCH_NOTES.txt",
+        "ABADDON_v6.3.5a_DUNGEON_POWER_HOTFIX_NOTES.txt",
+        "ABADDON_v6.3.5b_WEAPON_TREASURE_RENEWAL_AUDIT.json",
+        "ABADDON_v6.3.5b_WEAPON_TREASURE_RENEWAL_NOTES.txt",
+        "ABADDON_v6.3.5c_HOMEPAGE_DISPLAY_HOTFIX_AUDIT.json"
+      ],
+      "root_requirements": true,
+      "root_apocalypse_bot": true
+    },
+    "site": {
+      "size": 30963604,
+      "files": 201,
+      "testzip_bad": null,
+      "roots": [
+        "ABADDON_BOT_DESCRIPTION_v6.5.1c.txt",
+        "ABADDON_BOT_DESCRIPTION_v6.5.2.txt",
+        "ABADDON_BOT_DESCRIPTION_v6.5.3.txt",
+        "ABADDON_BOT_DESCRIPTION_v7.0.0.txt",
+        "ABADDON_BOT_DESCRIPTION_v7.0.1.txt",
+        "ABADDON_BOT_DESCRIPTION_v7.0.2.txt",
+        "ABADDON_BOT_DESCRIPTION_v7.1.0.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.1_UPLOAD_GUIDE.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.3_AUDIT.json",
+        "ABADDON_OFFICIAL_SITE_v6.3.3_NAMED_VISUALS_AUDIT.json",
+        "ABADDON_OFFICIAL_SITE_v6.3.3_NAMED_VISUALS_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.3_NAMED_VISUALS_SHA256.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.3_PATCH_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.3_REBUILT_VISUALS_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.3_SHA256.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.3_UPLOAD_GUIDE.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.4_AUDIT.json",
+        "ABADDON_OFFICIAL_SITE_v6.3.4_PATCH_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.4_PET12_EXPANSION_AUDIT.json",
+        "ABADDON_OFFICIAL_SITE_v6.3.4_PET12_EXPANSION_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.4_PET_PRICE_REBALANCE_AUDIT.json",
+        "ABADDON_OFFICIAL_SITE_v6.3.4_PET_PRICE_REBALANCE_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.5_PATCH_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.5b_WEAPON_TREASURE_RENEWAL_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.5c_HOMEPAGE_DISPLAY_HOTFIX_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.6_AUDIT.json",
+        "ABADDON_OFFICIAL_SITE_v6.3.6_PATCH_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.6_UPLOAD_GUIDE.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.7_DYNAMIC_WORLD_SYSTEMS_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.7_PATCH_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.8_HARDCORE_ARCADE_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.3.9_AUDIT.json",
+        "ABADDON_OFFICIAL_SITE_v6.3.9_PATCH_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.4.0_AUDIT.json",
+        "ABADDON_OFFICIAL_SITE_v6.4.0_PATCH_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.4.0a_SCRAP_VISUAL_HOTFIX_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.4.0b_TEST_AND_BEGINNER_GUIDE_HOTFIX_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.4.1_STABILITY_TEXT_FIRST_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.4.1a_VISUAL_RESTORE_FX_HOTFIX_NOTES.txt",
+        "ABADDON_OFFICIAL_SITE_v6.5.0_VISUAL_THEME_RENEWAL_NOTES.txt"
+      ],
+      "root_index": true,
+      "root_assets": true
+    }
+  }
+}
