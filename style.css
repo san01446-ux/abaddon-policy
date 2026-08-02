@@ -456,3 +456,10 @@ img { max-width: 100%; height: auto; }
 .v702-section{border-block:1px solid var(--line);background:radial-gradient(circle at 84% 14%,rgba(69,147,118,.13),transparent 32%),linear-gradient(180deg,rgba(12,37,32,.2),rgba(8,6,9,.03));}
 .v702-grid .boss-card{border-color:rgba(100,190,155,.22);}
 .v702-grid .feature-emoji{filter:drop-shadow(0 0 12px rgba(100,190,155,.28));}
+
+/* v7.1.2 cute interaction accents */
+.v711-section .feature-emoji { display:inline-block; animation:v711-float 3.2s ease-in-out infinite; filter:drop-shadow(0 0 12px rgba(124,209,154,.25)); }
+.v711-section .boss-card:nth-child(2n) .feature-emoji { animation-delay:.45s; }
+.v711-section .boss-card:nth-child(3n) .feature-emoji { animation-delay:.9s; }
+@keyframes v711-float { 0%,100% { transform:translateY(0) rotate(-2deg); } 50% { transform:translateY(-5px) rotate(2deg); } }
+@media (prefers-reduced-motion: reduce) { .v711-section .feature-emoji { animation:none; } }
