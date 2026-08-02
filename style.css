@@ -465,3 +465,5 @@ img { max-width: 100%; height: auto; }
 @media (prefers-reduced-motion: reduce) { .v711-section .feature-emoji { animation:none; } }
 
 /* v7.2.0 unified welcome, patch channel and AI companion sections reuse existing responsive cards. */
+
+/* v7.2.1 channel guide cards reuse the existing responsive icon-card grid. */
