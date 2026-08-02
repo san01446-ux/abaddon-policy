@@ -1,0 +1,5 @@
+ABADDON 공식 홈페이지 v7.8.0 업로드 안내
+
+ZIP의 내용물을 웹 호스팅 루트에 그대로 업로드합니다.
+index.html, commands.html, updates.html, style.css, script.js, config.js, assets 폴더가 같은 루트에 있어야 합니다.
+기존 주소를 유지해 덮어쓰고 배포 캐시가 갱신되었는지 확인합니다.
