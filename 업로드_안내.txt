@@ -1,7 +1,12 @@
-ABADDON 공식 홈페이지 v7.0.0
+ABADDON 공식 홈페이지 v7.0.1 업로드 안내
 
-전체 파일과 assets 폴더를 홈페이지 루트에 덮어쓴 뒤 강력 새로고침하세요.
-최신 버전 표기: v7.0.0
+1. 이 폴더의 index.html, commands.html, updates.html, style.css, script.js, config.js, assets 폴더를 기존 홈페이지 루트에 덮어씁니다.
+2. 배포 후 브라우저에서 Ctrl+F5 또는 강력 새로고침을 실행합니다.
+3. 상단 LATEST가 v7.0.1인지 확인합니다.
+4. commands.html에서 처음 시작·목적별 버튼·대표/전체 전환·명령어 복사가 작동하는지 확인합니다.
+5. index.html에서 v7.0.1 명령어 접근성 섹션과 v7.0.0 월드보스 섹션이 모두 표시되는지 확인합니다.
+6. 기존 config.js의 Discord 초대 주소와 실시간 피드 주소는 유지되어 있습니다.
+
+최신 버전 표기: v7.0.1
+캐시 키: v=701
 패치 날짜: 2026-08-03
-필수 이미지 폴더: assets/world_boss
-캐시 키: v700

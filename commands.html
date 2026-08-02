@@ -1,8 +1,73 @@
 <!doctype html>
 <html lang="ko">
-<head><title>명령어 — ABADDON</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080508"><meta name="description" content="Discord RPG 봇 ABADDON 공식 홈페이지"><link rel="stylesheet" href="style.css?v=700"><script defer src="config.js?v=700"></script><script defer src="script.js?v=700"></script></head>
+<head>
+  <title>명령어 — ABADDON</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080508">
+  <meta name="description" content="ABADDON 초보자 가이드와 목적별 Discord RPG 명령어 검색">
+  <link rel="stylesheet" href="style.css?v=701">
+  <script defer src="config.js?v=701"></script>
+  <script defer src="script.js?v=701"></script>
+</head>
 <body>
 <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">A</span><span>ABADDON<small>OFFICIAL DISCORD RPG</small></span></a><button class="menu-button" type="button" aria-label="메뉴 열기" data-menu-button>☰</button><nav class="site-nav" data-site-nav><a href="index.html">성역</a><a href="index.html#live">실시간</a><a href="commands.html">명령어</a><a href="updates.html">기록</a><a class="nav-cta" data-discord-link href="#">공식 Discord</a></nav></div></header>
-<main><section class="page-hero"><div class="container"><div class="eyebrow">THE FORBIDDEN ARCHIVE</div><h1>명령어 검색</h1><p>v7.0.0은 기존 한국어 명령과 v6.5.4 영어 별칭을 유지하면서 월드보스 보상 큐·실전/테스트 분리·실제 약점과 페이즈 기믹을 제공합니다. <b>!명령어</b> 검색에서 신규 월드보스 보조 명령을 함께 확인할 수 있습니다.</p></div></section><section class="page-shell"><div class="container"><div class="toolbar"><div class="search-wrap"><span class="search-icon">⌕</span><input id="command-search" type="search" placeholder="명령어나 설명 검색" autocomplete="off"></div><div class="category-tabs" id="category-tabs"></div></div><p class="command-meta" id="command-meta">명령어를 불러오는 중...</p><div class="command-grid" id="command-grid"></div><div class="empty-state" id="empty-state">봉인된 기록에서 해당 명령을 찾지 못했습니다.</div></div></section></main>
+<main>
+  <section class="page-hero command-hero">
+    <div class="container">
+      <div class="eyebrow">V7.0.1 · BEGINNER ACCESSIBILITY</div>
+      <h1>명령어를 외우지 않아도 됩니다</h1>
+      <p>처음이라면 <b>!처음</b>, 기능을 찾고 싶다면 <b>!게임</b>, 단어로 검색하려면 <b>!명령어</b>만 기억하세요. 기존 세부 명령어는 삭제하지 않고 호환용으로 유지했습니다.</p>
+      <div class="beginner-command-strip">
+        <button type="button" data-copy-command="!처음"><b>1</b><span><strong>!처음</strong><small>5단계 시작 가이드</small></span></button>
+        <button type="button" data-copy-command="!게임"><b>2</b><span><strong>!게임</strong><small>목적별 기능 실행</small></span></button>
+        <button type="button" data-copy-command="!명령어"><b>3</b><span><strong>!명령어</strong><small>설명·명령어 검색</small></span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-shell command-guide-shell">
+    <div class="container">
+      <section class="command-onboarding" aria-labelledby="quick-start-title">
+        <div class="command-section-head"><div><div class="eyebrow">WHAT DO YOU WANT TO DO?</div><h2 id="quick-start-title">하고 싶은 일을 먼저 고르세요</h2></div><p>목적을 누르면 관련 명령만 모아서 보여줍니다.</p></div>
+        <div class="goal-grid">
+          <button type="button" class="goal-card active" data-command-goal="all"><span>⌘</span><b>대표 명령</b><small>꼭 필요한 메뉴부터</small></button>
+          <button type="button" class="goal-card" data-command-goal="first"><span>🌱</span><b>처음 시작</b><small>가입 후 첫날 순서</small></button>
+          <button type="button" class="goal-card" data-command-goal="growth"><span>⚒️</span><b>성장·장비</b><small>강화·제작·펫·기지</small></button>
+          <button type="button" class="goal-card" data-command-goal="combat"><span>⚔️</span><b>전투·레이드</b><small>던전·원정·월드보스</small></button>
+          <button type="button" class="goal-card" data-command-goal="resources"><span>📦</span><b>재화·생활</b><small>돈벌이·시장·카지노</small></button>
+          <button type="button" class="goal-card" data-command-goal="story"><span>📖</span><b>스토리</b><small>시즌·엔딩·대화</small></button>
+          <button type="button" class="goal-card" data-command-goal="community"><span>🤝</span><b>함께하기</b><small>길드·파티·거래</small></button>
+          <button type="button" class="goal-card" data-command-goal="admin"><span>🛡️</span><b>서버 관리</b><small>설정·진단·백업</small></button>
+        </div>
+      </section>
+
+      <section class="command-family-section" aria-labelledby="family-title">
+        <div class="command-section-head"><div><div class="eyebrow">COMMAND CONSOLIDATION</div><h2 id="family-title">여러 명령을 대표 메뉴로 묶었습니다</h2></div><p>옛 명령어는 작동하지만, 처음에는 대표 메뉴만 사용해도 됩니다.</p></div>
+        <div class="family-grid">
+          <article><span>🎮</span><div><h3>게임 기능 227개</h3><p><code>!게임</code> 하나에서 카테고리 → 기능군 → 실행 항목 순으로 찾습니다.</p></div></article>
+          <article><span>🔎</span><div><h3>도움말·검색 통합</h3><p><code>!명령어</code>에서 처음 시작, 오늘 할 일, 대표/전체 목록과 검색을 사용합니다.</p></div></article>
+          <article><span>🔔</span><div><h3>알림 설정 통합</h3><p><code>!알림설정</code>에서 설정·해제·상태를 함께 관리합니다.</p></div></article>
+          <article><span>☄️</span><div><h3>월드보스 기능군</h3><p><code>!게임 → 전투 → 월드보스</code>에서 공격·보상·기록을 구분해 보여줍니다.</p></div></article>
+          <article><span>🎰</span><div><h3>카지노·카드게임 로비</h3><p>개별 게임명을 몰라도 <code>!카지노</code>와 <code>!카드게임</code>에서 선택합니다.</p></div></article>
+          <article><span>🏰</span><div><h3>서버 관리 제어실</h3><p><code>!서버리뉴얼</code>과 <code>!설정</code>에서 테마·채널·백업·운영 기능을 묶습니다.</p></div></article>
+        </div>
+      </section>
+
+      <section id="command-browser" class="command-browser-section" aria-labelledby="browser-title">
+        <div class="command-section-head"><div><div class="eyebrow">SEARCH THE ARCHIVE</div><h2 id="browser-title">명령어 찾아보기</h2></div><p>예: “무기 강화”, “돈 벌기”, “길드”, “월드보스 보상”</p></div>
+        <div class="toolbar">
+          <div class="search-wrap"><span class="search-icon">⌕</span><input id="command-search" type="search" placeholder="무엇을 하고 싶나요? 예: 무기 강화" autocomplete="off"></div>
+          <div class="command-toolbar-actions"><button type="button" class="category-button" data-command-mode>전체 명령 보기</button><button type="button" class="category-button" data-command-reset>초기화</button></div>
+          <div class="category-tabs" id="category-tabs"></div>
+        </div>
+        <p class="command-meta" id="command-meta">명령어를 불러오는 중...</p>
+        <div class="command-grid" id="command-grid"></div>
+        <div class="empty-state" id="empty-state">찾지 못했습니다. 명령어 이름 대신 “돈 벌기”, “장비”, “보스”처럼 하고 싶은 일을 검색해보세요.</div>
+      </section>
+    </div>
+  </section>
+</main>
+<div class="copy-toast" id="copy-toast" role="status" aria-live="polite"></div>
 <footer class="site-footer"><div class="container footer-wrap"><div>© 2026 ABADDON. 공식 Discord RPG 프로젝트.</div><div class="footer-links"><a href="index.html#live">실시간</a><a href="updates.html">패치 기록</a><a data-discord-link href="#">Discord</a></div></div></footer>
 </body></html>
