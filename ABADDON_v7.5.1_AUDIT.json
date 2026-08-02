@@ -1,0 +1,165 @@
+{
+  "version": "7.5.1",
+  "patch_date": "2026-08-03",
+  "deletions_performed": 0,
+  "live_gateway_tested": false,
+  "dependency_install_tested": false,
+  "checks": {
+    "python_compile": {
+      "ok": true,
+      "files": 65,
+      "errors": []
+    },
+    "command_token_audit": {
+      "ok": true,
+      "decorators": 556,
+      "unique_tokens": 877,
+      "baseline_duplicate_tokens": [
+        "help",
+        "감염선물",
+        "랜덤이벤트도감",
+        "레버리지",
+        "선물거래",
+        "인카운트도감",
+        "조우도감"
+      ],
+      "introduced_duplicate_tokens": {},
+      "v751_internal_duplicates": {},
+      "v751_external_collisions": {}
+    },
+    "game_center_catalog": {
+      "ok": true,
+      "actions": 276,
+      "unique_actions": 276,
+      "categories": 14,
+      "duplicate_action_definitions": {},
+      "missing": [],
+      "unknown": [],
+      "duplicated": {},
+      "section_overflow": [],
+      "section_name_duplicates": [],
+      "critical_key_locations": {
+        "guild_donate": [
+          "guild/organization"
+        ],
+        "guild_upgrade": [
+          "guild/organization"
+        ]
+      },
+      "validator_reports_locations": true
+    },
+    "game_center_stub_import": {
+      "ok": true,
+      "stdout": "[ABADDON v7.5.1] 게임센터 연결 자동 복구: {'removed_duplicates': {'guild_raid/vault_admin': ['guild_donate']}, 'removed_unknown': {}, 'renamed_sections': [], 'recovered_missing': []}\nok actions=276 assigned=276 critical=single fail_soft=recovered strict=detected",
+      "stderr": "",
+      "fail_soft_recovery_tested": true,
+      "strict_detection_tested": true
+    },
+    "render_entrypoint": {
+      "ok": true,
+      "file": "222.py",
+      "supported_token_variables": [
+        "DISCORD_TOKEN",
+        "BOT_TOKEN",
+        "TOKEN"
+      ]
+    },
+    "core_integration": {
+      "ok": true,
+      "v750_before_grouped_slash": true
+    },
+    "guild_logic_retention": {
+      "ok": true,
+      "cases": {
+        "member_dedupe": true,
+        "fund_max_mirror": true,
+        "withdrawal_rows_preserved": true,
+        "opaque_row_preserved": true,
+        "withdrawal_ids_unique": true,
+        "transactions_untrimmed": true,
+        "audit_untrimmed": true,
+        "raid_history_untrimmed": true,
+        "partial_raid_repaired": true
+      },
+      "repairs": [
+        "구형 길드 기금과 통합 금고 식량 동기화",
+        "누락·중복 출금 요청 ID를 새 복구 ID로 보존",
+        "누락·중복 출금 요청 ID를 새 복구 ID로 보존",
+        "해석 불가 출금 행 원본을 복구 보관함에 보존 (4)"
+      ]
+    },
+    "mock_registration": {
+      "ok": true,
+      "commands": 33,
+      "names_aliases": 80,
+      "on_ready_listeners": 1,
+      "idempotent": true
+    },
+    "behavior_and_concurrency": {
+      "ok": true,
+      "cases": {
+        "preset_saved": true,
+        "practice_no_real_mutation": true,
+        "practice_spam_guard": true,
+        "attack_uses_preset": true,
+        "history_read_only": true,
+        "deposit_single_spend": true,
+        "mission_single_claim": true,
+        "withdraw_single_approval": true,
+        "raid_single_claim": true
+      },
+      "save_calls": 6
+    },
+    "story_progression": {
+      "ok": true,
+      "cases": {
+        "season1_open": true,
+        "season2_locked": true,
+        "season2_unlock": true,
+        "season3_unlock": true,
+        "season4_unlock": true,
+        "legacy_progress_preserved": true
+      },
+      "admin_override_present": true
+    },
+    "no_file_deletion": {
+      "ok": true,
+      "bot_removed": [],
+      "site_removed": []
+    },
+    "images_unchanged": {
+      "ok": true,
+      "changed_or_missing": []
+    },
+    "javascript_syntax": {
+      "ok": true,
+      "script_error": "",
+      "config_error": ""
+    },
+    "html_and_links": {
+      "ok": true,
+      "html_files": 3,
+      "parse_errors": [],
+      "missing_local_refs": []
+    },
+    "version_feature_sync": {
+      "ok": true,
+      "versions": {
+        "package": true,
+        "game_center": true,
+        "stability": true,
+        "patch_announce": true,
+        "guild": true,
+        "config": true,
+        "index": true,
+        "updates": true
+      },
+      "features": {
+        "bot_module": true,
+        "game_center": true,
+        "site": true
+      }
+    }
+  },
+  "ok": true
+}
