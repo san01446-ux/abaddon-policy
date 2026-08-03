@@ -7,18 +7,18 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="#080508" name="theme-color"/>
 <meta content="ABADDON 초보자 가이드와 목적별 Discord RPG 명령어 검색" name="description"/>
-<link href="style.css?v=1000" rel="stylesheet"/>
-<script defer="" src="config.js?v=1000"></script>
-<script defer="" src="script.js?v=1000"></script>
+<link href="style.css?v=1010" rel="stylesheet"/>
+<script defer="" src="config.js?v=1010"></script>
+<script defer="" src="script.js?v=1010"></script>
 </head>
 <body>
 <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">A</span><span>ABADDON<small>OFFICIAL DISCORD RPG</small></span></a><button aria-label="메뉴 열기" class="menu-button" data-menu-button="" type="button">☰</button><nav class="site-nav" data-site-nav=""><a href="index.html">성역</a><a href="index.html#live">실시간</a><a href="commands.html">명령어</a><a href="updates.html">기록</a><a class="nav-cta" data-discord-link="" href="#">공식 Discord</a><a data-language-link="" href="en/commands.html">English</a></nav></div></header>
 <main>
 <section class="page-hero command-hero">
 <div class="container">
-<div class="eyebrow">V10.0.0 · SINGLE-LANGUAGE UI · KOREAN/ENGLISH COMMAND SYNC</div>
+<div class="eyebrow">V10.1.0 · 동료 생존자 · 카드게임 8종 · 언어별 단독 화면</div>
 <h1>명령어를 외우지 않아도 됩니다</h1>
-<p>처음에는 <b>!언어</b> 또는 <b>!language</b>로 표시 언어를 선택하세요. 한국어 화면에는 한국어만, 영어 화면에는 영어만 표시되며 전체 prefix 명령은 두 언어의 실행 이름으로 접근할 수 있습니다.</p>
+<p>처음에는 <b>!언어</b>로 표시 언어를 선택하세요. 한국어를 선택하면 명령어·버튼·설명·오류 안내가 한국어로만 표시됩니다.</p>
 <div class="beginner-command-strip">
 <button data-copy-command="!단말기" type="button"><b>1</b><span><strong>!단말기</strong><small>상태 맞춤 통합 메뉴</small></span></button>
 <button data-copy-command="!처음" type="button"><b>2</b><span><strong>!처음</strong><small>5단계 시작 가이드</small></span></button>
@@ -33,7 +33,8 @@
 <button data-copy-command="!사건판" type="button"><b>11</b><span><strong>!사건판</strong><small>단서 수집·조합·추리</small></span></button>
 <button data-copy-command="!대피소" type="button"><b>12</b><span><strong>!대피소</strong><small>개인 공간·장식·전시</small></span></button>
 <button data-copy-command="!수사레이드" type="button"><b>13</b><span><strong>!수사레이드</strong><small>분대 협동 수사 작전</small></span></button>
-<button data-copy-command="!help" type="button"><b>EN</b><span><strong>!help</strong><small>Full English command guide</small></span></button>
+<button data-copy-command="!카드게임" type="button"><b>14</b><span><strong>!카드게임</strong><small>포커·화투 포함 8종</small></span></button>
+<button data-copy-command="!동료" type="button"><b>15</b><span><strong>!동료</strong><small>NPC 영입·배치·임무</small></span></button>
 </div>
 </div>
 </section>
@@ -64,10 +65,29 @@
 <article><span>☄️</span><div><h3>월드보스 기능군</h3><p><code>!게임 → 월드보스</code>에서 현재 전투·주간 랭킹·지난주 보상을 구분해 보여줍니다.</p></div></article>
 <article><span>🤖</span><div><h3>아바돈 동료전</h3><p><code>!아바돈게임 식량 5000</code>처럼 게임 내 칩 또는 식량을 선택해 1:1 게임을 시작하고, 카드게임 모집방에서도 아바돈을 초대합니다. 실제 돈은 사용하지 않습니다.</p></div></article>
 <article><span>🏰</span><div><h3>서버 관리 제어실</h3><p><code>!서버리뉴얼</code>과 <code>!설정</code>에서 테마·채널·백업·운영 기능을 묶습니다.</p></div></article>
-<article><span>🔎</span><div><h3>사건 수사·현상금</h3><p><code>!사건판</code> 또는 <code>!caseboard</code>에서 단서를 조사·조합하고, 현상금 대상을 추적해 세계 상태와 세력 관계에 영향을 줍니다.</p></div></article>
-<article><span>🏕️</span><div><h3>개인 대피소·전시실</h3><p><code>!대피소</code> 또는 <code>!shelter</code>에서 장식을 제작하고 트로피를 전시하며 다른 생존자의 공간을 방문합니다.</p></div></article>
-<article><span>🕵️</span><div><h3>협동 수사 레이드</h3><p><code>!수사레이드</code> 또는 <code>!investigationraid</code>에서 현장수사·분석·경계·교섭 역할로 장기 사건을 공동 해결합니다.</p></div></article>
-<article><span>🌐</span><div><h3>전체 영어 명령 동기화</h3><p>모든 prefix 명령에 충돌 없는 ASCII 실행 이름을 등록합니다. <code>!help</code>와 영어 키워드 검색에서 전체 목록을 확인할 수 있습니다.</p></div></article>
+<article><span>🔎</span><div><h3>사건 수사·현상금</h3><p><code>!사건판</code>에서 단서를 조사·조합하고, 현상금 대상을 추적해 세계 상태와 세력 관계에 영향을 줍니다.</p></div></article>
+<article><span>🏕️</span><div><h3>개인 대피소·전시실</h3><p><code>!대피소</code>에서 장식을 제작하고 트로피를 전시하며 다른 생존자의 공간을 방문합니다.</p></div></article>
+<article><span>🕵️</span><div><h3>협동 수사 레이드</h3><p><code>!수사레이드</code>에서 현장수사·분석·경계·교섭 역할로 장기 사건을 공동 해결합니다.</p></div></article>
+<article><span>🌐</span><div><h3>언어별 단독 표시</h3><p><code>!언어</code>에서 한국어를 선택하면 이 페이지처럼 한국어 명령과 안내만 표시됩니다.</p></div></article>
+<article><span>🤝</span><div><h3>NPC 동료 생존자</h3><p><code>!동료</code>에서 인연 조건과 패시브를 확인하고 <code>!동료영입</code>·<code>!동료배치</code>·<code>!동료임무</code>로 실제 콘텐츠에 연결합니다.</p></div></article><article><span>🃏</span><div><h3>카드게임 8종</h3><p><code>!카드게임</code>에서 5장 포커·텍사스 홀덤·오마하 홀덤·세븐카드 스터드·맞고·고스톱·원카드·조커잡기를 선택합니다.</p></div></article>
+</div>
+</section>
+
+<section aria-labelledby="v1010-command-title" class="command-browser-section">
+<div class="command-section-head"><div><div class="eyebrow">V10.1.0 신규 명령</div><h2 id="v1010-command-title">동료와 확장 카드게임</h2></div><p>한국어 화면에서는 한국어 실행 이름만 안내합니다.</p></div>
+<div class="command-grid static-command-grid">
+<article class="command-card" data-search="동료 목록 인연 영입"><div class="command-name"><code>!동료</code><button type="button" data-copy-command="!동료">복사</button></div><p>영입 조건, 패시브, 활성 동료를 확인합니다.</p></article>
+<article class="command-card" data-search="동료 영입"><div class="command-name"><code>!동료영입 구조대장 민재</code><button type="button" data-copy-command="!동료영입 구조대장 민재">복사</button></div><p>필요 인연을 달성한 인물을 동료로 영입합니다.</p></article>
+<article class="command-card" data-search="동료 배치 탐사 카드게임 대기"><div class="command-name"><code>!동료배치 정찰대장 이라 탐사</code><button type="button" data-copy-command="!동료배치 정찰대장 이라 탐사">복사</button></div><p>영입한 동료를 탐사·카드게임·대기에 배치합니다.</p></article>
+<article class="command-card" data-search="동료 대화"><div class="command-name"><code>!동료대화</code><button type="button" data-copy-command="!동료대화">복사</button></div><p>활성 동료와 하루 한 번 대화하고 인연을 쌓습니다.</p></article>
+<article class="command-card" data-search="동료 임무 보상"><div class="command-name"><code>!동료임무</code><button type="button" data-copy-command="!동료임무">복사</button></div><p>오늘의 연결 임무를 확인하고 완료 보상을 받습니다.</p></article>
+<article class="command-card" data-search="동료 기록"><div class="command-name"><code>!동료기록</code><button type="button" data-copy-command="!동료기록">복사</button></div><p>대화·탐사·카드게임·임무 누적 기록을 확인합니다.</p></article>
+<article class="command-card" data-search="텍사스 홀덤 포커"><div class="command-name"><code>!텍사스홀덤 10000</code><button type="button" data-copy-command="!텍사스홀덤 10000">복사</button></div><p>2~6인 텍사스 홀덤 모집방을 만듭니다.</p></article>
+<article class="command-card" data-search="오마하 홀덤 포커"><div class="command-name"><code>!오마하홀덤 10000</code><button type="button" data-copy-command="!오마하홀덤 10000">복사</button></div><p>비공개 패 4장 중 정확히 2장을 쓰는 오마하 홀덤입니다.</p></article>
+<article class="command-card" data-search="세븐카드 스터드 포커"><div class="command-name"><code>!세븐카드스터드 10000</code><button type="button" data-copy-command="!세븐카드스터드 10000">복사</button></div><p>개인 패 7장 중 가장 좋은 5장으로 승부합니다.</p></article>
+<article class="command-card" data-search="맞고 화투"><div class="command-name"><code>!맞고 10000</code><button type="button" data-copy-command="!맞고 10000">복사</button></div><p>2인 화투 맞고 모집방을 만듭니다.</p></article>
+<article class="command-card" data-search="고스톱 화투"><div class="command-name"><code>!고스톱 10000</code><button type="button" data-copy-command="!고스톱 10000">복사</button></div><p>3~4인 고스톱 모집방을 만듭니다.</p></article>
+<article class="command-card" data-search="통합 검수"><div class="command-name"><code>!1010안정화검수</code><button type="button" data-copy-command="!1010안정화검수">복사</button></div><p>명령·포커 족보·화투 덱·동료 연결 상태를 읽기 전용으로 검사합니다.</p></article>
 </div>
 </section>
 <section aria-labelledby="browser-title" class="command-browser-section" id="command-browser">

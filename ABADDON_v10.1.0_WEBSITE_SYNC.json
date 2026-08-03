@@ -1,0 +1,59 @@
+{
+  "version": "10.1.0",
+  "generated_at": "2026-08-03T13:15:00+09:00",
+  "bot": {
+    "new_module": "apocalypse_bot/commands/v1010_companion_card_games.py",
+    "card_modes": [
+      "포커",
+      "텍사스홀덤",
+      "오마하홀덤",
+      "세븐카드스터드",
+      "맞고",
+      "고스톱",
+      "원카드",
+      "조커잡기"
+    ],
+    "companions": 6,
+    "new_commands": [
+      "텍사스홀덤",
+      "오마하홀덤",
+      "세븐카드스터드",
+      "맞고",
+      "고스톱",
+      "동료",
+      "동료영입",
+      "동료배치",
+      "동료대화",
+      "동료임무",
+      "동료기록",
+      "1010안정화검수",
+      "카드게임검수",
+      "동료검수",
+      "홈페이지검수"
+    ]
+  },
+  "website": {
+    "ko_route": "/",
+    "en_route": "/en/",
+    "ko_default": true,
+    "one_language_per_surface": true,
+    "pages_updated": [
+      "index.html",
+      "commands.html",
+      "updates.html",
+      "en/index.html",
+      "en/commands.html",
+      "en/updates.html"
+    ],
+    "config_updated": [
+      "config.js",
+      "en/config.js"
+    ],
+    "english_invite_placeholders_removed": true
+  },
+  "audit": {
+    "checks": 34,
+    "passed": 34,
+    "failed": 0
+  }
+}

@@ -1,6 +1,10 @@
 "use strict";
 
 const commands = [
+  {"c":"동료","cmd":"!동료 · !동료영입 · !동료배치 · !동료대화 · !동료임무 · !동료기록","d":"NPC 인연 6명을 실제 동료로 영입하고 글로벌 탐사·카드게임에 배치합니다."},
+  {"c":"카드게임","cmd":"!텍사스홀덤 [참가비] · !오마하홀덤 [참가비] · !세븐카드스터드 [참가비]","d":"비공개 패 확인과 방장 단계 공개를 사용하는 포커 변형 3종입니다."},
+  {"c":"카드게임","cmd":"!맞고 [참가비] · !고스톱 [참가비]","d":"화투 48장으로 같은 월 패를 맞추고 광·열끗·띠·피 점수에서 고 또는 스톱을 선택합니다."},
+  {"c":"검수","cmd":"!1010안정화검수 · !카드게임검수 · !동료검수 · !홈페이지검수","d":"v10.1.0 신규 명령·영문 접근·포커 족보·화투 덱·동료 연결·홈페이지 동기화를 읽기 전용으로 검사합니다."},
   {"c":"글로벌","cmd":"!언어 · !서버언어 · !다국어검수 · !번역누락","d":"개인 화면과 공개 공동 패널의 언어를 분리하고 선택한 언어 하나만 표시합니다."},
   {"c":"안내","cmd":"!할일 · !생존도감 · !아이템도감 · !인물도감 · !지역도감 · !시작안내 · !복귀안내","d":"방대한 콘텐츠의 현재 진행, 발견 기록과 다음 행동을 한 화면에서 찾습니다."},
   {"c":"인연","cmd":"!인연 · !인물기록","d":"우호 NPC가 구조·지원·협상과 탐사 선택을 기억하고 개인 관계 기록으로 남깁니다."},
@@ -37,11 +41,6 @@ const commands = [
     "c": "협동",
     "cmd": "!수사레이드행동 · !수사레이드정산 · !수사레이드보상 · !수사레이드기록",
     "d": "역할별 행동으로 공동 진행도를 채우고, 완료 뒤 중복 없는 개인 보상과 과거 기록을 확인합니다."
-  },
-  {
-    "c": "English",
-    "cmd": "!help · !commands · !english · every prefix command has an ASCII alias",
-    "d": "v10.0.0은 전체 prefix 명령을 전수 검사해 충돌 없는 영어 실행 이름을 등록하고 영어 검색 색인과 홈페이지에 동기화합니다."
   },
   {
     "c": "관리",
@@ -399,46 +398,6 @@ const commands = [
     "d": "설정 기간이 지난 신규 멤버의 새싹 역할을 즉시 정리합니다."
   },
   {
-    "c": "English",
-    "cmd": "!english · !enhelp",
-    "d": "English command categories. Existing Korean commands remain available and use the same cooldowns and saved data."
-  },
-  {
-    "c": "English",
-    "cmd": "!help · !commands · !botinfo · !today",
-    "d": "Help, command search, official bot information, and daily task summary."
-  },
-  {
-    "c": "English",
-    "cmd": "!work · !gather · !fish · !woodcut · !mine · !dig",
-    "d": "Life and gathering commands mapped to the existing Korean activities."
-  },
-  {
-    "c": "English",
-    "cmd": "!equipment · !inventory · !enhance · !craft · !repair · !scrap",
-    "d": "Equipment, enhancement, crafting, repair, and recycling aliases."
-  },
-  {
-    "c": "English",
-    "cmd": "!dungeon · !battle · !regions · !explore · !raid · !worldboss",
-    "d": "Combat, regions, raids, and world-boss aliases."
-  },
-  {
-    "c": "English",
-    "cmd": "!pet · !petinfo · !petevolve · !base · !buildbase · !upgradebase",
-    "d": "Pet and base progression aliases."
-  },
-  {
-    "c": "English",
-    "cmd": "!minigames · !minesweeper · !cardgames · !poker · !onecard · !jokercatch",
-    "d": "Interactive minigame and card-game aliases."
-  },
-  {
-    "c": "English",
-    "cmd": "!themes · !briefing · !serverrenewal · !diagnostics",
-    "d": "Server themes, briefing, renewal, and diagnostics aliases."
-  },
-  {
     "c": "기본",
     "cmd": "!처음 · !초보 · !초보가이드",
     "d": "처음 접속한 생존자를 위한 5단계 시작 가이드입니다. 정보 확인 → 직업 선택 → 출석·퀘스트 → 장비 확인 → 첫 전투 순서를 안내합니다."
@@ -461,7 +420,7 @@ const commands = [
   {
     "c": "카드게임",
     "cmd": "!카드게임",
-    "d": "포커·원카드·조커잡기를 선택하고 참가비를 입력해 버튼형 모집방을 만듭니다."
+    "d": "포커 4종·맞고·고스톱·원카드·조커잡기 8종을 선택하고 참가비를 입력해 안전 모집방을 만듭니다."
   },
   {
     "c": "카드게임",
@@ -771,7 +730,7 @@ const commands = [
   {
     "c": "기본",
     "cmd": "!패치노트 · /패치노트",
-    "d": "최신 v10.0.0 사건 수사·개인 대피소·협동 수사 레이드·전체 영문 명령 동기화 패치 내용을 확인합니다."
+    "d": "최신 v10.1.0 사건 수사·개인 대피소·협동 수사 레이드·전체 영문 명령 동기화 패치 내용을 확인합니다."
   },
   {
     "c": "대화",
@@ -1824,7 +1783,7 @@ const COMMAND_GOALS = Object.freeze({
 const FEATURED_PREFIXES = Object.freeze([
   "!처음", "!귀여운메뉴", "!게임", "!명령어", "!오늘할일", "!성장보드", "!미션보상", "!정보", "!출석", "!직업", "!인벤토리",
   "!장비", "!상점", "!전투", "!던전", "!월드보스", "!원정", "!스토리", "!길드",
-  "!파티", "!사건판", "!현상금", "!대피소", "!수사레이드", "!help", "!카지노", "!서버리뉴얼", "!시스템점검", "!백업생성", "!설정", "!봇소개", "!패치노트"
+  "!파티", "!사건판", "!현상금", "!대피소", "!수사레이드", "!카지노", "!서버리뉴얼", "!시스템점검", "!백업생성", "!설정", "!봇소개", "!패치노트"
 ]);
 
 function commandText(item) {
