@@ -1,0 +1,7978 @@
+{
+  "version": "10.9.4",
+  "generated_at_kst": "2026-08-04",
+  "static_declaration_count": 919,
+  "dynamic_english_alias_sync": true,
+  "latest_patch_commands": {
+    "ko": [
+      "!이미지검수",
+      "!이미지검수 상세",
+      "!테스트 상세",
+      "!패치노트",
+      "!정보",
+      "!세계지도",
+      "!카드대시보드"
+    ],
+    "en": [
+      "!imageaudit",
+      "!imageaudit detail",
+      "!test detail",
+      "!patchnotes",
+      "!info",
+      "!worldmap",
+      "!carddashboard"
+    ]
+  },
+  "image_table_patch": {
+    "public_table_games": 25,
+    "private_hand_families": [
+      "포커",
+      "화투",
+      "블랙잭",
+      "섯다",
+      "원카드",
+      "조커잡기"
+    ],
+    "korean_font": "host-first, runtime cache fallback",
+    "layout": [
+      "wrap",
+      "shrink",
+      "ellipsis",
+      "box-safe"
+    ],
+    "website_copy": "simplified"
+  },
+  "commands": [
+    {
+      "name": "1000안정화검수",
+      "aliases": [
+        "v1000audit",
+        "1000audit"
+      ],
+      "help": "v10 한·영 현지화·진행 연출·신규 연결 콘텐츠를 읽기 전용 검사합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1614
+    },
+    {
+      "name": "1010안정화검수",
+      "aliases": [
+        "v1010audit",
+        "1010audit",
+        "patchaudit"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1010_companion_card_games.py",
+      "line": 1178
+    },
+    {
+      "name": "1050통합검수",
+      "aliases": [
+        "v1050audit",
+        "fullaudit"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1572
+    },
+    {
+      "name": "429상태",
+      "aliases": [
+        "ratelimit",
+        "쿨다운",
+        "안전대기"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2775
+    },
+    {
+      "name": "750안정화검수",
+      "aliases": [
+        "길드안정화검수",
+        "v750검수"
+      ],
+      "help": "v7.5.1 길드 통합·전술 패치의 핵심 안정성을 검사합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 2221
+    },
+    {
+      "name": "760안정화검수",
+      "aliases": [
+        "길드파견검수",
+        "v760검수"
+      ],
+      "help": "길드 파견 저장·정산·중복 수령 구조를 읽기 전용으로 검사합니다.",
+      "file": "apocalypse_bot/commands/v760_guild_dispatch.py",
+      "line": 668
+    },
+    {
+      "name": "770안정화검수",
+      "aliases": [
+        "파밍검수",
+        "생활기술검수",
+        "v770검수"
+      ],
+      "help": "v7.8 파밍·생활 저장 구조를 읽기 전용 검사합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1867
+    },
+    {
+      "name": "780안정화검수",
+      "aliases": [
+        "재난검수",
+        "780검수"
+      ],
+      "help": "v7.8 신규 기능만 읽기 전용으로 검사합니다.",
+      "file": "apocalypse_bot/commands/v780_server_disaster.py",
+      "line": 748
+    },
+    {
+      "name": "790안정화검수",
+      "aliases": [
+        "790검수",
+        "운영확장검수"
+      ],
+      "help": "v7.9 신규·수정 기능만 읽기 전용으로 검사합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 1429
+    },
+    {
+      "name": "810안정화검수",
+      "aliases": [
+        "810검수",
+        "지도개척검수"
+      ],
+      "help": "v8.1 신규·수정 기능만 읽기 전용으로 검사합니다.",
+      "file": "apocalypse_bot/commands/v810_world_map_ux.py",
+      "line": 988
+    },
+    {
+      "name": "811안정화검수",
+      "aliases": [
+        "811검수",
+        "인카운트다양성검수",
+        "파밍연출검수"
+      ],
+      "help": "v8.1.1 신규·수정 기능만 읽기 전용으로 검사합니다.",
+      "file": "apocalypse_bot/commands/v811_encounter_variety.py",
+      "line": 103
+    },
+    {
+      "name": "900안정화검수",
+      "aliases": [
+        "900검수",
+        "세력세계검수",
+        "v9검수"
+      ],
+      "help": "v9.0 세력·무역·전쟁·시즌 기능만 읽기 전용 검사합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 1391
+    },
+    {
+      "name": "920안정화검수",
+      "aliases": [
+        "920검수",
+        "세계순환검수",
+        "전문화분대검수"
+      ],
+      "help": "v9.2 세계 순환·복구·전문화·분대 전술만 읽기 전용 검사합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 1148
+    },
+    {
+      "name": "950안정화검수",
+      "aliases": [
+        "95검수",
+        "v950audit",
+        "investigationaudit"
+      ],
+      "help": "v9.5 수사·대피소·레이드·영문 명령 연결을 읽기 전용 검사합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 1034
+    },
+    {
+      "name": "AI참가검수",
+      "aliases": [
+        "aiparticipationaudit"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1590
+    },
+    {
+      "name": "help",
+      "aliases": [
+        "commands",
+        "english",
+        "enhelp",
+        "englishhelp",
+        "guide"
+      ],
+      "help": "Open the fully English ABADDON command guide.",
+      "file": "apocalypse_bot/commands/v652_english_access.py",
+      "line": 612
+    },
+    {
+      "name": "rpg",
+      "aliases": [],
+      "help": "RPG 시작과 가입 안내를 확인합니다.",
+      "file": "apocalypse_bot/commands/v31_quiz_notify.py",
+      "line": 249
+    },
+    {
+      "name": "start",
+      "aliases": [
+        "시작"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v31_quiz_notify.py",
+      "line": 253
+    },
+    {
+      "name": "TTS",
+      "aliases": [
+        "티티에스",
+        "음성성역"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1373
+    },
+    {
+      "name": "TTS엔진",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1604
+    },
+    {
+      "name": "TTS채널",
+      "aliases": [
+        "채널설정",
+        "TTS채널설정"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1483
+    },
+    {
+      "name": "UI검수",
+      "aliases": [
+        "uiaudit",
+        "componentaudit",
+        "commanduiaudit"
+      ],
+      "help": "Discord 버튼·선택 메뉴·모달과 명령 도감의 최신 안정화 상태를 검사합니다.",
+      "file": "apocalypse_bot/commands/v1093_command_ui_audit.py",
+      "line": 189
+    },
+    {
+      "name": "vip",
+      "aliases": [],
+      "help": "카지노 VIP 등급과 혜택을 확인합니다.",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1010
+    },
+    {
+      "name": "가르치기",
+      "aliases": [
+        "기억등록",
+        "지식등록"
+      ],
+      "help": "서버 전용 질문과 답변 등록 양식을 엽니다.",
+      "file": "apocalypse_bot/commands/v620_dialogue_memory.py",
+      "line": 1175
+    },
+    {
+      "name": "가입일",
+      "aliases": [],
+      "help": "자신 또는 멘션한 멤버의 계정 생성일과 서버 가입일을 표시합니다.",
+      "file": "apocalypse_bot/commands/v421_utility_pack.py",
+      "line": 493
+    },
+    {
+      "name": "감염도설정",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/admin_tools.py",
+      "line": 313
+    },
+    {
+      "name": "감정사",
+      "aliases": [
+        "감정사목록"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v610_digging_treasure.py",
+      "line": 649
+    },
+    {
+      "name": "강화",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v431_growth_balance.py",
+      "line": 501
+    },
+    {
+      "name": "강화기록",
+      "aliases": [],
+      "help": "최근 강화 결과 10개를 확인합니다.",
+      "file": "apocalypse_bot/commands/v432_forge_live.py",
+      "line": 1059
+    },
+    {
+      "name": "강화랭킹",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v21_reborn.py",
+      "line": 525
+    },
+    {
+      "name": "강화연출",
+      "aliases": [],
+      "help": "강화 단계별 장비 표시 이름과 장인의 열기를 안내합니다.",
+      "file": "apocalypse_bot/commands/v432_forge_live.py",
+      "line": 1077
+    },
+    {
+      "name": "강화정보",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v21_reborn.py",
+      "line": 466
+    },
+    {
+      "name": "개조목록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v637_dynamic_events.py",
+      "line": 612
+    },
+    {
+      "name": "개조부품제작",
+      "aliases": [
+        "부품제작"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v637_dynamic_events.py",
+      "line": 625
+    },
+    {
+      "name": "개조해제",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v637_dynamic_events.py",
+      "line": 689
+    },
+    {
+      "name": "개척기부",
+      "aliases": [
+        "지도기부",
+        "지역기부"
+      ],
+      "help": "자원을 공동 지역 개척에 기부합니다.",
+      "file": "apocalypse_bot/commands/v810_world_map_ux.py",
+      "line": 698
+    },
+    {
+      "name": "개척현황",
+      "aliases": [
+        "지도진척",
+        "지역진척"
+      ],
+      "help": "서버 공동 개척 기여와 지역별 진행도를 확인합니다.",
+      "file": "apocalypse_bot/commands/v810_world_map_ux.py",
+      "line": 686
+    },
+    {
+      "name": "갱신",
+      "aliases": [
+        "update"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 3268
+    },
+    {
+      "name": "갱신",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v602_channel_rules.py",
+      "line": 1944
+    },
+    {
+      "name": "거래검색",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v21_reborn.py",
+      "line": 728
+    },
+    {
+      "name": "거래기록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v21_reborn.py",
+      "line": 838
+    },
+    {
+      "name": "거점",
+      "aliases": [
+        "지역거점",
+        "개척거점"
+      ],
+      "help": "지역 공동 거점 시설 상태를 확인합니다.",
+      "file": "apocalypse_bot/commands/v810_world_map_ux.py",
+      "line": 746
+    },
+    {
+      "name": "거점건설",
+      "aliases": [
+        "지역건설",
+        "개척건설"
+      ],
+      "help": "개인 자원으로 공동 거점 시설을 건설·강화합니다.",
+      "file": "apocalypse_bot/commands/v810_world_map_ux.py",
+      "line": 761
+    },
+    {
+      "name": "건의",
+      "aliases": [
+        "공개건의",
+        "건의등록"
+      ],
+      "help": "공개 건의 작성 버튼을 엽니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 928
+    },
+    {
+      "name": "건의목록",
+      "aliases": [
+        "제안목록"
+      ],
+      "help": "공개 건의와 투표 현황을 확인합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 932
+    },
+    {
+      "name": "건의상태",
+      "aliases": [
+        "제안상태"
+      ],
+      "help": "관리자가 공개 건의 상태를 변경합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 949
+    },
+    {
+      "name": "검색",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v620_dialogue_memory.py",
+      "line": 1219
+    },
+    {
+      "name": "검수",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v620_dialogue_memory.py",
+      "line": 1244
+    },
+    {
+      "name": "게임",
+      "aliases": [
+        "게임센터",
+        "게임메뉴",
+        "rpg메뉴"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v600_game_center.py",
+      "line": 2565
+    },
+    {
+      "name": "게임기록",
+      "aliases": [
+        "gamelog"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1592
+    },
+    {
+      "name": "게임대시보드",
+      "aliases": [
+        "gamedashboard"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1694
+    },
+    {
+      "name": "게임랭킹",
+      "aliases": [
+        "gameranking",
+        "gameleaderboard"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1297
+    },
+    {
+      "name": "게임리플레이",
+      "aliases": [
+        "gamereplay"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1588
+    },
+    {
+      "name": "게임미리보기",
+      "aliases": [
+        "봇게임미리보기",
+        "게임프리뷰"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2285
+    },
+    {
+      "name": "게임방목록",
+      "aliases": [
+        "gamelobbies",
+        "roomlist"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1523
+    },
+    {
+      "name": "게임업적",
+      "aliases": [
+        "gameachievements"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1315
+    },
+    {
+      "name": "게임장",
+      "aliases": [
+        "게임로비",
+        "gamehall",
+        "gamelobby"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1257
+    },
+    {
+      "name": "게임전적",
+      "aliases": [
+        "gamestats",
+        "gamehistory"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1283
+    },
+    {
+      "name": "게임정리",
+      "aliases": [
+        "봇게임정리",
+        "게임채널정리"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2295
+    },
+    {
+      "name": "게임진행검수",
+      "aliases": [
+        "gameplayaudit",
+        "cardflowaudit"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1060_authentic_card_games.py",
+      "line": 1830
+    },
+    {
+      "name": "격리",
+      "aliases": [],
+      "help": "멤버를 격리 역할로 제한합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 885
+    },
+    {
+      "name": "격리역할생성",
+      "aliases": [],
+      "help": "격리 역할과 채널 권한을 생성 또는 갱신합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 814
+    },
+    {
+      "name": "격리해제",
+      "aliases": [],
+      "help": "멤버의 격리 역할을 제거합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 896
+    },
+    {
+      "name": "경고",
+      "aliases": [],
+      "help": "멤버에게 사유와 함께 경고를 부여합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 968
+    },
+    {
+      "name": "경고조회",
+      "aliases": [],
+      "help": "멤버의 활성 경고 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 992
+    },
+    {
+      "name": "경고취소",
+      "aliases": [],
+      "help": "사건 번호로 활성 경고를 취소합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1016
+    },
+    {
+      "name": "경마장",
+      "aliases": [
+        "racetrack",
+        "horsearena"
+      ],
+      "help": "실시간 경마 규칙과 배당을 확인합니다.",
+      "file": "apocalypse_bot/commands/v1092_visual_status_horserace.py",
+      "line": 445
+    },
+    {
+      "name": "경마전적",
+      "aliases": [
+        "horseracestats",
+        "racestats"
+      ],
+      "help": "내 실시간 경마 전적과 손익을 확인합니다.",
+      "file": "apocalypse_bot/commands/v1092_visual_status_horserace.py",
+      "line": 453
+    },
+    {
+      "name": "경매등록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v21_reborn.py",
+      "line": 742
+    },
+    {
+      "name": "경매마감",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v21_reborn.py",
+      "line": 798
+    },
+    {
+      "name": "경제대시보드",
+      "aliases": [
+        "economydashboard"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1698
+    },
+    {
+      "name": "경제밸런스",
+      "aliases": [
+        "경제변경"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v431_growth_balance.py",
+      "line": 427
+    },
+    {
+      "name": "경험치지급",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/admin_tools.py",
+      "line": 199
+    },
+    {
+      "name": "계승",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v431_growth_balance.py",
+      "line": 676
+    },
+    {
+      "name": "계약수락",
+      "aliases": [
+        "의뢰수락",
+        "납품계약"
+      ],
+      "help": "오늘의 납품 계약 하나를 수락합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1675
+    },
+    {
+      "name": "계약현황",
+      "aliases": [
+        "의뢰현황",
+        "납품현황"
+      ],
+      "help": "수락·완료한 오늘의 계약을 확인합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1731
+    },
+    {
+      "name": "계획상태",
+      "aliases": [
+        "planstatus",
+        "적용상태"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2590
+    },
+    {
+      "name": "계획취소",
+      "aliases": [
+        "plancancel",
+        "적용취소"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2797
+    },
+    {
+      "name": "고스톱",
+      "aliases": [
+        "gostop",
+        "go-stop"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1010_companion_card_games.py",
+      "line": 1008
+    },
+    {
+      "name": "고정간격",
+      "aliases": [],
+      "help": "현재 채널 고정 메시지 재게시 간격을 설정합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 1188
+    },
+    {
+      "name": "고정메시지",
+      "aliases": [],
+      "help": "현재 채널에 자동 재게시되는 고정 안내를 설정합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 1149
+    },
+    {
+      "name": "고철갈갈이",
+      "aliases": [
+        "고철분쇄",
+        "자원분쇄"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 964
+    },
+    {
+      "name": "공방",
+      "aliases": [
+        "폐품공방",
+        "복구공방"
+      ],
+      "help": "미감정·감정 완료 폐품과 연구 상태를 확인합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1451
+    },
+    {
+      "name": "공지전송",
+      "aliases": [],
+      "help": "지정 채널에 운영진 공지 임베드를 전송합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 1109
+    },
+    {
+      "name": "관리역할제거",
+      "aliases": [],
+      "help": "SERVER GUARD 운영 역할 등록을 해제합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1546
+    },
+    {
+      "name": "관리역할추가",
+      "aliases": [],
+      "help": "SERVER GUARD 운영 명령어를 사용할 역할을 추가합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1532
+    },
+    {
+      "name": "관리자명령어",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/admin_tools.py",
+      "line": 95
+    },
+    {
+      "name": "관리자지역이동",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/admin_tools.py",
+      "line": 339
+    },
+    {
+      "name": "관리점검",
+      "aliases": [
+        "통합점검",
+        "점검센터"
+      ],
+      "help": "관리자가 최신 패치·데이터·메뉴·오류 점검 진입점을 확인합니다.",
+      "file": "apocalypse_bot/commands/v810_world_map_ux.py",
+      "line": 929
+    },
+    {
+      "name": "관리확장도움말",
+      "aliases": [
+        "운영강화도움말"
+      ],
+      "help": "자동 이모지 및 확장 관리 명령어를 확인합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 490
+    },
+    {
+      "name": "관전",
+      "aliases": [
+        "spectate"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1544
+    },
+    {
+      "name": "관전종료",
+      "aliases": [
+        "stopspectating"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1563
+    },
+    {
+      "name": "괴수투기장",
+      "aliases": [
+        "펫데스매치"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 1094
+    },
+    {
+      "name": "괴질탈출",
+      "aliases": [
+        "크래시",
+        "괴질크래시"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 833
+    },
+    {
+      "name": "교감",
+      "aliases": [
+        "교감도"
+      ],
+      "help": "아바돈과의 대화 누적 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v620_dialogue_memory.py",
+      "line": 1345
+    },
+    {
+      "name": "구매",
+      "aliases": [],
+      "help": "카지노 NPC 상점에서 아이템을 구매합니다.",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1034
+    },
+    {
+      "name": "귀여운메뉴",
+      "aliases": [
+        "명령패널",
+        "말랑메뉴",
+        "버튼명령어"
+      ],
+      "help": "귀여운 전체 명령어 실행 패널을 엽니다.",
+      "file": "apocalypse_bot/commands/v711_cute_interactions.py",
+      "line": 1251
+    },
+    {
+      "name": "금고개설",
+      "aliases": [
+        "카지노금고개설"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 1291
+    },
+    {
+      "name": "금고시작",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 1333
+    },
+    {
+      "name": "금고참가",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 1310
+    },
+    {
+      "name": "기록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v33_story.py",
+      "line": 528
+    },
+    {
+      "name": "기록",
+      "aliases": [],
+      "help": "최근 암시장 매수·매도 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v36_gambling_market.py",
+      "line": 918
+    },
+    {
+      "name": "기록",
+      "aliases": [],
+      "help": "최근 카지노 이용 내역과 결과를 확인합니다.",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1357
+    },
+    {
+      "name": "기록",
+      "aliases": [],
+      "help": "최근 은행 거래 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 554
+    },
+    {
+      "name": "기록",
+      "aliases": [],
+      "help": "최근 사채 차입과 상환 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 580
+    },
+    {
+      "name": "기록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v430_story_expedition.py",
+      "line": 832
+    },
+    {
+      "name": "기록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v430_story_expedition.py",
+      "line": 1415
+    },
+    {
+      "name": "기록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v600_game_center.py",
+      "line": 2686
+    },
+    {
+      "name": "기록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v730_season_story.py",
+      "line": 606
+    },
+    {
+      "name": "기본목소리",
+      "aliases": [
+        "서버목소리",
+        "defaultvoice"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1566
+    },
+    {
+      "name": "기본목소리",
+      "aliases": [],
+      "help": "개인 설정이 없는 사용자의 서버 기본 목소리를 정합니다.",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1843
+    },
+    {
+      "name": "기억회로",
+      "aliases": [
+        "기억게임",
+        "이모지기억"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v640_interactive_arcade.py",
+      "line": 772
+    },
+    {
+      "name": "기지방어",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v636_world_combat.py",
+      "line": 382
+    },
+    {
+      "name": "기지방어공격",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v636_world_combat.py",
+      "line": 401
+    },
+    {
+      "name": "기지칩교환",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v636_world_combat.py",
+      "line": 347
+    },
+    {
+      "name": "긴급정리",
+      "aliases": [
+        "cleanup",
+        "잔여정리"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 3012
+    },
+    {
+      "name": "길드거래내역",
+      "aliases": [
+        "길드금고내역"
+      ],
+      "help": "최근 길드 금고 거래를 확인합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1894
+    },
+    {
+      "name": "길드건설",
+      "aliases": [
+        "공동기지건설"
+      ],
+      "help": "새 길드 시설을 건설합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1609
+    },
+    {
+      "name": "길드검수",
+      "aliases": [
+        "길드감사",
+        "길드데이터검수"
+      ],
+      "help": "길드 데이터와 경제 무결성을 읽기 전용으로 검사합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 2187
+    },
+    {
+      "name": "길드관리",
+      "aliases": [
+        "길드메뉴",
+        "길드대시보드"
+      ],
+      "help": "길드·기지·임무·금고·레이드를 한 화면에서 확인합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1280
+    },
+    {
+      "name": "길드금고",
+      "aliases": [
+        "길드창고",
+        "공동금고"
+      ],
+      "help": "길드 통합 금고와 출금 요청을 확인합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1709
+    },
+    {
+      "name": "길드기지",
+      "aliases": [
+        "공동기지",
+        "길드시설"
+      ],
+      "help": "길드 공동 기지 시설과 공사 상태를 확인합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1541
+    },
+    {
+      "name": "길드기지수확",
+      "aliases": [
+        "공동기지수확"
+      ],
+      "help": "발전기가 생산한 식량을 공동 금고로 회수합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1617
+    },
+    {
+      "name": "길드레이드",
+      "aliases": [
+        "길드보스",
+        "길드토벌"
+      ],
+      "help": "이번 주 길드 레이드 상태를 확인합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 2028
+    },
+    {
+      "name": "길드레이드공격",
+      "aliases": [
+        "길드보스공격",
+        "길드토벌공격"
+      ],
+      "help": "길드 레이드에서 전술과 공격 부위를 선택합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 2048
+    },
+    {
+      "name": "길드레이드기록",
+      "aliases": [
+        "길드보스기록",
+        "길드토벌기록"
+      ],
+      "help": "현재·과거 길드 레이드 기록을 페이지로 확인합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1997
+    },
+    {
+      "name": "길드레이드랭킹",
+      "aliases": [
+        "길드보스랭킹",
+        "길드토벌랭킹"
+      ],
+      "help": "현재 길드 레이드 기여도 순위를 확인합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 2152
+    },
+    {
+      "name": "길드레이드보상",
+      "aliases": [
+        "길드보스보상",
+        "길드토벌보상"
+      ],
+      "help": "토벌 완료한 길드 레이드 개인 보상을 받습니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 2118
+    },
+    {
+      "name": "길드레이드연습",
+      "aliases": [
+        "길드보스연습",
+        "길드토벌연습"
+      ],
+      "help": "실제 HP·쿨다운·보상에 영향 없는 레이드 연습 공격을 실행합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1960
+    },
+    {
+      "name": "길드레이드준비",
+      "aliases": [
+        "길드보스준비",
+        "길드토벌준비"
+      ],
+      "help": "개인 전술·쿨다운·시설 효과와 추천 부위를 확인합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1937
+    },
+    {
+      "name": "길드복구미리보기",
+      "aliases": [
+        "길드마이그레이션미리보기"
+      ],
+      "help": "안전 복구 가능한 길드 데이터 항목을 미리 봅니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 2205
+    },
+    {
+      "name": "길드설정",
+      "aliases": [
+        "길드가입설정"
+      ],
+      "help": "길드 가입 방식을 설정합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1323
+    },
+    {
+      "name": "길드소개",
+      "aliases": [
+        "길드설명"
+      ],
+      "help": "길드 소개를 확인하거나 변경합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1305
+    },
+    {
+      "name": "길드시설강화",
+      "aliases": [
+        "길드기지강화"
+      ],
+      "help": "기존 길드 시설을 강화합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1613
+    },
+    {
+      "name": "길드신청",
+      "aliases": [
+        "길드가입신청"
+      ],
+      "help": "승인 가입 길드에 가입을 신청합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1347
+    },
+    {
+      "name": "길드신청목록",
+      "aliases": [
+        "길드가입신청목록"
+      ],
+      "help": "처리 대기 중인 길드 가입 신청을 확인합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1383
+    },
+    {
+      "name": "길드신청처리",
+      "aliases": [
+        "길드가입처리"
+      ],
+      "help": "가입 신청을 승인하거나 거절합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1398
+    },
+    {
+      "name": "길드위임",
+      "aliases": [
+        "길드장위임"
+      ],
+      "help": "길드장 권한을 다른 길드원에게 넘깁니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1514
+    },
+    {
+      "name": "길드임무",
+      "aliases": [
+        "길드미션",
+        "공동임무"
+      ],
+      "help": "길드 일일·주간 공동 임무를 확인합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1650
+    },
+    {
+      "name": "길드임무보상",
+      "aliases": [
+        "길드미션보상"
+      ],
+      "help": "완료한 길드 공동 임무 보상을 받습니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1671
+    },
+    {
+      "name": "길드입금",
+      "aliases": [
+        "길드자원기부"
+      ],
+      "help": "식량이나 건축 자원을 길드 금고에 입금합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1725
+    },
+    {
+      "name": "길드전술설정",
+      "aliases": [
+        "길드전술",
+        "길드레이드프리셋"
+      ],
+      "help": "개인 길드 레이드 기본 전술과 부위를 저장합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1910
+    },
+    {
+      "name": "길드종합랭킹",
+      "aliases": [
+        "길드랭킹750"
+      ],
+      "help": "길드 레벨·시설·레이드·기여도를 합산한 순위를 확인합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 2169
+    },
+    {
+      "name": "길드직책",
+      "aliases": [
+        "길드간부"
+      ],
+      "help": "길드원을 간부로 임명하거나 일반 길드원으로 변경합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1451
+    },
+    {
+      "name": "길드초대수락",
+      "aliases": [
+        "길드초대받기"
+      ],
+      "help": "우클릭으로 받은 최근 길드 초대를 수락합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 1360
+    },
+    {
+      "name": "길드추방",
+      "aliases": [
+        "길드강퇴"
+      ],
+      "help": "길드원을 추방합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1485
+    },
+    {
+      "name": "길드출금거절",
+      "aliases": [
+        "길드금고거절"
+      ],
+      "help": "길드 금고 출금 요청을 거절합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1867
+    },
+    {
+      "name": "길드출금승인",
+      "aliases": [
+        "길드금고승인"
+      ],
+      "help": "길드 금고 출금 요청을 승인합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1811
+    },
+    {
+      "name": "길드출금요청",
+      "aliases": [
+        "길드금고요청"
+      ],
+      "help": "길드 금고 출금을 요청합니다.",
+      "file": "apocalypse_bot/commands/v750_guild_raid.py",
+      "line": 1767
+    },
+    {
+      "name": "길드파견",
+      "aliases": [
+        "길드원정",
+        "길드탐사대"
+      ],
+      "help": "길드 협동 파견 상태와 지역을 확인합니다.",
+      "file": "apocalypse_bot/commands/v760_guild_dispatch.py",
+      "line": 350
+    },
+    {
+      "name": "길드파견기록",
+      "aliases": [
+        "길드원정기록",
+        "파견기록"
+      ],
+      "help": "길드 파견 기록을 페이지로 확인합니다.",
+      "file": "apocalypse_bot/commands/v760_guild_dispatch.py",
+      "line": 619
+    },
+    {
+      "name": "길드파견모의",
+      "aliases": [
+        "길드원정모의",
+        "파견연습"
+      ],
+      "help": "실제 데이터 변경 없이 1인 길드 파견 결과를 예측합니다.",
+      "file": "apocalypse_bot/commands/v760_guild_dispatch.py",
+      "line": 645
+    },
+    {
+      "name": "길드파견모집",
+      "aliases": [
+        "길드파견준비",
+        "길드원정모집"
+      ],
+      "help": "길드 파견 참가자를 모집합니다.",
+      "file": "apocalypse_bot/commands/v760_guild_dispatch.py",
+      "line": 388
+    },
+    {
+      "name": "길드파견보상",
+      "aliases": [
+        "길드원정보상",
+        "파견보상"
+      ],
+      "help": "완료된 길드 파견 개인 보상을 받습니다.",
+      "file": "apocalypse_bot/commands/v760_guild_dispatch.py",
+      "line": 573
+    },
+    {
+      "name": "길드파견이탈",
+      "aliases": [
+        "길드원정이탈",
+        "파견이탈"
+      ],
+      "help": "출발 전 길드 파견 모집에서 이탈합니다.",
+      "file": "apocalypse_bot/commands/v760_guild_dispatch.py",
+      "line": 438
+    },
+    {
+      "name": "길드파견정산",
+      "aliases": [
+        "길드원정정산",
+        "파견정산"
+      ],
+      "help": "복귀한 길드 파견 결과를 한 번만 정산합니다.",
+      "file": "apocalypse_bot/commands/v760_guild_dispatch.py",
+      "line": 549
+    },
+    {
+      "name": "길드파견참가",
+      "aliases": [
+        "길드원정참가",
+        "파견참가"
+      ],
+      "help": "모집 중인 길드 파견에 역할을 선택해 참가합니다.",
+      "file": "apocalypse_bot/commands/v760_guild_dispatch.py",
+      "line": 418
+    },
+    {
+      "name": "길드파견출발",
+      "aliases": [
+        "길드원정출발",
+        "파견출발"
+      ],
+      "help": "모집한 길드 파견대를 출발시킵니다.",
+      "file": "apocalypse_bot/commands/v760_guild_dispatch.py",
+      "line": 472
+    },
+    {
+      "name": "길드파견취소",
+      "aliases": [
+        "길드원정취소",
+        "파견모집취소"
+      ],
+      "help": "출발 전 길드 파견 모집을 취소합니다.",
+      "file": "apocalypse_bot/commands/v760_guild_dispatch.py",
+      "line": 453
+    },
+    {
+      "name": "까마귀",
+      "aliases": [
+        "떠돌이상인",
+        "게릴라상점"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v637_dynamic_events.py",
+      "line": 727
+    },
+    {
+      "name": "까마귀구매",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v637_dynamic_events.py",
+      "line": 755
+    },
+    {
+      "name": "끄기",
+      "aliases": [
+        "off"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1514
+    },
+    {
+      "name": "끄기",
+      "aliases": [],
+      "help": "자동 TTS를 끄고 대기열을 비웁니다.",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1908
+    },
+    {
+      "name": "날씨",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v636_world_combat.py",
+      "line": 265
+    },
+    {
+      "name": "납품",
+      "aliases": [
+        "계약납품",
+        "의뢰제출"
+      ],
+      "help": "수락한 계약의 자원을 제출하고 보상을 받습니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1694
+    },
+    {
+      "name": "내경고",
+      "aliases": [
+        "내제재"
+      ],
+      "help": "자신의 활성 경고와 최근 제재 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v422_security_center.py",
+      "line": 588
+    },
+    {
+      "name": "내구도",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v637_dynamic_events.py",
+      "line": 553
+    },
+    {
+      "name": "내설정",
+      "aliases": [],
+      "help": "내 TTS 목소리와 서버 기본 설정을 확인합니다.",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1783
+    },
+    {
+      "name": "내알림",
+      "aliases": [
+        "알림상태통합"
+      ],
+      "help": "통합 알림센터 설정을 확인합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 881
+    },
+    {
+      "name": "내접수",
+      "aliases": [],
+      "help": "현재 열린 접수 상태를 DM으로 확인합니다.",
+      "file": "apocalypse_bot/commands/v423_intake_center.py",
+      "line": 1010
+    },
+    {
+      "name": "누적보상",
+      "aliases": [
+        "참여보상",
+        "성장이정표"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v710_growth_loop.py",
+      "line": 648
+    },
+    {
+      "name": "닉네임",
+      "aliases": [],
+      "help": "멤버의 서버 닉네임을 변경하거나 초기화합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1312
+    },
+    {
+      "name": "다국어검수",
+      "aliases": [
+        "languageaudit",
+        "localizationaudit"
+      ],
+      "help": "선택 언어 단일 출력과 번역 런타임 상태를 검사합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1553
+    },
+    {
+      "name": "다음",
+      "aliases": [
+        "next",
+        "계속"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2489
+    },
+    {
+      "name": "다이스",
+      "aliases": [],
+      "help": "홀짝 또는 정확한 숫자를 예측하는 주사위 게임입니다.",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1321
+    },
+    {
+      "name": "다이스",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1388
+    },
+    {
+      "name": "다크존",
+      "aliases": [
+        "다크존도움말"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 637
+    },
+    {
+      "name": "다크존공격",
+      "aliases": [
+        "다크존습격"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 759
+    },
+    {
+      "name": "다크존상태",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 737
+    },
+    {
+      "name": "다크존진입",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 646
+    },
+    {
+      "name": "다크존탈출",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 715
+    },
+    {
+      "name": "다크존탐색",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 670
+    },
+    {
+      "name": "단말기",
+      "aliases": [
+        "생존단말기",
+        "통합단말기",
+        "아바돈단말기"
+      ],
+      "help": "현재 상태에 맞는 주요 기능을 한 선택창에서 엽니다.",
+      "file": "apocalypse_bot/commands/v810_world_map_ux.py",
+      "line": 589
+    },
+    {
+      "name": "단서목록",
+      "aliases": [
+        "내단서",
+        "clues",
+        "cluelist"
+      ],
+      "help": "보유한 사건 단서와 수량을 확인합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 484
+    },
+    {
+      "name": "단서조사",
+      "aliases": [
+        "사건조사",
+        "investigate",
+        "searchclue"
+      ],
+      "help": "현장·기록·증언 중 하나를 조사해 단서를 확보합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 493
+    },
+    {
+      "name": "단서조합",
+      "aliases": [
+        "증거연결",
+        "combineclues",
+        "linkevidence"
+      ],
+      "help": "보유한 두 단서를 연결해 사건의 논리 고리를 완성합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 505
+    },
+    {
+      "name": "답변양식목록",
+      "aliases": [],
+      "help": "등록된 빠른 답변 양식 목록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v423_intake_center.py",
+      "line": 971
+    },
+    {
+      "name": "답변양식삭제",
+      "aliases": [],
+      "help": "등록된 빠른 답변 양식을 삭제합니다.",
+      "file": "apocalypse_bot/commands/v423_intake_center.py",
+      "line": 959
+    },
+    {
+      "name": "답변양식추가",
+      "aliases": [],
+      "help": "접수 채널에서 사용할 빠른 답변 양식을 등록합니다. 이름 | 내용",
+      "file": "apocalypse_bot/commands/v423_intake_center.py",
+      "line": 938
+    },
+    {
+      "name": "대기열",
+      "aliases": [
+        "queue"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1646
+    },
+    {
+      "name": "대출",
+      "aliases": [],
+      "help": "신용 한도 안에서 은행 대출을 받습니다.",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 538
+    },
+    {
+      "name": "대출",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 593
+    },
+    {
+      "name": "대통령",
+      "aliases": [
+        "president",
+        "daifugo"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1431
+    },
+    {
+      "name": "대피소",
+      "aliases": [
+        "개인대피소",
+        "shelter",
+        "myshelter"
+      ],
+      "help": "개인 대피소의 테마·장식·전시품을 확인합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 702
+    },
+    {
+      "name": "대피소꾸미기",
+      "aliases": [
+        "대피소테마",
+        "decorateshelter",
+        "sheltertheme"
+      ],
+      "help": "개인 대피소 테마를 변경합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 708
+    },
+    {
+      "name": "대피소방문",
+      "aliases": [
+        "대피소구경",
+        "visitshelter",
+        "viewshelter"
+      ],
+      "help": "다른 생존자의 개인 대피소를 방문합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 782
+    },
+    {
+      "name": "대피소좋아요",
+      "aliases": [
+        "대피소추천",
+        "likeshelter",
+        "shelterlike"
+      ],
+      "help": "다른 생존자의 개인 대피소에 좋아요를 남깁니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 796
+    },
+    {
+      "name": "대화",
+      "aliases": [
+        "대화센터",
+        "아바돈대화"
+      ],
+      "help": "아바돈 대화·기억 드롭다운 제어실을 엽니다.",
+      "file": "apocalypse_bot/commands/v620_dialogue_memory.py",
+      "line": 1146
+    },
+    {
+      "name": "대화금지",
+      "aliases": [
+        "채널뮤트"
+      ],
+      "help": "현재 채널에서 특정 멤버의 전송과 반응을 제한합니다.",
+      "file": "apocalypse_bot/commands/v420_ops_center.py",
+      "line": 366
+    },
+    {
+      "name": "대화종료",
+      "aliases": [
+        "말걸기종료",
+        "대화끝"
+      ],
+      "help": "현재 채널에서 진행 중인 아바돈 연속 대화를 종료합니다.",
+      "file": "apocalypse_bot/commands/v620_dialogue_memory.py",
+      "line": 1168
+    },
+    {
+      "name": "대화허용",
+      "aliases": [
+        "채널언뮤트"
+      ],
+      "help": "대화금지 전에 저장한 채널 권한으로 복구합니다.",
+      "file": "apocalypse_bot/commands/v420_ops_center.py",
+      "line": 412
+    },
+    {
+      "name": "대회센터",
+      "aliases": [
+        "tournamentcenter"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1778
+    },
+    {
+      "name": "던전기록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v21_reborn.py",
+      "line": 674
+    },
+    {
+      "name": "던전전술",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v636_world_combat.py",
+      "line": 670
+    },
+    {
+      "name": "데이터백업",
+      "aliases": [
+        "수동백업"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v641_stabilization.py",
+      "line": 483
+    },
+    {
+      "name": "도감",
+      "aliases": [],
+      "help": "수집한 장비, 펫, 몬스터 도감을 확인합니다.",
+      "file": "apocalypse_bot/commands/v32_codex_settings_tutorial.py",
+      "line": 113
+    },
+    {
+      "name": "도감보상",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v32_codex_settings_tutorial.py",
+      "line": 160
+    },
+    {
+      "name": "도리짓고땡",
+      "aliases": [
+        "dorijitgottaeng",
+        "dori"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1443
+    },
+    {
+      "name": "도박잔액",
+      "aliases": [
+        "도박자금",
+        "도박통계"
+      ],
+      "help": "현재 식량과 최근·오늘·누적 도박 손익을 확인합니다.",
+      "file": "apocalypse_bot/commands/v37_gambling_experience.py",
+      "line": 562
+    },
+    {
+      "name": "도박정보",
+      "aliases": [
+        "도박도움말"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v36_gambling_market.py",
+      "line": 881
+    },
+    {
+      "name": "도움말",
+      "aliases": [
+        "help"
+      ],
+      "help": "초보 가이드와 카테고리별 명령어 브라우저를 엽니다.",
+      "file": "apocalypse_bot/commands/v30_invasion.py",
+      "line": 215
+    },
+    {
+      "name": "도움말",
+      "aliases": [],
+      "help": "기존 도박과 실시간 암시장 명령어를 확인합니다.",
+      "file": "apocalypse_bot/commands/v36_gambling_market.py",
+      "line": 922
+    },
+    {
+      "name": "도움말",
+      "aliases": [],
+      "help": "카지노 게임별 규칙, 배당, 배팅 범위를 확인합니다.",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1365
+    },
+    {
+      "name": "도움말",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v430_story_expedition.py",
+      "line": 1057
+    },
+    {
+      "name": "돌연변이경주",
+      "aliases": [
+        "투기장경주",
+        "괴수경주"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 921
+    },
+    {
+      "name": "돌연변이배팅",
+      "aliases": [
+        "투기장배팅"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 938
+    },
+    {
+      "name": "동료",
+      "aliases": [
+        "companions",
+        "companionlist"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1010_companion_card_games.py",
+      "line": 1012
+    },
+    {
+      "name": "동료검수",
+      "aliases": [
+        "companionaudit"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1010_companion_card_games.py",
+      "line": 1206
+    },
+    {
+      "name": "동료기록",
+      "aliases": [
+        "companionlog",
+        "companionrecord"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1010_companion_card_games.py",
+      "line": 1157
+    },
+    {
+      "name": "동료능력",
+      "aliases": [
+        "companionabilities"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1393
+    },
+    {
+      "name": "동료대시보드",
+      "aliases": [
+        "companiondashboard"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1710
+    },
+    {
+      "name": "동료대화",
+      "aliases": [
+        "talkcompanion",
+        "companiontalk"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1010_companion_card_games.py",
+      "line": 1088
+    },
+    {
+      "name": "동료배치",
+      "aliases": [
+        "assigncompanion",
+        "companionassign"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1010_companion_card_games.py",
+      "line": 1061
+    },
+    {
+      "name": "동료영입",
+      "aliases": [
+        "recruitcompanion",
+        "companionrecruit"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1010_companion_card_games.py",
+      "line": 1033
+    },
+    {
+      "name": "동료원정",
+      "aliases": [
+        "companionexpedition"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1421
+    },
+    {
+      "name": "동료임무",
+      "aliases": [
+        "companionmission",
+        "companionquest"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1010_companion_card_games.py",
+      "line": 1122
+    },
+    {
+      "name": "동료훈련",
+      "aliases": [
+        "traincompanion"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1404
+    },
+    {
+      "name": "되돌리기",
+      "aliases": [
+        "undo",
+        "복원"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2425
+    },
+    {
+      "name": "땅파기",
+      "aliases": [
+        "굴착",
+        "삽질"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v610_digging_treasure.py",
+      "line": 505
+    },
+    {
+      "name": "라미",
+      "aliases": [
+        "rummy"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1427
+    },
+    {
+      "name": "랜덤박스",
+      "aliases": [
+        "대형랜덤박스",
+        "보급박스"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v637_dynamic_events.py",
+      "line": 814
+    },
+    {
+      "name": "랭킹",
+      "aliases": [],
+      "help": "카지노 누적 순이익 상위 생존자를 확인합니다.",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1361
+    },
+    {
+      "name": "랭킹",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v430_story_expedition.py",
+      "line": 1426
+    },
+    {
+      "name": "럭키휠",
+      "aliases": [],
+      "help": "이용권 또는 칩으로 럭키휠을 돌립니다.",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1039
+    },
+    {
+      "name": "럭키휠",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1096
+    },
+    {
+      "name": "레벨설정",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/admin_tools.py",
+      "line": 211
+    },
+    {
+      "name": "레이드설정",
+      "aliases": [],
+      "help": "가입 폭주 기준과 최소 계정 나이를 설정합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 848
+    },
+    {
+      "name": "레이드자동잠금",
+      "aliases": [],
+      "help": "레이드 감지 시 서버 전체 잠금 여부를 설정합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 862
+    },
+    {
+      "name": "레이드해제",
+      "aliases": [],
+      "help": "현재 레이드 감지 상태를 수동 해제합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 874
+    },
+    {
+      "name": "로그채널",
+      "aliases": [],
+      "help": "운영 기록이 전송될 로그 채널을 지정합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1383
+    },
+    {
+      "name": "로그채널설정",
+      "aliases": [],
+      "help": "보안/메시지/멤버/운영 로그 채널을 개별 지정합니다.",
+      "file": "apocalypse_bot/commands/v422_security_center.py",
+      "line": 402
+    },
+    {
+      "name": "로드맵",
+      "aliases": [
+        "개발로드맵"
+      ],
+      "help": "개발 예정·진행 중·완료된 공개 건의를 확인합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 966
+    },
+    {
+      "name": "룰렛",
+      "aliases": [],
+      "help": "남은 약실에 따라 위험도가 올라가는 생존 룰렛입니다.",
+      "file": "apocalypse_bot/commands/v37_gambling_experience.py",
+      "line": 440
+    },
+    {
+      "name": "룰렛",
+      "aliases": [],
+      "help": "1/6부터 위험도가 증가하는 기존 생존 룰렛을 실행합니다.",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1339
+    },
+    {
+      "name": "리그기록",
+      "aliases": [
+        "leaguerecord"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1794
+    },
+    {
+      "name": "리그참가",
+      "aliases": [
+        "joinleague"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1787
+    },
+    {
+      "name": "말해",
+      "aliases": [
+        "읽어",
+        "say"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1425
+    },
+    {
+      "name": "맞고",
+      "aliases": [
+        "matgo",
+        "koreanmatgo"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1010_companion_card_games.py",
+      "line": 1004
+    },
+    {
+      "name": "매도",
+      "aliases": [
+        "코인판매"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v36_gambling_market.py",
+      "line": 859
+    },
+    {
+      "name": "매도",
+      "aliases": [],
+      "help": "인수를 생략하면 드롭다운에서 보유 코인을 판매합니다.",
+      "file": "apocalypse_bot/commands/v36_gambling_market.py",
+      "line": 900
+    },
+    {
+      "name": "매수",
+      "aliases": [
+        "투자"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v36_gambling_market.py",
+      "line": 855
+    },
+    {
+      "name": "매수",
+      "aliases": [],
+      "help": "식량으로 암시장 종목을 구매합니다.",
+      "file": "apocalypse_bot/commands/v36_gambling_market.py",
+      "line": 896
+    },
+    {
+      "name": "멤버정보",
+      "aliases": [
+        "운영유저정보"
+      ],
+      "help": "멤버의 계정, 역할, 경고, 타임아웃 정보를 확인합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 1020
+    },
+    {
+      "name": "명령어검수",
+      "aliases": [
+        "commandaudit",
+        "commandaliasaudit"
+      ],
+      "help": "전체 prefix 명령의 한글·영문 실행 이름과 충돌을 검사합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1586
+    },
+    {
+      "name": "명예의전당",
+      "aliases": [
+        "halloffame"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1768
+    },
+    {
+      "name": "목록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v430_story_expedition.py",
+      "line": 1076
+    },
+    {
+      "name": "목록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v602_channel_rules.py",
+      "line": 1907
+    },
+    {
+      "name": "목록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v620_dialogue_memory.py",
+      "line": 1204
+    },
+    {
+      "name": "목소리",
+      "aliases": [
+        "음성"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1538
+    },
+    {
+      "name": "목소리",
+      "aliases": [],
+      "help": "내 TTS 목소리를 드롭다운에서 선택합니다.",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1770
+    },
+    {
+      "name": "몬스터",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v32_codex_settings_tutorial.py",
+      "line": 149
+    },
+    {
+      "name": "무기개조",
+      "aliases": [
+        "개조"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v637_dynamic_events.py",
+      "line": 657
+    },
+    {
+      "name": "무기수리",
+      "aliases": [
+        "수리"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v637_dynamic_events.py",
+      "line": 575
+    },
+    {
+      "name": "무료시즌",
+      "aliases": [
+        "freeseason",
+        "seasonfree"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1517
+    },
+    {
+      "name": "무료시즌보상",
+      "aliases": [
+        "freeseasonrewards",
+        "seasonrewards"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1529
+    },
+    {
+      "name": "무역로",
+      "aliases": [
+        "지역무역로",
+        "교역로"
+      ],
+      "help": "개방된 지역 무역로와 오늘의 수요를 확인합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 828
+    },
+    {
+      "name": "무전",
+      "aliases": [
+        "무전해독",
+        "구조신호",
+        "sos",
+        "SOS"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v637_dynamic_events.py",
+      "line": 532
+    },
+    {
+      "name": "문의닫기",
+      "aliases": [],
+      "help": "현재 아바돈 문의 채널을 종료합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1687
+    },
+    {
+      "name": "문의제거",
+      "aliases": [],
+      "help": "현재 문의 채널에서 멤버를 제거합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1723
+    },
+    {
+      "name": "문의추가",
+      "aliases": [],
+      "help": "현재 문의 채널에 다른 멤버를 추가합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1699
+    },
+    {
+      "name": "문의패널",
+      "aliases": [],
+      "help": "버튼으로 문의 채널을 만드는 패널을 설치합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1672
+    },
+    {
+      "name": "미니게임",
+      "aliases": [
+        "게임목록",
+        "미니게임목록"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v640_interactive_arcade.py",
+      "line": 803
+    },
+    {
+      "name": "미리듣기",
+      "aliases": [],
+      "help": "선택한 목소리를 지정 음성 채널에서 시험 재생합니다.",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1814
+    },
+    {
+      "name": "미리보기",
+      "aliases": [
+        "preview",
+        "확인"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v403_server_builder.py",
+      "line": 475
+    },
+    {
+      "name": "미리보기",
+      "aliases": [
+        "preview"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2224
+    },
+    {
+      "name": "미션",
+      "aliases": [],
+      "help": "오늘의 카지노 미션을 확인합니다.",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1018
+    },
+    {
+      "name": "미션보상",
+      "aliases": [],
+      "help": "완료한 카지노 미션 보상을 수령합니다. 0은 전부 수령",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1022
+    },
+    {
+      "name": "미션보상",
+      "aliases": [
+        "성장보상",
+        "루프보상"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v710_growth_loop.py",
+      "line": 615
+    },
+    {
+      "name": "미수령보상",
+      "aliases": [
+        "unclaimedrewards",
+        "rewardqueue"
+      ],
+      "help": "현재 감지 가능한 미수령 공동 콘텐츠 보상을 점검합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1512
+    },
+    {
+      "name": "민화투",
+      "aliases": [
+        "minhwatu"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1447
+    },
+    {
+      "name": "밀수품납품",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 846
+    },
+    {
+      "name": "밀수품상태",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 834
+    },
+    {
+      "name": "밀수품습격",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 865
+    },
+    {
+      "name": "밀수품운반",
+      "aliases": [
+        "밀수작전"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 805
+    },
+    {
+      "name": "바둑이",
+      "aliases": [
+        "badugi"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1151
+    },
+    {
+      "name": "바카라",
+      "aliases": [],
+      "help": "플레이어·뱅커·타이 중 하나에 배팅합니다.",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1326
+    },
+    {
+      "name": "바카라",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1393
+    },
+    {
+      "name": "반응속도",
+      "aliases": [
+        "순발력",
+        "반응게임"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v640_interactive_arcade.py",
+      "line": 757
+    },
+    {
+      "name": "받기",
+      "aliases": [
+        "우편받기"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 612
+    },
+    {
+      "name": "백업",
+      "aliases": [
+        "수동백업",
+        "backup"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2340
+    },
+    {
+      "name": "백업검증",
+      "aliases": [
+        "데이터검증",
+        "backupcheck"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v702_stability.py",
+      "line": 329
+    },
+    {
+      "name": "백업목록",
+      "aliases": [
+        "backups",
+        "복구목록"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2356
+    },
+    {
+      "name": "백업목록",
+      "aliases": [
+        "데이터백업목록",
+        "backuplist"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v702_stability.py",
+      "line": 290
+    },
+    {
+      "name": "백업생성",
+      "aliases": [
+        "즉시백업",
+        "backupnow"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v702_stability.py",
+      "line": 307
+    },
+    {
+      "name": "밸런스게임",
+      "aliases": [
+        "생존밸런스"
+      ],
+      "help": "두 가지 생존 선택지를 반응으로 투표합니다.",
+      "file": "apocalypse_bot/commands/v620_dialogue_memory.py",
+      "line": 1341
+    },
+    {
+      "name": "번역누락",
+      "aliases": [
+        "missingtranslations",
+        "translationfallbacks"
+      ],
+      "help": "희귀 구버전 문구가 사전 번역 대신 안전 대체된 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1574
+    },
+    {
+      "name": "벙커개설",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 1137
+    },
+    {
+      "name": "벙커상태",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 1187
+    },
+    {
+      "name": "벙커진행",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 1221
+    },
+    {
+      "name": "벙커참가",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 1164
+    },
+    {
+      "name": "벙커투표",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 1200
+    },
+    {
+      "name": "병원",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/conditions.py",
+      "line": 235
+    },
+    {
+      "name": "보급",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v430_story_expedition.py",
+      "line": 1375
+    },
+    {
+      "name": "보급선",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 906
+    },
+    {
+      "name": "보급선수색",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 922
+    },
+    {
+      "name": "보물감정",
+      "aliases": [
+        "보물감정소",
+        "감정소"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v610_digging_treasure.py",
+      "line": 618
+    },
+    {
+      "name": "보물함",
+      "aliases": [
+        "땅파기상태",
+        "굴착상태"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v610_digging_treasure.py",
+      "line": 655
+    },
+    {
+      "name": "보스도감",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v21_reborn.py",
+      "line": 686
+    },
+    {
+      "name": "보안상태",
+      "aliases": [
+        "보안대시보드"
+      ],
+      "help": "분리 로그와 자동 관리 설정을 한 화면에 표시합니다.",
+      "file": "apocalypse_bot/commands/v422_security_center.py",
+      "line": 417
+    },
+    {
+      "name": "보안센터도움말",
+      "aliases": [
+        "보안도움말"
+      ],
+      "help": "V4.2.2 보안센터와 분리 로그 명령어를 확인합니다.",
+      "file": "apocalypse_bot/commands/v422_security_center.py",
+      "line": 249
+    },
+    {
+      "name": "보안초기설정",
+      "aliases": [
+        "로그초기설정"
+      ],
+      "help": "비공개 보안센터와 분리 로그 채널을 자동 생성합니다.",
+      "file": "apocalypse_bot/commands/v422_security_center.py",
+      "line": 285
+    },
+    {
+      "name": "보안테스트",
+      "aliases": [],
+      "help": "분리 로그 채널 4곳에 테스트 메시지를 전송합니다.",
+      "file": "apocalypse_bot/commands/v422_security_center.py",
+      "line": 473
+    },
+    {
+      "name": "보호강화",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v21_reborn.py",
+      "line": 487
+    },
+    {
+      "name": "복구",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v431_growth_balance.py",
+      "line": 611
+    },
+    {
+      "name": "복구",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v431_growth_balance.py",
+      "line": 692
+    },
+    {
+      "name": "복구기여도",
+      "aliases": [
+        "공동복구기여도",
+        "복구랭킹"
+      ],
+      "help": "현재 복구 작전 기여도를 확인합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 767
+    },
+    {
+      "name": "복구납품",
+      "aliases": [
+        "복구지원",
+        "공동복구납품"
+      ],
+      "help": "복구 작전에 필요한 자원을 지원합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 760
+    },
+    {
+      "name": "복구다음",
+      "aliases": [
+        "recovernext",
+        "복구계속"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2816
+    },
+    {
+      "name": "복구미리보기",
+      "aliases": [
+        "백업비교",
+        "restorepreview"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v702_stability.py",
+      "line": 347
+    },
+    {
+      "name": "복구보상",
+      "aliases": [
+        "공동복구보상",
+        "복구수령"
+      ],
+      "help": "완료된 복구 작전의 개인 기여 보상을 받습니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 777
+    },
+    {
+      "name": "복구상태",
+      "aliases": [
+        "recoverstatus"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2935
+    },
+    {
+      "name": "복구작전",
+      "aliases": [
+        "공동복구",
+        "복구현황"
+      ],
+      "help": "서버 공동 복구 작전과 참여 버튼을 확인합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 716
+    },
+    {
+      "name": "복구작전시작",
+      "aliases": [
+        "복구시작",
+        "공동복구시작"
+      ],
+      "help": "관리자가 공동 복구 작전을 시작합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 733
+    },
+    {
+      "name": "복구참여",
+      "aliases": [
+        "복구행동",
+        "공동복구참여"
+      ],
+      "help": "복구 작전에서 정찰·구조·수리·경계 행동을 수행합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 749
+    },
+    {
+      "name": "복구취소",
+      "aliases": [
+        "recovercancel"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2958
+    },
+    {
+      "name": "복귀보급",
+      "aliases": [
+        "신규보급",
+        "따라잡기보급"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v710_growth_loop.py",
+      "line": 813
+    },
+    {
+      "name": "복귀안내",
+      "aliases": [
+        "returningguide",
+        "returnguide"
+      ],
+      "help": "마지막 확인 버전 이후 추가된 주요 기능을 안내합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1215
+    },
+    {
+      "name": "볼륨",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1633
+    },
+    {
+      "name": "봇권한",
+      "aliases": [
+        "권한점검"
+      ],
+      "help": "현재 서버와 채널에서 아바돈이 가진 권한을 점검합니다.",
+      "file": "apocalypse_bot/commands/v420_ops_center.py",
+      "line": 221
+    },
+    {
+      "name": "봇소개",
+      "aliases": [
+        "아바돈소개",
+        "봇정보"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v641_stabilization.py",
+      "line": 309
+    },
+    {
+      "name": "부채",
+      "aliases": [
+        "debt"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1806
+    },
+    {
+      "name": "분대방방장",
+      "aliases": [
+        "분대방위임",
+        "임시방방장"
+      ],
+      "help": "임시 분대방 방장을 다른 사용자에게 넘깁니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 1104
+    },
+    {
+      "name": "분대방이름",
+      "aliases": [
+        "임시방이름"
+      ],
+      "help": "자신이 만든 임시 분대 음성방의 이름을 변경합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 1047
+    },
+    {
+      "name": "분대방인원",
+      "aliases": [
+        "임시방인원"
+      ],
+      "help": "임시 분대방 최대 인원을 설정합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 1092
+    },
+    {
+      "name": "분대방잠금",
+      "aliases": [
+        "임시방잠금"
+      ],
+      "help": "임시 분대방의 공개 입장을 켜거나 끕니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 1062
+    },
+    {
+      "name": "분대방초대",
+      "aliases": [
+        "임시방초대"
+      ],
+      "help": "잠긴 임시 분대방에 사용자를 초대합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 1076
+    },
+    {
+      "name": "분대역할",
+      "aliases": [
+        "파티역할",
+        "전술역할"
+      ],
+      "help": "자신의 분대 역할을 선봉·의무·기술·정찰 중 선택합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 998
+    },
+    {
+      "name": "분대음성설정",
+      "aliases": [
+        "임시음성설정",
+        "분대방설정"
+      ],
+      "help": "임시 분대 음성방 생성 로비를 설치합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 1021
+    },
+    {
+      "name": "분대작전",
+      "aliases": [
+        "파티작전",
+        "전술작전"
+      ],
+      "help": "파티장이 전문화와 역할 편성을 반영한 협동 작전을 수행합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 1033
+    },
+    {
+      "name": "분대작전기록",
+      "aliases": [
+        "파티작전기록",
+        "분대전술기록"
+      ],
+      "help": "현재 파티의 최근 분대 작전 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 1107
+    },
+    {
+      "name": "분대전술",
+      "aliases": [
+        "파티전술",
+        "분대전술상태"
+      ],
+      "help": "현재 파티의 분대 전술과 역할 편성을 확인합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 967
+    },
+    {
+      "name": "분대전술설정",
+      "aliases": [
+        "파티전술설정",
+        "전술설정"
+      ],
+      "help": "파티장이 균형·돌격·방어·구조·정찰 전술을 설정합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 981
+    },
+    {
+      "name": "분대준비",
+      "aliases": [
+        "파티준비",
+        "분대점검"
+      ],
+      "help": "분대 구성·전문화·역할 다양성과 작전 대기시간을 확인합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 1017
+    },
+    {
+      "name": "분해",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v431_growth_balance.py",
+      "line": 528
+    },
+    {
+      "name": "블랙잭",
+      "aliases": [],
+      "help": "히트·스탠드·더블다운 버튼으로 진행하는 블랙잭입니다.",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1306
+    },
+    {
+      "name": "블랙잭",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1373
+    },
+    {
+      "name": "블랙잭토너먼트",
+      "aliases": [
+        "blackjacktournament",
+        "bjtournament"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1455
+    },
+    {
+      "name": "비상모드",
+      "aliases": [],
+      "help": "안티레이드, 높은 인증 수준, 서버 잠금을 한 번에 설정합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 1068
+    },
+    {
+      "name": "비상보급상자",
+      "aliases": [
+        "전리품상자",
+        "프리미엄랜덤박스"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 981
+    },
+    {
+      "name": "비상주파수",
+      "aliases": [
+        "주파수가로채기",
+        "타이밍주파수"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 852
+    },
+    {
+      "name": "비우기",
+      "aliases": [
+        "clear"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1655
+    },
+    {
+      "name": "빈카테고리",
+      "aliases": [
+        "empty"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 3074
+    },
+    {
+      "name": "빈카테고리삭제",
+      "aliases": [
+        "cleanempty"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 3193
+    },
+    {
+      "name": "빈카테고리선택",
+      "aliases": [
+        "emptyselect",
+        "선택삭제"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 3180
+    },
+    {
+      "name": "빌리기",
+      "aliases": [],
+      "help": "은행 심사 없이 고금리 사채를 빌립니다.",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 568
+    },
+    {
+      "name": "빠른답변",
+      "aliases": [],
+      "help": "현재 접수 채널에 등록된 답변 양식을 전송합니다.",
+      "file": "apocalypse_bot/commands/v423_intake_center.py",
+      "line": 982
+    },
+    {
+      "name": "빠른대전",
+      "aliases": [
+        "quickmatch"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1527
+    },
+    {
+      "name": "빠른참가",
+      "aliases": [
+        "quickjoin"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1269
+    },
+    {
+      "name": "사건목록",
+      "aliases": [],
+      "help": "최근 사건 또는 특정 멤버의 사건 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 1003
+    },
+    {
+      "name": "사건조회",
+      "aliases": [],
+      "help": "SERVER GUARD 사건 번호의 상세 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 983
+    },
+    {
+      "name": "사건추리",
+      "aliases": [
+        "사건해결",
+        "solvecase",
+        "deducecase"
+      ],
+      "help": "연결된 증거를 바탕으로 사건의 배후를 지목합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 539
+    },
+    {
+      "name": "사건판",
+      "aliases": [
+        "수사사건현황",
+        "caseboard",
+        "investigationboard"
+      ],
+      "help": "이번 주 폐허 사건과 공동 수사 진행도를 확인합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 462
+    },
+    {
+      "name": "사용",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/conditions.py",
+      "line": 187
+    },
+    {
+      "name": "사채",
+      "aliases": [],
+      "help": "고금리 사금융 차입, 상환과 추심 위험을 관리합니다.",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 564
+    },
+    {
+      "name": "사채기록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 625
+    },
+    {
+      "name": "사채빌리기",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 613
+    },
+    {
+      "name": "사채상환",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 617
+    },
+    {
+      "name": "사채추심",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 621
+    },
+    {
+      "name": "삭제",
+      "aliases": [
+        "delete"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 3287
+    },
+    {
+      "name": "삭제",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v620_dialogue_memory.py",
+      "line": 1305
+    },
+    {
+      "name": "삼봉",
+      "aliases": [
+        "sambong"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1439
+    },
+    {
+      "name": "상점",
+      "aliases": [],
+      "help": "카지노 전용 NPC 상점을 확인합니다.",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1030
+    },
+    {
+      "name": "상태",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/status.py",
+      "line": 112
+    },
+    {
+      "name": "상태",
+      "aliases": [
+        "status"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v403_server_builder.py",
+      "line": 529
+    },
+    {
+      "name": "상태",
+      "aliases": [
+        "status"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1689
+    },
+    {
+      "name": "상태",
+      "aliases": [
+        "status"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 3059
+    },
+    {
+      "name": "상태",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v602_channel_rules.py",
+      "line": 1925
+    },
+    {
+      "name": "상태이상제거",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/admin_tools.py",
+      "line": 327
+    },
+    {
+      "name": "상환",
+      "aliases": [],
+      "help": "은행 대출금을 상환합니다.",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 542
+    },
+    {
+      "name": "상환",
+      "aliases": [],
+      "help": "사채 빚을 상환합니다.",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 572
+    },
+    {
+      "name": "상환",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 597
+    },
+    {
+      "name": "새싹설정",
+      "aliases": [
+        "신입설정"
+      ],
+      "help": "신규 멤버 새싹 역할과 환영 메시지를 설정합니다.",
+      "file": "apocalypse_bot/commands/v711_cute_interactions.py",
+      "line": 1255
+    },
+    {
+      "name": "새싹역할설치",
+      "aliases": [
+        "신입역할설치"
+      ],
+      "help": "신규 멤버용 새싹 역할과 역할 아이콘을 설치합니다.",
+      "file": "apocalypse_bot/commands/v711_cute_interactions.py",
+      "line": 1374
+    },
+    {
+      "name": "새싹정리",
+      "aliases": [
+        "신입정리"
+      ],
+      "help": "유지 기간이 지난 새싹 역할을 즉시 정리합니다.",
+      "file": "apocalypse_bot/commands/v711_cute_interactions.py",
+      "line": 1401
+    },
+    {
+      "name": "생물테러",
+      "aliases": [
+        "바이러스테러"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 1385
+    },
+    {
+      "name": "생물테러수신",
+      "aliases": [
+        "테러수신"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 1369
+    },
+    {
+      "name": "생물테러준비",
+      "aliases": [
+        "바이러스구매"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 1352
+    },
+    {
+      "name": "생성",
+      "aliases": [
+        "create"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 3248
+    },
+    {
+      "name": "생존대시보드",
+      "aliases": [
+        "survivordashboard",
+        "dashboard"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1689
+    },
+    {
+      "name": "생존도감",
+      "aliases": [
+        "survivalcodex",
+        "codex"
+      ],
+      "help": "지역·세력·인카운트·사건·트로피를 통합한 생존 도감을 엽니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1139
+    },
+    {
+      "name": "생존자레이스",
+      "aliases": [
+        "참가레이스",
+        "탈출레이스"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v640_interactive_arcade.py",
+      "line": 787
+    },
+    {
+      "name": "생활숙련도",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v21_reborn.py",
+      "line": 699
+    },
+    {
+      "name": "서버기능",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v32_codex_settings_tutorial.py",
+      "line": 225
+    },
+    {
+      "name": "서버리뉴얼",
+      "aliases": [
+        "서버정리",
+        "서버디자인"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2083
+    },
+    {
+      "name": "서버메뉴",
+      "aliases": [
+        "채널메뉴",
+        "안내패널"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 3241
+    },
+    {
+      "name": "서버브리핑",
+      "aliases": [
+        "세계브리핑",
+        "오늘의서버"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v641_stabilization.py",
+      "line": 364
+    },
+    {
+      "name": "서버설정",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v32_codex_settings_tutorial.py",
+      "line": 179
+    },
+    {
+      "name": "서버세팅",
+      "aliases": [
+        "서버꾸미기"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v403_server_builder.py",
+      "line": 469
+    },
+    {
+      "name": "서버아이콘",
+      "aliases": [],
+      "help": "현재 서버의 아이콘 원본을 표시합니다.",
+      "file": "apocalypse_bot/commands/v421_utility_pack.py",
+      "line": 480
+    },
+    {
+      "name": "서버언어",
+      "aliases": [
+        "serverlanguage",
+        "serverlang"
+      ],
+      "help": "공개 공동 패널과 자동 방송의 서버 기본 언어를 설정합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1090
+    },
+    {
+      "name": "서버잠금",
+      "aliases": [],
+      "help": "모든 텍스트 채널의 일반 멤버 전송을 잠급니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 1044
+    },
+    {
+      "name": "서버점검",
+      "aliases": [],
+      "help": "아바돈의 권한, 역할 순서, 관리 설정을 점검합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 1242
+    },
+    {
+      "name": "서버채널",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v32_codex_settings_tutorial.py",
+      "line": 203
+    },
+    {
+      "name": "서버테마",
+      "aliases": [
+        "테마목록"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v641_stabilization.py",
+      "line": 420
+    },
+    {
+      "name": "서버테마미리보기",
+      "aliases": [
+        "테마미리보기"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v641_stabilization.py",
+      "line": 449
+    },
+    {
+      "name": "서버테마설정",
+      "aliases": [
+        "테마설정"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v641_stabilization.py",
+      "line": 466
+    },
+    {
+      "name": "서버통계",
+      "aliases": [],
+      "help": "현재 서버의 운영 및 멤버 통계를 확인합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1745
+    },
+    {
+      "name": "서버해제",
+      "aliases": [],
+      "help": "서버잠금으로 변경한 채널 권한을 원래대로 복원합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 1056
+    },
+    {
+      "name": "선물거래",
+      "aliases": [
+        "감염선물",
+        "레버리지"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 1042
+    },
+    {
+      "name": "선물거래",
+      "aliases": [
+        "감염선물",
+        "레버리지"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v640_interactive_arcade.py",
+      "line": 718
+    },
+    {
+      "name": "선택",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v33_story.py",
+      "line": 443
+    },
+    {
+      "name": "선택",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v430_story_expedition.py",
+      "line": 757
+    },
+    {
+      "name": "선택",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v600_game_center.py",
+      "line": 2614
+    },
+    {
+      "name": "선택",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v730_season_story.py",
+      "line": 597
+    },
+    {
+      "name": "설계도",
+      "aliases": [
+        "생활설계도",
+        "연구설계도"
+      ],
+      "help": "해금한 생활 기술 설계도를 확인합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1822
+    },
+    {
+      "name": "설정",
+      "aliases": [
+        "아바돈설정",
+        "설정센터"
+      ],
+      "help": "서버 주요 설정을 드롭다운에서 관리합니다.",
+      "file": "apocalypse_bot/commands/v521_diagnostics.py",
+      "line": 933
+    },
+    {
+      "name": "섯다",
+      "aliases": [
+        "seotda",
+        "sutda",
+        "seotdagame"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1060_authentic_card_games.py",
+      "line": 1818
+    },
+    {
+      "name": "성장보드",
+      "aliases": [
+        "미션보드",
+        "성장루프",
+        "작전보드"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v710_growth_loop.py",
+      "line": 608
+    },
+    {
+      "name": "세계대시보드",
+      "aliases": [
+        "worlddashboard"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1702
+    },
+    {
+      "name": "세계상태",
+      "aliases": [
+        "세계현황",
+        "연합상태"
+      ],
+      "help": "서버의 공동 세계 지표와 전쟁·시즌 상태를 확인합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 1248
+    },
+    {
+      "name": "세계순환",
+      "aliases": [
+        "세계순환상태",
+        "세계시간"
+      ],
+      "help": "시간에 따른 안전한 세계 지표 순환 상태를 확인합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 653
+    },
+    {
+      "name": "세계순환설정",
+      "aliases": [
+        "세계시간설정",
+        "순환설정"
+      ],
+      "help": "관리자가 세계 순환을 켜거나 일시정지합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 671
+    },
+    {
+      "name": "세계순환즉시",
+      "aliases": [
+        "세계즉시순환",
+        "순환즉시"
+      ],
+      "help": "관리자가 세계 순환 1회를 즉시 모의가 아닌 실제 반영합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 693
+    },
+    {
+      "name": "세계연대기",
+      "aliases": [
+        "시즌5기록",
+        "연합연대기"
+      ],
+      "help": "세력·호송·전쟁·시즌 선택 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 1347
+    },
+    {
+      "name": "세계지도",
+      "aliases": [
+        "탐험지도",
+        "개척지도"
+      ],
+      "help": "서버 공동 지역 개척 진행도를 확인합니다.",
+      "file": "apocalypse_bot/commands/v810_world_map_ux.py",
+      "line": 612
+    },
+    {
+      "name": "세계지령",
+      "aliases": [
+        "공동지령",
+        "주간지령"
+      ],
+      "help": "이번 주 서버 공동 목표와 투표 현황을 확인합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 822
+    },
+    {
+      "name": "세력",
+      "aliases": [
+        "세력목록",
+        "연합세력"
+      ],
+      "help": "NPC 세력 관계와 해금 혜택을 확인합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 647
+    },
+    {
+      "name": "세력거점",
+      "aliases": [
+        "진영거점",
+        "거점방문"
+      ],
+      "help": "세력 거점의 교류 기능을 확인합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 687
+    },
+    {
+      "name": "세력교환",
+      "aliases": [
+        "진영교환",
+        "세력구매"
+      ],
+      "help": "세력 증표로 보급품 또는 칭호를 교환합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 793
+    },
+    {
+      "name": "세력상점",
+      "aliases": [
+        "진영상점",
+        "세력교환소"
+      ],
+      "help": "세력 증표 교환 목록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 776
+    },
+    {
+      "name": "세력의뢰",
+      "aliases": [
+        "진영의뢰",
+        "세력임무"
+      ],
+      "help": "오늘의 세력 의뢰를 확인합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 706
+    },
+    {
+      "name": "세력의뢰수락",
+      "aliases": [
+        "진영의뢰수락",
+        "세력임무수락"
+      ],
+      "help": "오늘의 세력 의뢰를 수락합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 724
+    },
+    {
+      "name": "세력의뢰완료",
+      "aliases": [
+        "진영의뢰완료",
+        "세력임무완료"
+      ],
+      "help": "수락한 세력 의뢰의 물자를 제출하고 정산합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 744
+    },
+    {
+      "name": "세력전쟁",
+      "aliases": [
+        "연합전쟁",
+        "세력전선"
+      ],
+      "help": "현재 서버 공동 세력전쟁을 확인합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 1079
+    },
+    {
+      "name": "세력정보",
+      "aliases": [
+        "진영정보",
+        "세력상세"
+      ],
+      "help": "선택한 NPC 세력의 상세 정보를 확인합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 667
+    },
+    {
+      "name": "세븐카드스터드",
+      "aliases": [
+        "세븐포커",
+        "sevencardstud",
+        "studpoker"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1010_companion_card_games.py",
+      "line": 1000
+    },
+    {
+      "name": "세트효과",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v21_reborn.py",
+      "line": 583
+    },
+    {
+      "name": "셀프역할목록",
+      "aliases": [],
+      "help": "현재 등록된 셀프 역할 항목을 확인합니다.",
+      "file": "apocalypse_bot/commands/v421_utility_pack.py",
+      "line": 239
+    },
+    {
+      "name": "셀프역할삭제",
+      "aliases": [],
+      "help": "등록된 셀프 역할 항목을 이모지로 삭제합니다.",
+      "file": "apocalypse_bot/commands/v421_utility_pack.py",
+      "line": 224
+    },
+    {
+      "name": "셀프역할추가",
+      "aliases": [],
+      "help": "셀프 역할 패널에 사용할 이모지와 역할을 등록합니다.",
+      "file": "apocalypse_bot/commands/v421_utility_pack.py",
+      "line": 181
+    },
+    {
+      "name": "셀프역할패널",
+      "aliases": [],
+      "help": "현재 채널에 반응형 셀프 역할 패널을 만듭니다.",
+      "file": "apocalypse_bot/commands/v421_utility_pack.py",
+      "line": 255
+    },
+    {
+      "name": "셀프역할패널목록",
+      "aliases": [],
+      "help": "저장된 셀프 역할 패널의 채널과 메시지 ID를 확인합니다.",
+      "file": "apocalypse_bot/commands/v421_utility_pack.py",
+      "line": 332
+    },
+    {
+      "name": "셀프역할패널삭제",
+      "aliases": [],
+      "help": "메시지 ID로 셀프 역할 패널 등록과 메시지를 삭제합니다.",
+      "file": "apocalypse_bot/commands/v421_utility_pack.py",
+      "line": 353
+    },
+    {
+      "name": "소프트밴",
+      "aliases": [],
+      "help": "메시지를 정리한 뒤 즉시 차단 해제합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 922
+    },
+    {
+      "name": "속도",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1620
+    },
+    {
+      "name": "숏덱홀덤",
+      "aliases": [
+        "숏덱",
+        "shortdeckholdem",
+        "shortdeck"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1149
+    },
+    {
+      "name": "수사레이드",
+      "aliases": [
+        "협동수사",
+        "investigationraid",
+        "caseraid"
+      ],
+      "help": "현재 협동 수사 레이드 모집·진행·완료 상태를 확인합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 881
+    },
+    {
+      "name": "수사레이드기록",
+      "aliases": [
+        "수사대기록",
+        "investigationraidhistory",
+        "caseraidhistory"
+      ],
+      "help": "현재 서버의 최근 협동 수사 레이드 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 1026
+    },
+    {
+      "name": "수사레이드모집",
+      "aliases": [
+        "수사대모집",
+        "openinvestigationraid",
+        "openraidcase"
+      ],
+      "help": "협동 수사 레이드 모집을 시작합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 893
+    },
+    {
+      "name": "수사레이드보상",
+      "aliases": [
+        "수사대보상",
+        "claiminvestigationraid",
+        "claimcaseraid"
+      ],
+      "help": "정산된 협동 수사 레이드의 개인 기여 보상을 받습니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 994
+    },
+    {
+      "name": "수사레이드정산",
+      "aliases": [
+        "수사대정산",
+        "settleinvestigationraid",
+        "settlecaseraid"
+      ],
+      "help": "완료된 협동 수사 레이드를 한 번만 정산합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 971
+    },
+    {
+      "name": "수사레이드참가",
+      "aliases": [
+        "수사대참가",
+        "joininvestigationraid",
+        "joincaseraid"
+      ],
+      "help": "현장수사·기술분석·현장경계·교섭 역할로 참가합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 910
+    },
+    {
+      "name": "수사레이드출발",
+      "aliases": [
+        "수사대출발",
+        "startinvestigationraid",
+        "startcaseraid"
+      ],
+      "help": "모집자가 2명 이상의 수사 레이드를 출발시킵니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 932
+    },
+    {
+      "name": "수사레이드행동",
+      "aliases": [
+        "수사대행동",
+        "investigationaction",
+        "raidinvestigate"
+      ],
+      "help": "수색·분석·확보·교차검증 행동으로 공동 진행도를 올립니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 953
+    },
+    {
+      "name": "수집",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v431_growth_balance.py",
+      "line": 657
+    },
+    {
+      "name": "스태미나설정",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/admin_tools.py",
+      "line": 303
+    },
+    {
+      "name": "스토리",
+      "aliases": [
+        "이야기"
+      ],
+      "help": "검은 주파수 스토리를 진행하고 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v33_story.py",
+      "line": 408
+    },
+    {
+      "name": "슬로우",
+      "aliases": [],
+      "help": "현재 채널의 느린 모드 시간을 설정합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1229
+    },
+    {
+      "name": "슬롯",
+      "aliases": [],
+      "help": "세 개의 릴을 돌리는 폐허 슬롯머신입니다.",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1316
+    },
+    {
+      "name": "슬롯",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1383
+    },
+    {
+      "name": "시세",
+      "aliases": [
+        "암시장시세"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v36_gambling_market.py",
+      "line": 851
+    },
+    {
+      "name": "시스템점검",
+      "aliases": [
+        "운영점검",
+        "systemcheck"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v702_stability.py",
+      "line": 195
+    },
+    {
+      "name": "시작",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v33_story.py",
+      "line": 419
+    },
+    {
+      "name": "시작",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v430_story_expedition.py",
+      "line": 731
+    },
+    {
+      "name": "시작",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v600_game_center.py",
+      "line": 2585
+    },
+    {
+      "name": "시작",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v730_season_story.py",
+      "line": 576
+    },
+    {
+      "name": "시작안내",
+      "aliases": [
+        "gettingstarted",
+        "startguide"
+      ],
+      "help": "신규 생존자의 첫 플레이 순서를 안내합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1206
+    },
+    {
+      "name": "시즌2",
+      "aliases": [
+        "백색방주",
+        "후일담"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v430_story_expedition.py",
+      "line": 720
+    },
+    {
+      "name": "시즌3",
+      "aliases": [
+        "종말의왕좌",
+        "왕좌"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v600_game_center.py",
+      "line": 2578
+    },
+    {
+      "name": "시즌4",
+      "aliases": [
+        "황혼의종착역",
+        "황혼선"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v730_season_story.py",
+      "line": 567
+    },
+    {
+      "name": "시즌5",
+      "aliases": [
+        "시즌5스토리",
+        "연합전선스토리"
+      ],
+      "help": "시즌 5 잿빛 연합전선의 현재 장과 선택지를 확인합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 1253
+    },
+    {
+      "name": "시즌5결정",
+      "aliases": [
+        "연합전선결정",
+        "시즌결정"
+      ],
+      "help": "관리자가 현재 장의 투표 결과를 확정합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 1315
+    },
+    {
+      "name": "시즌5투표",
+      "aliases": [
+        "연합전선투표",
+        "시즌투표"
+      ],
+      "help": "현재 시즌 5 장의 선택지에 투표합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 1295
+    },
+    {
+      "name": "시즌대시보드",
+      "aliases": [
+        "seasondashboard"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1718
+    },
+    {
+      "name": "시즌랭킹",
+      "aliases": [],
+      "help": "시즌·전체·오늘 TOP100 순이익 랭킹을 확인합니다.",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1053
+    },
+    {
+      "name": "시즌수집",
+      "aliases": [
+        "seasoncollection"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1543
+    },
+    {
+      "name": "시즌여정",
+      "aliases": [
+        "스토리여정",
+        "시즌현황",
+        "스토리해금"
+      ],
+      "help": "스토리 시즌 1~4 완료·잠금·엔딩 수집 현황을 확인합니다.",
+      "file": "apocalypse_bot/commands/v730_season_story.py",
+      "line": 650
+    },
+    {
+      "name": "시즌유산",
+      "aliases": [
+        "황혼유산",
+        "시즌4보상"
+      ],
+      "help": "시즌 4 엔딩 수집 단계 보상을 확인하고 받습니다.",
+      "file": "apocalypse_bot/commands/v730_season_story.py",
+      "line": 692
+    },
+    {
+      "name": "신규장비",
+      "aliases": [
+        "장비패치"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v431_growth_balance.py",
+      "line": 413
+    },
+    {
+      "name": "신생계정알림",
+      "aliases": [],
+      "help": "설정한 일수보다 새 계정이 가입하면 보안 로그로 알립니다.",
+      "file": "apocalypse_bot/commands/v422_security_center.py",
+      "line": 574
+    },
+    {
+      "name": "신용",
+      "aliases": [],
+      "help": "신용점수와 은행 대출 한도를 확인합니다.",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 550
+    },
+    {
+      "name": "신용",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 605
+    },
+    {
+      "name": "신호해독",
+      "aliases": [
+        "전파해독",
+        "주파수해독"
+      ],
+      "help": "탐색한 신호의 정답 번호를 제출합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1605
+    },
+    {
+      "name": "실시간공지",
+      "aliases": [],
+      "help": "공식 홈페이지 실시간 피드에 공개 공지를 등록합니다.",
+      "file": "apocalypse_bot/commands/v432_forge_live.py",
+      "line": 1136
+    },
+    {
+      "name": "실시간피드",
+      "aliases": [],
+      "help": "홈페이지 공개 이벤트 피드를 켜거나 끕니다.",
+      "file": "apocalypse_bot/commands/v432_forge_live.py",
+      "line": 1120
+    },
+    {
+      "name": "실시간피드상태",
+      "aliases": [],
+      "help": "Background Worker와 홈페이지 실시간 피드 릴레이 상태를 확인합니다.",
+      "file": "apocalypse_bot/commands/v432_forge_live.py",
+      "line": 1088
+    },
+    {
+      "name": "실시간피드테스트",
+      "aliases": [],
+      "help": "별도 Web Service로 테스트 이벤트와 상태 심박을 직접 전송합니다.",
+      "file": "apocalypse_bot/commands/v432_forge_live.py",
+      "line": 1154
+    },
+    {
+      "name": "실행",
+      "aliases": [
+        "start",
+        "적용"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v403_server_builder.py",
+      "line": 566
+    },
+    {
+      "name": "심층던전",
+      "aliases": [
+        "층던전"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v21_reborn.py",
+      "line": 591
+    },
+    {
+      "name": "아바돈",
+      "aliases": [
+        "말걸기"
+      ],
+      "help": "모달 없이 아바돈과 연속 대화를 시작하거나 바로 질문합니다.",
+      "file": "apocalypse_bot/commands/v620_dialogue_memory.py",
+      "line": 1150
+    },
+    {
+      "name": "아바돈게임",
+      "aliases": [
+        "봇대전",
+        "혼자게임",
+        "AI게임"
+      ],
+      "help": "혼자서 아바돈과 1:1 미니게임을 즐깁니다.",
+      "file": "apocalypse_bot/commands/v720_coop_cleanup.py",
+      "line": 712
+    },
+    {
+      "name": "아바돈난이도",
+      "aliases": [
+        "abaddondifficulty"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1596
+    },
+    {
+      "name": "아바돈내기",
+      "aliases": [
+        "AI내기",
+        "봇내기"
+      ],
+      "help": "아바돈과 게임 내 칩 또는 식량을 걸고 1:1 대결합니다.",
+      "file": "apocalypse_bot/commands/v720_coop_cleanup.py",
+      "line": 768
+    },
+    {
+      "name": "아바돈성향",
+      "aliases": [
+        "abaddonpersonality"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1612
+    },
+    {
+      "name": "아바돈전적",
+      "aliases": [
+        "봇전적",
+        "AI전적"
+      ],
+      "help": "아바돈과의 1:1 미니게임 전적을 확인합니다.",
+      "file": "apocalypse_bot/commands/v720_coop_cleanup.py",
+      "line": 772
+    },
+    {
+      "name": "아바돈진단",
+      "aliases": [
+        "진단센터",
+        "통합진단"
+      ],
+      "help": "ABADDON 주요 시스템을 드롭다운으로 통합 진단합니다.",
+      "file": "apocalypse_bot/commands/v521_diagnostics.py",
+      "line": 920
+    },
+    {
+      "name": "아바돈초대",
+      "aliases": [
+        "봇초대",
+        "AI초대"
+      ],
+      "help": "지정한 게임에 아바돈을 초대합니다.",
+      "file": "apocalypse_bot/commands/v720_coop_cleanup.py",
+      "line": 732
+    },
+    {
+      "name": "아바타",
+      "aliases": [],
+      "help": "자신 또는 멘션한 멤버의 프로필 이미지를 표시합니다.",
+      "file": "apocalypse_bot/commands/v421_utility_pack.py",
+      "line": 469
+    },
+    {
+      "name": "아이템검색",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/admin_tools.py",
+      "line": 135
+    },
+    {
+      "name": "아이템도감",
+      "aliases": [
+        "itemcodex"
+      ],
+      "help": "주요 재료·장비·수집품 도감을 확인합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1166
+    },
+    {
+      "name": "아이템목록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/admin_tools.py",
+      "line": 119
+    },
+    {
+      "name": "아이템지급",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/admin_tools.py",
+      "line": 162
+    },
+    {
+      "name": "아이템회수",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/admin_tools.py",
+      "line": 179
+    },
+    {
+      "name": "안정화검수",
+      "aliases": [
+        "731검수",
+        "스토리잠금검수"
+      ],
+      "help": "v7.3.1 스토리 잠금과 운영 안정성을 검사합니다.",
+      "file": "apocalypse_bot/commands/v731_duplicate_stability.py",
+      "line": 218
+    },
+    {
+      "name": "안정화도움말",
+      "aliases": [
+        "안정화명령어"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v641_stabilization.py",
+      "line": 496
+    },
+    {
+      "name": "안정화상태",
+      "aliases": [
+        "안정화",
+        "봇상태점검"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v641_stabilization.py",
+      "line": 294
+    },
+    {
+      "name": "안티레이드",
+      "aliases": [],
+      "help": "가입 폭주 및 신규 계정 격리 기능을 설정합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 825
+    },
+    {
+      "name": "알림상태",
+      "aliases": [],
+      "help": "암시장 자동 알림 채널과 상태를 확인합니다.",
+      "file": "apocalypse_bot/commands/v37_gambling_experience.py",
+      "line": 1042
+    },
+    {
+      "name": "알림설정",
+      "aliases": [],
+      "help": "현재 채널에 암시장 급등락·시장 사건 자동 알림을 설정합니다.",
+      "file": "apocalypse_bot/commands/v37_gambling_experience.py",
+      "line": 1034
+    },
+    {
+      "name": "알림설정",
+      "aliases": [
+        "이벤트알림"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 540
+    },
+    {
+      "name": "알림센터",
+      "aliases": [
+        "통합알림",
+        "알림메뉴"
+      ],
+      "help": "패치·재난·시장·길드 알림을 한 선택창에서 관리합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 870
+    },
+    {
+      "name": "알림해제",
+      "aliases": [],
+      "help": "이 서버의 암시장 자동 알림을 해제합니다.",
+      "file": "apocalypse_bot/commands/v37_gambling_experience.py",
+      "line": 1038
+    },
+    {
+      "name": "알바",
+      "aliases": [
+        "일하기"
+      ],
+      "help": "하루 40회 폐허 알바를 하며 식량과 알바 경험치를 얻습니다.",
+      "file": "apocalypse_bot/commands/v37_gambling_experience.py",
+      "line": 584
+    },
+    {
+      "name": "암시장",
+      "aliases": [
+        "도박시장"
+      ],
+      "help": "실시간 시세를 확인하고 암시장 자산을 거래합니다.",
+      "file": "apocalypse_bot/commands/v36_gambling_market.py",
+      "line": 892
+    },
+    {
+      "name": "암시장기록",
+      "aliases": [
+        "투자기록"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v36_gambling_market.py",
+      "line": 877
+    },
+    {
+      "name": "암시장알림상태",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v37_gambling_experience.py",
+      "line": 1028
+    },
+    {
+      "name": "암시장알림설정",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v37_gambling_experience.py",
+      "line": 1020
+    },
+    {
+      "name": "암시장알림해제",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v37_gambling_experience.py",
+      "line": 1024
+    },
+    {
+      "name": "약품구매",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/conditions.py",
+      "line": 169
+    },
+    {
+      "name": "언어",
+      "aliases": [
+        "language",
+        "lang"
+      ],
+      "help": "개인 게임 화면의 표시 언어를 한국어 또는 영어로 설정합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1073
+    },
+    {
+      "name": "업적",
+      "aliases": [],
+      "help": "BLACK CASINO 100종 이상 업적을 페이지별로 확인합니다.",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1026
+    },
+    {
+      "name": "엔진",
+      "aliases": [
+        "provider"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1586
+    },
+    {
+      "name": "엔진",
+      "aliases": [],
+      "help": "서버 TTS 합성 엔진을 선택합니다.",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1861
+    },
+    {
+      "name": "역할멤버",
+      "aliases": [],
+      "help": "특정 역할을 가진 멤버를 확인합니다.",
+      "file": "apocalypse_bot/commands/v421_utility_pack.py",
+      "line": 449
+    },
+    {
+      "name": "역할복제",
+      "aliases": [],
+      "help": "역할의 이름, 색상, 권한을 복제합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 1221
+    },
+    {
+      "name": "역할정보",
+      "aliases": [],
+      "help": "역할의 서열, 인원, 색상과 핵심 권한을 확인합니다.",
+      "file": "apocalypse_bot/commands/v420_ops_center.py",
+      "line": 327
+    },
+    {
+      "name": "역할지급",
+      "aliases": [],
+      "help": "멤버에게 지정한 역할을 지급합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1338
+    },
+    {
+      "name": "역할회수",
+      "aliases": [],
+      "help": "멤버에게서 지정한 역할을 회수합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1362
+    },
+    {
+      "name": "연구소",
+      "aliases": [
+        "생활연구소",
+        "기술연구"
+      ],
+      "help": "생활 연구 자료와 해금 기술을 확인합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1744
+    },
+    {
+      "name": "연구시작",
+      "aliases": [
+        "기술연구시작",
+        "연구개시"
+      ],
+      "help": "생활 기술 연구를 시작합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1772
+    },
+    {
+      "name": "연구진행",
+      "aliases": [
+        "연구상태",
+        "연구완료"
+      ],
+      "help": "진행 중 연구를 확인하고 완료 처리합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1801
+    },
+    {
+      "name": "연합",
+      "aliases": [
+        "alliance"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1464
+    },
+    {
+      "name": "연합대시보드",
+      "aliases": [
+        "alliancedashboard"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1714
+    },
+    {
+      "name": "연합참가",
+      "aliases": [
+        "joinalliance"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1456
+    },
+    {
+      "name": "연합창설",
+      "aliases": [
+        "createalliance"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1448
+    },
+    {
+      "name": "영혼결투",
+      "aliases": [
+        "영혼의데스매치",
+        "고위험PVP"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 1116
+    },
+    {
+      "name": "예외채널",
+      "aliases": [],
+      "help": "자동 관리가 작동하지 않을 채널을 추가합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1636
+    },
+    {
+      "name": "예외채널해제",
+      "aliases": [],
+      "help": "자동 관리 예외 채널 등록을 해제합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1647
+    },
+    {
+      "name": "오늘의",
+      "aliases": [
+        "오늘의운세",
+        "운세"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v637_dynamic_events.py",
+      "line": 403
+    },
+    {
+      "name": "오늘의세계",
+      "aliases": [
+        "세계오늘",
+        "상황방송"
+      ],
+      "help": "최근 세계 변화와 현재 공동 목표를 요약합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 700
+    },
+    {
+      "name": "오늘의질문",
+      "aliases": [
+        "하루질문"
+      ],
+      "help": "서버 구성원이 답할 수 있는 오늘의 대화 질문을 엽니다.",
+      "file": "apocalypse_bot/commands/v620_dialogue_memory.py",
+      "line": 1335
+    },
+    {
+      "name": "오늘의퀴즈",
+      "aliases": [
+        "일일퀴즈"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/daily_quiz.py",
+      "line": 99
+    },
+    {
+      "name": "오늘할일",
+      "aliases": [
+        "오늘뭐하지",
+        "일일체크"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v641_stabilization.py",
+      "line": 328
+    },
+    {
+      "name": "오류조회",
+      "aliases": [
+        "오류사건조회",
+        "에러조회"
+      ],
+      "help": "명령·UI 오류 사건 번호의 저장된 정보를 조회합니다.",
+      "file": "apocalypse_bot/commands/v810_world_map_ux.py",
+      "line": 941
+    },
+    {
+      "name": "오류현황",
+      "aliases": [
+        "사건현황",
+        "errorstatus"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v702_stability.py",
+      "line": 251
+    },
+    {
+      "name": "오마하홀덤",
+      "aliases": [
+        "오마하",
+        "omahaholdem",
+        "omaha"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1010_companion_card_games.py",
+      "line": 996
+    },
+    {
+      "name": "오염문",
+      "aliases": [
+        "폐허3지선다",
+        "세개의문"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 966
+    },
+    {
+      "name": "올인",
+      "aliases": [],
+      "help": "보유 카지노 칩 전부를 코인플립에 배팅합니다.",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1049
+    },
+    {
+      "name": "올인",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1106
+    },
+    {
+      "name": "옵션재설정",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v21_reborn.py",
+      "line": 559
+    },
+    {
+      "name": "욕설목록",
+      "aliases": [],
+      "help": "등록된 금칙어 목록을 운영진에게만 표시합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1623
+    },
+    {
+      "name": "욕설삭제",
+      "aliases": [],
+      "help": "등록된 금칙어를 삭제합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1610
+    },
+    {
+      "name": "욕설차단",
+      "aliases": [],
+      "help": "관리자가 등록한 금칙어 자동 삭제를 켜거나 끕니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1581
+    },
+    {
+      "name": "욕설추가",
+      "aliases": [],
+      "help": "자동 삭제할 금칙어를 추가합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1593
+    },
+    {
+      "name": "우편발송",
+      "aliases": [
+        "관리자우편"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 564
+    },
+    {
+      "name": "우편함",
+      "aliases": [
+        "메일함"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 588
+    },
+    {
+      "name": "운영강화설정",
+      "aliases": [
+        "관리확장초기설정"
+      ],
+      "help": "자동 이모지 채널과 격리 역할을 자동 준비합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 553
+    },
+    {
+      "name": "운영대시보드",
+      "aliases": [
+        "운영센터"
+      ],
+      "help": "SERVER GUARD 주요 설정과 운영 상태를 한 화면에 표시합니다.",
+      "file": "apocalypse_bot/commands/v420_ops_center.py",
+      "line": 142
+    },
+    {
+      "name": "운영도구도움말",
+      "aliases": [
+        "운영센터도움말"
+      ],
+      "help": "V4.2 운영 보조 명령어를 확인합니다.",
+      "file": "apocalypse_bot/commands/v420_ops_center.py",
+      "line": 112
+    },
+    {
+      "name": "운영도움말",
+      "aliases": [],
+      "help": "서버 운영 및 관리 명령어를 확인합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 685
+    },
+    {
+      "name": "운영메모",
+      "aliases": [],
+      "help": "관리자 로그용 운영 메모를 저장합니다.",
+      "file": "apocalypse_bot/commands/v420_ops_center.py",
+      "line": 444
+    },
+    {
+      "name": "운영메모목록",
+      "aliases": [],
+      "help": "최근 운영 메모를 확인합니다.",
+      "file": "apocalypse_bot/commands/v420_ops_center.py",
+      "line": 483
+    },
+    {
+      "name": "운영메모삭제",
+      "aliases": [],
+      "help": "번호로 운영 메모를 삭제합니다.",
+      "file": "apocalypse_bot/commands/v420_ops_center.py",
+      "line": 505
+    },
+    {
+      "name": "운영분석",
+      "aliases": [
+        "경제분석",
+        "콘텐츠분석"
+      ],
+      "help": "실제 재화 유입·콘텐츠 이용·오류 기록을 확률 노출 없이 집계합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 993
+    },
+    {
+      "name": "운영설정",
+      "aliases": [],
+      "help": "현재 서버 관리 설정을 확인합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 919
+    },
+    {
+      "name": "운영설정내보내기",
+      "aliases": [
+        "운영백업"
+      ],
+      "help": "현재 서버의 SERVER GUARD 설정만 JSON으로 내보냅니다.",
+      "file": "apocalypse_bot/commands/v420_ops_center.py",
+      "line": 259
+    },
+    {
+      "name": "운영진단",
+      "aliases": [
+        "가드진단"
+      ],
+      "help": "SERVER GUARD 명령 등록과 권한 상태를 확인합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 876
+    },
+    {
+      "name": "운영초기설정",
+      "aliases": [
+        "가드초기설정",
+        "운영설정초기화"
+      ],
+      "help": "현재 서버 구조를 감지해 운영 기능을 자동 연결합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 740
+    },
+    {
+      "name": "운영통계",
+      "aliases": [
+        "명령통계",
+        "commandstats"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v702_stability.py",
+      "line": 272
+    },
+    {
+      "name": "운영통합센터",
+      "aliases": [
+        "통합운영센터",
+        "관리허브"
+      ],
+      "help": "문의·점검·통계·알림·재난 진입점을 한 화면에 표시합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 985
+    },
+    {
+      "name": "운영편의도움말",
+      "aliases": [
+        "편의도움말"
+      ],
+      "help": "V4.2.1 셀프 역할과 편의 명령어를 확인합니다.",
+      "file": "apocalypse_bot/commands/v421_utility_pack.py",
+      "line": 148
+    },
+    {
+      "name": "원정",
+      "aliases": [
+        "원정대"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v430_story_expedition.py",
+      "line": 1027
+    },
+    {
+      "name": "원카드",
+      "aliases": [
+        "원카드게임"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v651_card_games.py",
+      "line": 1048
+    },
+    {
+      "name": "월드보스기여도",
+      "aliases": [
+        "내기여도",
+        "월보기여도"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v630_world_boss.py",
+      "line": 1110
+    },
+    {
+      "name": "월드보스도감",
+      "aliases": [
+        "월보도감"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v630_world_boss.py",
+      "line": 1271
+    },
+    {
+      "name": "월드보스목록",
+      "aliases": [
+        "보스목록",
+        "월보목록",
+        "worldbosslist"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v630_world_boss.py",
+      "line": 1104
+    },
+    {
+      "name": "월드보스보상",
+      "aliases": [
+        "보스보상",
+        "월보보상"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v630_world_boss.py",
+      "line": 1179
+    },
+    {
+      "name": "월드보스보상목록",
+      "aliases": [
+        "월보보상목록",
+        "worldbossrewards"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v630_world_boss.py",
+      "line": 1151
+    },
+    {
+      "name": "월드보스이력",
+      "aliases": [
+        "월보이력",
+        "worldbosshistory"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v630_world_boss.py",
+      "line": 1252
+    },
+    {
+      "name": "월드보스주간랭킹",
+      "aliases": [
+        "월보주간랭킹",
+        "주간월보랭킹"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v710_growth_loop.py",
+      "line": 746
+    },
+    {
+      "name": "월드보스주간보상",
+      "aliases": [
+        "월보주간보상"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v710_growth_loop.py",
+      "line": 771
+    },
+    {
+      "name": "월드보스테스트",
+      "aliases": [
+        "월보테스트",
+        "worldbosstest"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v630_world_boss.py",
+      "line": 1291
+    },
+    {
+      "name": "월드보스테스트공격",
+      "aliases": [
+        "월보테스트공격",
+        "worldbosstestattack"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v630_world_boss.py",
+      "line": 1334
+    },
+    {
+      "name": "월드보스테스트상태",
+      "aliases": [
+        "월보테스트상태",
+        "worldbossteststatus"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v630_world_boss.py",
+      "line": 1322
+    },
+    {
+      "name": "월드보스테스트종료",
+      "aliases": [
+        "월보테스트종료",
+        "worldbosstestend"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v630_world_boss.py",
+      "line": 1338
+    },
+    {
+      "name": "위험구역",
+      "aliases": [
+        "돌연변이구역",
+        "오염구역"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v637_dynamic_events.py",
+      "line": 798
+    },
+    {
+      "name": "유물",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v430_story_expedition.py",
+      "line": 1399
+    },
+    {
+      "name": "유물",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v431_growth_balance.py",
+      "line": 442
+    },
+    {
+      "name": "유저정보",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/admin_tools.py",
+      "line": 355
+    },
+    {
+      "name": "육백",
+      "aliases": [
+        "yukbaek",
+        "hwatu600"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1451
+    },
+    {
+      "name": "은행",
+      "aliases": [],
+      "help": "예금, 출금, 은행 대출과 신용을 관리합니다.",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 526
+    },
+    {
+      "name": "은행기록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 609
+    },
+    {
+      "name": "은행이자",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 601
+    },
+    {
+      "name": "음성격리초기화",
+      "aliases": [
+        "음성복구",
+        "voice-reset"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1608
+    },
+    {
+      "name": "음성입장",
+      "aliases": [
+        "보이스입장"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1395
+    },
+    {
+      "name": "음성채널",
+      "aliases": [
+        "보이스채널"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1525
+    },
+    {
+      "name": "음성퇴장",
+      "aliases": [
+        "보이스퇴장"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1412
+    },
+    {
+      "name": "응원",
+      "aliases": [
+        "응원해줘"
+      ],
+      "help": "자신 또는 선택한 멤버에게 짧은 응원 메시지를 전합니다.",
+      "file": "apocalypse_bot/commands/v620_dialogue_memory.py",
+      "line": 1366
+    },
+    {
+      "name": "의뢰게시판",
+      "aliases": [
+        "납품게시판",
+        "계약게시판"
+      ],
+      "help": "오늘의 자원 납품 계약을 확인합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1656
+    },
+    {
+      "name": "의심계정",
+      "aliases": [],
+      "help": "생성된 지 얼마 안 된 계정을 운영 점검용으로 표시합니다.",
+      "file": "apocalypse_bot/commands/v421_utility_pack.py",
+      "line": 419
+    },
+    {
+      "name": "의약품",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/conditions.py",
+      "line": 157
+    },
+    {
+      "name": "이모지규칙목록",
+      "aliases": [],
+      "help": "키워드 자동 반응 규칙을 확인합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 699
+    },
+    {
+      "name": "이모지규칙삭제",
+      "aliases": [],
+      "help": "번호로 키워드 자동 반응 규칙을 삭제합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 687
+    },
+    {
+      "name": "이모지규칙추가",
+      "aliases": [],
+      "help": "키워드가 포함된 메시지에 자동 반응할 이모지를 추가합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 668
+    },
+    {
+      "name": "이모지웹훅",
+      "aliases": [],
+      "help": "웹훅 메시지에도 자동 반응할지 설정합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 794
+    },
+    {
+      "name": "이모지자동설정",
+      "aliases": [],
+      "help": "채널 이름을 보고 적절한 자동 반응 모드를 연결합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 601
+    },
+    {
+      "name": "이모지채널목록",
+      "aliases": [],
+      "help": "자동 반응이 연결된 채널 목록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 651
+    },
+    {
+      "name": "이모지채널삭제",
+      "aliases": [],
+      "help": "채널의 자동 이모지 규칙을 제거합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 635
+    },
+    {
+      "name": "이모지채널추가",
+      "aliases": [],
+      "help": "특정 채널에 자동 반응 프리셋을 연결합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 613
+    },
+    {
+      "name": "이모지첨부반응",
+      "aliases": [],
+      "help": "사진·영상·음성·파일 첨부 스마트 반응을 설정합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 767
+    },
+    {
+      "name": "이모지최대개수",
+      "aliases": [],
+      "help": "메시지 하나에 자동으로 추가할 반응 개수를 설정합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 783
+    },
+    {
+      "name": "이모지프리셋목록",
+      "aliases": [],
+      "help": "기본 및 사용자 자동 반응 프리셋을 확인합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 707
+    },
+    {
+      "name": "이모지프리셋삭제",
+      "aliases": [],
+      "help": "사용자 자동 반응 프리셋을 삭제합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 749
+    },
+    {
+      "name": "이모지프리셋추가",
+      "aliases": [],
+      "help": "사용자 자동 반응 프리셋을 추가하거나 갱신합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 724
+    },
+    {
+      "name": "이미지검수",
+      "aliases": [
+        "imageaudit",
+        "renderaudit",
+        "cardimageaudit"
+      ],
+      "help": "v10.9.4 PNG 글꼴·레이아웃·카드 테이블 연결을 검사합니다.",
+      "file": "apocalypse_bot/commands/v1094_image_table_patch.py",
+      "line": 63
+    },
+    {
+      "name": "이벤트채널설정",
+      "aliases": [
+        "세계이벤트채널"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 529
+    },
+    {
+      "name": "이자",
+      "aliases": [],
+      "help": "오늘까지의 예금·대출·사채 이자를 정산합니다.",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 546
+    },
+    {
+      "name": "인디언포커",
+      "aliases": [
+        "indianpoker"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1155
+    },
+    {
+      "name": "인물기록",
+      "aliases": [
+        "characterrecord",
+        "npcrecord"
+      ],
+      "help": "특정 NPC와 쌓은 관계와 기억을 확인합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1245
+    },
+    {
+      "name": "인물도감",
+      "aliases": [
+        "charactercodex",
+        "npccodex"
+      ],
+      "help": "만날 수 있는 주요 우호 인물과 관계 단계를 확인합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1181
+    },
+    {
+      "name": "인삿말미리보기",
+      "aliases": [
+        "인사말미리보기",
+        "환영미리보기"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1445
+    },
+    {
+      "name": "인삿말상태",
+      "aliases": [
+        "인사말상태"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1471
+    },
+    {
+      "name": "인삿말설정",
+      "aliases": [
+        "인사말설정",
+        "환영안내설정"
+      ],
+      "help": "환영 메시지에 표시할 공지·규칙·가입 채널을 지정합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1409
+    },
+    {
+      "name": "인연",
+      "aliases": [
+        "relationships",
+        "bonds"
+      ],
+      "help": "주요 NPC가 기억하는 개인 관계 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1231
+    },
+    {
+      "name": "인카운트도감",
+      "aliases": [
+        "조우도감",
+        "랜덤이벤트도감"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v631_life_visuals.py",
+      "line": 408
+    },
+    {
+      "name": "인카운트도감",
+      "aliases": [
+        "조우도감",
+        "랜덤이벤트도감"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v632_life_visuals.py",
+      "line": 350
+    },
+    {
+      "name": "일괄상태",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v602_channel_rules.py",
+      "line": 1863
+    },
+    {
+      "name": "일괄설치",
+      "aliases": [
+        "일괄",
+        "대량설치"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v602_channel_rules.py",
+      "line": 1774
+    },
+    {
+      "name": "일괄시작",
+      "aliases": [
+        "일괄재개"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v602_channel_rules.py",
+      "line": 1875
+    },
+    {
+      "name": "일괄중지",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v602_channel_rules.py",
+      "line": 1894
+    },
+    {
+      "name": "임무",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v431_growth_balance.py",
+      "line": 563
+    },
+    {
+      "name": "임무보상",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v431_growth_balance.py",
+      "line": 581
+    },
+    {
+      "name": "입금",
+      "aliases": [],
+      "help": "현금 식량을 은행 예금으로 이동합니다.",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 530
+    },
+    {
+      "name": "입금",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 585
+    },
+    {
+      "name": "입찰",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v21_reborn.py",
+      "line": 767
+    },
+    {
+      "name": "자동",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v602_channel_rules.py",
+      "line": 1762
+    },
+    {
+      "name": "자동관리",
+      "aliases": [],
+      "help": "도배, 멘션 도배 등 자동 관리를 켜거나 끕니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1557
+    },
+    {
+      "name": "자동관리기준",
+      "aliases": [],
+      "help": "도배, 멘션, 누적 횟수와 자동 타임아웃 기준을 설정하거나 확인합니다.",
+      "file": "apocalypse_bot/commands/v422_security_center.py",
+      "line": 513
+    },
+    {
+      "name": "자동관리모드",
+      "aliases": [],
+      "help": "자동관리 적발 시 알림만/삭제/타임아웃 처리 중 하나를 선택합니다.",
+      "file": "apocalypse_bot/commands/v422_security_center.py",
+      "line": 493
+    },
+    {
+      "name": "자동반응",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v620_dialogue_memory.py",
+      "line": 1319
+    },
+    {
+      "name": "자동상태",
+      "aliases": [
+        "autostatus"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2752
+    },
+    {
+      "name": "자동시작",
+      "aliases": [
+        "autostart",
+        "자동진행"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2692
+    },
+    {
+      "name": "자동역할",
+      "aliases": [],
+      "help": "신규 멤버에게 자동 지급할 역할을 지정합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1495
+    },
+    {
+      "name": "자동역할해제",
+      "aliases": [],
+      "help": "신규 멤버 자동 역할을 해제합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1520
+    },
+    {
+      "name": "자동이모지",
+      "aliases": [],
+      "help": "자동 이모지 반응 기능을 켜거나 끕니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 581
+    },
+    {
+      "name": "자동중지",
+      "aliases": [
+        "autostop",
+        "자동일시정지"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2736
+    },
+    {
+      "name": "자동처벌",
+      "aliases": [],
+      "help": "경고 누적 및 자동 관리 타임아웃을 켜거나 끕니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1660
+    },
+    {
+      "name": "자산",
+      "aliases": [
+        "투자자산"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v36_gambling_market.py",
+      "line": 873
+    },
+    {
+      "name": "자산",
+      "aliases": [],
+      "help": "보유 종목의 평가금과 손익을 확인합니다.",
+      "file": "apocalypse_bot/commands/v36_gambling_market.py",
+      "line": 914
+    },
+    {
+      "name": "자원구매",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v636_world_combat.py",
+      "line": 304
+    },
+    {
+      "name": "자원시장",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v636_world_combat.py",
+      "line": 282
+    },
+    {
+      "name": "자원판매",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v636_world_combat.py",
+      "line": 325
+    },
+    {
+      "name": "작업상태",
+      "aliases": [
+        "progress",
+        "진행상태"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2997
+    },
+    {
+      "name": "잔액",
+      "aliases": [],
+      "help": "카지노 전적, 실시간 칩, 오늘·누적 손익을 확인합니다.",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1353
+    },
+    {
+      "name": "장면",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v431_growth_balance.py",
+      "line": 632
+    },
+    {
+      "name": "장비",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v32_codex_settings_tutorial.py",
+      "line": 131
+    },
+    {
+      "name": "장비",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v431_growth_balance.py",
+      "line": 550
+    },
+    {
+      "name": "장비갈갈이",
+      "aliases": [
+        "장비분쇄"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v639_frontier_operations.py",
+      "line": 1017
+    },
+    {
+      "name": "장비옵션",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v21_reborn.py",
+      "line": 545
+    },
+    {
+      "name": "장비외형",
+      "aliases": [
+        "장비비주얼",
+        "강화외형"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v633_equipment_crafting.py",
+      "line": 455
+    },
+    {
+      "name": "장비프리셋",
+      "aliases": [
+        "레이드프리셋",
+        "프리셋"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v710_growth_loop.py",
+      "line": 676
+    },
+    {
+      "name": "장식목록",
+      "aliases": [
+        "대피소장식",
+        "decorations",
+        "decorationlist"
+      ],
+      "help": "제작 가능한 개인 대피소 장식과 비용을 확인합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 721
+    },
+    {
+      "name": "장식제작",
+      "aliases": [
+        "대피소장식제작",
+        "craftdecoration",
+        "builddecoration"
+      ],
+      "help": "재료를 사용해 개인 대피소 장식을 제작합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 726
+    },
+    {
+      "name": "장착",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v431_growth_balance.py",
+      "line": 467
+    },
+    {
+      "name": "재기임무",
+      "aliases": [
+        "recoverymission"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1826
+    },
+    {
+      "name": "재난기록",
+      "aliases": [
+        "공동재난기록",
+        "비상기록"
+      ],
+      "help": "최근 공동 재난과 기상 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 652
+    },
+    {
+      "name": "재난기여도",
+      "aliases": [
+        "재난랭킹",
+        "공동기여도"
+      ],
+      "help": "현재 또는 최근 재난의 기여도 순위를 확인합니다.",
+      "file": "apocalypse_bot/commands/v780_server_disaster.py",
+      "line": 566
+    },
+    {
+      "name": "재난날씨",
+      "aliases": [
+        "재난기상",
+        "비상날씨"
+      ],
+      "help": "현재 공동 재난에 결합된 환경 상태를 확인합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 640
+    },
+    {
+      "name": "재난납품",
+      "aliases": [
+        "재난지원",
+        "공동납품"
+      ],
+      "help": "현재 재난에 필요한 자원을 납품합니다.",
+      "file": "apocalypse_bot/commands/v780_server_disaster.py",
+      "line": 520
+    },
+    {
+      "name": "재난발생",
+      "aliases": [
+        "재난시작",
+        "공동재난발생"
+      ],
+      "help": "관리자가 공동 재난을 즉시 시작합니다.",
+      "file": "apocalypse_bot/commands/v780_server_disaster.py",
+      "line": 635
+    },
+    {
+      "name": "재난버프",
+      "aliases": [
+        "서버버프",
+        "공동버프"
+      ],
+      "help": "공동 재난 성공으로 활성화된 서버 버프를 확인합니다.",
+      "file": "apocalypse_bot/commands/v780_server_disaster.py",
+      "line": 620
+    },
+    {
+      "name": "재난보상",
+      "aliases": [
+        "공동재난보상",
+        "재난정산보상"
+      ],
+      "help": "성공한 공동 재난의 개인 기여 보상을 받습니다.",
+      "file": "apocalypse_bot/commands/v780_server_disaster.py",
+      "line": 591
+    },
+    {
+      "name": "재난상황",
+      "aliases": [
+        "서버재난",
+        "재난",
+        "공동재난"
+      ],
+      "help": "현재 서버 공동 재난과 진행도를 확인합니다.",
+      "file": "apocalypse_bot/commands/v780_server_disaster.py",
+      "line": 436
+    },
+    {
+      "name": "재난예보",
+      "aliases": [
+        "재난감시",
+        "비상예보"
+      ],
+      "help": "자동 공동 재난의 다음 감시 일정과 설정을 확인합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 624
+    },
+    {
+      "name": "재난임무",
+      "aliases": [
+        "재난대응",
+        "서버재난임무"
+      ],
+      "help": "현재 재난의 대응 역할과 납품 가능 물자를 확인합니다.",
+      "file": "apocalypse_bot/commands/v780_server_disaster.py",
+      "line": 457
+    },
+    {
+      "name": "재난자동",
+      "aliases": [
+        "재난자동설정"
+      ],
+      "help": "관리자가 자동 재난 발생을 켜거나 끕니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 673
+    },
+    {
+      "name": "재난정산",
+      "aliases": [
+        "재난종료",
+        "공동재난정산"
+      ],
+      "help": "관리자가 완료 또는 만료된 공동 재난을 정산합니다.",
+      "file": "apocalypse_bot/commands/v780_server_disaster.py",
+      "line": 655
+    },
+    {
+      "name": "재난참여",
+      "aliases": [
+        "재난행동",
+        "공동대응"
+      ],
+      "help": "정찰·구조·수리·방어 역할로 공동 재난에 참여합니다.",
+      "file": "apocalypse_bot/commands/v780_server_disaster.py",
+      "line": 475
+    },
+    {
+      "name": "재난채널",
+      "aliases": [
+        "재난공지채널"
+      ],
+      "help": "자동 공동 재난을 게시할 채널을 지정합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 692
+    },
+    {
+      "name": "재대결",
+      "aliases": [
+        "rematch"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1535
+    },
+    {
+      "name": "재시작",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v33_story.py",
+      "line": 549
+    },
+    {
+      "name": "재시작",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v430_story_expedition.py",
+      "line": 856
+    },
+    {
+      "name": "재시작",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v600_game_center.py",
+      "line": 2705
+    },
+    {
+      "name": "재시작",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v730_season_story.py",
+      "line": 623
+    },
+    {
+      "name": "잭팟",
+      "aliases": [],
+      "help": "전 서버 누적 잭팟을 확인합니다.",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1014
+    },
+    {
+      "name": "적용",
+      "aliases": [
+        "apply",
+        "계획"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2234
+    },
+    {
+      "name": "전문화",
+      "aliases": [
+        "전문화상태",
+        "내전문화"
+      ],
+      "help": "현재 직업과 선택한 전문화를 확인합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 873
+    },
+    {
+      "name": "전문화목록",
+      "aliases": [
+        "직업전문화목록",
+        "전문화리스트"
+      ],
+      "help": "현재 직업에서 선택 가능한 전문화를 확인합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 888
+    },
+    {
+      "name": "전문화변경",
+      "aliases": [
+        "직업전문화변경",
+        "전문화재선택"
+      ],
+      "help": "식량을 사용해 같은 기본 직업의 전문화를 변경합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 935
+    },
+    {
+      "name": "전문화선택",
+      "aliases": [
+        "직업전문화선택",
+        "전문화획득"
+      ],
+      "help": "레벨 20 이상에서 현재 직업의 전문화를 선택합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 908
+    },
+    {
+      "name": "전문화정보",
+      "aliases": [
+        "직업전문화정보",
+        "전문화상세"
+      ],
+      "help": "특정 전문화의 역할과 연동 콘텐츠를 확인합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 900
+    },
+    {
+      "name": "전선선택",
+      "aliases": [
+        "전쟁전선선택",
+        "집중전선"
+      ],
+      "help": "관리자가 서버 집중 전선을 선택합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 1099
+    },
+    {
+      "name": "전시실",
+      "aliases": [
+        "트로피실",
+        "showcase",
+        "trophyroom"
+      ],
+      "help": "보유 트로피와 현재 전시 중인 수집품을 확인합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 753
+    },
+    {
+      "name": "전쟁기부",
+      "aliases": [
+        "세력전쟁기부",
+        "전선기부"
+      ],
+      "help": "자원을 공동 전쟁에 기부합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 1126
+    },
+    {
+      "name": "전쟁기여도",
+      "aliases": [
+        "세력전쟁기여도",
+        "전선랭킹"
+      ],
+      "help": "현재 세력전쟁 기여 순위를 확인합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 1162
+    },
+    {
+      "name": "전쟁보상",
+      "aliases": [
+        "세력전쟁보상",
+        "전선보상"
+      ],
+      "help": "정산된 세력전쟁의 개인 기여 보상을 수령합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 1194
+    },
+    {
+      "name": "전쟁재개",
+      "aliases": [
+        "새전쟁",
+        "다음전쟁",
+        "세력전쟁재개"
+      ],
+      "help": "관리자가 정산된 전쟁 뒤 다음 적대 세력전을 시작합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 1226
+    },
+    {
+      "name": "전쟁정산",
+      "aliases": [
+        "세력전쟁정산",
+        "전선정산"
+      ],
+      "help": "관리자가 완료된 세력전쟁을 정산합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 1171
+    },
+    {
+      "name": "전쟁참여",
+      "aliases": [
+        "세력전쟁참여",
+        "전선참여"
+      ],
+      "help": "정찰·구조·방어·복구 행동으로 전쟁에 참여합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 1112
+    },
+    {
+      "name": "전체보상수령",
+      "aliases": [
+        "claimallrewards",
+        "claimall"
+      ],
+      "help": "중복 지급 방지 기록을 확인하며 안전한 미수령 보상을 순서대로 수령합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1525
+    },
+    {
+      "name": "전체설치",
+      "aliases": [
+        "서버전체",
+        "가이드전체",
+        "전체가이드"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v602_channel_rules.py",
+      "line": 1794
+    },
+    {
+      "name": "전투",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v31_quiz_notify.py",
+      "line": 293
+    },
+    {
+      "name": "전투",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v33_story.py",
+      "line": 510
+    },
+    {
+      "name": "전투",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v636_world_combat.py",
+      "line": 666
+    },
+    {
+      "name": "전투상태",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v636_world_combat.py",
+      "line": 674
+    },
+    {
+      "name": "전투포기",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v636_world_combat.py",
+      "line": 685
+    },
+    {
+      "name": "전파탐색",
+      "aliases": [
+        "신호탐색",
+        "주파수탐색"
+      ],
+      "help": "해독 가능한 폐허 신호를 탐색합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1571
+    },
+    {
+      "name": "접수담당",
+      "aliases": [],
+      "help": "현재 접수의 담당 운영자를 지정합니다.",
+      "file": "apocalypse_bot/commands/v423_intake_center.py",
+      "line": 817
+    },
+    {
+      "name": "접수담당해제",
+      "aliases": [],
+      "help": "현재 접수의 담당자 배정을 해제합니다.",
+      "file": "apocalypse_bot/commands/v423_intake_center.py",
+      "line": 841
+    },
+    {
+      "name": "접수메모",
+      "aliases": [],
+      "help": "현재 접수에 운영진 전용 처리 메모를 저장합니다.",
+      "file": "apocalypse_bot/commands/v423_intake_center.py",
+      "line": 899
+    },
+    {
+      "name": "접수상태",
+      "aliases": [],
+      "help": "현재 접수의 처리 상태를 변경합니다.",
+      "file": "apocalypse_bot/commands/v423_intake_center.py",
+      "line": 857
+    },
+    {
+      "name": "접수센터도움말",
+      "aliases": [
+        "접수도움말"
+      ],
+      "help": "V4.2.3 문의·신고·건의 처리센터 명령어를 확인합니다.",
+      "file": "apocalypse_bot/commands/v423_intake_center.py",
+      "line": 637
+    },
+    {
+      "name": "접수센터상태",
+      "aliases": [],
+      "help": "접수센터 채널 연결과 처리 통계를 확인합니다.",
+      "file": "apocalypse_bot/commands/v423_intake_center.py",
+      "line": 733
+    },
+    {
+      "name": "접수우선순위",
+      "aliases": [
+        "접수우선도"
+      ],
+      "help": "현재 접수의 우선순위를 변경합니다.",
+      "file": "apocalypse_bot/commands/v423_intake_center.py",
+      "line": 878
+    },
+    {
+      "name": "접수정보",
+      "aliases": [],
+      "help": "현재 접수 채널의 처리 정보를 확인합니다.",
+      "file": "apocalypse_bot/commands/v423_intake_center.py",
+      "line": 802
+    },
+    {
+      "name": "접수종료",
+      "aliases": [],
+      "help": "현재 접수를 기록과 함께 종료합니다.",
+      "file": "apocalypse_bot/commands/v423_intake_center.py",
+      "line": 1031
+    },
+    {
+      "name": "접수초기설정",
+      "aliases": [],
+      "help": "접수 카테고리와 처리 로그를 연결하고 현재 채널에 패널을 설치합니다.",
+      "file": "apocalypse_bot/commands/v423_intake_center.py",
+      "line": 686
+    },
+    {
+      "name": "접수패널",
+      "aliases": [],
+      "help": "현재 채널에 유형별 문의·신고·건의 접수 패널을 설치합니다.",
+      "file": "apocalypse_bot/commands/v423_intake_center.py",
+      "line": 727
+    },
+    {
+      "name": "접수현황",
+      "aliases": [],
+      "help": "열린 접수 대기열을 상태별로 확인합니다.",
+      "file": "apocalypse_bot/commands/v423_intake_center.py",
+      "line": 753
+    },
+    {
+      "name": "정답",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/daily_quiz.py",
+      "line": 116
+    },
+    {
+      "name": "정보리뉴얼현황",
+      "aliases": [
+        "inforenewalstatus"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1728
+    },
+    {
+      "name": "정보패널",
+      "aliases": [
+        "infopanel"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1722
+    },
+    {
+      "name": "제거",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v602_channel_rules.py",
+      "line": 1959
+    },
+    {
+      "name": "제재기록",
+      "aliases": [],
+      "help": "운영진이 전체 또는 특정 멤버의 최근 제재 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v422_security_center.py",
+      "line": 620
+    },
+    {
+      "name": "조커잡기",
+      "aliases": [
+        "조커게임",
+        "도둑잡기"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v651_card_games.py",
+      "line": 1052
+    },
+    {
+      "name": "좀비도감",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/world_exploration.py",
+      "line": 137
+    },
+    {
+      "name": "종합랭킹",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v21_reborn.py",
+      "line": 711
+    },
+    {
+      "name": "주간랭킹",
+      "aliases": [
+        "weeklyranking"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1764
+    },
+    {
+      "name": "주사위카드",
+      "aliases": [
+        "dicecard",
+        "dicecardpoker"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1435
+    },
+    {
+      "name": "주파수",
+      "aliases": [],
+      "help": "세 개의 검은 신호 결과에 식량을 배팅합니다.",
+      "file": "apocalypse_bot/commands/v37_gambling_experience.py",
+      "line": 363
+    },
+    {
+      "name": "주파수",
+      "aliases": [],
+      "help": "세 개의 검은 신호를 맞추는 기존 주파수 슬롯을 실행합니다.",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1344
+    },
+    {
+      "name": "주파수기록",
+      "aliases": [
+        "전파기록",
+        "신호기록"
+      ],
+      "help": "전파 해독 기록과 연구 자료를 확인합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1641
+    },
+    {
+      "name": "중복검수",
+      "aliases": [
+        "기능중복검수",
+        "중복감사"
+      ],
+      "help": "중복 명령·설정·스토리 진행 상태를 삭제 없이 검사합니다.",
+      "file": "apocalypse_bot/commands/v731_duplicate_stability.py",
+      "line": 176
+    },
+    {
+      "name": "중지",
+      "aliases": [
+        "stop",
+        "취소"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2971
+    },
+    {
+      "name": "지도대시보드",
+      "aliases": [
+        "mapdashboard"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1706
+    },
+    {
+      "name": "지령결정",
+      "aliases": [
+        "세계지령결정",
+        "공동지령결정"
+      ],
+      "help": "관리자가 이번 주 세계 지령을 확정합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 856
+    },
+    {
+      "name": "지령투표",
+      "aliases": [
+        "세계지령투표",
+        "공동지령투표"
+      ],
+      "help": "이번 주 세계 지령에 투표합니다.",
+      "file": "apocalypse_bot/commands/v920_world_cycle_professions.py",
+      "line": 845
+    },
+    {
+      "name": "지뢰찾기",
+      "aliases": [
+        "폐허횡단",
+        "마인즈"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 871
+    },
+    {
+      "name": "지식",
+      "aliases": [
+        "기억"
+      ],
+      "help": "서버 승인 기억과 검수 상태를 관리합니다.",
+      "file": "apocalypse_bot/commands/v620_dialogue_memory.py",
+      "line": 1182
+    },
+    {
+      "name": "지식검색",
+      "aliases": [],
+      "help": "승인된 서버 기억을 검색합니다.",
+      "file": "apocalypse_bot/commands/v620_dialogue_memory.py",
+      "line": 1239
+    },
+    {
+      "name": "지식검수",
+      "aliases": [],
+      "help": "운영진이 대기 중인 기억을 드롭다운으로 검수합니다.",
+      "file": "apocalypse_bot/commands/v620_dialogue_memory.py",
+      "line": 1300
+    },
+    {
+      "name": "지역개척정보",
+      "aliases": [
+        "개척지역정보",
+        "지도지역정보"
+      ],
+      "help": "공동 개척 지역의 상세 상태를 확인합니다.",
+      "file": "apocalypse_bot/commands/v810_world_map_ux.py",
+      "line": 619
+    },
+    {
+      "name": "지역경제",
+      "aliases": [
+        "무역경제",
+        "경제동향"
+      ],
+      "help": "지역별 수요와 서버 공동 경제 상태를 확인합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 841
+    },
+    {
+      "name": "지역도감",
+      "aliases": [
+        "regioncodex"
+      ],
+      "help": "서버 공동 탐험 지역과 현재 상태를 확인합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1195
+    },
+    {
+      "name": "지역목록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/world_exploration.py",
+      "line": 85
+    },
+    {
+      "name": "지역보상",
+      "aliases": [
+        "개척보상",
+        "지도보상"
+      ],
+      "help": "격파한 지역 보스의 개인 기여 보상을 받습니다.",
+      "file": "apocalypse_bot/commands/v810_world_map_ux.py",
+      "line": 882
+    },
+    {
+      "name": "지역보스",
+      "aliases": [
+        "개척보스",
+        "지도보스"
+      ],
+      "help": "지역 개척 보스 상태를 확인합니다.",
+      "file": "apocalypse_bot/commands/v810_world_map_ux.py",
+      "line": 801
+    },
+    {
+      "name": "지역보스공격",
+      "aliases": [
+        "개척보스공격",
+        "지도보스공격"
+      ],
+      "help": "활성 지역 보스를 공격합니다.",
+      "file": "apocalypse_bot/commands/v810_world_map_ux.py",
+      "line": 821
+    },
+    {
+      "name": "지역선택",
+      "aliases": [
+        "정찰선택",
+        "개척선택"
+      ],
+      "help": "재접속 후 진행 중인 지역 정찰 선택을 마무리합니다.",
+      "file": "apocalypse_bot/commands/v810_world_map_ux.py",
+      "line": 675
+    },
+    {
+      "name": "지역이동",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/world_exploration.py",
+      "line": 118
+    },
+    {
+      "name": "지역정보",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/world_exploration.py",
+      "line": 98
+    },
+    {
+      "name": "지역정찰",
+      "aliases": [
+        "개척정찰",
+        "지도정찰"
+      ],
+      "help": "지역을 정찰하고 현장 선택지를 엽니다.",
+      "file": "apocalypse_bot/commands/v810_world_map_ux.py",
+      "line": 629
+    },
+    {
+      "name": "지역탐색",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/world_exploration.py",
+      "line": 153
+    },
+    {
+      "name": "직업목록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/jobs.py",
+      "line": 9
+    },
+    {
+      "name": "직업변경",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/jobs.py",
+      "line": 68
+    },
+    {
+      "name": "직업선택",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/jobs.py",
+      "line": 21
+    },
+    {
+      "name": "직업설정",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/admin_tools.py",
+      "line": 225
+    },
+    {
+      "name": "직업정보",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/jobs.py",
+      "line": 46
+    },
+    {
+      "name": "진단",
+      "aliases": [
+        "diagnose",
+        "검사"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1665
+    },
+    {
+      "name": "차단",
+      "aliases": [],
+      "help": "멤버를 서버에서 차단합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1139
+    },
+    {
+      "name": "차단해제",
+      "aliases": [],
+      "help": "유저 ID로 서버 차단을 해제합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1170
+    },
+    {
+      "name": "참전",
+      "aliases": [
+        "침공참가"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v30_invasion.py",
+      "line": 264
+    },
+    {
+      "name": "채널",
+      "aliases": [
+        "채널설정",
+        "자동채널",
+        "setchannel"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1475
+    },
+    {
+      "name": "채널",
+      "aliases": [],
+      "help": "현재 채널을 TTS 채팅 채널로 지정합니다.",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1872
+    },
+    {
+      "name": "채널규칙",
+      "aliases": [
+        "규칙작성",
+        "규칙고정",
+        "채널안내",
+        "채널가이드",
+        "서버가이드"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v602_channel_rules.py",
+      "line": 1733
+    },
+    {
+      "name": "채널복제",
+      "aliases": [],
+      "help": "현재 채널의 권한과 설정을 복제합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 1206
+    },
+    {
+      "name": "채널잠금",
+      "aliases": [],
+      "help": "현재 채널에서 일반 멤버의 메시지 전송을 잠급니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1246
+    },
+    {
+      "name": "채널정보",
+      "aliases": [],
+      "help": "채널 설정과 주요 권한 상태를 확인합니다.",
+      "file": "apocalypse_bot/commands/v420_ops_center.py",
+      "line": 279
+    },
+    {
+      "name": "채널해제",
+      "aliases": [],
+      "help": "현재 채널의 메시지 잠금을 원래 상태로 복원합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1284
+    },
+    {
+      "name": "채무기록",
+      "aliases": [
+        "debthistory"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1810
+    },
+    {
+      "name": "청소",
+      "aliases": [],
+      "help": "현재 채널의 최근 메시지를 일괄 삭제합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1199
+    },
+    {
+      "name": "청소링크",
+      "aliases": [],
+      "help": "최근 링크 포함 메시지만 삭제합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 971
+    },
+    {
+      "name": "청소봇",
+      "aliases": [],
+      "help": "최근 봇 메시지만 삭제합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 965
+    },
+    {
+      "name": "청소유저",
+      "aliases": [],
+      "help": "특정 멤버의 최근 메시지만 삭제합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 959
+    },
+    {
+      "name": "청소첨부",
+      "aliases": [],
+      "help": "최근 첨부 파일 메시지만 삭제합니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 977
+    },
+    {
+      "name": "체력설정",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/admin_tools.py",
+      "line": 293
+    },
+    {
+      "name": "초기화",
+      "aliases": [],
+      "help": "내 개인 목소리 설정을 지우고 서버 기본값을 사용합니다.",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1799
+    },
+    {
+      "name": "초대차단",
+      "aliases": [],
+      "help": "Discord 초대 링크 자동 삭제를 켜거나 끕니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1569
+    },
+    {
+      "name": "초대허용목록",
+      "aliases": [],
+      "help": "Discord 초대 링크 차단에서 제외된 채널을 확인합니다.",
+      "file": "apocalypse_bot/commands/v422_security_center.py",
+      "line": 565
+    },
+    {
+      "name": "초대허용채널",
+      "aliases": [],
+      "help": "Discord 초대 링크 차단에서 제외할 채널을 추가합니다.",
+      "file": "apocalypse_bot/commands/v422_security_center.py",
+      "line": 545
+    },
+    {
+      "name": "초대허용해제",
+      "aliases": [],
+      "help": "Discord 초대 링크 허용 채널에서 제거합니다.",
+      "file": "apocalypse_bot/commands/v422_security_center.py",
+      "line": 555
+    },
+    {
+      "name": "최근가입",
+      "aliases": [],
+      "help": "최근 서버에 들어온 멤버를 가입 순서대로 확인합니다.",
+      "file": "apocalypse_bot/commands/v421_utility_pack.py",
+      "line": 393
+    },
+    {
+      "name": "최근게임",
+      "aliases": [
+        "recentgame"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1584
+    },
+    {
+      "name": "최근오류",
+      "aliases": [
+        "최근사건",
+        "오류목록"
+      ],
+      "help": "최근 명령·UI 오류 사건 번호를 확인합니다.",
+      "file": "apocalypse_bot/commands/v810_world_map_ux.py",
+      "line": 959
+    },
+    {
+      "name": "추방",
+      "aliases": [],
+      "help": "멤버를 서버에서 추방합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1108
+    },
+    {
+      "name": "추심",
+      "aliases": [],
+      "help": "현재 사채 추심 위험과 경고를 확인합니다.",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 576
+    },
+    {
+      "name": "출금",
+      "aliases": [],
+      "help": "은행 예금을 현금 식량으로 출금합니다.",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 534
+    },
+    {
+      "name": "출금",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_finance.py",
+      "line": 589
+    },
+    {
+      "name": "출발",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v430_story_expedition.py",
+      "line": 1094
+    },
+    {
+      "name": "취소",
+      "aliases": [
+        "cancel"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v403_server_builder.py",
+      "line": 550
+    },
+    {
+      "name": "침공",
+      "aliases": [
+        "서버침공",
+        "침공현황"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v30_invasion.py",
+      "line": 234
+    },
+    {
+      "name": "침공공격",
+      "aliases": [
+        "침공전투"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v30_invasion.py",
+      "line": 284
+    },
+    {
+      "name": "침공기록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v30_invasion.py",
+      "line": 356
+    },
+    {
+      "name": "침공랭킹",
+      "aliases": [
+        "침공기여도"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v30_invasion.py",
+      "line": 343
+    },
+    {
+      "name": "침공상점",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v30_invasion.py",
+      "line": 369
+    },
+    {
+      "name": "침공시작",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v30_invasion.py",
+      "line": 405
+    },
+    {
+      "name": "침공종료",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v30_invasion.py",
+      "line": 429
+    },
+    {
+      "name": "침공토큰지급",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v30_invasion.py",
+      "line": 438
+    },
+    {
+      "name": "칭호지급",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/admin_tools.py",
+      "line": 278
+    },
+    {
+      "name": "카드게임",
+      "aliases": [
+        "카드게임메뉴",
+        "카드놀이"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v651_card_games.py",
+      "line": 1031
+    },
+    {
+      "name": "카드게임검수",
+      "aliases": [
+        "cardgameaudit",
+        "cardsaudit"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1010_companion_card_games.py",
+      "line": 1198
+    },
+    {
+      "name": "카드게임룰",
+      "aliases": [
+        "cardrules",
+        "cardgamerules"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1060_authentic_card_games.py",
+      "line": 1821
+    },
+    {
+      "name": "카드대시보드",
+      "aliases": [
+        "carddashboard",
+        "cardcatalog",
+        "cardgamesdashboard",
+        "카드도감"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1091_card_dashboard_hotfix.py",
+      "line": 269
+    },
+    {
+      "name": "카드룸",
+      "aliases": [
+        "cardroom",
+        "cardlobby"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1508
+    },
+    {
+      "name": "카드리그",
+      "aliases": [
+        "cardleague"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1754
+    },
+    {
+      "name": "카드바카라",
+      "aliases": [
+        "바카라방",
+        "baccarattable",
+        "cardbaccarat"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1159
+    },
+    {
+      "name": "카드블랙잭",
+      "aliases": [
+        "블랙잭방",
+        "blackjacktable",
+        "cardblackjack"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1157
+    },
+    {
+      "name": "카지노",
+      "aliases": [
+        "casino"
+      ],
+      "help": "폐허 카지노 로비와 게임 목록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1301
+    },
+    {
+      "name": "카지노VIP",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1067
+    },
+    {
+      "name": "카지노구매",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1091
+    },
+    {
+      "name": "카지노기록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1401
+    },
+    {
+      "name": "카지노도움말",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1409
+    },
+    {
+      "name": "카지노딜러",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1110
+    },
+    {
+      "name": "카지노랭킹",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1405
+    },
+    {
+      "name": "카지노미션",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1075
+    },
+    {
+      "name": "카지노미션보상",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1079
+    },
+    {
+      "name": "카지노상점",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1087
+    },
+    {
+      "name": "카지노시즌랭킹",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1114
+    },
+    {
+      "name": "카지노업적",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1083
+    },
+    {
+      "name": "카지노잔액",
+      "aliases": [
+        "카지노자금"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1397
+    },
+    {
+      "name": "카지노잭팟",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1071
+    },
+    {
+      "name": "카지노칩",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1058
+    },
+    {
+      "name": "카지노환전",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1063
+    },
+    {
+      "name": "켜기",
+      "aliases": [
+        "on"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1491
+    },
+    {
+      "name": "켜기",
+      "aliases": [],
+      "help": "저장된 채널에서 자동 TTS를 켭니다.",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 1893
+    },
+    {
+      "name": "코인",
+      "aliases": [
+        "코인탐색"
+      ],
+      "help": "1분마다 희귀도가 다른 암시장 자산 코인을 탐색합니다. 하루 30회",
+      "file": "apocalypse_bot/commands/v37_gambling_experience.py",
+      "line": 795
+    },
+    {
+      "name": "코인플립",
+      "aliases": [],
+      "help": "앞면 또는 뒷면에 카지노 칩을 배팅합니다.",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1044
+    },
+    {
+      "name": "코인플립",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1101
+    },
+    {
+      "name": "퀴즈랭킹",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/daily_quiz.py",
+      "line": 160
+    },
+    {
+      "name": "퀴즈목록",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/daily_quiz.py",
+      "line": 209
+    },
+    {
+      "name": "퀴즈삭제",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/daily_quiz.py",
+      "line": 197
+    },
+    {
+      "name": "퀴즈알림상태",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v31_quiz_notify.py",
+      "line": 234
+    },
+    {
+      "name": "퀴즈알림설정",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v31_quiz_notify.py",
+      "line": 205
+    },
+    {
+      "name": "퀴즈알림해제",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v31_quiz_notify.py",
+      "line": 225
+    },
+    {
+      "name": "퀴즈추가",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/daily_quiz.py",
+      "line": 183
+    },
+    {
+      "name": "타임아웃",
+      "aliases": [],
+      "help": "멤버를 지정한 기간 동안 타임아웃합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1047
+    },
+    {
+      "name": "타임아웃해제",
+      "aliases": [],
+      "help": "멤버의 타임아웃을 즉시 해제합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1077
+    },
+    {
+      "name": "탐사기록",
+      "aliases": [
+        "expeditionhistory",
+        "globalexpeditionhistory"
+      ],
+      "help": "최근 서버 공동 글로벌 탐사 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1461
+    },
+    {
+      "name": "탐사보상",
+      "aliases": [
+        "claimexpedition",
+        "expeditionreward"
+      ],
+      "help": "정산된 글로벌 탐사 작전의 개인 기여 보상을 받습니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1457
+    },
+    {
+      "name": "탐사작전",
+      "aliases": [
+        "expeditionoperation",
+        "globalexpedition"
+      ],
+      "help": "이번 주 서버 공동 글로벌 탐사 작전을 확인합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1277
+    },
+    {
+      "name": "탐사정산",
+      "aliases": [
+        "settleexpedition",
+        "expeditionsettle"
+      ],
+      "help": "완료된 주간 글로벌 탐사 작전을 한 번만 정산합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1404
+    },
+    {
+      "name": "탐사참가",
+      "aliases": [
+        "joinexpedition",
+        "expeditionjoin"
+      ],
+      "help": "정찰·의무·기술·경계 역할로 주간 탐사에 참가합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1296
+    },
+    {
+      "name": "탐사행동",
+      "aliases": [
+        "expeditionaction",
+        "globalexpeditionaction"
+      ],
+      "help": "신호분석·구조·복구·확보 행동으로 공동 진행도를 올립니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1325
+    },
+    {
+      "name": "탐색",
+      "aliases": [],
+      "help": "왼쪽 또는 오른쪽 폐허 통로에 식량을 배팅합니다.",
+      "file": "apocalypse_bot/commands/v37_gambling_experience.py",
+      "line": 299
+    },
+    {
+      "name": "탐색",
+      "aliases": [],
+      "help": "왼쪽·오른쪽 폐허 통로를 선택하는 기존 방향 도박입니다.",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1349
+    },
+    {
+      "name": "탐험기록",
+      "aliases": [
+        "지도기록",
+        "개척기록"
+      ],
+      "help": "개인 지역 정찰·발견 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v810_world_map_ux.py",
+      "line": 916
+    },
+    {
+      "name": "테마목록",
+      "aliases": [
+        "themes",
+        "테마"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v433_voice_sanctuary.py",
+      "line": 2209
+    },
+    {
+      "name": "테스트",
+      "aliases": [
+        "패치테스트"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v637_dynamic_events.py",
+      "line": 902
+    },
+    {
+      "name": "테이블정보",
+      "aliases": [
+        "tableinfo"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1559
+    },
+    {
+      "name": "텍사스홀덤",
+      "aliases": [
+        "홀덤",
+        "texasholdem",
+        "holdem"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1010_companion_card_games.py",
+      "line": 992
+    },
+    {
+      "name": "토너먼트",
+      "aliases": [
+        "tournament"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1354
+    },
+    {
+      "name": "토너먼트개설",
+      "aliases": [
+        "createtournament"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1325
+    },
+    {
+      "name": "토너먼트결과",
+      "aliases": [
+        "tournamentresult"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1377
+    },
+    {
+      "name": "토너먼트시작",
+      "aliases": [
+        "starttournament"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1365
+    },
+    {
+      "name": "토너먼트참가",
+      "aliases": [
+        "jointournament"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1342
+    },
+    {
+      "name": "퇴장채널",
+      "aliases": [],
+      "help": "멤버 퇴장 메시지 채널을 지정합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1486
+    },
+    {
+      "name": "투표",
+      "aliases": [],
+      "help": "현재 채널에 2~10개 선택지 투표를 만듭니다.",
+      "file": "apocalypse_bot/commands/v411_server_guard_plus.py",
+      "line": 1134
+    },
+    {
+      "name": "투표종료",
+      "aliases": [],
+      "help": "현재 채널의 아바돈 투표 메시지를 집계합니다.",
+      "file": "apocalypse_bot/commands/v420_ops_center.py",
+      "line": 519
+    },
+    {
+      "name": "튜토리얼",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v32_codex_settings_tutorial.py",
+      "line": 240
+    },
+    {
+      "name": "튜토리얼건너뛰기",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v32_codex_settings_tutorial.py",
+      "line": 261
+    },
+    {
+      "name": "트로피전시",
+      "aliases": [
+        "전시등록",
+        "displaytrophy",
+        "showtrophy"
+      ],
+      "help": "보유한 트로피를 개인 대피소 전시실에 올립니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 761
+    },
+    {
+      "name": "파밍",
+      "aliases": [
+        "폐허파밍",
+        "파밍메뉴"
+      ],
+      "help": "지역 선택형 폐허 파밍 메뉴를 엽니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1383
+    },
+    {
+      "name": "파밍기록",
+      "aliases": [
+        "파밍상태",
+        "파밍로그"
+      ],
+      "help": "파밍 기록과 진행 중 인카운트를 확인합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1422
+    },
+    {
+      "name": "파밍선택",
+      "aliases": [
+        "인카운트선택",
+        "현장선택"
+      ],
+      "help": "파밍 인카운트의 행동을 선택합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1418
+    },
+    {
+      "name": "파밍인카운트도감",
+      "aliases": [
+        "폐허인카운트도감",
+        "현장인물도감",
+        "현장접촉기록"
+      ],
+      "help": "발견한 파밍 인카운트와 우호 세력을 확인합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1835
+    },
+    {
+      "name": "파밍지역",
+      "aliases": [
+        "파밍목록",
+        "파밍지역목록"
+      ],
+      "help": "파밍 가능한 지역을 확인합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1410
+    },
+    {
+      "name": "파밍출발",
+      "aliases": [
+        "파밍시작",
+        "폐허수색"
+      ],
+      "help": "선택한 지역으로 파밍을 출발합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1414
+    },
+    {
+      "name": "파산대시보드",
+      "aliases": [
+        "bankruptcydashboard"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1822
+    },
+    {
+      "name": "파산신청",
+      "aliases": [],
+      "help": "식량이 마이너스일 때 1시간마다 빚 탕감을 신청합니다.",
+      "file": "apocalypse_bot/commands/v37_gambling_experience.py",
+      "line": 540
+    },
+    {
+      "name": "파인애플홀덤",
+      "aliases": [
+        "파인애플포커",
+        "pineappleholdem",
+        "pineapple"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1147
+    },
+    {
+      "name": "패치공지게시",
+      "aliases": [
+        "업데이트공지게시"
+      ],
+      "help": "현재 버전 패치노트를 지정 채널에 수동 게시합니다.",
+      "file": "apocalypse_bot/commands/v720_coop_cleanup.py",
+      "line": 837
+    },
+    {
+      "name": "패치공지상태",
+      "aliases": [
+        "업데이트공지상태"
+      ],
+      "help": "패치 자동 공지 설정과 게시 이력을 확인합니다.",
+      "file": "apocalypse_bot/commands/v720_coop_cleanup.py",
+      "line": 822
+    },
+    {
+      "name": "패치노트",
+      "aliases": [
+        "업데이트",
+        "변경내역"
+      ],
+      "help": "아바돈의 최신·이전 업데이트 기록을 드롭다운으로 확인합니다.",
+      "file": "apocalypse_bot/commands/v21_reborn.py",
+      "line": 461
+    },
+    {
+      "name": "패치자동공지",
+      "aliases": [
+        "업데이트자동공지"
+      ],
+      "help": "새 버전 자동 공지를 켜거나 끕니다.",
+      "file": "apocalypse_bot/commands/v720_coop_cleanup.py",
+      "line": 809
+    },
+    {
+      "name": "패치채널",
+      "aliases": [
+        "업데이트채널"
+      ],
+      "help": "패치 자동 공지가 올라갈 채널을 지정합니다.",
+      "file": "apocalypse_bot/commands/v720_coop_cleanup.py",
+      "line": 793
+    },
+    {
+      "name": "펫",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v32_codex_settings_tutorial.py",
+      "line": 140
+    },
+    {
+      "name": "펫설정",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/admin_tools.py",
+      "line": 238
+    },
+    {
+      "name": "평판",
+      "aliases": [
+        "세력평판",
+        "내평판"
+      ],
+      "help": "세력별 평판·증표를 확인합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 653
+    },
+    {
+      "name": "폐기후보",
+      "aliases": [
+        "삭제후보",
+        "정리후보"
+      ],
+      "help": "삭제 전에 관리자 승인이 필요한 중복 후보를 표시합니다.",
+      "file": "apocalypse_bot/commands/v731_duplicate_stability.py",
+      "line": 241
+    },
+    {
+      "name": "폐품감정",
+      "aliases": [
+        "폐품확인",
+        "폐품분석"
+      ],
+      "help": "미감정 폐품 하나를 분석합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1467
+    },
+    {
+      "name": "폐품분해",
+      "aliases": [
+        "폐품해체",
+        "폐품재활용"
+      ],
+      "help": "감정 완료 폐품을 분해해 재료를 회수합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1489
+    },
+    {
+      "name": "폐품수리",
+      "aliases": [
+        "폐품복구",
+        "공방수리"
+      ],
+      "help": "감정 완료 폐품을 자원으로 수리합니다.",
+      "file": "apocalypse_bot/commands/v770_ruin_farming.py",
+      "line": 1523
+    },
+    {
+      "name": "포기",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v430_story_expedition.py",
+      "line": 1358
+    },
+    {
+      "name": "포커",
+      "aliases": [
+        "생존자포커"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v651_card_games.py",
+      "line": 1044
+    },
+    {
+      "name": "핑",
+      "aliases": [
+        "지연시간"
+      ],
+      "help": "아바돈의 Discord 연결 지연시간을 표시합니다.",
+      "file": "apocalypse_bot/commands/v421_utility_pack.py",
+      "line": 524
+    },
+    {
+      "name": "하이라이트상태",
+      "aliases": [
+        "스타보드상태"
+      ],
+      "help": "하이라이트 보드 설정을 확인합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 1174
+    },
+    {
+      "name": "하이라이트설정",
+      "aliases": [
+        "스타보드설정"
+      ],
+      "help": "반응이 모인 메시지를 보관할 하이라이트 채널을 설정합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 1161
+    },
+    {
+      "name": "하이라이트제거",
+      "aliases": [
+        "스타보드제거"
+      ],
+      "help": "관리자가 원본 메시지 ID의 하이라이트를 제거합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 1241
+    },
+    {
+      "name": "하이라이트추가",
+      "aliases": [
+        "스타보드추가"
+      ],
+      "help": "관리자가 현재 채널의 메시지 ID를 하이라이트에 추가합니다.",
+      "file": "apocalypse_bot/commands/v790_operations_disaster.py",
+      "line": 1229
+    },
+    {
+      "name": "하이로우",
+      "aliases": [],
+      "help": "다음 카드의 높낮이를 맞히고 연승 배당을 현금화합니다.",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1311
+    },
+    {
+      "name": "하이로우",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v39_casino.py",
+      "line": 1378
+    },
+    {
+      "name": "하이로우포커",
+      "aliases": [
+        "하이로우카드",
+        "highlowpoker",
+        "hilo"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1153
+    },
+    {
+      "name": "하이에나",
+      "aliases": [
+        "시체파밍",
+        "잔해약탈"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v638_hardcore_arcade.py",
+      "line": 1263
+    },
+    {
+      "name": "한마디",
+      "aliases": [
+        "아바돈한마디"
+      ],
+      "help": "ABADDON 세계관의 짧은 원문 한마디를 표시합니다.",
+      "file": "apocalypse_bot/commands/v620_dialogue_memory.py",
+      "line": 1361
+    },
+    {
+      "name": "할일",
+      "aliases": [
+        "tasks",
+        "missiontracker",
+        "임무추적",
+        "trackmission"
+      ],
+      "help": "현재 진행 중인 콘텐츠와 미수령 보상을 추적합니다.",
+      "file": "apocalypse_bot/commands/v1000_global_survivor.py",
+      "line": 1105
+    },
+    {
+      "name": "해제",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v431_growth_balance.py",
+      "line": 486
+    },
+    {
+      "name": "행동",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/v430_story_expedition.py",
+      "line": 1142
+    },
+    {
+      "name": "현상금",
+      "aliases": [
+        "현상금목록",
+        "bounty",
+        "bounties"
+      ],
+      "help": "이번 주 공동 현상금 표적과 추적 진행도를 확인합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 585
+    },
+    {
+      "name": "현상금기록",
+      "aliases": [
+        "표적기록",
+        "bountyhistory",
+        "hunthistory"
+      ],
+      "help": "개인 현상금 완료 기록을 확인합니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 679
+    },
+    {
+      "name": "현상금보고",
+      "aliases": [
+        "현상금보상",
+        "claimbounty",
+        "bountyreport"
+      ],
+      "help": "완료된 주간 현상금의 개인 기여 보상을 받습니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 641
+    },
+    {
+      "name": "현상금추적",
+      "aliases": [
+        "표적추적",
+        "trackbounty",
+        "huntbounty"
+      ],
+      "help": "추적·잠복·협상·제압 방식으로 주간 현상금 진행도를 올립니다.",
+      "file": "apocalypse_bot/commands/v950_investigation_shelter_raid.py",
+      "line": 594
+    },
+    {
+      "name": "협동보스",
+      "aliases": [
+        "coopboss"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1482
+    },
+    {
+      "name": "협동보스공격",
+      "aliases": [
+        "attackcoopboss"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1486
+    },
+    {
+      "name": "협동보스소환",
+      "aliases": [
+        "summoncoopboss"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1472
+    },
+    {
+      "name": "호송모집",
+      "aliases": [
+        "무역호송모집",
+        "호송대모집"
+      ],
+      "help": "개인 자원을 적재해 서버 호송대를 모집합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 853
+    },
+    {
+      "name": "호송보상",
+      "aliases": [
+        "무역호송보상",
+        "호송대보상"
+      ],
+      "help": "정산된 호송의 개인 보상을 수령합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 989
+    },
+    {
+      "name": "호송상태",
+      "aliases": [
+        "무역호송",
+        "호송대상태"
+      ],
+      "help": "현재 서버 호송대의 진행 상태를 확인합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 931
+    },
+    {
+      "name": "호송정산",
+      "aliases": [
+        "무역호송정산",
+        "호송대정산"
+      ],
+      "help": "도착한 호송 결과를 한 번만 정산합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 950
+    },
+    {
+      "name": "호송참가",
+      "aliases": [
+        "무역호송참가",
+        "호송대참가"
+      ],
+      "help": "진행 중인 호송 모집에 역할을 선택해 참가합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 890
+    },
+    {
+      "name": "호송출발",
+      "aliases": [
+        "무역호송출발",
+        "호송대출발"
+      ],
+      "help": "모집 중인 호송대를 출발시킵니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 912
+    },
+    {
+      "name": "호송취소",
+      "aliases": [
+        "무역호송취소",
+        "호송대취소"
+      ],
+      "help": "출발 전 호송 모집을 취소하고 화물을 반환합니다.",
+      "file": "apocalypse_bot/commands/v900_faction_world_state.py",
+      "line": 1021
+    },
+    {
+      "name": "홈페이지검수",
+      "aliases": [
+        "websiteaudit",
+        "siteaudit"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1010_companion_card_games.py",
+      "line": 1222
+    },
+    {
+      "name": "화투규칙",
+      "aliases": [
+        "hwaturules"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1557
+    },
+    {
+      "name": "화투규칙설정",
+      "aliases": [
+        "sethwaturules"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1050_unified_expansion.py",
+      "line": 1565
+    },
+    {
+      "name": "환영채널",
+      "aliases": [],
+      "help": "신규 멤버 환영 메시지 채널을 지정합니다.",
+      "file": "apocalypse_bot/commands/v410_server_management.py",
+      "line": 1392
+    },
+    {
+      "name": "환영테마",
+      "aliases": [
+        "새싹테마",
+        "신입테마"
+      ],
+      "help": "신규 멤버 환영 패널 테마를 고르고 미리봅니다.",
+      "file": "apocalypse_bot/commands/v711_cute_interactions.py",
+      "line": 1336
+    },
+    {
+      "name": "환전",
+      "aliases": [],
+      "help": "식량과 카지노 칩을 교환합니다.",
+      "file": "apocalypse_bot/commands/v40_black_casino.py",
+      "line": 1006
+    },
+    {
+      "name": "훌라",
+      "aliases": [
+        "hoola",
+        "hula"
+      ],
+      "help": "",
+      "file": "apocalypse_bot/commands/v1090_integrated_renewal.py",
+      "line": 1423
+    },
+    {
+      "name": "휴식",
+      "aliases": [],
+      "help": "",
+      "file": "apocalypse_bot/commands/status.py",
+      "line": 144
+    }
+  ]
+}
