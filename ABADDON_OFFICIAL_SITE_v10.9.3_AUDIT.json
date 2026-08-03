@@ -1,0 +1,396 @@
+{
+  "version": "10.9.3",
+  "date": "2026-08-04",
+  "scope": "full command registry and Discord UI stability hotfix; website/notes synchronization",
+  "limitations": [
+    "No real Discord token/Gateway session was available in the build environment; live button, modal, permission and concurrent-user behavior must be confirmed after deployment."
+  ],
+  "profile_png": {
+    "uses_actual_discord_avatar": true,
+    "source": "ctx.author.display_avatar.read()",
+    "server_profile_preferred": true,
+    "fallback": "username initials only when download/decode fails",
+    "storage": "generated in memory; not permanently stored by the PNG renderer"
+  },
+  "checks": [
+    {
+      "name": "전체 audit pytest",
+      "ok": true,
+      "detail": "..................................                                       [100%]\n34 passed in 0.29s"
+    },
+    {
+      "name": "v10.9.3 집중 UI 검사",
+      "ok": true,
+      "detail": {
+        "version": "10.9.3",
+        "scope": "full command registry/UI safety hotfix only",
+        "checks": [
+          {
+            "name": "Discord 컴포넌트 literal emoji",
+            "ok": true,
+            "detail": []
+          },
+          {
+            "name": "전송 직전 emoji sanitizer",
+            "ok": true,
+            "detail": "global send/edit path"
+          },
+          {
+            "name": "카드게임 옵션 21 수정",
+            "ok": true,
+            "detail": "option index 21"
+          },
+          {
+            "name": "섯다/조커/블랙잭 invalid emoji 수정",
+            "ok": true,
+            "detail": "5 unsafe glyphs removed"
+          },
+          {
+            "name": "TextInput.label 공용 접근 제거",
+            "ok": true,
+            "detail": "TextInput skipped by isinstance"
+          },
+          {
+            "name": "ExpandedBetModal Label 호환",
+            "ok": true,
+            "detail": "no direct property mutation"
+          },
+          {
+            "name": "명령 도감 선응답",
+            "ok": true,
+            "detail": "Unknown interaction mitigation"
+          },
+          {
+            "name": "명령 도감 캐시",
+            "ok": true,
+            "detail": "~1000 commands indexed once"
+          },
+          {
+            "name": "만료 interaction 소음 억제",
+            "ok": true,
+            "detail": "expired token is ignored"
+          },
+          {
+            "name": "Discord 프로필 avatar 합성",
+            "ok": true,
+            "detail": "actual caller avatar"
+          },
+          {
+            "name": "v10.9.3 최종 등록 순서",
+            "ok": true,
+            "detail": "before final English alias sync"
+          },
+          {
+            "name": "최신 테스트/패치노트",
+            "ok": true,
+            "detail": "latest-only v10.9.3"
+          },
+          {
+            "name": "정적 명령 선언 분석",
+            "ok": true,
+            "detail": {
+              "declarations": 918,
+              "duplicate_access_names": 59
+            }
+          },
+          {
+            "name": "Python 전체 컴파일",
+            "ok": true,
+            "detail": {
+              "files": 97,
+              "errors": []
+            }
+          }
+        ],
+        "passed": 14,
+        "failed": 0,
+        "static_declaration_count": 918,
+        "static_duplicate_access_names": 59,
+        "invalid_literal_emojis": []
+      }
+    },
+    {
+      "name": "전체 명령·컴포넌트 제약 검사",
+      "ok": true,
+      "detail": {
+        "version": "10.9.3",
+        "scope": "all Python commands and literal Discord UI constraints",
+        "passed": true,
+        "violations": [],
+        "diagnostics": {
+          "python_files": 97,
+          "command_declarations": 1008,
+          "static_access_names": 1872,
+          "static_duplicate_access_names": 68,
+          "static_duplicate_examples": {
+            "help": [
+              "apocalypse_bot/commands/v30_invasion.py:215",
+              "apocalypse_bot/commands/v652_english_access.py:612"
+            ],
+            "preview": [
+              "apocalypse_bot/commands/v403_server_builder.py:475",
+              "apocalypse_bot/commands/v433_voice_sanctuary.py:2224"
+            ],
+            "pvp": [
+              "apocalypse_bot/core/bot.py:5165",
+              "apocalypse_bot/core/bot.py:5165"
+            ],
+            "sos": [
+              "apocalypse_bot/commands/v637_dynamic_events.py:532",
+              "apocalypse_bot/commands/v637_dynamic_events.py:532"
+            ],
+            "start": [
+              "apocalypse_bot/commands/v31_quiz_notify.py:253",
+              "apocalypse_bot/commands/v403_server_builder.py:566"
+            ],
+            "status": [
+              "apocalypse_bot/commands/v403_server_builder.py:529",
+              "apocalypse_bot/commands/v433_voice_sanctuary.py:1689",
+              "apocalypse_bot/commands/v433_voice_sanctuary.py:3059"
+            ],
+            "감염선물": [
+              "apocalypse_bot/commands/v638_hardcore_arcade.py:1042",
+              "apocalypse_bot/commands/v640_interactive_arcade.py:718"
+            ],
+            "강화": [
+              "apocalypse_bot/commands/v431_growth_balance.py:501",
+              "apocalypse_bot/core/bot.py:2910"
+            ],
+            "갱신": [
+              "apocalypse_bot/commands/v433_voice_sanctuary.py:3268",
+              "apocalypse_bot/commands/v602_channel_rules.py:1944"
+            ],
+            "구매": [
+              "apocalypse_bot/commands/v40_black_casino.py:1034",
+              "apocalypse_bot/core/bot.py:2680",
+              "apocalypse_bot/core/bot.py:3497"
+            ],
+            "기록": [
+              "apocalypse_bot/commands/v33_story.py:528",
+              "apocalypse_bot/commands/v36_gambling_market.py:918",
+              "apocalypse_bot/commands/v39_casino.py:1357",
+              "apocalypse_bot/commands/v40_finance.py:554",
+              "apocalypse_bot/commands/v40_finance.py:580",
+              "apocalypse_bot/commands/v430_story_expedition.py:832",
+              "apocalypse_bot/commands/v430_story_expedition.py:1415",
+              "apocalypse_bot/commands/v600_game_center.py:2686",
+              "apocalypse_bot/commands/v730_season_story.py:606"
+            ],
+            "기본목소리": [
+              "apocalypse_bot/commands/v433_voice_sanctuary.py:1566",
+              "apocalypse_bot/commands/v433_voice_sanctuary.py:1843"
+            ],
+            "끄기": [
+              "apocalypse_bot/commands/v433_voice_sanctuary.py:1514",
+              "apocalypse_bot/commands/v433_voice_sanctuary.py:1908"
+            ],
+            "다이스": [
+              "apocalypse_bot/commands/v39_casino.py:1321",
+              "apocalypse_bot/commands/v39_casino.py:1388"
+            ],
+            "대출": [
+              "apocalypse_bot/commands/v40_finance.py:538",
+              "apocalypse_bot/commands/v40_finance.py:593"
+            ],
+            "도움말": [
+              "apocalypse_bot/commands/v30_invasion.py:215",
+              "apocalypse_bot/commands/v36_gambling_market.py:922",
+              "apocalypse_bot/commands/v39_casino.py:1365",
+              "apocalypse_bot/commands/v430_story_expedition.py:1057"
+            ],
+            "랜덤이벤트도감": [
+              "apocalypse_bot/commands/v631_life_visuals.py:408",
+              "apocalypse_bot/commands/v632_life_visuals.py:350"
+            ],
+            "랭킹": [
+              "apocalypse_bot/commands/v39_casino.py:1361",
+              "apocalypse_bot/commands/v430_story_expedition.py:1426",
+              "apocalypse_bot/core/bot.py:4146"
+            ],
+            "럭키휠": [
+              "apocalypse_bot/commands/v40_black_casino.py:1039",
+              "apocalypse_bot/commands/v40_black_casino.py:1096"
+            ],
+            "레버리지": [
+              "apocalypse_bot/commands/v638_hardcore_arcade.py:1042",
+              "apocalypse_bot/commands/v640_interactive_arcade.py:718"
+            ]
+          },
+          "missing_literal_descriptions": 521,
+          "literal_select_options": 155,
+          "ui_calls": {
+            "Button": 285,
+            "TextInput": 34,
+            "SelectOption": 155,
+            "Select": 6
+          },
+          "required_guards": {
+            "emoji_sanitizer": true,
+            "textinput_skip": true,
+            "catalog_early_ack": true,
+            "catalog_cache": true,
+            "unknown_interaction_guard": true,
+            "actual_discord_avatar": true,
+            "registration_order": true
+          },
+          "syntax_errors": []
+        }
+      }
+    },
+    {
+      "name": "웹 HTML 파싱",
+      "ok": true,
+      "detail": [
+        {
+          "file": "commands.html",
+          "elements": 536,
+          "has_html": true
+        },
+        {
+          "file": "index.html",
+          "elements": 1659,
+          "has_html": true
+        },
+        {
+          "file": "language.html",
+          "elements": 16,
+          "has_html": true
+        },
+        {
+          "file": "updates.html",
+          "elements": 1065,
+          "has_html": true
+        },
+        {
+          "file": "en/commands.html",
+          "elements": 873,
+          "has_html": true
+        },
+        {
+          "file": "en/index.html",
+          "elements": 356,
+          "has_html": true
+        },
+        {
+          "file": "en/updates.html",
+          "elements": 202,
+          "has_html": true
+        }
+      ]
+    },
+    {
+      "name": "웹 내부 링크",
+      "ok": true,
+      "detail": {
+        "missing": [],
+        "html_files": 7
+      }
+    },
+    {
+      "name": "웹 JavaScript 문법",
+      "ok": true,
+      "detail": [
+        {
+          "command": "node --check script.js",
+          "returncode": 0,
+          "stderr": ""
+        },
+        {
+          "command": "node --check config.js",
+          "returncode": 0,
+          "stderr": ""
+        },
+        {
+          "command": "node --check en/script.js",
+          "returncode": 0,
+          "stderr": ""
+        },
+        {
+          "command": "node --check en/config.js",
+          "returncode": 0,
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "name": "웹 JSON 파싱",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "한국어/English 분리",
+      "ok": true,
+      "detail": {
+        "en/index.html": 0,
+        "en/commands.html": 0,
+        "en/updates.html": 0,
+        "en/config.js": 0,
+        "en/script.js": 0
+      }
+    },
+    {
+      "name": "홈페이지 최신 명령 동기화",
+      "ok": true,
+      "detail": {
+        "ko": true,
+        "en": true
+      }
+    },
+    {
+      "name": "홈페이지 버전·ONLINE 유지",
+      "ok": true,
+      "detail": {
+        "version": true,
+        "online": true
+      }
+    },
+    {
+      "name": "실제 Discord 프로필 PNG 안내",
+      "ok": true,
+      "detail": true
+    },
+    {
+      "name": "명령 매니페스트 포함",
+      "ok": true,
+      "detail": true
+    },
+    {
+      "name": "기존 봇 파일 보존",
+      "ok": true,
+      "detail": {
+        "old_files": 612,
+        "missing": []
+      }
+    },
+    {
+      "name": "기존 홈페이지 파일 보존",
+      "ok": true,
+      "detail": {
+        "old_files": 309,
+        "missing": []
+      }
+    }
+  ],
+  "passed": 14,
+  "failed": 0,
+  "site": {
+    "html_parse": true,
+    "internal_links_missing": [],
+    "node_syntax": true,
+    "json_errors": [],
+    "english_hangul_counts": {
+      "en/index.html": 0,
+      "en/commands.html": 0,
+      "en/updates.html": 0,
+      "en/config.js": 0,
+      "en/script.js": 0
+    },
+    "english_separation": true,
+    "ko_latest_commands": true,
+    "en_latest_commands": true,
+    "version_config": true,
+    "online_fallback_preserved": true,
+    "avatar_explanation": true,
+    "manifest_present": true
+  }
+}

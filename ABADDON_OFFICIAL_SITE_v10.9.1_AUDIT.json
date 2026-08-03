@@ -1,0 +1,140 @@
+{
+  "version": "10.9.1",
+  "patch": "Card Dashboard & discord.py UI Log Hotfix",
+  "date_kst": "2026-08-03",
+  "scope": "Only v10.9.1 card catalogue/dashboard, public and ABADDON launch paths, localization deprecation warning, latest audit/patch notes, and website synchronization.",
+  "summary": {
+    "passed": 24,
+    "total": 24,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "Python AST 전체 검사",
+      "status": "PASS",
+      "detail": "91 files, errors=0"
+    },
+    {
+      "name": "집중 자동 테스트",
+      "status": "PASS",
+      "detail": "..................................                                       [100%] | 34 passed in 0.27s"
+    },
+    {
+      "name": "TextInput.label 폐기 접근 차단",
+      "status": "PASS",
+      "detail": "TextInput label skipped; button/select label retained"
+    },
+    {
+      "name": "discord.ui.Label 판돈 모달",
+      "status": "PASS",
+      "detail": "modern Label with compatibility fallback"
+    },
+    {
+      "name": "카드 대시보드 25종",
+      "status": "PASS",
+      "detail": "25 options within Discord limit"
+    },
+    {
+      "name": "일반 방 시작 경로",
+      "status": "PASS",
+      "detail": "dashboard modal -> guarded lobby"
+    },
+    {
+      "name": "ABADDON 시작 경로",
+      "status": "PASS",
+      "detail": "dashboard modal -> ABADDON session"
+    },
+    {
+      "name": "최신 등록 순서",
+      "status": "PASS",
+      "detail": "v10.9.1 before final English alias sync"
+    },
+    {
+      "name": "버전 표기",
+      "status": "PASS",
+      "detail": "10.9.1"
+    },
+    {
+      "name": "명령 매니페스트",
+      "status": "PASS",
+      "detail": "commands=1005"
+    },
+    {
+      "name": "신규 명령/영문 별칭",
+      "status": "PASS",
+      "detail": [
+        "carddashboard",
+        "cardcatalog",
+        "cardgamesdashboard",
+        "카드도감"
+      ]
+    },
+    {
+      "name": "봇 JSON",
+      "status": "PASS",
+      "detail": "54 files, errors=0"
+    },
+    {
+      "name": "홈페이지 JSON",
+      "status": "PASS",
+      "detail": "39 files, errors=0"
+    },
+    {
+      "name": "HTML 파싱",
+      "status": "PASS",
+      "detail": "7 primary pages parsed"
+    },
+    {
+      "name": "홈페이지 내부 링크",
+      "status": "PASS",
+      "detail": "missing=0"
+    },
+    {
+      "name": "JavaScript 문법",
+      "status": "PASS",
+      "detail": "4 files, errors=0"
+    },
+    {
+      "name": "English 페이지 한글 누출",
+      "status": "PASS",
+      "detail": "files=0"
+    },
+    {
+      "name": "한국어 페이지 영문 실행 명령 누출",
+      "status": "PASS",
+      "detail": "commands=0"
+    },
+    {
+      "name": "홈페이지 버전 최신화",
+      "status": "PASS",
+      "detail": "KO/EN primary pages and config at v10.9.1"
+    },
+    {
+      "name": "홈페이지 신규 명령",
+      "status": "PASS",
+      "detail": "KO/EN command pages"
+    },
+    {
+      "name": "기존 봇 파일 삭제",
+      "status": "PASS",
+      "detail": "deleted=0, old=592, new=600"
+    },
+    {
+      "name": "기존 홈페이지 파일 삭제",
+      "status": "PASS",
+      "detail": "deleted=0, old=291, new=297"
+    },
+    {
+      "name": "봇 ZIP 무결성",
+      "status": "PASS",
+      "detail": "ABADDON_BOT_v10.9.1_CARD_DASHBOARD_UI_LOG_HOTFIX_AUDITED_PATCH.zip: files=600, bad_entry=None"
+    },
+    {
+      "name": "홈페이지 ZIP 무결성",
+      "status": "PASS",
+      "detail": "ABADDON_OFFICIAL_SITE_v10.9.1_UPLOAD.zip: files=297, bad_entry=None"
+    }
+  ],
+  "runtime_limitations": "discord.py and a live Discord token were unavailable in the base build environment. The deprecated property path was executed through a faithful fake-component runtime test; Gateway login, live modal submission, permissions and concurrent clicks require the included test-server checklist.",
+  "official_api_basis": "discord.py 2.6+ deprecates TextInput.label in favour of discord.ui.Label."
+}

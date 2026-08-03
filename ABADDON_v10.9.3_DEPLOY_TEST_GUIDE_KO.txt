@@ -1,0 +1,58 @@
+ABADDON v10.9.3 배포·실제 명령 UI 테스트 가이드
+
+1. 배포
+- 기존 데이터 디스크와 환경변수를 유지합니다.
+- ABADDON_BOT_v10.9.3_COMMAND_UI_FULL_AUDIT_HOTFIX.zip을 새 소스로 배포합니다.
+- Render에서는 Clear build cache & deploy를 사용해 이전 v1000_global_survivor.py 캐시가 섞이지 않게 합니다.
+
+2. 부팅 로그
+다음 한 줄이 반드시 있어야 합니다.
+[ABADDON v10.9.3] command_ui_audit=enabled emoji_sanitizer=enabled catalog_fast_ack=enabled profile_avatar=discord
+
+이 로그가 없으면 이전 ZIP 또는 이전 빌드 캐시가 실행 중입니다.
+
+3. 우선 점검
+!테스트 상세
+!UI검수 상세
+!명령어검수 상세
+!패치노트
+
+4. Invalid emoji 재현 명령
+!카드게임
+!카드대시보드
+!아바돈게임 10000
+- 25개 항목이 모두 표시되는지 확인합니다.
+- 도리짓고땡 항목이 🎴로 표시되는지 확인합니다.
+- Render 로그에 HTTP 50035 / Invalid Form Body / Invalid emoji가 없어야 합니다.
+
+5. 명령어 도감 상호작용
+!명령어
+- 카테고리를 빠르게 여러 번 바꿉니다.
+- 이전/다음 페이지와 명령 상세/목록 복귀를 반복합니다.
+- CategorySelect NotFound 10062 Unknown interaction가 반복되지 않아야 합니다.
+- 배포 전 생성된 오래된 메뉴는 토큰이 이미 만료됐으므로 새 !명령어 메시지에서 점검합니다.
+
+6. 모달 폐기 경고
+!카드게임 → 게임 선택 → 게임방 만들기
+!카드대시보드 → 게임 선택 → 아바돈 대전
+- 참가비 입력창을 열고 제출합니다.
+- v1000_global_survivor.py의 hasattr(item, label), str(item.label) 경고가 없어야 합니다.
+- TextInput.label is deprecated 경고가 없어야 합니다.
+
+7. Discord 프로필 PNG
+!정보
+!생존대시보드
+- PNG 왼쪽 상단에 명령 실행자의 실제 Discord 프로필 이미지가 보여야 합니다.
+- 프로필 이미지를 바꾼 뒤 새로 명령을 실행하면 새 이미지가 반영되어야 합니다.
+- 이미지 다운로드 실패 시에만 이름 이니셜이 나타납니다.
+
+8. 홈페이지
+- ABADDON_OFFICIAL_SITE_v10.9.3_UPLOAD.zip 전체를 정적 사이트 루트에 덮어씁니다.
+- LATEST v10.9.3, ONLINE 초록불, 실시간 기록, 경마 미리보기를 확인합니다.
+- /en/ 페이지에는 English 명령과 설명만 표시되는지 확인합니다.
+
+9. 문제가 계속될 때
+- 로그 첫 부분에서 v10.9.3 부팅 표시를 확인합니다.
+- Render Clear build cache & deploy를 다시 수행합니다.
+- 배포 전 Discord 메시지는 삭제하고 새 명령으로 UI를 생성합니다.
+- !UI검수 상세의 실패 항목과 Render 오류 줄을 함께 보관합니다.

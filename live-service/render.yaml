@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: abaddon-public-feed
+    runtime: python
+    plan: free
+    buildCommand: ""
+    startCommand: python live_feed_service.py
+    healthCheckPath: /healthz
+    envVars:
+      - key: PUBLIC_FEED_RELAY_KEY
+        generateValue: true
+      - key: PUBLIC_FEED_ALLOWED_ORIGIN
+        value: "*"

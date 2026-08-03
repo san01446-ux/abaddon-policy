@@ -1,12 +1,21 @@
 "use strict";
 
 const commands = [
+  {"c":"v10.9.3 전체 명령 UI","cmd":"!명령어검수 상세 · !UI검수 상세 · !테스트 상세","d":"최종 명령 등록, 잘못된 이모지, 빠른 상호작용, 입력창 호환과 최신 패치 연결을 한 번에 검사합니다."},
+  {"c":"v10.9.3 프로필 PNG","cmd":"!정보 · !생존대시보드","d":"실행자의 실제 Discord 서버 표시 프로필 이미지를 생존자 PNG 카드에 합성합니다."},
+  {"c":"v10.9.3 기록","cmd":"!패치노트","d":"이번 배포에서 실제로 수정한 전체 명령 UI 안정화 항목과 라이브 확인 순서를 표시합니다."},
+  {"c":"v10.9.2 이미지 재적용","cmd":"!정보 · !생존대시보드 · !세계지도 · !지도대시보드 · !카드대시보드","d":"기존 텍스트/임베드 화면을 실제 PNG 첨부형 생존자·지도·카드게임 이미지 대시보드로 교체합니다."},
+  {"c":"v10.9.2 실시간 경마","cmd":"!경마 [판돈] · !경마장 · !경마전적 · !아바돈초대 경마 [판돈]","d":"6마리의 ABADDON 기수가 약 1.4초마다 순위를 바꾸며 달리고, 최종 배당·순손익·게임 전후 잔액을 표시합니다."},
+  {"c":"v10.9.2 검수","cmd":"!테스트 상세 · !패치노트","d":"이번 패치에서 재연결한 PNG 화면·실시간 경마·홈페이지 온라인 피드만 검사합니다."},
+  {"c":"v10.9.2 이미지 카드 대시보드","cmd":"!정보 · !세계지도 · !카드대시보드","d":"생존자 정보·공동 지도·카드게임 25종을 실제 PNG 첨부 이미지로 확인합니다."},
+  {"c":"v10.9.2 실시간 경마","cmd":"!경마 10000 · !경마장 · !경마전적 · !아바돈초대 경마 10000","d":"6마리 순위가 약 1.4초마다 움직이며 결과에 손익과 잔액 전후를 표시합니다."},
+  {"c":"v10.9.2 검수","cmd":"!테스트 상세 · !패치노트","d":"이번 재적용 패치의 PNG 출력·실시간 경마·홈페이지 피드 경로만 검사합니다."},
   {"c":"v10.9 통합 카드","cmd":"!카드게임 · !아바돈게임 · !아바돈초대","d":"실전 카드게임 25종을 시작하고 모든 종목에서 아바돈을 초대합니다."},
   {"c":"v10.9 신규 게임","cmd":"!훌라 · !라미 · !대통령 · !주사위카드 · !삼봉 · !도리짓고땡 · !민화투 · !육백 · !블랙잭토너먼트","d":"신규 실전 카드·화투·토너먼트 9종을 턴과 선택으로 진행합니다."},
   {"c":"v10.9 테이블","cmd":"!카드룸 · !게임방목록 · !빠른대전 · !재대결 · !관전 · !테이블정보 · !최근게임 · !게임리플레이","d":"카드룸, 공개 관전, 리플레이와 재대결을 관리합니다."},
   {"c":"v10.9 대시보드","cmd":"!생존대시보드 · !게임대시보드 · !경제대시보드 · !세계대시보드 · !지도대시보드 · !동료대시보드 · !연합대시보드 · !시즌대시보드","d":"정보 조회 결과를 사진처럼 정돈된 임베드 카드로 표시합니다."},
   {"c":"v10.9 리그·부채","cmd":"!카드리그 · !주간랭킹 · !명예의전당 · !대회센터 · !부채 · !채무기록 · !파산대시보드 · !재기임무","d":"카드 리그와 무제한 음수 경제의 부채·재기 상태를 관리합니다."},
-  {"c":"v10.9 검수","cmd":"!테스트 상세 · !패치노트 · !정보리뉴얼현황","d":"최신 v10.9.0에서 추가·수정된 항목만 상세 검사하고 패치 내용을 표시합니다."},
+  {"c":"v10.9 검수","cmd":"!테스트 상세 · !패치노트 · !정보리뉴얼현황","d":"최신 v10.9.2에서 재연결된 이미지 대시보드·실시간 경마·홈페이지 피드 항목만 상세 검사합니다."},
   {"c":"v10.6 실전 카드게임","cmd":"!카드게임 · !게임장 · !빠른참가 · !아바돈게임","d":"실전 카드게임 16종을 턴·베팅·선택 방식으로 시작하고 혼자면 아바돈을 초대합니다."},
   {"c":"v10.5 신규 카드","cmd":"!파인애플홀덤 · !숏덱홀덤 · !바둑이 · !하이로우포커 · !인디언포커 · !카드블랙잭 · !카드바카라","d":"신규 카드 7종과 멀티 테이블을 한글 명령으로 시작합니다."},
   {"c":"v10.5 화투","cmd":"!화투규칙 · !화투규칙설정","d":"폭탄·흔들기·피박·광박·고박·멍따·총통·쪽·따닥·쓸·나가리 규칙을 확인하고 설정합니다."},
@@ -1815,11 +1824,18 @@ function isFeaturedCommand(item) {
 
 function initSharedUI() {
   const cfg = window.ABADDON_CONFIG || {};
-  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v6.3.0"; });
-  document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = cfg.statusText || "ONLINE"; });
+  const configuredStatus = String(cfg.status || cfg.statusText || "ONLINE").toUpperCase();
+  const discordUrl = cfg.discordUrl || cfg.discordInvite || "#";
+  const botUrl = cfg.botInviteUrl || cfg.botInvite || discordUrl;
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v10.9.3"; });
+  document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = configuredStatus; });
   document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
-  document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
-  document.querySelectorAll("[data-bot-link]").forEach((el) => { el.href = cfg.botInvite || cfg.discordInvite || "#"; el.target = "_blank"; el.rel = "noopener"; });
+  document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = discordUrl; el.target = "_blank"; el.rel = "noopener"; });
+  document.querySelectorAll("[data-bot-link]").forEach((el) => { el.href = botUrl; el.target = "_blank"; el.rel = "noopener"; });
+  document.querySelectorAll("[data-live-dot]").forEach((dot) => {
+    dot.classList.remove("online", "offline");
+    dot.classList.add(configuredStatus === "ONLINE" ? "online" : "offline");
+  });
 
   const current = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".site-nav a").forEach((link) => {
@@ -2164,7 +2180,22 @@ function initLiveFeed() {
   const updated = document.getElementById("live-updated");
 
   if (!base) {
-    setLiveState("연동 대기", "config.js의 eventFeedUrl에 별도 피드 Web Service 주소를 입력하세요.", "");
+    const configuredOnline = String(cfg.status || cfg.statusText || "ONLINE").toUpperCase() === "ONLINE";
+    setLiveState(
+      configuredOnline ? "종말 네트워크 온라인" : "점검 중",
+      configuredOnline ? "정적 상태 신호가 활성화됐습니다. eventFeedUrl을 연결하면 서버·생존자·지연시간이 실시간 값으로 전환됩니다." : "config.js 상태가 점검 중입니다.",
+      configuredOnline ? "online" : "offline"
+    );
+    document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = configuredOnline ? "ONLINE" : "MAINTENANCE"; });
+    if (guilds) guilds.textContent = "상태 피드 연결 전";
+    if (members) members.textContent = "공개 대기";
+    if (latency) latency.textContent = "API 연결 전";
+    if (updated) updated.textContent = "정적 신호";
+    renderLiveEvents([{
+      id: "v1092-static-online", type: "system", title: "ABADDON v10.9.2 온라인",
+      message: "홈페이지 ONLINE 표시와 링크 설정을 복구했습니다. 별도 피드 API를 연결하면 실제 심박 데이터로 자동 전환됩니다.",
+      actor: "ABADDON", accent: "#56e1a5", created_at: new Date().toISOString()
+    }]);
     return;
   }
 
@@ -2191,9 +2222,14 @@ function initLiveFeed() {
       renderLiveEvents(feed.events || []);
       notifyNewLiveEvents(feed.events || []);
     } catch (error) {
-      setLiveState("신호 두절", "피드 Web Service 주소, Render 상태와 CORS 허용 주소를 확인하세요.", "offline");
-      document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = "OFFLINE"; });
-      if (updated) updated.textContent = "연결 실패";
+      const fallback = Boolean(cfg.staticOnlineFallback) && String(cfg.status || cfg.statusText || "ONLINE").toUpperCase() === "ONLINE";
+      setLiveState(
+        fallback ? "온라인 · 실시간 API 재연결 중" : "신호 두절",
+        fallback ? "봇의 설정 상태는 ONLINE이며 공개 피드 API만 다시 연결하고 있습니다." : "피드 Web Service 주소, Render 상태와 CORS 허용 주소를 확인하세요.",
+        fallback ? "online" : "offline"
+      );
+      document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = fallback ? "ONLINE" : "OFFLINE"; });
+      if (updated) updated.textContent = fallback ? "API 재연결 중" : "연결 실패";
     } finally {
       running = false;
     }

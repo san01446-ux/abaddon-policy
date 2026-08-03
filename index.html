@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="#080508" name="theme-color"/>
 <meta content="Discord 종말 생존 RPG 봇 ABADDON. 성장·스토리·던전·월드보스·장비·펫·기지·생활·거래·카드게임·서버 리뉴얼을 제공합니다." name="description"/>
-<link href="style.css?v=1090" rel="stylesheet"/>
-<script defer="" src="config.js?v=1090"></script>
-<script defer="" src="script.js?v=1090"></script>
+<link href="style.css?v=1093" rel="stylesheet"/>
+<script defer="" src="config.js?v=1093"></script>
+<script defer="" src="script.js?v=1093"></script>
 </head>
 <body>
 <header class="site-header">
@@ -27,27 +27,54 @@
 <div class="hero-copy-wrap">
 <div class="eyebrow">THE BLACK CATHEDRAL · UNIFIED SURVIVOR NETWORK</div>
 <h1>하나의 세계, 두 개의 완전한 언어.<br/><span>선택한 언어로 끝까지 생존하라.</span></h1>
-<p class="hero-copy">ABADDON v10.9.0은 카드게임 25종을 실제 턴·선택·베팅으로 진행하고 모든 종목에서 아바돈을 초대할 수 있습니다. 승부 종료 시 승패·족보·팟·이번 게임 증감액·이전 잔액→현재 잔액을 한 화면에 표시하며, 카드룸·관전·리플레이·정보 대시보드·부채·리그와 최신 패치 전용 검수를 통합합니다.</p>
+<p class="hero-copy">ABADDON v10.9.3은 전체 명령 UI를 다시 검사해 잘못된 이모지로 인한 전송 실패, 만료된 선택 메뉴, 남아 있던 입력창 경고를 차단합니다. <code>!정보</code> PNG 카드는 실행한 사용자의 실제 Discord 표시 프로필 이미지를 합성하며, 기존 PNG 대시보드·실시간 경마·ONLINE 피드는 그대로 유지됩니다.</p>
 <div class="hero-actions"><a class="button primary" data-bot-link="" href="#">＋ 아바돈 소환하기</a><a class="button secondary" href="#live">실시간 기록 보기 →</a></div>
-<div class="status-row"><span class="pill"><span class="status-dot" data-live-dot=""></span><b data-status="">AWAITING SIGNAL</b></span><span class="pill">LATEST <b data-version="">v10.9.0</b></span><span class="pill" data-status-note="">카드게임 25종 · 전 종목 ABADDON · 결과/잔액 정산 · 대시보드</span></div>
+<div class="status-row"><span class="pill"><span class="status-dot" data-live-dot=""></span><b data-status="">ONLINE</b></span><span class="pill">LATEST <b data-version="">v10.9.3</b></span><span class="pill" data-status-note="">PNG 정보·지도·카드 대시보드 · 실시간 경마 · ONLINE 피드</span></div>
 </div>
 <div class="core-card gothic-arch">
 <div class="core-card-inner">
-<span class="version-chip" data-version="">v10.9.0</span>
+<span class="version-chip" data-version="">v10.9.3</span>
 <div aria-hidden="true" class="sigil"><span></span></div>
-<h2 class="core-title-inline"><b>ABADDON</b><span>v10.9 카드 25종 · 전 종목 AI · 결과 정산 · 정보 대시보드 · 리그</span></h2>
+<h2 class="core-title-inline"><b>ABADDON</b><span>v10.9.3 전체 명령 UI 안정화 · 실제 Discord 프로필 이미지 · 기존 실시간 기능 유지</span></h2>
 <p><code>!언어</code>로 표시 언어를 정하고, <code>!할일</code>·<code>!생존도감</code>·<code>!탐사작전</code>에서 현재 세계를 이어서 플레이합니다.</p>
 <div class="check-list">
-<div class="check-item"><span class="check-icon">✓</span><span>선택 언어 하나만 표시하는 개인·서버 언어 체계</span></div>
-<div class="check-item"><span class="check-icon">✓</span><span>전체 prefix 명령의 한글·영문 접근 이름 최신화</span></div>
-<div class="check-item"><span class="check-icon">✓</span><span>임무 추적기·생존 도감·NPC 인연·보상 회수 센터</span></div>
-<div class="check-item"><span class="check-icon">✓</span><span>주간 글로벌 탐사와 이동 이모지·실시간 퍼센트 연출</span></div>
+<div class="check-item"><span class="check-icon">✓</span><span>잘못된 선택 메뉴 이모지는 전송 전에 안전한 이모지로 자동 교체</span></div>
+<div class="check-item"><span class="check-icon">✓</span><span>명령 도감은 먼저 응답하고 캐시된 색인을 사용해 상호작용 만료를 완화</span></div>
+<div class="check-item"><span class="check-icon">✓</span><span>PNG 생존자 카드에 실행자의 Discord 서버 표시 프로필 이미지를 합성</span></div>
+<div class="check-item"><span class="check-icon">✓</span><span>명령어·설명·홈페이지·패치노트·최신 전용 검수를 v10.9.3으로 동기화</span></div>
 </div>
-<div class="mini-stats"><div class="mini-stat"><b>25</b><span>카드게임</span></div><div class="mini-stat"><b>6</b><span>NPC 동료</span></div><div class="mini-stat"><b>0</b><span>기능 폐기</span></div></div>
+<div class="mini-stats"><div class="mini-stat"><b>25</b><span>카드게임</span></div><div class="mini-stat"><b>6</b><span>경주마</span></div><div class="mini-stat"><b>5</b><span>PNG 화면</span></div></div>
 </div>
 </div>
 </div>
-</section><section class="section v1090-section"><div class="container"><div class="section-head"><div><div class="eyebrow">V10.9.0 · INTEGRATED CARD &amp; DASHBOARD RENEWAL</div><h2>승부 결과부터 세계 정보까지, 한 화면에서 끝까지 확인합니다</h2></div><p>v10.7~v10.9 계획을 통합해 신규 게임·아바돈 AI·카드룸·관전·리플레이·대시보드·부채·리그·최신 패치 검수를 한 번에 제공합니다.</p></div><div class="feature-grid compact-grid"><article><span>🏆</span><h3>결과·잔액 정산 복구</h3><p>모든 카드 승부 종료 화면에 승패, 공개 족보, 팟, 게임 손익, 이전 잔액과 현재 잔액을 표시합니다. 원본 메시지 편집에 실패하면 새 결과 카드로 재전송합니다.</p></article><article><span>🎴</span><h3>신규 실전 게임 9종</h3><p>훌라·라미·대통령·주사위카드·삼봉·도리짓고땡·민화투·육백·블랙잭 토너먼트를 실제 턴과 선택으로 진행합니다.</p></article><article><span>🤖</span><h3>25종 전부 아바돈 초대</h3><p>모든 카드게임에서 아바돈을 상대 좌석으로 추가하며 3인 종목은 ABADDON-β가 자동 보충합니다. 난이도 4단계와 성향 5종을 설정할 수 있습니다.</p></article><article><span>🏠</span><h3>카드룸·관전·리플레이</h3><p>모집·진행 테이블을 대시보드로 확인하고 공개 정보 관전, 최근 게임 기록, 재대결과 빠른 대전을 지원합니다.</p></article><article><span>🖼️</span><h3>정보 대시보드 리뉴얼</h3><p>생존자·게임·경제/부채·세계·지도·동료·연합·시즌·리그·테스트·패치노트를 사진처럼 정돈된 임베드 카드로 표시합니다.</p></article><article><span>🧪</span><h3>최신 패치 전용 검수</h3><p><code>!테스트 상세</code>는 v10.9.0에서 추가·수정된 기능만 검사합니다. 다음 패치 때는 검수 목록도 새 패치 범위로 교체됩니다.</p></article></div><div class="raid-command-row"><code>!카드게임</code><code>!아바돈초대 훌라 10000</code><code>!카드룸</code><code>!정보패널</code><code>!테스트 상세</code><code>!패치노트</code></div></div></section>
+</section>
+<section class="section v1093-section"><div class="container">
+<div class="section-head"><div><div class="eyebrow">V10.9.3 · FULL COMMAND UI STABILITY AUDIT</div><h2>명령 메뉴가 열리기 전에 실패하던 경로를 전체적으로 다시 막았습니다</h2></div><p>Discord가 거부하는 이모지, 늦은 상호작용 응답, 오래된 입력창 속성 접근을 이번 패치 범위에서 집중 검수했습니다.</p></div>
+<div class="feature-grid compact-grid">
+<article><span>🧹</span><h3>잘못된 이모지 자동 정리</h3><p>선택 메뉴와 버튼을 보내거나 편집하기 직전에 지원되지 않는 문자 조합을 안전한 이모지로 교체합니다.</p></article>
+<article><span>⚡</span><h3>명령 도감 빠른 응답</h3><p>카테고리·페이지·검색 조작을 먼저 승인하고 전체 명령 색인을 캐시해 만료 오류 가능성을 낮췄습니다.</p></article>
+<article><span>🖼️</span><h3>실제 Discord 프로필 이미지</h3><p><code>!정보</code> PNG는 실행자의 서버 표시 프로필 이미지를 내려받아 카드에 합성합니다. 불러오지 못할 때만 이니셜로 대체합니다.</p></article>
+<article><span>🔎</span><h3>최신 패치 전용 UI 검수</h3><p><code>!명령어검수 상세</code>, <code>!UI검수 상세</code>, <code>!테스트 상세</code>에서 이번 수정 경로를 한 번에 확인합니다.</p></article>
+</div>
+<div class="raid-command-row"><code>!명령어검수 상세</code><code>!UI검수 상세</code><code>!테스트 상세</code><code>!정보</code><code>!패치노트</code></div>
+</div></section><section class="section v1092-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V10.9.2 · VISUAL RE-APPLICATION &amp; LIVE HORSE RACING</div><h2>예전 텍스트 화면을 실제 이미지 카드로 다시 연결했습니다</h2></div><p>배포 여부를 화면만 보고도 판별할 수 있고, 경마는 메시지 편집으로 순위가 실제로 움직입니다.</p></div>
+<div class="feature-grid compact-grid">
+<article><span>🖼️</span><h3>생존자 PNG 카드</h3><p><code>!정보</code>와 <code>!생존대시보드</code>가 HP·스태미나·감염·전투력·식량·카지노 칩·펫을 한 장의 이미지로 표시합니다.</p></article>
+<article><span>🗺️</span><h3>세계지도 PNG 카드</h3><p><code>!세계지도</code>가 6개 지역의 해금·개척 진행·보스 격파를 연결선과 진행 막대로 보여줍니다.</p></article>
+<article><span>🎴</span><h3>카드게임 25종 이미지 도감</h3><p><code>!카드대시보드</code>에서 전체 종목을 이미지로 보고, 선택 메뉴에서 상세 규칙과 일반 방·ABADDON 대전을 시작합니다.</p></article>
+<article><span>🏇</span><h3>실시간 경마</h3><p><code>!경마 10000</code>을 실행하고 말을 고르면 약 1.4초마다 6개 레인이 움직입니다. 결과에는 배당·순손익·게임 전후 잔액이 나옵니다.</p></article>
+</div>
+<div class="v1092-visual-gallery"><figure><img alt="ABADDON 생존자 PNG 이미지 대시보드 미리보기" loading="lazy" src="assets/v1092/ABADDON_v10.9.2_PROFILE_PREVIEW.png"/><figcaption>생존자 이미지 카드</figcaption></figure><figure><img alt="ABADDON 공동 탐험 PNG 지도 미리보기" loading="lazy" src="assets/v1092/ABADDON_v10.9.2_MAP_PREVIEW.png"/><figcaption>연결형 세계지도</figcaption></figure><figure><img alt="ABADDON 카드게임 25종 PNG 도감 미리보기" loading="lazy" src="assets/v1092/ABADDON_v10.9.2_CARD_CATALOG_PREVIEW.png"/><figcaption>카드게임 25종 도감</figcaption></figure></div><div aria-label="실시간 경마 미리보기" class="race-preview">
+<div class="race-lane"><b>1</b><span class="race-horse horse-a">🐎</span><i>🏁</i></div>
+<div class="race-lane"><b>2</b><span class="race-horse horse-b">🏇</span><i>🏁</i></div>
+<div class="race-lane"><b>3</b><span class="race-horse horse-c">🐴</span><i>🏁</i></div>
+</div>
+<div class="raid-command-row"><code>!정보</code><code>!세계지도</code><code>!카드대시보드</code><code>!경마 10000</code><code>!아바돈초대 경마 10000</code><code>!테스트 상세</code></div>
+</div>
+</section>
+<section class="section"><div class="container"><div class="section-head"><div><div class="eyebrow">V10.6.0 AUTHENTIC CARD PATCH</div><h2>패를 받자마자 결과만 보던 방식은 끝났습니다</h2></div><p>각 게임의 실제 흐름을 Discord 버튼·선택 메뉴·비공개 패 화면으로 진행합니다.</p></div><div class="feature-grid compact-grid"><article><span>🎴</span><h3>실전 맞고·고스톱</h3><p>손패를 직접 내고 바닥의 같은 월 패를 선택한 뒤 더미를 뒤집습니다. 뻑·쪽·따닥·쓸·폭탄·흔들기와 고/스톱을 처리합니다.</p></article><article><span>🃏</span><h3>거리별 포커 베팅</h3><p>드로우·프리플랍·플랍·턴·리버·스터드 거리마다 체크, 콜, 레이즈, 폴드와 교환을 직접 선택합니다.</p></article><article><span>🎴</span><h3>섯다 추가</h3><p>첫 장 베팅, 두 번째 장 베팅, 광땡·땡·특수 족보·끗 공개와 구사 재경기를 지원합니다.</p></article><article><span>💸</span><h3>부채도 게임의 일부</h3><p>잔액 부족으로 게임을 막지 않습니다. 음수 잔액, 노리밋 레이즈, 무제한 화투 배수 정산을 허용하고 파산신청으로 이어집니다.</p></article></div><div class="raid-command-row"><code>!카드게임</code><code>!섯다 10000</code><code>!카드게임룰</code><code>!게임진행검수</code></div></div></section>
 <section class="section official-bot-section">
 <div class="container official-bot-grid">
 <div>
@@ -276,9 +303,9 @@
 <div class="container">
 <div class="section-head"><div><div class="eyebrow">V7.0.0 · WORLD BOSS REBUILD · 2026-08-03</div><h2>여섯 재앙이 진짜 전투로 돌아왔다</h2></div><p>신규 키 아트만 교체한 것이 아닙니다. 보상 유실 방지, 실전·테스트 분리, 약점 계산, 네 단계 페이즈, 부위 파괴와 반격을 실제 전투 로직으로 연결했습니다.</p></div>
 <div class="boss-grid life-grid world-boss-showcase">
-<article class="boss-card"><img alt="검은 성역의 문지기" src="assets/world_boss/gatekeeper.png?v=720"/><div><h3>검은 성역의 문지기</h3><p><b>약점:</b> 장착 무기 강화 +5 이상. 봉인 장갑과 핵을 파괴하면 방어 체계가 약화됩니다.</p></div></article>
-<article class="boss-card"><img alt="방사능 거신 아틀라스" src="assets/world_boss/atlas.png?v=720"/><div><h3>방사능 거신 아틀라스</h3><p><b>약점:</b> 기술자 직업과 방호 장비. 원자로와 냉각 계통을 파괴해 회복과 방어를 차단합니다.</p></div></article>
-<article class="boss-card"><img alt="심연 포식자 네메시스" src="assets/world_boss/nemesis.png?v=720"/><div><h3>심연 포식자 네메시스</h3><p><b>약점:</b> 화염 장비와 치명타. 감각 기관과 촉수를 파괴하면 회피와 반격이 약화됩니다.</p></div></article>
+<article class="boss-card"><img alt="검은 성역의 문지기" src="assets/world_boss/gatekeeper.png?v=720"><div><h3>검은 성역의 문지기</h3><p><b>약점:</b> 장착 무기 강화 +5 이상. 봉인 장갑과 핵을 파괴하면 방어 체계가 약화됩니다.</p></div></img></article>
+<article class="boss-card"><img alt="방사능 거신 아틀라스" src="assets/world_boss/atlas.png?v=720"><div><h3>방사능 거신 아틀라스</h3><p><b>약점:</b> 기술자 직업과 방호 장비. 원자로와 냉각 계통을 파괴해 회복과 방어를 차단합니다.</p></div></img></article>
+<article class="boss-card"><img alt="심연 포식자 네메시스" src="assets/world_boss/nemesis.png?v=720"><div><h3>심연 포식자 네메시스</h3><p><b>약점:</b> 화염 장비와 치명타. 감각 기관과 촉수를 파괴하면 회피와 반격이 약화됩니다.</p></div></img></article>
 <article class="boss-card"><img alt="폐허의 기계왕 바벨" src="assets/world_boss/babel.png?v=720"/><div><h3>폐허의 기계왕 바벨</h3><p><b>약점:</b> 보유 광석·고철. 포대와 수리 드론을 파괴해 공격과 자가 복구를 봉쇄합니다.</p></div></article>
 <article class="boss-card"><img alt="백색 방주의 망령" src="assets/world_boss/ark_ghost.png?v=720"/><div><h3>백색 방주의 망령</h3><p><b>약점:</b> 시즌 2 기록과 원정 유물. 기억 결정과 환영을 파괴하면 회피 기믹이 무너집니다.</p></div></article>
 <article class="boss-card"><img alt="종말의 왕 아바돈" src="assets/world_boss/abaddon.png?v=720"/><div><h3>종말의 왕 아바돈</h3><p><b>약점:</b> 참가 직업 역할 다양성. 왕관과 날개를 파괴해 최종 광폭화 반격을 억제합니다.</p></div></article>
@@ -390,7 +417,7 @@
 </div>
 <div class="live-console">
 <aside class="live-summary">
-<div class="live-seal"><span class="live-seal-ring"></span><b id="live-state">연동 대기</b><small id="live-state-note">config.js에 피드 Web Service 주소를 입력하세요.</small></div>
+<div class="live-seal"><span class="live-seal-ring"></span><b id="live-state">온라인 상태 확인 중</b><small id="live-state-note">설정 상태를 먼저 표시하고 공개 피드가 연결되면 실시간 수치로 전환합니다.</small></div>
 <dl class="live-metrics">
 <div><dt>연결 서버</dt><dd id="live-guilds">—</dd></div>
 <div><dt>생존자</dt><dd id="live-members">—</dd></div>
@@ -400,7 +427,7 @@
 <button class="notify-button" id="notify-toggle" type="button">브라우저 알림 켜기</button><p class="live-privacy">공개 이벤트만 전송합니다. 경고·티켓·DM·관리 로그는 이 피드에 포함되지 않습니다. 브라우저 알림은 이 페이지가 열려 있을 때 새 기록을 알려줍니다.</p>
 </aside>
 <div aria-live="polite" class="live-events" id="live-events">
-<article class="feed-event feed-placeholder"><span class="feed-rune">†</span><div><b>종말 네트워크 연동 대기</b><p>별도 Web Service 공개 주소를 연결하면 강화 성공과 공지가 이곳에 자동 표시됩니다.</p></div></article>
+<article class="feed-event feed-placeholder"><span class="feed-rune">●</span><div><b>ABADDON v10.9.3 온라인</b><p>정적 ONLINE 신호가 활성화됐습니다. 공개 피드 API를 연결하면 서버·생존자·지연시간이 실시간 값으로 자동 전환됩니다.</p></div></article>
 </div>
 </div>
 </div>

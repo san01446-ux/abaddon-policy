@@ -467,3 +467,27 @@ img { max-width: 100%; height: auto; }
 /* v7.2.0 unified welcome, patch channel and AI companion sections reuse existing responsive cards. */
 
 /* v7.2.1 channel guide cards reuse the existing responsive icon-card grid. */
+
+.v1091-section{background:linear-gradient(180deg,rgba(90,20,110,.12),rgba(8,5,8,0));border-top:1px solid rgba(218,165,32,.18);border-bottom:1px solid rgba(218,165,32,.12)}
+
+/* v10.9.2 live horse-racing preview */
+.v1092-section { background: radial-gradient(circle at 70% 20%, rgba(110,64,145,.16), transparent 44%); }
+.race-preview { margin: 28px 0 8px; padding: 22px; border: 1px solid rgba(224,190,112,.32); background: rgba(13,11,15,.82); border-radius: 18px; overflow: hidden; }
+.race-lane { position: relative; height: 52px; display: flex; align-items: center; border-bottom: 1px dashed rgba(255,255,255,.18); }
+.race-lane:last-child { border-bottom: 0; }
+.race-lane b { width: 34px; color: var(--gold, #d8bc78); }
+.race-lane i { margin-left: auto; font-style: normal; font-size: 24px; }
+.race-horse { position: absolute; left: 44px; font-size: 29px; filter: drop-shadow(0 0 10px rgba(255,255,255,.25)); animation: abaddon-race 6.4s ease-in-out infinite alternate; }
+.race-horse.horse-b { animation-duration: 5.7s; animation-delay: -.9s; }
+.race-horse.horse-c { animation-duration: 7.1s; animation-delay: -1.8s; }
+@keyframes abaddon-race { from { transform: translateX(0); } to { transform: translateX(min(68vw, 980px)); } }
+@media (max-width: 720px) { @keyframes abaddon-race { from { transform: translateX(0); } to { transform: translateX(62vw); } } }
+
+/* v10.9.2 real dashboard preview gallery */
+.v1092-visual-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:28px 0}
+.v1092-visual-gallery figure{margin:0;padding:10px;border:1px solid rgba(214,181,105,.25);background:rgba(15,11,15,.72);border-radius:18px;overflow:hidden}
+.v1092-visual-gallery img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:11px;background:#121116}
+.v1092-visual-gallery figure:nth-child(2) img{aspect-ratio:1400/820}
+.v1092-visual-gallery figure:nth-child(3) img{aspect-ratio:1500/940}
+.v1092-visual-gallery figcaption{padding:10px 4px 2px;color:var(--gold);font-weight:800;letter-spacing:.02em}
+@media(max-width:900px){.v1092-visual-gallery{grid-template-columns:1fr}}
