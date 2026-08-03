@@ -1,92 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ko">
 <head>
-  <title>명령어 — ABADDON</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#080508">
-  <meta name="description" content="ABADDON 초보자 가이드와 목적별 Discord RPG 명령어 검색">
-  <link rel="stylesheet" href="style.css?v=950">
-  <script defer src="config.js?v=950"></script>
-  <script defer src="script.js?v=950"></script>
+<title>명령어 — ABADDON</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#080508" name="theme-color"/>
+<meta content="ABADDON 초보자 가이드와 목적별 Discord RPG 명령어 검색" name="description"/>
+<link href="style.css?v=1000" rel="stylesheet"/>
+<script defer="" src="config.js?v=1000"></script>
+<script defer="" src="script.js?v=1000"></script>
 </head>
 <body>
-<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">A</span><span>ABADDON<small>OFFICIAL DISCORD RPG</small></span></a><button class="menu-button" type="button" aria-label="메뉴 열기" data-menu-button>☰</button><nav class="site-nav" data-site-nav><a href="index.html">성역</a><a href="index.html#live">실시간</a><a href="commands.html">명령어</a><a href="updates.html">기록</a><a class="nav-cta" data-discord-link href="#">공식 Discord</a></nav></div></header>
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">A</span><span>ABADDON<small>OFFICIAL DISCORD RPG</small></span></a><button aria-label="메뉴 열기" class="menu-button" data-menu-button="" type="button">☰</button><nav class="site-nav" data-site-nav=""><a href="index.html">성역</a><a href="index.html#live">실시간</a><a href="commands.html">명령어</a><a href="updates.html">기록</a><a class="nav-cta" data-discord-link="" href="#">공식 Discord</a><a data-language-link="" href="en/commands.html">English</a></nav></div></header>
 <main>
-  <section class="page-hero command-hero">
-    <div class="container">
-      <div class="eyebrow">V9.5.0 · INVESTIGATION · SHELTER · CASE RAID · FULL ENGLISH COMMAND SYNC</div>
-      <h1>명령어를 외우지 않아도 됩니다</h1>
-      <p>처음이라면 <b>!처음</b>, 모든 기능은 <b>!단말기</b> 또는 <b>!귀여운메뉴</b>에서 고르세요. v9.5.0부터 전체 prefix 명령은 영어 실행 이름도 함께 등록되며, 홈페이지 검색에서 한국어와 영어를 같이 찾을 수 있습니다.</p>
-      <div class="beginner-command-strip">
-        <button type="button" data-copy-command="!단말기"><b>1</b><span><strong>!단말기</strong><small>상태 맞춤 통합 메뉴</small></span></button>
-        <button type="button" data-copy-command="!처음"><b>2</b><span><strong>!처음</strong><small>5단계 시작 가이드</small></span></button>
-        <button type="button" data-copy-command="!게임"><b>3</b><span><strong>!게임</strong><small>목적별 기능 실행</small></span></button>
-        <button type="button" data-copy-command="!귀여운메뉴"><b>4</b><span><strong>!귀여운메뉴</strong><small>전체 명령 클릭 실행</small></span></button>
-        <button type="button" data-copy-command="!세계지도"><b>5</b><span><strong>!세계지도</strong><small>공동 개척·지역 보스</small></span></button>
-        <button type="button" data-copy-command="!파밍"><b>6</b><span><strong>!파밍</strong><small>20종 접촉·우호 세력 탐색</small></span></button>
-        <button type="button" data-copy-command="!재난상황"><b>7</b><span><strong>!재난상황</strong><small>서버 공동 비상 대응</small></span></button>
-        <button type="button" data-copy-command="!세계상태"><b>8</b><span><strong>!세계상태</strong><small>세력·무역·전쟁·시즌 5</small></span></button>
-        <button type="button" data-copy-command="!복구작전"><b>9</b><span><strong>!복구작전</strong><small>공동 복구·버튼 참여</small></span></button>
-        <button type="button" data-copy-command="!전문화"><b>10</b><span><strong>!전문화</strong><small>직업 전문화·분대 연동</small></span></button>
-        <button type="button" data-copy-command="!사건판"><b>11</b><span><strong>!사건판</strong><small>단서 수집·조합·추리</small></span></button>
-        <button type="button" data-copy-command="!대피소"><b>12</b><span><strong>!대피소</strong><small>개인 공간·장식·전시</small></span></button>
-        <button type="button" data-copy-command="!수사레이드"><b>13</b><span><strong>!수사레이드</strong><small>분대 협동 수사 작전</small></span></button>
-        <button type="button" data-copy-command="!help"><b>EN</b><span><strong>!help</strong><small>Full English command guide</small></span></button>
-      </div>
-    </div>
-  </section>
-
-  <section class="page-shell command-guide-shell">
-    <div class="container">
-      <section class="command-onboarding" aria-labelledby="quick-start-title">
-        <div class="command-section-head"><div><div class="eyebrow">WHAT DO YOU WANT TO DO?</div><h2 id="quick-start-title">하고 싶은 일을 먼저 고르세요</h2></div><p>목적을 누르면 관련 명령만 모아서 보여줍니다.</p></div>
-        <div class="goal-grid">
-          <button type="button" class="goal-card active" data-command-goal="all"><span>⌘</span><b>대표 명령</b><small>꼭 필요한 메뉴부터</small></button>
-          <button type="button" class="goal-card" data-command-goal="first"><span>🌱</span><b>처음 시작</b><small>가입 후 첫날 순서</small></button>
-          <button type="button" class="goal-card" data-command-goal="growth"><span>⚒️</span><b>성장·장비</b><small>강화·제작·펫·기지</small></button>
-          <button type="button" class="goal-card" data-command-goal="combat"><span>⚔️</span><b>전투·레이드</b><small>던전·원정·월드보스</small></button>
-          <button type="button" class="goal-card" data-command-goal="resources"><span>📦</span><b>재화·생활</b><small>돈벌이·시장·카지노</small></button>
-          <button type="button" class="goal-card" data-command-goal="story"><span>📖</span><b>스토리</b><small>시즌·엔딩·대화</small></button>
-          <button type="button" class="goal-card" data-command-goal="community"><span>🤝</span><b>함께하기</b><small>길드·파티·거래</small></button>
-          <button type="button" class="goal-card" data-command-goal="admin"><span>🛡️</span><b>서버 관리</b><small>설정·진단·백업</small></button>
-        </div>
-      </section>
-
-      <section class="command-family-section" aria-labelledby="family-title">
-        <div class="command-section-head"><div><div class="eyebrow">COMMAND CONSOLIDATION</div><h2 id="family-title">여러 명령을 대표 메뉴로 묶었습니다</h2></div><p>옛 명령어는 작동하지만, 처음에는 대표 메뉴만 사용해도 됩니다.</p></div>
-        <div class="family-grid">
-          <article><span>🛰️</span><div><h3>상태 맞춤 통합 단말기</h3><p><code>!단말기</code>에서 진행 중 정찰·재난·지도 상태와 주요 기능을 바로 선택합니다.</p></div></article>
-          <article><span>🗺️</span><div><h3>서버 공동 탐험 지도</h3><p><code>!세계지도</code>에서 6개 지역을 순차 개척하고 거점·지역 보스를 함께 진행합니다.</p></div></article>
-          <article><span>🎮</span><div><h3>게임 기능 300개 이상</h3><p><code>!게임</code> 하나에서 카테고리 → 기능군 → 실행 항목 순으로 찾습니다.</p></div></article>
-          <article><span>🫧</span><div><h3>전체 명령 클릭 실행</h3><p><code>!명령어</code>와 <code>!귀여운메뉴</code>에서 모든 기존 명령을 고르고 버튼 또는 입력창으로 실행합니다.</p></div></article>
-          <article><span>🔔</span><div><h3>알림 설정 통합</h3><p><code>!알림설정</code>에서 설정·해제·상태를 함께 관리합니다.</p></div></article>
-          <article><span>👋</span><div><h3>환영·역할 통합</h3><p><code>!새싹설정</code>과 기존 <code>!환영채널</code>·<code>!자동역할</code>이 같은 설정을 사용합니다.</p></div></article>
-          <article><span>☄️</span><div><h3>월드보스 기능군</h3><p><code>!게임 → 월드보스</code>에서 현재 전투·주간 랭킹·지난주 보상을 구분해 보여줍니다.</p></div></article>
-          <article><span>🤖</span><div><h3>아바돈 동료전</h3><p><code>!아바돈게임 식량 5000</code>처럼 게임 내 칩 또는 식량을 선택해 1:1 게임을 시작하고, 카드게임 모집방에서도 아바돈을 초대합니다. 실제 돈은 사용하지 않습니다.</p></div></article>
-          <article><span>🏰</span><div><h3>서버 관리 제어실</h3><p><code>!서버리뉴얼</code>과 <code>!설정</code>에서 테마·채널·백업·운영 기능을 묶습니다.</p></div></article>
-
-          <article><span>🔎</span><div><h3>사건 수사·현상금</h3><p><code>!사건판</code> 또는 <code>!caseboard</code>에서 단서를 조사·조합하고, 현상금 대상을 추적해 세계 상태와 세력 관계에 영향을 줍니다.</p></div></article>
-          <article><span>🏕️</span><div><h3>개인 대피소·전시실</h3><p><code>!대피소</code> 또는 <code>!shelter</code>에서 장식을 제작하고 트로피를 전시하며 다른 생존자의 공간을 방문합니다.</p></div></article>
-          <article><span>🕵️</span><div><h3>협동 수사 레이드</h3><p><code>!수사레이드</code> 또는 <code>!investigationraid</code>에서 현장수사·분석·경계·교섭 역할로 장기 사건을 공동 해결합니다.</p></div></article>
-          <article><span>🌐</span><div><h3>전체 영어 명령 동기화</h3><p>모든 prefix 명령에 충돌 없는 ASCII 실행 이름을 등록합니다. <code>!help</code>와 영어 키워드 검색에서 전체 목록을 확인할 수 있습니다.</p></div></article>
-        </div>
-      </section>
-
-      <section id="command-browser" class="command-browser-section" aria-labelledby="browser-title">
-        <div class="command-section-head"><div><div class="eyebrow">SEARCH THE ARCHIVE</div><h2 id="browser-title">명령어 찾아보기</h2></div><p>예: “무기 강화”, “돈 벌기”, “길드”, “월드보스 보상”</p></div>
-        <div class="toolbar">
-          <div class="search-wrap"><span class="search-icon">⌕</span><input id="command-search" type="search" placeholder="무엇을 하고 싶나요? 예: 무기 강화" autocomplete="off"></div>
-          <div class="command-toolbar-actions"><button type="button" class="category-button" data-command-mode>전체 명령 보기</button><button type="button" class="category-button" data-command-reset>초기화</button></div>
-          <div class="category-tabs" id="category-tabs"></div>
-        </div>
-        <p class="command-meta" id="command-meta">명령어를 불러오는 중...</p>
-        <div class="command-grid" id="command-grid"></div>
-        <div class="empty-state" id="empty-state">찾지 못했습니다. 명령어 이름 대신 “돈 벌기”, “장비”, “보스”처럼 하고 싶은 일을 검색해보세요.</div>
-      </section>
-    </div>
-  </section>
+<section class="page-hero command-hero">
+<div class="container">
+<div class="eyebrow">V10.0.0 · SINGLE-LANGUAGE UI · KOREAN/ENGLISH COMMAND SYNC</div>
+<h1>명령어를 외우지 않아도 됩니다</h1>
+<p>처음에는 <b>!언어</b> 또는 <b>!language</b>로 표시 언어를 선택하세요. 한국어 화면에는 한국어만, 영어 화면에는 영어만 표시되며 전체 prefix 명령은 두 언어의 실행 이름으로 접근할 수 있습니다.</p>
+<div class="beginner-command-strip">
+<button data-copy-command="!단말기" type="button"><b>1</b><span><strong>!단말기</strong><small>상태 맞춤 통합 메뉴</small></span></button>
+<button data-copy-command="!처음" type="button"><b>2</b><span><strong>!처음</strong><small>5단계 시작 가이드</small></span></button>
+<button data-copy-command="!게임" type="button"><b>3</b><span><strong>!게임</strong><small>목적별 기능 실행</small></span></button>
+<button data-copy-command="!귀여운메뉴" type="button"><b>4</b><span><strong>!귀여운메뉴</strong><small>전체 명령 클릭 실행</small></span></button>
+<button data-copy-command="!세계지도" type="button"><b>5</b><span><strong>!세계지도</strong><small>공동 개척·지역 보스</small></span></button>
+<button data-copy-command="!파밍" type="button"><b>6</b><span><strong>!파밍</strong><small>20종 접촉·우호 세력 탐색</small></span></button>
+<button data-copy-command="!재난상황" type="button"><b>7</b><span><strong>!재난상황</strong><small>서버 공동 비상 대응</small></span></button>
+<button data-copy-command="!세계상태" type="button"><b>8</b><span><strong>!세계상태</strong><small>세력·무역·전쟁·시즌 5</small></span></button>
+<button data-copy-command="!복구작전" type="button"><b>9</b><span><strong>!복구작전</strong><small>공동 복구·버튼 참여</small></span></button>
+<button data-copy-command="!전문화" type="button"><b>10</b><span><strong>!전문화</strong><small>직업 전문화·분대 연동</small></span></button>
+<button data-copy-command="!사건판" type="button"><b>11</b><span><strong>!사건판</strong><small>단서 수집·조합·추리</small></span></button>
+<button data-copy-command="!대피소" type="button"><b>12</b><span><strong>!대피소</strong><small>개인 공간·장식·전시</small></span></button>
+<button data-copy-command="!수사레이드" type="button"><b>13</b><span><strong>!수사레이드</strong><small>분대 협동 수사 작전</small></span></button>
+<button data-copy-command="!help" type="button"><b>EN</b><span><strong>!help</strong><small>Full English command guide</small></span></button>
+</div>
+</div>
+</section>
+<section class="page-shell command-guide-shell">
+<div class="container">
+<section aria-labelledby="quick-start-title" class="command-onboarding">
+<div class="command-section-head"><div><div class="eyebrow">WHAT DO YOU WANT TO DO?</div><h2 id="quick-start-title">하고 싶은 일을 먼저 고르세요</h2></div><p>목적을 누르면 관련 명령만 모아서 보여줍니다.</p></div>
+<div class="goal-grid">
+<button class="goal-card active" data-command-goal="all" type="button"><span>⌘</span><b>대표 명령</b><small>꼭 필요한 메뉴부터</small></button>
+<button class="goal-card" data-command-goal="first" type="button"><span>🌱</span><b>처음 시작</b><small>가입 후 첫날 순서</small></button>
+<button class="goal-card" data-command-goal="growth" type="button"><span>⚒️</span><b>성장·장비</b><small>강화·제작·펫·기지</small></button>
+<button class="goal-card" data-command-goal="combat" type="button"><span>⚔️</span><b>전투·레이드</b><small>던전·원정·월드보스</small></button>
+<button class="goal-card" data-command-goal="resources" type="button"><span>📦</span><b>재화·생활</b><small>돈벌이·시장·카지노</small></button>
+<button class="goal-card" data-command-goal="story" type="button"><span>📖</span><b>스토리</b><small>시즌·엔딩·대화</small></button>
+<button class="goal-card" data-command-goal="community" type="button"><span>🤝</span><b>함께하기</b><small>길드·파티·거래</small></button>
+<button class="goal-card" data-command-goal="admin" type="button"><span>🛡️</span><b>서버 관리</b><small>설정·진단·백업</small></button>
+</div>
+</section>
+<section aria-labelledby="family-title" class="command-family-section">
+<div class="command-section-head"><div><div class="eyebrow">COMMAND CONSOLIDATION</div><h2 id="family-title">여러 명령을 대표 메뉴로 묶었습니다</h2></div><p>옛 명령어는 작동하지만, 처음에는 대표 메뉴만 사용해도 됩니다.</p></div>
+<div class="family-grid">
+<article><span>🛰️</span><div><h3>상태 맞춤 통합 단말기</h3><p><code>!단말기</code>에서 진행 중 정찰·재난·지도 상태와 주요 기능을 바로 선택합니다.</p></div></article>
+<article><span>🗺️</span><div><h3>서버 공동 탐험 지도</h3><p><code>!세계지도</code>에서 6개 지역을 순차 개척하고 거점·지역 보스를 함께 진행합니다.</p></div></article>
+<article><span>🎮</span><div><h3>게임 기능 300개 이상</h3><p><code>!게임</code> 하나에서 카테고리 → 기능군 → 실행 항목 순으로 찾습니다.</p></div></article>
+<article><span>🫧</span><div><h3>전체 명령 클릭 실행</h3><p><code>!명령어</code>와 <code>!귀여운메뉴</code>에서 모든 기존 명령을 고르고 버튼 또는 입력창으로 실행합니다.</p></div></article>
+<article><span>🔔</span><div><h3>알림 설정 통합</h3><p><code>!알림설정</code>에서 설정·해제·상태를 함께 관리합니다.</p></div></article>
+<article><span>👋</span><div><h3>환영·역할 통합</h3><p><code>!새싹설정</code>과 기존 <code>!환영채널</code>·<code>!자동역할</code>이 같은 설정을 사용합니다.</p></div></article>
+<article><span>☄️</span><div><h3>월드보스 기능군</h3><p><code>!게임 → 월드보스</code>에서 현재 전투·주간 랭킹·지난주 보상을 구분해 보여줍니다.</p></div></article>
+<article><span>🤖</span><div><h3>아바돈 동료전</h3><p><code>!아바돈게임 식량 5000</code>처럼 게임 내 칩 또는 식량을 선택해 1:1 게임을 시작하고, 카드게임 모집방에서도 아바돈을 초대합니다. 실제 돈은 사용하지 않습니다.</p></div></article>
+<article><span>🏰</span><div><h3>서버 관리 제어실</h3><p><code>!서버리뉴얼</code>과 <code>!설정</code>에서 테마·채널·백업·운영 기능을 묶습니다.</p></div></article>
+<article><span>🔎</span><div><h3>사건 수사·현상금</h3><p><code>!사건판</code> 또는 <code>!caseboard</code>에서 단서를 조사·조합하고, 현상금 대상을 추적해 세계 상태와 세력 관계에 영향을 줍니다.</p></div></article>
+<article><span>🏕️</span><div><h3>개인 대피소·전시실</h3><p><code>!대피소</code> 또는 <code>!shelter</code>에서 장식을 제작하고 트로피를 전시하며 다른 생존자의 공간을 방문합니다.</p></div></article>
+<article><span>🕵️</span><div><h3>협동 수사 레이드</h3><p><code>!수사레이드</code> 또는 <code>!investigationraid</code>에서 현장수사·분석·경계·교섭 역할로 장기 사건을 공동 해결합니다.</p></div></article>
+<article><span>🌐</span><div><h3>전체 영어 명령 동기화</h3><p>모든 prefix 명령에 충돌 없는 ASCII 실행 이름을 등록합니다. <code>!help</code>와 영어 키워드 검색에서 전체 목록을 확인할 수 있습니다.</p></div></article>
+</div>
+</section>
+<section aria-labelledby="browser-title" class="command-browser-section" id="command-browser">
+<div class="command-section-head"><div><div class="eyebrow">SEARCH THE ARCHIVE</div><h2 id="browser-title">명령어 찾아보기</h2></div><p>예: “무기 강화”, “돈 벌기”, “길드”, “월드보스 보상”</p></div>
+<div class="toolbar">
+<div class="search-wrap"><span class="search-icon">⌕</span><input autocomplete="off" id="command-search" placeholder="무엇을 하고 싶나요? 예: 무기 강화" type="search"/></div>
+<div class="command-toolbar-actions"><button class="category-button" data-command-mode="" type="button">전체 명령 보기</button><button class="category-button" data-command-reset="" type="button">초기화</button></div>
+<div class="category-tabs" id="category-tabs"></div>
+</div>
+<p class="command-meta" id="command-meta">명령어를 불러오는 중...</p>
+<div class="command-grid" id="command-grid"></div>
+<div class="empty-state" id="empty-state">찾지 못했습니다. 명령어 이름 대신 “돈 벌기”, “장비”, “보스”처럼 하고 싶은 일을 검색해보세요.</div>
+</section>
+</div>
+</section>
 </main>
-<div class="copy-toast" id="copy-toast" role="status" aria-live="polite"></div>
-<footer class="site-footer"><div class="container footer-wrap"><div>© 2026 ABADDON. 공식 Discord RPG 프로젝트.</div><div class="footer-links"><a href="index.html#live">실시간</a><a href="updates.html">패치 기록</a><a data-discord-link href="#">Discord</a></div></div></footer>
+<div aria-live="polite" class="copy-toast" id="copy-toast" role="status"></div>
+<footer class="site-footer"><div class="container footer-wrap"><div>© 2026 ABADDON. 공식 Discord RPG 프로젝트.</div><div class="footer-links"><a href="index.html#live">실시간</a><a href="updates.html">패치 기록</a><a data-discord-link="" href="#">Discord</a></div></div></footer>
 </body></html>
