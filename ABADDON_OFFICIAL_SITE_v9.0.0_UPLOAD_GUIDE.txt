@@ -1,0 +1,6 @@
+ABADDON 공식 홈페이지 v9.0.0 업로드 가이드
+
+1. ZIP 내부 파일을 사이트 루트에 업로드합니다.
+2. index.html, commands.html, updates.html, config.js, script.js가 루트에 있어야 합니다.
+3. assets 폴더를 유지합니다.
+4. 배포 후 강력 새로고침으로 v9.0.0 표기와 !세계상태 검색을 확인합니다.
