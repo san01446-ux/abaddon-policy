@@ -1,5 +1,5 @@
 window.ABADDON_CONFIG = {
-  version: "v10.9.5",
+  version: "v11.0.0",
   status: "ONLINE",
   statusNote: "turn GIFs · image fallback · replay PNG · live board · 2026-08-04",
   botInviteUrl: "https://discord.com/oauth2/authorize?client_id=1532237253944934431&permissions=8&integration_type=0&scope=bot+applications.commands",

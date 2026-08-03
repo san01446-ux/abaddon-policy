@@ -1,9 +1,9 @@
 "use strict";
 
 const commands = [
-  {"c":"v10.9.5 실시간 보드","cmd":"!실시간보드 · !관전 · !테이블정보","d":"진행 중 카드게임과 경마를 한 화면에서 보고, 공개 테이블을 이미지로 관전합니다."},
-  {"c":"v10.9.5 이미지 리플레이","cmd":"!최근게임 · !게임리플레이 · !리플레이이미지","d":"공개 행동과 최종 결과를 한 장의 타임라인 PNG로 확인합니다."},
-  {"c":"v10.9.5 검수","cmd":"!연출검수 상세 · !테스트 상세 · !패치노트","d":"턴 GIF, 이미지 자동 복구, 리플레이와 실시간 보드만 집중 검사합니다."},
+  {"c":"v11.0.0 실시간 보드","cmd":"!실시간보드 · !관전 · !테이블정보","d":"진행 중 카드게임과 경마를 한 화면에서 보고, 공개 테이블을 이미지로 관전합니다."},
+  {"c":"v11.0.0 이미지 리플레이","cmd":"!최근게임 · !게임리플레이 · !리플레이이미지","d":"공개 행동과 최종 결과를 한 장의 타임라인 PNG로 확인합니다."},
+  {"c":"v11.0.0 검수","cmd":"!연출검수 상세 · !테스트 상세 · !패치노트","d":"턴 GIF, 이미지 자동 복구, 리플레이와 실시간 보드만 집중 검사합니다."},
   {"c":"v10.9.2 이미지 재적용","cmd":"!정보 · !생존대시보드 · !세계지도 · !지도대시보드 · !카드대시보드","d":"기존 텍스트/임베드 화면을 실제 PNG 첨부형 생존자·지도·카드게임 이미지 대시보드로 교체합니다."},
   {"c":"v10.9.2 실시간 경마","cmd":"!경마 [판돈] · !경마장 · !경마전적 · !아바돈초대 경마 [판돈]","d":"6마리의 ABADDON 기수가 약 1.4초마다 순위를 바꾸며 달리고, 최종 배당·순손익·게임 전후 잔액을 표시합니다."},
   {"c":"v10.9.2 검수","cmd":"!테스트 상세 · !패치노트","d":"이번 패치에서 재연결한 PNG 화면·실시간 경마·홈페이지 온라인 피드만 검사합니다."},
@@ -1827,7 +1827,7 @@ function initSharedUI() {
   const configuredStatus = String(cfg.status || cfg.statusText || "ONLINE").toUpperCase();
   const discordUrl = cfg.discordUrl || cfg.discordInvite || "#";
   const botUrl = cfg.botInviteUrl || cfg.botInvite || discordUrl;
-  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v10.9.5"; });
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v11.0.0"; });
   document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = configuredStatus; });
   document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || "SERVER GUARD"; });
   document.querySelectorAll("[data-discord-link]").forEach((el) => { el.href = discordUrl; el.target = "_blank"; el.rel = "noopener"; });

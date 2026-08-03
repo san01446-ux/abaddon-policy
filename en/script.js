@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const status = String(cfg.status || cfg.statusText || "ONLINE").toUpperCase();
   const discordUrl = cfg.discordUrl || cfg.discordInvite || "#";
   const botUrl = cfg.botInviteUrl || cfg.botInvite || discordUrl;
-  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v10.9.5"; });
+  document.querySelectorAll("[data-version]").forEach((el) => { el.textContent = cfg.version || "v11.0.0"; });
   document.querySelectorAll("[data-status]").forEach((el) => { el.textContent = status; });
   document.querySelectorAll("[data-status-note]").forEach((el) => { el.textContent = cfg.statusNote || ""; });
   document.querySelectorAll("[data-live-dot]").forEach((dot) => {
