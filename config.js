@@ -1,5 +1,5 @@
 window.ABADDON_CONFIG = Object.freeze({
-  version: "v8.1.0",
+  version: "v8.1.1",
   statusText: "AWAITING SIGNAL",
   statusNote: "WORLD MAP · FRONTIER · TERMINAL · 2026-08-03",
   discordInvite: "https://discord.gg/FN2tX7TVMz",
