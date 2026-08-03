@@ -1,0 +1,5 @@
+ABADDON 공식 홈페이지 v9.5.0 업로드 안내
+
+이 폴더의 전체 파일과 assets 폴더를 기존 사이트 루트에 그대로 업로드하세요.
+index.html, commands.html, updates.html, script.js, config.js, style.css를 함께 교체해야 합니다.
+브라우저 캐시 키는 v950입니다.

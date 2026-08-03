@@ -1,7 +1,7 @@
 window.ABADDON_CONFIG = Object.freeze({
-  version: "v9.2.0",
+  version: "v9.5.0",
   statusText: "AWAITING SIGNAL",
-  statusNote: "FACTIONS · TRADE · WAR · SEASON 5 · 2026-08-03",
+  statusNote: "INVESTIGATION · SHELTER · CASE RAID · FULL ENGLISH · 2026-08-03",
   discordInvite: "https://discord.gg/FN2tX7TVMz",
   botInvite: "https://discord.com/oauth2/authorize?client_id=1532237253944934431&permissions=8&integration_type=0&scope=bot+applications.commands",
 
