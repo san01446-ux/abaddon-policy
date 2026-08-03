@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="#080508" name="theme-color"/>
 <meta content="Discord 종말 생존 RPG 봇 ABADDON. 성장·스토리·던전·월드보스·장비·펫·기지·생활·거래·카드게임·서버 리뉴얼을 제공합니다." name="description"/>
-<link href="style.css?v=1060" rel="stylesheet"/>
-<script defer="" src="config.js?v=1060"></script>
-<script defer="" src="script.js?v=1060"></script>
+<link href="style.css?v=1090" rel="stylesheet"/>
+<script defer="" src="config.js?v=1090"></script>
+<script defer="" src="script.js?v=1090"></script>
 </head>
 <body>
 <header class="site-header">
@@ -27,15 +27,15 @@
 <div class="hero-copy-wrap">
 <div class="eyebrow">THE BLACK CATHEDRAL · UNIFIED SURVIVOR NETWORK</div>
 <h1>하나의 세계, 두 개의 완전한 언어.<br/><span>선택한 언어로 끝까지 생존하라.</span></h1>
-<p class="hero-copy">ABADDON v10.6.0은 자동 패 비교 방식을 폐기하고 카드게임 16종을 실제 턴·선택·베팅·공개 단계로 진행합니다. 맞고·고스톱은 손패 제출, 바닥패 월 맞추기, 더미 뒤집기, 고/스톱과 화투 배수를 직접 처리하며 섯다가 새로 추가됩니다. 잔액은 음수까지 내려가고 베팅·배수·정산에는 상한이 없습니다.</p>
+<p class="hero-copy">ABADDON v10.9.0은 카드게임 25종을 실제 턴·선택·베팅으로 진행하고 모든 종목에서 아바돈을 초대할 수 있습니다. 승부 종료 시 승패·족보·팟·이번 게임 증감액·이전 잔액→현재 잔액을 한 화면에 표시하며, 카드룸·관전·리플레이·정보 대시보드·부채·리그와 최신 패치 전용 검수를 통합합니다.</p>
 <div class="hero-actions"><a class="button primary" data-bot-link="" href="#">＋ 아바돈 소환하기</a><a class="button secondary" href="#live">실시간 기록 보기 →</a></div>
-<div class="status-row"><span class="pill"><span class="status-dot" data-live-dot=""></span><b data-status="">AWAITING SIGNAL</b></span><span class="pill">LATEST <b data-version="">v10.6.0</b></span><span class="pill" data-status-note="">실전 카드게임 16종 · 섯다 · 음수 잔액 · 무상한</span></div>
+<div class="status-row"><span class="pill"><span class="status-dot" data-live-dot=""></span><b data-status="">AWAITING SIGNAL</b></span><span class="pill">LATEST <b data-version="">v10.9.0</b></span><span class="pill" data-status-note="">카드게임 25종 · 전 종목 ABADDON · 결과/잔액 정산 · 대시보드</span></div>
 </div>
 <div class="core-card gothic-arch">
 <div class="core-card-inner">
-<span class="version-chip" data-version="">v10.6.0</span>
+<span class="version-chip" data-version="">v10.9.0</span>
 <div aria-hidden="true" class="sigil"><span></span></div>
-<h2 class="core-title-inline"><b>ABADDON</b><span>v10.6 실전 카드 룰 · 섯다 · 실제 고스톱/맞고 · 무제한 부채 경제</span></h2>
+<h2 class="core-title-inline"><b>ABADDON</b><span>v10.9 카드 25종 · 전 종목 AI · 결과 정산 · 정보 대시보드 · 리그</span></h2>
 <p><code>!언어</code>로 표시 언어를 정하고, <code>!할일</code>·<code>!생존도감</code>·<code>!탐사작전</code>에서 현재 세계를 이어서 플레이합니다.</p>
 <div class="check-list">
 <div class="check-item"><span class="check-icon">✓</span><span>선택 언어 하나만 표시하는 개인·서버 언어 체계</span></div>
@@ -43,11 +43,11 @@
 <div class="check-item"><span class="check-icon">✓</span><span>임무 추적기·생존 도감·NPC 인연·보상 회수 센터</span></div>
 <div class="check-item"><span class="check-icon">✓</span><span>주간 글로벌 탐사와 이동 이모지·실시간 퍼센트 연출</span></div>
 </div>
-<div class="mini-stats"><div class="mini-stat"><b>16</b><span>카드게임</span></div><div class="mini-stat"><b>6</b><span>NPC 동료</span></div><div class="mini-stat"><b>0</b><span>기능 폐기</span></div></div>
+<div class="mini-stats"><div class="mini-stat"><b>25</b><span>카드게임</span></div><div class="mini-stat"><b>6</b><span>NPC 동료</span></div><div class="mini-stat"><b>0</b><span>기능 폐기</span></div></div>
 </div>
 </div>
 </div>
-</section><section class="section"><div class="container"><div class="section-head"><div><div class="eyebrow">V10.6.0 AUTHENTIC CARD PATCH</div><h2>패를 받자마자 결과만 보던 방식은 끝났습니다</h2></div><p>각 게임의 실제 흐름을 Discord 버튼·선택 메뉴·비공개 패 화면으로 진행합니다.</p></div><div class="feature-grid compact-grid"><article><span>🎴</span><h3>실전 맞고·고스톱</h3><p>손패를 직접 내고 바닥의 같은 월 패를 선택한 뒤 더미를 뒤집습니다. 뻑·쪽·따닥·쓸·폭탄·흔들기와 고/스톱을 처리합니다.</p></article><article><span>🃏</span><h3>거리별 포커 베팅</h3><p>드로우·프리플랍·플랍·턴·리버·스터드 거리마다 체크, 콜, 레이즈, 폴드와 교환을 직접 선택합니다.</p></article><article><span>🎴</span><h3>섯다 추가</h3><p>첫 장 베팅, 두 번째 장 베팅, 광땡·땡·특수 족보·끗 공개와 구사 재경기를 지원합니다.</p></article><article><span>💸</span><h3>부채도 게임의 일부</h3><p>잔액 부족으로 게임을 막지 않습니다. 음수 잔액, 노리밋 레이즈, 무제한 화투 배수 정산을 허용하고 파산신청으로 이어집니다.</p></article></div><div class="raid-command-row"><code>!카드게임</code><code>!섯다 10000</code><code>!카드게임룰</code><code>!게임진행검수</code></div></div></section>
+</section><section class="section v1090-section"><div class="container"><div class="section-head"><div><div class="eyebrow">V10.9.0 · INTEGRATED CARD &amp; DASHBOARD RENEWAL</div><h2>승부 결과부터 세계 정보까지, 한 화면에서 끝까지 확인합니다</h2></div><p>v10.7~v10.9 계획을 통합해 신규 게임·아바돈 AI·카드룸·관전·리플레이·대시보드·부채·리그·최신 패치 검수를 한 번에 제공합니다.</p></div><div class="feature-grid compact-grid"><article><span>🏆</span><h3>결과·잔액 정산 복구</h3><p>모든 카드 승부 종료 화면에 승패, 공개 족보, 팟, 게임 손익, 이전 잔액과 현재 잔액을 표시합니다. 원본 메시지 편집에 실패하면 새 결과 카드로 재전송합니다.</p></article><article><span>🎴</span><h3>신규 실전 게임 9종</h3><p>훌라·라미·대통령·주사위카드·삼봉·도리짓고땡·민화투·육백·블랙잭 토너먼트를 실제 턴과 선택으로 진행합니다.</p></article><article><span>🤖</span><h3>25종 전부 아바돈 초대</h3><p>모든 카드게임에서 아바돈을 상대 좌석으로 추가하며 3인 종목은 ABADDON-β가 자동 보충합니다. 난이도 4단계와 성향 5종을 설정할 수 있습니다.</p></article><article><span>🏠</span><h3>카드룸·관전·리플레이</h3><p>모집·진행 테이블을 대시보드로 확인하고 공개 정보 관전, 최근 게임 기록, 재대결과 빠른 대전을 지원합니다.</p></article><article><span>🖼️</span><h3>정보 대시보드 리뉴얼</h3><p>생존자·게임·경제/부채·세계·지도·동료·연합·시즌·리그·테스트·패치노트를 사진처럼 정돈된 임베드 카드로 표시합니다.</p></article><article><span>🧪</span><h3>최신 패치 전용 검수</h3><p><code>!테스트 상세</code>는 v10.9.0에서 추가·수정된 기능만 검사합니다. 다음 패치 때는 검수 목록도 새 패치 범위로 교체됩니다.</p></article></div><div class="raid-command-row"><code>!카드게임</code><code>!아바돈초대 훌라 10000</code><code>!카드룸</code><code>!정보패널</code><code>!테스트 상세</code><code>!패치노트</code></div></div></section>
 <section class="section official-bot-section">
 <div class="container official-bot-grid">
 <div>
