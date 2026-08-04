@@ -1,0 +1,130 @@
+{
+  "version": "16.2.0",
+  "generated_at": "2026-08-05T07:41:00+09:00",
+  "status": "static_validation_passed_runtime_gateway_pending",
+  "summary": {
+    "python_ast_parse": true,
+    "python_compile": true,
+    "legacy_required_commands": true,
+    "v1620_required_commands": true,
+    "new_module_direct_access_conflicts": true,
+    "new_static_collision_names_vs_v15": true,
+    "baseline_collisions_unchanged": true,
+    "bot_files_removed": true,
+    "website_files_removed": true,
+    "help_ui_static": true,
+    "alert_select_discord_compatibility": true,
+    "registration_before_final_english_sync": true,
+    "mount_assets_8": true,
+    "ui_frames_3": true,
+    "website_previews_8": true,
+    "all_v1620_images_decode": true,
+    "html_parse": true,
+    "local_references": true,
+    "javascript_syntax": true,
+    "english_v1620_sections_language_clean": true,
+    "website_version_sync": true
+  },
+  "counts": {
+    "python_files": 139,
+    "command_declarations": 1337,
+    "command_access_names": 2961,
+    "v1620_new_declarations": 24,
+    "baseline_static_collision_names": 69,
+    "patched_static_collision_names": 69,
+    "new_collision_names": 0,
+    "bot_files_baseline": 907,
+    "bot_files_current": 928,
+    "site_files_baseline": 492,
+    "site_files_current": 508,
+    "html_files": 9,
+    "javascript_files": 5,
+    "mount_png": 8,
+    "ui_frame_png": 3,
+    "website_preview_png": 8
+  },
+  "legacy_missing": [],
+  "v1620_missing": [],
+  "direct_v1620_conflicts": [],
+  "new_collision_names": [],
+  "resolved_collision_names": [],
+  "parse_errors": [],
+  "compile_errors": [],
+  "bot_removed_files": [],
+  "site_removed_files": [],
+  "ui_checks": {
+    "help_view_exists": true,
+    "five_section_buttons": true,
+    "paged_select_24": true,
+    "owner_only_interactions": true,
+    "featured_all_toggle": true,
+    "gather_modes": true,
+    "city_gather_routed": true,
+    "shared_gather_cooldown": true,
+    "korean_english_help_patched": true,
+    "latest_patch_hooks": true
+  },
+  "image_errors": [],
+  "html_errors": [],
+  "missing_local_refs": [],
+  "javascript": [
+    {
+      "file": "black-city.js",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "file": "config.js",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "file": "en/config.js",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "file": "en/script.js",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "file": "script.js",
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "english_checks": [
+    {
+      "file": "en/index.html",
+      "exists": true,
+      "has_v1620": true,
+      "hangul_in_v1620_section": false
+    },
+    {
+      "file": "en/commands.html",
+      "exists": true,
+      "has_v1620": true,
+      "hangul_in_v1620_section": false
+    },
+    {
+      "file": "en/updates.html",
+      "exists": true,
+      "has_v1620": true,
+      "hangul_in_v1620_section": false
+    },
+    {
+      "file": "en/black-city.html",
+      "exists": true,
+      "has_v1620": true,
+      "hangul_in_v1620_section": false
+    }
+  ],
+  "runtime_limitations": [
+    "discord.py unavailable in build container",
+    "no Discord token or Gateway session",
+    "no real multi-user component clicks",
+    "no real latency/message-edit stress test"
+  ],
+  "archive_integrity_note": "Final archive CRC and SHA-256 are recorded in the external ABADDON_v16.2.0_AUDIT.json and ABADDON_v16.2.0_SHA256.txt."
+}
