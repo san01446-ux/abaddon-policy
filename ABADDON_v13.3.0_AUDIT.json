@@ -1,0 +1,65 @@
+{
+  "version": "13.3.0",
+  "generated_at": "2026-08-05T02:00:00+09:00",
+  "scope": "Render CommandRegistrationError alias expedition hotfix",
+  "results": [
+    {
+      "check": "python_ast",
+      "passed": true,
+      "files": 135,
+      "errors": []
+    },
+    {
+      "check": "v1330_static_tests",
+      "passed": true,
+      "tests": [
+        "test_guard_installed_before_extensions",
+        "test_render_collision_aliases_are_separated",
+        "test_guard_removes_alias_instead_of_raising",
+        "test_diagnostics_registered"
+      ]
+    },
+    {
+      "check": "render_collision_regression",
+      "passed": true,
+      "details": {
+        "expedition_separated": true,
+        "fortune_separated": true,
+        "checkin_separated": true,
+        "marketbuy_separated": true,
+        "guard_before_registration": true
+      }
+    },
+    {
+      "check": "html_parse",
+      "passed": true,
+      "files": 9,
+      "errors": []
+    },
+    {
+      "check": "json_parse",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "check": "javascript_syntax",
+      "passed": true,
+      "files": 5,
+      "errors": []
+    },
+    {
+      "check": "website_sync",
+      "passed": true,
+      "details": {
+        "config_v1330": true,
+        "ko_updates_v1330": true,
+        "en_updates_v1330": true,
+        "citymarketbuy_documented": true
+      }
+    }
+  ],
+  "passed": true,
+  "limitations": [
+    "discord.py 2.7.1 and a live Discord Gateway were unavailable, so actual Render import and Gateway login were not executed."
+  ]
+}

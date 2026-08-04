@@ -1,5 +1,5 @@
 window.ABADDON_CONFIG = {
-  version: "v13.2.0",
+  version: "v13.3.0",
   status: "ONLINE",
   statusNote: "BLACK CITY · factions · crafting · escrow · seasons · 2026-08-05",
   botInviteUrl: "https://discord.com/oauth2/authorize?client_id=1532237253944934431&permissions=8&integration_type=0&scope=bot+applications.commands",
