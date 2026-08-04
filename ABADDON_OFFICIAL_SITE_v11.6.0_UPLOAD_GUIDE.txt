@@ -1,0 +1,5 @@
+ABADDON 공식 홈페이지 v11.6.0 업로드 가이드
+1. ZIP의 파일을 홈페이지 저장소 루트에 덮어씁니다.
+2. / 와 /en/ 페이지를 모두 배포합니다.
+3. 브라우저 강력 새로고침 후 LATEST v11.6.0과 ONLINE 상태를 확인합니다.
+4. commands.html, updates.html과 초대/Discord 버튼을 확인합니다.
