@@ -491,3 +491,6 @@ img { max-width: 100%; height: auto; }
 .v1092-visual-gallery figure:nth-child(3) img{aspect-ratio:1500/940}
 .v1092-visual-gallery figcaption{padding:10px 4px 2px;color:var(--gold);font-weight:800;letter-spacing:.02em}
 @media(max-width:900px){.v1092-visual-gallery{grid-template-columns:1fr}}
+
+/* v13.2.0 BLACK CITY */
+.notice-card,.empty-state,.world-card{background:rgba(28,21,35,.88);border:1px solid rgba(221,184,92,.26);border-radius:20px;padding:24px;margin:20px 0}.notice-card b{color:#ddb85c}.world-map-grid{display:grid;gap:24px}.world-card h2{margin-top:0}.metric-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:20px 0}.metric-row span,.district-grid span{background:rgba(255,255,255,.045);border-radius:12px;padding:12px;text-align:center}.metric-row b{display:block;color:#ddb85c;font-size:1.35rem}.district-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.district-grid small{display:block;color:#b7a8bd;margin-top:6px}@media(max-width:760px){.metric-row{grid-template-columns:repeat(2,1fr)}.district-grid{grid-template-columns:1fr}}
