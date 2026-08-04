@@ -1,0 +1,186 @@
+{
+  "version": "12.2.0",
+  "patch": "CHAOS_FESTIVAL_COMPLETE",
+  "date": "2026-08-05",
+  "summary": {
+    "passed": 27,
+    "total": 27,
+    "failed": 0
+  },
+  "counts": {
+    "python_files": 129,
+    "new_command_declarations": 91,
+    "new_access_names": 274,
+    "manifest_declarations": 1204,
+    "html_files": 7,
+    "html_refs": 187,
+    "preview_pngs": 3
+  },
+  "catalogue": {
+    "events": 8,
+    "npcs": 6,
+    "pets": 8,
+    "expeditions": 8,
+    "businesses": 8,
+    "titles": 6,
+    "backgrounds": 5,
+    "tables": 5,
+    "card_backs": 4,
+    "bingo_cells": 25,
+    "version": "12.2.0"
+  },
+  "checks": [
+    {
+      "name": "Python 전체 컴파일",
+      "passed": true,
+      "detail": "129 files; errors=0"
+    },
+    {
+      "name": "v12.2.0 순수 규칙 테스트",
+      "passed": true,
+      "detail": "...........                                                              [100%]\n11 passed in 0.16s"
+    },
+    {
+      "name": "콘텐츠 카탈로그 규모",
+      "passed": true,
+      "detail": "{'events': 8, 'npcs': 6, 'pets': 8, 'expeditions': 8, 'businesses': 8, 'titles': 6, 'backgrounds': 5, 'tables': 5, 'card_backs': 4, 'bingo_cells': 25, 'version': '12.2.0'}"
+    },
+    {
+      "name": "신규 명령 선언",
+      "passed": true,
+      "detail": "declarations=91, access_names=274"
+    },
+    {
+      "name": "영문 접근 이름",
+      "passed": true,
+      "detail": "91/91"
+    },
+    {
+      "name": "신규 내부 중복",
+      "passed": true,
+      "detail": "duplicates=0"
+    },
+    {
+      "name": "기존 명령 충돌",
+      "passed": true,
+      "detail": "collisions=[]"
+    },
+    {
+      "name": "핵심 기능 명령 표면",
+      "passed": true,
+      "detail": "17 required"
+    },
+    {
+      "name": "등록 순서",
+      "passed": true,
+      "detail": "v12.2 registered before final English alias synchronization"
+    },
+    {
+      "name": "자동 이벤트 기본 꺼짐",
+      "passed": true,
+      "detail": "guild setting default"
+    },
+    {
+      "name": "보상 중복 차단",
+      "passed": true,
+      "detail": "idempotency ledger wired"
+    },
+    {
+      "name": "관리자 백업·복구",
+      "passed": true,
+      "detail": "backup and restore commands present"
+    },
+    {
+      "name": "익명 응원 안전 장치",
+      "passed": true,
+      "detail": "filter, audit log and report route present"
+    },
+    {
+      "name": "비공개 역할 개인 전달",
+      "passed": true,
+      "detail": "DM routes=3"
+    },
+    {
+      "name": "재시작 저장 구조",
+      "passed": true,
+      "detail": "guild and user scoped schema"
+    },
+    {
+      "name": "최신 패치노트·테스트 연결",
+      "passed": true,
+      "detail": "callbacks updated"
+    },
+    {
+      "name": "명령 매니페스트",
+      "passed": true,
+      "detail": "total=1204"
+    },
+    {
+      "name": "HTML 파싱",
+      "passed": true,
+      "detail": "pages=7, errors=0"
+    },
+    {
+      "name": "홈페이지 내부 링크·이미지",
+      "passed": true,
+      "detail": "refs=187, missing=0"
+    },
+    {
+      "name": "홈페이지 버전·캐시 동기화",
+      "passed": true,
+      "detail": "bad=[]"
+    },
+    {
+      "name": "English 페이지 한글 누출",
+      "passed": true,
+      "detail": "files=[]"
+    },
+    {
+      "name": "JavaScript 문법",
+      "passed": true,
+      "detail": "files=4, errors=0"
+    },
+    {
+      "name": "v12.2.0 미리보기 이미지",
+      "passed": true,
+      "detail": "files=3, errors=[]"
+    },
+    {
+      "name": "기존 봇 파일 보존",
+      "passed": true,
+      "detail": "base=835, current=844, deleted=0"
+    },
+    {
+      "name": "기존 홈페이지 파일 보존",
+      "passed": true,
+      "detail": "base=420, current=431, deleted=0"
+    },
+    {
+      "name": "BOT ZIP 무결성",
+      "passed": true,
+      "detail": "844 files; CRC errors=0"
+    },
+    {
+      "name": "홈페이지 ZIP 무결성",
+      "passed": true,
+      "detail": "431 files; CRC errors=0"
+    }
+  ],
+  "limitations": [
+    "Discord token and Gateway access were unavailable, so live multi-user button clicks, role DMs, channel permission behavior and scheduled waiting were not executed.",
+    "discord.py was not available in the build environment; Python syntax, pure rule tests and static registration checks were used instead of a live gateway import.",
+    "Production deployment should be verified in a separate test guild using the included guide."
+  ],
+  "package": {
+    "bot_zip": {
+      "name": "ABADDON_BOT_v12.2.0_CHAOS_FESTIVAL_COMPLETE_AUDITED_PATCH.zip",
+      "files": 844,
+      "crc_errors": 0
+    },
+    "site_zip": {
+      "name": "ABADDON_OFFICIAL_SITE_v12.2.0_UPLOAD.zip",
+      "files": 431,
+      "crc_errors": 0
+    }
+  }
+}

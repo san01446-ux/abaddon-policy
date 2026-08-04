@@ -1,0 +1,1 @@
+정적 호스팅 루트에 ZIP 내용을 그대로 업로드합니다. 기존 도메인·초대 링크 설정은 config.js와 en/config.js에서 유지됩니다. 업로드 후 /, /en/, commands.html, updates.html과 세 미리보기 이미지를 확인하세요.
