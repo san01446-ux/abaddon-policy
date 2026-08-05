@@ -540,3 +540,9 @@ body.show-legacy .legacy-section { display: block; }
 .v1630-showcase-grid img{display:block;width:100%;height:100%;max-height:680px;object-fit:contain;background:#050716}
 .v1630-showcase-grid figcaption{padding:14px 18px;color:#d9d5e8;border-top:1px solid rgba(126,82,190,.28)}
 @media(max-width:900px){.v1630-showcase-grid{grid-template-columns:1fr}.v1630-showcase-grid figure:first-child{grid-row:auto}}
+
+/* v16.7 LIVE OPS & POLISH */
+.v1670-section{position:relative;overflow:hidden;background:radial-gradient(circle at 12% 18%,rgba(88,101,242,.16),transparent 34%),radial-gradient(circle at 88% 78%,rgba(46,204,113,.10),transparent 30%)}
+.v1670-section::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.025),transparent 42%)}
+.v1670-section .container{position:relative;z-index:1}
+.v1670-section .feature-grid article{border-color:rgba(123,109,255,.28);box-shadow:0 18px 46px rgba(0,0,0,.18)}

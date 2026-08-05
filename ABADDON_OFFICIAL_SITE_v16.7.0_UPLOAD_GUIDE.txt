@@ -1,0 +1,4 @@
+ABADDON 공식 홈페이지 v16.7.0 업로드
+1. ZIP 전체를 기존 사이트 루트에 덮어씁니다.
+2. index.html, en/index.html, updates.html, en/updates.html, config.js를 확인합니다.
+3. 캐시가 남으면 강력 새로고침합니다.
