@@ -2242,3 +2242,37 @@ function initLiveFeed() {
 }
 
 document.addEventListener("DOMContentLoaded", () => { initSharedUI(); initCommandPage(); initNotificationButton(); initLiveFeed(); });
+
+// v16.2.1 compact homepage: reveal old sections only when requested.
+(() => {
+  const body = document.body;
+  const reveal = () => {
+    body.classList.add('show-legacy');
+    document.querySelectorAll('[data-legacy-toggle]').forEach((button) => {
+      button.textContent = document.documentElement.lang === 'en' ? 'Hide full archive' : '이전 기능 접기';
+    });
+  };
+  const hide = () => {
+    body.classList.remove('show-legacy');
+    document.querySelectorAll('[data-legacy-toggle]').forEach((button) => {
+      button.textContent = document.documentElement.lang === 'en' ? 'Show full archive' : '이전 기능 전체 보기';
+    });
+  };
+  document.querySelectorAll('[data-legacy-toggle]').forEach((button) => button.addEventListener('click', () => body.classList.contains('show-legacy') ? hide() : reveal()));
+  document.querySelectorAll('a[href^="#"]').forEach((link) => link.addEventListener('click', () => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target && target.classList.contains('legacy-section')) reveal();
+  }));
+  if (location.hash) {
+    const target = document.querySelector(location.hash);
+    if (target && target.classList.contains('legacy-section')) reveal();
+  }
+  const links = [...document.querySelectorAll('[data-quick-jump] a')];
+  const observer = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      links.forEach((link) => link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`));
+    });
+  }, {rootMargin: '-25% 0px -65% 0px'}) : null;
+  if (observer) links.forEach((link) => { const target=document.querySelector(link.getAttribute('href')); if (target) observer.observe(target); });
+})();
