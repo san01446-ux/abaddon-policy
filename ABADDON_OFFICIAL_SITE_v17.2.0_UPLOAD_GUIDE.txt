@@ -1,0 +1,17 @@
+ABADDON 공식 홈페이지 v17.2.0 업로드 가이드
+
+1. 기존 홈페이지 전체를 백업합니다.
+2. 이 ZIP의 내용을 웹 루트에 업로드합니다.
+3. index.html, commands.html, updates.html, config.js, script.js, style.css와 en 폴더를 함께 교체합니다.
+4. assets 폴더와 JSON 매니페스트를 누락 없이 업로드합니다.
+5. CDN 또는 브라우저 캐시를 비우고 새로고침합니다.
+6. 한국어 메인·명령어·업데이트 페이지와 English 페이지를 각각 확인합니다.
+7. 최신 버전 v17.2.0, 빠른 이동, Discord 초대 링크, 로컬 이미지 경로를 확인합니다.
+
+업로드 후 확인 페이지
+- /
+- /commands.html
+- /updates.html
+- /en/
+- /en/commands.html
+- /en/updates.html

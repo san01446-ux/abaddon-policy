@@ -1,0 +1,17 @@
+{
+  "version": "17.2.0",
+  "generated_at": "2026-08-06T06:37:22.980234+00:00",
+  "checks": {
+    "local_refs": true,
+    "duplicate_ids": true,
+    "ko_v1720": true,
+    "en_v1720": true,
+    "ko_updates": true,
+    "en_updates": true,
+    "private_proof_excluded": true
+  },
+  "missing_local_refs": [],
+  "duplicate_id_pages": [],
+  "passed": 7,
+  "total": 7
+}
