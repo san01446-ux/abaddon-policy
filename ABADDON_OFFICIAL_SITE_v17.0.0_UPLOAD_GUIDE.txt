@@ -1,0 +1,11 @@
+ABADDON 공식 홈페이지 v17.0.0 업로드 안내
+
+1. 기존 홈페이지 전체 폴더를 백업합니다.
+2. 이 ZIP의 내용물을 웹 루트에 업로드합니다.
+3. config.js와 en/config.js의 초대 링크/Discord 링크를 확인합니다.
+4. 브라우저 캐시를 지우거나 강력 새로고침합니다.
+5. 한국어 index.html과 English en/index.html에서 v17.0.0 표시를 확인합니다.
+6. 빠른 이동의 v17.0 BLACK SUN 버튼과 배포 점검 버튼을 확인합니다.
+7. updates.html과 en/updates.html의 첫 기록이 v17.0.0인지 확인합니다.
+
+주의: 홈페이지 ZIP에는 봇의 비공개 소유권 증명 파일을 포함하지 않습니다.

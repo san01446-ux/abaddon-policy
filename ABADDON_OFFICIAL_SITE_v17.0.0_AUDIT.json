@@ -1,0 +1,28 @@
+{
+  "version": "17.0.0",
+  "generated_at": "2026-08-06T01:18:50.958122+00:00",
+  "html_files": 9,
+  "checks": {
+    "html_parse": true,
+    "no_broken_local_assets": true,
+    "no_duplicate_ids": true,
+    "ko_config_v17": true,
+    "en_config_v17": true,
+    "ko_status_current": true,
+    "en_status_current": true,
+    "ko_v17_section": true,
+    "en_v17_section": true,
+    "ko_updates_v17": true,
+    "en_updates_v17": true,
+    "lone_survivor_asset_preserved": true,
+    "owner_private_files_excluded": true,
+    "manifest_present": true,
+    "audit_present": true
+  },
+  "passed": 15,
+  "total": 15,
+  "parse_errors": [],
+  "broken_local_refs": [],
+  "duplicate_ids": [],
+  "note": "Static website audit; live hosting, cache/CDN behavior, invite links and external service availability require deployed-site verification."
+}
