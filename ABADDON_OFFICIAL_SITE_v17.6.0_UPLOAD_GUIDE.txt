@@ -1,0 +1,5 @@
+ABADDON OFFICIAL SITE v17.6.0 UPLOAD GUIDE
+1. Upload all files and folders to the current site root.
+2. Overwrite index.html, commands.html, updates.html, config.js and English equivalents.
+3. Keep the assets folder; v17.4.1 mount visuals are preserved.
+4. Hard refresh after upload.

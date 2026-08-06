@@ -1,0 +1,6 @@
+ABADDON OFFICIAL SITE v17.6.0
+- Added Korean/English Chronicle Museum sections
+- Added Korean/English Community Season sections
+- Added latest commands and update history
+- Updated config, metadata and cache versions
+- Preserved v17.4.1 mount catalog and all legacy pages

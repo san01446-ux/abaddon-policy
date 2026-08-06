@@ -1,0 +1,38 @@
+{
+  "version": "17.6.0",
+  "generated_at": "2026-08-07T02:39:00+09:00",
+  "summary": {
+    "checks_passed": 12,
+    "checks_total": 12,
+    "html_pages": 9,
+    "missing_local_refs": 0,
+    "duplicate_id_pages": 0
+  },
+  "checks": {
+    "ko_index_v1760": true,
+    "en_index_v1760": true,
+    "ko_museum_section": true,
+    "en_museum_section": true,
+    "ko_commands_updated": true,
+    "en_commands_updated": true,
+    "config_versions": true,
+    "local_refs_missing_zero": true,
+    "duplicate_ids_zero": true,
+    "mount_assets_preserved": true,
+    "zip_abaddon_official_site_v17.6.0_patch_only": true,
+    "zip_abaddon_official_site_v17.6.0_upload": true
+  },
+  "missing_local_refs": [],
+  "duplicate_ids": {},
+  "pages": [
+    "updates.html",
+    "language.html",
+    "commands.html",
+    "index.html",
+    "black-city.html",
+    "en/updates.html",
+    "en/commands.html",
+    "en/index.html",
+    "en/black-city.html"
+  ]
+}
