@@ -1,0 +1,4 @@
+ABADDON OFFICIAL SITE v6.3.3 NAMED VISUALS
+- 장비 70종 이름별 전용 이미지 안내
+- 보물 20종 감정 결과 전용 이미지 안내
+- 강화 오라 단계와 잘림 이미지 수정 반영

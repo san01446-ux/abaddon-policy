@@ -1,0 +1,196 @@
+{
+  "version": "11.0.0",
+  "scope": "clear final results, settlement ledger, free raises with configurable safety limit, negative debt, shared horse-race finish line, original 48-card hwatu, fairness checks, game city and website sync",
+  "checks": [
+    {
+      "name": "경마 5,000회 규칙 시뮬레이션",
+      "ok": true,
+      "detail": {
+        "finish": 34,
+        "horses": 6
+      }
+    },
+    {
+      "name": "공통 결승선 교차 판정",
+      "ok": true,
+      "detail": {
+        "finish": 34,
+        "photo_finish_candidates": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "name": "경마 UI 공통 완주선",
+      "ok": true,
+      "detail": "all lanes use the same FINISH-sized lane"
+    },
+    {
+      "name": "레이즈 자유 입력 안전 한도",
+      "ok": true,
+      "detail": "all authentic raise paths validate the server-configured per-action limit"
+    },
+    {
+      "name": "보유액 초과 손실 음수 유지",
+      "ok": true,
+      "detail": "charge is not clipped to current balance"
+    },
+    {
+      "name": "중복 예약 키 제거",
+      "ok": true,
+      "detail": 1
+    },
+    {
+      "name": "승자·손익·잔액 결과 훅",
+      "ok": true,
+      "detail": "winner/net/balance before→after + ledger"
+    },
+    {
+      "name": "기존 포커·원카드·조커잡기 잔액 결과",
+      "ok": true,
+      "detail": "legacy card families also show net and balance before→after"
+    },
+    {
+      "name": "결과 이미지 오버레이",
+      "ok": true,
+      "detail": "final PNG includes the result embed"
+    },
+    {
+      "name": "최종 결과 PNG 생성",
+      "ok": true,
+      "detail": [
+        1280,
+        720
+      ]
+    },
+    {
+      "name": "ABADDON 화투 48장 자산",
+      "ok": true,
+      "detail": {
+        "count": 48,
+        "errors": []
+      }
+    },
+    {
+      "name": "화투 월별 4장 매니페스트",
+      "ok": true,
+      "detail": {
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 4,
+        "5": 4,
+        "6": 4,
+        "7": 4,
+        "8": 4,
+        "9": 4,
+        "10": 4,
+        "11": 4,
+        "12": 4
+      }
+    },
+    {
+      "name": "화투 카드 실렌더",
+      "ok": true,
+      "detail": {
+        "file": "ABADDON_v11.0.0_HWATU_RENDER_AUDIT.png",
+        "bytes": 96578
+      }
+    },
+    {
+      "name": "v11 신규 명령 접근 이름",
+      "ok": true,
+      "detail": {
+        "declarations": 1028,
+        "conflicts": {}
+      }
+    },
+    {
+      "name": "v11 최종 등록 순서",
+      "ok": true,
+      "detail": "v10.9.5 → v11.0.0 → final English alias sync"
+    },
+    {
+      "name": "!테스트 상세 최신화",
+      "ok": true,
+      "detail": "latest patch scope only"
+    },
+    {
+      "name": "!패치노트 최신화",
+      "ok": true,
+      "detail": "latest patch notes callback"
+    },
+    {
+      "name": "Python 전체 컴파일",
+      "ok": true,
+      "detail": {
+        "files": 107,
+        "errors": []
+      }
+    },
+    {
+      "name": "홈페이지 내부 링크",
+      "ok": true,
+      "detail": {
+        "html": 7,
+        "links": 140,
+        "errors": []
+      }
+    },
+    {
+      "name": "English 페이지 한글 누출",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "홈페이지 v11 동기화",
+      "ok": true,
+      "detail": "KO/EN config, commands and update history"
+    },
+    {
+      "name": "홈페이지 v11 미리보기",
+      "ok": true,
+      "detail": [
+        "ABADDON_v11.0.0_GAME_CITY_PREVIEW.png",
+        "ABADDON_HWATU_48_SHEET.png",
+        "ABADDON_v11.0.0_RACE_FINISH_PREVIEW.png",
+        "ABADDON_v11.0.0_RESULT_PREVIEW.png"
+      ]
+    },
+    {
+      "name": "홈페이지 JavaScript 문법",
+      "ok": true,
+      "detail": "node --check passed"
+    },
+    {
+      "name": "기존 봇 파일 보존",
+      "ok": true,
+      "detail": {
+        "base": 644,
+        "current": 701,
+        "missing": [],
+        "legacy_names": "4/4"
+      }
+    },
+    {
+      "name": "기존 홈페이지 파일 보존",
+      "ok": true,
+      "detail": {
+        "base": 337,
+        "current": 346,
+        "missing": [],
+        "legacy_names": "1/1"
+      }
+    }
+  ],
+  "passed": 25,
+  "failed": 0,
+  "limitations": [
+    "discord.py and a live Discord token are unavailable in the build environment; Gateway interactions require deployment smoke testing."
+  ]
+}

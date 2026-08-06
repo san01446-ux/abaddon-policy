@@ -1,0 +1,1 @@
+압축을 풀어 index.html, commands.html, updates.html, config.js, script.js, style.css, assets 폴더를 홈페이지 루트에 업로드하세요. 배포 후 Ctrl+F5로 v710 캐시를 갱신하세요.

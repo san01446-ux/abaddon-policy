@@ -1,0 +1,116 @@
+{
+  "version": "15.0.0",
+  "components": [
+    {
+      "id": "airship",
+      "file": "city/components/airship.png",
+      "sha256": "8b5104f36b29b748cf33c1d958ce5461ab820e91bdab05ca1f68a404e9563039"
+    },
+    {
+      "id": "bench",
+      "file": "city/components/bench.png",
+      "sha256": "bdd7b5d1d60652cd33118a93cec8a4b259b11d9e9e066753f4847ffdc6a8c772"
+    },
+    {
+      "id": "central_casino",
+      "file": "city/components/central_casino.png",
+      "sha256": "43c7bcb719838c11aca652cb4db6b99a9c2c0c47e37da1c4d7d14980a103eaf5"
+    },
+    {
+      "id": "demon_market",
+      "file": "city/components/demon_market.png",
+      "sha256": "d07ee4c418ae5c80dff1086ebe0f69e3cd028fa552c0ebe2e54319ae4a96e39c"
+    },
+    {
+      "id": "faction_banner",
+      "file": "city/components/faction_banner.png",
+      "sha256": "2f9e7b5ae942f1500d6d5004121d82a283c4bf4c0e7b418aa5681dde0d3e3abe"
+    },
+    {
+      "id": "fireworks",
+      "file": "city/components/fireworks.png",
+      "sha256": "07e945f79caa9460a0e510e566f4a802209881b3fd7aeb05741627c2a0808cc8"
+    },
+    {
+      "id": "flowerbed",
+      "file": "city/components/flowerbed.png",
+      "sha256": "4d33549e5522d687267570f16298df23cb94be8e829f09c4bdec8574ccc37cb2"
+    },
+    {
+      "id": "fountain",
+      "file": "city/components/fountain.png",
+      "sha256": "676a34b2c4a94e898f4bdc28da622a5958523d27676f61f98beb8c77cdd28b9d"
+    },
+    {
+      "id": "gold_statue",
+      "file": "city/components/gold_statue.png",
+      "sha256": "39a119272620c0bd274fc05c9e938292ba6095b185c1df581bd61468cddacca2"
+    },
+    {
+      "id": "harbor",
+      "file": "city/components/harbor.png",
+      "sha256": "5748027cf6468bfbbe58235ece74e4fe6e7818e903d942f0d20ff916bcee8dbb"
+    },
+    {
+      "id": "hwatu_street",
+      "file": "city/components/hwatu_street.png",
+      "sha256": "767250ee61c353d2fd0b7c93cdb7b19200b19be16420f90768b767fcfd47a504"
+    },
+    {
+      "id": "legend_trophy",
+      "file": "city/components/legend_trophy.png",
+      "sha256": "d34ca53c53f74df044b5f3c30eafc53f5a433834ce42e979d1bcb28d948ef208"
+    },
+    {
+      "id": "neon_gate",
+      "file": "city/components/neon_gate.png",
+      "sha256": "3f9f64ec4aeee99a821697ff34b3a6f1949fe2a21143012e307115321bbebb83"
+    },
+    {
+      "id": "neon_train",
+      "file": "city/components/neon_train.png",
+      "sha256": "348b0f24d1ca88cae0defb5f8916a19c98f8f130fbcc649cc7f76467953d6ad7"
+    },
+    {
+      "id": "night_tree",
+      "file": "city/components/night_tree.png",
+      "sha256": "0238525f21f265976fd065d9026e28bc97957068cae57c5488f98cc1bc8cfcbd"
+    },
+    {
+      "id": "prison",
+      "file": "city/components/prison.png",
+      "sha256": "146d9d90a1fd9dd8c4a051f3efa1543c9160ed85f7148e9a32bc27bacff5a7a0"
+    },
+    {
+      "id": "racetrack",
+      "file": "city/components/racetrack.png",
+      "sha256": "c68aff7d3f4c2a66177f6c9b331cbb1f377f6d35fb34809694955bb0a2a41aa2"
+    },
+    {
+      "id": "rift_portal",
+      "file": "city/components/rift_portal.png",
+      "sha256": "685a5af454debc9ec0634ff7cd72a36c1cd6e90a785856d33da9fa0a035adf8f"
+    },
+    {
+      "id": "ruin_ward",
+      "file": "city/components/ruin_ward.png",
+      "sha256": "d4c56a6f79d8fb0b5a7fe018033db8e6c685e2ba49fb42d6cd26d7057cb9b50a"
+    },
+    {
+      "id": "street_lamp",
+      "file": "city/components/street_lamp.png",
+      "sha256": "866ab93c0b2f0eb20e6006e167613d85780cda8921a43730bb6ec3181f0ac48c"
+    }
+  ],
+  "effects": [
+    "mining",
+    "crafting",
+    "boss",
+    "explore",
+    "trade",
+    "build",
+    "heal",
+    "failure",
+    "legendary"
+  ]
+}

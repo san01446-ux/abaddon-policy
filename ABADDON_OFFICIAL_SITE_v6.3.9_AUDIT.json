@@ -1,0 +1,78 @@
+{
+  "version": "6.3.9",
+  "status": "FAIL",
+  "checks": {
+    "python_compile": {
+      "ok": true,
+      "files": 51,
+      "errors": []
+    },
+    "new_root_command_tokens": 30,
+    "new_root_command_collisions": {
+      "ok": true,
+      "items": []
+    },
+    "new_internal_token_duplicates": {
+      "ok": true,
+      "items": {}
+    },
+    "command_guide_categories": {
+      "ok": true,
+      "base": 13,
+      "runtime_total": 15,
+      "limit": 25
+    },
+    "guide_strings": {
+      "ok": true,
+      "required": [
+        "!다크존",
+        "!밀수품운반",
+        "!보급선",
+        "!고철갈갈이",
+        "!우편함",
+        "!알림설정"
+      ]
+    },
+    "equipment_nameerror": {
+      "ok": false,
+      "top_level_calls": []
+    },
+    "life_supply_hook": {
+      "ok": true
+    },
+    "slot_supply_hook": {
+      "ok": true
+    },
+    "casino_images_disabled": {
+      "ok": true
+    },
+    "site_javascript": {
+      "script.js": {
+        "ok": true,
+        "stderr": ""
+      },
+      "config.js": {
+        "ok": true,
+        "stderr": ""
+      }
+    },
+    "site_local_missing": {
+      "ok": true,
+      "count": 0,
+      "items": []
+    },
+    "site_latest_badges": 1,
+    "site_version": {
+      "ok": true
+    },
+    "equipment_assets": 70,
+    "treasure_assets": 20,
+    "safety": {
+      "darkzone_existing_inventory_protected": true,
+      "smuggling_contract_only_loss": true,
+      "equipped_high_tier_scrap_blocked": true,
+      "supply_multiplier": 2.0,
+      "supply_duration_minutes": 10
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "version": "6.4.0",
+  "status": "PASS",
+  "javascript": {
+    "script.js": {
+      "ok": true,
+      "stderr": ""
+    },
+    "config.js": {
+      "ok": true,
+      "stderr": ""
+    }
+  },
+  "missing_local_refs": []
+}

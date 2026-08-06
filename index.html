@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<title>ABADDON — 공식 Discord RPG 봇</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#080508" name="theme-color"/>
+<meta content="ABADDON v16.8.0 LONE SURVIVOR. 혼자서도 끝까지 이어지는 개인 로그라이크 생존 원정." name="description"/>
+<link href="style.css?v=1680" rel="stylesheet"/>
+<script defer="" src="config.js?v=1680"></script>
+<script defer="" src="script.js?v=1680"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="index.html"><span class="brand-mark">A</span><span>ABADDON<small>OFFICIAL DISCORD RPG</small></span></a>
+<button aria-label="메뉴 열기" class="menu-button" data-menu-button="" type="button">☰</button>
+<nav class="site-nav" data-site-nav="">
+<a href="index.html">성역</a><a href="#live">실시간</a><a href="commands.html">명령어</a><a href="black-city.html">BLACK CITY</a><a href="updates.html">기록</a><a class="nav-cta" data-discord-link="" href="#">공식 Discord</a>
+<a data-language-link="" href="en/index.html">English</a></nav>
+</div>
+</header>
+<main>
+<section class="hero">
+<div class="container hero-grid">
+<div class="hero-copy-wrap">
+<div class="eyebrow">THE BLACK CATHEDRAL · UNIFIED SURVIVOR NETWORK</div>
+<h1>한 번 고른 언어로.<br/><span>끝까지 생존하세요.</span></h1>
+<p class="hero-copy">ABADDON v16.8.0은 기존 시즌·장비·채집·도시 시스템을 연결한 개인 로그라이크 생존 원정을 제공합니다.</p>
+<div class="hero-actions"><a class="button primary" data-bot-link="" href="#">＋ 아바돈 소환하기</a><a class="button secondary" href="#live">실시간 기록 보기 →</a></div>
+<div class="status-row"><span class="pill"><span class="status-dot" data-live-dot=""></span><b data-status="">ONLINE</b></span><span class="pill">LATEST <b data-version="">v16.8.0</b></span><span class="pill" data-status-note="">LIVING LEGENDS · 통합 명령어 · 통합 채집 · 개인 전설 · 운명 사건 · 편의센터</span></div>
+</div>
+<div class="core-card gothic-arch">
+<div class="core-card-inner">
+<span class="version-chip" data-version="">v16.8.0</span>
+<div aria-hidden="true" class="sigil"><span></span></div>
+<h2 class="core-title-inline"><b>ABADDON</b><span>v16.8.0 LONE SURVIVOR</span></h2>
+<p><code>!솔로원정</code>에서 혼자 출발해 사건·전투·보급·보스를 거쳐 기존 성장과 세계 기록을 이어가세요.</p>
+<div class="check-list"><div class="check-item"><span class="check-icon">✓</span><span>시즌 1~5 메인 RPG와 기존 기능을 삭제 없이 보존</span></div><div class="check-item"><span class="check-icon">✓</span><span>5개 영역·44개 기능군·카지노·도박 분리 분류</span></div><div class="check-item"><span class="check-icon">✓</span><span>명령 선택 후 즉시 실행·입력창·검색·즐겨찾기</span></div><div class="check-item"><span class="check-icon">✓</span><span>도시 공방 20종 1:1 이미지·정보 버튼·자동 이모지</span></div></div>
+<div class="mini-stats"><div class="mini-stat"><b>5</b><span>명령 영역</span></div><div class="mini-stat"><b>44</b><span>기능군</span></div><div class="mini-stat"><b>20</b><span>도시 부품</span></div></div>
+</div>
+</div>
+</div>
+</section><section aria-label="Quick section navigation" class="quick-jump-shell">
+<div class="container quick-jump-wrap">
+<div class="quick-jump-title">빠른 이동</div>
+<nav class="quick-jump" data-quick-jump="">
+<a href="#v1680">LONE SURVIVOR</a>
+<a href="#v1671">이전 핫픽스</a>
+<a href="#casino-split">카지노·도박</a>
+<a href="#newcomer-guide">신규 안내</a>
+<a href="#core-rpg">메인 RPG</a>
+<a href="#command-overhaul">전체 명령</a>
+<a href="#city-workshop">도시 공방</a>
+<a href="#reaction-upgrade">자동 이모지</a>
+<a href="#latest">v16.2 기능</a>
+<a href="#command-center">통합 명령어</a>
+<a href="#gather-center">채집센터</a>
+<a href="#living-legend">살아 있는 전설</a>
+<a href="#mount-catalog">탈것 8종</a>
+<a href="#visual-fix">이미지 수정</a>
+<a href="#black-city">BLACK CITY</a>
+<a href="#neon-abyss">NEON ABYSS</a>
+<a href="#deploy-check">배포 점검</a>
+</nav>
+<button class="legacy-toggle" data-legacy-toggle="" type="button">이전 기능 전체 보기</button>
+</div>
+</section><section class="section v1680-section" id="v1680"><div class="container"><div class="section-head"><div><div class="eyebrow">V16.8.0 · LONE SURVIVOR</div><h2>혼자서도 끝까지 이어지는 개인 로그라이크 생존 원정</h2></div><p>7개 세계, 4개 난이도, NPC 동료 5종, 주간 변이와 씨앗 코드를 기존 스토리·장비·채집·도시 공방·개인 전설에 연결했습니다.</p></div><div class="feature-grid compact-grid"><article><span>🧭</span><h3>버튼형 개인 원정</h3><p>출발 → 사건 → 전투·수색 → 보급 판단 → 보스 → 귀환을 6~9단계로 진행합니다.</p></article><article><span>🗺️</span><h3>세계 7종</h3><p>시즌 1~5, BLACK CITY, NEON ABYSS 지역을 현재 진행과 함께 재사용합니다.</p></article><article><span>🤖</span><h3>NPC 동료 5종</h3><p>정찰병·의무병·기술자·중화기병·교섭가 중 두 명을 편성해 혼자서도 파티 전술을 사용합니다.</p></article><article><span>🧬</span><h3>주간 변이·씨앗</h3><p>매주 위험과 보상이 달라지고 같은 씨앗 코드는 같은 조건의 재도전을 제공합니다.</p></article><article><span>💾</span><h3>중도 저장·구조</h3><p>재시작 뒤 이어서 진행하며 실패해도 영구 손실 대신 구조와 부분 보상으로 복귀합니다.</p></article><article><span>📜</span><h3>도감·기록·변화량</h3><p>사건·적·NPC·결말을 수집하고 획득·소모·체력·감염·도시 부품 변화를 결과에 표시합니다.</p></article></div><div class="v1092-visual-gallery"><figure><img alt="ABADDON v16.8.0 LONE SURVIVOR 개인 생존 원정" loading="lazy" src="assets/v1680/ABADDON_v16.8.0_LONE_SURVIVOR_PREVIEW.png"/><figcaption>개인 원정·주간 변이·NPC 편성·중도 저장</figcaption></figure></div><div class="raid-command-row"><code>!솔로원정</code><code>!솔로원정시작</code><code>!원정이어하기</code><code>!주간변이지역</code><code>!원정도감</code><code>!원정씨앗</code><code>!원정난이도</code><code>!솔로원정기록</code><code>!1680통합검수 상세</code></div><div class="notice-card"><b>기존 기능·저장 데이터 삭제 0건</b><p>새 원정은 기존 콘텐츠를 덮어쓰지 않고 연결해 사용합니다. 한국어 선택은 한국어만, English 선택은 English-only 화면만 표시합니다.</p></div></div></section><section class="section v1671-section" id="v1671"><div class="container"><div class="section-head"><div><div class="eyebrow">V16.7.1 · COMMAND CENTER HOTFIX</div><h2><code>!명령어</code> 드롭다운 NameError를 실제 오류 기록 기준으로 수정했습니다</h2></div><p>기능군·세부 명령 선택 메뉴가 사용하는 안전 함수 3종을 명시적으로 연결하고 실시간 명령 목록과 한·영 분리 구조를 그대로 유지합니다.</p></div><div class="feature-grid compact-grid"><article><span>🩹</span><h3>NameError 수정</h3><p><code>_safe_select_options</code> 누락과 잠재적인 <code>_safe_embed</code>, <code>_safe_view</code> 누락을 함께 차단했습니다.</p></article><article><span>📚</span><h3>전체 명령 유지</h3><p>상위 5개 카테고리, 기능군·명령 드롭다운, 검색·즐겨찾기·빠른 버튼을 그대로 보존합니다.</p></article><article><span>🌐</span><h3>언어 분리 유지</h3><p>한국어 선택 시 한국어만, English 선택 시 English-only UI만 표시합니다.</p></article></div><div class="raid-command-row"><code>!명령어</code><code>!help</code><code>!1671통합검수 상세</code><code>!테스트 상세</code><code>!실시간오류센터 상세</code></div><div class="notice-card"><b>완전 재시작 필요</b><p>실행 중 파일만 덮어쓰지 말고 봇 프로세스를 완전히 재시작해야 이전 모듈 캐시가 제거됩니다.</p></div></div></section><section class="section v1670-section" id="v1670"><div class="container"><div class="section-head"><div><div class="eyebrow">V16.7.0 · LIVE OPS &amp; POLISH</div><h2>새 기능을 더 쌓기보다, 운영과 실제 사용 화면을 단단하게 닦았습니다</h2></div><p>버튼형 운영 허브, 확인형 메시지 정리, 24시간 실사용 가시화, 죽은 연결과 모바일 UI 검수를 추가했습니다.</p></div><div class="feature-grid compact-grid"><article><span>🛡️</span><h3>운영 광택 센터</h3><p>정리·오류·명령 건강·서버 운영·알림·초보 안내·패치노트를 버튼 두 줄로 실행합니다.</p></article><article><span>🧹</span><h3>확인형 메시지 정리</h3><p>10·30·50·100개 또는 봇·링크·첨부·특정 사용자 메시지를 반드시 확인 후 정리합니다.</p></article><article><span>📊</span><h3>24시간 실사용 통계</h3><p>재시작 이후 실행 수, 실패율, 평균·p95 응답시간, 반복 실패와 느린 명령을 표시합니다.</p></article><article><span>🧟</span><h3>죽은 기능 검수</h3><p>명령·콜백·설명·English 접근·빠른 이동·도시 부품 자산의 끊긴 연결을 찾습니다.</p></article><article><span>📱</span><h3>모바일 화면 마감</h3><p>임베드·선택 메뉴·버튼 제한과 만료된 상호작용 안전 처리를 다시 검사합니다.</p></article><article><span>🌐</span><h3>언어 완전 분리</h3><p>한국어 선택은 한국어만, English 선택은 English-only 패널과 버튼만 표시합니다.</p></article></div><div class="raid-command-row"><code>!운영광택센터</code><code>!메시지정리센터</code><code>!실사용통계 상세</code><code>!죽은기능검수 상세</code><code>!화면광택검수 상세</code><code>!1670통합검수 상세</code></div><div class="notice-card"><b>기존 기능·저장 데이터 삭제 0건</b><p>기존 운영 명령을 대체하거나 삭제하지 않고, 자주 쓰는 진입점과 검수 계층만 추가했습니다.</p></div></div></section><section class="section v1661-section" id="v1661"><div class="container"><div class="section-head"><div><div class="eyebrow">V16.6.1 · RUNTIME INTERACTION HOTFIX</div><h2>장비 버튼 오류와 Discord 전송 제한 문제를 실제 로그 기준으로 수정했습니다</h2></div><p><code>_MissingSentinel.author</code>, <code>400 Invalid Form Body</code>, 만료된 선택 메뉴 오류를 집중 보완했습니다.</p></div><div class="feature-grid compact-grid"><article><span>🛡️</span><h3>버튼 명령 브리지</h3><p>discord.py 2.7의 MISSING Cog 값을 일반 Cog로 오인하지 않도록 수정해 <code>!장비</code> 같은 기존 명령을 버튼에서도 안전하게 실행합니다.</p></article><article><span>🧩</span><h3>선택 메뉴 안전화</h3><p>옵션 25개, 라벨·값·설명 길이, 중복 값과 빈 목록을 전송 전에 자동 정리합니다.</p></article><article><span>🧾</span><h3>임베드 안전화</h3><p>필드 25개와 전체 6000자 제한을 넘는 오래된 결과 화면을 자동 축약해 전송 실패를 막습니다.</p></article><article><span>⏱️</span><h3>만료 UI 대응</h3><p>명령어·장비 드롭다운을 먼저 승인한 뒤 원본 메시지를 편집해 <code>NotFound</code> 가능성을 줄였습니다.</p></article></div><div class="raid-command-row"><code>!장비</code><code>!명령어</code><code>!카지노</code><code>!UI안정화검수 상세</code><code>!1661통합검수 상세</code><code>!테스트 상세</code><code>!패치노트</code></div><div class="notice-card"><b>기존 기능·저장 데이터 삭제 0건</b><p>기능 구조는 유지하고 실제 Discord 실행 경로와 전송 페이로드만 안전하게 보강했습니다.</p></div></div></section><section class="section v1660-section" id="v1660"><div class="container"><div class="section-head"><div><div class="eyebrow">V16.6.0 · FIRST SURVIVAL &amp; LIVE QA</div><h2>처음 온 생존자는 길을 잃지 않고, 운영자는 실제 오류를 놓치지 않습니다</h2></div><p>저장형 초보 여정, 획득·변화 자동 요약, 상황형 다음 행동, 실시간 오류센터, 경제 정산 검수와 용어 설명을 추가했습니다.</p></div><div class="feature-grid compact-grid"><article><span>🌱</span><h3>첫 생존자 여정</h3><p>가입 → 시즌 1 → 폐허 탐색 → 장비 → 기지 → 오늘 할 일을 버튼으로 진행하며 중간 단계를 저장합니다.</p></article><article><span>🎁</span><h3>획득·변화 가시화</h3><p>명령 전후의 실제 저장 상태를 비교해 획득, 소모, 잔액·경험치·체력 변화와 새 해금을 보여줍니다.</p></article><article><span>🧭</span><h3>상황형 추천 버튼</h3><p>체력, 감염, 장비, 부채, 현재 콘텐츠에 따라 회복·장비·지원금·다음 스토리 버튼이 달라집니다.</p></article><article><span>🛰️</span><h3>실시간 오류센터</h3><p>명령 실패, 버튼·드롭다운 사건, 반복 오류와 사건 번호를 기존 운영 장부에서 통합 조회합니다.</p></article><article><span>🧾</span><h3>경제 정산 검수</h3><p>카지노·도박·경마·정부지원금의 1회 차감, 1회 정산, 환불과 음수 잔액 안전망을 점검합니다.</p></article><article><span>❓</span><h3>생존 용어 사전</h3><p>스토리·차원·세력·크루·운명·카지노·도박·도시 공방을 짧게 설명하고 바로 갈 명령을 표시합니다.</p></article></div><div class="raid-command-row"><code>!초보생존</code><code>!초보센터</code><code>!용어사전</code><code>!결과요약설정</code><code>!추천버튼설정</code><code>!실시간오류센터 상세</code><code>!경제정산검수 상세</code><code>!1660통합검수 상세</code></div><div class="notice-card"><b>기존 기능·저장 데이터 삭제 0건</b><p>v16.6은 기존 시스템 위에 안내·가시화·실행 품질 계층을 추가합니다. 한국어와 English 화면은 서로 섞지 않고 별도로 표시합니다.</p></div></div></section><section class="section v1650-section" id="v1650"><div class="container"><div class="section-head"><div><div class="eyebrow">V16.5.0 · SURVIVOR CORE COMPLETE</div><h2>흩어진 기능을 한 흐름으로 묶고, 다음 행동이 바로 보이게 만들었습니다</h2></div><p>명령 허브 2페이지, 단일 언어 UI, 스토리 나침반, 생존 허브, 도시 공방 2.0, 다음 행동 버튼과 명령 건강검진을 한 번에 적용했습니다.</p></div><div class="feature-grid compact-grid"><article><span>📚</span><h3>명령 허브 완성</h3><p>상위 5개 버튼 → 기능군 드롭다운 → 전체 명령 → 실행 순서와 빠른 버튼 2페이지를 제공합니다.</p></article><article><span>🌐</span><h3>한글·English 완전 분리</h3><p>한국어 선택 시 한국어만, English 선택 시 영문 별칭·설명·버튼만 표시합니다.</p></article><article><span>🧭</span><h3>스토리 나침반</h3><p>시즌 1~5 진행, 마지막 선택, 현재 목표와 이어서 진행 버튼을 한 화면에 표시합니다.</p></article><article><span>👤</span><h3>생존자 통합 허브</h3><p>체력·감염·경제·보유 자원·정부지원 여부와 다음 추천 행동을 모았습니다.</p></article><article><span>🎨</span><h3>도시 공방 2.0</h3><p>회전, 레이어, 최근 삭제, 작업 기록과 도시 지도 렌더링 호환을 추가했습니다.</p></article><article><span>🪲</span><h3>버그·건강검진</h3><p>명령 누락, 분류, 설명, 영문 별칭, 중복 충돌과 메뉴 연결을 한 번에 검사합니다.</p></article></div><div class="raid-command-row"><code>!명령어</code><code>!스토리나침반</code><code>!생존허브</code><code>!도시작업기록</code><code>!다음행동설정</code><code>!명령건강검진 상세</code><code>!1650통합검수 상세</code></div><div class="notice-card"><b>기존 기능·저장 데이터 삭제 0건</b><p>기존 1,300여 개 명령과 시즌·도시·경제·카지노 저장 구조는 유지하고 접근성과 가시화 계층을 추가했습니다.</p></div></div></section><section class="section v1631-section" data-section="v1631" id="v1631">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V16.3.1 · CASINO &amp; GAMBLING NAVIGATION HOTFIX</div><h2>카지노와 도박을 갈라서, 처음 온 생존자도 한눈에 찾습니다</h2></div><p><code>!명령어</code> 첫 화면에 5개 영역 설명과 카지노·도박 빠른 버튼을 추가하고, 신규 입장 안내와 재기 지원 안전망을 연결했습니다.</p></div>
+<div class="feature-grid compact-grid">
+<article id="casino-split"><span>🎰</span><h3>BLACK CASINO·포커</h3><p><code>!카지노</code>, 홀덤·포커·블랙잭·바카라·슬롯·VIP·잭팟·딜러·상점을 하나의 카지노 기능군으로 표시합니다.</p></article>
+<article><span>🎲</span><h3>도박·배팅·경마</h3><p>경마·탐색·주파수·생존 룰렛·도박 잔액·기록과 재기 지원을 카지노와 분리해 표시합니다.</p></article>
+<article id="newcomer-guide"><span>🌱</span><h3>신규 생존자 입장 안내</h3><p>서버 입장 시 RPG 시작 순서와 카테고리를 설명하고 스토리 시작·전체 명령·카지노·도박 버튼을 제공합니다.</p></article>
+<article><span>🏛️</span><h3>정부 재기 지원금</h3><p>잔액 -10,000 이하일 때 24시간마다 최대 250,000 식량을 지급하며 지급 전후와 누적 지원을 기록합니다.</p></article>
+<article><span>⛏️</span><h3>획득·변화 결과 표시</h3><p>채집 결과 카드에서 이번 획득, 소모·수치 변화, 누적 횟수를 각각 분리해 보여줍니다.</p></article>
+<article><span>🧭</span><h3>첫 화면 기능 설명</h3><p>메인 RPG·플레이·세계·소셜·운영에 무엇이 들어 있는지 개수와 함께 안내합니다.</p></article>
+</div>
+<div class="raid-command-row"><code>!명령어</code><code>!카지노</code><code>!도박정보</code><code>!정부지원금</code><code>!초보센터</code><code>!도박분류검수 상세</code><code>!1631통합검수 상세</code></div>
+<div class="notice-card"><b>기존 기능 삭제 없음</b><p>기존 카지노·도박·카드·스토리 명령과 저장 데이터는 그대로 유지하고 탐색 경로만 명확하게 나눴습니다.</p></div>
+</div></section><section class="section v1630-section" data-section="core-rpg" id="core-rpg">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V16.3.0 · CORE RPG COMMAND &amp; CITY OVERHAUL</div><h2>시즌 1부터 시작하는 본래의 아포칼립스 RPG를 다시 전면에</h2></div><p>짬뽕된 기능을 버리지 않고 메인 스토리를 중심축으로 다시 정렬했습니다. 큰 영역 → 기능군 → 명령 → 실행 순서라 처음 보는 생존자도 길을 잃지 않습니다.</p></div>
+<div class="feature-grid compact-grid">
+<article><span>📖</span><h3>시즌 1→5 메인 진행</h3><p>검은 주파수, 백색 방주, 종말의 왕좌, 황혼의 종착역, 잿빛 연합전선을 한 버튼에서 순서대로 확인합니다.</p></article>
+<article id="command-overhaul"><span>📚</span><h3>전체 명령 자동 분류</h3><p>수동 안내 목록이 아니라 소스 선언 1,343개·접근 이름 2,979개를 검수하고 실제 런타임 등록 명령을 5개 영역과 44개 기능군으로 자동 분류하고 25개씩 페이지를 나눕니다.</p></article>
+<article><span>🚀</span><h3>선택 후 바로 실행</h3><p>명령을 선택하면 설명·입력법·별칭을 확인하고 실행 버튼으로 바로 사용합니다. 필수 입력값은 모달 입력창으로 받습니다.</p></article>
+<article id="city-workshop"><span>🎨</span><h3>도시 공방 20종 리뉴얼</h3><p>기존 부품 ID를 유지한 512×512 투명 이미지로 교체했습니다. 선택 이미지 즉시 변경, 위치·크기 조정, 적용·복구 기록을 제공합니다.</p></article>
+<article><span>📊</span><h3>정보 화면 실행 버튼</h3><p>복사만 되던 바로가기를 지갑·게임·경제·세계지도·전체 명령어 실제 실행 버튼으로 교체했습니다.</p></article>
+<article id="reaction-upgrade"><span>✨</span><h3>화려한 자동 이모지</h3><p>17종 프리셋과 14종 키워드 규칙, 메시지당 최대 7개 반응을 지원하며 기존 서버 사용자 설정은 유지합니다.</p></article>
+</div>
+<div class="v1630-showcase-grid">
+<figure><img alt="ABADDON v16.3 complete command center" loading="lazy" src="assets/v1630/previews/command_center_ko.png"/><figcaption>메인 RPG → 기능군 → 짧은 설명 → 실행 버튼</figcaption></figure>
+<figure><img alt="ABADDON v16.3 city parts catalog" loading="lazy" src="assets/v1630/previews/city_parts_catalog_ko.png"/><figcaption>도시 지도와 1:1 호환되는 부품 20종</figcaption></figure>
+<figure><img alt="ABADDON v16.3 profile quick actions" loading="lazy" src="assets/v1630/previews/profile_quick_actions_ko.png"/><figcaption>내 정보에서 복사 없이 바로 실행</figcaption></figure>
+</div>
+<div class="raid-command-row"><code>!명령어</code><code>!명령어전수검수 상세</code><code>!도시부품</code><code>!도시꾸미기</code><code>!도시부품검수 상세</code><code>!이모지확장설정</code><code>!1630통합검수 상세</code><code>!도박분류검수 상세</code><code>!1631통합검수 상세</code><code>!테스트 상세</code><code>!패치노트</code></div>
+<div class="notice-card"><b>보존 정책</b><p>기존 명령 삭제 0건, 기존 도시 부품 ID 유지, 기존 저장 데이터 유지, 직접 입력 방식 유지. 새 UI는 기존 기능을 실제로 실행하는 탐색·실행 계층입니다.</p></div>
+</div></section><section class="section v1620-section" data-section="latest" id="latest"><div class="container"><div class="section-head"><div><div class="eyebrow">V16.0.0–V16.2.1 · LIVING LEGENDS 시각 핫픽스</div><h2>기능은 그대로, 찾고 이어가는 방식은 완전히 새로워졌습니다</h2></div><p>초창기 명령부터 NEON ABYSS까지 삭제 없이 보존하고, 버튼형 명령어 센터·통합 채집·개인 연대기·운명 사건·탈것·크루 합동기와 편의센터를 연결했습니다.</p></div><div class="feature-grid compact-grid"><article><span>🧭</span><h3>통합 명령어 센터</h3><p>5개 큰 영역, 세부 그룹·기능 드롭다운, 대표/전체 토글과 짧은 설명으로 모든 시대의 기능을 찾습니다.</p></article><article><span>⛏️</span><h3>통합 채집센터</h3><p>일반·도시·차원·크루·동료 채집을 한 메뉴에 묶고 공통 쿨타임, 가방, 숙련도와 결과 이미지를 제공합니다.</p></article><article><span>✨</span><h3>개인 전설</h3><p>중요한 행동을 연대기로 남기고 운명 성향, 대표 탈것과 기록을 전설 카드 이미지로 만듭니다.</p></article><article><span>🎬</span><h3>오늘의 사건과 감독센터</h3><p>개인 선택형 사건과 관리자 선택형 도시 침공·축제·엔딩 장면을 단계별 연출로 진행합니다.</p></article><article><span>🏍️</span><h3>탈것 8종</h3><p>네온 바이크부터 크루 기함까지 전설 점수로 해금하고 도시·차원 이동의 대표 외형으로 사용합니다.</p></article><article><span>🧰</span><h3>편의성 전면 개편</h3><p>편의센터, 내 진행, 즐겨찾기, 최근 명령, 초기 기능 검수와 한국어·English 동기화를 제공합니다.</p></article></div><div class="v1092-visual-gallery"><figure id="command-center"><img alt="ABADDON v16.2 통합 명령어 센터" loading="lazy" src="assets/v1621/previews/command_center_ko.png"/><figcaption>큰 영역→세부 그룹→기능으로 줄인 명령어 센터</figcaption></figure><figure id="gather-center"><img alt="ABADDON v16.2 통합 채집센터" loading="lazy" src="assets/v1621/previews/gather_hub_ko.png"/><figcaption>한글 폰트 깨짐을 막은 통합 채집센터</figcaption></figure><figure id="living-legend"><img alt="ABADDON v16.2 살아 있는 전설" loading="lazy" src="assets/v1620/previews/living_legend_ko.png"/><figcaption>개인 연대기·운명·탈것 전설 카드</figcaption></figure><figure id="mount-catalog"><img alt="ABADDON v16.2 탈것 도감" loading="lazy" src="assets/v1621/previews/mount_catalog_ko.png"/><figcaption>최신 탈것 8종 전체 도감</figcaption></figure></div><div class="raid-command-row"><code>!명령어</code><code>!채집</code><code>!편의센터</code><code>!내진행</code><code>!내전설</code><code>!오늘의사건</code><code>!탈것도감</code><code>!크루합동기</code><code>!1620통합검수 상세</code></div><div class="notice-card"><b>기존 기능 삭제 없음</b><p>초기 명령어와 최신 명령어를 모두 유지합니다. 새 화면은 기존 기능으로 이동하는 통합 진입점이며 저장 데이터도 그대로 승계합니다.</p></div></div></section><section class="section visual-fix-section" data-section="visual-fix" id="visual-fix">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V16.2.1 · VISUAL QUALITY &amp; ACCESSIBILITY</div><h2>깨지던 정보 이미지를 한글 안전 렌더러로 다시 만들었습니다</h2></div><p>채집 결과·카오스 프로필·긴급 지원과 같은 정보 이미지가 공통 한글 글꼴 탐색기를 사용합니다. 서버에 글꼴이 없으면 Noto Sans CJK를 임시 캐시에 확보한 뒤 렌더링합니다.</p></div>
+<div class="visual-fix-grid">
+<figure><img alt="ABADDON compact command center" loading="lazy" src="assets/v1621/previews/command_center_ko.png"/><figcaption>큰 영역 → 세부 그룹 → 기능 · 짧은 설명 포함</figcaption></figure>
+<figure><img alt="ABADDON gathering hub" loading="lazy" src="assets/v1621/previews/gather_hub_ko.png"/><figcaption>한글 깨짐을 수정한 통합 채집 이미지</figcaption></figure>
+<figure><img alt="ABADDON emergency support information card" loading="lazy" src="assets/v1621/previews/support_card_ko.png"/><figcaption>실제 결과값으로 생성되는 긴급 지원 정보 카드</figcaption></figure>
+<figure><img alt="ABADDON chaos profile" loading="lazy" src="assets/v1621/previews/chaos_profile_ko.png"/><figcaption>사용자별 값으로 생성되는 카오스 프로필</figcaption></figure>
+</div>
+<div class="quality-points"><span>공통 한글 글꼴 탐색</span><span>이모지 네모문자 제거</span><span>실제 결과값 유지</span><span>샘플 자산·폴백 포함</span></div>
+</div>
+</section><section class="section archive-gateway" id="archive-gateway">
+<div class="container"><div class="section-head"><div><div class="eyebrow">FULL HISTORY · ON DEMAND</div><h2>이전 기능은 필요할 때만 펼쳐봅니다</h2></div><p>기존 기능과 기록은 삭제하지 않았습니다. 처음 접속했을 때는 최신 기능만 보이고, 버튼을 누르면 원하는 위치를 바로 펼칩니다.</p></div>
+<div class="archive-cards"><a data-reveal-legacy="" href="#neon-abyss"><b>NEON ABYSS</b><span>차원·크루·공격대</span></a><a data-reveal-legacy="" href="#black-city"><b>BLACK CITY</b><span>도시·세력·경제</span></a><a data-reveal-legacy="" href="#live"><b>실시간 기록</b><span>서버 활동 피드</span></a><button data-legacy-toggle="" type="button"><b>전체 기록</b><span>모든 버전 섹션 펼치기</span></button></div>
+</div>
+</section>
+<section class="section v1500-section legacy-section" id="neon-abyss"><div class="container"><div class="section-head"><div><div class="eyebrow">V14.0.0–V15.0.0 · NEON ABYSS COMPLETE</div><h2>도시는 살아 움직이고, 모든 행동에는 장면과 반응이 생깁니다</h2></div><p>차원 항해·크루·공격대·서버 연합망·창작센터를 BLACK CITY에 연결하고, 한글 안전 레이어 지도·도시 부품 20종·Unicode 연출·문맥형 연속 대화를 추가했습니다.</p></div><div class="feature-grid compact-grid"><article><span>🏙️</span><h3>레이어형 도시 지도</h3><p>한국어 글꼴을 강제로 검증하고 9개 지역, 세력, 도시 지표와 배치한 장식을 한 장의 PNG로 합성합니다.</p></article><article><span>🧩</span><h3>도시 부품 20종</h3><p>관문·분수·동상·가로등·열차·비행선·차원문·불꽃놀이를 드롭다운과 방향 버튼으로 배치하고 복구합니다.</p></article><article><span>✨</span><h3>행동 연출 엔진</h3><p>채집·제작·보스·탐험·건설·거래가 시작, 진행, 판정, 완료 단계로 메시지를 갱신합니다. 검증된 Unicode 이모지만 사용합니다.</p></article><article><span>🌌</span><h3>차원 항해와 캠페인</h3><p>매주 달라지는 차원, 선택형 캠페인, 서버 우주선, 크루 임무와 영구 차원 계보를 운영합니다.</p></article><article><span>👹</span><h3>연출형 공격대</h3><p>4단계 보스, 크루 공격·방어, 치명타, 체력 단계 변화와 최종 보상 결과를 시각적으로 보여줍니다.</p></article><article><span>💬</span><h3>자연스러운 연속 대화</h3><p>60분·100턴 동안 이전 주제와 짧은 후속 답변을 이어가며 한국어와 English를 메시지별로 분리합니다.</p></article></div><div class="v1092-visual-gallery"><figure><img alt="ABADDON v15 NEON ABYSS 전체 쇼케이스" loading="lazy" src="assets/v1500/previews/ABADDON_v15.0.0_MASTER_SHOWCASE.png"/><figcaption>NEON ABYSS 전체 기능 쇼케이스</figcaption></figure><figure><img alt="ABADDON v15 네온 도시" loading="lazy" src="assets/v1500/city/neon_city_background.png"/><figcaption>레이어형 도시 전경과 지역</figcaption></figure><figure><img alt="ABADDON v15 보스 페이즈" loading="lazy" src="assets/v1500/boss/boss_stage_showcase.png"/><figcaption>4단계 보스 전투 연출</figcaption></figure></div><div class="raid-command-row"><code>!도시지도</code><code>!도시꾸미기</code><code>!도시부품</code><code>!연출도감</code><code>!차원탐사</code><code>!차원기지</code><code>!크루</code><code>!연합망</code><code>!공격대</code><code>!차원보스공격</code><code>!대화모드</code><code>!1500통합검수 상세</code></div><div class="notice-card"><b>English 항상 동기화</b><p>영문 사용자는 <code>!citymap</code>, <code>!citydecorate</code>, <code>!dimensionexplore</code>, <code>!crew</code>, <code>!dimensionraid</code>, <code>!riftbossattack</code>, <code>!chatmode</code>를 사용하며 결과와 대화도 English만 표시됩니다.</p></div></div></section><section class="section v1320-section legacy-section" id="black-city"><div class="container"><div class="section-head"><div><div class="eyebrow">V13.0.0–V13.3.0 · BLACK CITY COMPLETE</div><h2>서버가 하나의 살아 있는 검은 도시가 됩니다</h2></div><p>도시 지도, 세력과 영토, 생산 경제, 아지트, 선택형 범죄, 생활 NPC, 4주 시즌과 다중 엔딩을 하나의 복구 가능한 월드로 연결했습니다.</p></div><div class="feature-grid compact-grid"><article><span>🏙️</span><h3>서버별 9지역</h3><p>중앙 카지노부터 월드 관문까지 번영·경제·치안·혼돈·명성이 서버 활동에 따라 변합니다.</p></article><article><span>🏴</span><h3>세력·영토·외교</h3><p>세력을 만들고 지역을 공격·방어하며 동맹, 휴전, 중립과 적대 관계를 운영합니다.</p></article><article><span>⚒️</span><h3>직업·제작·거래소</h3><p>직업 10종, 제작법 10종과 거래 ID·원장·취소 환불이 적용된 에스크로 거래소를 사용합니다.</p></article><article><span>🏠</span><h3>아지트·공동시설</h3><p>개인 공간을 꾸미고 대형 경기장·박물관·공동 금고 같은 서버 시설을 함께 건설합니다.</p></article><article><span>🕵️</span><h3>도시 이야기</h3><p>선택형 범죄와 현상금, 수사, 감옥, 재판, 살아 움직이는 NPC와 도시 신문이 역사를 만듭니다.</p></article><article><span>🌑</span><h3>4주 시즌·8개 결말</h3><p>개척·세력 경쟁·재난·최종 관문을 거쳐 서버 행동에 따라 서로 다른 엔딩을 기록합니다.</p></article></div><div class="v1092-visual-gallery"><figure><img alt="ABADDON BLACK CITY 서버 월드맵" loading="lazy" src="assets/v1320/ABADDON_v13.3.0_BLACK_CITY_MAP_PREVIEW.png"/><figcaption>서버별 9지역과 도시 지표</figcaption></figure><figure><img alt="ABADDON 세력과 도시 경제" loading="lazy" src="assets/v1320/ABADDON_v13.3.0_FACTION_ECONOMY_PREVIEW.png"/><figcaption>세력·제작·에스크로 거래소</figcaption></figure><figure><img alt="ABADDON 도시 뉴스와 시즌" loading="lazy" src="assets/v1320/ABADDON_v13.3.0_CITY_NEWS_SEASON_PREVIEW.png"/><figcaption>생활 NPC·역사·다중 엔딩</figcaption></figure></div><div class="raid-command-row"><code>!도시</code><code>!도시지도</code><code>!도시세력</code><code>!도시거래소</code><code>!오늘의신문</code><code>!도시시즌</code><code>!1320통합검수 상세</code><a class="button secondary" href="black-city.html">공개 월드맵 보기 →</a></div><div class="notice-card"><b>v13.3.0 런타임 오류 패치</b><p>Discord가 컴포넌트 이모지를 거부하면 이모지를 제거한 UI로 한 번만 자동 재시도합니다. 돌발 이벤트 버튼은 저장 작업 전에 즉시 응답해 만료된 상호작용 오류를 줄입니다.</p></div></div></section><section class="section v1220-section legacy-section"><div class="container"><div class="section-head"><div><div class="eyebrow">V12.0.0–V12.2.0 · CHAOS FESTIVAL COMPLETE</div><h2>서버 전체가 함께 노는 혼돈의 축제 완전판</h2></div><p>돌발 이벤트, 파티게임, NPC 관계, 동료 육성, 탐험, 사업, 친목, 꾸미기와 숨겨진 콘텐츠를 하나의 복구 가능한 놀이 시스템으로 묶었습니다.</p></div><div class="feature-grid compact-grid"><article><span>☄️</span><h3>돌발 이벤트 8종</h3><p>황금 고블린·보물상자·운석·유령·은행 강도·아바돈 폭주와 행운·저주의 시간이 서버별 설정으로 등장합니다.</p></article><article><span>🎉</span><h3>파티게임 6종</h3><p>폭탄 돌리기, 마피아, 라이어, 그림자 추리, 생존 룰렛과 배신 심리전을 실제 참가·투표 흐름으로 진행합니다.</p></article><article><span>🤝</span><h3>NPC·동료 육성</h3><p>딜러 대화와 선물, 관계도, 동료 8종의 먹이·탐험·진화·레이스를 지원합니다.</p></article><article><span>🗺️</span><h3>탐험·사업 경영</h3><p>8개 지역의 개인·파티 탐험을 재시작 뒤 이어가고 8종 사업을 개설해 직원·상품·수익을 관리합니다.</p></article><article><span>🎙️</span><h3>예능·친목</h3><p>명장면·불운왕·역전왕, 운세·궁합·월드컵·칭찬·비밀친구·서버 빙고를 쿨타임과 신고 기록으로 보호합니다.</p></article><article><span>🗝️</span><h3>꾸미기·이스터에그</h3><p>칭호·배경·카드 뒷면·테이블 스킨·트로피룸과 비밀 상인·숨겨진 임무·서버 전설 아이템을 발견합니다.</p></article></div><div class="v1092-visual-gallery"><figure><img alt="ABADDON 혼돈 돌발 이벤트" loading="lazy" src="assets/v1220/ABADDON_v12.2.0_CHAOS_EVENT_PREVIEW.png"/><figcaption>서버별 돌발 이벤트와 공동 보스</figcaption></figure><figure><img alt="ABADDON 파티게임과 탐험" loading="lazy" src="assets/v1220/ABADDON_v12.2.0_PARTY_EXPEDITION_PREVIEW.png"/><figcaption>파티게임·동료·복구형 탐험</figcaption></figure><figure><img alt="ABADDON 친목과 수집" loading="lazy" src="assets/v1220/ABADDON_v12.2.0_SOCIAL_COLLECTION_PREVIEW.png"/><figcaption>사업·친목·꾸미기·비밀 수집</figcaption></figure></div><div class="raid-command-row"><code>!혼돈축제</code><code>!돌발이벤트</code><code>!파티게임</code><code>!펫센터</code><code>!탐험</code><code>!내사업</code><code>!꾸미기센터</code><code>!1220통합검수 상세</code></div></div></section><section class="section v1190-section legacy-section"><div class="container"><div class="section-head"><div><div class="eyebrow">V11.7.0–V11.9.0 · SCHEDULE, BROADCAST &amp; COLLECTION</div><h2>일정부터 결승 중계와 수집까지 한곳에서 봅니다</h2></div><p>서버별 일정만 알리고, 비공개 패를 숨긴 채 경기를 중계하며 플레이 기록으로 업적과 도감을 채웁니다.</p></div><div class="feature-grid compact-grid"><article><span>🗓️</span><h3>서버 일정센터</h3><p>오늘·이번 주 일정과 게임 예약을 이미지 달력으로 확인합니다.</p></article><article><span>⏰</span><h3>예약 알림</h3><p>등록한 서버 일정만 하루 전·1시간 전·시작 시각에 안내합니다.</p></article><article><span>📡</span><h3>공개 경기 중계</h3><p>카드는 팟·공개 보드·차례, 경마는 순위·배당·공통 결승선만 표시합니다.</p></article><article><span>🏆</span><h3>결승 결과</h3><p>승자·족보·손익·이전 잔액→현재 잔액을 정산 장부와 연결합니다.</p></article><article><span>🏅</span><h3>업적·수집 도감</h3><p>화투 월, 포커 족보, 경마 우승마, 딜러와 장식을 모읍니다.</p></article></div><div class="v1092-visual-gallery"><figure><img alt="ABADDON 서버 일정센터" loading="lazy" src="assets/v1190/ABADDON_v11.9.0_SCHEDULE_CENTER_PREVIEW.png"/><figcaption>서버별 일정·게임 예약</figcaption></figure><figure><img alt="ABADDON 공개 경기 중계" loading="lazy" src="assets/v1190/ABADDON_v11.9.0_BROADCAST_PREVIEW.png"/><figcaption>비공개 패 없는 실시간 중계</figcaption></figure><figure><img alt="ABADDON 업적 수집 도감" loading="lazy" src="assets/v1190/ABADDON_v11.9.0_COLLECTION_PREVIEW.png"/><figcaption>업적·수집 진행도</figcaption></figure></div><div class="raid-command-row"><code>!일정</code><code>!게임예약</code><code>!중계</code><code>!결승중계</code><code>!업적센터</code><code>!수집도감</code><code>!1190통합검수 상세</code></div></div></section><section class="section v1160-section legacy-section"><div class="container"><div class="section-head"><div><div class="eyebrow">V11.6.0 · LIVE RECOVERY &amp; RULES VALIDATION</div><h2>중단된 게임을 복구하고, 안 되면 정확히 환불합니다</h2></div><p>25종 카드게임을 15초마다 저장합니다. 복구 실패 시 레이즈를 포함한 실제 납부액을 한 번만 돌려줍니다.</p></div><div class="feature-grid compact-grid"><article><span>💾</span><h3>25종 체크포인트</h3><p>차례, 손패, 보드, 팟, 베팅, 화투 획득 상태를 타입 그대로 저장합니다.</p></article><article><span>🛟</span><h3>재시작 복구</h3><p>메시지가 사라졌으면 새 복구 화면을 만들고 저장된 게임을 다시 연결합니다.</p></article><article><span>💰</span><h3>정확한 환불</h3><p>참가비만이 아니라 추가 레이즈까지 실제 납부액을 추적해 중복 없이 환불합니다.</p></article><article><span>⏱️</span><h3>서버별 잠수 규칙</h3><p>자동 체크, 폴드, 아바돈 대행, 일시정지, 전원 환불 중 하나를 선택합니다.</p></article><article><span>🎴</span><h3>화투 48장 검증</h3><p>12개월×4장, 고유 이미지, 월·등급 매핑과 덱 중복·누락을 함께 검사합니다.</p></article><article><span>⚖️</span><h3>판정 요청</h3><p>비공개 손패 없이 공개 행동, 체크포인트와 정산 ID만 검토용으로 묶습니다.</p></article></div><div class="raid-command-row"><code>!게임복구목록</code><code>!게임복구 [ID]</code><code>!게임재개 [ID]</code><code>!잠수규칙</code><code>!실전게임검수 상세</code><code>!패치노트</code></div></div></section><section class="section v1152-section legacy-section"><div class="container"><div class="section-head"><div><div class="eyebrow">V11.5.2 · TRADITIONAL HWATU REFRESH</div><h2>화투 게임만 새 전통 문양 패로 바꿨습니다</h2></div><p>포커는 그대로 두고 맞고·고스톱·민화투·육백·섯다·삼봉·도리짓고땡의 패 이미지만 교체했습니다.</p></div><div class="feature-grid compact-grid"><article><span>🎴</span><h3>48장 개별 이미지</h3><p>12개월마다 광·열끗·띠·피를 정확한 슬롯에 연결했습니다.</p></article><article><span>🌸</span><h3>화투 7종 적용</h3><p>공개판, 내 손패, 획득패, 승부 결과와 도감에 같은 패를 사용합니다.</p></article><article><span>🔎</span><h3>섯다 매핑 보강</h3><p>1~10월의 광·열끗·띠가 실제 종류에 맞는 그림으로 표시됩니다.</p></article><article><span>♠️</span><h3>포커 유지</h3><p>포커 규칙·이미지·정산은 이번 패치에서 건드리지 않았습니다.</p></article></div><div class="v1092-visual-gallery"><figure><img alt="ABADDON v11.5.2 전통 문양 화투 48장" loading="lazy" src="assets/v1152/ABADDON_v11.5.2_TRADITIONAL_HWATU_48.png"/><figcaption>12개월 × 4장 전통 문양 화투</figcaption></figure><figure><img alt="화투 게임 렌더링 검수" loading="lazy" src="assets/v1152/ABADDON_v11.5.2_TRADITIONAL_HWATU_PREVIEW.png"/><figcaption>월·등급별 개별 이미지 검수</figcaption></figure></div><div class="raid-command-row"><code>!화투도감</code><code>!화투패보기</code><code>!화투패검수 상세</code><code>!테스트 상세</code><code>!패치노트</code></div></div></section><section class="section v1151-section legacy-section"><div class="container"><div class="section-head"><div><div class="eyebrow">V11.5.1 · ALERT SETTINGS DROPDOWN</div><h2>알림 설정을 드롭다운으로 끝냅니다</h2></div><p>종류, 상태, 채널과 멘션 역할을 한 화면에서 고르고 미리보기·테스트 후 적용합니다.</p></div><div class="feature-grid compact-grid"><article><span>🔔</span><h3>종류 선택</h3><p>재난·패치·퀴즈·암시장·리그·경마 등 원하는 알림을 고릅니다.</p></article><article><span>✅</span><h3>상태와 시간</h3><p>켜기·끄기와 항상 허용, 09~23시, 08~22시 프리셋을 선택합니다.</p></article><article><span>📢</span><h3>채널과 역할</h3><p>Discord 채널·역할 선택 메뉴에서 바로 지정하며 @everyone은 안전 차단합니다.</p></article><article><span>🧪</span><h3>미리보기·테스트</h3><p>저장 전에 화면을 확인하고 선택한 채널로 테스트 메시지를 보냅니다.</p></article><article><span>↩️</span><h3>백업·복구</h3><p>적용 전에 자동 백업하고 최근 복구 지점을 UI에서 선택합니다.</p></article></div><div class="raid-command-row"><code>!서버알림</code><code>!서버알림설정</code><code>!알림시간 09:00 23:00</code><code>!알림UI검수 상세</code><code>!테스트 상세</code></div></div></section><section class="section v1150-section legacy-section"><div class="container"><div class="section-head"><div><div class="eyebrow">V11.5.0 · SERVER OPERATIONS CENTER</div><h2>서버마다 원하는 알림과 봇 권한만 사용합니다</h2></div><p>알림 채널과 시간을 서버별로 고르고, 서버의 봇 권한을 검사한 뒤 백업·적용·복구할 수 있습니다.</p></div><div class="feature-grid compact-grid"><article><span>🔔</span><h3>알림 구독</h3><p>재난·패치·퀴즈·암시장·세계 이벤트를 종류별 채널과 ON/OFF로 관리합니다.</p></article><article><span>🌙</span><h3>알림 시간</h3><p>설정 시간 밖에는 연동 자동 알림을 쉬게 하고 시간이 되면 다시 켭니다.</p></article><article><span>🤖</span><h3>서버 봇 검사</h3><p>서버에 참가한 봇, 강한 관리 권한과 채널 접근 상태를 한눈에 확인합니다.</p></article><article><span>🛡️</span><h3>채널별 권한</h3><p>채널 종류에 맞는 프로필을 미리보고 ABADDON 또는 선택한 봇에 적용합니다.</p></article><article><span>↩️</span><h3>백업과 복구</h3><p>모든 권한 변경 전에 복구 지점을 만들고, 서버 운영 설정도 별도로 되돌립니다.</p></article></div><div class="raid-command-row"><code>!서버운영</code><code>!서버알림 재난 켜기 #채널</code><code>!알림시간 09:00 23:00</code><code>!서버봇권한검수 상세</code><code>!권한자동설정 미리보기</code><code>!권한복구 ID</code></div></div></section><section class="section v1143-section legacy-section"><div class="container"><div class="section-head"><div><div class="eyebrow">V11.4.3 · PER-SERVER DISASTER ALERTS</div><h2>원하는 서버에서만 재난 알림을 받습니다</h2></div><p>자동 알림은 기본으로 꺼져 있습니다. 관리자가 구독하고 지정한 채널에만 게시합니다.</p></div><div class="feature-grid compact-grid"><article><span>🔕</span><h3>기본 꺼짐</h3><p>새 서버와 기존 서버 모두 자동 재난 알림을 기본 해제합니다.</p></article><article><span>✅</span><h3>서버별 구독</h3><p><code>!재난알림 켜기</code>를 실행한 서버만 자동 알림을 받습니다.</p></article><article><span>📢</span><h3>지정 채널만</h3><p><code>!재난채널 #채널</code>로 선택한 곳에만 게시합니다.</p></article><article><span>🧹</span><h3>한 번에 해제</h3><p><code>!재난알림해제</code>로 구독·자동 발생·채널을 모두 지웁니다.</p></article></div><div class="raid-command-row"><code>!재난알림 켜기</code><code>!재난알림 끄기</code><code>!재난채널 #채널</code><code>!재난알림해제</code><code>!재난알림검수 상세</code></div></div></section><section class="section v1142-section legacy-section"><div class="container"><div class="section-head"><div><div class="eyebrow">V11.4.2 · PER-RACE RANDOM ODDS</div><h2>경주를 열 때마다 배당이 새로 바뀝니다</h2></div><p>6마리 배당은 새 경주마다 다시 만들어지고, 말을 선택해 출발하면 그 배당으로 끝까지 정산합니다.</p></div><div class="feature-grid compact-grid"><article><span>🎲</span><h3>매 경주 새 배당</h3><p><code>!경마</code>를 새로 실행할 때마다 6마리 배당이 달라집니다.</p></article><article><span>🔒</span><h3>출발 후 고정</h3><p>말을 선택한 뒤에는 화면에 보인 배당이 결승까지 유지됩니다.</p></article><article><span>💰</span><h3>표시 배당 그대로 정산</h3><p>적중 시 선택한 말의 해당 경주 배당으로 지급하고 손익·현재 잔액을 표시합니다.</p></article><article><span>🐎</span><h3>기존 경마 유지</h3><p>말 표식, 공통 결승선, 사진 판정, 음수 잔액과 판돈 상한 없음은 그대로입니다.</p></article></div><div class="raid-command-row"><code>!경마 10000</code><code>!경마장</code><code>!경마배당검수 상세</code><code>!테스트 상세</code><code>!패치노트</code></div></div></section><section class="section v1141-section legacy-section"><div class="container"><div class="section-head"><div><div class="eyebrow">V11.4.1 · HORSE MARKER HOTFIX</div><h2>달리는 말이 다시 보입니다</h2></div><p>각 레인에 움직이는 말 표식을 복구하고 모든 체커기 위치를 그대로 맞췄습니다.</p></div><div class="feature-grid compact-grid"><article><span>🐎</span><h3>말 표시 복구</h3><p>말 이름 옆 이모지와 트랙 안의 움직이는 ♞ 표식을 함께 표시합니다.</p></article><article><span>🏁</span><h3>같은 결승선</h3><p>6개 레인은 같은 길이와 같은 체커기 위치를 사용합니다.</p></article><article><span>✅</span><h3>규칙 유지</h3><p>순위·사진 판정·배당·음수 잔액·정산은 바꾸지 않았습니다.</p></article></div><div class="v1092-visual-gallery"><figure><img alt="v11.4.1 경마 말 표식 복구 미리보기" loading="lazy" src="assets/v1141/ABADDON_v11.4.1_RACE_MARKER_PREVIEW.png"/><figcaption>말 표식이 복구된 실시간 경마</figcaption></figure></div><div class="raid-command-row"><code>!경마 10000</code><code>!경마표시검수 상세</code><code>!테스트 상세</code><code>!패치노트</code></div></div></section><section class="section v1140-section legacy-section"><div class="container"><div class="section-head"><div><div class="eyebrow">V11.0.1–V11.4.0 · UNIFIED GAME CITY EXPANSION</div><h2>챔피언십부터 스토리까지 한 번에 확장했습니다</h2></div><p>게임 상태 체크포인트, NPC 딜러, 연합 대항전, 개인 카지노와 6챕터 카드 캠페인을 함께 제공합니다.</p></div><div class="feature-grid compact-grid"><article><span>🛟</span><h3>실전 안정화</h3><p>45초 체크포인트와 중단 세션 감지로 복구·환불 상태를 더 쉽게 확인합니다.</p></article><article><span>🏆</span><h3>아바돈 챔피언십</h3><p>주간 리그, 시즌 사건, NPC 딜러 6명과 챔피언 테이블을 운영합니다.</p></article><article><span>⚔️</span><h3>연합 대항전</h3><p>게임 승리·순손익·협동 보스 피해·연합 경험치를 합산합니다.</p></article><article><span>🎰</span><h3>개인 카지노</h3><p>전속 딜러, 이름, 장식, 공개 설정을 저장하고 이미지 카드로 확인합니다.</p></article><article><span>📖</span><h3>스토리 캠페인</h3><p>6개 챕터를 선택·조건·보상으로 진행하며 최후의 테이블에 도전합니다.</p></article></div><div class="v1092-visual-gallery"><figure><img alt="v11.4.0 통합 패치 포스터" loading="lazy" src="assets/v1140/ABADDON_v11.4.0_MASTER_POSTER.png"/><figcaption>v11.4.0 통합 포스터</figcaption></figure><figure><img alt="아바돈 챔피언십과 NPC 딜러" loading="lazy" src="assets/v1140/ABADDON_v11.4.0_CHAMPIONSHIP.png"/><figcaption>챔피언십·NPC 딜러</figcaption></figure><figure><img alt="연합 대항전" loading="lazy" src="assets/v1140/ABADDON_v11.4.0_ALLIANCE_WAR.png"/><figcaption>연합 대항전</figcaption></figure><figure><img alt="개인 카지노" loading="lazy" src="assets/v1140/ABADDON_v11.4.0_PERSONAL_CASINO.png"/><figcaption>개인 카지노</figcaption></figure><figure><img alt="스토리 카드 캠페인" loading="lazy" src="assets/v1140/ABADDON_v11.4.0_STORY_CAMPAIGN.png"/><figcaption>6챕터 스토리</figcaption></figure></div><div class="raid-command-row"><code>!챔피언십</code><code>!연합대항전</code><code>!개인카지노</code><code>!카드캠페인</code><code>!1140통합검수 상세</code></div></div></section><section class="section v1100-section legacy-section"><div class="container"><div class="section-head"><div><div class="eyebrow">V11.0.0 · GAME CITY &amp; RESULT OVERHAUL</div><h2>승부 결과를 한눈에 봅니다</h2></div><p>승자, 이번 손익, 이전 잔액과 현재 잔액을 모든 실전 카드 결과에 고정 표시합니다.</p></div><div class="feature-grid compact-grid"><article><span>🏆</span><h3>확실한 결과</h3><p>승자·족보·팟·손익·현재 잔액을 표시합니다.</p></article><article><span>🎚️</span><h3>자유 레이즈</h3><p>잔액과 무관하게 입력하고 서버 안전 한도만 적용합니다.</p></article><article><span>🏁</span><h3>공통 결승선</h3><p>경마 6개 레인의 완주선을 같은 위치로 고정했습니다.</p></article><article><span>🎴</span><h3>전용 화투 48장</h3><p>ABADDON 독자 화투 이미지를 게임판과 도감에 적용했습니다.</p></article></div><div class="v1092-visual-gallery"><figure><img alt="최종 게임 결과와 잔액 정산" loading="lazy" src="assets/v1100/ABADDON_v11.0.0_RESULT_PREVIEW.png"/><figcaption>승자·손익·현재 잔액</figcaption></figure><figure><img alt="경마 공통 결승선" loading="lazy" src="assets/v1100/ABADDON_v11.0.0_RACE_FINISH_PREVIEW.png"/><figcaption>같은 위치의 결승선</figcaption></figure><figure><img alt="생존자 게임도시" loading="lazy" src="assets/v1100/ABADDON_v11.0.0_GAME_CITY_PREVIEW.png"/><figcaption>게임도시 대시보드</figcaption></figure><figure><img alt="ABADDON 전용 화투 48장" loading="lazy" src="assets/v1100/ABADDON_HWATU_48_SHEET.png"/><figcaption>전용 화투 48장</figcaption></figure></div><div class="raid-command-row"><code>!게임도시</code><code>!최근정산</code><code>!셔플검증</code><code>!화투도감</code><code>!게임도시검수 상세</code></div></div></section><section class="section v1095-section legacy-section"><div class="container">
+<div class="section-head"><div><div class="eyebrow">V10.9.5 · GAMEPLAY POLISH &amp; RECOVERY</div><h2>차례와 결과를 더 쉽게 봅니다</h2></div><p>진행 중에는 짧은 GIF, 종료 후에는 선명한 PNG를 사용합니다.</p></div>
+<div class="feature-grid compact-grid">
+<article><span>✨</span><h3>현재 차례 강조</h3><p>차례·단계·최근 행동을 움직이는 테이블로 표시합니다.</p></article>
+<article><span>🛟</span><h3>이미지 자동 복구</h3><p>이미지가 실패해도 임베드로 전환해 게임과 정산을 계속합니다.</p></article>
+<article><span>📼</span><h3>리플레이 이미지</h3><p>최근 공개 행동과 결과를 한 장의 타임라인으로 확인합니다.</p></article>
+<article><span>📡</span><h3>실시간 게임 보드</h3><p>진행 중 카드게임과 경마를 한 화면에서 확인합니다.</p></article>
+</div>
+<div class="v1092-visual-gallery"><figure><img alt="현재 차례 애니메이션 테이블" loading="lazy" src="assets/v1095/ABADDON_v10.9.5_ACTIVE_TABLE_PREVIEW.gif"/><figcaption>현재 차례 GIF</figcaption></figure><figure><img alt="게임 리플레이 타임라인" loading="lazy" src="assets/v1095/ABADDON_v10.9.5_REPLAY_PREVIEW.png"/><figcaption>리플레이 PNG</figcaption></figure><figure><img alt="카드게임 경마 실시간 보드" loading="lazy" src="assets/v1095/ABADDON_v10.9.5_LIVE_BOARD_PREVIEW.png"/><figcaption>실시간 보드</figcaption></figure></div>
+<div class="raid-command-row"><code>!실시간보드</code><code>!리플레이이미지</code><code>!관전</code><code>!연출검수 상세</code><code>!테스트 상세</code></div>
+</div></section><section class="section v1094-section legacy-section"><div class="container">
+<div class="section-head"><div><div class="eyebrow">V10.9.4 · CARD TABLE IMAGE &amp; KOREAN FONT</div><h2>카드게임 화면을 더 쉽게 봅니다</h2></div><p>긴 설명은 줄이고, 패·차례·팟·점수를 이미지 한 장에 정리했습니다.</p></div>
+<div class="feature-grid compact-grid">
+<article><span>🎴</span><h3>25종 이미지 테이블</h3><p>패를 내거나 베팅할 때마다 같은 메시지의 게임판이 갱신됩니다.</p></article>
+<article><span>👁️</span><h3>내 패는 비공개</h3><p>포커·화투·블랙잭·섯다·원카드·조커잡기의 손패는 본인에게만 PNG로 보입니다.</p></article>
+<article><span>가</span><h3>한글 출력 보강</h3><p>한글 글꼴 자동 확보, 줄바꿈, 글자 축소와 말줄임으로 깨짐과 잘림을 줄였습니다.</p></article>
+<article><span>🧪</span><h3>이번 패치만 검수</h3><p><code>!테스트 상세</code>와 <code>!이미지검수 상세</code>에서 이번 변경만 확인합니다.</p></article>
+</div>
+<div class="v1092-visual-gallery"><figure><img alt="텍사스 홀덤 이미지 테이블" loading="lazy" src="assets/v1094/ABADDON_v10.9.4_POKER_TABLE_PREVIEW.png"/><figcaption>포커 이미지 테이블</figcaption></figure><figure><img alt="고스톱 이미지 테이블" loading="lazy" src="assets/v1094/ABADDON_v10.9.4_HWATU_TABLE_PREVIEW.png"/><figcaption>화투 이미지 테이블</figcaption></figure><figure><img alt="비공개 손패 이미지" loading="lazy" src="assets/v1094/ABADDON_v10.9.4_PRIVATE_HAND_PREVIEW.png"/><figcaption>본인 전용 손패 PNG</figcaption></figure></div>
+<div class="raid-command-row"><code>!카드게임</code><code>!카드대시보드</code><code>!이미지검수 상세</code><code>!테스트 상세</code><code>!패치노트</code></div>
+</div></section><section class="section v1092-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V10.9.2 · VISUAL RE-APPLICATION &amp; LIVE HORSE RACING</div><h2>예전 텍스트 화면을 실제 이미지 카드로 다시 연결했습니다</h2></div><p>배포 여부를 화면만 보고도 판별할 수 있고, 경마는 메시지 편집으로 순위가 실제로 움직입니다.</p></div>
+<div class="feature-grid compact-grid">
+<article><span>🖼️</span><h3>생존자 PNG 카드</h3><p><code>!정보</code>와 <code>!생존대시보드</code>가 HP·스태미나·감염·전투력·식량·카지노 칩·펫을 한 장의 이미지로 표시합니다.</p></article>
+<article><span>🗺️</span><h3>세계지도 PNG 카드</h3><p><code>!세계지도</code>가 6개 지역의 해금·개척 진행·보스 격파를 연결선과 진행 막대로 보여줍니다.</p></article>
+<article><span>🎴</span><h3>카드게임 25종 이미지 도감</h3><p><code>!카드대시보드</code>에서 전체 종목을 이미지로 보고, 선택 메뉴에서 상세 규칙과 일반 방·ABADDON 대전을 시작합니다.</p></article>
+<article><span>🏇</span><h3>실시간 경마</h3><p><code>!경마 10000</code>을 실행하고 말을 고르면 약 1.4초마다 6개 레인이 움직입니다. 결과에는 배당·순손익·게임 전후 잔액이 나옵니다.</p></article>
+</div>
+<div class="v1092-visual-gallery"><figure><img alt="ABADDON 생존자 PNG 이미지 대시보드 미리보기" loading="lazy" src="assets/v1092/ABADDON_v10.9.2_PROFILE_PREVIEW.png"/><figcaption>생존자 이미지 카드</figcaption></figure><figure><img alt="ABADDON 공동 탐험 PNG 지도 미리보기" loading="lazy" src="assets/v1092/ABADDON_v10.9.2_MAP_PREVIEW.png"/><figcaption>연결형 세계지도</figcaption></figure><figure><img alt="ABADDON 카드게임 25종 PNG 도감 미리보기" loading="lazy" src="assets/v1092/ABADDON_v10.9.2_CARD_CATALOG_PREVIEW.png"/><figcaption>카드게임 25종 도감</figcaption></figure></div><div aria-label="실시간 경마 미리보기" class="race-preview">
+<div class="race-lane"><b>1</b><span class="race-horse horse-a">🐎</span><i>🏁</i></div>
+<div class="race-lane"><b>2</b><span class="race-horse horse-b">🏇</span><i>🏁</i></div>
+<div class="race-lane"><b>3</b><span class="race-horse horse-c">🐴</span><i>🏁</i></div>
+</div>
+<div class="raid-command-row"><code>!정보</code><code>!세계지도</code><code>!카드대시보드</code><code>!경마 10000</code><code>!아바돈초대 경마 10000</code><code>!테스트 상세</code></div>
+</div>
+</section>
+<section class="section legacy-section"><div class="container"><div class="section-head"><div><div class="eyebrow">V10.6.0 AUTHENTIC CARD PATCH</div><h2>패를 받자마자 결과만 보던 방식은 끝났습니다</h2></div><p>각 게임의 실제 흐름을 Discord 버튼·선택 메뉴·비공개 패 화면으로 진행합니다.</p></div><div class="feature-grid compact-grid"><article><span>🎴</span><h3>실전 맞고·고스톱</h3><p>손패를 직접 내고 바닥의 같은 월 패를 선택한 뒤 더미를 뒤집습니다. 뻑·쪽·따닥·쓸·폭탄·흔들기와 고/스톱을 처리합니다.</p></article><article><span>🃏</span><h3>거리별 포커 베팅</h3><p>드로우·프리플랍·플랍·턴·리버·스터드 거리마다 체크, 콜, 레이즈, 폴드와 교환을 직접 선택합니다.</p></article><article><span>🎴</span><h3>섯다 추가</h3><p>첫 장 베팅, 두 번째 장 베팅, 광땡·땡·특수 족보·끗 공개와 구사 재경기를 지원합니다.</p></article><article><span>💸</span><h3>부채도 게임의 일부</h3><p>잔액 부족으로 게임을 막지 않습니다. 음수 잔액, 노리밋 레이즈, 무제한 화투 배수 정산을 허용하고 파산신청으로 이어집니다.</p></article></div><div class="raid-command-row"><code>!카드게임</code><code>!섯다 10000</code><code>!카드게임룰</code><code>!게임진행검수</code></div></div></section>
+<section class="section official-bot-section legacy-section">
+<div class="container official-bot-grid">
+<div>
+<div class="eyebrow">OFFICIAL DISCORD RPG PROJECT · V10.1.0</div>
+<h2>종말 생존 RPG, ABADDON</h2>
+<p class="official-lead">ABADDON은 Discord에서 즐기는 종말 생존 RPG 봇입니다. 캐릭터 성장과 스토리·던전·월드보스, 장비·보물·펫·기지, 생활·거래·카드게임, 서버 리뉴얼·운영 기능을 하나의 인터랙티브 시스템으로 제공합니다.</p>
+<p>v10.5.0에서는 선택 언어 하나만 표시하는 구조를 유지하면서 NPC 인연 6명을 영입 가능한 동료로 확장합니다. 텍사스 홀덤·오마하 홀덤·세븐카드 스터드·맞고·고스톱을 추가하고, 명령어·홈페이지·카드 규칙·저장 안전성을 함께 검수합니다.</p>
+<div class="hero-actions"><a class="button primary" data-bot-link="" href="#">＋ ABADDON 초대하기</a><a class="button secondary" href="commands.html">명령어 살펴보기 →</a></div>
+</div>
+<div class="approval-card">
+<span class="approval-badge">✓ OFFICIAL PROJECT</span>
+<h3>한 줄 소개</h3>
+<p>종말 생존 Discord RPG. 성장·스토리·던전·월드보스·장비·펫·기지·생활·거래·카드게임·서버 리뉴얼을 버튼과 드롭다운으로 즐겨보세요.</p>
+<div class="mini-stats"><div class="mini-stat"><b>300+</b><span>기능</span></div><div class="mini-stat"><b>6</b><span>성장 미션</span></div><div class="mini-stat"><b>28</b><span>서버 테마</span></div></div>
+</div>
+</div>
+</section>
+<section class="section v950-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V10.1.0 · GLOBAL SURVIVOR LOCALIZATION · 2026-08-03</div><h2>한글을 선택하면 한글만, 영어를 선택하면 영어만 표시됩니다</h2></div><p>게임 로직과 저장 데이터는 하나로 유지하면서 임베드·버튼·드롭다운·모달·오류 안내·공개 패널을 선택 언어에 맞게 렌더링합니다.</p></div>
+<div class="feature-grid compact-grid">
+<article><span>🌐</span><h3>개인·서버 언어</h3><p>개인 응답은 개인 언어, 공개 공동 패널은 서버 기본 언어를 사용합니다.</p></article>
+<article><span>⌨️</span><h3>명령어 전수 최신화</h3><p>한국어 명령을 유지하고 모든 prefix 명령에 충돌 없는 영문 접근 이름을 연결합니다.</p></article>
+<article><span>📋</span><h3>임무 추적·생존 도감</h3><p>진행 중 콘텐츠, 미수령 보상, 지역·아이템·인물 기록을 한곳에서 확인합니다.</p></article>
+<article><span>🤝</span><h3>NPC 인연 기억</h3><p>구조·지원·공동 작전 기록이 주요 생존 인물 6명의 관계 기록으로 이어집니다.</p></article>
+<article><span>🛰️</span><h3>주간 글로벌 탐사</h3><p>6개 작전에서 역할을 선택하고 공동 진행도·정산·개인 보상을 함께 진행합니다.</p></article>
+<article><span>💨</span><h3>이모지 이동·퍼센트 연출</h3><p>메시지를 갱신해 이동 경로와 실제 진행률 게이지가 차오르는 느낌을 제공합니다.</p></article>
+</div>
+<div class="raid-command-row"><code>!언어</code><code>!할일</code><code>!생존도감</code><code>!탐사작전</code><code>!1000안정화검수</code></div>
+</div>
+</section>
+<section class="section v920-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V9.2.0 · WORLD CYCLE &amp; PROFESSIONAL SQUAD · 2026-08-03</div><h2>시간이 흐르고, 세계를 복구하며, 각자의 전문성이 분대를 완성합니다</h2></div><p>접속자가 적은 서버를 자동으로 무너뜨리지 않는 안전한 순환과 장기 공동 목표를 도입했습니다. 기존 직업·파티·세계 상태를 복제하지 않고 연결합니다.</p></div>
+<div class="boss-grid life-grid visual-summary-grid v720-grid">
+<article class="boss-card icon-card"><div><span class="feature-emoji">🌍</span><h3>안전한 세계 순환</h3><p>6시간 단위, 최대 4회 따라잡기, 72시간 미활동 동결과 세계 붕괴 방지 안전선을 적용합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🏗️</span><h3>공동 복구 작전 6종</h3><p>발전망·식수·야전병원·보급로·통신망·방벽을 버튼 행동과 목표 초과 차감 없는 물자 지원으로 복구합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">📜</span><h3>주간 세계 지령</h3><p>치안·보급·사기·정화·외교·압박 중 서버가 투표한 방향이 다음 세계 순환에 연결됩니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🧑‍🔧</span><h3>직업 전문화 12종</h3><p>기존 기본 직업 6종을 유지하면서 각 직업에 두 개의 전문화와 복구·분대 연동 역할을 제공합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">👥</span><h3>기존 파티 기반 분대 전술</h3><p>균형·돌격·방어·구조·정찰 전술과 선봉·의무·기술·정찰 역할로 협동 작전을 수행합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🛡️</span><h3>중복·정산 안정화</h3><p>새 조직을 만들지 않고 기존 파티를 재사용하며, 동시 실행·초과 차감·보상 중복과 재접속 상태를 보호합니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!세계순환</code><code>!복구작전</code><code>!세계지령</code><code>!전문화</code><code>!분대전술</code><code>!분대작전</code><code>!920안정화검수</code></div>
+</div>
+</section>
+<section class="section v900-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V9.2.0 · FACTION WORLD STATE · 2026-08-03</div><h2>세력의 신뢰, 무역로의 흐름, 전쟁의 선택이 하나의 세계를 만듭니다</h2></div><p>사용자 길드와 별개인 NPC 세력 관계를 쌓고, 지역 호송과 서버 공동 전쟁에 참여하며, 시즌 5의 선택으로 세계 지표와 결말을 변화시킵니다.</p></div>
+<div class="boss-grid life-grid visual-summary-grid v720-grid">
+<article class="boss-card icon-card"><div><span class="feature-emoji">🤝</span><h3>세력·평판·거점</h3><p>우호 세력 6종과 평판 5단계, 일일 의뢰, 세력 증표 교환과 거점 교류를 제공합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🚚</span><h3>무역로·호송</h3><p>공동 지도 지역을 잇는 5개 노선에서 화물을 적재하고 선봉·정비·의무·교섭 역할로 호송합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">⚔️</span><h3>세력전쟁</h3><p>구조·방어·복구 전선을 선택하고 버튼 행동과 자원 기부로 적대 세력에 맞섭니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">📖</span><h3>시즌 5 세계 선택</h3><p>4개 장, 장당 3개 선택과 4종 결말. 서버의 안정도·보급·사기·오염이 결말을 결정합니다.</p></div></article>
+</div>
+</div>
+</section>
+<section class="section v811-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V8.1.1 · ENCOUNTER VARIETY &amp; FIELD FX · 2026-08-03</div><h2>약탈자만 남은 폐허가 아닙니다. 구조대와 민병대, 의무단도 살아 움직입니다</h2></div><p>접촉 대상에 따라 행동 이름과 결과가 달라집니다. 같은 메시지의 이모지 위치와 진행 막대를 갱신해 출발·탐지·판단·회수 흐름이 움직이는 것처럼 보이게 만들었습니다.</p></div>
+<div class="boss-grid life-grid visual-summary-grid v720-grid">
+<article class="boss-card icon-card"><div><span class="feature-emoji">🎭</span><h3>인카운트 20종</h3><p>감염체·약탈자뿐 아니라 붕괴·독성 누출·구조 신호·봉인실·실종 보급대·중립 상인까지 다양한 현장을 만납니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🤝</span><h3>정의로운 우호 세력</h3><p>백색등 구조대, 푸른 방패 민병대, 새벽 의무단, 철도 복구단, 보급 호위대, 황무지 정찰대가 등장합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🧭</span><h3>상황별 선택 버튼</h3><p>적대 접촉은 맞서기·우회, 우호 접촉은 합류·지원·공동 수색, 위험 설비는 돌파·안정화·원인 조사로 바뀝니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">💨</span><h3>이모지 프레임 연출</h3><p>🚪 출발에서 🗺️ 이동, 📡 탐지, ⚠️ 판단, 📦 회수, 🏠 복귀까지 한 메시지를 여러 프레임으로 갱신합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">📚</span><h3>파밍 인카운트 도감</h3><p>직접 발견한 접촉 대상만 기록하며 우호 세력과 구조 요청, 위험·발견 기록을 분류해 보여줍니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🛡️</span><h3>반복·저장 안정화</h3><p>최근 접촉 4종의 연속 반복을 완화하고 구버전 인덱스 저장과 신규 키 저장을 모두 복구합니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!파밍</code><code>!파밍출발</code><code>!파밍선택</code><code>!파밍인카운트도감</code><code>!811안정화검수</code><code>!테스트 상세</code></div>
+</div>
+</section>
+<section class="section v810-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V8.1.0 · WORLD MAP &amp; FRONTIER UX · 2026-08-03</div><h2>개인 탐험이 서버 전체의 지도를 열고, 다음 지역으로 이어집니다</h2></div><p>기존 파밍·원정·길드 파견을 복제하지 않습니다. 지역 정찰은 개인 선택, 개척도와 거점·보스는 서버 공동 진행으로 역할을 분리했습니다.</p></div>
+<div class="boss-grid life-grid visual-summary-grid v720-grid">
+<article class="boss-card icon-card"><div><span class="feature-emoji">🛰️</span><h3>통합 생존 단말기</h3><p>진행 중 정찰과 재난, 지도 개방 상태를 먼저 보여주고 기존 게임센터·파밍·길드·미니게임으로 연결합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🗺️</span><h3>공동 탐험 지도 6지역</h3><p>대피소 외곽·침수 철도·잿빛 수림·적색 안개 협곡·원자로 묘지·황혼 종착지를 순차 해금합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">📡</span><h3>선택형 지역 정찰</h3><p>안전 경로·신호 추적·위험 돌파 중 하나를 고릅니다. 진행 중 사건은 저장되어 재접속 뒤 명령으로 복구됩니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🏕️</span><h3>공동 거점</h3><p>감시탑·정화소·보급소를 자원으로 건설해 정찰 안정성, 오염 대응과 회수 보정을 높입니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">👹</span><h3>지역 보스·순차 해금</h3><p>개척도를 채우면 지역 보스가 출현하고, 공동 격파 후 다음 지역과 기여 보상이 열립니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🛡️</span><h3>오류·정산 안정화</h3><p>길드·사용자 잠금, 정찰 사건 ID, 보스 보상 수령 기록, 오류 사건 조회와 INFO 로그 등급을 적용했습니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!단말기</code><code>!세계지도</code><code>!지역정찰</code><code>!개척기부</code><code>!거점건설</code><code>!지역보스공격</code><code>!오류조회</code><code>!810안정화검수</code></div>
+</div>
+</section>
+<section class="section v790-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V7.9.0 · OPERATIONS HUB &amp; AUTO DISASTER · 2026-08-03</div><h2>운영 기능은 한곳에 모으고, 공동 재난은 살아 있는 서버 사건으로 움직입니다</h2></div><p>기존 문의·통계·알림 기능을 복제하지 않고 통합 진입점에서 재사용합니다. 공동 재난은 자동 일정, 환경 기상과 버튼 참여를 결합합니다.</p></div>
+<div class="boss-grid life-grid visual-summary-grid v720-grid">
+<article class="boss-card icon-card"><div><span class="feature-emoji">🚨</span><h3>재난 14종·기상 10종</h3><p>정전·오염·감염·붕괴·봉쇄·드론·원자로 누출 등에 산성비·폭풍·한파·방사성 비구름 같은 환경이 결합됩니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🧭</span><h3>버튼형 공동 대응</h3><p>정찰·구조·수리·방어 버튼과 물자 지원 모달로 참여합니다. 진행과 보상은 잠금과 고유 기록으로 한 번만 반영됩니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🔔</span><h3>통합 알림·운영센터</h3><p>패치·재난·기상·길드·시장 알림을 한 메뉴에서 고르고 문의·점검·통계·건의 진입점을 운영 허브에 묶습니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🎙️</span><h3>임시 분대 음성방</h3><p>생성 로비 입장 시 개인 분대방이 열리고 방장·잠금·초대·인원 제한을 관리하며 빈 방은 자동 정리됩니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🖱️</span><h3>우클릭 명령·하이라이트</h3><p>메시지와 사용자 우클릭 10종, 반응 기반 하이라이트 보드로 신고·정보·커뮤니티 기록 접근을 단축합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🧪</span><h3>최신 패치 전용 검수</h3><p><code>!테스트 상세</code>와 <code>!790안정화검수</code>는 v7.9 변경 범위만 검사하고 임베드 필드 25개 제한을 지킵니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!운영통합센터</code><code>!재난상황</code><code>!재난예보</code><code>!알림센터</code><code>!건의</code><code>!분대음성설정</code><code>!하이라이트설정</code><code>!790안정화검수</code></div>
+</div>
+</section>
+<section class="section v780-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V7.8.0 · SERVER DISASTER &amp; FARMING ROUTE FX · 2026-08-03</div><h2>서버 전체가 비상 신호에 대응하고, 파밍 과정은 현장 기록처럼 움직입니다</h2></div><p>공동 재난은 개인 파밍·길드 파견과 분리된 서버 전체 목표입니다. 역할 행동과 물자 납품을 합산하고 모든 보상은 고유 기록으로 한 번만 처리합니다.</p></div>
+<div class="boss-grid life-grid visual-summary-grid v720-grid">
+<article class="boss-card icon-card"><div><span class="feature-emoji">🚨</span><h3>공동 재난 6종</h3><p>대규모 정전·식수 오염·감염체 습격·통신망 붕괴·대피소 화재·독성 안개에 서버 전체가 대응합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🛠️</span><h3>역할 행동과 납품</h3><p>정찰·구조·수리·방어 임무를 수행하거나 현재 필요한 물자를 납품해 공동 진행도를 올립니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🏅</span><h3>기여도와 안전 보상</h3><p>참여 기록·기여도 순위·개인 수령 상태를 저장하며 연타·동시 수령·재접속에서도 한 번만 정산합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🧭</span><h3>파밍 진행 루트</h3><p>🚪 출발 → 🗺️ 이동 → 📡 탐색 → ⚠️ 위험 또는 ✨ 발견 → 📦 회수 → 🏠 복귀 흐름을 단계별로 표시합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🧪</span><h3>최신 패치만 테스트</h3><p><code>!테스트 상세</code>는 앞으로 직전 패치에서 추가되거나 수정된 기능만 읽기 전용으로 점검합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🛡️</span><h3>운영 오류 수정</h3><p><code>!시스템점검</code>의 시간 참조 오류와 상세 테스트 구현 누락을 수정하고 정상 상태 로그를 정보 수준으로 정리합니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!재난상황</code><code>!재난임무</code><code>!재난참여</code><code>!재난납품</code><code>!재난기여도</code><code>!재난보상</code><code>!재난버프</code><code>!780안정화검수</code><code>!테스트 상세</code></div>
+</div>
+</section>
+<section class="section v750-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V7.7.0 · RUIN FARMING &amp; LIVELIHOOD TECH · 2026-08-03</div><h2>지역을 고르고, 현장에서 판단하고, 회수품을 다시 가치로 바꿉니다</h2></div><p>기존 채집을 복제하지 않고 지역 선택·랜덤 인카운트·폐품 처리·신호 해독·일일 납품·생활 연구가 이어지는 독립 생활 루프를 추가했습니다.</p></div>
+<div class="boss-grid life-grid visual-summary-grid v720-grid">
+<article class="boss-card icon-card"><div><span class="feature-emoji">🗺️</span><h3>파밍 지역 4종</h3><p>버려진 대형마트·붕괴 주거구역·지하 화물역·흑색 격리구역에서 레벨과 위험도에 맞는 회수 작전을 선택합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🚨</span><h3>랜덤 인카운트</h3><p>전투·회피·구조·추가 탐색 중 하나를 고릅니다. 재접속 뒤에도 명령으로 이어갈 수 있고 결과는 한 번만 정산됩니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">💎</span><h3>보물과 폐품</h3><p>식량·생활 재료·보물 파편·미감정 보물·미감정 폐품을 회수하고 감정소와 공방으로 이어서 처리합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🔧</span><h3>폐허 복구 공방</h3><p>폐품을 감정한 뒤 재료로 분해하거나 완제품으로 수리합니다. 기존 무기 수리와는 별개의 생활 콘텐츠입니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">📡</span><h3>전파·납품·연구</h3><p>신호 퍼즐과 매일 바뀌는 납품 계약으로 연구 자료를 모아 현장 배급·폐품 회수·신호·계약 기술을 해금합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🛡️</span><h3>중복·정산 검수</h3><p>채집·광산·벌목·굴착·길드 파견과 역할을 분리하고 사용자별 잠금·고유 ID·재접속 복구를 검사했습니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!파밍</code><code>!파밍출발</code><code>!파밍선택</code><code>!공방</code><code>!전파탐색</code><code>!의뢰게시판</code><code>!연구소</code><code>!770안정화검수</code></div>
+</div>
+</section>
+<section class="section v731-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V7.3.1 · STORY GATE &amp; STABILITY · 2026-08-03</div><h2>스토리는 순서대로, 기존 기록은 그대로</h2></div><p>삭제 없이 중복 기능을 감사하고 스토리 시즌 해금 규칙과 관리자 점검 권한을 안정적으로 적용했습니다.</p></div>
+<div class="boss-grid life-grid visual-summary-grid v720-grid">
+<article class="boss-card icon-card"><div><span class="feature-emoji">📡</span><h3>시즌 1부터 시작</h3><p>검은 주파수 엔딩을 1회 완료하면 백색 방주가 열립니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🔓</span><h3>순차 해금</h3><p>시즌 1 → 2 → 3 → 4 순서로 진행하며 <code>!시즌여정</code>에서 잠금 상태를 확인합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🛡️</span><h3>관리자 점검 우회</h3><p>서버 관리자와 봇 소유자는 시즌 완료 조건과 관계없이 모든 시즌을 실행할 수 있습니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🧳</span><h3>기존 진행 보존</h3><p>패치 전에 시즌 2~4를 이미 시작한 생존자는 진행이 잠기거나 초기화되지 않습니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🧹</span><h3>중복 기능 감사</h3><p>명령어·환영 설정·채널 안내·게임 진입점을 읽기 전용으로 검사합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🔒</span><h3>폐기 전 승인</h3><p>이번 패치의 삭제는 0건입니다. 폐기 후보는 먼저 보고하고 승인 전까지 그대로 유지합니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!시즌여정</code><code>!스토리해금</code><code>!중복검수</code><code>!안정화검수</code><code>!폐기후보</code></div>
+</div>
+</section>
+<section class="section v721-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V7.2.1 · CHANNEL GUIDES · 2026-08-03</div><h2>채널마다 해야 할 일과 지켜야 할 말을 정확히 고정</h2></div><p>서버 메뉴 이름을 읽어 전용 안내문을 만들고, 다시 실행해도 같은 메시지만 최신화합니다.</p></div>
+<div class="boss-grid life-grid visual-summary-grid v720-grid">
+<article class="boss-card icon-card"><div><span class="feature-emoji">🧭</span><h3>채널별 전용 문구</h3><p>공지·규칙·가입·작전·RPG·거래·도박·무전·운영 공간을 이름별로 구분합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">📌</span><h3>전체 자동 설치</h3><p><code>!채널가이드 전체설치</code> 한 번으로 메뉴와 일치하는 채널을 찾아 순서대로 고정합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">♻️</span><h3>중복 없는 갱신</h3><p>아바돈이 올린 기존 메시지를 찾아 편집하므로 패치 때마다 안내문이 쌓이지 않습니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🎙️</span><h3>무전 채널 안내</h3><p>공용 무전·분대 통신·음성 I·II·무전 대기의 채팅 안내도 지원 가능한 환경에서 고정합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🔎</span><h3>상태와 미리보기</h3><p>현재 채널의 자동 추천을 확인하고 설치 상태·갱신 결과를 관리자 화면에서 점검합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🛡️</span><h3>안전한 순차 처리</h3><p>권한을 먼저 검사하고 채널 사이 간격을 두며 API 오류가 발생하면 작업을 안전하게 멈춥니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!채널가이드 전체설치</code><code>!채널규칙 자동</code><code>!채널규칙 상태</code><code>!채널규칙 갱신</code><code>!채널규칙 일괄상태</code></div>
+</div>
+</section>
+<section class="section v720-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V7.2.0 · COOP CLEANUP · 2026-08-03</div><h2>중복은 줄이고, 혼자일 때는 아바돈을 부른다</h2></div><p>입장 환영·신규 역할·패치 공지·미니게임 대기 흐름을 한 번에 정리했습니다.</p></div>
+<div class="boss-grid life-grid visual-summary-grid v720-grid">
+<article class="boss-card icon-card"><div><span class="feature-emoji">👋</span><h3>환영 카드 1개</h3><p>공지·규칙·가입 안내와 선택형 테마, 시작 버튼을 하나의 메시지에 담습니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🏷️</span><h3>신규 역할 1개</h3><p>기존 자동 역할과 새싹 역할을 하나로 연결하고 임시·영구 모드를 선택합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">📣</span><h3>패치 자동 공지</h3><p>지정 채널에 새 버전 내용을 버전당 한 번만 올려 재부팅 도배를 막습니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🤖</span><h3>아바돈 1:1 게임</h3><p>가위바위보·홀짝·숫자·포커·원카드·조커·신호 예측 7종을 제공합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🏁</span><h3>멀티게임 AI 초대</h3><p>생존자 레이스와 카드게임 모집방에서 사람이 부족하면 아바돈을 초대합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🛡️</span><h3>안정화 재검수</h3><p>명령 별칭, 중복 리스너, 저장·정산, 드롭다운 제한과 배포 ZIP을 다시 검사했습니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!패치채널</code><code>!패치자동공지 켜기</code><code>!아바돈게임</code><code>!아바돈초대 포커</code><code>!아바돈전적</code><code>!새싹설정 역할모드 임시</code></div>
+</div>
+</section>
+<section class="section v711-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V7.1.2 · WELCOME THEMES · 2026-08-03</div><h2>선택형 환영 테마 6종</h2></div><p>v7.1.2에서 추가된 테마 선택 기능은 통합 환영 카드 안에서 그대로 유지됩니다.</p></div>
+<div class="boss-grid life-grid visual-summary-grid v711-grid">
+<article class="boss-card icon-card"><div><span class="feature-emoji">🌱</span><h3>새싹 정원</h3><p>초록빛 새싹·행운·정원 분위기의 포근한 기본 환영 테마입니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🌸</span><h3>벚꽃 피크닉</h3><p>꽃잎·리본·달콤한 인사로 서버의 첫인사를 화사하게 만듭니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🫧</span><h3>말랑 버블</h3><p>푸른 버블과 부드러운 문구로 긴장을 풀어주는 차분한 테마입니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🌙</span><h3>별빛 탐험대</h3><p>달·별·항법 신호 분위기로 새 멤버를 탐험대원처럼 맞이합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🐾</span><h3>동물 친구</h3><p>발자국·고양이·여우 이모지로 귀엽고 친근한 환영을 제공합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">☣️</span><h3>아포칼립스 생존구역</h3><p>폐허 통신·오염 경보·보급 지침을 사용하는 ABADDON 전용 종말 테마입니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!환영테마</code><code>!환영테마 아포칼립스</code><code>!환영테마 미리보기</code><code>!새싹설정 테마 벚꽃</code><code>!귀여운메뉴</code><code>!새싹설정</code></div>
+</div>
+</section>
+<section class="section v710-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V7.1.0 · GROWTH LOOP · 2026-08-03</div><h2>사진 없이도 진행 상황이 한눈에</h2></div><p>기존 콘텐츠를 새로 갈아엎지 않고 출석·퀘스트·생활·전투·성장·월드보스를 이모지 작전 보드로 연결했습니다.</p></div>
+<div class="boss-grid life-grid visual-summary-grid v710-grid">
+<article class="boss-card icon-card"><div><span class="feature-emoji">📋</span><h3>오늘 할 일</h3><p>6개 목표 중 5개를 완료하면 일일 루프가 완주됩니다. 다음 추천 명령도 바로 표시합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🟩</span><h3>이모지 진행 게이지</h3><p>⬜ 시작 전, 🟨 진행 중, ✅ 완료, 🎁 수령 가능, 🔒 잠금 상태를 같은 규칙으로 표시합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🔥</span><h3>연속 완주</h3><p>일일 루프 연속 기록과 최고 기록을 보존하고 연속 일수에 따라 일일 보상이 증가합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🏅</span><h3>누적 참여 이정표</h3><p>생활·전투·성장 활동으로 참여 점수를 쌓고 단계별 식량·인장·칭호를 받습니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🎒</span><h3>장비 프리셋</h3><p>레이드·생활·탐색용 장비 구성을 최대 3개 저장하고 명령 한 번으로 적용합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🏆</span><h3>월드보스 주간 랭킹</h3><p>보스가 바뀌어도 주차별 누적 피해와 공격 횟수를 합산하고 지난주 순위 보상을 지급합니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!오늘할일</code><code>!성장보드</code><code>!미션보상</code><code>!누적보상</code><code>!장비프리셋</code><code>!월드보스주간랭킹</code><code>!월드보스주간보상</code><code>!복귀보급</code></div>
+</div>
+</section>
+<section class="section v702-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V7.0.2 · OPERATIONS STABILITY · 2026-08-03</div><h2>재미있는 패치를 지키는 데이터 방벽</h2></div><p>새 콘텐츠를 안전하게 확장할 수 있도록 저장·백업·복구·오류 추적 기반을 강화했습니다. 일반 이용 방식은 바뀌지 않습니다.</p></div>
+<div class="boss-grid life-grid visual-summary-grid v702-grid">
+<article class="boss-card icon-card"><div><span class="feature-emoji">💾</span><h3>검증 저장</h3><p>임시 파일을 완전히 기록하고 JSON 구조를 다시 확인한 뒤 주 데이터와 교체합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🗄️</span><h3>회전 백업</h3><p>시작 시와 일정 저장 횟수마다 정상 스냅샷을 남기고 최근 30개를 보존합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">♻️</span><h3>자동 복구</h3><p>주 파일이 손상되면 직전 .bak과 최근 정상 회전 백업을 순서대로 탐색합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🔒</span><h3>명령 잠금</h3><p>한 사용자의 명령을 순차 처리해 연속 클릭에 따른 중복 차감과 중복 보상 위험을 완화합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🚨</span><h3>사건 추적</h3><p>오류 사건 번호와 명령·길드·오류 종류를 기록해 신고 내용을 빠르게 찾습니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">📊</span><h3>운영 통계</h3><p>명령별 실행·성공·실패·평균 처리시간을 확인해 실제 이용 데이터를 기반으로 개선합니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!시스템점검</code><code>!오류현황</code><code>!운영통계</code><code>!백업목록</code><code>!백업생성</code><code>!백업검증</code><code>!복구미리보기</code></div>
+</div>
+</section>
+<section class="section v701-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V7.0.1 · COMMAND UX · 2026-08-03</div><h2>명령어 227개, 외우는 대신 고른다</h2></div><p>처음 시작·오늘 추천·목적별 기능군과 대표/전체 검색을 추가했습니다. 세부 명령어는 유지하면서 진입점만 단순하게 만들었습니다.</p></div>
+<div class="boss-grid life-grid visual-summary-grid v701-steps">
+<article class="boss-card icon-card"><div><span class="feature-emoji">🌱</span><h3>!처음</h3><p>정보 확인부터 직업·출석·장비·첫 전투까지 5단계로 안내합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🎮</span><h3>!게임</h3><p>카테고리 → 기능군 → 실행 항목으로 이동하며 오늘 추천과 즐겨찾기를 제공합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🔎</span><h3>!명령어</h3><p>대표 명령만 먼저 보고, 필요할 때 전체 목록이나 자연어 검색을 펼칩니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🧭</span><h3>목적별 빠른 경로</h3><p>성장·전투·돈벌이·스토리·함께하기 중 원하는 목적부터 선택합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">📚</span><h3>기능군 통합</h3><p>월드보스·카지노·스토리·알림·서버 관리의 유사 명령을 대표 메뉴 아래 묶습니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🛡️</span><h3>기존 명령 호환</h3><p>기존 한국어 명령과 v6.5.4 영어 별칭은 삭제하지 않아 이전 안내도 계속 작동합니다.</p></div></article>
+</div>
+<div class="hero-actions"><a class="button primary" href="commands.html">초보자 명령어 가이드 →</a><a class="button secondary" href="commands.html#command-browser">전체 명령 검색</a></div>
+</div>
+</section>
+<section class="section v700-section media-contain-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">V7.0.0 · WORLD BOSS REBUILD · 2026-08-03</div><h2>여섯 재앙이 진짜 전투로 돌아왔다</h2></div><p>신규 키 아트만 교체한 것이 아닙니다. 보상 유실 방지, 실전·테스트 분리, 약점 계산, 네 단계 페이즈, 부위 파괴와 반격을 실제 전투 로직으로 연결했습니다.</p></div>
+<div class="boss-grid life-grid world-boss-showcase">
+<article class="boss-card"><img alt="검은 성역의 문지기" src="assets/world_boss/gatekeeper.png?v=720"/><div><h3>검은 성역의 문지기</h3><p><b>약점:</b> 장착 무기 강화 +5 이상. 봉인 장갑과 핵을 파괴하면 방어 체계가 약화됩니다.</p></div></article>
+<article class="boss-card"><img alt="방사능 거신 아틀라스" src="assets/world_boss/atlas.png?v=720"/><div><h3>방사능 거신 아틀라스</h3><p><b>약점:</b> 기술자 직업과 방호 장비. 원자로와 냉각 계통을 파괴해 회복과 방어를 차단합니다.</p></div></article>
+<article class="boss-card"><img alt="심연 포식자 네메시스" src="assets/world_boss/nemesis.png?v=720"/><div><h3>심연 포식자 네메시스</h3><p><b>약점:</b> 화염 장비와 치명타. 감각 기관과 촉수를 파괴하면 회피와 반격이 약화됩니다.</p></div></article>
+<article class="boss-card"><img alt="폐허의 기계왕 바벨" src="assets/world_boss/babel.png?v=720"/><div><h3>폐허의 기계왕 바벨</h3><p><b>약점:</b> 보유 광석·고철. 포대와 수리 드론을 파괴해 공격과 자가 복구를 봉쇄합니다.</p></div></article>
+<article class="boss-card"><img alt="백색 방주의 망령" src="assets/world_boss/ark_ghost.png?v=720"/><div><h3>백색 방주의 망령</h3><p><b>약점:</b> 시즌 2 기록과 원정 유물. 기억 결정과 환영을 파괴하면 회피 기믹이 무너집니다.</p></div></article>
+<article class="boss-card"><img alt="종말의 왕 아바돈" src="assets/world_boss/abaddon.png?v=720"/><div><h3>종말의 왕 아바돈</h3><p><b>약점:</b> 참가 직업 역할 다양성. 왕관과 날개를 파괴해 최종 광폭화 반격을 억제합니다.</p></div></article>
+</div>
+<div class="boss-grid life-grid visual-summary-grid v700-mechanics-grid">
+<article class="boss-card icon-card"><div><span class="feature-emoji">📦</span><h3>안전 보상 큐</h3><p>새 보스가 소환돼도 이전 처치 전투를 보관하며 오래된 미수령 보상부터 지급합니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🧪</span><h3>테스트 전투 분리</h3><p>테스트 공격은 식량·내구도·도감·실전 통계와 보상을 변경하지 않습니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">⚔️</span><h3>약점 실제 계산</h3><p>직업·장비·강화·자원·스토리 기록·유물·역할 다양성이 피해량을 바꿉니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🔥</span><h3>네 단계 페이즈</h3><p>탐색·적응·붕괴·광폭화 단계별 방어·회피·패턴·반격 수치가 달라집니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">🎯</span><h3>부위 파괴</h3><p>부위별로 방어·회피·회복·환영·반격률·반격 피해에 서로 다른 효과를 줍니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">💥</span><h3>실제 반격</h3><p>실전 반격 적중 시 소량의 식량 손실이 발생하고 테스트에서는 예상값만 표시합니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!월드보스</code><code>!월드보스공격</code><code>!월드보스보상</code><code>!월드보스보상목록</code><code>!월드보스이력</code><code>!월드보스테스트상태</code><code>!월드보스테스트공격</code></div>
+</div>
+</section>
+<section class="section theme-showcase-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">28 SERVER THEMES · DARK TO BRIGHT</div><h2>아포칼립스만이 아닌, 서버만의 분위기</h2></div><p>기존 생존 테마는 그대로 유지하고 깔끔 고딕·화사한 자연·모던 판타지 테마를 추가했습니다. 이미지를 쓰지 않고 색상·이모지·문구만 바꾸므로 가볍고 안전합니다.</p></div>
+<div class="theme-grid">
+<article class="theme-card dark"><span>☣️</span><b>아포칼립스 12종</b><small>검은 성당 · 폐허 도시 · 격리 연구소 · 밤의 시장</small></article>
+<article class="theme-card gothic"><span>♜</span><b>깔끔·고딕 4종</b><small>깔끔 고딕 · 순백 성당 · 은빛 도서관 · 왕실 무도회</small></article>
+<article class="theme-card bright"><span>🌸</span><b>화사·자연 6종</b><small>벚꽃 정원 · 라벤더 문 · 민트 온실 · 해변 리조트 · 천공 정원 · 황금 들판</small></article>
+<article class="theme-card modern"><span>🔮</span><b>모던·판타지 6종</b><small>코발트 시티 · 네온 아카데미 · 별빛 극장 · 아르데코 · 마법 학원 · 달빛 서재</small></article>
+</div>
+<div class="raid-command-row"><code>!서버테마</code><code>!서버테마 화사</code><code>!서버테마미리보기 깔끔고딕</code><code>!서버테마설정 벚꽃정원</code></div>
+</div>
+</section>
+<section class="section v651-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">CARD SYSTEM FOUNDATION · SAFE MULTIPLAYER</div><h2>기존 안전 모집방을 유지한 채 게임만 확장했습니다</h2></div><p>참가 버튼, 시작 시 참가비 차감, 채널별 한 게임 제한, 비공개 패 확인, 중복 정산 방지와 시간 초과 전원 환불을 유지합니다.</p></div>
+<div class="boss-grid life-grid">
+<article class="boss-card"><div><h3>🎨 서버 리뉴얼 28종</h3><p>아포칼립스 12종, 깔끔·고딕 4종, 화사·자연 6종, 모던·판타지 6종을 분류→테마 2단 드롭다운으로 선택합니다.</p></div></article>
+<article class="boss-card"><div><h3>🛠️ 서버 설정 통합</h3><p>서버 브리핑, 이벤트 채널, 개인 알림, 백업, 복구, 429 상태와 안전 자동 진행을 하나의 제어실에서 확인합니다.</p></div></article>
+<article class="boss-card"><div><h3>♠️ 생존자 포커</h3><p>2~6명이 참가해 비공개 5장을 확인하고 한 장을 한 번 교환한 뒤 족보를 공개합니다.</p></div></article>
+<article class="boss-card"><div><h3>🎴 원카드</h3><p>2~6명 턴제 게임입니다. 같은 무늬·숫자를 내고 2·J·A·조커 특수 효과를 사용합니다.</p></div></article>
+<article class="boss-card"><div><h3>🃏 조커잡기</h3><p>2~8명이 참가해 같은 숫자 짝을 자동 제거하고 옆 사람 패에서 한 장씩 뽑습니다.</p></div></article>
+<article class="boss-card"><div><h3>💾 안전 정산</h3><p>참가비는 시작할 때만 차감합니다. 모집 취소는 미차감, 진행 시간 초과는 전원 환불, 재시작 잔존 예약은 자동 복구합니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!카드게임</code><code>!포커</code><code>!텍사스홀덤</code><code>!오마하홀덤</code><code>!세븐카드스터드</code><code>!맞고</code><code>!고스톱</code><code>!원카드</code><code>!조커잡기</code></div>
+</div>
+</section>
+<section class="section v639-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">FRONTIER OPERATIONS · SERVER-WIDE EVENTS</div><h2>작전 가방은 위험하게, 기존 자산은 안전하게</h2></div><p>기존 원정·레이드·카지노와 겹치지 않도록 작전 중 획득물만 위험에 노출되는 별도 PvPvE 구조로 설계했습니다.</p></div>
+<div class="boss-grid life-grid">
+<article class="boss-card"><div><h3>다크존 탈출</h3><p>진입 비용을 내고 파밍한 뒤 3분 동안 탈출 위치가 공개됩니다. 습격당해도 기존 인벤토리와 장착 장비는 안전합니다.</p></div></article>
+<article class="boss-card"><div><h3>밀수품 운반</h3><p>10분 동안 공개 운반을 버티면 계약 화물 가치의 2배를 우편으로 정산합니다. 실패해도 계약 화물만 잃습니다.</p></div></article>
+<article class="boss-card"><div><h3>보급선 피버</h3><p>서버별 하루 1~2회, 10분 동안 생활 획득량 2배와 희귀 발견 보정을 제공합니다. 이벤트당 한 번 보급선 수색이 가능합니다.</p></div></article>
+<article class="boss-card"><img alt="고철 갈갈이 분쇄기" src="assets/v651a/scrap_clean.webp"/><div><h3>고철 갈갈이</h3><p>잉여 나무·광석·고철과 비장착 저등급 장비를 칩·강화석·극저확률 상위 장비로 재활용합니다.</p></div></article>
+<article class="boss-card"><div><h3>우편함</h3><p>시간형 작전 정산과 서버 이벤트 보상을 <code>!우편함</code>에서 확인하고 <code>!받기 all</code>로 한 번에 수령합니다.</p></div></article>
+<article class="boss-card"><div><h3>선택형 알림</h3><p>날씨·보급선·밀수품 알림을 DM·멘션·둘 다 중에서 선택합니다. 서버 관리자는 공개 이벤트 채널을 지정할 수 있습니다.</p></div></article>
+<article class="boss-card"><div><h3>명령어 자동 분류</h3><p>새 기능은 <b>특수 작전 / 서버 이벤트</b> 최상위 드롭다운과 상점·서버 관련 카테고리에 중복 없이 정렬됩니다.</p></div></article>
+<article class="boss-card"><div><h3>통합 검수</h3><p>이 버전의 회귀 항목은 전용 안정화 명령으로 보존하며, 현재 <code>!테스트 상세</code>는 최신 패치 범위만 검사합니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!다크존</code><code>!다크존진입</code><code>!다크존탐색</code><code>!다크존탈출</code><code>!밀수품운반</code><code>!보급선</code><code>!고철갈갈이</code><code>!우편함</code><code>!알림설정</code><code>!테스트 상세</code></div>
+</div>
+</section>
+<section class="section v638-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">HARDCORE SURVIVAL ARCADE · CONSENT-BASED HIGH STAKES</div><h2>욕심과 타이밍이 생존 자원을 흔듭니다</h2></div><p>기존 슬롯·룰렛·PVP·랜덤박스와 같은 기능을 복제하지 않고, 현금화 타이밍·협동 실패·투표 숙청·옵트인 위험이라는 별도 규칙으로 구성했습니다.</p></div>
+<div class="boss-grid life-grid">
+<article class="boss-card"><div><h3>괴질 탈출</h3><p>배당이 실시간으로 오르는 동안 탈출 버튼을 눌러야 합니다. 충돌 전에 현금화하지 못하면 판돈을 전부 잃습니다.</p></div></article>
+<article class="boss-card"><div><h3>비상 주파수</h3><p>움직이는 게이지가 좁은 목표 구간을 지날 때 수신합니다. 오차에 따라 0·2·4·8배로 정산됩니다.</p></div></article>
+<article class="boss-card"><div><h3>무너진 폐허 횡단</h3><p>Discord 버튼 제한을 지키는 20칸 지뢰 게임입니다. 안전 칸을 열수록 배당이 오르고 언제든 도망칠 수 있습니다.</p></div></article>
+<article class="boss-card"><div><h3>배신자의 벙커</h3><p>3~8명이 참가비를 모으고 라운드마다 탈락자를 투표합니다. 최후의 1명이 수수료를 제외한 상금을 가져갑니다.</p></div></article>
+<article class="boss-card"><div><h3>카지노 금고 침투</h3><p>3~4명이 공동 참가비를 내고 4개의 보안 관문을 연속 통과합니다. 한 번의 오답으로 전원이 실패합니다.</p></div></article>
+<article class="boss-card"><div><h3>동의형 고위험 결투</h3><p>괴수 투기장과 영혼 결투는 상대 수락 후 진행합니다. 생물 테러도 대상이 옵트인한 경우에만 작동합니다.</p></div></article>
+<article class="boss-card"><div><h3>비상 보급상자</h3><p>하루 1개, 높은 식량 비용, 개인 천장과 서버 주간 한정 전리품을 사용하는 후반용 상자입니다.</p></div></article>
+<article class="boss-card"><div><h3>통합 자체 테스트</h3><p>이전 버전의 전체 회귀 검사는 버전별 안정화 명령으로 분리하고, 현재 <code>!테스트 상세</code>는 최신 변경 사항만 검사합니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!괴질탈출</code><code>!비상주파수</code><code>!지뢰찾기</code><code>!돌연변이경주</code><code>!오염문</code><code>!비상보급상자</code><code>!선물거래</code><code>!벙커개설</code><code>!금고개설</code><code>!영혼결투</code><code>!테스트 상세</code></div>
+</div>
+</section>
+<section class="section v637-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">DYNAMIC WORLD EVENTS · READ-ONLY SELF TEST</div><h2>예측할 수 없는 세계, 관리할 수 있는 생존</h2></div><p>기존 레이드·원정·암시장·카지노 기능과 역할이 겹치지 않도록 중복을 먼저 확인하고, 짧게 반복할 수 있는 환경·정비·일일 이벤트를 별도로 추가했습니다.</p></div>
+<div class="boss-grid life-grid">
+<article class="boss-card"><div><h3>12종 변동 날씨</h3><p>하루를 2~5시간 구간으로 나누고 서버별로 불규칙하게 변경됩니다. 같은 날씨가 연속으로 나오지 않습니다.</p></div></article>
+<article class="boss-card"><div><h3>SOS 무전 해독</h3><p>주파수 동기화·좌표 역산·긴급 응답 중 하나를 선택합니다. 날씨 구간이 바뀌면 새 신호가 생성됩니다.</p></div></article>
+<article class="boss-card"><div><h3>무기 내구도·개조</h3><p>전투와 위험 탐색으로 내구도가 감소합니다. 수리 키트와 6종 파츠로 자신만의 무기를 관리합니다.</p></div></article>
+<article class="boss-card"><div><h3>까마귀의 임시 상점</h3><p>날씨 구간마다 낮은 확률로 등장하는 칩 전용 상인입니다. 수리품·개조 부품·자원·희귀 장비를 제한 판매합니다.</p></div></article>
+<article class="boss-card"><div><h3>오늘의 돌연변이 구역</h3><p>매일 한 지역이 고위험·고보상 구역으로 지정됩니다. 실패 위험과 피해가 커지는 대신 보상 배율도 크게 상승합니다.</p></div></article>
+<article class="boss-card"><div><h3>오늘의 운세</h3><p>행운의 아이템·음식·방향과 작은 전투·생활·시장 보정을 확인합니다. 첫 확인에는 소액 생존 보상이 지급됩니다.</p></div></article>
+<article class="boss-card"><div><h3>대형 랜덤박스</h3><p>식량을 지불해 하루 최대 3회 개봉합니다. 장비·파츠·수리 키트·자원·재료·부분 환급이 나옵니다.</p></div></article>
+<article class="boss-card"><div><h3>패치 자체 테스트</h3><p><code>!테스트</code>는 명령 등록·날씨 엔진·내구도·카지노 이미지 제거·전투 후크를 재화 변경 없이 점검합니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!날씨</code><code>!무전</code><code>!위험구역</code><code>!오늘의 운세</code><code>!내구도</code><code>!개조목록</code><code>!까마귀</code><code>!랜덤박스</code><code>!테스트</code></div>
+</div>
+</section>
+<section class="section v636-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">CO-OP DEFENSE · TACTICAL COMBAT · EQUIPMENT FX</div><h2>기존 전투·기지 시스템도 그대로 연결됩니다</h2></div><p>기존 기지 방어·자원 시장·RPG·스토리·던전 전술 전투는 유지하고, 이번 환경·정비 기능이 해당 시스템의 보상과 위험에 보조적으로 연결됩니다.</p></div>
+<div class="boss-grid life-grid">
+<article class="boss-card"><img alt="종말 날씨와 재난" src="assets/v636/weather_disaster.jpg"/><div><h3>변동 날씨·재난</h3><p>2~5시간 사이의 불규칙한 환경 구간이 생활 획득량·사고율·던전 전투 효율과 희귀 결과에 소폭 영향을 줍니다.</p></div></article>
+<article class="boss-card quality-media-card"><img alt="기지 방어 레이드" src="assets/v652/base_defense_hd.webp?v=652"/><div><h3>주간 기지 방어</h3><p>개인 기지 레벨과 장비 전투력을 합산하는 주간 서버 협동전입니다. 고화질 전장 원본으로 교체하고 기존 레이드와 보상 구조를 분리했습니다.</p></div></article>
+<article class="boss-card quality-media-card"><img alt="자원 변동 시장" src="assets/v652/resource_market_hd.webp?v=652"/><div><h3>변동 자원 시장</h3><p>나무·광석·고철을 식량으로 사고팔며 수요와 공급에 따라 가격이 변합니다. 시장 전용 고화질 원본과 카지노 칩 교환을 지원합니다.</p></div></article>
+<article class="boss-card"><img alt="펫 카지노 시너지" src="assets/pets_v634/unicorn/0.webp"/><div><h3>펫·카지노 시너지</h3><p>일부 동행 펫이 승리 칩을 소폭 늘리거나 손실 일부를 환급합니다. 결과 판정 자체를 뒤집지는 않습니다.</p></div></article>
+<article class="boss-card asset-preview-card quality-media-card"><img alt="무기별 강화 효과" src="assets/v652/enhancement_fx_hd.webp?v=652"/><div><h3>무기별 강화 이펙트</h3><p>+0·+5·+10·+15·+20 단계가 한 화면에서 선명하게 비교되며, 전기·화염·공허·생체·방어·정밀·근접 계열은 서로 다른 효과를 사용합니다.</p></div></article>
+<article class="boss-card"><img alt="버튼형 전술 전투" src="assets/v636/tactical_combat.jpg"/><div><h3>버튼형 전술 전투</h3><p>공격·기술·방어·응급·도주를 선택합니다. 기존 던전은 빠른 자동전투 모드로 유지됩니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!기지방어</code><code>!기지방어공격</code><code>!자원시장</code><code>!기지칩교환</code><code>!전투</code><code>!던전전술</code><code>!스토리 전투</code></div>
+</div>
+</section>
+<section class="section live-section legacy-section" id="live">
+<div class="container">
+<div class="section-head">
+<div><div class="eyebrow">LIVE FROM THE WASTELAND</div><h2>실시간 종말 기록</h2></div>
+<p>별도 실시간 피드 Web Service를 15초마다 확인합니다. 운영·보안·문의 내용은 공개하지 않고, 봇 상태와 강화 이정표·운영진 공개 공지만 표시합니다.</p>
+</div>
+<div class="live-console">
+<aside class="live-summary">
+<div class="live-seal"><span class="live-seal-ring"></span><b id="live-state">온라인 상태 확인 중</b><small id="live-state-note">설정 상태를 먼저 표시하고 공개 피드가 연결되면 실시간 수치로 전환합니다.</small></div>
+<dl class="live-metrics">
+<div><dt>연결 서버</dt><dd id="live-guilds">—</dd></div>
+<div><dt>생존자</dt><dd id="live-members">—</dd></div>
+<div><dt>지연시간</dt><dd id="live-latency">—</dd></div>
+<div><dt>마지막 신호</dt><dd id="live-updated">—</dd></div>
+</dl>
+<button class="notify-button" id="notify-toggle" type="button">브라우저 알림 켜기</button><p class="live-privacy">공개 이벤트만 전송합니다. 경고·티켓·DM·관리 로그는 이 피드에 포함되지 않습니다. 브라우저 알림은 이 페이지가 열려 있을 때 새 기록을 알려줍니다.</p>
+</aside>
+<div aria-live="polite" class="live-events" id="live-events">
+<article class="feed-event feed-placeholder"><span class="feed-rune">●</span><div><b>ABADDON v11.0.0 온라인</b><p>정적 ONLINE 신호가 활성화됐습니다. 공개 피드 API를 연결하면 서버·생존자·지연시간이 실시간 값으로 자동 전환됩니다.</p></div></article>
+</div>
+</div>
+</div>
+</section>
+<section class="section v635-section media-contain-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">CLEAN CASINO UI · FIVE-STAGE FORTRESS</div><h2>카지노 결과 정리 · 고난도 기지 업그레이드</h2></div><p>카지노는 이미지 없이 결과 중심 UI로 정리하고, 기지는 단계별 외형과 고난도 자원 구조를 유지합니다.</p></div>
+<div class="boss-grid life-grid">
+<article class="boss-card icon-card"><div><span class="feature-emoji">🚫</span><h3>카지노 이미지 제거</h3><p>슬롯·블랙잭·룰렛·바카라 결과는 이미지 없이 더 깔끔한 임베드로 표시됩니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">⚖️</span><h3>손익 판정 유지</h3><p>일반 승리·대승·잭팟·패배·치명 실패의 결과 계산과 보상 로직은 그대로 유지됩니다.</p></div></article>
+<article class="boss-card icon-card"><div><span class="feature-emoji">📋</span><h3>로그 가독성 개선</h3><p>연속 플레이 시 이미지 스팸 없이 결과와 잔액 변동을 빠르게 확인할 수 있습니다.</p></div></article>
+<article class="boss-card base-stage-card"><img alt="Lv.1 야영지" src="assets/v652/base_stages/level_1.webp?v=652"/><div><h3>Lv.1 야영지</h3><p>기본 생산 거점. 건설부터 기존보다 많은 생활 자원이 필요합니다.</p></div></article>
+<article class="boss-card base-stage-card"><img alt="Lv.2 임시 거점" src="assets/v652/base_stages/level_2.webp?v=652"/><div><h3>Lv.2 임시 거점</h3><p>첫 강화부터 30분의 실제 공사 시간이 적용됩니다.</p></div></article>
+<article class="boss-card base-stage-card"><img alt="Lv.3 강화 거점" src="assets/v652/base_stages/level_3.webp?v=652"/><div><h3>Lv.3 강화 거점</h3><p>중반부터 자원 요구량이 크게 뛰어 장기 채집과 투자가 필요합니다.</p></div></article>
+<article class="boss-card base-stage-card"><img alt="Lv.4 중형 기지" src="assets/v652/base_stages/level_4.webp?v=652"/><div><h3>Lv.4 중형 기지</h3><p>8시간 공사와 천 단위 생활 자원, 천만 단위 식량을 요구합니다.</p></div></article>
+<article class="boss-card base-stage-card"><img alt="Lv.5 요새급 기지" src="assets/v652/base_stages/level_5.webp?v=652"/><div><h3>Lv.5 요새급 기지</h3><p>최종 24시간 공사와 대규모 자원을 요구하는 최상위 생존 목표입니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!카지노</code><code>!슬롯</code><code>!블랙잭</code><code>!룰렛</code><code>!기지</code><code>!기지건설</code><code>!기지강화</code><code>!기지수확</code><code>!패치노트</code><code>!명령어</code></div>
+</div>
+</section>
+<section class="section life-visual-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">FIVE COMMANDS · FORTY-EIGHT NEW SCENES</div><h2>생활 콘텐츠 2차 비주얼 리뉴얼</h2></div><p>낚시·광산·코인·갈림길 탐색·긴급 지원이 각 결과에 맞는 별도 장면을 사용하며, 단순 상자 한 장을 반복하지 않습니다.</p></div>
+<div class="boss-grid life-grid">
+<article class="boss-card"><img alt="낚시" src="assets/life_v632/fishing.jpg"/><div><h3>낚시</h3><p>수변 성공·희귀 어종·줄 끊김·약탈자 보트·침수 보급 상자</p></div></article>
+<article class="boss-card"><img alt="광산" src="assets/life_v632/mining.jpg"/><div><h3>광산</h3><p>광맥 발견·희귀 결정·낙석·폐광 가스·지하 기계 동력핵</p></div></article>
+<article class="boss-card"><img alt="코인과 탐색" src="assets/life_v632/coin_explore.jpg"/><div><h3>코인·갈림길 탐색</h3><p>스캐너 해독·희귀 자산·위조 신호·보급함·매복과 와이어 덫</p></div></article>
+<article class="boss-card"><img alt="긴급 지원" src="assets/life_v632/support.jpg"/><div><h3>돈주세요</h3><p>보급 담당자·암시장 상인·버려진 배급소·사기 거래·특별 지원 물자</p></div></article>
+</div>
+<div class="raid-command-row"><code>!낚시</code><code>!광산</code><code>!코인</code><code>!코인탐색</code><code>!탐색</code><code>!돈주세요</code></div>
+</div>
+</section>
+<section class="section pet-visual-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">NINETEEN COMPANIONS · THREE EVOLUTION STAGES</div><h2>펫 비주얼 3단 진화</h2></div><p>기존 생존 동료 7종을 유지하고, 아바돈·다크프·루나냥 등 귀여운 신규 펫 12종을 더했습니다. 총 19종 모두 기본·1차·최종 진화 이미지를 사용합니다.</p></div>
+<div class="boss-grid life-grid">
+<article class="boss-card"><img alt="폐허쥐" src="assets/pets_v634/ruin_rat/0.webp"/><div><h3>폐허쥐</h3><p>작은 생존 가방을 멘 수집 동료 · 철니 폐허쥐 · 군체의 왕</p></div></article>
+<article class="boss-card"><img alt="정찰까마귀" src="assets/pets_v634/scout_crow/0.webp"/><div><h3>정찰까마귀</h3><p>높은 곳에서 길을 찾는 정찰 동료 · 야간정찰 · 검은 감시자</p></div></article>
+<article class="boss-card"><img alt="군견제로" src="assets/pets_v634/war_dog_zero/0.webp"/><div><h3>군견제로</h3><p>충직한 군견 동료 · 강화군견 제로 · 전쟁견 제로</p></div></article>
+<article class="boss-card"><img alt="변이살쾡이" src="assets/pets_v634/mutant_lynx/0.webp"/><div><h3>변이살쾡이</h3><p>그림자처럼 움직이는 고양잇과 동료 · 그림자 살쾡이 · 야수왕</p></div></article>
+<article class="boss-card"><img alt="미니드론" src="assets/pets_v634/mini_drone/0.webp"/><div><h3>미니드론</h3><p>표정 화면이 있는 둥근 보급 드론 · 전투드론 · 오메가 드론</p></div></article>
+<article class="boss-card"><img alt="어린하이드라" src="assets/pets_v634/young_hydra/0.webp"/><div><h3>어린하이드라</h3><p>재생 에너지를 품은 아기 동료 · 삼두 하이드라 · 재생의 군주</p></div></article>
+<article class="boss-card"><img alt="공허의새끼용" src="assets/pets_v634/void_dragon/0.webp"/><div><h3>공허의새끼용</h3><p>공간 에너지를 먹고 자라는 귀여운 용 · 공허의 비룡 · 차원룡</p></div></article>
+<article class="boss-card"><img alt="아바돈" src="assets/pets_v634/abaddon_pet/0.webp"/><div><h3>아바돈</h3><p>별빛 목걸이를 찬 복슬복슬한 강아지 동료. 곁에 있는 것만으로도 생존자의 마음을 안정시킵니다. · 성광 아바돈 · 천상의 아바돈</p></div></article>
+<article class="boss-card"><img alt="다크프" src="assets/pets_v634/darkp/0.webp"/><div><h3>다크프</h3><p>검은 털과 붉은 장식을 지닌 장난꾸러기 그림자 늑대. 위험을 먼저 감지합니다. · 그림자 다크프 · 심연왕 다크프</p></div></article>
+<article class="boss-card"><img alt="루나냥" src="assets/pets_v634/luna_nyang/0.webp"/><div><h3>루나냥</h3><p>초승달 장식을 달고 다니는 새하얀 고양이. 어둠 속 작은 빈틈을 찾아냅니다. · 월광 루나냥 · 달의 여제 루나냥</p></div></article>
+<article class="boss-card"><img alt="파이어몽" src="assets/pets_v634/fire_mong/0.webp"/><div><h3>파이어몽</h3><p>꼬리 끝에 따뜻한 불꽃을 품은 아기 원숭이. 전투가 길어질수록 용기를 북돋습니다. · 화염 파이어몽 · 태양왕 파이어몽</p></div></article>
+<article class="boss-card"><img alt="스노우씨" src="assets/pets_v634/snow_ssi/0.webp"/><div><h3>스노우씨</h3><p>눈송이처럼 포근한 흰 토끼. 차가운 기운으로 상처와 피로를 가라앉힙니다. · 설원 스노우씨 · 빙설의 수호자</p></div></article>
+<article class="boss-card"><img alt="메카로보" src="assets/pets_v634/mecha_robo/0.webp"/><div><h3>메카로보</h3><p>토끼 귀 안테나와 푸른 눈을 가진 소형 로봇. 보급품의 가치를 빠르게 분석합니다. · 강화 메카로보 · 오메가 메카로보</p></div></article>
+<article class="boss-card"><img alt="썬더드래곤" src="assets/pets_v634/thunder_dragon/0.webp"/><div><h3>썬더드래곤</h3><p>번개 날개를 가진 작고 씩씩한 용. 전장의 흐름을 읽고 강한 일격을 돕습니다. · 뇌광 썬더드래곤 · 폭풍룡</p></div></article>
+<article class="boss-card"><img alt="포레스트" src="assets/pets_v634/forest_spirit/0.webp"/><div><h3>포레스트</h3><p>새싹 뿔과 잎사귀 꼬리를 가진 숲의 정령. 재료의 기운과 생명력을 감지합니다. · 숲의 포레스트 · 세계수의 정령</p></div></article>
+<article class="boss-card"><img alt="미니골렘" src="assets/pets_v634/mini_golem/0.webp"/><div><h3>미니골렘</h3><p>고대 석판과 푸른 핵으로 움직이는 작은 골렘. 단단한 몸으로 앞길을 지켜줍니다. · 강화 미니골렘 · 대지의 거신</p></div></article>
+<article class="boss-card"><img alt="유니콘" src="assets/pets_v634/unicorn/0.webp"/><div><h3>유니콘</h3><p>무지갯빛 갈기와 별빛 뿔을 지닌 신비로운 동료. 생존자의 행운과 회복을 돕습니다. · 성휘 유니콘 · 별무리 유니콘</p></div></article>
+<article class="boss-card"><img alt="헤르메스" src="assets/pets_v634/hermes/0.webp"/><div><h3>헤르메스</h3><p>작은 날개와 얼음빛 장식을 가진 하늘의 전령. 빠른 움직임으로 위험과 보물을 먼저 찾습니다. · 천공 헤르메스 · 신속의 사자</p></div></article>
+<article class="boss-card"><img alt="네온문" src="assets/pets_v634/neon_moon/0.webp"/><div><h3>네온문</h3><p>보랏빛 달 그림자를 두른 검은 고양이. 공허의 기운으로 탐색과 전투 전반을 증폭합니다. · 월영 네온문 · 공허월의 군주</p></div></article>
+</div>
+<div class="raid-command-row"><code>!펫상점</code><code>!펫정보</code><code>!펫목록</code><code>!펫장착</code><code>!펫훈련</code><code>!펫먹이</code><code>!펫모험</code><code>!펫진화</code></div>
+</div>
+</section>
+<section class="section equipment-visual-section media-contain-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">EQUIPMENT · FORGE · CRAFTING · RELICS</div><h2>장비·제작 비주얼과 강화 효과</h2></div><p>장비 70종과 보물 20종의 이름별 이미지를 유지하면서 무기 종류별 강화 이펙트를 추가했습니다. <b>!장비</b> 드롭다운·검색·상세 카드는 그대로 사용할 수 있습니다.</p></div>
+<div class="boss-grid life-grid">
+<article class="boss-card asset-preview-card"><img alt="이름별 장비 이미지" src="assets/v651a/equipment_clean.webp"/><div><h3>장비 70종 전용 이미지</h3><p>ITEM_DB의 실제 장비 이름·등급·설명·전투력에 맞춘 개별 카드</p></div></article>
+<article class="boss-card asset-preview-card quality-media-card"><img alt="고강화 장비" src="assets/v652/enhancement_fx_hd.webp?v=652"/><div><h3>강화 외형 진화</h3><p>+0~+4는 원본 그대로, +5 이후부터 테두리·외곽 광점·속성 모서리 효과·초월 룬이 단계별로 확장</p></div></article>
+<article class="boss-card"><img alt="기지 성장 단계" src="assets/v651a/base_progression.webp"/><div><h3>기지 성장 단계</h3><p>Lv.0 야영지부터 Lv.5 요새까지 같은 구도에서 성장 흐름을 비교</p></div></article>
+<article class="boss-card asset-preview-card"><img alt="이름별 보물 감정" src="assets/v651a/treasure_clean.webp"/><div><h3>보물 20종 감정 이미지</h3><p>E~A 등급의 실제 감정 보물 이름에 맞는 이미지 표시</p></div></article>
+</div>
+<div class="raid-command-row"><code>!장비</code><code>!장착</code><code>!감정</code><code>!강화</code><code>!장비외형</code><code>!제작</code><code>!보물감정</code></div>
+</div>
+</section>
+<section class="section alt legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">VOICE &amp; SANCTUARY</div><h2>기억과 목소리가 이어지는 성역</h2></div><p>구성원이 남긴 안전한 지식은 운영진 검수를 거쳐 아바돈의 새로운 대화 기록이 됩니다.</p></div>
+<div class="card-grid">
+<article class="feature-card"><div class="feature-icon">🕯️</div><h3>대화·기억 제어실</h3><p>말 걸기를 선택하면 모달 대신 현재 채널에 연속 대화가 열립니다. 이후 평소처럼 채팅하거나 아바돈 답변에 답글을 달아 대화를 이어갑니다.</p><div class="command-sample">!말걸기 · !대화종료</div></article>
+<article class="feature-card"><div class="feature-icon">📚</div><h3>기억 공방·운영진 검수</h3><p>구성원은 모달로 질문과 답변을 제출하고 운영진은 최대 25개씩 승인·반려합니다. 운영진 등록은 즉시 승인되며 개인정보·토큰·초대 링크는 차단합니다.</p><div class="command-sample">!가르치기 · !지식 검수</div></article>
+<article class="feature-card"><div class="feature-icon">💬</div><h3>오늘의 질문·교감</h3><p>매일 바뀌는 서버 질문, 생존 밸런스 투표, 응원과 한마디를 제공하며 대화·승인 기억·질문 참여로 사용자별 교감 기록을 쌓습니다.</p><div class="command-sample">!오늘의질문 · !교감</div></article>
+<article class="feature-card"><div class="feature-icon">📜</div><h3>채널 규칙 자동 작성</h3><p>채널 이름과 주제를 보고 25종 규칙 중 하나를 추천합니다. 여러 채널을 선택하면 채널마다 20초 간격으로 작성·고정하고, 기존 메시지는 중복 없이 갱신합니다.</p><div class="command-sample">!채널규칙</div></article>
+<article class="feature-card"><div class="feature-icon">⛏️</div><h3>굴착 이미지·발견물 요약</h3><p>고철·광석·식량·고대파편·미감정 보물과 굴착 잔돈을 항목별 임베드에 표시합니다. 진행률 연출 뒤 현재 보유량과 남은 횟수까지 한눈에 확인합니다.</p><div class="command-sample">!땅파기 · !보물감정</div></article>
+<article class="feature-card"><div class="feature-icon">🎁</div><h3>지원 교섭·생활 상황 결과</h3><p>돈주세요는 1분·하루 50회이며 정상 지원 뒤 특별 교섭 버튼이 랜덤 등장합니다. 성공 시 기본 지원과 별도로 5,000~20,000 식량을 받습니다. 낚시·광산은 각각 독립 2분입니다.</p><div class="command-sample">!돈주세요 · !낚시 · !광산</div></article>
+<article class="feature-card"><div class="feature-icon">🌑</div><h3>종말의 왕좌</h3><p>검은 주파수와 백색 방주의 선택을 계승하는 시즌 3 캠페인과 4개의 신규 엔딩을 드롭다운으로 진행합니다.</p><div class="command-sample">!시즌3</div></article>
+<article class="feature-card"><div class="feature-icon">🩺</div><h3>통합 진단 센터</h3><p>Discord 연결, 데이터 파일, TTS, 서버 리뉴얼, 슬래시 명령, 홈페이지 피드와 봇 권한을 드롭다운으로 점검합니다.</p><div class="command-sample">!아바돈진단</div></article>
+<article class="feature-card"><div class="feature-icon">⚙️</div><h3>서버 설정 제어실</h3><p>TTS 채널·엔진·기본 목소리, 환영 안내, 운영 로그, 자동 이모지와 공개 피드를 명령 하나에서 관리합니다.</p><div class="command-sample">!설정</div></article>
+<article class="feature-card"><div class="feature-icon">🎙️</div><h3>사용자별 목소리 10종</h3><p>일반 사용자가 자신의 음성을 드롭다운으로 선택하며 다른 사람이나 서버 기본값은 변경하지 않습니다.</p><div class="command-sample">/tts 목소리</div></article>
+<article class="feature-card"><div class="feature-icon">▶️</div><h3>목소리 미리듣기</h3><p>음성방에 들어간 상태에서 음성을 시험하고, 개인 설정을 초기화해 서버 기본값으로 돌아갈 수 있습니다.</p><div class="command-sample">/tts 미리듣기</div></article>
+<article class="feature-card"><div class="feature-icon">👋</div><h3>신규 생존자 인삿말</h3><p>환영 메시지에 공지사항·서버 기본규칙·가입 채널을 연결하고 `!가입 생존자` 시작법을 안내합니다.</p><div class="command-sample">!인삿말설정</div></article>
+<article class="feature-card"><div class="feature-icon">🎙️</div><h3>TTS 음성 런타임 안정화</h3><p>TTS 채팅방의 메시지를 작성자의 음성방에서 읽되, 닉네임은 생략하고 채팅 내용만 낭독합니다. discord.py 2.7용 음성 런타임도 유지합니다.</p><div class="command-sample">!TTS채널</div></article>
+<article class="feature-card"><div class="feature-icon">🛟</div><h3>리뉴얼 드롭다운 제어실</h3><p>명령 하나로 테마 미리보기·안전 계획·수동 백업·복구·빈 카테고리 정리를 선택합니다.</p><div class="command-sample">!서버리뉴얼</div></article>
+<article class="feature-card"><div class="feature-icon">📡</div><h3>실시간 종말 기록</h3><p>봇 상태와 공개 강화·공지 이벤트가 별도 피드 서비스에서 홈페이지로 안전하게 흐릅니다.</p><div class="command-sample">!실시간피드테스트</div></article>
+</div>
+</div>
+</section>
+<section class="section legacy-section"><div class="container"><div class="cta-panel gothic-arch"><div><div class="eyebrow">ENTER THE CATHEDRAL</div><h2>검은 종이 울리면, 생존은 시작된다.</h2><p>음성 성역과 정돈된 서버 메뉴를 공식 Discord에서 직접 확인하세요.</p></div><a class="button primary" data-discord-link="" href="#">공식 Discord 입장</a></div></div></section>
+<section class="section v640-section legacy-section">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">CLEAR RESULTS · LIVE TICKS · OPT-IN LOBBY</div><h2>미니게임과 실시간 거래를 더 명확하게</h2></div><p>지뢰찾기는 총액과 순손익을 분리하고, 선물거래는 실시간 이모지 차트로 움직입니다. 서버 레이스는 참가 버튼을 누른 사람만 출전합니다.</p></div>
+<div class="boss-grid life-grid">
+<article class="boss-card"><div><h3>💣 지뢰 정산</h3><p>현재 보유 칩·현금화 총액·얻은 돈·잃은 돈을 결과 화면에서 바로 구분합니다.</p></div></article>
+<article class="boss-card"><div><h3>📊 실시간 선물 차트</h3><p>롱·숏 진입 후 16틱 차트와 미실현 손익을 보며 수동 또는 자동 청산합니다.</p></div></article>
+<article class="boss-card"><div><h3>⚡ 반응·기억 게임</h3><p>버튼 반응속도와 잠깐 표시되는 이모지 배열을 이용한 접근성 높은 개인 게임입니다.</p></div></article>
+<article class="boss-card"><div><h3>🏁 참가형 생존자 레이스</h3><p>참가 버튼으로 인원을 모집하고 방장이 확정한 뒤, 이모지 효과가 흐르는 서버 레이스를 시작합니다.</p></div></article>
+</div>
+<div class="raid-command-row"><code>!미니게임</code><code>!지뢰찾기</code><code>!선물거래</code><code>!반응속도</code><code>!기억회로</code><code>!생존자레이스</code><code>!테스트 상세</code></div>
+</div>
+</section>
+<section class="section deploy-check-section" data-section="deploy-check" id="deploy-check">
+<div class="container"><div class="section-head"><div><div class="eyebrow">POST-DEPLOYMENT CHECKLIST</div><h2>배포 후 첫 확인</h2></div><p>항상 쓰던 점검 명령은 그대로 유지하고, v16.7 운영·정리·죽은 기능·모바일 화면 점검을 추가했습니다.</p></div>
+<div class="deploy-check-grid">
+<pre class="deploy-code"><code>!명령등록검수 상세
+!1500통합검수 상세
+!1500시각검수 상세
+!테스트 상세
+!패치노트
+
+!도시지도
+!도시꾸미기
+!연출설정 화면
+!도시채집
+
+!공격대소환
+!공격대참가
+!차원보스공격
+
+!대화모드 문맥형
+!말걸기</code></pre>
+<div class="deploy-files"><h3>배포 관련 파일</h3><div><span>ABADDON_v16.7.1_AUDIT.json</span><small>JSON</small></div><div><span>ABADDON_v16.7.1_PATCH_NOTES_KO.txt</span><small>TXT</small></div><div><span>ABADDON_v16.7.1_DEPLOY_TEST_GUIDE_KO.txt</span><small>TXT</small></div><div class="new-check"><b>v16.2.1 이미지 점검</b><code>!이미지검수 상세</code><code>!1621통합검수 상세</code></div><div class="new-check"><b>v16.3.0 추가 점검</b><code>!명령어전수검수 상세</code><code>!도시부품검수 상세</code><code>!1630통합검수 상세</code><code>!도박분류검수 상세</code><code>!1631통합검수 상세</code></div><div class="new-check"><b>v16.7.1 긴급 점검</b><code>!명령어</code><code>!help</code><code>!1671통합검수 상세</code><code>!테스트 상세</code><code>!실시간오류센터 상세</code></div><div class="new-check"><b>v16.7.0 추가 점검</b><code>!운영광택센터</code><code>!메시지정리센터</code><code>!실사용통계 상세</code><code>!죽은기능검수 상세</code><code>!화면광택검수 상세</code><code>!1670통합검수 상세</code></div></div>
+</div></div>
+</section></main>
+<footer class="site-footer"><div class="container footer-wrap"><div>© 2026 ABADDON. 공식 Discord RPG 프로젝트.</div><div class="footer-links"><a href="#live">실시간</a><a href="commands.html">명령어</a><a href="updates.html">패치 기록</a><a data-discord-link="" href="#">Discord</a></div></div></footer>
+</body>
+</html>

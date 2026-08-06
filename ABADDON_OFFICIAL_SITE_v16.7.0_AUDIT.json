@@ -1,0 +1,255 @@
+{
+  "version": "v16.7.0",
+  "generated_at": "2026-08-05T21:14:00+09:00",
+  "scope": "LIVE OPS & POLISH static audit",
+  "passed": 47,
+  "total": 47,
+  "all_passed": true,
+  "runtime_limitations": [
+    "Discord Gateway login not executed",
+    "Real guild permissions and concurrent clicks not executed",
+    "Bulk-delete behavior for messages older than 14 days requires deployment-server testing"
+  ],
+  "checks": [
+    {
+      "name": "Python syntax compile",
+      "ok": true,
+      "detail": "119 files; errors=0"
+    },
+    {
+      "name": "v1670 module exists",
+      "ok": true,
+      "detail": "apocalypse_bot/commands/v1670_live_ops_polish.py"
+    },
+    {
+      "name": "command 운영광택센터",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "command 메시지정리센터",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "command 실사용통계",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "command 죽은기능검수",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "command 화면광택검수",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "command 1670통합검수",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cleanup confirmation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cleanup bounds",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cleanup permission checks",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "owner-only panels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime metrics collector",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "command center live rebuild",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Korean/English dynamic labels",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "registration in bot core",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "registration after v1661",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "registration before slash setup",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "manifest version",
+      "ok": true,
+      "detail": "v16.7.0"
+    },
+    {
+      "name": "manifest declaration count",
+      "ok": true,
+      "detail": "1367"
+    },
+    {
+      "name": "manifest access count",
+      "ok": true,
+      "detail": "3069"
+    },
+    {
+      "name": "manifest new commands",
+      "ok": true,
+      "detail": "['1670통합검수', '메시지정리센터', '실사용통계', '운영광택센터', '죽은기능검수', '화면광택검수']"
+    },
+    {
+      "name": "no new command collisions",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "name": "category audit row count",
+      "ok": true,
+      "detail": "1367"
+    },
+    {
+      "name": "category 죽은기능검수",
+      "ok": true,
+      "detail": "audit"
+    },
+    {
+      "name": "category 운영광택센터",
+      "ok": true,
+      "detail": "admin"
+    },
+    {
+      "name": "category 1670통합검수",
+      "ok": true,
+      "detail": "audit"
+    },
+    {
+      "name": "category 화면광택검수",
+      "ok": true,
+      "detail": "audit"
+    },
+    {
+      "name": "category 실사용통계",
+      "ok": true,
+      "detail": "audit"
+    },
+    {
+      "name": "category 메시지정리센터",
+      "ok": true,
+      "detail": "admin"
+    },
+    {
+      "name": "20 city component assets",
+      "ok": true,
+      "detail": "20/20; missing=[]"
+    },
+    {
+      "name": "HTML parse index.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "HTML parse en/index.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "HTML parse updates.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "HTML parse en/updates.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "HTML parse commands.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "HTML parse en/commands.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "config version config.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "config version en/config.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Korean v1670 section",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "English v1670 section",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "English latest section has no Hangul",
+      "ok": true,
+      "detail": "V16.7.0 · LIVE OPS & POLISH Polishing live operations and real usage instead of stacking more systems Adds a button-driven operations hub, confirmed cleanup, 24"
+    },
+    {
+      "name": "Korean latest quick jump",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "English latest quick jump",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Korean deploy checks latest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "English deploy checks latest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "site manifest synced",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "compile_errors": [],
+  "preservation": {
+    "removed_commands": 0,
+    "removed_save_keys": 0
+  }
+}

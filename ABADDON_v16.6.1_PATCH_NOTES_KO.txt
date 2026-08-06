@@ -1,0 +1,8 @@
+ABADDON v16.6.1 — RUNTIME INTERACTION HOTFIX
+- 장비 버튼 `_MissingSentinel.author` 오류 수정
+- discord.py 2.7 MISSING Cog sentinel 보호
+- 선택 메뉴 25개·문자 길이·중복 값·빈 목록 자동 정리
+- 임베드 필드 25개·전체 6000자 제한 자동 축약
+- 명령어·장비 드롭다운 선승인 후 편집
+- `!테스트 상세`, `!UI안정화검수 상세`, `!1661통합검수 상세` 최신화
+- 기존 기능·저장 데이터 삭제 0건

@@ -1,0 +1,43 @@
+{
+  "python_compile": true,
+  "theme_count": 6,
+  "theme_keys": [
+    "sprout",
+    "blossom",
+    "bubble",
+    "starlight",
+    "paw",
+    "apocalypse"
+  ],
+  "apocalypse_theme_present": true,
+  "command_registration_conflicts": [],
+  "data_backup_command": "데이터백업",
+  "backup_create_command": "백업생성",
+  "backup_create_alias": "백업생성",
+  "welcome_theme_command": "환영테마",
+  "welcome_theme_aliases": {
+    "새싹테마": "환영테마",
+    "신입테마": "환영테마"
+  },
+  "site_images_unchanged": true,
+  "bot_images_unchanged": true,
+  "site_image_count": 127,
+  "bot_image_count": 311,
+  "preserved_core_modules": {
+    "apocalypse_bot/commands/v652_english_access.py": {
+      "old": "1d59f7241932201452a3e891902077c36469afce5b20281df447e9697ea02c35",
+      "new": "1d59f7241932201452a3e891902077c36469afce5b20281df447e9697ea02c35",
+      "same": true
+    },
+    "apocalypse_bot/commands/v710_growth_loop.py": {
+      "old": "970e19af0f27a6547549c006ee23084b7387078a59db83b95093a3dfe75d0ca8",
+      "new": "970e19af0f27a6547549c006ee23084b7387078a59db83b95093a3dfe75d0ca8",
+      "same": true
+    },
+    "apocalypse_bot/commands/v630_world_boss.py": {
+      "old": "128d43edf891a25fd29734ae23ff4feddbef5cdbf0fd9a922950e93037aa9d91",
+      "new": "128d43edf891a25fd29734ae23ff4feddbef5cdbf0fd9a922950e93037aa9d91",
+      "same": true
+    }
+  }
+}

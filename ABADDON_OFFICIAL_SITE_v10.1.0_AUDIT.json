@@ -1,0 +1,63 @@
+{
+  "version": "10.1.0",
+  "generated_at": "2026-08-03T13:15:00+09:00",
+  "status": "PASS_STATIC",
+  "checks": {
+    "website_html_parse": {
+      "name": "website_html_parse",
+      "ok": true,
+      "detail": "7 files; []"
+    },
+    "website_internal_links": {
+      "name": "website_internal_links",
+      "ok": true,
+      "detail": "7 files; []"
+    },
+    "website_version_1010": {
+      "name": "website_version_1010",
+      "ok": true,
+      "detail": "[]"
+    },
+    "website_korean_commands": {
+      "name": "website_korean_commands",
+      "ok": true,
+      "detail": ""
+    },
+    "website_english_commands": {
+      "name": "website_english_commands",
+      "ok": true,
+      "detail": ""
+    },
+    "website_english_real_links": {
+      "name": "website_english_real_links",
+      "ok": true,
+      "detail": ""
+    },
+    "english_site_no_hangul": {
+      "name": "english_site_no_hangul",
+      "ok": true,
+      "detail": "[]"
+    },
+    "korean_release_language_wording": {
+      "name": "korean_release_language_wording",
+      "ok": true,
+      "detail": ""
+    },
+    "korean_command_index_no_english_category": {
+      "name": "korean_command_index_no_english_category",
+      "ok": true,
+      "detail": ""
+    },
+    "javascript_syntax": {
+      "name": "javascript_syntax",
+      "ok": true,
+      "detail": "[]"
+    }
+  },
+  "summary": {
+    "html_files_checked": "7 files; []",
+    "failed": 0,
+    "ko_main": "/",
+    "en_site": "/en/"
+  }
+}

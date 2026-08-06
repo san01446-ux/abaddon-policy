@@ -1,0 +1,149 @@
+{
+  "version": "11.4.1",
+  "scope": "horse marker visibility hotfix",
+  "summary": {
+    "passed": 27,
+    "total": 27,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "horse markers visible",
+      "ok": true,
+      "detail": "one ♞ per lane"
+    },
+    {
+      "name": "one finish flag per lane",
+      "ok": true,
+      "detail": "one 🏁 per lane"
+    },
+    {
+      "name": "shared finish coordinate",
+      "ok": true,
+      "detail": "flag index=36"
+    },
+    {
+      "name": "finished horse remains visible",
+      "ok": true,
+      "detail": "·····♞🏁]"
+    },
+    {
+      "name": "equal lane length",
+      "ok": true,
+      "detail": "length=38"
+    },
+    {
+      "name": "six horse emojis",
+      "ok": true,
+      "detail": "horses=6"
+    },
+    {
+      "name": "race simulation regression",
+      "ok": true,
+      "detail": "5000 deterministic races"
+    },
+    {
+      "name": "horse emoji shown beside name",
+      "ok": true,
+      "detail": "name label restored"
+    },
+    {
+      "name": "moving lane helper connected",
+      "ok": true,
+      "detail": "live embed path"
+    },
+    {
+      "name": "latest module loaded last",
+      "ok": true,
+      "detail": "after v11.4.0"
+    },
+    {
+      "name": "python compile",
+      "ok": true,
+      "detail": "files=96"
+    },
+    {
+      "name": "command manifest version",
+      "ok": true,
+      "detail": "11.4.1"
+    },
+    {
+      "name": "new command in manifest",
+      "ok": true,
+      "detail": "commands=1054"
+    },
+    {
+      "name": "english/ascii aliases",
+      "ok": true,
+      "detail": "racetrackaudit / horsemarkeraudit / v1141audit"
+    },
+    {
+      "name": "latest test scope updated",
+      "ok": true,
+      "detail": "!테스트 상세"
+    },
+    {
+      "name": "latest patch notes updated",
+      "ok": true,
+      "detail": "!패치노트"
+    },
+    {
+      "name": "html parsing",
+      "ok": true,
+      "detail": "files=7"
+    },
+    {
+      "name": "website internal links",
+      "ok": true,
+      "detail": "errors=0"
+    },
+    {
+      "name": "javascript syntax",
+      "ok": true,
+      "detail": "files=4"
+    },
+    {
+      "name": "english page hangul leak",
+      "ok": true,
+      "detail": "hangul=0"
+    },
+    {
+      "name": "website version sync",
+      "ok": true,
+      "detail": "ko/en v11.4.1"
+    },
+    {
+      "name": "race preview asset",
+      "ok": true,
+      "detail": "bytes=60401"
+    },
+    {
+      "name": "existing bot files preserved",
+      "ok": true,
+      "detail": "missing=0"
+    },
+    {
+      "name": "bot zip integrity",
+      "ok": true,
+      "detail": "files=724"
+    },
+    {
+      "name": "website zip integrity",
+      "ok": true,
+      "detail": "files=365"
+    },
+    {
+      "name": "existing website files preserved",
+      "ok": true,
+      "detail": "missing=0"
+    },
+    {
+      "name": "standalone preview image",
+      "ok": true,
+      "detail": "bytes=60401"
+    }
+  ],
+  "limitations": [
+    "Discord Gateway login and live multi-user interaction were not executed in the offline build environment."
+  ]
+}

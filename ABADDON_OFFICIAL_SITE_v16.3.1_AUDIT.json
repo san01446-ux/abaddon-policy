@@ -1,0 +1,239 @@
+{
+  "version": "16.3.1",
+  "status": "pass",
+  "summary": {
+    "checks": 33,
+    "passed": 33,
+    "failed": 0
+  },
+  "manifest": {
+    "declarations": 1346,
+    "access_names": 2991,
+    "collisions": 68
+  },
+  "classification_counts": {
+    "sections": {
+      "system": 225,
+      "play": 542,
+      "main": 148,
+      "social": 189,
+      "world": 242
+    },
+    "groups": {
+      "admin": 16,
+      "gear": 54,
+      "party_games": 95,
+      "onboarding": 28,
+      "exploration": 27,
+      "casino": 99,
+      "cards": 86,
+      "quests": 25,
+      "collections": 24,
+      "economy": 65,
+      "gambling": 17,
+      "audit": 14,
+      "codex": 30,
+      "base": 7,
+      "alerts": 8,
+      "security": 69,
+      "recovery": 9,
+      "schedule": 13,
+      "companions": 25,
+      "black_city": 59,
+      "city_decor": 15,
+      "neon": 25,
+      "crew_raid": 12,
+      "creator": 7,
+      "help": 7,
+      "legacy": 1,
+      "combat": 68,
+      "server_setup": 85,
+      "story1": 6,
+      "life": 34,
+      "auto_emoji": 16,
+      "support": 19,
+      "story2": 6,
+      "voice": 59,
+      "story3": 4,
+      "chat": 22,
+      "disaster": 50,
+      "world_misc": 36,
+      "story4": 10,
+      "guild": 51,
+      "factions": 38,
+      "story5": 5
+    }
+  },
+  "limitations": [
+    "Discord Gateway login and live component interactions were not executed because the build environment has no bot token or discord.py runtime.",
+    "The member-join panel, cooldown concurrency and button permission behavior require a deployed-server smoke test."
+  ],
+  "checks": [
+    {
+      "name": "python_compile_all",
+      "ok": true,
+      "detail": "failures=0"
+    },
+    {
+      "name": "manifest_declarations",
+      "ok": true,
+      "detail": "1346"
+    },
+    {
+      "name": "group_count_44",
+      "ok": true,
+      "detail": "44"
+    },
+    {
+      "name": "registration_symbol_compatible",
+      "ok": true,
+      "detail": "core import/call"
+    },
+    {
+      "name": "casino_group_present",
+      "ok": true,
+      "detail": "casino"
+    },
+    {
+      "name": "gambling_group_present",
+      "ok": true,
+      "detail": "gambling"
+    },
+    {
+      "name": "casino_direct_classified",
+      "ok": true,
+      "detail": "('play', 'casino')"
+    },
+    {
+      "name": "poker_classified_casino",
+      "ok": true,
+      "detail": "('play', 'casino')"
+    },
+    {
+      "name": "survival_bet_classified_gambling",
+      "ok": true,
+      "detail": "('play', 'gambling')"
+    },
+    {
+      "name": "horse_race_classified_gambling",
+      "ok": true,
+      "detail": "('play', 'gambling')"
+    },
+    {
+      "name": "relief_classified_gambling",
+      "ok": true,
+      "detail": "('play', 'gambling')"
+    },
+    {
+      "name": "casual_card_preserved",
+      "ok": true,
+      "detail": "('play', 'cards')"
+    },
+    {
+      "name": "source_첫 화면 카테고리 안내",
+      "ok": true,
+      "detail": "첫 화면 카테고리 안내"
+    },
+    {
+      "name": "source_NavButton(self, \"casino\"",
+      "ok": true,
+      "detail": "NavButton(self, \"casino\""
+    },
+    {
+      "name": "source_NavButton(self, \"gambling\"",
+      "ok": true,
+      "detail": "NavButton(self, \"gambling\""
+    },
+    {
+      "name": "source_V1631WelcomeQuickView",
+      "ok": true,
+      "detail": "V1631WelcomeQuickView"
+    },
+    {
+      "name": "source_name=\"정부지원금\"",
+      "ok": true,
+      "detail": "name=\"정부지원금\""
+    },
+    {
+      "name": "source_name=\"초보센터\"",
+      "ok": true,
+      "detail": "name=\"초보센터\""
+    },
+    {
+      "name": "source_name=\"도박분류검수\"",
+      "ok": true,
+      "detail": "name=\"도박분류검수\""
+    },
+    {
+      "name": "source_name=\"1631통합검수\"",
+      "ok": true,
+      "detail": "name=\"1631통합검수\""
+    },
+    {
+      "name": "gather_이번 획득",
+      "ok": true,
+      "detail": "이번 획득"
+    },
+    {
+      "name": "gather_수치 변화",
+      "ok": true,
+      "detail": "수치 변화"
+    },
+    {
+      "name": "gather_gained_text",
+      "ok": true,
+      "detail": "gained_text"
+    },
+    {
+      "name": "gather_change_text",
+      "ok": true,
+      "detail": "change_text"
+    },
+    {
+      "name": "website_v1631",
+      "ok": true,
+      "detail": "4 files"
+    },
+    {
+      "name": "website_html_body_all",
+      "ok": true,
+      "detail": "6 files"
+    },
+    {
+      "name": "website_!카지노",
+      "ok": true,
+      "detail": "!카지노"
+    },
+    {
+      "name": "website_!도박정보",
+      "ok": true,
+      "detail": "!도박정보"
+    },
+    {
+      "name": "website_!정부지원금",
+      "ok": true,
+      "detail": "!정부지원금"
+    },
+    {
+      "name": "website_!초보센터",
+      "ok": true,
+      "detail": "!초보센터"
+    },
+    {
+      "name": "website_!도박분류검수 상세",
+      "ok": true,
+      "detail": "!도박분류검수 상세"
+    },
+    {
+      "name": "website_!1631통합검수 상세",
+      "ok": true,
+      "detail": "!1631통합검수 상세"
+    },
+    {
+      "name": "docs_present",
+      "ok": true,
+      "detail": "docs"
+    }
+  ],
+  "compile_failures": []
+}

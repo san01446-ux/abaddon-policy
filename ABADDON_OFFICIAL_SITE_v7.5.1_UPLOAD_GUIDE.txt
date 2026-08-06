@@ -1,0 +1,8 @@
+ABADDON 공식 홈페이지 v7.5.1 업로드 안내
+
+1. ABADDON_OFFICIAL_SITE_v7.5.1_UPLOAD.zip의 내용물을 홈페이지 루트에 업로드합니다.
+2. index.html, commands.html, updates.html, style.css, script.js, config.js가 같은 루트에 있어야 합니다.
+3. 기존 이미지 폴더는 포함되어 있으며 삭제하지 않습니다.
+4. 업로드 후 브라우저 강력 새로고침을 실행합니다.
+5. 메인 화면 최신 버전 v7.5.1과 BOOT HOTFIX · RAID TACTICS 문구를 확인합니다.
+6. 명령 검색에서 길드전술설정, 길드레이드준비, 길드레이드연습, 길드레이드기록을 확인합니다.

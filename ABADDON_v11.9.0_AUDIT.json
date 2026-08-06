@@ -1,0 +1,177 @@
+{
+  "version": "11.9.0",
+  "generated_at": "2026-08-04T23:25:24.520491+09:00",
+  "scope": [
+    "v11.7.0 server schedule center and reservations",
+    "v11.8.0 public card and horse-race broadcasts",
+    "v11.9.0 achievements and collections",
+    "website and command synchronization"
+  ],
+  "summary": {
+    "passed": 26,
+    "total": 26,
+    "failed": 0
+  },
+  "results": [
+    {
+      "name": "Python 전체 AST·컴파일",
+      "passed": true,
+      "detail": "126 files; errors=0"
+    },
+    {
+      "name": "v11.9 신규 명령·별칭 충돌",
+      "passed": true,
+      "detail": "commands=25, access_names=77, conflicts=0"
+    },
+    {
+      "name": "정적 명령 선언 매니페스트",
+      "passed": true,
+      "detail": "declarations=1113"
+    },
+    {
+      "name": "등록 순서와 영문 최종 동기화",
+      "passed": true,
+      "detail": "register=214197, sync=214545"
+    },
+    {
+      "name": "카드 중계 비공개 손패 차단",
+      "passed": true,
+      "detail": "public function chars=1559"
+    },
+    {
+      "name": "경마 공개 상태 어댑터",
+      "passed": true,
+      "detail": "race function chars=1952"
+    },
+    {
+      "name": "카드·경마 통합 중계 경로",
+      "passed": true,
+      "detail": "card and race adapters present"
+    },
+    {
+      "name": "서버별 일정 격리",
+      "passed": true,
+      "detail": "guild-keyed schedule root"
+    },
+    {
+      "name": "등록 일정만 자동 알림",
+      "passed": true,
+      "detail": "scheduled guild event/channel only"
+    },
+    {
+      "name": "지난 알림 오발송 방지",
+      "passed": true,
+      "detail": "late-threshold guard present"
+    },
+    {
+      "name": "업적 중복 해금 방지",
+      "passed": true,
+      "detail": "ID-keyed unlocks"
+    },
+    {
+      "name": "업적·포커 도감 정의",
+      "passed": true,
+      "detail": "14 achievements / 10 poker hands"
+    },
+    {
+      "name": "기존 순수 규칙 회귀 테스트",
+      "passed": true,
+      "detail": "test_v1050_rules.py=0; test_v1090_rules.py=0; test_v1141_horse_marker.py=0; test_v1160_recovery_rules.py=0"
+    },
+    {
+      "name": "경마 2,000회 회귀 시뮬레이션",
+      "passed": true,
+      "detail": "PASS"
+    },
+    {
+      "name": "기존 BOT 파일 삭제 없음",
+      "passed": true,
+      "detail": "original=825, missing=0"
+    },
+    {
+      "name": "기존 홈페이지 파일 삭제 없음",
+      "passed": true,
+      "detail": "original=413, missing=0"
+    },
+    {
+      "name": "홈페이지 HTML 파싱",
+      "passed": true,
+      "detail": "html=7, errors=0"
+    },
+    {
+      "name": "홈페이지 내부 링크·자산",
+      "passed": true,
+      "detail": "checked_html=7, missing=0"
+    },
+    {
+      "name": "English 홈페이지 한글 누출 없음",
+      "passed": true,
+      "detail": "0 characters"
+    },
+    {
+      "name": "홈페이지 JavaScript 문법",
+      "passed": true,
+      "detail": "js=4, errors=0"
+    },
+    {
+      "name": "홈페이지 버전·캐시 동기화",
+      "passed": true,
+      "detail": "config version count=2"
+    },
+    {
+      "name": "한국어·English 최신 섹션",
+      "passed": true,
+      "detail": "4 latest sections"
+    },
+    {
+      "name": "v11.9 이미지 3종 무결성",
+      "passed": true,
+      "detail": "ABADDON_v11.9.0_SCHEDULE_CENTER_PREVIEW.png:1400x850; ABADDON_v11.9.0_BROADCAST_PREVIEW.png:1400x850; ABADDON_v11.9.0_COLLECTION_PREVIEW.png:1400x850"
+    },
+    {
+      "name": "명령어 매니페스트 최신화",
+      "passed": true,
+      "detail": "version=11.9.0, declarations=1113"
+    },
+    {
+      "name": "BOT ZIP CRC 무결성",
+      "passed": true,
+      "detail": "967 files; final archive testzip=None"
+    },
+    {
+      "name": "홈페이지 ZIP CRC 무결성",
+      "passed": true,
+      "detail": "420 files; final archive testzip=None"
+    }
+  ],
+  "pure_test_runs": [
+    {
+      "file": "test_v1050_rules.py",
+      "returncode": 0,
+      "stdout": "V1050_RULE_TESTS=PASS",
+      "stderr": ""
+    },
+    {
+      "file": "test_v1090_rules.py",
+      "returncode": 0,
+      "stdout": "v10.9 rules: 12/12 PASS",
+      "stderr": ""
+    },
+    {
+      "file": "test_v1141_horse_marker.py",
+      "returncode": 0,
+      "stdout": "v11.4.1 horse marker tests: 7/7 passed",
+      "stderr": ""
+    },
+    {
+      "file": "test_v1160_recovery_rules.py",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "limitations": [
+    "discord.py is not installed in the build environment, so Discord Gateway login and real multi-user component clicks were not executed.",
+    "Reserved games post a safe host start command instead of deducting stakes and force-starting a game without confirmation."
+  ]
+}

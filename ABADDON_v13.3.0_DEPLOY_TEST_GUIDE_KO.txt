@@ -1,0 +1,33 @@
+ABADDON v13.3.0 배포·검증 가이드
+
+1. Render에 v13.3.0 BOT ZIP을 배포합니다.
+2. 시작 명령과 환경 변수는 기존 v13.2.0 설정을 유지합니다.
+3. 부팅 로그에서 다음 문장을 확인합니다.
+   [ABADDON v13.3.0] command registration guard installed
+   [ABADDON v13.3.0] command registry diagnostics registered
+4. 기존 오류인 `CommandRegistrationError: The alias expedition is already an existing command or alias.`가 다시 나타나지 않는지 확인합니다.
+5. Discord 테스트 서버에서 다음을 실행합니다.
+   !명령등록검수 상세
+   !1330안정화검수 상세
+   !패치노트
+   !expedition
+   !festivalexpedition
+   !fortune
+   !festivalfortune
+   !checkin
+   !festivalcheckin
+   !marketbuy
+   !citymarketbuy
+
+기대 결과
+- !expedition: 기존 원정 명령
+- !festivalexpedition: 혼돈의 축제 개인 탐험
+- !fortune: 기존 오늘의 운세
+- !festivalfortune: 혼돈의 축제 운세
+- !checkin: 기존 출석
+- !festivalcheckin: 축제 출석도장
+- !marketbuy: 기존 등록번호 구매
+- !citymarketbuy: BLACK CITY 에스크로 거래 구매
+
+주의
+제작 환경에는 discord.py와 실제 Discord Gateway가 없어 실제 Render 부팅까지는 실행하지 못했습니다. Python 전체 컴파일, 등록 순서, 충돌 별칭 분리, 보호기 설치 위치와 홈페이지 정적 검사를 수행했습니다.

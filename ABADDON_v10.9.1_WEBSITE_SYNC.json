@@ -1,0 +1,12 @@
+{
+  "version": "10.9.1",
+  "korean_main": true,
+  "english_path": "/en/",
+  "card_modes": 25,
+  "new_commands_ko": ["카드대시보드", "카드도감"],
+  "new_commands_en": ["carddashboard", "cardcatalog", "cardgamesdashboard"],
+  "latest_audit_command_ko": "테스트 상세",
+  "latest_audit_command_en": "test detail",
+  "ui_warning_fix": "TextInput.label deprecation",
+  "language_surfaces_separated": true
+}

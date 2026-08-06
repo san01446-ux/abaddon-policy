@@ -1,0 +1,156 @@
+{
+  "version": "11.4.3",
+  "generated_at": "2026-08-04T02:42:43.063895+00:00",
+  "scope": "server-specific disaster alert opt-in hotfix",
+  "summary": {
+    "passed": 28,
+    "total": 28,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "Python AST 전체",
+      "passed": true,
+      "detail": "files=98 errors=0"
+    },
+    {
+      "name": "Python 전체 컴파일",
+      "passed": true,
+      "detail": "ok"
+    },
+    {
+      "name": "v11.4.3 모듈 등록",
+      "passed": true,
+      "detail": "영문 별칭 최종 동기화 이전 등록"
+    },
+    {
+      "name": "신규 서버 기본 꺼짐",
+      "passed": true,
+      "detail": "subscription=false auto=false"
+    },
+    {
+      "name": "기존 서버 일회성 이관",
+      "passed": true,
+      "detail": "과거 전체 서버 자동값 해제"
+    },
+    {
+      "name": "지정 채널만 게시",
+      "passed": true,
+      "detail": "키워드·시스템 채널 폴백 없음"
+    },
+    {
+      "name": "스케줄러 전역 패치",
+      "passed": true,
+      "detail": "기존 v7.9 루프에 즉시 적용"
+    },
+    {
+      "name": "서버별 구독 명령",
+      "passed": true,
+      "detail": "!재난알림 / !disasteralerts"
+    },
+    {
+      "name": "채널 지정 명령 최신화",
+      "passed": true,
+      "detail": "!재난채널 / !disasterchannel"
+    },
+    {
+      "name": "완전 해제 명령",
+      "passed": true,
+      "detail": "구독·자동·채널·일정 해제"
+    },
+    {
+      "name": "수동 재난 유지",
+      "passed": true,
+      "detail": "자동 구독과 수동 관리자 발생 분리"
+    },
+    {
+      "name": "최신 범위 검수",
+      "passed": true,
+      "detail": "!테스트 상세 최신화"
+    },
+    {
+      "name": "패치노트 최신화",
+      "passed": true,
+      "detail": "!패치노트 v11.4.3"
+    },
+    {
+      "name": "명령어 매니페스트",
+      "passed": true,
+      "detail": "declarations=1039"
+    },
+    {
+      "name": "한글·영문 명령 최신화",
+      "passed": true,
+      "detail": "신규·변경 명령 한영 기록"
+    },
+    {
+      "name": "기존 봇 파일 삭제 0건",
+      "passed": true,
+      "detail": "missing=0"
+    },
+    {
+      "name": "기존 홈페이지 파일 삭제 0건",
+      "passed": true,
+      "detail": "missing=0"
+    },
+    {
+      "name": "홈페이지 HTML 파싱",
+      "passed": true,
+      "detail": "files=6 errors=0"
+    },
+    {
+      "name": "홈페이지 내부 링크",
+      "passed": true,
+      "detail": "checked=149 missing=0"
+    },
+    {
+      "name": "홈페이지 v11.4.3",
+      "passed": true,
+      "detail": "한국어·English 최신 버전"
+    },
+    {
+      "name": "한국어 재난 알림 설명",
+      "passed": true,
+      "detail": "메인 최신 섹션"
+    },
+    {
+      "name": "English disaster alert section",
+      "passed": true,
+      "detail": "English latest section"
+    },
+    {
+      "name": "English 페이지 한글 누출 0건",
+      "passed": true,
+      "detail": "hangul_chars=0"
+    },
+    {
+      "name": "홈페이지 JavaScript 문법",
+      "passed": true,
+      "detail": "errors=0"
+    },
+    {
+      "name": "홈페이지 JSON 파싱",
+      "passed": true,
+      "detail": "files=66 errors=0"
+    },
+    {
+      "name": "공유 금지 글꼴 파일 0건",
+      "passed": true,
+      "detail": "fonts=0"
+    },
+    {
+      "name": "BOT ZIP 무결성",
+      "passed": true,
+      "detail": "files=740 bad=None"
+    },
+    {
+      "name": "SITE ZIP 무결성",
+      "passed": true,
+      "detail": "files=383 bad=None"
+    }
+  ],
+  "limitations": [
+    "discord.py와 실제 Discord 토큰이 없는 오프라인 환경에서는 Gateway 다중 서버 자동 스케줄 실행을 재현하지 못했습니다.",
+    "배포 후 테스트 서버와 비구독 서버에서 실제 게시 범위를 확인해야 합니다."
+  ]
+}

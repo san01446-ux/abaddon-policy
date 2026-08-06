@@ -1,0 +1,57 @@
+ABADDON v10.9.3 전체 명령 UI 안정화 핫픽스
+배포일: 2026-08-04
+
+1. Discord Invalid Form Body / Invalid emoji 수정
+- 카드게임 25종 선택 메뉴의 22번째 항목(도리짓고땡)에 사용되던 비지원 문자 🀙를 🎴로 교체했습니다.
+- 조커잡기 카드 뒷면 🂠, 섯다 ¼/½, 블랙잭 ✖️2처럼 Discord 컴포넌트 emoji로 인정되지 않는 문자도 안전한 이모지로 교체했습니다.
+- Context.send, Interaction 응답, Follow-up, Messageable.send, Message.edit 직전에 모든 버튼·선택 옵션 이모지를 다시 검사하는 전역 안전장치를 추가했습니다.
+- 한 개의 잘못된 이모지 때문에 전체 명령 메시지가 HTTP 50035로 실패하는 문제를 차단합니다.
+
+2. 명령어 도감 Unknown interaction 완화
+- 약 1,000개 명령을 카테고리별로 매 클릭마다 다시 분류하던 작업을 1회 캐시 방식으로 변경했습니다.
+- 카테고리, 명령 선택, 이전/다음 페이지, 목록 복귀 버튼은 Discord 상호작용을 먼저 승인한 뒤 화면을 계산합니다.
+- 이미 만료된 interaction(code 10062)은 오류 사건으로 반복 저장하거나 로그를 도배하지 않습니다.
+
+3. TextInput.label 폐기 경고 잔여 경로 제거
+- 공용 번역기는 TextInput.label을 읽거나 수정하지 않습니다.
+- 참가비 입력 모달에서 TextInput.label을 직접 바꾸던 구형 경로를 discord.ui.Label 컨테이너 방식으로 교체했습니다.
+- 구형 discord.py 호환 분기는 유지하지만 최신 2.7 환경에서는 폐기 예정 속성에 접근하지 않습니다.
+
+4. Discord 프로필 PNG 합성 확인
+- !정보 / !생존대시보드는 명령 실행자의 ctx.author.display_avatar를 실제로 읽어 PNG 왼쪽 상단에 합성합니다.
+- 서버별 프로필 이미지가 설정되어 있으면 그 이미지를 우선 사용합니다.
+- Discord 이미지 다운로드 또는 이미지 해석에 실패한 경우에만 사용자 이름 이니셜을 표시합니다.
+- 사용자별 PNG는 메모리에서 생성하며 서버 디스크에 영구 저장하지 않습니다.
+
+5. 전체 명령 검수 기능 최신화
+- !명령어검수 상세 / !commandaudit detail
+  전체 명령 이름, 별칭, 영문 접근 경로, 설명 누락, 길이 문제를 확인합니다.
+- !UI검수 상세 / !uiaudit detail
+  Invalid emoji, TextInput 경고, 명령 도감 선응답, 프로필 아바타 합성, 카드게임 25개 제한을 확인합니다.
+- !테스트 상세
+  이번 v10.9.3에서 수정한 항목만 검사합니다.
+- !패치노트
+  이번 파일의 실제 수정 내용만 Discord 임베드로 표시합니다.
+
+6. 언어·홈페이지 동기화
+- 한국어 메인과 English /en/ 페이지를 v10.9.3으로 갱신했습니다.
+- 신규/변경 명령어와 설명, 패치노트, 명령 매니페스트를 함께 갱신했습니다.
+- 한국어와 English 화면은 계속 섞이지 않고 선택한 언어만 표시합니다.
+- 홈페이지 ONLINE/실시간 피드/경마 기능은 v10.9.2 구현을 그대로 유지합니다.
+
+신규 명령어
+- !UI검수 [기본|상세]
+- !uiaudit [default|detail]
+- !componentaudit [default|detail]
+- !commanduiaudit [default|detail]
+
+변경된 명령어
+- !명령어검수 [기본|상세]
+- !commandaudit [default|detail]
+- !테스트 상세
+- !패치노트
+- !정보
+- !생존대시보드
+
+배포 확인 로그
+[ABADDON v10.9.3] command_ui_audit=enabled emoji_sanitizer=enabled catalog_fast_ack=enabled profile_avatar=discord

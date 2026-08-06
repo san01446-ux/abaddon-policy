@@ -1,0 +1,7 @@
+ABADDON 공식 홈페이지 v6.3.3 업로드 안내
+
+1. ZIP 압축을 풉니다.
+2. GitHub Pages 또는 기존 홈페이지 저장소 루트에 전체 파일을 덮어씁니다.
+3. index.html, updates.html, commands.html, style.css, script.js, config.js와 assets 폴더를 함께 업로드합니다.
+4. 기존 Discord 링크와 실시간 피드 설정은 config.js에서 유지됩니다.
+5. 배포 후 홈페이지의 최신 버전 v6.3.3, 장비·제작 비주얼 섹션, 장비외형 명령 검색을 확인합니다.

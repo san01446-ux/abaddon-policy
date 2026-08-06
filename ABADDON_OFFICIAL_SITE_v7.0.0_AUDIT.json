@@ -1,0 +1,94 @@
+{
+  "version": "7.0.0",
+  "date": "2026-08-03",
+  "source_site": "v6.5.3 with world boss art patch",
+  "synced_bot_version": "7.0.0-release-candidate",
+  "cache_key": "700",
+  "updated_files": [
+    "index.html",
+    "commands.html",
+    "updates.html",
+    "config.js",
+    "script.js",
+    "style.css",
+    "업로드_안내.txt"
+  ],
+  "added_files": [
+    "ABADDON_BOT_DESCRIPTION_v7.0.0.txt",
+    "ABADDON_OFFICIAL_SITE_v7.0.0_PATCH_NOTES.txt",
+    "ABADDON_OFFICIAL_SITE_v7.0.0_UPLOAD_GUIDE.txt"
+  ],
+  "world_boss_assets": {
+    "gatekeeper.png": {
+      "size": [
+        1200,
+        675
+      ],
+      "sha256": "f228a9cadaf3a75bc1c0b2badb5df3d69b1a29daf73df8fc8391b4ce15eff4ed"
+    },
+    "atlas.png": {
+      "size": [
+        1200,
+        675
+      ],
+      "sha256": "bc82d1793911f05fb7be6926924a2edd2febaf36141b3ceec0a06794f66cf86f"
+    },
+    "nemesis.png": {
+      "size": [
+        1200,
+        675
+      ],
+      "sha256": "8a753d869d7d0cdcaf0c5c43425c739745dde5a06c722754f63a7154de1753fe"
+    },
+    "babel.png": {
+      "size": [
+        1200,
+        675
+      ],
+      "sha256": "0bf25b38d5c9cd1ef5df0de9f73eaa323361b6a29ef31ea0dd1e5a8600127ffa"
+    },
+    "ark_ghost.png": {
+      "size": [
+        1200,
+        675
+      ],
+      "sha256": "6b9ed35f96254ae6b7a7ed4f3d21c92028da09531e94c541955f57effaa2ccd5"
+    },
+    "abaddon.png": {
+      "size": [
+        1200,
+        675
+      ],
+      "sha256": "4081f04a48688065ef9c9f3ccaa91a341aebcacfb68ab6dce81e48f30d408acc"
+    },
+    "phase.png": {
+      "size": [
+        1200,
+        420
+      ],
+      "sha256": "7262aff956e2ca10b1f3bf3200291d49929d8a0ec9eba8d369f0e75c952b1dda"
+    },
+    "enrage.png": {
+      "size": [
+        1200,
+        420
+      ],
+      "sha256": "aff7e7c9c461e5289f3dc5df72bd870af76cf59c6372fb521d3bf85dfc33af60"
+    },
+    "reward.png": {
+      "size": [
+        1200,
+        420
+      ],
+      "sha256": "df7b528f1737e50690eafb0e2fbe235114dbfed3cc552999593107d830ab6b35"
+    },
+    "victory.png": {
+      "size": [
+        1200,
+        420
+      ],
+      "sha256": "8a3ec779b02055b833cc9d22527ffe22ead9f735a2d553f987f30dda2f111e70"
+    }
+  },
+  "missing_local_references": []
+}

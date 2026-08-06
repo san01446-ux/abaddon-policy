@@ -1,0 +1,204 @@
+{
+  "version": "11.5.0",
+  "generated_at": "2026-08-04T03:06:00.387430+00:00",
+  "scope": "per-server operations center, alert subscriptions, all-bot permission audit, backup-first channel profiles and rollback",
+  "summary": {
+    "passed": 33,
+    "total": 33,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "Python AST 전체",
+      "passed": true,
+      "detail": "files=99 errors=0"
+    },
+    {
+      "name": "Python 전체 컴파일",
+      "passed": true,
+      "detail": "ok"
+    },
+    {
+      "name": "전체 정적 회귀 테스트",
+      "passed": true,
+      "detail": "................................................                         [100%]\n48 passed in 0.93s\n"
+    },
+    {
+      "name": "v11.5.0 모듈 등록",
+      "passed": true,
+      "detail": "영문 별칭 최종 동기화 이전 등록"
+    },
+    {
+      "name": "서버별 알림 기본 꺼짐",
+      "passed": true,
+      "detail": "신규 알림 off · 과거 기본 patch auto off 이관"
+    },
+    {
+      "name": "기존 알림 연동",
+      "passed": true,
+      "detail": "재난·패치·퀴즈·암시장·세계 이벤트"
+    },
+    {
+      "name": "알림 시간 동기화",
+      "passed": true,
+      "detail": "KST 시간 밖 legacy 자동 알림 일시 정지"
+    },
+    {
+      "name": "중앙 알림 발송 API",
+      "passed": true,
+      "detail": "향후 리그·연합·경마·스토리 공통 발송 경로"
+    },
+    {
+      "name": "서버 봇 전수 검사",
+      "passed": true,
+      "detail": "서버 멤버 캐시의 bot 계정 감사"
+    },
+    {
+      "name": "다른 봇 명시적 선택",
+      "passed": true,
+      "detail": "사람 변경 금지 · 역할 계층 차단"
+    },
+    {
+      "name": "권한 프로필 7종",
+      "passed": true,
+      "detail": "일반/알림/게임/운영/음성/읽기전용/차단"
+    },
+    {
+      "name": "권한 적용 전 자동 백업",
+      "passed": true,
+      "detail": "명시적 봇 적용 백업 선행"
+    },
+    {
+      "name": "자동 설정 전 일괄 백업",
+      "passed": true,
+      "detail": "ABADDON 전 채널 묶음 백업"
+    },
+    {
+      "name": "권한 덮어쓰기 직렬화",
+      "passed": true,
+      "detail": "allow/deny bit pair 저장·복구"
+    },
+    {
+      "name": "서버 설정 백업·복구",
+      "passed": true,
+      "detail": "중앙 및 연동 legacy 설정 함께 저장"
+    },
+    {
+      "name": "최신 범위 검수",
+      "passed": true,
+      "detail": "!테스트 상세 v11.5.0"
+    },
+    {
+      "name": "패치노트 최신화",
+      "passed": true,
+      "detail": "!패치노트 v11.5.0"
+    },
+    {
+      "name": "v11.5 신규 명령 충돌 0건",
+      "passed": true,
+      "detail": "new_commands=19 collisions=[]"
+    },
+    {
+      "name": "명령어 매니페스트",
+      "passed": true,
+      "detail": "declarations=1009"
+    },
+    {
+      "name": "한국어·English 최신 명령",
+      "passed": true,
+      "detail": "한영 분리용 명시 별칭"
+    },
+    {
+      "name": "기존 봇 파일 삭제 0건",
+      "passed": true,
+      "detail": "missing=0"
+    },
+    {
+      "name": "기존 홈페이지 파일 삭제 0건",
+      "passed": true,
+      "detail": "missing=0"
+    },
+    {
+      "name": "홈페이지 HTML 파싱",
+      "passed": true,
+      "detail": "files=7 errors=0"
+    },
+    {
+      "name": "홈페이지 내부 링크",
+      "passed": true,
+      "detail": "checked=152 missing=0"
+    },
+    {
+      "name": "홈페이지 v11.5.0",
+      "passed": true,
+      "detail": "한국어·English 현재 버전"
+    },
+    {
+      "name": "한국어 서버 운영 섹션",
+      "passed": true,
+      "detail": "메인 최신 섹션"
+    },
+    {
+      "name": "English server operations section",
+      "passed": true,
+      "detail": "English latest section"
+    },
+    {
+      "name": "English 페이지 한글 누출 0건",
+      "passed": true,
+      "detail": "hangul_chars=0"
+    },
+    {
+      "name": "홈페이지 JavaScript 문법",
+      "passed": true,
+      "detail": "errors=0"
+    },
+    {
+      "name": "홈페이지 JSON 파싱",
+      "passed": true,
+      "detail": "files=68 errors=0"
+    },
+    {
+      "name": "추가 공유 글꼴 파일 0건",
+      "passed": true,
+      "detail": "fonts=0"
+    },
+    {
+      "name": "BOT ZIP 무결성",
+      "passed": true,
+      "detail": "files=776 bad=None"
+    },
+    {
+      "name": "SITE ZIP 무결성",
+      "passed": true,
+      "detail": "files=389 bad=None"
+    }
+  ],
+  "permissions_safety": {
+    "other_bots_default": "audit_only",
+    "explicit_target_required": true,
+    "backup_before_change": true,
+    "role_hierarchy_guard": true,
+    "cannot_grant_permissions_abaddon_lacks": true
+  },
+  "integrated_alerts": [
+    "disaster",
+    "patch",
+    "quiz",
+    "market",
+    "frontier"
+  ],
+  "reserved_dispatch_types": [
+    "worldboss",
+    "league",
+    "alliance",
+    "racing",
+    "story",
+    "maintenance"
+  ],
+  "limitations": [
+    "실제 Discord 역할 계층, 채널 상속과 API 권한 변경은 토큰이 없는 오프라인 환경에서 실행하지 못했습니다.",
+    "서버의 다른 봇 목록은 Discord member cache와 Server Members Intent 가용성에 따라 달라질 수 있습니다.",
+    "리그·연합·경마·스토리·점검은 중앙 채널/발송 API를 제공하며 해당 기능이 자동 이벤트를 발행할 때 사용합니다."
+  ]
+}

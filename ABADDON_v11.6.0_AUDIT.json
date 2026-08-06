@@ -1,0 +1,157 @@
+{
+  "version": "11.6.0",
+  "generated_at": "2026-08-04T21:14:15.800991+09:00",
+  "scope": "v11.6.0 live recovery, exact refund, timeout policy, hwatu validation and ruling log",
+  "summary": {
+    "passed": 25,
+    "total": 25,
+    "python_files": 124,
+    "command_declarations": 1088,
+    "pytest": "65 passed in 0.99s",
+    "zip_details": {
+      "ABADDON_BOT_v11.6.0_LIVE_RECOVERY_RULE_VALIDATION_AUDITED_PATCH.zip": {
+        "files": 825,
+        "crc_error": null
+      },
+      "ABADDON_OFFICIAL_SITE_v11.6.0_UPLOAD.zip": {
+        "files": 413,
+        "crc_error": null
+      }
+    }
+  },
+  "checks": [
+    {
+      "name": "Python 전체 컴파일",
+      "passed": true,
+      "detail": "ok"
+    },
+    {
+      "name": "전체 자동 테스트",
+      "passed": true,
+      "detail": "65 passed in 0.99s"
+    },
+    {
+      "name": "v11.6.0 등록 연결",
+      "passed": true,
+      "detail": "registration_offset=213850"
+    },
+    {
+      "name": "최종 영문 동기화 전 등록",
+      "passed": true,
+      "detail": "reg=213850, sync=-1"
+    },
+    {
+      "name": "15초 체크포인트",
+      "passed": true,
+      "detail": "@tasks.loop(seconds=15)"
+    },
+    {
+      "name": "25종 복구 팩토리",
+      "passed": true,
+      "detail": "SUPPORTED_KINDS"
+    },
+    {
+      "name": "실제 납부액 추적",
+      "passed": true,
+      "detail": "actual_paid"
+    },
+    {
+      "name": "결과 1회 장부",
+      "passed": true,
+      "detail": "result_delivery"
+    },
+    {
+      "name": "잠수 정책 5종",
+      "passed": true,
+      "detail": "normalize_afk_action"
+    },
+    {
+      "name": "판정 비공개 정보 제외",
+      "passed": true,
+      "detail": "private hands"
+    },
+    {
+      "name": "화투 48장 검증",
+      "passed": true,
+      "detail": "validate_hwatu_assets"
+    },
+    {
+      "name": "복구 명령 목록",
+      "passed": true,
+      "detail": "all present"
+    },
+    {
+      "name": "전통 화투 이미지 48장",
+      "passed": true,
+      "detail": "48 files"
+    },
+    {
+      "name": "화투 매니페스트 JSON",
+      "passed": true,
+      "detail": "type=dict"
+    },
+    {
+      "name": "명령 선언 매니페스트 생성",
+      "passed": true,
+      "detail": "1088 declarations"
+    },
+    {
+      "name": "v11.6.0 신규 접근 이름 중복 없음",
+      "passed": true,
+      "detail": "29 access names"
+    },
+    {
+      "name": "홈페이지 HTML 파싱·내부 링크",
+      "passed": true,
+      "detail": "7 HTML, 175 refs, errors=0"
+    },
+    {
+      "name": "English 화면 한글 누출",
+      "passed": true,
+      "detail": "leaks=[]"
+    },
+    {
+      "name": "홈페이지 v11.6.0 최신화",
+      "passed": true,
+      "detail": "version and cache query"
+    },
+    {
+      "name": "홈페이지 JavaScript 문법",
+      "passed": true,
+      "detail": "all JS node --check"
+    },
+    {
+      "name": "한국어·English 분리",
+      "passed": true,
+      "detail": "root=/, English=/en/"
+    },
+    {
+      "name": "기존 봇 파일 삭제 0건",
+      "passed": true,
+      "detail": "missing=0"
+    },
+    {
+      "name": "기존 홈페이지 파일 삭제 0건",
+      "passed": true,
+      "detail": "missing=0"
+    },
+    {
+      "name": "ABADDON_BOT_v11.6.0_LIVE_RECOVERY_RULE_VALIDATION_AUDITED_PATCH.zip ZIP 무결성",
+      "passed": true,
+      "detail": "825 files"
+    },
+    {
+      "name": "ABADDON_OFFICIAL_SITE_v11.6.0_UPLOAD.zip ZIP 무결성",
+      "passed": true,
+      "detail": "413 files"
+    }
+  ],
+  "limitations": [
+    "No Discord token or Gateway access was available, so real multi-user button clicks, message edits and Render restart restoration were not executed.",
+    "Static compilation, 65 automated tests, pure recovery rules, website validation and archive integrity were executed locally."
+  ],
+  "deletions": {
+    "bot": 0,
+    "site": 0
+  }
+}

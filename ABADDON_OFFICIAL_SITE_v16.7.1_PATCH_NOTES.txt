@@ -1,0 +1,5 @@
+ABADDON Official Site v16.7.1
+- Command-center NameError hotfix
+- Korean/English pages updated separately
+- Added v16.7.1 deployment checks
+- No legacy feature or save-data removal

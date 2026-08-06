@@ -1,0 +1,5 @@
+ABADDON 공식 홈페이지 v10.6.0 업로드 안내
+1. 이 압축의 모든 파일과 en 폴더를 기존 웹 루트에 덮어씁니다.
+2. index.html, commands.html, updates.html과 en/ 대응 페이지를 확인합니다.
+3. config.js와 en/config.js의 초대/Discord 링크를 확인합니다.
+4. 브라우저 캐시를 비우고 v10.6.0 및 16종 표시를 점검합니다.

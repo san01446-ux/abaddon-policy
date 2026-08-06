@@ -1,0 +1,1 @@
+Upload the full contents of this archive over the website root after backup. Clear CDN/browser cache because assets use the v1671 query string.

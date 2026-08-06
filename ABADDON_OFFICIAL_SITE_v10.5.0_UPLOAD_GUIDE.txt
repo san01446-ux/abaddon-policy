@@ -1,0 +1,6 @@
+ABADDON 공식 홈페이지 v10.5.0 업로드 가이드
+1. 이 압축의 모든 파일과 폴더를 사이트 루트에 덮어씁니다.
+2. /index.html, /commands.html, /updates.html을 확인합니다.
+3. /en/index.html, /en/commands.html, /en/updates.html을 확인합니다.
+4. 브라우저 캐시를 지우거나 ?v=1050 자산이 로드되는지 확인합니다.
+5. 봇 초대·공식 Discord·언어 이동·명령 복사 버튼을 점검합니다.
