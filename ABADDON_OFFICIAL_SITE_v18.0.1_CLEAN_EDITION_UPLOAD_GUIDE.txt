@@ -1,0 +1,21 @@
+ABADDON WEBSITE v18.0.1 CLEAN EDITION 업로드 가이드
+
+[패치 적용]
+1. 현재 v18.0.1 홈페이지 루트에 PATCH_ONLY ZIP의 내용물을 그대로 덮어씁니다.
+2. index.html / commands.html / updates.html / clean.css / clean.js / config.js 및 en/ 대응 파일이 교체됩니다.
+3. 기존 assets, BLACK CITY 페이지와 기타 파일은 삭제하지 않습니다.
+
+[전체 업로드]
+- 저장소를 새로 만들거나 사이트 전체를 교체할 때는 CLEAN_EDITION_UPLOAD ZIP을 사용합니다.
+
+[배포 후 확인]
+- /index.html
+- /commands.html
+- /updates.html
+- /en/index.html
+- 봇 추가 버튼
+- 공식 Discord 버튼
+- 모바일 메뉴
+- 명령어 복사 버튼
+
+주의: 봇 버전과 초대 URL은 v18.0.1 설정을 그대로 보존합니다.
