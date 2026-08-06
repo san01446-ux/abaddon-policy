@@ -1,6 +1,0 @@
-ABADDON v7.3.1 홈페이지 업로드 안내
-
-1. ABADDON_OFFICIAL_SITE_v7.3.1_UPLOAD.zip의 내용물을 홈페이지 루트에 업로드합니다.
-2. index.html, commands.html, updates.html, config.js, script.js, style.css가 루트에 있어야 합니다.
-3. 배포 후 강력 새로고침으로 v731 캐시를 갱신합니다.
-4. 최신 버전 v7.3.1과 순차 스토리·중복 안정화 섹션을 확인합니다.

@@ -1,6 +1,0 @@
-ABADDON 공식 홈페이지 v11.5.0 업로드 안내
-
-1. ZIP을 호스팅 저장소 루트에 덮어씁니다.
-2. index.html, commands.html, updates.html, en/ 폴더와 config.js를 함께 올립니다.
-3. 브라우저 캐시를 지우고 한국어 / 및 English /en/를 확인합니다.
-4. ONLINE 상태, 봇 초대 링크와 v11.5.0 최신 명령 섹션을 확인합니다.

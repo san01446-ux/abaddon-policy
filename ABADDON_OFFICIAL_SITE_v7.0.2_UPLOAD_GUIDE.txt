@@ -1,5 +1,0 @@
-1. ZIP 내부 파일을 홈페이지 루트에 덮어씁니다.
-2. index.html, commands.html, updates.html, config.js, script.js, style.css와 assets 폴더를 함께 업로드합니다.
-3. 배포 후 강력 새로고침(Ctrl+F5)을 실행합니다.
-4. 상단 LATEST가 v7.0.2인지 확인합니다.
-5. 명령어 페이지에서 !시스템점검과 !백업생성이 검색되는지 확인합니다.

@@ -1,8 +1,0 @@
-ABADDON 공식 홈페이지 v10.9.5 업로드 안내
-
-1. ZIP 파일의 전체 내용을 기존 홈페이지 루트에 덮어씁니다.
-2. index.html, commands.html, updates.html, config.js, script.js와 assets 폴더를 함께 업로드합니다.
-3. en 폴더 전체를 함께 업로드합니다.
-4. 브라우저/CDN 캐시를 비운 뒤 확인합니다.
-5. 한국어 /, English /en/, 명령어, 업데이트, ONLINE 초록불, 미리보기 GIF/PNG를 확인합니다.
-6. 실제 서버 수와 지연시간을 표시하려면 live-service를 별도 배포하고 config.js의 eventFeedUrl을 설정합니다.

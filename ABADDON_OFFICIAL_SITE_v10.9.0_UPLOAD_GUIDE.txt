@@ -1,7 +1,0 @@
-ABADDON OFFICIAL SITE v10.9.0 업로드 안내
-1. 현재 웹 루트를 백업합니다.
-2. 이 ZIP의 내용을 웹 루트에 그대로 덮어씁니다.
-3. `/index.html`, `/commands.html`, `/updates.html`을 확인합니다.
-4. `/en/index.html`, `/en/commands.html`, `/en/updates.html`을 확인합니다.
-5. 봇 초대와 Official Discord 버튼을 눌러 실제 주소를 확인합니다.
-6. 캐시가 남으면 CDN/브라우저 캐시를 비우고 `?v=1090` 자산을 확인합니다.

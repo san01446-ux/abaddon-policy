@@ -1,1 +1,0 @@
-v11.5.2 ZIP의 내용을 저장소 루트에 덮어쓴 뒤 커밋·푸시하세요. config.js, index.html, commands.html, updates.html, en/ 및 assets/v1152/를 함께 업로드해야 합니다.
