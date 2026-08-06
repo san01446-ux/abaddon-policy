@@ -1,0 +1,21 @@
+{
+  "version": "17.3.0",
+  "generated_at": "2026-08-06T16:20:38.377575+09:00",
+  "checks": {
+    "ko_config_v1730": true,
+    "en_config_v1730": true,
+    "ko_v1730_section": true,
+    "en_v1730_section": true,
+    "ko_commands_v1730": true,
+    "en_commands_v1730": true,
+    "ko_updates_v1730": true,
+    "en_updates_v1730": true,
+    "no_missing_local_links": true,
+    "no_duplicate_html_ids": true,
+    "private_owner_proof_not_in_site": true
+  },
+  "passed": 11,
+  "total": 11,
+  "missing_links": {},
+  "duplicate_ids": {}
+}

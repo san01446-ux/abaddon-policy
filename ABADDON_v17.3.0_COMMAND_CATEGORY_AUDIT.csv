@@ -1,0 +1,1289 @@
+﻿section,group,qualified_name,name,aliases,help,module,line,kind
+main,connections,도시효과,도시효과,cityeffects | citybonuses | linkedcity,현재 도시 부품이 회복·시장·원정·NPC·카지노에 제공하는 연결 효과를 확인합니다.,v1730_connected_survival_loop,420,command
+main,connections,연결기록,연결기록,connectedhistory | loophistory | chainhistory,세계 사건·원정·NPC·시즌 결정·연결 보상의 최근 연동 기록을 확인합니다.,v1730_connected_survival_loop,437,command
+main,connections,연결동기화,연결동기화,syncsurvivalloop | linksync | connectedsync,현재 스토리·세계·NPC·도시 상태를 연결 허브에 다시 동기화합니다.,v1730_connected_survival_loop,458,command
+main,connections,연결목표,연결목표,connectedobjectives | loopgoals | chainobjectives,오늘의 세계·원정·NPC·도시 연결 목표와 완료 상태를 확인합니다.,v1730_connected_survival_loop,350,command
+main,connections,연결보상,연결보상,connectedreward | loopreward | chainreward,오늘의 연결 목표 4개 중 3개 이상 완료하면 일일 연결 보상을 한 번 수령합니다.,v1730_connected_survival_loop,363,command
+main,connections,연결허브,연결허브,connectedhub | survivalloop | connectedloop,스토리·세계·원정·NPC·제작·도시를 한 화면에서 연결해 다음 행동을 안내합니다.,v1730_connected_survival_loop,339,command
+main,connections,재료용도,재료용도,materialuses | craftuses | whereuse,보유 재료가 제작·도시·NPC·원정 중 어디에 쓰이는지 표시합니다.,v1730_connected_survival_loop,399,command
+main,exploration,1680통합검수,1680통합검수,v1680audit | 1680audit | 솔로원정검수,v16.8 솔로 원정·씨앗·주간 변이·도감·저장 복구·구조·결과 정산 연결을 검사합니다.,v1680_lone_survivor,1422,command
+main,exploration,솔로원정,솔로원정,생존원정 | 고독원정 | lonesurvivor | soloexpedition,혼자서 진행하는 버튼형 로그라이크 생존 원정 허브를 엽니다.,v1680_lone_survivor,1304,command
+main,exploration,솔로원정기록,솔로원정기록,생존원정기록 | loneexpeditionrecord | solorecord,솔로 원정 완주·철수·구조·최고 점수와 최근 씨앗 기록을 확인합니다.,v1680_lone_survivor,1399,command
+main,exploration,솔로원정시작,솔로원정시작,생존원정시작 | loneexpeditionstart | soloexpeditionstart,지역·난이도·NPC 동료·씨앗을 지정해 솔로 원정을 시작합니다.,v1680_lone_survivor,1314,command
+main,exploration,솔로원정포기,솔로원정포기,생존원정포기 | abandonloneexpedition,진행 중인 솔로 원정을 확인 후 철수 처리하고 일부 전리품을 정산합니다.,v1680_lone_survivor,1407,command
+main,exploration,원정난이도,원정난이도,솔로원정난이도 | expeditiondifficulty | lonedifficulty,솔로 원정 기본 난이도를 생존자·베테랑·악몽·심연 중 선택합니다.,v1680_lone_survivor,1383,command
+main,exploration,원정도감,원정도감,솔로원정도감 | expeditioncodex | lonecodex,솔로 원정에서 발견한 사건·적·NPC·유물·도시 설계도·결말을 확인합니다.,v1680_lone_survivor,1352,command
+main,exploration,원정씨앗,원정씨앗,솔로원정씨앗 | expeditionseed | loneseed,같은 사건 순서를 재현할 기본 원정 씨앗 코드를 저장하거나 확인합니다.,v1680_lone_survivor,1364,command
+main,exploration,원정이어하기,원정이어하기,솔로원정이어하기 | resumeexpedition | resumeloneexpedition,저장된 솔로 생존 원정을 마지막 단계부터 이어갑니다.,v1680_lone_survivor,1338,command
+main,exploration,주간변이지역,주간변이지역,주간원정 | weeklyanomaly | weeklyexpedition,이번 주 솔로 원정 변이 지역과 피해·보상 보정을 확인합니다.,v1680_lone_survivor,1360,command
+main,story1,1140통합검수,1140통합검수,v1140audit | unified1140audit,v11.0.1~v11.4.0에서 추가·수정한 기능만 검사합니다.,v1140_championship_alliance_casino_story,615,command
+main,story1,1650통합검수,1650통합검수,v1650audit | 1650audit,v16.5 명령 허브·언어 분리·스토리 나침반·생존 허브·도시 공방·다음 행동 연결을 검사합니다.,v1650_survivor_core_complete,325,command
+main,story1,NPC딜러,NPC딜러,npcdealers | dealerroster,ABADDON 게임도시의 NPC 딜러 6명을 확인합니다.,v1140_championship_alliance_casino_story,356,command
+main,story1,개인카지노,개인카지노,mycasino | personalcasino,내 전속 딜러·장식·레벨을 이미지 카드로 확인합니다.,v1140_championship_alliance_casino_story,427,command
+main,story1,게임전적,게임전적,gamestats | gamehistory,,v1050_unified_expansion,1283,command
+main,story1,권한변경내역,권한변경내역,권한복구목록 | permissionhistory,최근 권한 백업과 복구 ID를 확인합니다.,v1150_server_operations_permissions,1035,command
+main,story1,기록,기록,,최근 사채 차입과 상환 기록을 확인합니다.,v40_finance,580,command
+main,story1,대회일정,대회일정,tournamentschedule | championshipschedule,주간 챔피언십과 시즌 종료 일정을 확인합니다.,v1140_championship_alliance_casino_story,349,command
+main,story1,도시작업기록,도시작업기록,cityworkshophistory | citydecorhistory,도시 공방에서 배치·삭제·복구한 최근 작업과 부품 변화를 확인합니다.,v1650_survivor_core_complete,225,command
+main,story1,도움말,도움말,,"카지노 게임별 규칙, 배당, 배팅 범위를 확인합니다.",v39_casino,1365,command
+main,story1,딜러고용,딜러고용,hiredealer | employdealer,NPC 딜러를 개인 카지노 전속 딜러로 고용합니다.,v1140_championship_alliance_casino_story,472,command
+main,story1,딜러선택,딜러선택,selectdealer | choosedealer,개인 카지노와 아바돈 대전에 사용할 NPC 딜러를 선택합니다.,v1140_championship_alliance_casino_story,364,command
+main,story1,랭킹,랭킹,,카지노 누적 순이익 상위 생존자를 확인합니다.,v39_casino,1361,command
+main,story1,명령어전수검수,명령어전수검수,fullcommandaudit | commandregistryaudit1630,전체 런타임 명령의 카테고리·페이지·스토리 노출·버튼 실행 연결을 검사합니다.,v1630_core_rpg_command_city_overhaul,1616,command
+main,story1,생존허브,생존허브,survivorhub | survivorhome | survivorcore,스토리·생존 상태·경제·보유 자원과 다음 추천 행동을 통합 표시합니다.,v1650_survivor_core_complete,204,command
+main,story1,서버설정복구목록,서버설정복구목록,serversettingshistory,최근 서버 설정 백업 ID를 확인합니다.,v1150_server_operations_permissions,1096,command
+main,story1,서버역사,서버역사,cityhistory | serverhistory,서버에서 쌓인 BLACK CITY 역사를 확인합니다.,v1320_black_city_complete,699,command
+main,story1,선택,선택,,,v33_story,443,command
+main,story1,수사레이드기록,수사레이드기록,수사대기록 | investigationraidhistory | caseraidhistory,현재 서버의 최근 협동 수사 레이드 기록을 확인합니다.,v950_investigation_shelter_raid,1026,command
+main,story1,스토리나침반,스토리나침반,storycompass | storycontinue | continuejourney,현재 시즌·마지막 선택·다음 목표를 표시하고 버튼으로 스토리를 이어갑니다.,v1650_survivor_core_complete,187,command
+main,story1,스토리도감,스토리도감,storycodex | campaigncodex,카드 캠페인 전체 챕터 목록을 확인합니다.,v1140_championship_alliance_casino_story,553,command
+main,story1,시작,시작,,,v33_story,419,command
+main,story1,시즌2 기록,기록,,,v430_story_expedition,832,command
+main,story1,시즌2 선택,선택,,,v430_story_expedition,757,command
+main,story1,시즌2 시작,시작,,,v430_story_expedition,731,command
+main,story1,시즌2 재시작,재시작,,,v430_story_expedition,856,command
+main,story1,시즌3 기록,기록,,,v600_game_center,2893,command
+main,story1,시즌3 선택,선택,,,v600_game_center,2821,command
+main,story1,시즌3 시작,시작,,,v600_game_center,2792,command
+main,story1,시즌3 재시작,재시작,,,v600_game_center,2912,command
+main,story1,시즌4 기록,기록,,,v730_season_story,606,command
+main,story1,시즌4 선택,선택,,,v730_season_story,597,command
+main,story1,시즌4 시작,시작,,,v730_season_story,576,command
+main,story1,시즌4 재시작,재시작,,,v730_season_story,623,command
+main,story1,시즌사건,시즌사건,seasonevent | weeklyevent,이번 주 챔피언십 특별 규칙을 확인합니다.,v1140_championship_alliance_casino_story,383,command
+main,story1,시즌순위,시즌순위,seasonranking | championshipranking,현재 서버의 챔피언십 순위를 확인합니다.,v1140_championship_alliance_casino_story,316,command
+main,story1,시즌여정,시즌여정,스토리여정 | 시즌현황 | 스토리해금,스토리 시즌 1~4 완료·잠금·엔딩 수집 현황을 확인합니다.,v730_season_story,650,command
+main,story1,안정화검수,안정화검수,731검수 | 스토리잠금검수,v7.3.1 스토리 잠금과 운영 안정성을 검사합니다.,v731_duplicate_stability,218,command
+main,story1,역사도감,역사도감,historycatalog | citycodex,도시 사건 유형별 누적 기록을 확인합니다.,v1320_black_city_complete,708,command
+main,story1,연합대항순위,연합대항순위,alliancewarranking | allianceranking,전체 서버 연합 대항전 순위를 확인합니다.,v1140_championship_alliance_casino_story,411,command
+main,story1,연합대항전,연합대항전,alliancewar | alliancechampionship,연합 대항전 상태와 현재 점수를 확인합니다.,v1140_championship_alliance_casino_story,388,command
+main,story1,연합대항전참가,연합대항전참가,joinalliancewar | alliancewarjoin,현재 서버 연합을 시즌 대항전에 등록합니다.,v1140_championship_alliance_casino_story,397,command
+main,story1,연합상점,연합상점,allianceshop | alliancewarshop,연합 대항전에서 해금할 수 있는 장식을 확인합니다.,v1140_championship_alliance_casino_story,422,command
+main,story1,연합임무,연합임무,alliancemissions | alliancewarquests,연합 대항전 주간 임무를 확인합니다.,v1140_championship_alliance_casino_story,417,command
+main,story1,용어사전,용어사전,용어설명 | 기능설명 | glossary | termguide,스토리·차원·세력·크루·카지노·도박 등 주요 용어를 짧게 설명합니다.,v1660_first_survival_live_qa,682,command
+main,story1,원정,원정,원정대,,v430_story_expedition,1027,group
+main,story1,원정 기록,기록,,,v430_story_expedition,1415,command
+main,story1,원정 도움말,도움말,,,v430_story_expedition,1057,command
+main,story1,원정 랭킹,랭킹,,,v430_story_expedition,1426,command
+main,story1,원정 보급,보급,,,v430_story_expedition,1375,command
+main,story1,원정 출발,출발,,,v430_story_expedition,1094,command
+main,story1,원정 포기,포기,,,v430_story_expedition,1358,command
+main,story1,원정 행동,행동,,,v430_story_expedition,1142,command
+main,story1,월드보스이력,월드보스이력,월보이력 | worldbosshistory,,v630_world_boss,1252,command
+main,story1,장식구매,장식구매,buydecoration | purchasedecor,칩으로 개인 카지노 장식을 구매합니다.,v1140_championship_alliance_casino_story,456,command
+main,story1,장식상점,장식상점,decorationshop | casinodecorstore,개인 카지노 장식 목록과 가격을 확인합니다.,v1140_championship_alliance_casino_story,450,command
+main,story1,재시작,재시작,,,v33_story,549,command
+main,story1,중복검수,중복검수,기능중복검수 | 중복감사,중복 명령·설정·스토리 진행 상태를 삭제 없이 검사합니다.,v731_duplicate_stability,176,command
+main,story1,채무기록,채무기록,debthistory,,v1090_integrated_renewal,1819,command
+main,story1,챔피언도전,챔피언도전,challengechampion | championchallenge,10LP 이상이면 챔피언 테이블에서 아바돈에게 도전합니다.,v1140_championship_alliance_casino_story,326,command
+main,story1,챔피언십,챔피언십,championship | abaddonchampionship,현재 시즌 이벤트·리그 점수·챔피언 도전 조건을 확인합니다.,v1140_championship_alliance_casino_story,286,command
+main,story1,최근명령,최근명령,recentcommands | commandhistory,최근 완료한 명령을 확인합니다.,v1620_living_legends,890,command
+main,story1,카드캠페인,카드캠페인,cardcampaign | storycampaign,ABADDON 스토리형 카드 캠페인 진행 상황을 확인합니다.,v1140_championship_alliance_casino_story,484,command
+main,story1,카지노공개,카지노공개,publishcasino | casinoprivacy,개인 카지노 공개 여부를 설정합니다.,v1140_championship_alliance_casino_story,476,command
+main,story1,카지노꾸미기,카지노꾸미기,decoratecasino | casinodesign,개인 카지노 이름을 변경합니다.,v1140_championship_alliance_casino_story,441,command
+main,story1,캠페인기록,캠페인기록,campaignlog | storylog,완료 챕터·선택·보상 기록을 확인합니다.,v1140_championship_alliance_casino_story,546,command
+main,story1,캠페인보상,캠페인보상,campaignreward | storyreward,완료한 캠페인 챕터 보상을 수령합니다.,v1140_championship_alliance_casino_story,536,command
+main,story1,캠페인선택,캠페인선택,campaignchoice | storychoice,스토리 캠페인의 기본 성향을 선택합니다.,v1140_championship_alliance_casino_story,494,command
+main,story1,캠페인진행,캠페인진행,advancecampaign | campaignadvance,현재 챕터 조건을 검사하고 다음 챕터로 진행합니다.,v1140_championship_alliance_casino_story,516,command
+main,story1,탐사기록,탐사기록,expeditionhistory | globalexpeditionhistory,최근 서버 공동 글로벌 탐사 기록을 확인합니다.,v1000_global_survivor,1461,command
+main,story1,현상금기록,현상금기록,표적기록 | bountyhistory | hunthistory,개인 현상금 완료 기록을 확인합니다.,v950_investigation_shelter_raid,679,command
+main,story2,시즌2,시즌2,백색방주 | 후일담,,v430_story_expedition,720,group
+main,story3,시즌3,시즌3,종말의왕좌 | 왕좌,,v600_game_center,2785,group
+main,story4,시즌4,시즌4,황혼의종착역 | 황혼선,,v730_season_story,567,group
+main,story4,시즌유산,시즌유산,황혼유산 | 시즌4보상,시즌 4 엔딩 수집 단계 보상을 확인하고 받습니다.,v730_season_story,692,command
+main,story5,세계연대기,세계연대기,시즌5기록 | 연합연대기,세력·호송·전쟁·시즌 선택 기록을 확인합니다.,v900_faction_world_state,1347,command
+main,story5,시즌5,시즌5,시즌5스토리 | 연합전선스토리,시즌 5 잿빛 연합전선의 현재 장과 선택지를 확인합니다.,v900_faction_world_state,1253,command
+main,story5,시즌5결정,시즌5결정,연합전선결정 | 시즌결정,관리자가 현재 장의 투표 결과를 확정합니다.,v900_faction_world_state,1315,command
+main,story5,시즌5투표,시즌5투표,연합전선투표 | 시즌투표,현재 시즌 5 장의 선택지에 투표합니다.,v900_faction_world_state,1295,command
+main,story6,시즌6,시즌6,season6 | 검은태양 | blacksun,시즌 6 현재 장면·투표·도시 지표와 공동 결말 진행을 확인합니다.,v1700_creator_forge_season6,804,group
+main,story6,시즌6 결정,결정,resolve,,v1700_creator_forge_season6,933,command
+main,story6,시즌6 기록,기록,history,,v1700_creator_forge_season6,937,command
+main,story6,시즌6 보상,보상,reward,,v1700_creator_forge_season6,941,command
+main,story6,시즌6 시작,시작,start,,v1700_creator_forge_season6,925,command
+main,story6,시즌6 투표,투표,vote,,v1700_creator_forge_season6,929,command
+main,story6,시즌6결정,시즌6결정,season6resolve | blackSunResolve,관리자가 현재 장의 최다 득표 선택을 확정합니다. 번호를 지정해 강제 결정할 수 있습니다.,v1700_creator_forge_season6,821,command
+main,story6,시즌6기록,시즌6기록,season6history | blackSunHistory,시즌 6 서버 투표와 결정 연대기를 확인합니다.,v1700_creator_forge_season6,885,command
+main,story6,시즌6보상,시즌6보상,season6reward | blackSunReward,시즌 6 완료 후 참여 보상을 한 번 수령합니다.,v1700_creator_forge_season6,901,command
+main,story6,시즌6시작,시즌6시작,season6start | blackSunStart,관리자가 시즌 6 검은 태양의 귀환을 시작합니다.,v1700_creator_forge_season6,791,command
+main,story6,시즌6투표,시즌6투표,season6vote | blackSunVote,시즌 6 현재 장의 선택지 1~3에 투표합니다.,v1700_creator_forge_season6,810,command
+play,casino,1631통합검수,1631통합검수,v1631audit | 1631audit | 1630통합검수 | v1630audit | 1630audit,v16.3.1 메인 RPG 명령센터·카지노/도박 분리·신규 안내·정부지원금·채집 결과 변화 연결을 검사합니다.,v1630_core_rpg_command_city_overhaul,1754,command
+play,casino,vip,vip,,카지노 VIP 등급과 혜택을 확인합니다.,v40_black_casino,1010,command
+play,casino,경제정산검수,경제정산검수,카지노정산검수 | economysettlementaudit | casinosettlementaudit,카지노·도박·경마·정부지원금의 정산·중복 지급·음수 잔액 안전망을 검사합니다.,v1660_first_survival_live_qa,725,command
+play,casino,구매,구매,,카지노 NPC 상점에서 아이템을 구매합니다.,v40_black_casino,1034,command
+play,casino,금고개설,금고개설,카지노금고개설,,v638_hardcore_arcade,1291,command
+play,casino,다이스,다이스,,,v39_casino,1388,command
+play,casino,도박분류검수,도박분류검수,gamblingcategoryaudit | casinoaudit1631,카지노·비카지노 도박·정부지원금의 명령어 센터 분류와 빠른 이동을 검사합니다.,v1630_core_rpg_command_city_overhaul,1650,command
+play,casino,럭키휠,럭키휠,,,v40_black_casino,1096,command
+play,casino,룰렛,룰렛,,1/6부터 위험도가 증가하는 기존 생존 룰렛을 실행합니다.,v39_casino,1339,command
+play,casino,미션,미션,,오늘의 카지노 미션을 확인합니다.,v40_black_casino,1018,command
+play,casino,바카라,바카라,,,v39_casino,1393,command
+play,casino,블랙잭,블랙잭,,,v39_casino,1373,command
+play,casino,블랙잭토너먼트,블랙잭토너먼트,blackjacktournament | bjtournament,,v1090_integrated_renewal,1464,command
+play,casino,상점,상점,,카지노 전용 NPC 상점을 확인합니다.,v40_black_casino,1030,command
+play,casino,세븐카드스터드,세븐카드스터드,세븐포커 | sevencardstud | studpoker,,v1010_companion_card_games,1010,command
+play,casino,수집도감,수집도감,collectioncatalog | collectionbook,화투·포커 족보·경마 우승마·딜러·장식 수집을 확인합니다.,v1190_event_broadcast_collection,649,command
+play,casino,슬롯,슬롯,,,v39_casino,1383,command
+play,casino,시즌랭킹,시즌랭킹,,시즌·전체·오늘 TOP100 순이익 랭킹을 확인합니다.,v40_black_casino,1053,command
+play,casino,업적,업적,,BLACK CASINO 100종 이상 업적을 페이지별로 확인합니다.,v40_black_casino,1026,command
+play,casino,올인,올인,,,v40_black_casino,1106,command
+play,casino,인디언포커,인디언포커,indianpoker,,v1050_unified_expansion,1155,command
+play,casino,잔액,잔액,,"카지노 전적, 실시간 칩, 오늘·누적 손익을 확인합니다.",v39_casino,1353,command
+play,casino,장식도감,장식도감,decorationcatalog | decorbook,개인 카지노 장식 수집 현황을 확인합니다.,v1190_event_broadcast_collection,684,command
+play,casino,잭팟,잭팟,,전 서버 누적 잭팟을 확인합니다.,v40_black_casino,1014,command
+play,casino,주사위카드,주사위카드,dicecard | dicecardpoker,,v1090_integrated_renewal,1444,command
+play,casino,주파수,주파수,,세 개의 검은 신호를 맞추는 기존 주파수 슬롯을 실행합니다.,v39_casino,1344,command
+play,casino,카드바카라,카드바카라,바카라방 | baccarattable | cardbaccarat,,v1050_unified_expansion,1159,command
+play,casino,카드블랙잭,카드블랙잭,블랙잭방 | blackjacktable | cardblackjack,,v1050_unified_expansion,1157,command
+play,casino,카지노VIP,카지노VIP,,,v40_black_casino,1067,command
+play,casino,카지노구매,카지노구매,,,v40_black_casino,1091,command
+play,casino,카지노기록,카지노기록,,,v39_casino,1401,command
+play,casino,카지노도움말,카지노도움말,,,v39_casino,1409,command
+play,casino,카지노딜러,카지노딜러,,,v40_black_casino,1110,command
+play,casino,카지노랭킹,카지노랭킹,,,v39_casino,1405,command
+play,casino,카지노미션,카지노미션,,,v40_black_casino,1075,command
+play,casino,카지노미션보상,카지노미션보상,,,v40_black_casino,1079,command
+play,casino,카지노상점,카지노상점,,,v40_black_casino,1087,command
+play,casino,카지노시즌랭킹,카지노시즌랭킹,,,v40_black_casino,1114,command
+play,casino,카지노업적,카지노업적,,,v40_black_casino,1083,command
+play,casino,카지노잔액,카지노잔액,카지노자금,,v39_casino,1397,command
+play,casino,카지노잭팟,카지노잭팟,,,v40_black_casino,1071,command
+play,casino,카지노칩,카지노칩,,,v40_black_casino,1058,command
+play,casino,카지노환전,카지노환전,,,v40_black_casino,1063,command
+play,casino,코인플립,코인플립,,,v40_black_casino,1101,command
+play,casino,탐색,탐색,,왼쪽·오른쪽 폐허 통로를 선택하는 기존 방향 도박입니다.,v39_casino,1349,command
+play,casino,파인애플홀덤,파인애플홀덤,파인애플포커 | pineappleholdem | pineapple,,v1050_unified_expansion,1147,command
+play,casino,포커,포커,생존자포커,,v651_card_games,1091,command
+play,casino,포커족보도감,포커족보도감,pokerhandcatalog | pokerhandbook,발견한 포커 족보를 확인합니다.,v1190_event_broadcast_collection,665,command
+play,casino,하이로우,하이로우,,,v39_casino,1378,command
+play,casino,하이로우포커,하이로우포커,하이로우카드 | highlowpoker | hilo,,v1050_unified_expansion,1153,command
+play,casino,환전,환전,,식량과 카지노 칩을 교환합니다.,v40_black_casino,1006,command
+play,combat,기지방어,기지방어,,,v636_world_combat,382,command
+play,combat,기지방어공격,기지방어공격,,,v636_world_combat,401,command
+play,combat,기지칩교환,기지칩교환,,,v636_world_combat,347,command
+play,combat,날씨,날씨,,,v636_world_combat,265,command
+play,combat,단서목록,단서목록,내단서 | clues | cluelist,보유한 사건 단서와 수량을 확인합니다.,v950_investigation_shelter_raid,484,command
+play,combat,단서조사,단서조사,사건조사 | investigate | searchclue,현장·기록·증언 중 하나를 조사해 단서를 확보합니다.,v950_investigation_shelter_raid,493,command
+play,combat,단서조합,단서조합,증거연결 | combineclues | linkevidence,보유한 두 단서를 연결해 사건의 논리 고리를 완성합니다.,v950_investigation_shelter_raid,505,command
+play,combat,대피소,대피소,개인대피소 | shelter | myshelter,개인 대피소의 테마·장식·전시품을 확인합니다.,v950_investigation_shelter_raid,702,command
+play,combat,대피소꾸미기,대피소꾸미기,대피소테마 | decorateshelter | sheltertheme,개인 대피소 테마를 변경합니다.,v950_investigation_shelter_raid,708,command
+play,combat,대피소방문,대피소방문,대피소구경 | visitshelter | viewshelter,다른 생존자의 개인 대피소를 방문합니다.,v950_investigation_shelter_raid,782,command
+play,combat,대피소좋아요,대피소좋아요,대피소추천 | likeshelter | shelterlike,다른 생존자의 개인 대피소에 좋아요를 남깁니다.,v950_investigation_shelter_raid,796,command
+play,combat,던전기록,던전기록,,,v21_reborn,674,command
+play,combat,던전순위,던전순위,dungeonranking | expeditionranking,서버 탐험 완료 순위를 확인합니다.,v1220_chaos_festival_complete,1360,command
+play,combat,던전전술,던전전술,,,v636_world_combat,670,command
+play,combat,보스도감,보스도감,,,v21_reborn,686,command
+play,combat,사건추리,사건추리,사건해결 | solvecase | deducecase,연결된 증거를 바탕으로 사건의 배후를 지목합니다.,v950_investigation_shelter_raid,539,command
+play,combat,사건판,사건판,수사사건현황 | caseboard | investigationboard,이번 주 폐허 사건과 공동 수사 진행도를 확인합니다.,v950_investigation_shelter_raid,462,command
+play,combat,수사레이드,수사레이드,협동수사 | investigationraid | caseraid,현재 협동 수사 레이드 모집·진행·완료 상태를 확인합니다.,v950_investigation_shelter_raid,881,command
+play,combat,수사레이드모집,수사레이드모집,수사대모집 | openinvestigationraid | openraidcase,협동 수사 레이드 모집을 시작합니다.,v950_investigation_shelter_raid,893,command
+play,combat,수사레이드보상,수사레이드보상,수사대보상 | claiminvestigationraid | claimcaseraid,정산된 협동 수사 레이드의 개인 기여 보상을 받습니다.,v950_investigation_shelter_raid,994,command
+play,combat,수사레이드정산,수사레이드정산,수사대정산 | settleinvestigationraid | settlecaseraid,완료된 협동 수사 레이드를 한 번만 정산합니다.,v950_investigation_shelter_raid,971,command
+play,combat,수사레이드참가,수사레이드참가,수사대참가 | joininvestigationraid | joincaseraid,현장수사·기술분석·현장경계·교섭 역할로 참가합니다.,v950_investigation_shelter_raid,910,command
+play,combat,수사레이드출발,수사레이드출발,수사대출발 | startinvestigationraid | startcaseraid,모집자가 2명 이상의 수사 레이드를 출발시킵니다.,v950_investigation_shelter_raid,932,command
+play,combat,수사레이드행동,수사레이드행동,수사대행동 | investigationaction | raidinvestigate,수색·분석·확보·교차검증 행동으로 공동 진행도를 올립니다.,v950_investigation_shelter_raid,953,command
+play,combat,심층던전,심층던전,층던전,,v21_reborn,591,command
+play,combat,월드보스기여도,월드보스기여도,내기여도 | 월보기여도,,v630_world_boss,1110,command
+play,combat,월드보스도감,월드보스도감,월보도감,,v630_world_boss,1271,command
+play,combat,월드보스목록,월드보스목록,보스목록 | 월보목록 | worldbosslist,,v630_world_boss,1104,command
+play,combat,월드보스보상,월드보스보상,보스보상 | 월보보상,,v630_world_boss,1179,command
+play,combat,월드보스보상목록,월드보스보상목록,월보보상목록 | worldbossrewards,,v630_world_boss,1151,command
+play,combat,월드보스주간랭킹,월드보스주간랭킹,월보주간랭킹 | 주간월보랭킹,,v710_growth_loop,748,command
+play,combat,월드보스주간보상,월드보스주간보상,월보주간보상,,v710_growth_loop,773,command
+play,combat,자원구매,자원구매,,,v636_world_combat,304,command
+play,combat,자원시장,자원시장,,,v636_world_combat,282,command
+play,combat,자원판매,자원판매,,,v636_world_combat,325,command
+play,combat,전시실,전시실,트로피실 | showcase | trophyroom,보유 트로피와 현재 전시 중인 수집품을 확인합니다.,v950_investigation_shelter_raid,753,command
+play,combat,전투,전투,,,v636_world_combat,666,command
+play,combat,전투상태,전투상태,,,v636_world_combat,674,command
+play,combat,전투포기,전투포기,,,v636_world_combat,685,command
+play,combat,지역보상,지역보상,개척보상 | 지도보상,격파한 지역 보스의 개인 기여 보상을 받습니다.,v810_world_map_ux,882,command
+play,combat,지역보스,지역보스,개척보스 | 지도보스,지역 개척 보스 상태를 확인합니다.,v810_world_map_ux,801,command
+play,combat,지역보스공격,지역보스공격,개척보스공격 | 지도보스공격,활성 지역 보스를 공격합니다.,v810_world_map_ux,821,command
+play,combat,침공공격,침공공격,침공전투,,v30_invasion,284,command
+play,combat,트로피전시,트로피전시,전시등록 | displaytrophy | showtrophy,보유한 트로피를 개인 대피소 전시실에 올립니다.,v950_investigation_shelter_raid,761,command
+play,combat,현상금,현상금,현상금목록 | bounty | bounties,이번 주 공동 현상금 표적과 추적 진행도를 확인합니다.,v950_investigation_shelter_raid,585,command
+play,combat,현상금보고,현상금보고,현상금보상 | claimbounty | bountyreport,완료된 주간 현상금의 개인 기여 보상을 받습니다.,v950_investigation_shelter_raid,641,command
+play,combat,현상금추적,현상금추적,표적추적 | trackbounty | huntbounty,추적·잠복·협상·제압 방식으로 주간 현상금 진행도를 올립니다.,v950_investigation_shelter_raid,594,command
+play,combat,협동보스,협동보스,coopboss,,v1050_unified_expansion,1482,command
+play,combat,협동보스공격,협동보스공격,attackcoopboss,,v1050_unified_expansion,1486,command
+play,combat,협동보스소환,협동보스소환,summoncoopboss,,v1050_unified_expansion,1472,command
+play,economy,거래검색,거래검색,,,v21_reborn,728,command
+play,economy,거래구매,거래구매,citymarketbuy | buycitylisting,도시 거래소의 판매 글을 구매합니다.,v1320_black_city_complete,511,command
+play,economy,거래기록,거래기록,,,v21_reborn,838,command
+play,economy,경제대시보드,경제대시보드,economydashboard,,v1090_integrated_renewal,1707,command
+play,economy,경제밸런스,경제밸런스,경제변경,,v431_growth_balance,427,command
+play,economy,도시명예전당,도시명예전당,cityhalloffame | blackcitylegends,세력·거래·건설·도시 기록의 명예 전당입니다.,v1320_black_city_complete,714,command
+play,economy,도시시세,도시시세,marketprices | cityprices,최근 체결가와 평균가를 확인합니다.,v1320_black_city_complete,524,command
+play,economy,도시운영,도시운영,cityoperations | blackcityops,BLACK CITY 운영 설정·백업·경제 상태를 확인합니다.,v1320_black_city_complete,746,command
+play,economy,도시판매취소,도시판매취소,marketcancel | cancelcitylisting,본인의 도시 거래소 판매 글을 취소합니다.,v1320_black_city_complete,503,command
+play,economy,서버상권,서버상권,servermarket | businessdistrict,서버에 개설된 사업 목록을 확인합니다.,v1220_chaos_festival_complete,1473,command
+play,economy,선물거래,선물거래,감염선물 | 레버리지,,v640_interactive_arcade,718,command
+play,economy,지역경제,지역경제,무역경제 | 경제동향,지역별 수요와 서버 공동 경제 상태를 확인합니다.,v900_faction_world_state,841,command
+play,gambling,게임도시,게임도시,gamecity | cardcity | gamingcity,카드룸·경마·리그·관전·장부를 한 화면에서 확인합니다.,v1100_game_city_overhaul,128,command
+play,gambling,게임도시검수,게임도시검수,gamecityaudit | v1100audit,v11.0.0에서 변경한 결과·레이즈·경마·화투·장부만 검사합니다.,v1100_game_city_overhaul,258,command
+play,gambling,경마배당검수,경마배당검수,raceoddsaudit | dynamicoddsaudit | v1142audit,v11.4.2에서 추가한 경주별 랜덤 배당과 정산 연결만 검사합니다.,v1142_dynamic_horse_odds,57,command
+play,gambling,경마우승마도감,경마우승마도감,winninghorsecatalog | horsewinnerbook,내가 적중한 경마 우승마를 확인합니다.,v1190_event_broadcast_collection,672,command
+play,gambling,경마장,경마장,racetrack | horsearena,경주마다 새로 바뀌는 배당과 실시간 경마 규칙을 확인합니다.,v1092_visual_status_horserace,540,command
+play,gambling,경마전적,경마전적,horseracestats | racestats,내 실시간 경마 전적과 손익을 확인합니다.,v1092_visual_status_horserace,548,command
+play,gambling,경마표시검수,경마표시검수,racetrackaudit | horsemarkeraudit | v1141audit,v11.4.1에서 수정한 말 표식과 공통 결승선만 검사합니다.,v1141_horse_marker_hotfix,50,command
+play,gambling,도박정보,도박정보,도박도움말,,v36_gambling_market,881,command
+play,gambling,매도,매도,,인수를 생략하면 드롭다운에서 보유 코인을 판매합니다.,v36_gambling_market,900,command
+play,gambling,매수,매수,,식량으로 암시장 종목을 구매합니다.,v36_gambling_market,896,command
+play,gambling,생존룰렛,생존룰렛,survivalroulette | saferoulette,안전 구역을 고르는 생존 룰렛을 시작합니다.,v1220_chaos_festival_complete,917,command
+play,gambling,시세,시세,암시장시세,,v36_gambling_market,851,command
+play,gambling,실시간보드,실시간보드,liveboard | gameliveboard | livestatusboard,진행 중인 카드게임과 경마를 이미지 보드로 확인합니다.,v1095_gameplay_polish_patch,178,command
+play,gambling,알림상태,알림상태,,암시장 자동 알림 채널과 상태를 확인합니다.,v37_gambling_experience,1042,command
+play,gambling,알림해제,알림해제,,이 서버의 암시장 자동 알림을 해제합니다.,v37_gambling_experience,1038,command
+play,gambling,암시장기록,암시장기록,투자기록,,v36_gambling_market,877,command
+play,gambling,암시장알림상태,암시장알림상태,,,v37_gambling_experience,1028,command
+play,gambling,암시장알림설정,암시장알림설정,,,v37_gambling_experience,1020,command
+play,gambling,암시장알림해제,암시장알림해제,,,v37_gambling_experience,1024,command
+play,gambling,자산,자산,,보유 종목의 평가금과 손익을 확인합니다.,v36_gambling_market,914,command
+play,gambling,중계,중계,경기중계 | broadcast | livebroadcast,현재 채널의 카드게임 또는 서버의 진행 중 경마를 공개 정보만으로 실시간 중계합니다.,v1190_event_broadcast_collection,610,command
+play,gear,강화기록,강화기록,,최근 강화 결과 10개를 확인합니다.,v432_forge_live,1059,command
+play,gear,강화랭킹,강화랭킹,,,v21_reborn,525,command
+play,gear,강화연출,강화연출,,강화 단계별 장비 표시 이름과 장인의 열기를 안내합니다.,v432_forge_live,1077,command
+play,gear,강화정보,강화정보,,,v21_reborn,466,command
+play,gear,개조부품제작,개조부품제작,부품제작,,v637_dynamic_events,625,command
+play,gear,거점건설,거점건설,지역건설 | 개척건설,개인 자원으로 공동 거점 시설을 건설·강화합니다.,v810_world_map_ux,761,command
+play,gear,도시거래소,도시거래소,citymarket | blackmarketboard,사용자 제작품 거래소를 확인합니다.,v1320_black_city_complete,487,command
+play,gear,도시제작,도시제작,citycraft | blackcraft,재료를 사용해 도시 제작품을 만듭니다.,v1320_black_city_complete,476,command
+play,gear,도시제작법,도시제작법,cityrecipes | blackrecipes,도시 제작법을 확인합니다.,v1320_black_city_complete,471,command
+play,gear,보호강화,보호강화,,,v21_reborn,487,command
+play,gear,신규장비,신규장비,장비패치,,v431_growth_balance,413,command
+play,gear,아이템도감,아이템도감,itemcodex,주요 재료·장비·수집품 도감을 확인합니다.,v1000_global_survivor,1166,command
+play,gear,영토방어,영토방어,defendterritory | territorydefend,점령 지역의 방어도를 강화합니다.,v1320_black_city_complete,419,command
+play,gear,운영강화설정,운영강화설정,관리확장초기설정,자동 이모지 채널과 격리 역할을 자동 준비합니다.,v411_server_guard_plus,553,command
+play,gear,유물 강화,강화,,,v431_growth_balance,501,command
+play,gear,장비,장비,,,v431_growth_balance,550,command
+play,gear,장비갈갈이,장비갈갈이,장비분쇄,,v639_frontier_operations,1017,command
+play,gear,장비옵션,장비옵션,,,v21_reborn,545,command
+play,gear,장비외형,장비외형,장비비주얼 | 강화외형,,v633_equipment_crafting,455,command
+play,gear,장비프리셋,장비프리셋,레이드프리셋 | 프리셋,,v710_growth_loop,678,command
+play,gear,장식목록,장식목록,대피소장식 | decorations | decorationlist,제작 가능한 개인 대피소 장식과 비용을 확인합니다.,v950_investigation_shelter_raid,721,command
+play,gear,장식제작,장식제작,대피소장식제작 | craftdecoration | builddecoration,재료를 사용해 개인 대피소 장식을 제작합니다.,v950_investigation_shelter_raid,726,command
+play,gear,초보생존,초보생존,첫생존 | 첫생존자여정 | firstsurvival | survivorjourney,버튼으로 가입·시즌 1·탐색·장비·기지까지 진행하고 중간 진행을 저장합니다.,v1660_first_survival_live_qa,664,command
+play,gear,판매등록,판매등록,marketlist | listcityitem,제작품을 도시 거래소에 등록합니다.,v1320_black_city_complete,494,command
+play,life,도시채집,도시채집,citygather | blackgather,선택한 도시 직업의 재료를 채집합니다.,v1320_black_city_complete,461,command
+play,life,채집센터,채집센터,gatheringhub | gatherhub,통합 채집센터를 엽니다.,v1620_living_legends,829,command
+play,life,파밍,파밍,폐허파밍 | 파밍메뉴,지역 선택형 폐허 파밍 메뉴를 엽니다.,v770_ruin_farming,1383,command
+play,life,파밍기록,파밍기록,파밍상태 | 파밍로그,파밍 기록과 진행 중 인카운트를 확인합니다.,v770_ruin_farming,1422,command
+play,life,파밍선택,파밍선택,인카운트선택 | 현장선택,파밍 인카운트의 행동을 선택합니다.,v770_ruin_farming,1418,command
+play,life,파밍인카운트도감,파밍인카운트도감,폐허인카운트도감 | 현장인물도감 | 현장접촉기록,발견한 파밍 인카운트와 우호 세력을 확인합니다.,v770_ruin_farming,1835,command
+play,life,파밍지역,파밍지역,파밍목록 | 파밍지역목록,파밍 가능한 지역을 확인합니다.,v770_ruin_farming,1410,command
+play,life,파밍출발,파밍출발,파밍시작 | 폐허수색,선택한 지역으로 파밍을 출발합니다.,v770_ruin_farming,1414,command
+play,life,하이에나,하이에나,시체파밍 | 잔해약탈,,v638_hardcore_arcade,1263,command
+social,guild,750안정화검수,750안정화검수,길드안정화검수 | v750검수,v7.5.1 길드 통합·전술 패치의 핵심 안정성을 검사합니다.,v750_guild_raid,2221,command
+social,guild,760안정화검수,760안정화검수,길드파견검수 | v760검수,길드 파견 저장·정산·중복 수령 구조를 읽기 전용으로 검사합니다.,v760_guild_dispatch,668,command
+social,guild,공동트로피룸,공동트로피룸,guildtrophyroom | servertrophies,서버 공동 트로피와 월간 기록을 확인합니다.,v1220_chaos_festival_complete,1901,command
+social,guild,관계도,관계도,festivalrelations | npcrelations,NPC별 친밀도와 경쟁도를 확인합니다.,v1220_chaos_festival_complete,1094,command
+social,guild,길드거래내역,길드거래내역,길드금고내역,최근 길드 금고 거래를 확인합니다.,v750_guild_raid,1894,command
+social,guild,길드건설,길드건설,공동기지건설,새 길드 시설을 건설합니다.,v750_guild_raid,1609,command
+social,guild,길드검수,길드검수,길드감사 | 길드데이터검수,길드 데이터와 경제 무결성을 읽기 전용으로 검사합니다.,v750_guild_raid,2187,command
+social,guild,길드관리,길드관리,길드메뉴 | 길드대시보드,길드·기지·임무·금고·레이드를 한 화면에서 확인합니다.,v750_guild_raid,1280,command
+social,guild,길드금고,길드금고,길드창고 | 공동금고,길드 통합 금고와 출금 요청을 확인합니다.,v750_guild_raid,1709,command
+social,guild,길드기지,길드기지,공동기지 | 길드시설,길드 공동 기지 시설과 공사 상태를 확인합니다.,v750_guild_raid,1541,command
+social,guild,길드기지수확,길드기지수확,공동기지수확,발전기가 생산한 식량을 공동 금고로 회수합니다.,v750_guild_raid,1617,command
+social,guild,길드레이드,길드레이드,길드보스 | 길드토벌,이번 주 길드 레이드 상태를 확인합니다.,v750_guild_raid,2028,command
+social,guild,길드레이드공격,길드레이드공격,길드보스공격 | 길드토벌공격,길드 레이드에서 전술과 공격 부위를 선택합니다.,v750_guild_raid,2048,command
+social,guild,길드레이드기록,길드레이드기록,길드보스기록 | 길드토벌기록,현재·과거 길드 레이드 기록을 페이지로 확인합니다.,v750_guild_raid,1997,command
+social,guild,길드레이드랭킹,길드레이드랭킹,길드보스랭킹 | 길드토벌랭킹,현재 길드 레이드 기여도 순위를 확인합니다.,v750_guild_raid,2152,command
+social,guild,길드레이드보상,길드레이드보상,길드보스보상 | 길드토벌보상,토벌 완료한 길드 레이드 개인 보상을 받습니다.,v750_guild_raid,2118,command
+social,guild,길드레이드연습,길드레이드연습,길드보스연습 | 길드토벌연습,실제 HP·쿨다운·보상에 영향 없는 레이드 연습 공격을 실행합니다.,v750_guild_raid,1960,command
+social,guild,길드레이드준비,길드레이드준비,길드보스준비 | 길드토벌준비,개인 전술·쿨다운·시설 효과와 추천 부위를 확인합니다.,v750_guild_raid,1937,command
+social,guild,길드복구미리보기,길드복구미리보기,길드마이그레이션미리보기,안전 복구 가능한 길드 데이터 항목을 미리 봅니다.,v750_guild_raid,2205,command
+social,guild,길드설정,길드설정,길드가입설정,길드 가입 방식을 설정합니다.,v750_guild_raid,1323,command
+social,guild,길드소개,길드소개,길드설명,길드 소개를 확인하거나 변경합니다.,v750_guild_raid,1305,command
+social,guild,길드시설강화,길드시설강화,길드기지강화,기존 길드 시설을 강화합니다.,v750_guild_raid,1613,command
+social,guild,길드신청,길드신청,길드가입신청,승인 가입 길드에 가입을 신청합니다.,v750_guild_raid,1347,command
+social,guild,길드신청목록,길드신청목록,길드가입신청목록,처리 대기 중인 길드 가입 신청을 확인합니다.,v750_guild_raid,1383,command
+social,guild,길드신청처리,길드신청처리,길드가입처리,가입 신청을 승인하거나 거절합니다.,v750_guild_raid,1398,command
+social,guild,길드위임,길드위임,길드장위임,길드장 권한을 다른 길드원에게 넘깁니다.,v750_guild_raid,1514,command
+social,guild,길드임무,길드임무,길드미션 | 공동임무,길드 일일·주간 공동 임무를 확인합니다.,v750_guild_raid,1650,command
+social,guild,길드임무보상,길드임무보상,길드미션보상,완료한 길드 공동 임무 보상을 받습니다.,v750_guild_raid,1671,command
+social,guild,길드입금,길드입금,길드자원기부,식량이나 건축 자원을 길드 금고에 입금합니다.,v750_guild_raid,1725,command
+social,guild,길드전술설정,길드전술설정,길드전술 | 길드레이드프리셋,개인 길드 레이드 기본 전술과 부위를 저장합니다.,v750_guild_raid,1910,command
+social,guild,길드종합랭킹,길드종합랭킹,길드랭킹750,길드 레벨·시설·레이드·기여도를 합산한 순위를 확인합니다.,v750_guild_raid,2169,command
+social,guild,길드직책,길드직책,길드간부,길드원을 간부로 임명하거나 일반 길드원으로 변경합니다.,v750_guild_raid,1451,command
+social,guild,길드초대수락,길드초대수락,길드초대받기,우클릭으로 받은 최근 길드 초대를 수락합니다.,v790_operations_disaster,1360,command
+social,guild,길드추방,길드추방,길드강퇴,길드원을 추방합니다.,v750_guild_raid,1485,command
+social,guild,길드출금거절,길드출금거절,길드금고거절,길드 금고 출금 요청을 거절합니다.,v750_guild_raid,1867,command
+social,guild,길드출금승인,길드출금승인,길드금고승인,길드 금고 출금 요청을 승인합니다.,v750_guild_raid,1811,command
+social,guild,길드출금요청,길드출금요청,길드금고요청,길드 금고 출금을 요청합니다.,v750_guild_raid,1767,command
+social,guild,길드파견,길드파견,길드원정 | 길드탐사대,길드 협동 파견 상태와 지역을 확인합니다.,v760_guild_dispatch,350,command
+social,guild,길드파견기록,길드파견기록,길드원정기록 | 파견기록,길드 파견 기록을 페이지로 확인합니다.,v760_guild_dispatch,619,command
+social,guild,길드파견모의,길드파견모의,길드원정모의 | 파견연습,실제 데이터 변경 없이 1인 길드 파견 결과를 예측합니다.,v760_guild_dispatch,645,command
+social,guild,길드파견모집,길드파견모집,길드파견준비 | 길드원정모집,길드 파견 참가자를 모집합니다.,v760_guild_dispatch,388,command
+social,guild,길드파견보상,길드파견보상,길드원정보상 | 파견보상,완료된 길드 파견 개인 보상을 받습니다.,v760_guild_dispatch,573,command
+social,guild,길드파견이탈,길드파견이탈,길드원정이탈 | 파견이탈,출발 전 길드 파견 모집에서 이탈합니다.,v760_guild_dispatch,438,command
+social,guild,길드파견정산,길드파견정산,길드원정정산 | 파견정산,복귀한 길드 파견 결과를 한 번만 정산합니다.,v760_guild_dispatch,549,command
+social,guild,길드파견참가,길드파견참가,길드원정참가 | 파견참가,모집 중인 길드 파견에 역할을 선택해 참가합니다.,v760_guild_dispatch,418,command
+social,guild,길드파견출발,길드파견출발,길드원정출발 | 파견출발,모집한 길드 파견대를 출발시킵니다.,v760_guild_dispatch,472,command
+social,guild,길드파견취소,길드파견취소,길드원정취소 | 파견모집취소,출발 전 길드 파견 모집을 취소합니다.,v760_guild_dispatch,453,command
+social,guild,도시의뢰,도시의뢰,cityrequest | npcrequest,오늘의 NPC 의뢰를 받습니다.,v1320_black_city_complete,675,command
+social,guild,도시인물,도시인물,citynpcs | livingnpcs,시간에 따라 움직이는 도시 NPC를 확인합니다.,v1320_black_city_complete,670,command
+social,guild,동료,동료,companions | companionlist,,v1010_companion_card_games,1022,command
+social,guild,동료검수,동료검수,companionaudit,,v1010_companion_card_games,1216,command
+social,guild,동료기록,동료기록,companionlog | companionrecord,,v1010_companion_card_games,1167,command
+social,guild,동료능력,동료능력,companionabilities,,v1050_unified_expansion,1393,command
+social,guild,동료대시보드,동료대시보드,companiondashboard,,v1090_integrated_renewal,1719,command
+social,guild,동료대화,동료대화,talkcompanion | companiontalk,,v1010_companion_card_games,1098,command
+social,guild,동료도감,동료도감,companioncatalog | petcatalog,전체 동료와 획득 상태를 확인합니다.,v1220_chaos_festival_complete,1217,command
+social,guild,동료먹이,동료먹이,feedcompanion | feedpet,동료에게 먹이를 주어 경험치를 올립니다.,v1220_chaos_festival_complete,1160,command
+social,guild,동료배치,동료배치,assigncompanion | companionassign,,v1010_companion_card_games,1071,command
+social,guild,동료뽑기,동료뽑기,drawcompanion | petdraw,"3,000칩으로 동료 알을 부화합니다.",v1220_chaos_festival_complete,1139,command
+social,guild,동료영입,동료영입,recruitcompanion | companionrecruit,,v1010_companion_card_games,1043,command
+social,guild,동료원정,동료원정,companionexpedition,,v1050_unified_expansion,1421,command
+social,guild,동료임무,동료임무,companionmission | companionquest,,v1010_companion_card_games,1132,command
+social,guild,동료진화,동료진화,evolvecompanion | evolvepet,5레벨 이상 동료를 진화시킵니다.,v1220_chaos_festival_complete,1201,command
+social,guild,동료탐험,동료탐험,festivalpetexpedition | petexpedition,동료를 짧은 탐험에 보내거나 귀환 보상을 받습니다.,v1220_chaos_festival_complete,1182,command
+social,guild,동료훈련,동료훈련,traincompanion,,v1050_unified_expansion,1404,command
+social,guild,딜러대화,딜러대화,dealertalk | npctalk,NPC 딜러와 대화해 친밀도를 올립니다.,v1220_chaos_festival_complete,1057,command
+social,guild,딜러선물,딜러선물,dealergift | npcgift,NPC에게 선물을 주어 관계를 변화시킵니다.,v1220_chaos_festival_complete,1073,command
+social,guild,딜러친밀도,딜러친밀도,dealeraffinity | dealerbond,NPC 딜러 6명의 친밀도를 확인합니다.,v1190_event_broadcast_collection,677,command
+social,guild,랜덤벌칙,랜덤벌칙,randompenalty | partyforfeit,안전하고 가벼운 랜덤 벌칙을 뽑습니다.,v1220_chaos_festival_complete,1662,command
+social,guild,분대역할,분대역할,파티역할 | 전술역할,자신의 분대 역할을 선봉·의무·기술·정찰 중 선택합니다.,v920_world_cycle_professions,998,command
+social,guild,분대작전,분대작전,파티작전 | 전술작전,파티장이 전문화와 역할 편성을 반영한 협동 작전을 수행합니다.,v920_world_cycle_professions,1033,command
+social,guild,분대작전기록,분대작전기록,파티작전기록 | 분대전술기록,현재 파티의 최근 분대 작전 기록을 확인합니다.,v920_world_cycle_professions,1107,command
+social,guild,분대전술,분대전술,파티전술 | 분대전술상태,현재 파티의 분대 전술과 역할 편성을 확인합니다.,v920_world_cycle_professions,967,command
+social,guild,분대전술설정,분대전술설정,파티전술설정 | 전술설정,파티장이 균형·돌격·방어·구조·정찰 전술을 설정합니다.,v920_world_cycle_professions,981,command
+social,guild,분대준비,분대준비,파티준비 | 분대점검,분대 구성·전문화·역할 다양성과 작전 대기시간을 확인합니다.,v920_world_cycle_professions,1017,command
+social,guild,서버빙고,서버빙고,serverbingo | guildbingo,서버 월간 빙고판과 내 체크 상태를 확인합니다.,v1220_chaos_festival_complete,1783,command
+social,guild,세력,세력,세력목록 | 연합세력,NPC 세력 관계와 해금 혜택을 확인합니다.,v900_faction_world_state,647,command
+social,guild,세력정보,세력정보,진영정보 | 세력상세,선택한 NPC 세력의 상세 정보를 확인합니다.,v900_faction_world_state,667,command
+social,guild,시장선거,시장선거,mayorelection | cityelection,NPC 시장 선거 현황을 확인하거나 후보에게 응원표를 보냅니다.,v1320_black_city_complete,682,command
+social,guild,알림센터,알림센터,통합알림 | 알림메뉴,패치·재난·시장·길드 알림을 한 선택창에서 관리합니다.,v790_operations_disaster,870,command
+social,guild,오늘의대화,오늘의대화,dailytalk | todaydialogue,오늘 가장 잘 맞는 NPC와 짧은 대화를 봅니다.,v1220_chaos_festival_complete,1111,command
+social,guild,오늘의도시,오늘의도시,citytoday | dailycity,오늘의 NPC·도시 사건을 확인합니다.,v1320_black_city_complete,357,command
+social,guild,인물기록,인물기록,characterrecord | npcrecord,특정 NPC와 쌓은 관계와 기억을 확인합니다.,v1000_global_survivor,1245,command
+social,guild,인물도감,인물도감,charactercodex | npccodex,만날 수 있는 주요 우호 인물과 관계 단계를 확인합니다.,v1000_global_survivor,1181,command
+social,guild,전설아이템,전설아이템,legendaryitem | guildrelic,서버에 단 하나뿐인 전설 유물의 주인을 확인하거나 획득합니다.,v1220_chaos_festival_complete,1974,command
+social,guild,직원고용,직원고용,hirestaff | hireemployee,NPC 직원을 고용해 사업 수익을 올립니다.,v1220_chaos_festival_complete,1433,command
+social,guild,축제인물도감,축제인물도감,npccatalog | festivalcharactercodex,혼돈의 축제 NPC 인물 정보를 확인합니다.,v1220_chaos_festival_complete,1105,command
+social,guild,탐험선택,탐험선택,expeditionchoice | adventurechoice,개인 또는 파티 탐험의 행동을 선택합니다.,v1220_chaos_festival_complete,1293,command
+social,guild,탐험참가,탐험참가,joinpartyexpedition | joinadventure,진행 중인 파티 탐험에 참가합니다.,v1220_chaos_festival_complete,1282,command
+social,guild,파티게임,파티게임,partygames | partyhub,폭탄·마피아·라이어·그림자·생존·심리전 메뉴를 엽니다.,v1220_chaos_festival_complete,682,command
+social,guild,파티탐험,파티탐험,partyexpedition | groupadventure,서버 파티 탐험 로비를 엽니다.,v1220_chaos_festival_complete,1267,command
+social,guild,펫레이스,펫레이스,petrace | companionrace,활성 동료와 짧은 친선 경주를 합니다.,v1220_chaos_festival_complete,1226,command
+social,guild,펫센터,펫센터,petcenter | companioncenter,보유 동료와 육성 상태를 확인합니다.,v1220_chaos_festival_complete,1126,command
+social,npc,1720인연검수,1720인연검수,v1720bondsaudit | bondsaudit,NPC 명단·일정·선물·동행·고백·배신 위험 저장 구조를 검사합니다.,v1720_living_world_bonds,1110,command
+social,npc,1720통합검수,1720통합검수,v1720audit | 1720audit,v17.0.1 공방 그룹·v17.1 살아 있는 세계·v17.2 NPC 인연을 통합 검사합니다.,v1720_living_world_bonds,1118,command
+social,npc,NPC대화,NPC대화,bondtalk | talkbondnpc,NPC와 대화해 호감과 신뢰를 쌓습니다. 30분 재사용 대기시간이 있습니다.,v1720_living_world_bonds,1013,command
+social,npc,NPC목록,NPC목록,npclist | npcroster,NPC 역할·현재 위치·시간대별 활동을 확인하고 관계 화면을 엽니다.,v1720_living_world_bonds,1003,command
+social,npc,NPC선물,NPC선물,bondgift | giftbondnpc,NPC에게 선물을 주고 호감·신뢰 변화를 확인합니다.,v1720_living_world_bonds,1024,command
+social,npc,고백,고백,confess | romancenpc,관계 조건을 충족한 NPC에게 고백해 연인 루트를 시작합니다.,v1720_living_world_bonds,1067,command
+social,npc,동행요청,동행요청,bondmission | askbondcompanion,NPC와 6시간마다 동행 작전을 진행합니다. 관계에 따라 성공 또는 배신이 발생합니다.,v1720_living_world_bonds,1044,command
+social,npc,배신경보,배신경보,betrayalalert | betrayalrisk,모든 NPC의 현재 배신 위험과 원인을 확인합니다.,v1720_living_world_bonds,1082,command
+social,npc,인연,인연,bonds | bondnetwork,모든 NPC의 호감·신뢰·충성·배신 위험을 한 화면에서 확인합니다.,v1720_living_world_bonds,995,command
+social,npc,인연기록,인연기록,bondhistory | relationshiphistory,특정 NPC 또는 전체 인연 사건 기록을 확인합니다.,v1720_living_world_bonds,1091,command
+system,admin,권리증명,권리증명,ownerproof | copyrightvault,봇 소유자만 내부 프로젝트 소유권 증명 정보를 확인합니다.,v1700_creator_forge_season6,945,command
+system,audit,1000안정화검수,1000안정화검수,v1000audit | 1000audit,v10 한·영 현지화·진행 연출·신규 연결 콘텐츠를 읽기 전용 검사합니다.,v1000_global_survivor,1614,command
+system,audit,1010안정화검수,1010안정화검수,v1010audit | 1010audit | patchaudit,,v1010_companion_card_games,1188,command
+system,audit,1050통합검수,1050통합검수,v1050audit | fullaudit,,v1050_unified_expansion,1572,command
+system,audit,1190통합검수,1190통합검수,v1190audit | eventbroadcastcollectionaudit,v11.7~v11.9 통합 기능을 검사합니다.,v1190_event_broadcast_collection,721,command
+system,audit,1220통합검수,1220통합검수,v1220audit | chaosfestivalaudit,v12.0~v12.2 전체 재미 기능을 검사합니다.,v1220_chaos_festival_complete,2136,command
+system,audit,1320통합검수,1320통합검수,v1320audit | blackcityaudit,BLACK CITY 전체 데이터·경제·영토·시즌·복구 상태를 검사합니다.,v1320_black_city_complete,812,command
+system,audit,1330안정화검수,1330안정화검수,v1330audit | 1330audit,v13.3.0 부팅 안정화 패치 상태를 확인합니다.,v1330_command_registry_guard,181,command
+system,audit,1620통합검수,1620통합검수,v1620audit | livinglegendsaudit,v16.2 기능과 기존 기능·언어·명령 충돌을 검사합니다.,v1620_living_legends,1120,command
+system,audit,1621통합검수,1621통합검수,v1621audit | 1621audit,v16.2.1 이미지·명령어·홈페이지 패치 연결을 검사합니다.,v1621_visual_command_hotfix,712,command
+system,audit,1660통합검수,1660통합검수,v1660audit | 1660audit,첫 생존 여정·결과 변화 요약·상황 추천·실시간 오류센터·경제 정산·용어 설명을 검사합니다.,v1660_first_survival_live_qa,797,command
+system,audit,1661통합검수,1661통합검수,v1661audit | 1661audit,v16.6.1 런타임 상호작용 핫픽스와 기존 핵심 연결을 검사합니다.,v1661_runtime_interaction_hotfix,154,command
+system,audit,1670통합검수,1670통합검수,v1670audit | 1670audit,v16.7 운영 패널·메시지 정리·실사용 통계·죽은 기능·화면 광택 연결을 검사합니다.,v1670_live_ops_polish,486,command
+system,audit,1671통합검수,1671통합검수,v1671audit | 1671audit | 명령어긴급검수 | commandcenterhotfixaudit,v16.7.1 명령어 센터 안전 함수 연결과 한·영 메뉴 재구성을 검사합니다.,v1671_command_center_nameerror_hotfix,63,command
+system,audit,1700통합검수,1700통합검수,v1700audit | 1700audit,v17.0 런타임 청소·콘텐츠 공방·시즌 6·언어 분리·소유권 금고를 통합 검사합니다.,v1700_creator_forge_season6,1018,command
+system,audit,1730연결검수,1730연결검수,v1730linkaudit | connectedloopaudit,v17.3 스토리·세계·원정·NPC·재료·도시 연결 훅을 검사합니다.,v1730_connected_survival_loop,466,command
+system,audit,1730통합검수,1730통합검수,v1730audit | 1730audit,v17.2.1 마감과 v17.3 연결 생존 루프 전체를 통합 검사합니다.,v1730_connected_survival_loop,485,command
+system,audit,770안정화검수,770안정화검수,파밍검수 | 생활기술검수 | v770검수,v7.8 파밍·생활 저장 구조를 읽기 전용 검사합니다.,v770_ruin_farming,1867,command
+system,audit,780안정화검수,780안정화검수,재난검수 | 780검수,v7.8 신규 기능만 읽기 전용으로 검사합니다.,v780_server_disaster,748,command
+system,audit,790안정화검수,790안정화검수,790검수 | 운영확장검수,v7.9 신규·수정 기능만 읽기 전용으로 검사합니다.,v790_operations_disaster,1429,command
+system,audit,810안정화검수,810안정화검수,810검수 | 지도개척검수,v8.1 신규·수정 기능만 읽기 전용으로 검사합니다.,v810_world_map_ux,988,command
+system,audit,811안정화검수,811안정화검수,811검수 | 인카운트다양성검수 | 파밍연출검수,v8.1.1 신규·수정 기능만 읽기 전용으로 검사합니다.,v811_encounter_variety,103,command
+system,audit,900안정화검수,900안정화검수,900검수 | 세력세계검수 | v9검수,v9.0 세력·무역·전쟁·시즌 기능만 읽기 전용 검사합니다.,v900_faction_world_state,1391,command
+system,audit,920안정화검수,920안정화검수,920검수 | 세계순환검수 | 전문화분대검수,v9.2 세계 순환·복구·전문화·분대 전술만 읽기 전용 검사합니다.,v920_world_cycle_professions,1148,command
+system,audit,950안정화검수,950안정화검수,95검수 | v950audit | investigationaudit,v9.5 수사·대피소·레이드·영문 명령 연결을 읽기 전용 검사합니다.,v950_investigation_shelter_raid,1034,command
+system,audit,AI참가검수,AI참가검수,aiparticipationaudit,,v1050_unified_expansion,1590,command
+system,audit,UI검수,UI검수,uiaudit | componentaudit | commanduiaudit,Discord 버튼·선택 메뉴·모달과 명령 도감의 최신 안정화 상태를 검사합니다.,v1093_command_ui_audit,189,command
+system,audit,UI안정화검수,UI안정화검수,uiaudit1661 | interactionaudit,버튼 실행·선택 메뉴·임베드 제한·만료 UI 안전 처리를 검사합니다.,v1661_runtime_interaction_hotfix,133,command
+system,audit,게임진행검수,게임진행검수,gameplayaudit | cardflowaudit,,v1060_authentic_card_games,1952,command
+system,audit,경제검수,경제검수,cityeconomyaudit | blackeconomyaudit,거래·원장·이벤트 자금과 비정상 잔액을 검사합니다.,v1320_black_city_complete,792,command
+system,audit,관리점검,관리점검,통합점검 | 점검센터,관리자가 최신 패치·데이터·메뉴·오류 점검 진입점을 확인합니다.,v810_world_map_ux,929,command
+system,audit,다국어검수,다국어검수,languageaudit | localizationaudit,선택 언어 단일 출력과 번역 런타임 상태를 검사합니다.,v1000_global_survivor,1553,command
+system,audit,런타임청소검수,런타임청소검수,runtimecleansweep | runtimeaudit1700,버튼 Cog·웹훅 삭제 예약·성장 집계·중복 오류 안내 수정 상태를 검사합니다.,v1700_creator_forge_season6,1001,command
+system,audit,명령건강검진,명령건강검진,commandhealth | commandhealthaudit,명령 누락·분류·설명·영문 별칭·중복·이미지 자산과 메뉴 연결 상태를 검사합니다.,v1650_survivor_core_complete,297,command
+system,audit,명령등록검수,명령등록검수,commandregistryaudit | registrationaudit,명령어 이름·별칭 충돌과 격리 내역을 확인합니다.,v1330_command_registry_guard,148,command
+system,audit,명령어UI검수,명령어UI검수,helpuiaudit | commandcenteraudit,새 명령어 센터의 카테고리·페이지·버튼 구성을 검사합니다.,v1620_living_legends,1102,command
+system,audit,명령어검수,명령어검수,commandaudit | commandaliasaudit,전체 prefix 명령의 한글·영문 실행 이름과 충돌을 검사합니다.,v1000_global_survivor,1586,command
+system,audit,보안테스트,보안테스트,,분리 로그 채널 4곳에 테스트 메시지를 전송합니다.,v422_security_center,473,command
+system,audit,서버봇권한검수,서버봇권한검수,봇권한점검 | serverbotaudit | botpermissionaudit,서버의 모든 봇이 접근 가능한 채널과 위험 권한을 요약합니다.,v1150_server_operations_permissions,854,command
+system,audit,서버설정검수,서버설정검수,운영설정검수 | serverconfigaudit | v1150audit,v11.5.0 알림·권한·백업 변경만 검사합니다.,v1150_server_operations_permissions,1105,command
+system,audit,실시간오류센터,실시간오류센터,라이브오류센터 | liveqacenter | runtimeerrors,실제 명령 실패·버튼 UI 사건·반복 오류와 사건 번호를 통합 표시합니다.,v1660_first_survival_live_qa,718,command
+system,audit,실시간피드테스트,실시간피드테스트,,별도 Web Service로 테스트 이벤트와 상태 심박을 직접 전송합니다.,v432_forge_live,1154,command
+system,audit,실전게임검수,실전게임검수,livegameaudit | recoveryaudit,v11.6.0에서 변경한 복구·종료·잠수·화투 검증만 검사합니다.,v1160_game_recovery_validation,790,command
+system,audit,알림UI검수,알림UI검수,알림설정UI검수 | alertuiaudit | alertsettingsaudit,v11.5.1 드롭다운 알림 설정 UI만 검사합니다.,v1151_alert_settings_ui,601,command
+system,audit,알림테스트,알림테스트,serveralerttest | testalert,실제 이벤트를 만들지 않고 지정 알림 채널에 미리보기를 보냅니다.,v1150_server_operations_permissions,799,command
+system,audit,연출검수,연출검수,polishaudit | visualpolishaudit | gamefxaudit,v10.9.5 이미지 연출·복구·리플레이·실시간 보드를 검사합니다.,v1095_gameplay_polish_patch,204,command
+system,audit,오류검수,오류검수,runtimeaudit | uierroraudit,UI 이모지 재시도·상호작용 응답 패치를 확인합니다.,v1320_black_city_complete,807,command
+system,audit,오류조회,오류조회,오류사건조회 | 에러조회,명령·UI 오류 사건 번호의 저장된 정보를 조회합니다.,v810_world_map_ux,941,command
+system,audit,오류현황,오류현황,사건현황 | errorstatus,,v702_stability,251,command
+system,audit,운영광택센터,운영광택센터,라이브운영센터 | liveopshub | polishcenter,메시지 정리·실시간 오류·명령 건강·통계·초보 안내를 버튼으로 통합합니다.,v1670_live_ops_polish,360,command
+system,audit,운영분석,운영분석,경제분석 | 콘텐츠분석,실제 재화 유입·콘텐츠 이용·오류 기록을 확률 노출 없이 집계합니다.,v790_operations_disaster,993,command
+system,audit,월드보스테스트,월드보스테스트,월보테스트 | worldbosstest,,v630_world_boss,1291,command
+system,audit,월드보스테스트공격,월드보스테스트공격,월보테스트공격 | worldbosstestattack,,v630_world_boss,1334,command
+system,audit,월드보스테스트상태,월드보스테스트상태,월보테스트상태 | worldbossteststatus,,v630_world_boss,1322,command
+system,audit,월드보스테스트종료,월드보스테스트종료,월보테스트종료 | worldbosstestend,,v630_world_boss,1338,command
+system,audit,이미지검수,이미지검수,visualaudit1621 | fontaudit,한글 폰트와 정보 이미지 렌더러 상태를 검사합니다.,v1621_visual_command_hotfix,688,command
+system,audit,재난알림검수,재난알림검수,disasteralertaudit | disasternotificationaudit | v1143audit,v11.4.3 서버별 재난 알림 구독 변경만 검사합니다.,v1143_disaster_optin,268,command
+system,audit,죽은기능검수,죽은기능검수,죽은명령검수 | deadfeatureaudit | deadcommandaudit,등록됐지만 실행·메뉴·빠른 이동·도시 자산 연결이 끊긴 기능을 검사합니다.,v1670_live_ops_polish,434,command
+system,audit,지식,지식,기억,서버 승인 기억과 검수 상태를 관리합니다.,v620_dialogue_memory,1202,group
+system,audit,지식 검수,검수,,,v620_dialogue_memory,1264,command
+system,audit,지식검수,지식검수,,운영진이 대기 중인 기억을 드롭다운으로 검수합니다.,v620_dialogue_memory,1320,command
+system,audit,초기기능검수,초기기능검수,legacyfeatureaudit | corefeatureaudit,초기 핵심 기능이 삭제되지 않았는지 검사합니다.,v1620_living_legends,1114,command
+system,audit,최근오류,최근오류,최근사건 | 오류목록,최근 명령·UI 오류 사건 번호를 확인합니다.,v810_world_map_ux,959,command
+system,audit,카드게임검수,카드게임검수,cardgameaudit | cardsaudit,,v1010_companion_card_games,1208,command
+system,audit,테스트,테스트,패치테스트,,v637_dynamic_events,902,command
+system,audit,홈페이지검수,홈페이지검수,websiteaudit | siteaudit,,v1010_companion_card_games,1232,command
+system,audit,화면광택검수,화면광택검수,모바일화면검수 | uipolishaudit | mobileuiaudit,임베드·버튼·선택 메뉴 제한과 핵심 화면의 모바일 가독성을 검사합니다.,v1670_live_ops_polish,461,command
+system,audit,화투패검수,화투패검수,전통화투검수 | traditionalhwatuaudit | hwatuassetaudit,v11.5.2 전통 문양 화투 48장과 화투 게임 연결만 검사합니다.,v1152_traditional_hwatu_refresh,47,command
+system,help,help,help,commands | english | enhelp | englishhelp | guide,Open the fully English ABADDON command guide.,v652_english_access,612,command
+system,help,결과요약설정,결과요약설정,행동결과설정 | resultsummarysettings | resultsummary,명령 완료 뒤 실제 획득·수치 변화·해금 요약을 켜거나 끕니다.,v1660_first_survival_live_qa,686,command
+system,help,관리역할추가,관리역할추가,,SERVER GUARD 운영 명령어를 사용할 역할을 추가합니다.,v410_server_management,1532,command
+system,help,관리자명령어,관리자명령어,,,admin_tools,95,command
+system,help,관리확장도움말,관리확장도움말,운영강화도움말,자동 이모지 및 확장 관리 명령어를 확인합니다.,v411_server_guard_plus,490,command
+system,help,귀여운메뉴,귀여운메뉴,명령패널 | 말랑메뉴 | 버튼명령어,귀여운 전체 명령어 실행 패널을 엽니다.,v711_cute_interactions,1251,command
+system,help,보안센터도움말,보안센터도움말,보안도움말,V4.2.2 보안센터와 분리 로그 명령어를 확인합니다.,v422_security_center,249,command
+system,help,서버언어,서버언어,serverlanguage | serverlang,공개 공동 패널과 자동 방송의 서버 기본 언어를 설정합니다.,v1000_global_survivor,1090,command
+system,help,실사용통계,실사용통계,라이브사용통계 | liveusage | commandmetrics,재시작 이후 최대 24시간의 명령 사용량·실패율·응답시간을 확인합니다.,v1670_live_ops_polish,391,command
+system,help,안정화도움말,안정화도움말,안정화명령어,,v641_stabilization,496,command
+system,help,언어,언어,language | lang,개인 게임 화면의 표시 언어를 한국어 또는 영어로 설정합니다.,v1000_global_survivor,1073,command
+system,help,운영도구도움말,운영도구도움말,운영센터도움말,V4.2 운영 보조 명령어를 확인합니다.,v420_ops_center,112,command
+system,help,운영도움말,운영도움말,,서버 운영 및 관리 명령어를 확인합니다.,v410_server_management,685,command
+system,help,운영진단,운영진단,가드진단,SERVER GUARD 명령 등록과 권한 상태를 확인합니다.,v410_server_management,876,command
+system,help,운영통계,운영통계,명령통계 | commandstats,,v702_stability,272,command
+system,help,운영편의도움말,운영편의도움말,편의도움말,V4.2.1 셀프 역할과 편의 명령어를 확인합니다.,v421_utility_pack,148,command
+system,help,접수센터도움말,접수센터도움말,접수도움말,V4.2.3 문의·신고·건의 처리센터 명령어를 확인합니다.,v423_intake_center,637,command
+system,help,즐겨찾기,즐겨찾기,favorites | favourites,자주 쓰는 명령을 최대 8개 저장합니다.,v1620_living_legends,875,command
+system,legacy,start,start,시작,,v31_quiz_notify,253,command
+system,legacy,TTS,TTS,티티에스 | 음성성역,,v433_voice_sanctuary,1373,group
+system,legacy,TTS 기본목소리,기본목소리,서버목소리 | defaultvoice,,v433_voice_sanctuary,1566,command
+system,legacy,TTS 끄기,끄기,off,,v433_voice_sanctuary,1514,command
+system,legacy,TTS 대기열,대기열,queue,,v433_voice_sanctuary,1646,command
+system,legacy,TTS 목소리,목소리,음성,,v433_voice_sanctuary,1538,command
+system,legacy,TTS 볼륨,볼륨,,,v433_voice_sanctuary,1633,command
+system,legacy,TTS 비우기,비우기,clear,,v433_voice_sanctuary,1655,command
+system,legacy,TTS 상태,상태,status,,v433_voice_sanctuary,1689,command
+system,legacy,TTS 속도,속도,,,v433_voice_sanctuary,1620,command
+system,legacy,TTS 엔진,엔진,provider,,v433_voice_sanctuary,1586,command
+system,legacy,TTS 음성격리초기화,음성격리초기화,음성복구 | voice-reset,,v433_voice_sanctuary,1608,command
+system,legacy,TTS 음성채널,음성채널,보이스채널,,v433_voice_sanctuary,1525,command
+system,legacy,TTS 진단,진단,diagnose | 검사,,v433_voice_sanctuary,1665,command
+system,legacy,TTS 채널,채널,채널설정 | 자동채널 | setchannel,,v433_voice_sanctuary,1475,command
+system,legacy,TTS 켜기,켜기,on,,v433_voice_sanctuary,1491,command
+system,legacy,TTS엔진,TTS엔진,,,v433_voice_sanctuary,1604,command
+system,legacy,TTS채널,TTS채널,채널설정 | TTS채널설정,,v433_voice_sanctuary,1483,command
+system,legacy,가게방문,가게방문,visitshop | visitbusiness,서버 구성원의 가게를 방문하고 상품을 구매합니다.,v1220_chaos_festival_complete,1448,command
+system,legacy,가르치기,가르치기,기억등록 | 지식등록,서버 전용 질문과 답변 등록 양식을 엽니다.,v620_dialogue_memory,1195,command
+system,legacy,가입일,가입일,,자신 또는 멘션한 멤버의 계정 생성일과 서버 가입일을 표시합니다.,v421_utility_pack,493,command
+system,legacy,감독센터,감독센터,directorcenter | eventdirector,관리자용 서버 사건 연출과 안전 설정을 관리합니다.,v1620_living_legends,1035,command
+system,legacy,감염도설정,감염도설정,,,admin_tools,313,command
+system,legacy,감옥,감옥,cityjail | jailstatus,본인의 수감 상태를 확인합니다.,v1320_black_city_complete,644,command
+system,legacy,감정사,감정사,감정사목록,,v610_digging_treasure,649,command
+system,legacy,개조목록,개조목록,,,v637_dynamic_events,612,command
+system,legacy,개조해제,개조해제,,,v637_dynamic_events,689,command
+system,legacy,개척기부,개척기부,지도기부 | 지역기부,자원을 공동 지역 개척에 기부합니다.,v810_world_map_ux,698,command
+system,legacy,개척현황,개척현황,지도진척 | 지역진척,서버 공동 개척 기여와 지역별 진행도를 확인합니다.,v810_world_map_ux,686,command
+system,legacy,거점,거점,지역거점 | 개척거점,지역 공동 거점 시설 상태를 확인합니다.,v810_world_map_ux,746,command
+system,legacy,건설기부,건설기부,donateconstruction,공동 시설 건설에 칩을 기부합니다.,v1320_black_city_complete,592,command
+system,legacy,건의,건의,공개건의 | 건의등록,공개 건의 작성 버튼을 엽니다.,v790_operations_disaster,928,command
+system,legacy,건의목록,건의목록,제안목록,공개 건의와 투표 현황을 확인합니다.,v790_operations_disaster,932,command
+system,legacy,건의상태,건의상태,제안상태,관리자가 공개 건의 상태를 변경합니다.,v790_operations_disaster,949,command
+system,legacy,게임,게임,게임센터 | 게임메뉴 | rpg메뉴,,v600_game_center,2772,command
+system,legacy,게임강제환불,게임강제환불,forcegamerefund | sessionrefund,관리자가 중단 게임의 실제 납부액을 한 번만 환불합니다.,v1160_game_recovery_validation,697,command
+system,legacy,게임결과,게임결과,gameresult | matchresult,최근 또는 지정 게임의 승자·손익·현재 잔액을 확인합니다.,v1100_game_city_overhaul,168,command
+system,legacy,게임기록,게임기록,gamelog,,v1090_integrated_renewal,1601,command
+system,legacy,게임대시보드,게임대시보드,gamedashboard,,v1090_integrated_renewal,1703,command
+system,legacy,게임랭킹,게임랭킹,gameranking | gameleaderboard,,v1050_unified_expansion,1297,command
+system,legacy,게임리플레이,게임리플레이,gamereplay,,v1090_integrated_renewal,1597,command
+system,legacy,게임방목록,게임방목록,gamelobbies | roomlist,,v1090_integrated_renewal,1532,command
+system,legacy,게임복구,게임복구,recovergame | gamerecovery,재시작 복구 상태와 안전 환불 경로를 확인합니다.,v1100_game_city_overhaul,192,command
+system,legacy,게임복구목록,게임복구목록,recoverylist | gamesessionlist,현재 서버의 활성·중단·일시정지 게임 체크포인트를 확인합니다.,v1160_game_recovery_validation,629,command
+system,legacy,게임세션,게임세션,gamesession | sessionstatus,현재 채널 게임·모집방·미정산 예약 상태를 확인합니다.,v1100_game_city_overhaul,185,command
+system,legacy,게임업적,게임업적,gameachievements,,v1050_unified_expansion,1315,command
+system,legacy,게임예약,게임예약,reservegame | gamebooking,게임 일정을 예약합니다. `!게임예약 텍사스홀덤 2026-08-05 21:00 10000 아바돈허용`,v1190_event_broadcast_collection,574,command
+system,legacy,게임장,게임장,게임로비 | gamehall | gamelobby,,v1050_unified_expansion,1257,command
+system,legacy,게임재개,게임재개,resumegame | continuegame,일시정지 게임을 재개하거나 저장된 게임을 복구합니다.,v1160_game_recovery_validation,676,command
+system,legacy,격리,격리,,멤버를 격리 역할로 제한합니다.,v411_server_guard_plus,885,command
+system,legacy,격리역할생성,격리역할생성,,격리 역할과 채널 권한을 생성 또는 갱신합니다.,v411_server_guard_plus,814,command
+system,legacy,격리해제,격리해제,,멤버의 격리 역할을 제거합니다.,v411_server_guard_plus,896,command
+system,legacy,결승중계,결승중계,finalbroadcast | finalscast,최근 또는 지정 정산을 결승 결과 카드로 표시합니다.,v1190_event_broadcast_collection,623,command
+system,legacy,경고,경고,,멤버에게 사유와 함께 경고를 부여합니다.,v410_server_management,968,command
+system,legacy,경고조회,경고조회,,멤버의 활성 경고 기록을 확인합니다.,v410_server_management,992,command
+system,legacy,경고취소,경고취소,,사건 번호로 활성 경고를 취소합니다.,v410_server_management,1016,command
+system,legacy,경매등록,경매등록,,,v21_reborn,742,command
+system,legacy,경매마감,경매마감,,,v21_reborn,798,command
+system,legacy,경험치지급,경험치지급,,,admin_tools,199,command
+system,legacy,계승,계승,,,v431_growth_balance,676,command
+system,legacy,계약수락,계약수락,의뢰수락 | 납품계약,오늘의 납품 계약 하나를 수락합니다.,v770_ruin_farming,1675,command
+system,legacy,계약현황,계약현황,의뢰현황 | 납품현황,수락·완료한 오늘의 계약을 확인합니다.,v770_ruin_farming,1731,command
+system,legacy,고스톱,고스톱,gostop | go-stop,,v1010_companion_card_games,1018,command
+system,legacy,고정간격,고정간격,,현재 채널 고정 메시지 재게시 간격을 설정합니다.,v411_server_guard_plus,1188,command
+system,legacy,고정메시지,고정메시지,,현재 채널에 자동 재게시되는 고정 안내를 설정합니다.,v411_server_guard_plus,1149,command
+system,legacy,고철갈갈이,고철갈갈이,고철분쇄 | 자원분쇄,,v639_frontier_operations,964,command
+system,legacy,공동시설,공동시설,cityfacilities | publicfacilities,서버 공동 시설의 건설 진행도를 확인합니다.,v1320_black_city_complete,573,command
+system,legacy,공정성검증,공정성검증,fairnesscheck | fairnessverify,최근 게임의 덱 커밋과 정산 장부를 확인합니다.,v1100_game_city_overhaul,181,command
+system,legacy,공지전송,공지전송,,지정 채널에 운영진 공지 임베드를 전송합니다.,v411_server_guard_plus,1109,command
+system,legacy,관리역할제거,관리역할제거,,SERVER GUARD 운영 역할 등록을 해제합니다.,v410_server_management,1546,command
+system,legacy,관리자지역이동,관리자지역이동,,,admin_tools,339,command
+system,legacy,관전,관전,spectate,,v1090_integrated_renewal,1553,command
+system,legacy,관전종료,관전종료,stopspectating,,v1090_integrated_renewal,1572,command
+system,legacy,괴수투기장,괴수투기장,펫데스매치,,v638_hardcore_arcade,1094,command
+system,legacy,괴질탈출,괴질탈출,크래시 | 괴질크래시,,v638_hardcore_arcade,833,command
+system,legacy,교감,교감,교감도,아바돈과의 대화 누적 기록을 확인합니다.,v620_dialogue_memory,1365,command
+system,legacy,궁합,궁합,compatibility | servercompatibility,두 사용자의 오늘의 재미 궁합을 확인합니다.,v1220_chaos_festival_complete,1605,command
+system,legacy,권한백업,권한백업,봇권한백업 | permissionbackup,현재 채널의 모든 봇 권한 덮어쓰기를 복구 지점으로 저장합니다.,v1150_server_operations_permissions,904,command
+system,legacy,권한복구,권한복구,봇권한복구 | restorepermissions | permissionrollback,권한 적용 전에 생성된 복구 ID로 채널 덮어쓰기를 되돌립니다.,v1150_server_operations_permissions,1005,command
+system,legacy,권한자동설정,권한자동설정,채널권한자동설정 | autopermissions | autoconfigurepermissions,채널 이름과 종류에 따라 ABADDON 권한 프로필을 미리보기 또는 적용합니다.,v1150_server_operations_permissions,959,command
+system,legacy,그림자정답,그림자정답,shadowanswer | silhouetteanswer,그림자 추리 정답을 제출합니다.,v1220_chaos_festival_complete,906,command
+system,legacy,그림자추리,그림자추리,shadowquiz | silhouettequiz,그림자·단서 추리 문제를 시작합니다.,v1220_chaos_festival_complete,894,command
+system,legacy,금고시작,금고시작,,,v638_hardcore_arcade,1333,command
+system,legacy,금고참가,금고참가,,,v638_hardcore_arcade,1310,command
+system,legacy,기본목소리,기본목소리,,개인 설정이 없는 사용자의 서버 기본 목소리를 정합니다.,v433_voice_sanctuary,1843,command
+system,legacy,기억회로,기억회로,기억게임 | 이모지기억,,v640_interactive_arcade,772,command
+system,legacy,까마귀,까마귀,떠돌이상인 | 게릴라상점,,v637_dynamic_events,727,command
+system,legacy,까마귀구매,까마귀구매,,,v637_dynamic_events,755,command
+system,legacy,꾸미기센터,꾸미기센터,cosmeticcenter | profilecosmetics,프로필 이미지와 보유 꾸미기 항목을 확인합니다.,v1220_chaos_festival_complete,1836,command
+system,legacy,끄기,끄기,,자동 TTS를 끄고 대기열을 비웁니다.,v433_voice_sanctuary,1908,command
+system,legacy,납품,납품,계약납품 | 의뢰제출,수락한 계약의 자원을 제출하고 보상을 받습니다.,v770_ruin_farming,1694,command
+system,legacy,내게임장식,내게임장식,mygamecosmetics | mytabledecor,선택한 테이블 테마와 카드 스킨을 확인합니다.,v1100_game_city_overhaul,233,command
+system,legacy,내경고,내경고,내제재,자신의 활성 경고와 최근 제재 기록을 확인합니다.,v422_security_center,588,command
+system,legacy,내구도,내구도,,,v637_dynamic_events,553,command
+system,legacy,내사업,내사업,mybusiness | businessdashboard,내 사업 현황과 정산 가능한 수익을 확인합니다.,v1220_chaos_festival_complete,1389,command
+system,legacy,내설정,내설정,,내 TTS 목소리와 서버 기본 설정을 확인합니다.,v433_voice_sanctuary,1783,command
+system,legacy,내아지트,내아지트,myhideout | cityhome,개인 아지트를 구매하거나 확인합니다.,v1320_black_city_complete,533,command
+system,legacy,내알림,내알림,알림상태통합,통합 알림센터 설정을 확인합니다.,v790_operations_disaster,881,command
+system,legacy,내전설,내전설,mylegend | personallegend,개인 전설과 성향·주요 기록을 확인합니다.,v1620_living_legends,899,command
+system,legacy,내접수,내접수,,현재 열린 접수 상태를 DM으로 확인합니다.,v423_intake_center,1010,command
+system,legacy,누적보상,누적보상,참여보상 | 성장이정표,,v710_growth_loop,650,command
+system,legacy,닉네임,닉네임,,멤버의 서버 닉네임을 변경하거나 초기화합니다.,v410_server_management,1312,command
+system,legacy,다음행동설정,다음행동설정,nextactionsettings | nextactions,핵심 콘텐츠 완료 후 표시되는 다음 행동 버튼을 켜거나 끕니다.,v1650_survivor_core_complete,248,command
+system,legacy,다크존,다크존,다크존도움말,,v639_frontier_operations,637,command
+system,legacy,다크존공격,다크존공격,다크존습격,,v639_frontier_operations,759,command
+system,legacy,다크존상태,다크존상태,,,v639_frontier_operations,737,command
+system,legacy,다크존진입,다크존진입,,,v639_frontier_operations,646,command
+system,legacy,다크존탈출,다크존탈출,,,v639_frontier_operations,715,command
+system,legacy,다크존탐색,다크존탐색,,,v639_frontier_operations,670,command
+system,legacy,단말기,단말기,생존단말기 | 통합단말기 | 아바돈단말기,현재 상태에 맞는 주요 기능을 한 선택창에서 엽니다.,v810_world_map_ux,589,command
+system,legacy,답변양식목록,답변양식목록,,등록된 빠른 답변 양식 목록을 확인합니다.,v423_intake_center,971,command
+system,legacy,답변양식삭제,답변양식삭제,,등록된 빠른 답변 양식을 삭제합니다.,v423_intake_center,959,command
+system,legacy,답변양식추가,답변양식추가,,접수 채널에서 사용할 빠른 답변 양식을 등록합니다. 이름 | 내용,v423_intake_center,938,command
+system,legacy,대출,대출,,,v40_finance,593,command
+system,legacy,대통령,대통령,president | daifugo,,v1090_integrated_renewal,1440,command
+system,legacy,대화,대화,대화센터 | 아바돈대화 | chatcenter | conversationcenter,아바돈 대화·기억 드롭다운 제어실을 엽니다.,v620_dialogue_memory,1166,command
+system,legacy,대화금지,대화금지,채널뮤트,현재 채널에서 특정 멤버의 전송과 반응을 제한합니다.,v420_ops_center,366,command
+system,legacy,대화종료,대화종료,말걸기종료 | 대화끝 | endchat | stopconversation,현재 채널에서 진행 중인 아바돈 연속 대화를 종료합니다.,v620_dialogue_memory,1188,command
+system,legacy,대화허용,대화허용,채널언뮤트,대화금지 전에 저장한 채널 권한으로 복구합니다.,v420_ops_center,412,command
+system,legacy,대회센터,대회센터,tournamentcenter,,v1090_integrated_renewal,1787,command
+system,legacy,데이터백업,데이터백업,수동백업,,v641_stabilization,483,command
+system,legacy,도감보상,도감보상,,,v32_codex_settings_tutorial,160,command
+system,legacy,도리짓고땡,도리짓고땡,dorijitgottaeng | dori,,v1090_integrated_renewal,1452,command
+system,legacy,도시,도시,city | blackcity,BLACK CITY 메인 메뉴를 엽니다.,v1320_black_city_complete,298,command
+system,legacy,도시개설,도시개설,createcity | renamecity,관리자가 도시 이름을 정하고 기능을 활성화합니다.,v1320_black_city_complete,312,command
+system,legacy,도시건설,도시건설,citybuild,공동 시설 목록과 기부 방법을 안내합니다.,v1320_black_city_complete,582,command
+system,legacy,도시뉴스,도시뉴스,citynews | blackcitynews,최근 도시 뉴스를 확인합니다.,v1320_black_city_complete,694,command
+system,legacy,도시백업,도시백업,citybackup | blackcitybackup,현재 서버의 BLACK CITY 상태를 백업합니다.,v1320_black_city_complete,777,command
+system,legacy,도시복구,도시복구,cityrestore | blackcityrestore,백업 ID로 서버의 BLACK CITY 상태를 복구합니다.,v1320_black_city_complete,782,command
+system,legacy,도시상태,도시상태,citystatus | blackcitystatus,도시 지표와 개방 지역을 확인합니다.,v1320_black_city_complete,345,command
+system,legacy,도시설정,도시설정,citysettings | blackcitysettings,관리자가 도시 자동 기능과 공개 설정을 켜고 끕니다.,v1320_black_city_complete,752,command
+system,legacy,도시세력,도시세력,cityfactions | blackfactions,검은 도시의 세력 현황을 확인합니다.,v1320_black_city_complete,368,command
+system,legacy,도시시즌,도시시즌,cityseason | blackcityseason,4주 월드 시즌의 진행 상태를 확인합니다.,v1320_black_city_complete,723,command
+system,legacy,도시알림채널,도시알림채널,cityalertchannel | citynewschannel,자동 도시 뉴스가 게시될 채널을 지정하거나 해제합니다.,v1320_black_city_complete,764,command
+system,legacy,도시이동,도시이동,citymove | gotodistrict,검은 도시의 다른 지역으로 이동합니다.,v1320_black_city_complete,332,command
+system,legacy,도시직업,도시직업,cityjobs | blackcityjobs,BLACK CITY 직업 10종을 확인합니다.,v1320_black_city_complete,448,command
+system,legacy,도시직업선택,도시직업선택,choosecityjob | selectcityjob,BLACK CITY 생산 직업을 선택합니다.,v1320_black_city_complete,453,command
+system,legacy,도시침공,도시침공,cityinvasion,관리자가 선택형 도시 침공 장면을 시작합니다.,v1620_living_legends,1062,command
+system,legacy,돌발이벤트,돌발이벤트,chaosevent | randomevent,현재 돌발 이벤트를 확인하거나 관리자가 즉시 시작합니다.,v1220_chaos_festival_complete,569,command
+system,legacy,돌연변이경주,돌연변이경주,투기장경주 | 괴수경주,,v638_hardcore_arcade,921,command
+system,legacy,돌연변이배팅,돌연변이배팅,투기장배팅,,v638_hardcore_arcade,938,command
+system,legacy,땅파기,땅파기,굴착 | 삽질,,v610_digging_treasure,505,command
+system,legacy,라미,라미,rummy,,v1090_integrated_renewal,1436,command
+system,legacy,라이어게임,라이어게임,liargame | wordliar,라이어 게임 로비를 엽니다.,v1220_chaos_festival_complete,827,command
+system,legacy,라이어시작,라이어시작,startliar | startliargame,라이어 단어를 DM으로 배정합니다.,v1220_chaos_festival_complete,849,command
+system,legacy,라이어참가,라이어참가,joinliar | joinliargame,라이어 게임에 참가합니다.,v1220_chaos_festival_complete,838,command
+system,legacy,라이어투표,라이어투표,liarvote | wordliarvote,라이어로 의심되는 참가자에게 투표합니다.,v1220_chaos_festival_complete,874,command
+system,legacy,랜덤박스,랜덤박스,대형랜덤박스 | 보급박스,,v637_dynamic_events,814,command
+system,legacy,레벨설정,레벨설정,,,admin_tools,211,command
+system,legacy,레이드설정,레이드설정,,가입 폭주 기준과 최소 계정 나이를 설정합니다.,v411_server_guard_plus,848,command
+system,legacy,레이드자동잠금,레이드자동잠금,,레이드 감지 시 서버 전체 잠금 여부를 설정합니다.,v411_server_guard_plus,862,command
+system,legacy,레이드해제,레이드해제,,현재 레이드 감지 상태를 수동 해제합니다.,v411_server_guard_plus,874,command
+system,legacy,로그채널,로그채널,,운영 기록이 전송될 로그 채널을 지정합니다.,v410_server_management,1383,command
+system,legacy,로그채널설정,로그채널설정,,보안/메시지/멤버/운영 로그 채널을 개별 지정합니다.,v422_security_center,402,command
+system,legacy,로드맵,로드맵,개발로드맵,개발 예정·진행 중·완료된 공개 건의를 확인합니다.,v790_operations_disaster,966,command
+system,legacy,리그기록,리그기록,leaguerecord,,v1090_integrated_renewal,1803,command
+system,legacy,리그참가,리그참가,joinleague,,v1090_integrated_renewal,1796,command
+system,legacy,리플레이이미지,리플레이이미지,replayimage | visualreplay,최근 게임 진행 기록을 이미지 타임라인으로 확인합니다.,v1095_gameplay_polish_patch,131,command
+system,legacy,마피아,마피아,mafia | werewolf,마피아 게임 로비를 엽니다.,v1220_chaos_festival_complete,743,command
+system,legacy,마피아시작,마피아시작,startmafia | startwerewolf,마피아 역할을 배정하고 게임을 시작합니다.,v1220_chaos_festival_complete,769,command
+system,legacy,마피아참가,마피아참가,joinmafia | joinwerewolf,마피아 로비에 참가합니다.,v1220_chaos_festival_complete,758,command
+system,legacy,마피아투표,마피아투표,mafiavote | werewolfvote,마피아 게임에서 처형 대상을 투표합니다.,v1220_chaos_festival_complete,795,command
+system,legacy,말해,말해,읽어 | say,,v433_voice_sanctuary,1425,command
+system,legacy,맞고,맞고,matgo | koreanmatgo,,v1010_companion_card_games,1014,command
+system,legacy,메시지정리센터,메시지정리센터,청소센터 | cleanupcenter | messagecleanup,확인 버튼 뒤 최근·봇·링크·첨부·사용자 메시지를 안전하게 정리합니다.,v1670_live_ops_polish,375,command
+system,legacy,멤버정보,멤버정보,운영유저정보,"멤버의 계정, 역할, 경고, 타임아웃 정보를 확인합니다.",v411_server_guard_plus,1020,command
+system,legacy,명예의전당,명예의전당,halloffame,,v1090_integrated_renewal,1777,command
+system,legacy,모험연대기,모험연대기,chronicle | adventurechronicle,개인 연대기를 페이지로 확인합니다.,v1620_living_legends,912,command
+system,legacy,목소리,목소리,,내 TTS 목소리를 드롭다운에서 선택합니다.,v433_voice_sanctuary,1770,command
+system,legacy,몬스터,몬스터,,,v32_codex_settings_tutorial,149,command
+system,legacy,무기개조,무기개조,개조,,v637_dynamic_events,657,command
+system,legacy,무기수리,무기수리,수리,,v637_dynamic_events,575,command
+system,legacy,무료시즌,무료시즌,freeseason | seasonfree,,v1050_unified_expansion,1517,command
+system,legacy,무료시즌보상,무료시즌보상,freeseasonrewards | seasonrewards,,v1050_unified_expansion,1529,command
+system,legacy,무역로,무역로,지역무역로 | 교역로,개방된 지역 무역로와 오늘의 수요를 확인합니다.,v900_faction_world_state,828,command
+system,legacy,무전,무전,무전해독 | 구조신호 | sos | SOS,,v637_dynamic_events,532,command
+system,legacy,문의닫기,문의닫기,,현재 아바돈 문의 채널을 종료합니다.,v410_server_management,1687,command
+system,legacy,문의제거,문의제거,,현재 문의 채널에서 멤버를 제거합니다.,v410_server_management,1723,command
+system,legacy,문의추가,문의추가,,현재 문의 채널에 다른 멤버를 추가합니다.,v410_server_management,1699,command
+system,legacy,문의패널,문의패널,,버튼으로 문의 채널을 만드는 패널을 설치합니다.,v410_server_management,1672,command
+system,legacy,미니게임,미니게임,게임목록 | 미니게임목록,,v640_interactive_arcade,803,command
+system,legacy,미리듣기,미리듣기,,선택한 목소리를 지정 음성 채널에서 시험 재생합니다.,v433_voice_sanctuary,1814,command
+system,legacy,미션보상,미션보상,성장보상 | 루프보상,,v710_growth_loop,617,command
+system,legacy,미수령보상,미수령보상,unclaimedrewards | rewardqueue,현재 감지 가능한 미수령 공동 콘텐츠 보상을 점검합니다.,v1000_global_survivor,1512,command
+system,legacy,민화투,민화투,minhwatu,,v1090_integrated_renewal,1456,command
+system,legacy,밀수품납품,밀수품납품,,,v639_frontier_operations,846,command
+system,legacy,밀수품상태,밀수품상태,,,v639_frontier_operations,834,command
+system,legacy,밀수품습격,밀수품습격,,,v639_frontier_operations,865,command
+system,legacy,밀수품운반,밀수품운반,밀수작전,,v639_frontier_operations,805,command
+system,legacy,바둑이,바둑이,badugi,,v1050_unified_expansion,1151,command
+system,legacy,반응속도,반응속도,순발력 | 반응게임,,v640_interactive_arcade,757,command
+system,legacy,받기,받기,우편받기,,v639_frontier_operations,612,command
+system,legacy,배경도감,배경도감,backgroundcatalog | backgrounds,프로필 배경 도감을 확인합니다.,v1220_chaos_festival_complete,1871,command
+system,legacy,백업검증,백업검증,데이터검증 | backupcheck,,v702_stability,329,command
+system,legacy,백업목록,백업목록,데이터백업목록 | backuplist,,v702_stability,290,command
+system,legacy,백업생성,백업생성,즉시백업 | backupnow,,v702_stability,307,command
+system,legacy,밸런스게임,밸런스게임,생존밸런스,두 가지 생존 선택지를 반응으로 투표합니다.,v620_dialogue_memory,1361,command
+system,legacy,밸런스선택,밸런스선택,balancechoice | wouldyouratherchoice,진행 중인 밸런스 게임에 투표합니다.,v1220_chaos_festival_complete,1619,command
+system,legacy,번역누락,번역누락,missingtranslations | translationfallbacks,희귀 구버전 문구가 사전 번역 대신 안전 대체된 기록을 확인합니다.,v1000_global_survivor,1574,command
+system,legacy,범죄,범죄,citycrime | blackcitycrime,실제 사용자 재산을 빼앗지 않는 선택형 도시 범죄 임무입니다.,v1320_black_city_complete,604,command
+system,legacy,벙커개설,벙커개설,,,v638_hardcore_arcade,1137,command
+system,legacy,벙커상태,벙커상태,,,v638_hardcore_arcade,1187,command
+system,legacy,벙커진행,벙커진행,,,v638_hardcore_arcade,1221,command
+system,legacy,벙커참가,벙커참가,,,v638_hardcore_arcade,1164,command
+system,legacy,벙커투표,벙커투표,,,v638_hardcore_arcade,1200,command
+system,legacy,베팅제한,베팅제한,betlimit | raiselimit,현재 서버의 자유 레이즈 안전 한도를 확인합니다.,v1100_game_city_overhaul,140,command
+system,legacy,베팅제한설정,베팅제한설정,setbetlimit | setraiselimit,관리자가 서버의 1회 레이즈 안전 한도를 설정합니다.,v1100_game_city_overhaul,146,command
+system,legacy,병원,병원,,,conditions,235,command
+system,legacy,보급선,보급선,,,v639_frontier_operations,906,command
+system,legacy,보급선수색,보급선수색,,,v639_frontier_operations,922,command
+system,legacy,보물감정,보물감정,보물감정소 | 감정소,,v610_digging_treasure,618,command
+system,legacy,보물도감,보물도감,treasurecatalog | reliccatalog,알려진 탐험 보물과 획득 상태를 확인합니다.,v1220_chaos_festival_complete,1354,command
+system,legacy,보물함,보물함,땅파기상태 | 굴착상태,,v610_digging_treasure,655,command
+system,legacy,보안상태,보안상태,보안대시보드,분리 로그와 자동 관리 설정을 한 화면에 표시합니다.,v422_security_center,417,command
+system,legacy,보안초기설정,보안초기설정,로그초기설정,비공개 보안센터와 분리 로그 채널을 자동 생성합니다.,v422_security_center,285,command
+system,legacy,복구,복구,,,v431_growth_balance,692,command
+system,legacy,복구기여도,복구기여도,공동복구기여도 | 복구랭킹,현재 복구 작전 기여도를 확인합니다.,v920_world_cycle_professions,767,command
+system,legacy,복구납품,복구납품,복구지원 | 공동복구납품,복구 작전에 필요한 자원을 지원합니다.,v920_world_cycle_professions,760,command
+system,legacy,복구미리보기,복구미리보기,백업비교 | restorepreview,,v702_stability,347,command
+system,legacy,복구보상,복구보상,공동복구보상 | 복구수령,완료된 복구 작전의 개인 기여 보상을 받습니다.,v920_world_cycle_professions,777,command
+system,legacy,복구작전,복구작전,공동복구 | 복구현황,서버 공동 복구 작전과 참여 버튼을 확인합니다.,v920_world_cycle_professions,716,command
+system,legacy,복구작전시작,복구작전시작,복구시작 | 공동복구시작,관리자가 공동 복구 작전을 시작합니다.,v920_world_cycle_professions,733,command
+system,legacy,복구참여,복구참여,복구행동 | 공동복구참여,복구 작전에서 정찰·구조·수리·경계 행동을 수행합니다.,v920_world_cycle_professions,749,command
+system,legacy,복귀보급,복귀보급,신규보급 | 따라잡기보급,,v710_growth_loop,815,command
+system,legacy,복귀안내,복귀안내,returningguide | returnguide,마지막 확인 버전 이후 추가된 주요 기능을 안내합니다.,v1000_global_survivor,1215,command
+system,legacy,봇권한,봇권한,권한점검,현재 서버와 채널에서 아바돈이 가진 권한을 점검합니다.,v420_ops_center,221,command
+system,legacy,봇권한적용,봇권한적용,권한프로필적용 | applybotpermissions,선택한 봇에 채널 권한 프로필을 적용합니다. 적용 전 자동 백업합니다.,v1150_server_operations_permissions,918,command
+system,legacy,봇소개,봇소개,아바돈소개 | 봇정보,,v641_stabilization,309,command
+system,legacy,부채,부채,debt,,v1090_integrated_renewal,1815,command
+system,legacy,분대방방장,분대방방장,분대방위임 | 임시방방장,임시 분대방 방장을 다른 사용자에게 넘깁니다.,v790_operations_disaster,1104,command
+system,legacy,분대방이름,분대방이름,임시방이름,자신이 만든 임시 분대 음성방의 이름을 변경합니다.,v790_operations_disaster,1047,command
+system,legacy,분대방인원,분대방인원,임시방인원,임시 분대방 최대 인원을 설정합니다.,v790_operations_disaster,1092,command
+system,legacy,분대방잠금,분대방잠금,임시방잠금,임시 분대방의 공개 입장을 켜거나 끕니다.,v790_operations_disaster,1062,command
+system,legacy,분대방초대,분대방초대,임시방초대,잠긴 임시 분대방에 사용자를 초대합니다.,v790_operations_disaster,1076,command
+system,legacy,분대음성설정,분대음성설정,임시음성설정 | 분대방설정,임시 분대 음성방 생성 로비를 설치합니다.,v790_operations_disaster,1021,command
+system,legacy,불운왕,불운왕,unluckiest | badluckking,공개 잔액 기준 오늘의 불운왕을 뽑습니다.,v1220_chaos_festival_complete,1565,command
+system,legacy,블러프분석,블러프분석,bluffanalysis | bluffmeter,공개 활동만으로 재미용 블러프 지수를 계산합니다.,v1220_chaos_festival_complete,1581,command
+system,legacy,비밀친구,비밀친구,secretfriend | secretbuddy,비밀친구 이벤트 상태를 확인합니다.,v1220_chaos_festival_complete,1742,command
+system,legacy,비밀친구시작,비밀친구시작,startsecretfriend | startsecretbuddy,관리자가 참가자 비밀친구를 배정합니다.,v1220_chaos_festival_complete,1759,command
+system,legacy,비밀친구참가,비밀친구참가,joinsecretfriend | joinsecretbuddy,열린 비밀친구 모집에 참가합니다.,v1220_chaos_festival_complete,1748,command
+system,legacy,비밀힌트,비밀힌트,secrethint | easteregghint,숨겨진 콘텐츠의 짧은 힌트를 확인합니다.,v1220_chaos_festival_complete,1932,command
+system,legacy,비상모드,비상모드,,"안티레이드, 높은 인증 수준, 서버 잠금을 한 번에 설정합니다.",v411_server_guard_plus,1068,command
+system,legacy,비상보급상자,비상보급상자,전리품상자 | 프리미엄랜덤박스,,v638_hardcore_arcade,981,command
+system,legacy,비상주파수,비상주파수,주파수가로채기 | 타이밍주파수,,v638_hardcore_arcade,852,command
+system,legacy,빌리기,빌리기,,은행 심사 없이 고금리 사채를 빌립니다.,v40_finance,568,command
+system,legacy,빙고체크,빙고체크,bingocheck | markbingo,서버 빙고 칸을 체크합니다. 월 1회 첫 빙고 보상이 있습니다.,v1220_chaos_festival_complete,1792,command
+system,legacy,빠른답변,빠른답변,,현재 접수 채널에 등록된 답변 양식을 전송합니다.,v423_intake_center,982,command
+system,legacy,빠른대전,빠른대전,quickmatch,,v1090_integrated_renewal,1536,command
+system,legacy,빠른참가,빠른참가,quickjoin,,v1050_unified_expansion,1269,command
+system,legacy,사건목록,사건목록,,최근 사건 또는 특정 멤버의 사건 기록을 확인합니다.,v411_server_guard_plus,1003,command
+system,legacy,사건선택,사건선택,scenechoice | chooseevent,오늘의 사건 선택을 확정합니다.,v1620_living_legends,957,command
+system,legacy,사건조회,사건조회,,SERVER GUARD 사건 번호의 상세 기록을 확인합니다.,v411_server_guard_plus,983,command
+system,legacy,사업개설,사업개설,openbusiness | createbusiness,칩을 사용해 서버 사업을 개설합니다.,v1220_chaos_festival_complete,1399,command
+system,legacy,사업순위,사업순위,businessranking | shopranking,서버 사업 인기 순위를 확인합니다.,v1220_chaos_festival_complete,1483,command
+system,legacy,사용,사용,,,conditions,187,command
+system,legacy,사채기록,사채기록,,,v40_finance,625,command
+system,legacy,사채빌리기,사채빌리기,,,v40_finance,613,command
+system,legacy,사채상환,사채상환,,,v40_finance,617,command
+system,legacy,사채추심,사채추심,,,v40_finance,621,command
+system,legacy,삼봉,삼봉,sambong,,v1090_integrated_renewal,1448,command
+system,legacy,상태,상태,,,status,112,command
+system,legacy,상태이상제거,상태이상제거,,,admin_tools,327,command
+system,legacy,상품설정,상품설정,setproduct | businessproduct,내 사업의 대표 상품과 가격을 설정합니다.,v1220_chaos_festival_complete,1421,command
+system,legacy,상환,상환,,,v40_finance,597,command
+system,legacy,새싹설정,새싹설정,신입설정,신규 멤버 새싹 역할과 환영 메시지를 설정합니다.,v711_cute_interactions,1255,command
+system,legacy,새싹역할설치,새싹역할설치,신입역할설치,신규 멤버용 새싹 역할과 역할 아이콘을 설치합니다.,v711_cute_interactions,1374,command
+system,legacy,새싹정리,새싹정리,신입정리,유지 기간이 지난 새싹 역할을 즉시 정리합니다.,v711_cute_interactions,1401,command
+system,legacy,생물테러,생물테러,바이러스테러,,v638_hardcore_arcade,1385,command
+system,legacy,생물테러수신,생물테러수신,테러수신,,v638_hardcore_arcade,1369,command
+system,legacy,생물테러준비,생물테러준비,바이러스구매,,v638_hardcore_arcade,1352,command
+system,legacy,생일카드,생일카드,birthdaycard | celebrationcard,서버 구성원에게 축하 카드를 보냅니다.,v1220_chaos_festival_complete,1818,command
+system,legacy,생존대시보드,생존대시보드,survivordashboard | dashboard,,v1090_integrated_renewal,1698,command
+system,legacy,생존도감,생존도감,survivalcodex | codex,지역·세력·인카운트·사건·트로피를 통합한 생존 도감을 엽니다.,v1000_global_survivor,1139,command
+system,legacy,생존선택,생존선택,survivalpick | safezone,생존 룰렛의 안전 구역을 선택합니다.,v1220_chaos_festival_complete,928,command
+system,legacy,생존자레이스,생존자레이스,참가레이스 | 탈출레이스,,v640_interactive_arcade,787,command
+system,legacy,생활숙련도,생활숙련도,,,v21_reborn,699,command
+system,legacy,서버기능,서버기능,,,v32_codex_settings_tutorial,225,command
+system,legacy,서버리뉴얼,서버리뉴얼,서버정리 | 서버디자인,,v433_voice_sanctuary,2083,group
+system,legacy,서버리뉴얼 429상태,429상태,ratelimit | 쿨다운 | 안전대기,,v433_voice_sanctuary,2775,command
+system,legacy,서버리뉴얼 게임미리보기,게임미리보기,봇게임미리보기 | 게임프리뷰,,v433_voice_sanctuary,2285,command
+system,legacy,서버리뉴얼 게임정리,게임정리,봇게임정리 | 게임채널정리,,v433_voice_sanctuary,2295,command
+system,legacy,서버리뉴얼 계획상태,계획상태,planstatus | 적용상태,,v433_voice_sanctuary,2590,command
+system,legacy,서버리뉴얼 계획취소,계획취소,plancancel | 적용취소,,v433_voice_sanctuary,2797,command
+system,legacy,서버리뉴얼 긴급정리,긴급정리,cleanup | 잔여정리,,v433_voice_sanctuary,3012,command
+system,legacy,서버리뉴얼 다음,다음,next | 계속,,v433_voice_sanctuary,2489,command
+system,legacy,서버리뉴얼 되돌리기,되돌리기,undo | 복원,,v433_voice_sanctuary,2425,command
+system,legacy,서버리뉴얼 미리보기,미리보기,preview,,v433_voice_sanctuary,2224,command
+system,legacy,서버리뉴얼 백업,백업,수동백업 | backup,,v433_voice_sanctuary,2340,command
+system,legacy,서버리뉴얼 백업목록,백업목록,backups | 복구목록,,v433_voice_sanctuary,2356,command
+system,legacy,서버리뉴얼 복구다음,복구다음,recovernext | 복구계속,,v433_voice_sanctuary,2816,command
+system,legacy,서버리뉴얼 복구상태,복구상태,recoverstatus,,v433_voice_sanctuary,2935,command
+system,legacy,서버리뉴얼 복구취소,복구취소,recovercancel,,v433_voice_sanctuary,2958,command
+system,legacy,서버리뉴얼 빈카테고리,빈카테고리,empty,,v433_voice_sanctuary,3074,command
+system,legacy,서버리뉴얼 빈카테고리삭제,빈카테고리삭제,cleanempty,,v433_voice_sanctuary,3193,command
+system,legacy,서버리뉴얼 빈카테고리선택,빈카테고리선택,emptyselect | 선택삭제,,v433_voice_sanctuary,3180,command
+system,legacy,서버리뉴얼 상태,상태,status,,v433_voice_sanctuary,3059,command
+system,legacy,서버리뉴얼 자동상태,자동상태,autostatus,,v433_voice_sanctuary,2752,command
+system,legacy,서버리뉴얼 자동시작,자동시작,autostart | 자동진행,,v433_voice_sanctuary,2692,command
+system,legacy,서버리뉴얼 자동중지,자동중지,autostop | 자동일시정지,,v433_voice_sanctuary,2736,command
+system,legacy,서버리뉴얼 작업상태,작업상태,progress | 진행상태,,v433_voice_sanctuary,2997,command
+system,legacy,서버리뉴얼 적용,적용,apply | 계획,,v433_voice_sanctuary,2234,command
+system,legacy,서버리뉴얼 중지,중지,stop | 취소,,v433_voice_sanctuary,2971,command
+system,legacy,서버리뉴얼 테마목록,테마목록,themes | 테마,,v433_voice_sanctuary,2209,command
+system,legacy,서버메뉴,서버메뉴,채널메뉴 | 안내패널,,v433_voice_sanctuary,3241,group
+system,legacy,서버메뉴 갱신,갱신,update,,v433_voice_sanctuary,3268,command
+system,legacy,서버메뉴 삭제,삭제,delete,,v433_voice_sanctuary,3287,command
+system,legacy,서버메뉴 생성,생성,create,,v433_voice_sanctuary,3248,command
+system,legacy,서버봇목록,서버봇목록,봇목록 | serverbots | botinventory,서버에 참가한 봇과 강한 관리 권한을 확인합니다.,v1150_server_operations_permissions,836,command
+system,legacy,서버브리핑,서버브리핑,세계브리핑 | 오늘의서버,,v641_stabilization,364,command
+system,legacy,서버설정,서버설정,,,v32_codex_settings_tutorial,179,command
+system,legacy,서버설정백업,서버설정백업,운영설정백업 | serversettingsbackup,서버 알림·시간·채널 설정을 복구 지점으로 저장합니다.,v1150_server_operations_permissions,1046,command
+system,legacy,서버설정복구,서버설정복구,운영설정복구 | restoreserversettings,서버 운영 설정 백업을 복구합니다.,v1150_server_operations_permissions,1063,command
+system,legacy,서버세팅,서버세팅,서버꾸미기,,v403_server_builder,469,group
+system,legacy,서버세팅 미리보기,미리보기,preview | 확인,,v403_server_builder,475,command
+system,legacy,서버세팅 상태,상태,status,,v403_server_builder,529,command
+system,legacy,서버세팅 실행,실행,start | 적용,,v403_server_builder,566,command
+system,legacy,서버세팅 취소,취소,cancel,,v403_server_builder,550,command
+system,legacy,서버아이콘,서버아이콘,,현재 서버의 아이콘 원본을 표시합니다.,v421_utility_pack,480,command
+system,legacy,서버알림,서버알림,운영알림설정 | 서버알림설정 | serveralerts | alertsubscriptions,서버별 자동 알림 종류·채널·상태를 설정합니다.,v1150_server_operations_permissions,673,command
+system,legacy,서버엔딩,서버엔딩,serverending,관리자가 서버 시즌 엔딩 장면을 시작합니다.,v1620_living_legends,1070,command
+system,legacy,서버운영,서버운영,서버운영센터 | serveroperations | serverops,서버별 알림·채널·봇 권한·복구 상태를 한 화면에서 확인합니다.,v1150_server_operations_permissions,623,command
+system,legacy,서버잠금,서버잠금,,모든 텍스트 채널의 일반 멤버 전송을 잠급니다.,v411_server_guard_plus,1044,command
+system,legacy,서버점검,서버점검,,"아바돈의 권한, 역할 순서, 관리 설정을 점검합니다.",v411_server_guard_plus,1242,command
+system,legacy,서버채널,서버채널,,,v32_codex_settings_tutorial,203,command
+system,legacy,서버테마,서버테마,테마목록,,v641_stabilization,420,command
+system,legacy,서버테마미리보기,서버테마미리보기,테마미리보기,,v641_stabilization,449,command
+system,legacy,서버테마설정,서버테마설정,테마설정,,v641_stabilization,466,command
+system,legacy,서버통계,서버통계,,현재 서버의 운영 및 멤버 통계를 확인합니다.,v410_server_management,1745,command
+system,legacy,서버해제,서버해제,,서버잠금으로 변경한 채널 권한을 원래대로 복원합니다.,v411_server_guard_plus,1056,command
+system,legacy,설계도,설계도,생활설계도 | 연구설계도,해금한 생활 기술 설계도를 확인합니다.,v770_ruin_farming,1822,command
+system,legacy,설정,설정,아바돈설정 | 설정센터,서버 주요 설정을 드롭다운에서 관리합니다.,v521_diagnostics,933,command
+system,legacy,섯다,섯다,seotda | sutda | seotdagame,,v1060_authentic_card_games,1940,command
+system,legacy,성장보드,성장보드,미션보드 | 성장루프 | 작전보드,,v710_growth_loop,610,command
+system,legacy,세계대시보드,세계대시보드,worlddashboard,,v1090_integrated_renewal,1711,command
+system,legacy,세계상태,세계상태,세계현황 | 연합상태,서버의 공동 세계 지표와 전쟁·시즌 상태를 확인합니다.,v900_faction_world_state,1248,command
+system,legacy,세계순환,세계순환,세계순환상태 | 세계시간,시간에 따른 안전한 세계 지표 순환 상태를 확인합니다.,v920_world_cycle_professions,653,command
+system,legacy,세계순환설정,세계순환설정,세계시간설정 | 순환설정,관리자가 세계 순환을 켜거나 일시정지합니다.,v920_world_cycle_professions,671,command
+system,legacy,세계순환즉시,세계순환즉시,세계즉시순환 | 순환즉시,관리자가 세계 순환 1회를 즉시 모의가 아닌 실제 반영합니다.,v920_world_cycle_professions,693,command
+system,legacy,세계지도,세계지도,탐험지도 | 개척지도,서버 공동 지역 개척 진행도를 확인합니다.,v810_world_map_ux,612,command
+system,legacy,세계지령,세계지령,공동지령 | 주간지령,이번 주 서버 공동 목표와 투표 현황을 확인합니다.,v920_world_cycle_professions,822,command
+system,legacy,세력가입,세력가입,joinfaction,도시 세력에 가입합니다.,v1320_black_city_complete,385,command
+system,legacy,세력거점,세력거점,진영거점 | 거점방문,세력 거점의 교류 기능을 확인합니다.,v900_faction_world_state,687,command
+system,legacy,세력교환,세력교환,진영교환 | 세력구매,세력 증표로 보급품 또는 칭호를 교환합니다.,v900_faction_world_state,793,command
+system,legacy,세력상점,세력상점,진영상점 | 세력교환소,세력 증표 교환 목록을 확인합니다.,v900_faction_world_state,776,command
+system,legacy,세력외교,세력외교,factiondiplomacy,세력 간 관계를 동맹·휴전·중립·적대로 설정합니다.,v1320_black_city_complete,433,command
+system,legacy,세력의뢰,세력의뢰,진영의뢰 | 세력임무,오늘의 세력 의뢰를 확인합니다.,v900_faction_world_state,706,command
+system,legacy,세력의뢰수락,세력의뢰수락,진영의뢰수락 | 세력임무수락,오늘의 세력 의뢰를 수락합니다.,v900_faction_world_state,724,command
+system,legacy,세력의뢰완료,세력의뢰완료,진영의뢰완료 | 세력임무완료,수락한 세력 의뢰의 물자를 제출하고 정산합니다.,v900_faction_world_state,744,command
+system,legacy,세력전쟁,세력전쟁,연합전쟁 | 세력전선,현재 서버 공동 세력전쟁을 확인합니다.,v900_faction_world_state,1079,command
+system,legacy,세력창설,세력창설,createfaction | foundfaction,"20,000칩을 사용해 도시 세력을 창설합니다.",v1320_black_city_complete,377,command
+system,legacy,세력탈퇴,세력탈퇴,leavefaction,현재 도시 세력에서 탈퇴합니다.,v1320_black_city_complete,393,command
+system,legacy,세트효과,세트효과,,,v21_reborn,583,command
+system,legacy,셀프역할목록,셀프역할목록,,현재 등록된 셀프 역할 항목을 확인합니다.,v421_utility_pack,239,command
+system,legacy,셀프역할삭제,셀프역할삭제,,등록된 셀프 역할 항목을 이모지로 삭제합니다.,v421_utility_pack,224,command
+system,legacy,셀프역할추가,셀프역할추가,,셀프 역할 패널에 사용할 이모지와 역할을 등록합니다.,v421_utility_pack,181,command
+system,legacy,셀프역할패널,셀프역할패널,,현재 채널에 반응형 셀프 역할 패널을 만듭니다.,v421_utility_pack,255,command
+system,legacy,셀프역할패널목록,셀프역할패널목록,,저장된 셀프 역할 패널의 채널과 메시지 ID를 확인합니다.,v421_utility_pack,332,command
+system,legacy,셀프역할패널삭제,셀프역할패널삭제,,메시지 ID로 셀프 역할 패널 등록과 메시지를 삭제합니다.,v421_utility_pack,353,command
+system,legacy,셔플검증,셔플검증,shuffleverify | deckverify,종료된 게임의 시작 커밋과 공개값을 다시 계산합니다.,v1100_game_city_overhaul,172,command
+system,legacy,소프트밴,소프트밴,,메시지를 정리한 뒤 즉시 차단 해제합니다.,v411_server_guard_plus,922,command
+system,legacy,숏덱홀덤,숏덱홀덤,숏덱 | shortdeckholdem | shortdeck,,v1050_unified_expansion,1149,command
+system,legacy,수사,수사,cityinvestigate | blackcityinvestigate,대상에 관한 가상 단서를 수집합니다.,v1320_black_city_complete,627,command
+system,legacy,수상한상인,수상한상인,mysteriousmerchant | hiddenmerchant,특정 시간에만 나타나는 숨겨진 상인을 찾습니다.,v1220_chaos_festival_complete,1937,command
+system,legacy,수집,수집,,,v431_growth_balance,657,command
+system,legacy,숨겨진임무,숨겨진임무,hiddenmission | secretmission,현재 조건으로 발견 가능한 숨겨진 임무를 검사합니다.,v1220_chaos_festival_complete,1960,command
+system,legacy,스태미나설정,스태미나설정,,,admin_tools,303,command
+system,legacy,슬로우,슬로우,,현재 채널의 느린 모드 시간을 설정합니다.,v410_server_management,1229,command
+system,legacy,시스템점검,시스템점검,운영점검 | systemcheck,,v702_stability,195,command
+system,legacy,시작안내,시작안내,gettingstarted | startguide,신규 생존자의 첫 플레이 순서를 안내합니다.,v1000_global_survivor,1206,command
+system,legacy,시즌결말,시즌결말,seasonending | cityending,현재 예상 결말과 달성 조건 방향을 확인합니다.,v1320_black_city_complete,740,command
+system,legacy,시즌기여,시즌기여,seasoncontribute | cityseasoncontribute,개인 활동 점수를 시즌 분야에 기여합니다.,v1320_black_city_complete,729,command
+system,legacy,시즌대시보드,시즌대시보드,seasondashboard,,v1090_integrated_renewal,1727,command
+system,legacy,시즌수집,시즌수집,seasoncollection,,v1050_unified_expansion,1543,command
+system,legacy,신생계정알림,신생계정알림,,설정한 일수보다 새 계정이 가입하면 보안 로그로 알립니다.,v422_security_center,574,command
+system,legacy,신용,신용,,,v40_finance,605,command
+system,legacy,신호해독,신호해독,전파해독 | 주파수해독,탐색한 신호의 정답 번호를 제출합니다.,v770_ruin_farming,1605,command
+system,legacy,실시간공지,실시간공지,,공식 홈페이지 실시간 피드에 공개 공지를 등록합니다.,v432_forge_live,1136,command
+system,legacy,실시간피드,실시간피드,,홈페이지 공개 이벤트 피드를 켜거나 끕니다.,v432_forge_live,1120,command
+system,legacy,실시간피드상태,실시간피드상태,,Background Worker와 홈페이지 실시간 피드 릴레이 상태를 확인합니다.,v432_forge_live,1088,command
+system,legacy,심리선택,심리선택,mindchoice | betrayalchoice,심리전에서 공동 또는 개인을 선택합니다.,v1220_chaos_festival_complete,981,command
+system,legacy,심리전,심리전,mindgame | betrayalbutton,개인 보상과 공동 보상 사이에서 선택하는 심리전을 시작합니다.,v1220_chaos_festival_complete,952,command
+system,legacy,아바돈,아바돈,말걸기 | chat | talktoabaddon,모달 없이 아바돈과 연속 대화를 시작하거나 바로 질문합니다.,v620_dialogue_memory,1170,command
+system,legacy,아바돈게임,아바돈게임,봇대전 | 혼자게임 | AI게임,혼자서 아바돈과 1:1 미니게임을 즐깁니다.,v720_coop_cleanup,712,command
+system,legacy,아바돈난이도,아바돈난이도,abaddondifficulty,,v1090_integrated_renewal,1605,command
+system,legacy,아바돈내기,아바돈내기,AI내기 | 봇내기,아바돈과 게임 내 칩 또는 식량을 걸고 1:1 대결합니다.,v720_coop_cleanup,768,command
+system,legacy,아바돈성향,아바돈성향,abaddonpersonality,,v1090_integrated_renewal,1621,command
+system,legacy,아바돈전적,아바돈전적,봇전적 | AI전적,아바돈과의 1:1 미니게임 전적을 확인합니다.,v720_coop_cleanup,772,command
+system,legacy,아바돈진단,아바돈진단,진단센터 | 통합진단,ABADDON 주요 시스템을 드롭다운으로 통합 진단합니다.,v521_diagnostics,920,command
+system,legacy,아바돈초대,아바돈초대,봇초대 | AI초대,지정한 게임에 아바돈을 초대합니다.,v720_coop_cleanup,732,command
+system,legacy,아바타,아바타,,자신 또는 멘션한 멤버의 프로필 이미지를 표시합니다.,v421_utility_pack,469,command
+system,legacy,아이템검색,아이템검색,,,admin_tools,135,command
+system,legacy,아이템목록,아이템목록,,,admin_tools,119,command
+system,legacy,아이템지급,아이템지급,,,admin_tools,162,command
+system,legacy,아이템회수,아이템회수,,,admin_tools,179,command
+system,legacy,아지트공개,아지트공개,publishhideout,다른 사용자의 아지트 방문 허용을 켜거나 끕니다.,v1320_black_city_complete,554,command
+system,legacy,아지트꾸미기,아지트꾸미기,decoratehideout,개인 아지트에 장식을 설치합니다.,v1320_black_city_complete,546,command
+system,legacy,아지트방문,아지트방문,visithideout,공개된 다른 사용자의 아지트를 방문합니다.,v1320_black_city_complete,565,command
+system,legacy,안정화상태,안정화상태,안정화 | 봇상태점검,,v641_stabilization,294,command
+system,legacy,안티레이드,안티레이드,,가입 폭주 및 신규 계정 격리 기능을 설정합니다.,v411_server_guard_plus,825,command
+system,legacy,알림멘션,알림멘션,서버알림멘션 | alertmention,알림 종류에 사용할 역할 멘션을 설정하거나 해제합니다.,v1150_server_operations_permissions,736,command
+system,legacy,알림설정,알림설정,이벤트알림,,v639_frontier_operations,540,command
+system,legacy,알림시간,알림시간,조용한시간 | alerthours | quiethours,자동 알림이 게시될 시간을 설정합니다. 시간 밖에는 연동 알림을 일시 정지합니다.,v1150_server_operations_permissions,755,command
+system,legacy,알림시간해제,알림시간해제,조용한시간해제 | disablealerthours,시간 제한 없이 구독 알림을 게시합니다.,v1150_server_operations_permissions,774,command
+system,legacy,알림요약,알림요약,alertdigest,운영센터 자체 경고의 요약 표시 설정을 켜거나 끕니다.,v1150_server_operations_permissions,785,command
+system,legacy,알림채널,알림채널,운영채널설정 | serveralertchannel | alertchannel,알림 종류별 전용 채널을 지정합니다.,v1150_server_operations_permissions,717,command
+system,legacy,약품구매,약품구매,,,conditions,169,command
+system,legacy,업적도감,업적도감,achievementcatalog | achievementbook,전체 게임 업적 조건과 해금 상태를 확인합니다.,v1190_event_broadcast_collection,646,command
+system,legacy,업적센터,업적센터,achievementcenter | gameachievementscenter,게임 업적과 수집 진행도를 이미지 카드로 확인합니다.,v1190_event_broadcast_collection,638,command
+system,legacy,업적전시,업적전시,achievementdisplay | showcaseachievements,프로필에 전시할 업적을 최대 3개 선택합니다.,v1190_event_broadcast_collection,691,command
+system,legacy,엔진,엔진,,서버 TTS 합성 엔진을 선택합니다.,v433_voice_sanctuary,1861,command
+system,legacy,역전왕,역전왕,comebackking | turnaroundking,공개 재미 기록에서 가장 큰 보상을 받은 사용자를 보여줍니다.,v1220_chaos_festival_complete,1573,command
+system,legacy,역할멤버,역할멤버,,특정 역할을 가진 멤버를 확인합니다.,v421_utility_pack,449,command
+system,legacy,역할복제,역할복제,,"역할의 이름, 색상, 권한을 복제합니다.",v411_server_guard_plus,1221,command
+system,legacy,역할정보,역할정보,,"역할의 서열, 인원, 색상과 핵심 권한을 확인합니다.",v420_ops_center,327,command
+system,legacy,역할지급,역할지급,,멤버에게 지정한 역할을 지급합니다.,v410_server_management,1338,command
+system,legacy,역할회수,역할회수,,멤버에게서 지정한 역할을 회수합니다.,v410_server_management,1362,command
+system,legacy,연구소,연구소,생활연구소 | 기술연구,생활 연구 자료와 해금 기술을 확인합니다.,v770_ruin_farming,1744,command
+system,legacy,연구시작,연구시작,기술연구시작 | 연구개시,생활 기술 연구를 시작합니다.,v770_ruin_farming,1772,command
+system,legacy,연구진행,연구진행,연구상태 | 연구완료,진행 중 연구를 확인하고 완료 처리합니다.,v770_ruin_farming,1801,command
+system,legacy,연합,연합,alliance,,v1050_unified_expansion,1464,command
+system,legacy,연합대시보드,연합대시보드,alliancedashboard,,v1090_integrated_renewal,1723,command
+system,legacy,연합참가,연합참가,joinalliance,,v1050_unified_expansion,1456,command
+system,legacy,연합창설,연합창설,createalliance,,v1050_unified_expansion,1448,command
+system,legacy,영토공격,영토공격,attackterritory | territoryattack,소속 세력으로 지역 점령을 시도합니다.,v1320_black_city_complete,408,command
+system,legacy,영토지도,영토지도,territorymap,지역별 점령 세력과 방어도를 확인합니다.,v1320_black_city_complete,401,command
+system,legacy,영혼결투,영혼결투,영혼의데스매치 | 고위험PVP,,v638_hardcore_arcade,1116,command
+system,legacy,예약목록,예약목록,reservationlist | gamebookings,서버의 예정 게임 예약을 확인합니다.,v1190_event_broadcast_collection,605,command
+system,legacy,예약참가,예약참가,joinreservation | joinbooking,예약된 게임에 참가합니다.,v1190_event_broadcast_collection,585,command
+system,legacy,예약취소,예약취소,cancelreservation | cancelbooking,내 게임 예약 참가를 취소하거나 방장이 예약을 취소합니다.,v1190_event_broadcast_collection,594,command
+system,legacy,예외채널,예외채널,,자동 관리가 작동하지 않을 채널을 추가합니다.,v410_server_management,1636,command
+system,legacy,예외채널해제,예외채널해제,,자동 관리 예외 채널 등록을 해제합니다.,v410_server_management,1647,command
+system,legacy,오늘의,오늘의,오늘의운세 | 운세,,v637_dynamic_events,403,command
+system,legacy,오늘의명장면,오늘의명장면,dailyhighlight | todayhighlight,공개 기록만으로 오늘의 서버 명장면을 뽑습니다.,v1220_chaos_festival_complete,1512,command
+system,legacy,오늘의사건,오늘의사건,todayscene | dailyscene,개인 선택형 일상 사건을 엽니다.,v1620_living_legends,941,command
+system,legacy,오늘의세계,오늘의세계,세계오늘 | 상황방송,최근 세계 변화와 현재 공동 목표를 요약합니다.,v920_world_cycle_professions,700,command
+system,legacy,오늘의신문,오늘의신문,citypaper | dailycitypaper,최근 도시 사건을 신문 PNG로 만듭니다.,v1320_black_city_complete,704,command
+system,legacy,오늘의질문,오늘의질문,하루질문,서버 구성원이 답할 수 있는 오늘의 대화 질문을 엽니다.,v620_dialogue_memory,1355,command
+system,legacy,오늘의퀴즈,오늘의퀴즈,일일퀴즈,,daily_quiz,99,command
+system,legacy,오늘일정,오늘일정,todayschedule | todayevents,오늘 남은 서버 일정을 확인합니다.,v1190_event_broadcast_collection,546,command
+system,legacy,오늘할일,오늘할일,오늘뭐하지 | 일일체크,,v641_stabilization,328,command
+system,legacy,오마하홀덤,오마하홀덤,오마하 | omahaholdem | omaha,,v1010_companion_card_games,1006,command
+system,legacy,오염문,오염문,폐허3지선다 | 세개의문,,v638_hardcore_arcade,966,command
+system,legacy,옵션재설정,옵션재설정,,,v21_reborn,559,command
+system,legacy,욕설목록,욕설목록,,등록된 금칙어 목록을 운영진에게만 표시합니다.,v410_server_management,1623,command
+system,legacy,욕설삭제,욕설삭제,,등록된 금칙어를 삭제합니다.,v410_server_management,1610,command
+system,legacy,욕설차단,욕설차단,,관리자가 등록한 금칙어 자동 삭제를 켜거나 끕니다.,v410_server_management,1581,command
+system,legacy,욕설추가,욕설추가,,자동 삭제할 금칙어를 추가합니다.,v410_server_management,1593,command
+system,legacy,우편발송,우편발송,관리자우편,,v639_frontier_operations,564,command
+system,legacy,우편함,우편함,메일함,,v639_frontier_operations,588,command
+system,legacy,운명,운명,fate | alignment,현재 운명 성향과 누적 선택을 확인합니다.,v1620_living_legends,935,command
+system,legacy,운영대시보드,운영대시보드,운영센터,SERVER GUARD 주요 설정과 운영 상태를 한 화면에 표시합니다.,v420_ops_center,142,command
+system,legacy,운영메모,운영메모,,관리자 로그용 운영 메모를 저장합니다.,v420_ops_center,444,command
+system,legacy,운영메모목록,운영메모목록,,최근 운영 메모를 확인합니다.,v420_ops_center,483,command
+system,legacy,운영메모삭제,운영메모삭제,,번호로 운영 메모를 삭제합니다.,v420_ops_center,505,command
+system,legacy,운영설정,운영설정,,현재 서버 관리 설정을 확인합니다.,v410_server_management,919,command
+system,legacy,운영설정내보내기,운영설정내보내기,운영백업,현재 서버의 SERVER GUARD 설정만 JSON으로 내보냅니다.,v420_ops_center,259,command
+system,legacy,운영초기설정,운영초기설정,가드초기설정 | 운영설정초기화,현재 서버 구조를 감지해 운영 기능을 자동 연결합니다.,v410_server_management,740,command
+system,legacy,운영통합센터,운영통합센터,통합운영센터 | 관리허브,문의·점검·통계·알림·재난 진입점을 한 화면에 표시합니다.,v790_operations_disaster,985,command
+system,legacy,원정 유물,유물,,,v430_story_expedition,1399,command
+system,legacy,원카드,원카드,원카드게임,,v651_card_games,1095,command
+system,legacy,월간시상식,월간시상식,monthlyawards | monthlyshow,서버의 월간 재미 시상식을 표시합니다.,v1220_chaos_festival_complete,1542,command
+system,legacy,월드강제종료,월드강제종료,forceworldend | endcityworld,활성 월드 사건 또는 시즌을 안전하게 강제 종료합니다.,v1320_black_city_complete,798,command
+system,legacy,월드컵,월드컵,worldcup | tournamentpick,ABADDON 콘텐츠 이상형 월드컵을 시작합니다.,v1220_chaos_festival_complete,1634,command
+system,legacy,월드컵선택,월드컵선택,worldcupchoice | tournamentchoice,월드컵 대진에서 1번 또는 2번을 선택합니다.,v1220_chaos_festival_complete,1643,command
+system,legacy,위험구역,위험구역,돌연변이구역 | 오염구역,,v637_dynamic_events,798,command
+system,legacy,유물,유물,,,v431_growth_balance,442,group
+system,legacy,유물 분해,분해,,,v431_growth_balance,528,command
+system,legacy,유물 장착,장착,,,v431_growth_balance,467,command
+system,legacy,유물 해제,해제,,,v431_growth_balance,486,command
+system,legacy,유저정보,유저정보,,,admin_tools,355,command
+system,legacy,육백,육백,yukbaek | hwatu600,,v1090_integrated_renewal,1460,command
+system,legacy,은행기록,은행기록,,,v40_finance,609,command
+system,legacy,은행이자,은행이자,,,v40_finance,601,command
+system,legacy,음성입장,음성입장,보이스입장,,v433_voice_sanctuary,1395,command
+system,legacy,음성퇴장,음성퇴장,보이스퇴장,,v433_voice_sanctuary,1412,command
+system,legacy,응원,응원,응원해줘,자신 또는 선택한 멤버에게 짧은 응원 메시지를 전합니다.,v620_dialogue_memory,1386,command
+system,legacy,의뢰게시판,의뢰게시판,납품게시판 | 계약게시판,오늘의 자원 납품 계약을 확인합니다.,v770_ruin_farming,1656,command
+system,legacy,의심계정,의심계정,,생성된 지 얼마 안 된 계정을 운영 점검용으로 표시합니다.,v421_utility_pack,419,command
+system,legacy,의약품,의약품,,,conditions,157,command
+system,legacy,이모지규칙목록,이모지규칙목록,,키워드 자동 반응 규칙을 확인합니다.,v411_server_guard_plus,699,command
+system,legacy,이모지규칙삭제,이모지규칙삭제,,번호로 키워드 자동 반응 규칙을 삭제합니다.,v411_server_guard_plus,687,command
+system,legacy,이모지규칙추가,이모지규칙추가,,키워드가 포함된 메시지에 자동 반응할 이모지를 추가합니다.,v411_server_guard_plus,668,command
+system,legacy,이모지웹훅,이모지웹훅,,웹훅 메시지에도 자동 반응할지 설정합니다.,v411_server_guard_plus,794,command
+system,legacy,이모지자동설정,이모지자동설정,,채널 이름을 보고 적절한 자동 반응 모드를 연결합니다.,v411_server_guard_plus,601,command
+system,legacy,이모지채널목록,이모지채널목록,,자동 반응이 연결된 채널 목록을 확인합니다.,v411_server_guard_plus,651,command
+system,legacy,이모지채널삭제,이모지채널삭제,,채널의 자동 이모지 규칙을 제거합니다.,v411_server_guard_plus,635,command
+system,legacy,이모지채널추가,이모지채널추가,,특정 채널에 자동 반응 프리셋을 연결합니다.,v411_server_guard_plus,613,command
+system,legacy,이모지첨부반응,이모지첨부반응,,사진·영상·음성·파일 첨부 스마트 반응을 설정합니다.,v411_server_guard_plus,767,command
+system,legacy,이모지최대개수,이모지최대개수,,메시지 하나에 자동으로 추가할 반응 개수를 설정합니다.,v411_server_guard_plus,783,command
+system,legacy,이모지프리셋목록,이모지프리셋목록,,기본 및 사용자 자동 반응 프리셋을 확인합니다.,v411_server_guard_plus,707,command
+system,legacy,이모지프리셋삭제,이모지프리셋삭제,,사용자 자동 반응 프리셋을 삭제합니다.,v411_server_guard_plus,749,command
+system,legacy,이모지프리셋추가,이모지프리셋추가,,사용자 자동 반응 프리셋을 추가하거나 갱신합니다.,v411_server_guard_plus,724,command
+system,legacy,이모지확장설정,이모지확장설정,reactionexpansionsetup | emojiupgrade,현재 서버에 확장 자동 이모지 프리셋·키워드 규칙과 메시지당 7개 반응을 적용합니다.,v1630_core_rpg_command_city_overhaul,1721,command
+system,legacy,이번주일정,이번주일정,weekschedule | weekevents,앞으로 7일 일정을 확인합니다.,v1190_event_broadcast_collection,551,command
+system,legacy,이벤트달력,이벤트달력,eventcalendar | servercalendar,서버 이벤트 달력을 확인합니다.,v1190_event_broadcast_collection,543,command
+system,legacy,이벤트설정,이벤트설정,eventsettings | chaossettings,돌발 이벤트 자동 출현 채널과 빈도를 설정합니다.,v1220_chaos_festival_complete,640,command
+system,legacy,이벤트순위,이벤트순위,eventranking | chaosranking,서버 돌발 이벤트 순위를 확인합니다.,v1220_chaos_festival_complete,623,command
+system,legacy,이벤트참가,이벤트참가,joinevent | eventaction,진행 중인 돌발 이벤트에 참가합니다.,v1220_chaos_festival_complete,617,command
+system,legacy,이벤트채널설정,이벤트채널설정,세계이벤트채널,,v639_frontier_operations,529,command
+system,legacy,이자,이자,,오늘까지의 예금·대출·사채 이자를 정산합니다.,v40_finance,546,command
+system,legacy,익명응원,익명응원,anonymouscheer | anonymoussupport,관리자가 허용한 서버에서 익명 응원 DM을 보냅니다.,v1220_chaos_festival_complete,1705,command
+system,legacy,익명응원로그,익명응원로그,anonymouslog | supportlog,관리자가 익명 응원 감사 로그를 확인합니다.,v1220_chaos_festival_complete,1728,command
+system,legacy,익명응원신고,익명응원신고,reportanonymous | reportsupport,받은 익명 응원 기록을 관리자 검토 대상으로 표시합니다.,v1220_chaos_festival_complete,1734,command
+system,legacy,인삿말미리보기,인삿말미리보기,인사말미리보기 | 환영미리보기,,v410_server_management,1445,command
+system,legacy,인삿말상태,인삿말상태,인사말상태,,v410_server_management,1471,command
+system,legacy,인삿말설정,인삿말설정,인사말설정 | 환영안내설정,환영 메시지에 표시할 공지·규칙·가입 채널을 지정합니다.,v410_server_management,1409,command
+system,legacy,인카운트도감,인카운트도감,조우도감 | 랜덤이벤트도감,,v632_life_visuals,350,command
+system,legacy,일정,일정,일정센터 | schedule | schedulecenter,서버의 오늘·이번 주 이벤트를 이미지 달력으로 확인합니다.,v1190_event_broadcast_collection,540,command
+system,legacy,일정등록,일정등록,addevent | createevent,관리자가 서버 일정을 등록합니다. `!일정등록 YYYY-MM-DD HH:MM 종류 제목`,v1190_event_broadcast_collection,555,command
+system,legacy,일정삭제,일정삭제,deleteevent | removeevent,관리자가 등록한 서버 일정을 삭제합니다.,v1190_event_broadcast_collection,568,command
+system,legacy,임무,임무,,,v431_growth_balance,563,command
+system,legacy,임무보상,임무보상,,,v431_growth_balance,581,command
+system,legacy,입금,입금,,,v40_finance,585,command
+system,legacy,입찰,입찰,,,v21_reborn,767,command
+system,legacy,자동관리,자동관리,,"도배, 멘션 도배 등 자동 관리를 켜거나 끕니다.",v410_server_management,1557,command
+system,legacy,자동관리기준,자동관리기준,,"도배, 멘션, 누적 횟수와 자동 타임아웃 기준을 설정하거나 확인합니다.",v422_security_center,513,command
+system,legacy,자동관리모드,자동관리모드,,자동관리 적발 시 알림만/삭제/타임아웃 처리 중 하나를 선택합니다.,v422_security_center,493,command
+system,legacy,자동역할,자동역할,,신규 멤버에게 자동 지급할 역할을 지정합니다.,v410_server_management,1495,command
+system,legacy,자동역할해제,자동역할해제,,신규 멤버 자동 역할을 해제합니다.,v410_server_management,1520,command
+system,legacy,자동이모지,자동이모지,,자동 이모지 반응 기능을 켜거나 끕니다.,v411_server_guard_plus,581,command
+system,legacy,자동처벌,자동처벌,,경고 누적 및 자동 관리 타임아웃을 켜거나 끕니다.,v410_server_management,1660,command
+system,legacy,잠수규칙,잠수규칙,afkrules | timeoutpolicy,현재 서버의 턴 시간 초과 처리 방식을 확인합니다.,v1160_game_recovery_validation,704,command
+system,legacy,잠수규칙설정,잠수규칙설정,setafkrules | settimeoutpolicy,턴 시간 초과 처리 방식을 설정합니다.,v1160_game_recovery_validation,712,command
+system,legacy,장면,장면,,,v431_growth_balance,632,command
+system,legacy,재기임무,재기임무,recoverymission,,v1090_integrated_renewal,1835,command
+system,legacy,재난기록,재난기록,공동재난기록 | 비상기록,최근 공동 재난과 기상 기록을 확인합니다.,v790_operations_disaster,652,command
+system,legacy,재난기여도,재난기여도,재난랭킹 | 공동기여도,현재 또는 최근 재난의 기여도 순위를 확인합니다.,v780_server_disaster,566,command
+system,legacy,재난날씨,재난날씨,재난기상 | 비상날씨,현재 공동 재난에 결합된 환경 상태를 확인합니다.,v790_operations_disaster,640,command
+system,legacy,재난납품,재난납품,재난지원 | 공동납품,현재 재난에 필요한 자원을 납품합니다.,v780_server_disaster,520,command
+system,legacy,재난발생,재난발생,재난시작 | 공동재난발생,관리자가 공동 재난을 즉시 시작합니다.,v780_server_disaster,635,command
+system,legacy,재난버프,재난버프,서버버프 | 공동버프,공동 재난 성공으로 활성화된 서버 버프를 확인합니다.,v780_server_disaster,620,command
+system,legacy,재난보상,재난보상,공동재난보상 | 재난정산보상,성공한 공동 재난의 개인 기여 보상을 받습니다.,v780_server_disaster,591,command
+system,legacy,재난상황,재난상황,서버재난 | 재난 | 공동재난,현재 서버 공동 재난과 진행도를 확인합니다.,v780_server_disaster,436,command
+system,legacy,재난알림,재난알림,재난구독 | 비상알림 | disasteralerts | disastersubscribe,서버별 자동 재난 알림 구독 상태를 확인하거나 켜고 끕니다.,v1143_disaster_optin,242,command
+system,legacy,재난알림해제,재난알림해제,재난채널해제 | 비상알림해제 | removedisasteralerts,이 서버의 자동 재난 알림 구독과 지정 채널을 모두 해제합니다.,v1143_disaster_optin,250,command
+system,legacy,재난예보,재난예보,재난감시 | 비상예보,자동 공동 재난의 다음 감시 일정과 설정을 확인합니다.,v790_operations_disaster,624,command
+system,legacy,재난임무,재난임무,재난대응 | 서버재난임무,현재 재난의 대응 역할과 납품 가능 물자를 확인합니다.,v780_server_disaster,457,command
+system,legacy,재난자동,재난자동,재난자동설정,관리자가 자동 재난 발생을 켜거나 끕니다.,v790_operations_disaster,673,command
+system,legacy,재난정산,재난정산,재난종료 | 공동재난정산,관리자가 완료 또는 만료된 공동 재난을 정산합니다.,v780_server_disaster,655,command
+system,legacy,재난참여,재난참여,재난행동 | 공동대응,정찰·구조·수리·방어 역할로 공동 재난에 참여합니다.,v780_server_disaster,475,command
+system,legacy,재난채널,재난채널,재난공지채널,자동 공동 재난을 게시할 채널을 지정합니다.,v790_operations_disaster,692,command
+system,legacy,재대결,재대결,rematch,,v1090_integrated_renewal,1544,command
+system,legacy,재판,재판,citytrial | jurytrial,선택형 시민 재판 이벤트를 엽니다.,v1320_black_city_complete,660,command
+system,legacy,전문화,전문화,전문화상태 | 내전문화,현재 직업과 선택한 전문화를 확인합니다.,v920_world_cycle_professions,873,command
+system,legacy,전문화목록,전문화목록,직업전문화목록 | 전문화리스트,현재 직업에서 선택 가능한 전문화를 확인합니다.,v920_world_cycle_professions,888,command
+system,legacy,전문화변경,전문화변경,직업전문화변경 | 전문화재선택,식량을 사용해 같은 기본 직업의 전문화를 변경합니다.,v920_world_cycle_professions,935,command
+system,legacy,전문화선택,전문화선택,직업전문화선택 | 전문화획득,레벨 20 이상에서 현재 직업의 전문화를 선택합니다.,v920_world_cycle_professions,908,command
+system,legacy,전문화정보,전문화정보,직업전문화정보 | 전문화상세,특정 전문화의 역할과 연동 콘텐츠를 확인합니다.,v920_world_cycle_professions,900,command
+system,legacy,전선선택,전선선택,전쟁전선선택 | 집중전선,관리자가 서버 집중 전선을 선택합니다.,v900_faction_world_state,1099,command
+system,legacy,전설카드,전설카드,legendcard | profilelegend,도시·성향·탈것이 포함된 개인 전설 이미지를 만듭니다.,v1620_living_legends,919,command
+system,legacy,전쟁기부,전쟁기부,세력전쟁기부 | 전선기부,자원을 공동 전쟁에 기부합니다.,v900_faction_world_state,1126,command
+system,legacy,전쟁기여도,전쟁기여도,세력전쟁기여도 | 전선랭킹,현재 세력전쟁 기여 순위를 확인합니다.,v900_faction_world_state,1162,command
+system,legacy,전쟁보상,전쟁보상,세력전쟁보상 | 전선보상,정산된 세력전쟁의 개인 기여 보상을 수령합니다.,v900_faction_world_state,1194,command
+system,legacy,전쟁재개,전쟁재개,새전쟁 | 다음전쟁 | 세력전쟁재개,관리자가 정산된 전쟁 뒤 다음 적대 세력전을 시작합니다.,v900_faction_world_state,1226,command
+system,legacy,전쟁정산,전쟁정산,세력전쟁정산 | 전선정산,관리자가 완료된 세력전쟁을 정산합니다.,v900_faction_world_state,1171,command
+system,legacy,전쟁참여,전쟁참여,세력전쟁참여 | 전선참여,정찰·구조·방어·복구 행동으로 전쟁에 참여합니다.,v900_faction_world_state,1112,command
+system,legacy,전체보상수령,전체보상수령,claimallrewards | claimall,중복 지급 방지 기록을 확인하며 안전한 미수령 보상을 순서대로 수령합니다.,v1000_global_survivor,1525,command
+system,legacy,전파탐색,전파탐색,신호탐색 | 주파수탐색,해독 가능한 폐허 신호를 탐색합니다.,v770_ruin_farming,1571,command
+system,legacy,접수담당,접수담당,,현재 접수의 담당 운영자를 지정합니다.,v423_intake_center,817,command
+system,legacy,접수담당해제,접수담당해제,,현재 접수의 담당자 배정을 해제합니다.,v423_intake_center,841,command
+system,legacy,접수메모,접수메모,,현재 접수에 운영진 전용 처리 메모를 저장합니다.,v423_intake_center,899,command
+system,legacy,접수상태,접수상태,,현재 접수의 처리 상태를 변경합니다.,v423_intake_center,857,command
+system,legacy,접수센터상태,접수센터상태,,접수센터 채널 연결과 처리 통계를 확인합니다.,v423_intake_center,733,command
+system,legacy,접수우선순위,접수우선순위,접수우선도,현재 접수의 우선순위를 변경합니다.,v423_intake_center,878,command
+system,legacy,접수정보,접수정보,,현재 접수 채널의 처리 정보를 확인합니다.,v423_intake_center,802,command
+system,legacy,접수종료,접수종료,,현재 접수를 기록과 함께 종료합니다.,v423_intake_center,1031,command
+system,legacy,접수초기설정,접수초기설정,,접수 카테고리와 처리 로그를 연결하고 현재 채널에 패널을 설치합니다.,v423_intake_center,686,command
+system,legacy,접수패널,접수패널,,현재 채널에 유형별 문의·신고·건의 접수 패널을 설치합니다.,v423_intake_center,727,command
+system,legacy,접수현황,접수현황,,열린 접수 대기열을 상태별로 확인합니다.,v423_intake_center,753,command
+system,legacy,정답,정답,,,daily_quiz,116,command
+system,legacy,정보리뉴얼현황,정보리뉴얼현황,inforenewalstatus,,v1090_integrated_renewal,1737,command
+system,legacy,정보패널,정보패널,infopanel,,v1090_integrated_renewal,1731,command
+system,legacy,정부지원금,정부지원금,재기지원금 | 생존지원금,"보유 식량이 -10,000 이하일 때 24시간마다 최대 250,000 식량의 재기 지원을 받습니다.",v1630_core_rpg_command_city_overhaul,1311,command
+system,legacy,정산조회,정산조회,settlement | settlementlookup,번호 또는 정산 ID로 게임 결과와 잔액 이동을 확인합니다.,v1100_game_city_overhaul,160,command
+system,legacy,제재기록,제재기록,,운영진이 전체 또는 특정 멤버의 최근 제재 기록을 확인합니다.,v422_security_center,620,command
+system,legacy,조커잡기,조커잡기,조커게임 | 도둑잡기,,v651_card_games,1099,command
+system,legacy,좀비도감,좀비도감,,,world_exploration,137,command
+system,legacy,종합랭킹,종합랭킹,,,v21_reborn,711,command
+system,legacy,주간랭킹,주간랭킹,weeklyranking,,v1090_integrated_renewal,1773,command
+system,legacy,주간예능,주간예능,weeklyvariety | weeklyshow,서버의 공개 재미 기록을 주간 예능처럼 정리합니다.,v1220_chaos_festival_complete,1525,command
+system,legacy,주파수기록,주파수기록,전파기록 | 신호기록,전파 해독 기록과 연구 자료를 확인합니다.,v770_ruin_farming,1641,command
+system,legacy,중계설정,중계설정,broadcastsettings | castsettings,관리자가 중계 갱신 간격과 해설을 설정합니다.,v1190_event_broadcast_collection,634,command
+system,legacy,중계응원,중계응원,cheermatch | broadcastcheer,현재 경기 중계에 응원 수를 추가합니다. 결과에는 영향을 주지 않습니다.,v1190_event_broadcast_collection,629,command
+system,legacy,중계종료,중계종료,stopbroadcast | endbroadcast,현재 채널의 자동 경기 중계를 종료합니다.,v1190_event_broadcast_collection,619,command
+system,legacy,지도대시보드,지도대시보드,mapdashboard,,v1090_integrated_renewal,1715,command
+system,legacy,지령결정,지령결정,세계지령결정 | 공동지령결정,관리자가 이번 주 세계 지령을 확정합니다.,v920_world_cycle_professions,856,command
+system,legacy,지령투표,지령투표,세계지령투표 | 공동지령투표,이번 주 세계 지령에 투표합니다.,v920_world_cycle_professions,845,command
+system,legacy,지뢰찾기,지뢰찾기,폐허횡단 | 마인즈,,v638_hardcore_arcade,871,command
+system,legacy,지식 검색,검색,,,v620_dialogue_memory,1239,command
+system,legacy,지식 삭제,삭제,,,v620_dialogue_memory,1325,command
+system,legacy,지식 자동반응,자동반응,,,v620_dialogue_memory,1339,command
+system,legacy,지식검색,지식검색,,승인된 서버 기억을 검색합니다.,v620_dialogue_memory,1259,command
+system,legacy,지역개척정보,지역개척정보,개척지역정보 | 지도지역정보,공동 개척 지역의 상세 상태를 확인합니다.,v810_world_map_ux,619,command
+system,legacy,지역도감,지역도감,regioncodex,서버 공동 탐험 지역과 현재 상태를 확인합니다.,v1000_global_survivor,1195,command
+system,legacy,지역목록,지역목록,,,world_exploration,85,command
+system,legacy,지역선택,지역선택,정찰선택 | 개척선택,재접속 후 진행 중인 지역 정찰 선택을 마무리합니다.,v810_world_map_ux,675,command
+system,legacy,지역이동,지역이동,,,world_exploration,118,command
+system,legacy,지역정보,지역정보,,,world_exploration,98,command
+system,legacy,지역정찰,지역정찰,개척정찰 | 지도정찰,지역을 정찰하고 현장 선택지를 엽니다.,v810_world_map_ux,629,command
+system,legacy,지역탐색,지역탐색,,,world_exploration,153,command
+system,legacy,직업목록,직업목록,,,jobs,9,command
+system,legacy,직업변경,직업변경,,,jobs,68,command
+system,legacy,직업선택,직업선택,,,jobs,21,command
+system,legacy,직업설정,직업설정,,,admin_tools,225,command
+system,legacy,직업정보,직업정보,,,jobs,46,command
+system,legacy,차단,차단,,멤버를 서버에서 차단합니다.,v410_server_management,1139,command
+system,legacy,차단해제,차단해제,,유저 ID로 서버 차단을 해제합니다.,v410_server_management,1170,command
+system,legacy,참전,참전,침공참가,,v30_invasion,264,command
+system,legacy,채널,채널,,현재 채널을 TTS 채팅 채널로 지정합니다.,v433_voice_sanctuary,1872,command
+system,legacy,채널규칙,채널규칙,규칙작성 | 규칙고정 | 채널안내 | 채널가이드 | 서버가이드,,v602_channel_rules,1733,group
+system,legacy,채널규칙 갱신,갱신,,,v602_channel_rules,1944,command
+system,legacy,채널규칙 상태,상태,,,v602_channel_rules,1925,command
+system,legacy,채널규칙 일괄상태,일괄상태,,,v602_channel_rules,1863,command
+system,legacy,채널규칙 일괄설치,일괄설치,일괄 | 대량설치,,v602_channel_rules,1774,command
+system,legacy,채널규칙 일괄시작,일괄시작,일괄재개,,v602_channel_rules,1875,command
+system,legacy,채널규칙 일괄중지,일괄중지,,,v602_channel_rules,1894,command
+system,legacy,채널규칙 자동,자동,,,v602_channel_rules,1762,command
+system,legacy,채널규칙 전체설치,전체설치,서버전체 | 가이드전체 | 전체가이드,,v602_channel_rules,1794,command
+system,legacy,채널규칙 제거,제거,,,v602_channel_rules,1959,command
+system,legacy,채널복제,채널복제,,현재 채널의 권한과 설정을 복제합니다.,v411_server_guard_plus,1206,command
+system,legacy,채널잠금,채널잠금,,현재 채널에서 일반 멤버의 메시지 전송을 잠급니다.,v410_server_management,1246,command
+system,legacy,채널정보,채널정보,,채널 설정과 주요 권한 상태를 확인합니다.,v420_ops_center,279,command
+system,legacy,채널해제,채널해제,,현재 채널의 메시지 잠금을 원래 상태로 복원합니다.,v410_server_management,1284,command
+system,legacy,청소,청소,,현재 채널의 최근 메시지를 일괄 삭제합니다.,v410_server_management,1199,command
+system,legacy,청소링크,청소링크,,최근 링크 포함 메시지만 삭제합니다.,v411_server_guard_plus,971,command
+system,legacy,청소봇,청소봇,,최근 봇 메시지만 삭제합니다.,v411_server_guard_plus,965,command
+system,legacy,청소유저,청소유저,,특정 멤버의 최근 메시지만 삭제합니다.,v411_server_guard_plus,959,command
+system,legacy,청소첨부,청소첨부,,최근 첨부 파일 메시지만 삭제합니다.,v411_server_guard_plus,977,command
+system,legacy,체력설정,체력설정,,,admin_tools,293,command
+system,legacy,체포,체포,arrest | cityarrest,단서와 대상 수배도를 사용해 선택형 체포를 시도합니다.,v1320_black_city_complete,634,command
+system,legacy,초기화,초기화,,내 개인 목소리 설정을 지우고 서버 기본값을 사용합니다.,v433_voice_sanctuary,1799,command
+system,legacy,초대차단,초대차단,,Discord 초대 링크 자동 삭제를 켜거나 끕니다.,v410_server_management,1569,command
+system,legacy,초대허용목록,초대허용목록,,Discord 초대 링크 차단에서 제외된 채널을 확인합니다.,v422_security_center,565,command
+system,legacy,초대허용채널,초대허용채널,,Discord 초대 링크 차단에서 제외할 채널을 추가합니다.,v422_security_center,545,command
+system,legacy,초대허용해제,초대허용해제,,Discord 초대 링크 허용 채널에서 제거합니다.,v422_security_center,555,command
+system,legacy,초보센터,초보센터,신규안내 | 첫걸음센터,처음 들어온 생존자를 위한 RPG 시작 순서와 주요 카테고리를 안내합니다.,v1630_core_rpg_command_city_overhaul,1353,command
+system,legacy,최근가입,최근가입,,최근 서버에 들어온 멤버를 가입 순서대로 확인합니다.,v421_utility_pack,393,command
+system,legacy,최근게임,최근게임,recentgame,,v1090_integrated_renewal,1593,command
+system,legacy,최근정산,최근정산,recentsettlement | latestsettlement,가장 최근 게임 정산을 확인합니다.,v1100_game_city_overhaul,164,command
+system,legacy,추방,추방,,멤버를 서버에서 추방합니다.,v410_server_management,1108,command
+system,legacy,추심,추심,,현재 사채 추심 위험과 경고를 확인합니다.,v40_finance,576,command
+system,legacy,추천버튼설정,추천버튼설정,상황추천설정 | smartrecommendations | recommendationsettings,상태에 따라 달라지는 다음 행동 추천 버튼을 켜거나 끕니다.,v1660_first_survival_live_qa,702,command
+system,legacy,축제대화,축제대화,talkabaddon | abaddontalk,아바돈과 오늘의 대화를 나눕니다.,v1220_chaos_festival_complete,1038,command
+system,legacy,축제밸런스,축제밸런스,chaosbalance | festivalbalance,서버 밸런스 게임 질문을 시작합니다.,v1220_chaos_festival_complete,1611,command
+system,legacy,축제시작,축제시작,startfestival,관리자가 도시 축제 연출을 시작합니다.,v1620_living_legends,1066,command
+system,legacy,축제운세,축제운세,festivalfortune | dailyfestivalfortune,사용자별 오늘의 운세와 행운 숫자를 확인합니다.,v1220_chaos_festival_complete,1593,command
+system,legacy,출금,출금,,,v40_finance,589,command
+system,legacy,출석도장,출석도장,festivalattendance | festivalcheckin,하루 한 번 축제 출석 도장을 받습니다.,v1220_chaos_festival_complete,1807,command
+system,legacy,친목설정,친목설정,socialsettings | communitysettings,익명 응원 등 친목 기능을 서버별로 설정합니다.,v1220_chaos_festival_complete,1696,command
+system,legacy,침공,침공,서버침공 | 침공현황,,v30_invasion,234,command
+system,legacy,침공기록,침공기록,,,v30_invasion,356,command
+system,legacy,침공랭킹,침공랭킹,침공기여도,,v30_invasion,343,command
+system,legacy,침공상점,침공상점,,,v30_invasion,369,command
+system,legacy,침공시작,침공시작,,,v30_invasion,405,command
+system,legacy,침공종료,침공종료,,,v30_invasion,429,command
+system,legacy,침공토큰지급,침공토큰지급,,,v30_invasion,438,command
+system,legacy,칭찬릴레이,칭찬릴레이,praiserelay | complimentchain,다른 사용자에게 공개 칭찬을 이어갑니다.,v1220_chaos_festival_complete,1675,command
+system,legacy,칭호도감,칭호도감,titlecatalog | titles,혼돈의 축제 칭호 도감을 확인합니다.,v1220_chaos_festival_complete,1866,command
+system,legacy,칭호지급,칭호지급,,,admin_tools,278,command
+system,legacy,카드게임,카드게임,카드게임메뉴 | 카드놀이,,v651_card_games,1078,command
+system,legacy,카드게임룰,카드게임룰,cardrules | cardgamerules,,v1060_authentic_card_games,1943,command
+system,legacy,카드대시보드,카드대시보드,carddashboard | cardcatalog | cardgamesdashboard | 카드도감,,v1091_card_dashboard_hotfix,269,command
+system,legacy,카드뒷면,카드뒷면,cardbacks | cardbackcatalog,보유 카드 뒷면 스킨을 확인합니다.,v1220_chaos_festival_complete,1876,command
+system,legacy,카드룸,카드룸,cardroom | cardlobby,,v1090_integrated_renewal,1517,command
+system,legacy,카드리그,카드리그,cardleague,,v1090_integrated_renewal,1763,command
+system,legacy,카드스킨,카드스킨,cardskin | cardback,카드 뒷면 스킨을 확인하거나 선택합니다.,v1100_game_city_overhaul,221,command
+system,legacy,캐릭터꾸미기,캐릭터꾸미기,characterstyle | avatarstyle,오라·포즈·배경 외형 설정을 확인하거나 변경합니다.,v1620_living_legends,1003,command
+system,legacy,켜기,켜기,,저장된 채널에서 자동 TTS를 켭니다.,v433_voice_sanctuary,1893,command
+system,legacy,퀴즈랭킹,퀴즈랭킹,,,daily_quiz,160,command
+system,legacy,퀴즈목록,퀴즈목록,,,daily_quiz,209,command
+system,legacy,퀴즈삭제,퀴즈삭제,,,daily_quiz,197,command
+system,legacy,퀴즈알림상태,퀴즈알림상태,,,v31_quiz_notify,234,command
+system,legacy,퀴즈알림설정,퀴즈알림설정,,,v31_quiz_notify,205,command
+system,legacy,퀴즈알림해제,퀴즈알림해제,,,v31_quiz_notify,225,command
+system,legacy,퀴즈추가,퀴즈추가,,,daily_quiz,183,command
+system,legacy,타임아웃,타임아웃,,멤버를 지정한 기간 동안 타임아웃합니다.,v410_server_management,1047,command
+system,legacy,타임아웃해제,타임아웃해제,,멤버의 타임아웃을 즉시 해제합니다.,v410_server_management,1077,command
+system,legacy,탈것도감,탈것도감,mounts | mountcatalog,탈것 8종과 해금 상태를 확인합니다.,v1620_living_legends,976,command
+system,legacy,탈것탑승,탈것탑승,ride | mount,해금한 탈것을 대표 탈것으로 설정합니다.,v1620_living_legends,988,command
+system,legacy,탈옥,탈옥,escapejail | jailbreak,수감 중일 때 탈옥을 시도합니다.,v1320_black_city_complete,652,command
+system,legacy,탐사보상,탐사보상,claimexpedition | expeditionreward,정산된 글로벌 탐사 작전의 개인 기여 보상을 받습니다.,v1000_global_survivor,1457,command
+system,legacy,탐사작전,탐사작전,expeditionoperation | globalexpedition,이번 주 서버 공동 글로벌 탐사 작전을 확인합니다.,v1000_global_survivor,1277,command
+system,legacy,탐사정산,탐사정산,settleexpedition | expeditionsettle,완료된 주간 글로벌 탐사 작전을 한 번만 정산합니다.,v1000_global_survivor,1404,command
+system,legacy,탐사참가,탐사참가,joinexpedition | expeditionjoin,정찰·의무·기술·경계 역할로 주간 탐사에 참가합니다.,v1000_global_survivor,1296,command
+system,legacy,탐사행동,탐사행동,expeditionaction | globalexpeditionaction,신호분석·구조·복구·확보 행동으로 공동 진행도를 올립니다.,v1000_global_survivor,1325,command
+system,legacy,탐험,탐험,festivalexpedition | chaosadventure,개인 선택형 탐험을 시작하거나 현재 상태를 확인합니다.,v1220_chaos_festival_complete,1251,command
+system,legacy,탐험가방,탐험가방,expeditionbag | adventurebag,탐험에서 획득한 보물을 확인합니다.,v1220_chaos_festival_complete,1347,command
+system,legacy,탐험기록,탐험기록,지도기록 | 개척기록,개인 지역 정찰·발견 기록을 확인합니다.,v810_world_map_ux,916,command
+system,legacy,턴시간설정,턴시간설정,setturntime | turntimeout,게임 턴 제한시간을 20~600초로 설정합니다.,v1160_game_recovery_validation,725,command
+system,legacy,테이블스킨,테이블스킨,tableskins | tablethemes,보유 게임 테이블 스킨을 확인합니다.,v1220_chaos_festival_complete,1881,command
+system,legacy,테이블정보,테이블정보,tableinfo,,v1090_integrated_renewal,1568,command
+system,legacy,테이블테마,테이블테마,tabletheme | gametheme,게임 테이블 테마를 확인하거나 선택합니다.,v1100_game_city_overhaul,209,command
+system,legacy,텍사스홀덤,텍사스홀덤,홀덤 | texasholdem | holdem,,v1010_companion_card_games,1002,command
+system,legacy,토너먼트,토너먼트,tournament,,v1050_unified_expansion,1354,command
+system,legacy,토너먼트개설,토너먼트개설,createtournament,,v1050_unified_expansion,1325,command
+system,legacy,토너먼트결과,토너먼트결과,tournamentresult,,v1050_unified_expansion,1377,command
+system,legacy,토너먼트시작,토너먼트시작,starttournament,,v1050_unified_expansion,1365,command
+system,legacy,토너먼트참가,토너먼트참가,jointournament,,v1050_unified_expansion,1342,command
+system,legacy,퇴장채널,퇴장채널,,멤버 퇴장 메시지 채널을 지정합니다.,v410_server_management,1486,command
+system,legacy,투표,투표,,현재 채널에 2~10개 선택지 투표를 만듭니다.,v411_server_guard_plus,1134,command
+system,legacy,투표종료,투표종료,,현재 채널의 아바돈 투표 메시지를 집계합니다.,v420_ops_center,519,command
+system,legacy,튜토리얼,튜토리얼,,,v32_codex_settings_tutorial,240,command
+system,legacy,튜토리얼건너뛰기,튜토리얼건너뛰기,,,v32_codex_settings_tutorial,261,command
+system,legacy,트로피룸,트로피룸,chaostrophyroom | mytrophies,내 업적·비밀·수집 트로피를 확인합니다.,v1220_chaos_festival_complete,1886,command
+system,legacy,파산대시보드,파산대시보드,bankruptcydashboard,,v1090_integrated_renewal,1831,command
+system,legacy,판정로그,판정로그,rulinglog | gamerulinglog,판정 요청과 연결된 공개 게임 상태를 확인합니다.,v1160_game_recovery_validation,754,command
+system,legacy,판정요청,판정요청,게임신고 | rulingrequest | reportgame,현재 또는 최근 게임의 공개 로그·정산 검토를 요청합니다.,v1160_game_recovery_validation,734,command
+system,legacy,패치공지게시,패치공지게시,업데이트공지게시,현재 버전 패치노트를 지정 채널에 수동 게시합니다.,v720_coop_cleanup,837,command
+system,legacy,패치공지상태,패치공지상태,업데이트공지상태,패치 자동 공지 설정과 게시 이력을 확인합니다.,v720_coop_cleanup,822,command
+system,legacy,패치자동공지,패치자동공지,업데이트자동공지,새 버전 자동 공지를 켜거나 끕니다.,v720_coop_cleanup,809,command
+system,legacy,패치채널,패치채널,업데이트채널,패치 자동 공지가 올라갈 채널을 지정합니다.,v720_coop_cleanup,793,command
+system,legacy,펫,펫,,,v32_codex_settings_tutorial,140,command
+system,legacy,펫설정,펫설정,,,admin_tools,238,command
+system,legacy,편의센터,편의센터,quickhub | conveniencehub,자주 쓰는 기능과 진행 상태를 한 화면에 표시합니다.,v1620_living_legends,845,command
+system,legacy,평판,평판,세력평판 | 내평판,세력별 평판·증표를 확인합니다.,v900_faction_world_state,653,command
+system,legacy,폐기후보,폐기후보,삭제후보 | 정리후보,삭제 전에 관리자 승인이 필요한 중복 후보를 표시합니다.,v731_duplicate_stability,241,command
+system,legacy,폐품감정,폐품감정,폐품확인 | 폐품분석,미감정 폐품 하나를 분석합니다.,v770_ruin_farming,1467,command
+system,legacy,폐품분해,폐품분해,폐품해체 | 폐품재활용,감정 완료 폐품을 분해해 재료를 회수합니다.,v770_ruin_farming,1489,command
+system,legacy,폭탄넘기기,폭탄넘기기,passbomb | throwbomb,내가 가진 폭탄을 참가자에게 넘깁니다.,v1220_chaos_festival_complete,724,command
+system,legacy,폭탄돌리기,폭탄돌리기,hotpotato | bombgame,폭탄 돌리기 로비를 엽니다.,v1220_chaos_festival_complete,692,command
+system,legacy,폭탄참가,폭탄참가,joinbomb | joinhotpotato,진행 중인 폭탄 돌리기에 참가합니다.,v1220_chaos_festival_complete,710,command
+system,legacy,프로필꾸미기,프로필꾸미기,customizeprofile | setcosmetic,칭호·배경·테이블·카드뒷면을 선택합니다.,v1220_chaos_festival_complete,1844,command
+system,legacy,핑,핑,지연시간,아바돈의 Discord 연결 지연시간을 표시합니다.,v421_utility_pack,524,command
+system,legacy,하이라이트상태,하이라이트상태,스타보드상태,하이라이트 보드 설정을 확인합니다.,v790_operations_disaster,1174,command
+system,legacy,하이라이트설정,하이라이트설정,스타보드설정,반응이 모인 메시지를 보관할 하이라이트 채널을 설정합니다.,v790_operations_disaster,1161,command
+system,legacy,하이라이트제거,하이라이트제거,스타보드제거,관리자가 원본 메시지 ID의 하이라이트를 제거합니다.,v790_operations_disaster,1241,command
+system,legacy,하이라이트추가,하이라이트추가,스타보드추가,관리자가 현재 채널의 메시지 ID를 하이라이트에 추가합니다.,v790_operations_disaster,1229,command
+system,legacy,한마디,한마디,아바돈한마디,ABADDON 세계관의 짧은 원문 한마디를 표시합니다.,v620_dialogue_memory,1381,command
+system,legacy,할일,할일,tasks | missiontracker | 임무추적 | trackmission,현재 진행 중인 콘텐츠와 미수령 보상을 추적합니다.,v1000_global_survivor,1105,command
+system,legacy,현상수배,현상수배,citybounty | bountyboard,참여형 사용자 현상금 임무를 등록하거나 확인합니다.,v1320_black_city_complete,615,command
+system,legacy,호송모집,호송모집,무역호송모집 | 호송대모집,개인 자원을 적재해 서버 호송대를 모집합니다.,v900_faction_world_state,853,command
+system,legacy,호송보상,호송보상,무역호송보상 | 호송대보상,정산된 호송의 개인 보상을 수령합니다.,v900_faction_world_state,989,command
+system,legacy,호송상태,호송상태,무역호송 | 호송대상태,현재 서버 호송대의 진행 상태를 확인합니다.,v900_faction_world_state,931,command
+system,legacy,호송정산,호송정산,무역호송정산 | 호송대정산,도착한 호송 결과를 한 번만 정산합니다.,v900_faction_world_state,950,command
+system,legacy,호송참가,호송참가,무역호송참가 | 호송대참가,진행 중인 호송 모집에 역할을 선택해 참가합니다.,v900_faction_world_state,890,command
+system,legacy,호송출발,호송출발,무역호송출발 | 호송대출발,모집 중인 호송대를 출발시킵니다.,v900_faction_world_state,912,command
+system,legacy,호송취소,호송취소,무역호송취소 | 호송대취소,출발 전 호송 모집을 취소하고 화물을 반환합니다.,v900_faction_world_state,1021,command
+system,legacy,혼돈백업,혼돈백업,chaosbackup | festivalbackup,관리자가 혼돈의 축제 서버 데이터와 구성원 재미 데이터를 백업합니다.,v1220_chaos_festival_complete,2006,command
+system,legacy,혼돈복구,혼돈복구,chaosrestore | festivalrestore,혼돈 백업 ID로 서버 재미 데이터를 복원합니다.,v1220_chaos_festival_complete,2022,command
+system,legacy,혼돈설정,혼돈설정,festivalsettings | funsettings,혼돈의 축제 서버 설정을 확인합니다.,v1220_chaos_festival_complete,1993,command
+system,legacy,혼돈축제,혼돈축제,재미기능 | chaosfestival | funhub,v12.2.0 재미 기능 전체 메뉴를 엽니다.,v1220_chaos_festival_complete,562,command
+system,legacy,화투규칙,화투규칙,hwaturules,,v1050_unified_expansion,1557,command
+system,legacy,화투규칙설정,화투규칙설정,sethwaturules,,v1050_unified_expansion,1565,command
+system,legacy,화투도감,화투도감,hwatucatalog | hwatudeck,전통 문양 기반 48장 화투 이미지 도감을 확인합니다.,v1100_game_city_overhaul,197,command
+system,legacy,화투수집,화투수집,hwatucollection | hwatucodex,수집한 화투 월과 48장 도감 진행도를 확인합니다.,v1190_event_broadcast_collection,659,command
+system,legacy,화투패보기,화투패보기,viewhwatu | hwatuart,ABADDON 화투 이미지 도감을 엽니다.,v1100_game_city_overhaul,205,command
+system,legacy,환영채널,환영채널,,신규 멤버 환영 메시지 채널을 지정합니다.,v410_server_management,1392,command
+system,legacy,환영테마,환영테마,새싹테마 | 신입테마,신규 멤버 환영 패널 테마를 고르고 미리봅니다.,v711_cute_interactions,1336,command
+system,legacy,훌라,훌라,hoola | hula,,v1090_integrated_renewal,1432,command
+system,legacy,휴식,휴식,,,status,144,command
+world,city_decor,공방,공방,폐품공방 | 복구공방,미감정·감정 완료 폐품과 연구 상태를 확인합니다.,v770_ruin_farming,1451,command
+world,city_decor,도시꾸미기,도시꾸미기,citydecorate | decoratecity,드롭다운과 방향 버튼으로 도시 부품을 배치합니다.,v1500_neon_abyss,670,command
+world,city_decor,도시꾸미기복구,도시꾸미기복구,citydecorrestore,가장 최근 도시 장식 백업을 복구합니다.,v1500_neon_abyss,676,command
+world,city_decor,도시부품,도시부품,cityparts | citypartcatalog,꾸밀 수 있는 도시 부품 이미지 목록 또는 상세 이미지를 표시합니다.,v1500_neon_abyss,651,command
+world,city_decor,도시부품검수,도시부품검수,citypartaudit | cityworkshopaudit,도시 꾸미기 20종의 파일명·라벨·크기·투명도·공방 호환을 검사합니다.,v1630_core_rpg_command_city_overhaul,1673,command
+world,city_decor,폐품수리,폐품수리,폐품복구 | 공방수리,감정 완료 폐품을 자원으로 수리합니다.,v770_ruin_farming,1523,command
+world,creator,사용자사건,사용자사건,communityevent | playevent,공개된 사용자 제작 선택형 사건을 플레이합니다.,v1700_creator_forge_season6,758,command
+world,creator,원정 목록,목록,,,v430_story_expedition,1076,command
+world,creator,지식 목록,목록,,,v620_dialogue_memory,1224,command
+world,creator,채널규칙 목록,목록,,,v602_channel_rules,1907,command
+world,creator,콘텐츠공방,콘텐츠공방,,관리자가 한국어·English 선택형 사건을 제작·테스트·공개하는 콘텐츠 공방 그룹입니다.,v1720_living_world_bonds,865,group
+world,creator,콘텐츠공방 목록,목록,list | library,서버의 공개 사용자 사건 목록을 엽니다.,v1720_living_world_bonds,869,command
+world,creator,콘텐츠공방 비공개,비공개,unpublish | disable,공개 사건을 비공개로 전환합니다.,v1720_living_world_bonds,881,command
+world,creator,콘텐츠공방 플레이,플레이,play | event,공개 사용자 사건을 플레이합니다.,v1720_living_world_bonds,875,command
+world,creator,콘텐츠목록,콘텐츠목록,creatorlibrary | eventlibrary,서버에 공개된 사용자 제작 사건을 확인합니다.,v1700_creator_forge_season6,746,command
+world,creator,콘텐츠비공개,콘텐츠비공개,unpublishevent | eventdisable,관리자가 공개 사건을 비공개로 전환합니다.,v1700_creator_forge_season6,777,command
+world,neon,1500시각검수,1500시각검수,v1500visualaudit,글꼴·도시 부품·연출 자산을 읽기 전용으로 검사합니다.,v1500_neon_abyss,703,command
+world,neon,1500통합검수,1500통합검수,v1500audit,v15.0 기능·영문 접근·글꼴·자산·상태를 읽기 전용 검사합니다.,v1500_neon_abyss,1009,command
+world,neon,경기요약,경기요약,matchsummary | replaysummary,최근 공개 기록으로 간단한 경기 요약을 저장합니다.,v1500_neon_abyss,963,command
+world,neon,공격대,공격대,dimensionraid | abyssraid,차원 공격대 보스 상태를 표시합니다.,v1500_neon_abyss,867,command
+world,neon,공격대소환,공격대소환,summonriftboss,관리자가 연출형 차원 보스를 소환합니다.,v1500_neon_abyss,875,command
+world,neon,공격대참가,공격대참가,joinraid,현재 차원 공격대에 참가합니다.,v1500_neon_abyss,879,command
+world,neon,내진행,내진행,myprogress | continuehub,현재 진행 중인 도시·차원·게임·사건을 요약합니다.,v1620_living_legends,858,command
+world,neon,대화기억요약,대화기억요약,conversationmemory | chatmemorysummary,내 서버 대화·기억 사용 통계를 요약합니다.,v1500_neon_abyss,1003,command
+world,neon,대화모드,대화모드,chatmode | conversationmode,아바돈 대화를 문맥형 또는 기존 기본형으로 전환합니다.,v1500_neon_abyss,983,command
+world,neon,대화상태,대화상태,chatstatus | conversationstatus,문맥형 대화의 언어·보존 시간·기억 상태를 확인합니다.,v1500_neon_abyss,992,command
+world,neon,도시사진,도시사진,cityphoto | citysnapshot,현재 도시 상태와 장식을 기념 사진으로 저장합니다.,v1500_neon_abyss,645,command
+world,neon,도시전경,도시전경,citypanorama | neonpanorama,정보 패널을 줄인 꾸민 도시 전경을 표시합니다.,v1500_neon_abyss,641,command
+world,neon,도시지도,도시지도,,한글 안전 글꼴과 장식 레이어를 사용하는 NEON ABYSS 도시 지도를 표시합니다.,v1500_neon_abyss,635,command
+world,neon,리플레이,리플레이,replaystudio | replaylist,저장된 공개 경기 요약과 명장면을 표시합니다.,v1500_neon_abyss,967,command
+world,neon,보스방어,보스방어,bossdefend | raiddefend,공격대 방어 태세로 지원 점수를 올립니다.,v1500_neon_abyss,899,command
+world,neon,보스제작,보스제작,createboss | bosscreator,서버 전용 공격대 보스 초안을 제작합니다.,v1500_neon_abyss,911,command
+world,neon,서버연합,서버연합,serverfederation | federation,서버 연합을 만들거나 받은 초대를 승인해 가입합니다.,v1500_neon_abyss,830,command
+world,neon,세계연표,세계연표,worldtimeline | dimensiontimeline,차원 발견·캠페인 결말·보스 격파를 시간순으로 표시합니다.,v1500_neon_abyss,972,command
+world,neon,시설강화,시설강화,upgradefacility | shipupgrade,서버 공동 우주선 시설을 강화합니다.,v1500_neon_abyss,794,command
+world,neon,연출도감,연출도감,effectcatalog | fxpreview,공격·채집·제작·탐험 이모지 연출 도감을 표시합니다.,v1500_neon_abyss,698,command
+world,neon,연출설정,연출설정,effectsettings | fxsettings,행동 연출을 끄기·간단·화려 단계로 설정합니다.,v1500_neon_abyss,692,command
+world,neon,연합망,연합망,federationnetwork | servernetwork,서버 연합망 참여 상태를 확인하거나 켜고 끕니다.,v1500_neon_abyss,823,command
+world,neon,연합순위,연합순위,federationranking | servernetworkranking,연합망에 참여한 서버 연합 순위를 집계합니다.,v1500_neon_abyss,856,command
+world,neon,연합초대,연합초대,federationinvite | inviteserver,연합 소유 서버가 연합망을 켠 다른 서버를 ID로 초대합니다.,v1500_neon_abyss,847,command
+world,neon,우주선,우주선,spaceship | abyssship,서버 공동 차원 우주선 상태를 표시합니다.,v1500_neon_abyss,789,command
+world,neon,지역보기,지역보기,districtview | viewdistrict,도시 지역의 전용 이미지를 표시합니다.,v1500_neon_abyss,682,command
+world,neon,차원계보,차원계보,dimensionlineage | worldlineage,도시의 차원·캠페인·보스 영구 기록을 표시합니다.,v1500_neon_abyss,977,command
+world,neon,차원기지,차원기지,dimensionbase | riftbase,서버 차원 기지와 우주선 시설을 한 화면에 표시합니다.,v1500_neon_abyss,800,command
+world,neon,차원문,차원문,dimensiongate | abyssgate,현재 차원 항해 상태를 확인합니다.,v1500_neon_abyss,713,command
+world,neon,차원보스공격,차원보스공격,riftbossattack | attackriftboss,차원 보스의 약점을 공격합니다.,v1500_neon_abyss,885,command
+world,neon,차원지도,차원지도,dimensionmap | riftmap,발견한 차원과 현재 진행도를 확인합니다.,v1500_neon_abyss,733,command
+world,neon,차원채집,차원채집,dimensiongather | riftgather,통합 채집센터의 차원 채집을 즉시 진행합니다.,v1620_living_legends,834,command
+world,neon,차원탈출,차원탈출,dimensionescape | escaperift,현재 차원 진행을 포기하고 안전하게 귀환합니다.,v1500_neon_abyss,739,command
+world,neon,차원탐사,차원탐사,dimensionexplore | scanrift,새로운 주간 차원을 발견하거나 현재 차원을 진행합니다.,v1500_neon_abyss,719,command
+world,neon,창작센터,창작센터,creatorstudio | contentstudio,서버 사용자 제작 콘텐츠 현황을 확인합니다.,v1500_neon_abyss,906,command
+world,neon,캠페인,캠페인,campaignhub | abysscampaign,아바돈 게임 마스터 캠페인 상태를 확인합니다.,v1500_neon_abyss,745,command
+world,neon,캠페인참가,캠페인참가,joincampaign,현재 캠페인에 참가하거나 새 캠페인을 시작합니다.,v1500_neon_abyss,751,command
+world,neon,콘텐츠검색,콘텐츠검색,contentsearch | searchcontent,연합망에 공개된 사용자 콘텐츠를 검색합니다.,v1500_neon_abyss,943,command
+world,neon,콘텐츠공개,콘텐츠공개,publishcontent,검수된 사용자 제작 콘텐츠를 서버에 공개합니다.,v1500_neon_abyss,927,command
+world,neon,콘텐츠공유,콘텐츠공유,contentsharing | sharecontent,서버 제작 콘텐츠의 연합망 공유를 켜거나 끕니다.,v1500_neon_abyss,937,command
+world,neon,콘텐츠교환소,콘텐츠교환소,contentexchange | contentmarketplace,현재 서버에서 공개한 사용자 콘텐츠를 표시합니다.,v1500_neon_abyss,958,command
+world,neon,콘텐츠설치,콘텐츠설치,contentinstall | installcontent,연합망 공개 콘텐츠를 현재 서버에 복제 설치합니다.,v1500_neon_abyss,952,command
+world,neon,퀘스트제작,퀘스트제작,createquest,검수 가능한 사용자 제작 퀘스트 초안을 만듭니다.,v1500_neon_abyss,920,command
+world,neon,크루,크루,crew | crewstatus,내 크루 또는 서버 크루 목록을 표시합니다.,v1500_neon_abyss,767,command
+world,neon,크루임무,크루임무,crewmission,크루 공동 임무를 진행합니다.,v1500_neon_abyss,781,command
+world,neon,크루창설,크루창설,createcrew,새 고정 파티 크루를 창설합니다.,v1500_neon_abyss,774,command
+world,neon,크루채집,크루채집,crewgather,통합 채집센터의 크루 공동 채집을 즉시 진행합니다.,v1620_living_legends,838,command
+world,neon,크루합동기,크루합동기,crewcombo | comboskill,크루 역할 조합과 합동기 기록을 확인합니다.,v1620_living_legends,1018,command
+world,neon,항해출발,항해출발,launchvoyage | startvoyage,서버 우주선으로 선택한 차원 또는 무작위 차원 항해를 시작합니다.,v1500_neon_abyss,809,command
+world,neon,행동선택,행동선택,chooseaction | abysschoice,캠페인에서 전투·협상·탐사 중 하나를 선택합니다.,v1500_neon_abyss,758,command
+world,world_misc,1710세계검수,1710세계검수,v1710audit | livingworldaudit,살아 있는 세계의 일일 갱신·날씨·위험·시장·사건 연결을 검사합니다.,v1720_living_world_bonds,1102,command
+world,world_misc,살아있는세계,살아있는세계,livingworld | worldnow,오늘의 시간·날씨·시장·도시 지표와 세계 사건을 한 화면에서 확인합니다.,v1720_living_world_bonds,906,command
+world,world_misc,세계갱신,세계갱신,refreshworld | worldrefresh,관리자가 오늘의 살아 있는 세계 상태를 강제로 다시 생성합니다.,v1720_living_world_bonds,972,command
+world,world_misc,세계방송설정,세계방송설정,worldbroadcast | livingworldchannel,관리자가 현재 채널의 일일 세계 속보 자동 방송을 켜거나 끕니다.,v1720_living_world_bonds,980,command
+world,world_misc,세계속보,세계속보,worldbulletin | worldnews,오늘의 날씨·전력·세력 긴장과 주요 사건 속보를 확인합니다.,v1720_living_world_bonds,912,command
+world,world_misc,세계시장,세계시장,worldmarket | dailymarket,오늘의 변동 시장 가격을 확인하거나 보급품을 구매합니다.,v1720_living_world_bonds,938,command
+world,world_misc,세계참여,세계참여,worldaction | worldparticipate,오늘의 세계 사건 선택지 1~3에 참여합니다.,v1720_living_world_bonds,927,command
+world,world_misc,오늘의세계사건,오늘의세계사건,worldevent | dailyevent,오늘의 서버 공동 세계 사건을 확인하고 버튼으로 한 번 참여합니다.,v1720_living_world_bonds,922,command
+world,world_misc,지역위험도,지역위험도,regionrisk | dangermap,오늘의 지역별 위험도를 높은 순서로 확인합니다.,v1720_living_world_bonds,917,command
