@@ -1,0 +1,118 @@
+{
+  "project": "ABADDON Official Site",
+  "version": "17.4.0",
+  "generated_at": "2026-08-06T23:14:20.114918+09:00",
+  "summary": {
+    "checks_total": 20,
+    "checks_passed": 20,
+    "checks_failed": 0,
+    "local_reference_failures": 0,
+    "duplicate_html_ids": 0
+  },
+  "checks": [
+    {
+      "name": "index.html v17.4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html duplicate ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html local refs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "en/index.html v17.4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "en/index.html duplicate ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "en/index.html local refs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "commands.html v17.4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "commands.html duplicate ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "commands.html local refs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "en/commands.html v17.4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "en/commands.html duplicate ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "en/commands.html local refs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "updates.html v17.4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "updates.html duplicate ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "updates.html local refs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "en/updates.html v17.4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "en/updates.html duplicate ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "en/updates.html local refs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "KO config version",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "EN config version",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "notes": [
+    "Korean and English pages were updated separately.",
+    "The private owner proof files are intentionally excluded from the website package."
+  ]
+}

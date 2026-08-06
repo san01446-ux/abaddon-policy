@@ -1,0 +1,13 @@
+ABADDON 공식 홈페이지 v17.4.0 업로드 가이드
+
+1. 기존 홈페이지 전체 백업
+2. ZIP 내부 파일을 웹 루트에 업로드
+3. index.html, commands.html, updates.html 및 en/ 폴더 함께 교체
+4. config.js와 en/config.js의 초대 링크·Discord 링크 유지 확인
+5. 브라우저 캐시를 비우고 다음 항목 확인
+   - v17.4.0 표시
+   - 빠른 이동 v17.4 SYSTEM FUSION
+   - 한국어/English 페이지 분리
+   - 명령어 페이지 신규 허브 안내
+   - 업데이트 기록 v17.4.0
+6. 모바일에서 빠른 이동 버튼과 긴 페이지 접힘 확인
