@@ -1,0 +1,14 @@
+ABADDON OFFICIAL SITE v18.0.1 CLEAN EDITION
+IMAGE RATIO HOTFIX
+
+수정:
+- HOME 상단 크루 기함 카드 최대 폭/4:5 비율 고정
+- '아바돈의 세계' 갤러리를 2열 규격으로 재정렬
+- 탈것 전체 도감은 원본 1600:1060 비율 유지
+- 솔로 원정 / BLACK CITY / 카지노 / 시즌 스토리 프리뷰를 안정적인 16:9 프레임으로 통일
+- UI 스크린샷에 object-fit: contain 적용하여 좌우/상하 강제 잘림 제거
+- 태블릿/모바일에서 2열→1열 반응형 전환
+- 기존 페이지/링크/자산 삭제 없음
+
+적용:
+현재 CLEAN EDITION 사이트의 최상위에 PATCH ONLY ZIP 내용물을 덮어쓰기하세요.
