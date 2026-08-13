@@ -1,0 +1,15 @@
+{
+  "website_version": "4.5.5",
+  "bot_version": "19.0.3",
+  "checks": {
+    "ko_config_bot_1903": true,
+    "ko_config_web_455": true,
+    "en_config_bot_1903": true,
+    "ko_updates_1903": true,
+    "en_updates_1903": true,
+    "ko_command_diag": true,
+    "en_command_diag": true,
+    "legacy_1902_milestone_preserved": true
+  },
+  "result": "PASS"
+}

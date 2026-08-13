@@ -1,0 +1,7 @@
+ABADDON OFFICIAL WEBSITE v4.5.6
+Bot release: v19.0.4
+
+- Updated active bot version surfaces to v19.0.4.
+- Added v19.0.4 SUPER STYLE · 5 REACTIONS milestone in Korean and English update pages.
+- Updated command catalog text from maximum 3 Super Style reactions to maximum 5.
+- Preserved previous v19.0.3 and v19.0.2 milestones as release history.

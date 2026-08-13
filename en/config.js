@@ -1,18 +1,18 @@
 window.ABADDON_CONFIG = {
-  // v4.5.4 v19.0.2 animated emoji + super-style hotfix unified config: new website + legacy pages use the same values.
+  // v4.5.6 v19.0.4 Super Style 5-reaction expansion unified config: new website + legacy pages use the same values.
   applicationId: "1532237253944934431",
   botInviteUrl: "https://discord.com/oauth2/authorize?client_id=1532237253944934431",
   supportInvite: "https://discord.gg/FN2tX7TVMz",
   supportUsername: "jjonga0022",
   apiBaseUrl: "https://abaddon-live-feed.onrender.com",
-  botVersion: "19.0.2",
-  websiteVersion: "4.5.4",
+  botVersion: "19.0.4",
+  websiteVersion: "4.5.5",
 
   // Backward-compatible keys used by the older full-site pages.
-  version: "v19.0.2",
+  version: "v19.0.4",
   status: "ONLINE",
   statusText: "ONLINE",
-  statusNote: "ANIMATED EMOJI · SUPER STYLE · 2026-08-13",
+  statusNote: "SUPER REACTION RUNTIME HOTFIX · 2026-08-14",
   botInvite: "https://discord.com/oauth2/authorize?client_id=1532237253944934431",
   discordUrl: "https://discord.gg/FN2tX7TVMz",
   discordInvite: "https://discord.gg/FN2tX7TVMz",

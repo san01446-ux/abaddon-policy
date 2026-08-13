@@ -1,0 +1,8 @@
+ABADDON OFFICIAL WEBSITE v4.5.5
+Bot release: v19.0.3
+
+- Updated current bot/website version surfaces.
+- Added v19.0.3 Super Reaction Runtime Hotfix milestone in KO/EN updates pages.
+- Updated command catalog with !GIF진단 / !gifdiag and !1903검수 / !1903audit.
+- Clarified that Super Style automatically enables the parent GIF runtime in v19.0.3.
+- Existing bot invite, support links, live-feed configuration, policies, dashboard, KO/EN structure preserved.
