@@ -47,3 +47,9 @@ PUBLIC_FEED_ALLOWED_ORIGIN=https://san01446-ux.github.io
 6. Privacy / Terms
 
 ※ Dashboard 로그인에서 404가 발생한다면 홈페이지 문제가 아니라 apiBaseUrl로 지정한 Render Web Service에 /auth/discord, /auth/callback, /api/dashboard/* 라우트가 실제 배포되어 있는지 확인해야 합니다.
+
+
+추가 메모 (v18.5.1 연동)
+- 현재 홈페이지 코드는 그대로 사용해도 됩니다.
+- 봇을 v18.5.1로 올린 뒤 !웹대시보드, dashboard.html, config.js의 apiBaseUrl 연결만 다시 점검하세요.
+- Desktop 폴더에서 통째 교체 후 커밋하는 방식이 가장 안전합니다.
