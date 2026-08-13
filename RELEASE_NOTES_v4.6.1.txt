@@ -1,0 +1,9 @@
+ABADDON OFFICIAL WEBSITE v4.6.1
+Bot release: v19.1.1
+Live-feed release: v1.1.0
+
+WEB DASHBOARD RELAY HOTFIX
+- Fixed Discord login returning {"ok":false,"error":"not_found"} when the bot runs as a Render Background Worker.
+- OAuth/browser API now lives on the public abaddon-live-feed Web Service.
+- The Background Worker polls authenticated dashboard actions using PUBLIC_FEED_RELAY_KEY and writes them to the same world_data as Discord commands.
+- Existing status/event feed, live rankings, My Page, server settings, GIF controls, YouTube/Twitch alerts, and live command search are preserved through the relay.

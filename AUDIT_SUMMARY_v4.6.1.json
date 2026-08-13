@@ -1,0 +1,11 @@
+{
+  "website_version": "4.6.1",
+  "bot_version": "19.1.1",
+  "live_feed_version": "1.1.0",
+  "javascript_files": 8,
+  "javascript_syntax_errors": 0,
+  "html_files": 18,
+  "duplicate_html_ids": 0,
+  "hardcoded_secret_candidates": 0,
+  "api_base": "https://abaddon-live-feed.onrender.com"
+}

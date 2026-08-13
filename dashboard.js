@@ -2,8 +2,8 @@
   const cfg = window.ABADDON_CONFIG || {};
   const apiBase = String(cfg.apiBaseUrl || '').trim().replace(/\/$/, '');
   const invalidApi = !apiBase || apiBase === 'YOUR_RENDER_PUBLIC_URL';
-  const botVersion = cfg.botVersion || '19.1.0';
-  const webVersion = cfg.websiteVersion || '4.6.0';
+  const botVersion = cfg.botVersion || '19.1.1';
+  const webVersion = cfg.websiteVersion || '4.6.1';
   document.querySelectorAll('[data-bot-version]').forEach(el => el.textContent = botVersion);
   document.querySelectorAll('[data-web-version]').forEach(el => el.textContent = webVersion);
 
@@ -69,8 +69,8 @@
   if (invalidApi) {
     setupNotice.classList.remove('hidden');
     setupNotice.innerHTML = t(
-      '<strong>웹 API 주소 설정 필요</strong><br>config.js의 <code>apiBaseUrl</code>을 ABADDON 봇이 실행 중인 Render 공개 서비스 주소로 설정하세요. 봇 토큰/OAuth Secret은 홈페이지에 넣지 않습니다.',
-      '<strong>Web API URL required</strong><br>Set <code>apiBaseUrl</code> in config.js to the public Render service running ABADDON. Never place the bot token or OAuth secret in the website.'
+      '<strong>웹 API 주소 설정 필요</strong><br>config.js의 <code>apiBaseUrl</code>을 ABADDON live-feed Render Web Service 주소로 설정하세요. Discord 봇은 Background Worker로 유지하며 봇 토큰/OAuth Secret은 홈페이지에 넣지 않습니다.',
+      '<strong>Web API URL required</strong><br>Set <code>apiBaseUrl</code> in config.js to the public ABADDON live-feed Render Web Service. The Discord bot remains a Background Worker; never place the bot token or OAuth secret in the website.'
     );
     setStatus(t('아직 웹 API가 연결되지 않았습니다.', 'Web API is not connected yet.'), 'warn');
     loginBtn.disabled = true;
