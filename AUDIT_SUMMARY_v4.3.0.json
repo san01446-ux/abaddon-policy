@@ -1,0 +1,14 @@
+{
+  "website_version": "4.3.0",
+  "bot_version": "18.6.0",
+  "html_files": 18,
+  "local_references": 242,
+  "missing_local_references": [],
+  "css_hotfix_file_exists": true,
+  "index_css_link_ok": true,
+  "dashboard_css_link_ok": true,
+  "config_bot_version": true,
+  "config_website_version": true,
+  "oauth_secret_literal_exposed": false,
+  "discord_token_literal_exposed": false
+}

@@ -1,33 +1,30 @@
-ABADDON 공식 홈페이지 v4.2.3 · BOT v18.5.2 · FULL REPAIRED
+ABADDON 공식 홈페이지 v4.3.0 · BOT v18.6.0
 
-이 폴더가 GitHub Pages 저장소의 최상위(root) 내용입니다.
-이번 ZIP은 압축을 열었을 때 index.html / config.js / assets / en 폴더가 바로 보이도록 제작합니다.
-별도의 ABADDON_SITE_FULL... 상위 폴더를 GitHub 저장소 안에 만들지 마세요.
+업로드 기준
+- 이 ZIP은 GitHub Pages 저장소(abaddon-policy) 최상위에 그대로 올리는 ROOT UPLOAD 구조입니다.
+- Desktop에서 홈페이지 저장소 폴더를 관리 중이면 기존 파일을 이번 ZIP 내용으로 통째로 교체한 뒤 Commit/Push 하세요.
+- site-v424.css는 v4.2.4 긴급복구 때 검증한 CSS를 그대로 유지합니다. 이름을 바꾸거나 삭제하지 마세요.
 
 현재 공개 설정
-- Application ID: 1532237253944934431
-- Bot invite: https://discord.com/oauth2/authorize?client_id=1532237253944934431
-- Support: https://discord.gg/FN2tX7TVMz
-- Support DM: jjonga0022
-- API: https://abaddon-live-feed.onrender.com
-- OAuth callback: https://abaddon-live-feed.onrender.com/auth/callback
+- Application ID: config.js에 현재 실제 값 반영
+- 봇 초대 URL: config.js에 현재 실제 값 반영
+- 공식 지원 서버: config.js에 현재 실제 값 반영
+- 장애 문의: jjonga0022
+- Render API: https://abaddon-live-feed.onrender.com
 
-Desktop에서 배포할 때
-1. 기존 abaddon-policy 저장소 폴더를 백업합니다.
-2. 이 ZIP의 '내용물'을 저장소 최상위에 덮어씁니다.
-3. index.html이 저장소 루트에 있는지 확인합니다.
-4. GitHub Desktop에서 변경사항 확인 → Commit → Push origin.
-5. GitHub Pages가 갱신된 뒤 Ctrl+F5로 강력 새로고침합니다.
+주의
+- DISCORD_OAUTH_CLIENT_SECRET / 봇 TOKEN은 홈페이지 파일에 절대 넣지 않습니다.
+- OAuth Secret은 Render abaddon-live-feed Environment에만 둡니다.
+- 홈페이지 수정 후 GitHub Pages 캐시가 남으면 Ctrl+F5로 강력 새로고침하세요.
 
-BOT v18.5.2 연동 점검
-- !패치점검
-- !로그
-- !기능찾기 장비
-- !웹대시보드
-
-
-=== v4.2.4 CSS 긴급복구 ===
-1. 이 ZIP 안 파일/폴더를 GitHub abaddon-policy 저장소 최상위에 통째로 덮어씁니다.
-2. 특히 index.html, dashboard.html, site-v424.css, config.js가 반드시 같이 올라가야 합니다.
-3. GitHub Pages 배포 후 Ctrl+F5로 강력 새로고침합니다.
-4. 봇 v18.5.2는 홈페이지 CSS 문제와 무관하므로 재배포할 필요 없습니다.
+배포 후 점검
+1. / 메인 페이지 스타일/카드/버튼
+2. BOT v18.6.0 / Website v4.3.0 표기
+3. 봇 초대 버튼
+4. 공식 지원 서버 버튼
+5. /dashboard.html 열기
+6. Discord OAuth 로그인
+7. 관리 서버 목록 표시
+8. 설정 저장
+9. privacy.html / terms.html
+10. 모바일 폭 레이아웃

@@ -1,0 +1,13 @@
+ABADDON 홈페이지 v4.3.0 · BOT v18.6.0 점검
+
+1. 메인 페이지 카드/버튼/CSS 정상 표시
+2. 봇 버전 v18.6.0 / Website v4.3.0 표시
+3. ABADDON 초대 버튼
+4. 지원 서버 링크
+5. dashboard.html 열림
+6. Discord OAuth 로그인
+7. 서버 목록/설정 저장
+8. privacy.html / terms.html 링크
+9. 모바일 폭에서 레이아웃 확인
+
+CSS 파일(site-v424.css)은 v4.2.4 긴급복구본을 그대로 유지해 재발 방지.
