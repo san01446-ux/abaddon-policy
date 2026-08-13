@@ -6295,3 +6295,10 @@ from apocalypse_bot.commands.v1900_native_discord_integration import (
 )
 register_v1900_native_discord_integration(bot, user_data, world_data, save_data)
 finalize_v1900_surfaces(bot)
+
+# v19.0.1 · BILINGUAL INVITE INTRODUCTION HOTFIX
+# First server-join introduction and !봇소개 show Korean + English together.
+from apocalypse_bot.commands.v1901_bilingual_invite_intro import (
+    register_v1901_bilingual_invite_intro,
+)
+register_v1901_bilingual_invite_intro(bot)

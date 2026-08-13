@@ -127,24 +127,49 @@ async def _send_install_support_dm(bot: commands.Bot, guild: discord.Guild) -> N
     creator_id = int(getattr(creator, "id", 0) or 0)
     support = _support_url()
     embed = discord.Embed(
-        title="🌑 ABADDON 설치가 완료되었습니다",
+        title="🌑 ABADDON 설치 완료 / Installation Complete",
         description=(
-            "ABADDON을 추가해 주셔서 감사합니다. 오류가 생기면 현재 서버에서 "
-            "`!버그신고 내용`으로 제작자에게 직접 제보할 수 있습니다.\n"
-            "봇과 공통 서버가 없는 사용자는 아래 공식 지원 서버를 이용해주세요."
+            "ABADDON을 추가해 주셔서 감사합니다. 아래에서 한국어/English 빠른 시작과 지원 정보를 확인할 수 있습니다.\n\n"
+            "Thank you for adding ABADDON. Quick-start and support information is provided below in both Korean and English."
         ),
         color=0x7C4DFF,
     )
-    embed.add_field(name="🐞 어디서든 버그 신고", value="`!버그신고 <문제 내용>`", inline=False)
-    embed.add_field(name="🧪 설치 후 1분 점검", value="서버 관리자라면 `!서버진단`으로 메시지·임베드·파일·슬래시/UI 준비 상태를 확인하세요.", inline=False)
+    embed.add_field(
+        name="🇰🇷 한국어",
+        value=(
+            "`!명령어` — 전체 기능 메뉴\n"
+            "`!첫10분` — 초보자 빠른 시작\n"
+            "`!서버진단` — 설치/권한 점검\n"
+            "`!버그신고 <문제 내용>` — 제작자에게 오류 제보"
+        ),
+        inline=False,
+    )
+    embed.add_field(
+        name="🇺🇸 English",
+        value=(
+            "`!help` or `!commands` — English command guide\n"
+            "`!first10` — newcomer quick start\n"
+            "`!serverdiag` — installation/permission check\n"
+            "`!bugreport <details>` or `!supportcontact` — support entry points"
+        ),
+        inline=False,
+    )
     if support:
-        embed.add_field(name="🛟 공식 지원/버그 신고 서버", value=support, inline=False)
+        embed.add_field(name="🛟 지원 서버 / Support Server", value=support, inline=False)
     else:
-        embed.add_field(name="🛟 공식 지원 서버", value="제작자가 `ABADDON_SUPPORT_URL`을 설정하면 여기에 표시됩니다.", inline=False)
+        embed.add_field(
+            name="🛟 지원 서버 / Support Server",
+            value="`ABADDON_SUPPORT_URL`이 설정되면 여기에 표시됩니다. / Shown here when `ABADDON_SUPPORT_URL` is configured.",
+            inline=False,
+        )
     if creator_id:
-        embed.add_field(name="👤 제작자 Discord 사용자 ID", value=f"`{creator_id}`", inline=False)
-    embed.add_field(name="📮 장애·버그 직접 문의", value="Discord DM **`jjonga0022`** · 또는 `!문의처`", inline=False)
-    embed.set_footer(text=f"설치 서버: {guild.name} · ID {guild.id}")
+        embed.add_field(name="👤 제작자 / Creator Discord ID", value=f"`{creator_id}`", inline=False)
+    embed.add_field(
+        name="📮 직접 문의 / Direct Support",
+        value="Discord DM **`jjonga0022`** · `!문의처` / `!supportcontact`",
+        inline=False,
+    )
+    embed.set_footer(text=f"설치 서버 / Installed server: {guild.name} · ID {guild.id}")
     try:
         await recipient.send(embed=embed)
     except (discord.Forbidden, discord.HTTPException):
