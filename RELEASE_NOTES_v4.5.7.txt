@@ -1,0 +1,8 @@
+ABADDON OFFICIAL WEBSITE v4.5.7
+Bot release: v19.0.5
+
+- Updated active bot version surfaces to v19.0.5.
+- Added the v19.0.5 ROTATING REACTION CHOREOGRAPHY milestone in Korean and English update pages.
+- Updated emoji command descriptions to explain situation-based rotating reaction sets and rotating GIF choices.
+- Updated diagnostics/audit command reference to !1905검수 / !1905audit while preserving older aliases.
+- Existing public site structure, links, assets and deployment layout are preserved.

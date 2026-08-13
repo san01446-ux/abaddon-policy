@@ -1721,39 +1721,39 @@ const commands = [
     "d": "아바돈이 만든 투표의 반응 수를 집계하고 결과를 표시합니다."
   },
   {
-    "c": "v19.0.4 Emoji",
+    "c": "v19.0.5 Emoji",
     "cmd": "!emojicenter",
     "d": "Manage animated emoji reactions, user-message reactions, reaction mode, and Super Style from one panel."
   },
   {
-    "c": "v19.0.4 Emoji",
+    "c": "v19.0.5 Emoji",
     "cmd": "!autogif ON/OFF",
     "d": "Automatically adds semantically matched animated custom-emoji reactions to ABADDON result messages."
   },
   {
-    "c": "v19.0.4 Emoji",
+    "c": "v19.0.5 Emoji",
     "cmd": "!gifuserreaction ON/OFF",
     "d": "Controls whether normal user messages can receive context-aware animated emoji reactions."
   },
   {
-    "c": "v19.0.4 Emoji",
+    "c": "v19.0.5 Emoji",
     "cmd": "!gifmode standard/vivid",
     "d": "Standard uses up to one semantic custom reaction; vivid mode can use up to two."
   },
   {
-    "c": "v19.0.4 Emoji",
+    "c": "v19.0.5 Emoji",
     "cmd": "!superreaction ON/OFF",
-    "d": "Enables ABADDON Super Style, combining up to five complementary custom emoji reactions."
+    "d": "Enables ABADDON Super Style with up to five reactions while rotating curated semantic reaction scenes and the concrete GIF choices."
   },
   {
-    "c": "v19.0.4 Emoji",
+    "c": "v19.0.5 Emoji",
     "cmd": "!emojibank current/status/clear",
     "d": "Bot-owner control for using the official server as a shared fallback emoji bank across installed servers."
   },
   {
-    "c": "v19.0.4 Emoji",
-    "cmd": "!gifscan · !giftest · !giflist · !gifdiag · !1903audit",
-    "d": "Scans GIF sources and mapping, then diagnoses reaction permissions, emoji-bank availability, and the latest reaction error."
+    "c": "v19.0.5 Emoji",
+    "cmd": "!gifscan · !giftest · !giflist · !gifdiag · !1905audit",
+    "d": "Scans GIF sources and permissions; repeated !giftest runs also demonstrate v19.0.5 rotating reaction combinations."
   },
   {
     "c": "관리",

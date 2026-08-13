@@ -1,0 +1,19 @@
+{
+  "site_version": "4.5.7",
+  "bot_version": "19.0.5",
+  "release": "ROTATING_REACTION_CHOREOGRAPHY",
+  "html_files_checked": 18,
+  "html_parse_pass": true,
+  "javascript_files_checked": 8,
+  "javascript_syntax_pass": true,
+  "checks": {
+    "config_ko_1905": true,
+    "config_en_1905": true,
+    "ko_updates_1905": true,
+    "en_updates_1905": true,
+    "ko_current_1905": true,
+    "en_current_1905": true,
+    "ko_1905_audit_ref": true,
+    "en_1905_audit_ref": true
+  }
+}
