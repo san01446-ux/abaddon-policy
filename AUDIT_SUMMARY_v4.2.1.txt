@@ -1,0 +1,26 @@
+ABADDON OFFICIAL WEBSITE v4.2.1 FULL CONSOLIDATION AUDIT
+Date: 2026-08-13
+Bot target: v18.5.0
+
+Base merged:
+- ABADDON_OFFICIAL_SITE_v18.1.0_PUBLIC_LAUNCH_UPLOAD full site/assets
+- Website v4.2.0 / Bot v18.5.0 dashboard overlay
+
+Integrity checks:
+- Asset files preserved: 271 / 271
+- HTML files: 18
+- Local HTML href/src references checked: 243
+- Missing local HTML references: 0
+- JavaScript syntax: PASS (Node.js --check)
+- New/legacy config schema compatibility: PASS
+- Legacy style.css preserved for Black City/language pages
+- New dashboard/home stylesheet isolated as site-v421.css
+- Public config prefilled: Application ID / bot invite / support invite / support username / Render API base
+- Secrets included in website: NONE
+
+Important OAuth route verified from ABADDON bot v18.5.0 source:
+- Login: /auth/discord
+- Callback: /auth/callback
+- Dashboard API: /api/dashboard/guilds, /api/dashboard/settings, /api/dashboard/structure
+
+If dashboard login returns 404, verify that apiBaseUrl points to the Render Web Service that actually exposes these routes.

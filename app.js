@@ -1,7 +1,7 @@
 (() => {
   const cfg = window.ABADDON_CONFIG || {};
   const botVersion = cfg.botVersion || "18.5.0";
-  const webVersion = cfg.websiteVersion || "4.2.0";
+  const webVersion = cfg.websiteVersion || "4.2.1";
   document.querySelectorAll('[data-bot-version]').forEach(el => el.textContent = botVersion);
   document.querySelectorAll('[data-web-version]').forEach(el => el.textContent = webVersion);
 

@@ -1,0 +1,9 @@
+ABADDON Website v4.2.1 consolidated release
+- Base: v18.1.0 public launch full site
+- Overlay: v4.2.0 / bot v18.5.0 dashboard release
+- Fixed legacy/new CSS filename collision
+- Unified legacy + modern config keys
+- Pre-filled public Application ID, bot invite, support invite and Render API URL
+- Preserved all legacy assets/pages and added dashboard
+- Updated privacy/terms for OAuth, dashboard, error monitoring, and server management
+- OAuth callback expected by v18.5.0 bot code: /auth/callback

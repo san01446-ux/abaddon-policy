@@ -1,48 +1,49 @@
-ABADDON 공식 홈페이지 v4.2.0 · BOT v18.5.0 업로드 방법
+ABADDON 공식 홈페이지 통합 종합본 v4.2.1 · BOT v18.5.0
 
-공식 주소는 그대로 유지합니다.
-https://san01446-ux.github.io/abaddon-policy/
+이 ZIP은 사용자가 보관하던 v18.1.0 전체 홈페이지(기존 명령어/랭킹/마이페이지/Black City/영문 페이지/이미지 자산)와 v4.2.0 웹 대시보드 업데이트를 하나로 다시 합친 전체 업로드본입니다.
+기존 파일 위에 여러 패치를 따로 덮을 필요가 없습니다.
 
-[기본 업로드]
-1. 이 ZIP을 풉니다.
-2. 기존 abaddon-policy GitHub 저장소 최상위에 파일 전체를 덮어씁니다.
-3. 기존 config.js에 실제 초대 주소를 이미 넣어뒀다면 새 config.js에도 같은 값을 옮깁니다.
-4. Commit changes 후 GitHub Pages 배포를 기다립니다.
+[업로드]
+1. ZIP을 풉니다.
+2. GitHub의 abaddon-policy 저장소 최상위 파일을 이 ZIP 내용으로 교체/덮어씁니다.
+3. Commit changes 합니다.
+4. GitHub Pages 배포 후 https://san01446-ux.github.io/abaddon-policy/ 를 새로고침합니다.
 
-[config.js 필수 확인]
-- applicationId: Discord Developer Portal Application ID
-- botInviteUrl: 기존 봇 초대 URL이 있으면 그대로 사용
-- supportInvite: 공식 지원 서버의 만료 없는 초대 코드/URL
-- apiBaseUrl: ABADDON 봇이 실행 중인 Render 공개 서비스 주소
-  예: https://YOUR-SERVICE.onrender.com
+[이미 적용된 공개 설정]
+- Application ID: 1532237253944934431
+- Bot invite: https://discord.com/oauth2/authorize?client_id=1532237253944934431
+- Support server: https://discord.gg/FN2tX7TVMz
+- 장애 문의 Discord: jjonga0022
+- Render API base: https://abaddon-live-feed.onrender.com
+- BOT: v18.5.0
+- Website: v4.2.1
 
-중요: 봇 TOKEN, DISCORD_OAUTH_CLIENT_SECRET 같은 비밀값은 절대 config.js나 GitHub Pages에 넣지 마세요.
+config.js에는 봇 Token 또는 OAuth Client Secret을 넣지 않았고, 넣어서도 안 됩니다.
 
-[웹 대시보드 사용을 위한 Render 환경변수]
-- ABADDON_SITE_URL=https://san01446-ux.github.io/abaddon-policy
-- DISCORD_OAUTH_CLIENT_ID=Discord Application ID
-- DISCORD_OAUTH_CLIENT_SECRET=Discord OAuth Client Secret
-- DISCORD_OAUTH_REDIRECT_URI=https://YOUR-SERVICE.onrender.com/auth/callback
-- PUBLIC_FEED_ALLOWED_ORIGIN=https://san01446-ux.github.io
+[Render OAuth / 대시보드 환경변수]
+ABADDON_SITE_URL=https://san01446-ux.github.io/abaddon-policy
+DISCORD_OAUTH_CLIENT_ID=1532237253944934431
+DISCORD_OAUTH_CLIENT_SECRET=<Discord Developer Portal OAuth2 Client Secret>
+DISCORD_OAUTH_REDIRECT_URI=<OAuth/dashboard API가 실제로 열려 있는 Render Web Service>/auth/callback
+PUBLIC_FEED_ALLOWED_ORIGIN=https://san01446-ux.github.io
 
-Discord Developer Portal OAuth2 Redirects에도 위 DISCORD_OAUTH_REDIRECT_URI와 같은 주소를 등록해야 합니다.
+중요: v18.5.0 봇 코드에서 OAuth 콜백 경로는 /auth/callback 입니다. /oauth/callback 이 아닙니다. Discord Developer Portal의 OAuth2 Redirects에도 정확히 같은 URL을 등록하세요.
 
-[대시보드 동작]
-- 홈페이지 dashboard.html에서 Discord 로그인
-- 로그인한 사람이 관리 권한을 가진 서버 중 ABADDON이 설치된 서버만 표시
-- 자동관리 / 로그채널 / 문의 카테고리 / RPG 알림 / 버튼 역할 등을 웹에서 저장
-- 문의 패널 생성, 임시 음성 로비 생성처럼 Discord 채널을 새로 만드는 작업은 안전을 위해 Discord 안에서 명령어로 1회 설치
-  · !문의패널 / !접수패널
-  · !임시음성설정
-  · !버튼역할패널
+[이번 종합본에서 해결한 덮어쓰기 충돌]
+- 최신 홈페이지 CSS를 site-v421.css로 분리: 기존 Black City/language.html이 사용하는 style.css 보존
+- config.js를 신/구 호환형으로 통합: 새 대시보드와 기존 명령어/랭킹/마이페이지/실시간 피드 페이지가 같은 설정을 사용
+- 기존 이미지/카드/세계관 자산 전체 보존
+- dashboard.html / dashboard.js / app.js 포함
+- 개인정보처리방침/이용약관을 최신 OAuth·오류감시·서버관리 내용과 통합
+- 기존 페이지 메뉴에 대시보드 접근 경로 추가
+- 기존 실시간 피드는 eventFeedUrl=https://abaddon-live-feed.onrender.com 로 연결
 
-[현재 반영 내용]
-- BOT v18.5.0 표기
-- 커뮤니티 센터 / 쉬운 서버 설정 센터
-- Discord OAuth 기반 웹 대시보드 1차판
-- 버튼 역할
-- 기존 문의·모더레이션·서버 로그·임시 음성방 기능 통합 안내
-- 30초 상태 순환 및 장애 문의 DM @jjonga0022
-- 한/영 전환
+[배포 후 확인]
+1. 홈에서 ABADDON 초대 버튼
+2. 공식 지원 서버 버튼
+3. 명령어 / 랭킹 / 마이페이지 / 업데이트 페이지
+4. Black City 및 언어 선택 페이지 디자인
+5. Dashboard 로그인
+6. Privacy / Terms
 
-ZIP 파일 자체를 GitHub에 올리는 것이 아니라 압축을 푼 파일을 올리세요.
+※ Dashboard 로그인에서 404가 발생한다면 홈페이지 문제가 아니라 apiBaseUrl로 지정한 Render Web Service에 /auth/discord, /auth/callback, /api/dashboard/* 라우트가 실제 배포되어 있는지 확인해야 합니다.

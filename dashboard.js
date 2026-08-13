@@ -3,7 +3,7 @@
   const apiBase = String(cfg.apiBaseUrl || '').trim().replace(/\/$/, '');
   const invalidApi = !apiBase || apiBase === 'YOUR_RENDER_PUBLIC_URL';
   const botVersion = cfg.botVersion || '18.5.0';
-  const webVersion = cfg.websiteVersion || '4.2.0';
+  const webVersion = cfg.websiteVersion || '4.2.1';
   document.querySelectorAll('[data-bot-version]').forEach(el => el.textContent = botVersion);
   document.querySelectorAll('[data-web-version]').forEach(el => el.textContent = webVersion);
 
@@ -45,7 +45,7 @@
     setupNotice.classList.remove('hidden');
     setupNotice.innerHTML = t(
       '<strong>웹 API 주소 설정 필요</strong><br>config.js의 <code>apiBaseUrl</code>을 Render 공개 서비스 주소로 바꾸세요. 봇 토큰이나 OAuth Secret은 홈페이지에 넣지 않습니다.',
-      '<strong>Web API URL required</strong><br>Set <code>apiBaseUrl</code> in config.js to your public Render service URL. Never put the bot token or OAuth secret in the website.'
+      '<strong>Web API URL required</strong><br>Set <code>apiBaseUrl</code> in config.js to the Render web service that exposes the ABADDON OAuth/dashboard routes. Never put the bot token or OAuth secret in the website.'
     );
     setStatus(t('아직 웹 API가 연결되지 않았습니다.', 'Web API is not connected yet.'), 'warn');
     loginBtn.disabled = true;
