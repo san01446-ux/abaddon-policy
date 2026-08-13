@@ -1,0 +1,17 @@
+{
+  "website_version": "4.6.0",
+  "bot_version": "19.1.0",
+  "release": "WEB_DASHBOARD_FUSION",
+  "status": "PASS",
+  "checks": {
+    "html_files": 18,
+    "javascript_files": 8,
+    "javascript_node_check": "PASS",
+    "duplicate_html_ids": 0,
+    "local_asset_refs_checked": 64,
+    "missing_local_assets": 0,
+    "literal_secret_candidates": 0,
+    "dashboard_js_id_binding": "PASS",
+    "dashboard_api_route_binding": "PASS"
+  }
+}

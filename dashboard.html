@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="ABADDON Discord server dashboard" />
+  <meta name="description" content="ABADDON Discord server control dashboard" />
   <meta name="theme-color" content="#0b0d12" />
   <title>ABADDON · 서버 대시보드</title>
-  <link rel="stylesheet" href="site-v424.css?v=424-css-hotfix" />
-  <script defer src="config.js"></script>
-  <script defer src="dashboard.js"></script>
+  <link rel="stylesheet" href="site-v424.css?v=460-dashboard-fusion" />
+  <script defer src="config.js?v=460"></script>
+  <script defer src="dashboard.js?v=460"></script>
 </head>
 <body>
   <div class="noise"></div>
@@ -16,6 +16,7 @@
     <a class="brand" href="index.html"><span class="brand-mark">A</span><span>ABADDON</span></a>
     <nav>
       <a href="index.html" data-ko="홈" data-en="Home">홈</a>
+      <a href="commands.html" data-ko="명령어" data-en="Commands">명령어</a>
       <a href="index.html#support" data-ko="지원" data-en="Support">지원</a>
       <button id="langToggle" class="ghost" type="button">EN</button>
     </nav>
@@ -24,9 +25,9 @@
   <main class="shell dashboard-page">
     <section class="dashboard-hero">
       <div>
-        <div class="eyebrow">ABADDON SERVER CONTROL · v<span data-bot-version>19.0.5</span></div>
-        <h1 data-ko="복잡한 명령어 대신, 필요한 설정만." data-en="Only the settings you need.">복잡한 명령어 대신, 필요한 설정만.</h1>
-        <p class="lead" data-ko="Discord로 로그인하면 본인이 관리할 수 있고 ABADDON이 설치된 서버만 표시됩니다." data-en="Sign in with Discord to see only servers you can manage where ABADDON is installed.">Discord로 로그인하면 본인이 관리할 수 있고 ABADDON이 설치된 서버만 표시됩니다.</p>
+        <div class="eyebrow">ABADDON WEB CONTROL CENTER · BOT v<span data-bot-version>19.1.0</span></div>
+        <h1 data-ko="명령어는 많아도, 사용은 단순하게." data-en="Powerful underneath. Simple on top.">명령어는 많아도, 사용은 단순하게.</h1>
+        <p class="lead" data-ko="Discord 로그인 → 서버 선택 → 필요한 기능만 클릭. 설정형 기능은 웹에서 직접 저장하고, 전체 명령어는 검색해서 찾을 수 있습니다." data-en="Sign in with Discord, choose a server, and manage only what you need. Configure server features directly and search the entire live command catalog.">Discord 로그인 → 서버 선택 → 필요한 기능만 클릭. 설정형 기능은 웹에서 직접 저장하고, 전체 명령어는 검색해서 찾을 수 있습니다.</p>
       </div>
       <div class="dashboard-actions">
         <button id="loginBtn" class="btn primary" type="button" data-ko="Discord로 로그인" data-en="Sign in with Discord">Discord로 로그인</button>
@@ -37,90 +38,189 @@
     <section id="setupNotice" class="dash-notice hidden"></section>
     <section id="statusBox" class="dash-notice">대시보드 준비 중...</section>
 
-    <section id="dashboardApp" class="dashboard-grid hidden">
+    <section id="dashboardApp" class="dashboard-grid dashboard-grid-fusion hidden">
       <aside class="dash-card server-list-card">
-        <div class="dash-card-head">
+        <div class="dash-card-head compact-head">
           <div>
             <span class="eyebrow" data-ko="내 서버" data-en="My servers">내 서버</span>
-            <h2 data-ko="관리할 서버 선택" data-en="Choose a server">관리할 서버 선택</h2>
+            <h2 data-ko="서버 선택" data-en="Choose server">서버 선택</h2>
           </div>
         </div>
         <div id="guildList" class="guild-list"></div>
+        <div class="side-separator"></div>
+        <div class="dashboard-side-note">
+          <strong data-ko="🔐 안전한 구조" data-en="🔐 Safe by design">🔐 안전한 구조</strong>
+          <p data-ko="Bot Token · Discord OAuth Secret · YouTube/Twitch Secret은 이 페이지에 저장되지 않습니다. Render 환경변수에서만 사용합니다." data-en="Bot tokens, Discord OAuth secrets, and YouTube/Twitch secrets are never stored on this page. They stay in Render environment variables.">Bot Token · Discord OAuth Secret · YouTube/Twitch Secret은 이 페이지에 저장되지 않습니다. Render 환경변수에서만 사용합니다.</p>
+        </div>
       </aside>
 
-      <section class="dash-card settings-card">
-        <div class="dash-card-head">
+      <section class="dash-card settings-card fusion-card">
+        <div class="dash-card-head dashboard-title-row">
           <div>
-            <span class="eyebrow">SERVER SETTINGS</span>
+            <span class="eyebrow">SERVER CONTROL</span>
             <h2 id="guildTitle">서버를 선택하세요</h2>
           </div>
-          <button id="saveBtn" class="btn primary" type="button" disabled data-ko="설정 저장" data-en="Save settings">설정 저장</button>
+          <div id="guildMiniStatus" class="guild-mini-status"></div>
         </div>
 
-        <div id="settingsForm" class="settings-form muted-form">
-          <div class="setting-section">
-            <h3 data-ko="🛡️ 보호" data-en="🛡️ Protection">🛡️ 보호</h3>
-            <label class="toggle-row"><span data-ko="자동 관리" data-en="AutoMod">자동 관리</span><input id="automod_enabled" type="checkbox"><i></i></label>
-            <label class="toggle-row"><span data-ko="초대 링크 차단" data-en="Block invite links">초대 링크 차단</span><input id="invite_block" type="checkbox"><i></i></label>
-            <label class="toggle-row"><span data-ko="금칙어 차단" data-en="Blocked words">금칙어 차단</span><input id="bad_words_enabled" type="checkbox"><i></i></label>
-            <label class="toggle-row"><span data-ko="자동 타임아웃" data-en="Automatic timeout">자동 타임아웃</span><input id="auto_timeout" type="checkbox"><i></i></label>
+        <nav class="dashboard-tabs" aria-label="Dashboard sections">
+          <button class="dash-tab active" type="button" data-panel="overview" data-ko="개요" data-en="Overview">개요</button>
+          <button class="dash-tab" type="button" data-panel="settings" data-ko="서버 설정" data-en="Server settings">서버 설정</button>
+          <button class="dash-tab" type="button" data-panel="reactions" data-ko="GIF 반응" data-en="GIF reactions">GIF 반응</button>
+          <button class="dash-tab" type="button" data-panel="external" data-ko="외부 알림" data-en="External alerts">외부 알림</button>
+          <button class="dash-tab" type="button" data-panel="commands" data-ko="명령어 센터" data-en="Command center">명령어 센터</button>
+        </nav>
+
+        <div id="panel-overview" class="dash-panel active">
+          <div id="overviewStats" class="overview-stats">
+            <article><span>COMMANDS</span><strong id="statCommands">-</strong><small data-ko="공개 명령어" data-en="public commands">공개 명령어</small></article>
+            <article><span>MEMBERS</span><strong id="statMembers">-</strong><small data-ko="서버 멤버" data-en="server members">서버 멤버</small></article>
+            <article><span>GIF</span><strong id="statGif">-</strong><small data-ko="로컬 움직이는 이모지" data-en="local animated emoji">로컬 움직이는 이모지</small></article>
+            <article><span>ALERTS</span><strong id="statAlerts">-</strong><small data-ko="YouTube + Twitch" data-en="YouTube + Twitch">YouTube + Twitch</small></article>
           </div>
 
-          <div class="setting-section">
-            <h3 data-ko="👋 자동화" data-en="👋 Automation">👋 자동화</h3>
-            <label><span data-ko="환영 채널" data-en="Welcome channel">환영 채널</span><select id="welcome_channel_id"></select></label>
-            <label><span data-ko="퇴장 채널" data-en="Leave channel">퇴장 채널</span><select id="leave_channel_id"></select></label>
-            <label><span data-ko="신규 자동 역할" data-en="New member autorole">신규 자동 역할</span><select id="autorole_id"></select></label>
-            <p class="micro" data-ko="경품·투표·건의·예약 공지는 Discord에서 !자동화센터 로 관리합니다." data-en="Manage giveaways, polls, suggestions and scheduled posts with !automationcenter in Discord.">경품·투표·건의·예약 공지는 Discord에서 !자동화센터 로 관리합니다.</p>
+          <div class="feature-launch-grid">
+            <button type="button" class="feature-launch" data-open-panel="settings"><span>⚙️</span><div><strong data-ko="서버 설정" data-en="Server settings">서버 설정</strong><small data-ko="보안·로그·환영·역할·RPG" data-en="Security, logs, welcome, roles, RPG">보안·로그·환영·역할·RPG</small></div></button>
+            <button type="button" class="feature-launch" data-open-panel="reactions"><span>✨</span><div><strong data-ko="GIF 자동반응" data-en="GIF reactions">GIF 자동반응</strong><small data-ko="표준/화려/5개 슈퍼 스타일" data-en="Standard, vivid, 5-reaction Super Style">표준/화려/5개 슈퍼 스타일</small></div></button>
+            <button type="button" class="feature-launch" data-open-panel="external"><span>📡</span><div><strong data-ko="외부 알림" data-en="External alerts">외부 알림</strong><small data-ko="YouTube·Twitch 등록/삭제" data-en="Add/remove YouTube and Twitch alerts">YouTube·Twitch 등록/삭제</small></div></button>
+            <button type="button" class="feature-launch" data-open-panel="commands"><span>🧭</span><div><strong data-ko="전체 명령어" data-en="All commands">전체 명령어</strong><small data-ko="라이브 목록 검색·분류·복사" data-en="Search, filter, and copy the live catalog">라이브 목록 검색·분류·복사</small></div></button>
           </div>
 
-          <div class="setting-section">
-            <h3 data-ko="🚨 보안" data-en="🚨 Security">🚨 보안</h3>
-            <label class="toggle-row"><span data-ko="안티레이드" data-en="Anti-raid">안티레이드</span><input id="anti_raid_enabled" type="checkbox"><i></i></label>
-            <label class="toggle-row"><span data-ko="레이드 감지 시 자동 잠금" data-en="Auto-lock on raid">레이드 감지 시 자동 잠금</span><input id="anti_raid_auto_lockdown" type="checkbox"><i></i></label>
-            <label class="toggle-row"><span data-ko="파괴행위 폭주 감시" data-en="Destructive burst watch">파괴행위 폭주 감시</span><input id="destructive_watch_enabled" type="checkbox"><i></i></label>
-            <label><span data-ko="감지 건수" data-en="Burst threshold">감지 건수</span><input id="destructive_watch_threshold" type="number" min="2" max="20" value="3"></label>
-            <label><span data-ko="감지 시간(초)" data-en="Window (seconds)">감지 시간(초)</span><input id="destructive_watch_window_seconds" type="number" min="5" max="300" value="20"></label>
-            <p class="micro" data-ko="비상 잠금/해제는 안전을 위해 Discord의 !보안센터 에서 실행합니다." data-en="Emergency lock/unlock stays in Discord under !securitycenter for safety.">비상 잠금/해제는 안전을 위해 Discord의 !보안센터 에서 실행합니다.</p>
-          </div>
+          <section class="setting-section wide overview-section">
+            <div class="section-heading-line"><div><h3 data-ko="📊 현재 상태" data-en="📊 Current state">📊 현재 상태</h3><p class="micro" data-ko="Discord 명령어와 웹 대시보드가 같은 서버 설정 데이터를 사용합니다." data-en="Discord commands and this dashboard use the same server configuration data.">Discord 명령어와 웹 대시보드가 같은 서버 설정 데이터를 사용합니다.</p></div><span id="overviewVersion" class="status-pill">v19.1.0</span></div>
+            <div id="overviewFlags" class="overview-flags"></div>
+          </section>
+        </div>
 
-          <div class="setting-section">
-            <h3 data-ko="🧾 로그·문의" data-en="🧾 Logs & tickets">🧾 로그·문의</h3>
-            <label><span data-ko="기본 로그 채널" data-en="Default log channel">기본 로그 채널</span><select id="log_channel_id"></select></label>
-            <label><span data-ko="문의 기록 채널" data-en="Ticket log channel">문의 기록 채널</span><select id="ticket_log_channel_id"></select></label>
-            <label><span data-ko="문의 카테고리" data-en="Ticket category">문의 카테고리</span><select id="ticket_category_id"></select></label>
+        <div id="panel-settings" class="dash-panel">
+          <div class="panel-toolbar">
+            <div><h3 data-ko="⚙️ 서버 설정" data-en="⚙️ Server settings">⚙️ 서버 설정</h3><p class="micro" data-ko="기존 Discord 설정 명령어와 같은 값을 직접 수정합니다." data-en="Edits the same values used by the existing Discord setup commands.">기존 Discord 설정 명령어와 같은 값을 직접 수정합니다.</p></div>
+            <button id="saveBtn" class="btn primary" type="button" disabled data-ko="설정 저장" data-en="Save settings">설정 저장</button>
           </div>
+          <div id="settingsForm" class="settings-form muted-form">
+            <div class="setting-section">
+              <h3 data-ko="🛡️ 보호" data-en="🛡️ Protection">🛡️ 보호</h3>
+              <label class="toggle-row"><span data-ko="자동 관리" data-en="AutoMod">자동 관리</span><input id="automod_enabled" type="checkbox"><i></i></label>
+              <label class="toggle-row"><span data-ko="초대 링크 차단" data-en="Block invite links">초대 링크 차단</span><input id="invite_block" type="checkbox"><i></i></label>
+              <label class="toggle-row"><span data-ko="금칙어 차단" data-en="Blocked words">금칙어 차단</span><input id="bad_words_enabled" type="checkbox"><i></i></label>
+              <label class="toggle-row"><span data-ko="자동 타임아웃" data-en="Automatic timeout">자동 타임아웃</span><input id="auto_timeout" type="checkbox"><i></i></label>
+            </div>
 
-          <div class="setting-section">
-            <h3 data-ko="🎮 RPG·커뮤니티" data-en="🎮 RPG & community">🎮 RPG·커뮤니티</h3>
-            <label class="toggle-row"><span data-ko="스토리 기능" data-en="Story features">스토리 기능</span><input id="story_enabled" type="checkbox"><i></i></label>
-            <label class="toggle-row"><span data-ko="도감 알림" data-en="Codex notifications">도감 알림</span><input id="codex_notifications" type="checkbox"><i></i></label>
-            <label class="toggle-row"><span data-ko="튜토리얼 알림" data-en="Tutorial notifications">튜토리얼 알림</span><input id="tutorial_notifications" type="checkbox"><i></i></label>
-            <label class="toggle-row"><span data-ko="임시 음성방" data-en="Temporary voice">임시 음성방</span><input id="temp_voice_enabled" type="checkbox"><i></i></label>
-            <p class="micro" data-ko="임시 음성 로비가 없다면 Discord에서 !임시음성설정 을 한 번 실행해야 합니다." data-en="If no temp-voice lobby exists, run !tempvoicesetup once in Discord.">임시 음성 로비가 없다면 Discord에서 !임시음성설정 을 한 번 실행해야 합니다.</p>
-            <label><span data-ko="공지 채널" data-en="Announcement channel">공지 채널</span><select id="announcement_channel_id"></select></label>
-            <label><span data-ko="RPG 권장 채널" data-en="Recommended RPG channel">RPG 권장 채널</span><select id="rpg_channel_id"></select></label>
-          </div>
+            <div class="setting-section">
+              <h3 data-ko="👋 자동화" data-en="👋 Automation">👋 자동화</h3>
+              <label><span data-ko="환영 채널" data-en="Welcome channel">환영 채널</span><select id="welcome_channel_id"></select></label>
+              <label><span data-ko="퇴장 채널" data-en="Leave channel">퇴장 채널</span><select id="leave_channel_id"></select></label>
+              <label><span data-ko="신규 자동 역할" data-en="New member autorole">신규 자동 역할</span><select id="autorole_id"></select></label>
+              <p class="micro" data-ko="경품·투표·건의·예약 공지는 Discord의 !자동화센터 기능을 그대로 유지합니다." data-en="Giveaways, polls, suggestions and scheduled posts remain available through !automationcenter in Discord.">경품·투표·건의·예약 공지는 Discord의 !자동화센터 기능을 그대로 유지합니다.</p>
+            </div>
 
-          <div class="setting-section wide">
-            <h3 data-ko="📡 외부 알림" data-en="📡 External alerts">📡 외부 알림</h3>
-            <p class="micro" data-ko="YouTube/Twitch 비밀키는 홈페이지에 저장하지 않습니다. Render 환경변수에서만 읽고 등록은 Discord의 !외부알림센터 에서 합니다." data-en="YouTube/Twitch secrets are never stored on the website. They are read only from Render environment variables; manage subscriptions with !externalalerts in Discord.">YouTube/Twitch 비밀키는 홈페이지에 저장하지 않습니다. Render 환경변수에서만 읽고 등록은 Discord의 !외부알림센터 에서 합니다.</p>
-            <p id="externalStatus" class="micro">외부 알림 상태를 불러오는 중...</p>
-          </div>
+            <div class="setting-section">
+              <h3 data-ko="🚨 보안" data-en="🚨 Security">🚨 보안</h3>
+              <label class="toggle-row"><span data-ko="안티레이드" data-en="Anti-raid">안티레이드</span><input id="anti_raid_enabled" type="checkbox"><i></i></label>
+              <label class="toggle-row"><span data-ko="레이드 감지 시 자동 잠금" data-en="Auto-lock on raid">레이드 감지 시 자동 잠금</span><input id="anti_raid_auto_lockdown" type="checkbox"><i></i></label>
+              <label class="toggle-row"><span data-ko="파괴행위 폭주 감시" data-en="Destructive burst watch">파괴행위 폭주 감시</span><input id="destructive_watch_enabled" type="checkbox"><i></i></label>
+              <label><span data-ko="감지 건수" data-en="Burst threshold">감지 건수</span><input id="destructive_watch_threshold" type="number" min="2" max="20" value="3"></label>
+              <label><span data-ko="감지 시간(초)" data-en="Window (seconds)">감지 시간(초)</span><input id="destructive_watch_window_seconds" type="number" min="5" max="300" value="20"></label>
+              <p class="micro" data-ko="비상 잠금/해제 같은 파괴적 조작은 안전을 위해 Discord의 !보안센터에서만 실행합니다." data-en="Destructive emergency lock/unlock actions remain Discord-only under !securitycenter for safety.">비상 잠금/해제 같은 파괴적 조작은 안전을 위해 Discord의 !보안센터에서만 실행합니다.</p>
+            </div>
 
-          <div class="setting-section wide">
-            <h3 data-ko="🎭 버튼 역할" data-en="🎭 Button roles">🎭 버튼 역할</h3>
-            <p class="micro" data-ko="사용자가 직접 선택해 받을 수 있는 역할을 최대 25개 고르세요. 패널 설치는 Discord에서 !버튼역할패널 을 실행합니다." data-en="Choose up to 25 self-assignable roles. Run !buttonrolepanel in Discord to post the persistent panel.">사용자가 직접 선택해 받을 수 있는 역할을 최대 25개 고르세요. 패널 설치는 Discord에서 !버튼역할패널 을 실행합니다.</p>
-            <select id="button_role_ids" multiple size="8"></select>
+            <div class="setting-section">
+              <h3 data-ko="🧾 로그·문의" data-en="🧾 Logs & tickets">🧾 로그·문의</h3>
+              <label><span data-ko="기본 로그 채널" data-en="Default log channel">기본 로그 채널</span><select id="log_channel_id"></select></label>
+              <label><span data-ko="문의 기록 채널" data-en="Ticket log channel">문의 기록 채널</span><select id="ticket_log_channel_id"></select></label>
+              <label><span data-ko="문의 카테고리" data-en="Ticket category">문의 카테고리</span><select id="ticket_category_id"></select></label>
+            </div>
+
+            <div class="setting-section">
+              <h3 data-ko="🎮 RPG·커뮤니티" data-en="🎮 RPG & community">🎮 RPG·커뮤니티</h3>
+              <label class="toggle-row"><span data-ko="스토리 기능" data-en="Story features">스토리 기능</span><input id="story_enabled" type="checkbox"><i></i></label>
+              <label class="toggle-row"><span data-ko="도감 알림" data-en="Codex notifications">도감 알림</span><input id="codex_notifications" type="checkbox"><i></i></label>
+              <label class="toggle-row"><span data-ko="튜토리얼 알림" data-en="Tutorial notifications">튜토리얼 알림</span><input id="tutorial_notifications" type="checkbox"><i></i></label>
+              <label class="toggle-row"><span data-ko="임시 음성방" data-en="Temporary voice">임시 음성방</span><input id="temp_voice_enabled" type="checkbox"><i></i></label>
+              <p class="micro" data-ko="임시 음성 로비가 없다면 Discord에서 !임시음성설정을 한 번 실행해야 합니다." data-en="If no temp-voice lobby exists, run !tempvoicesetup once in Discord.">임시 음성 로비가 없다면 Discord에서 !임시음성설정을 한 번 실행해야 합니다.</p>
+              <label><span data-ko="공지 채널" data-en="Announcement channel">공지 채널</span><select id="announcement_channel_id"></select></label>
+              <label><span data-ko="RPG 권장 채널" data-en="Recommended RPG channel">RPG 권장 채널</span><select id="rpg_channel_id"></select></label>
+            </div>
+
+            <div class="setting-section">
+              <h3 data-ko="🎭 버튼 역할" data-en="🎭 Button roles">🎭 버튼 역할</h3>
+              <p class="micro" data-ko="사용자가 직접 받을 수 있는 역할을 최대 25개 선택합니다. 패널 게시 자체는 Discord의 !버튼역할패널을 사용합니다." data-en="Choose up to 25 self-assignable roles. Posting the persistent panel remains available through !buttonrolepanel in Discord.">사용자가 직접 받을 수 있는 역할을 최대 25개 선택합니다. 패널 게시 자체는 Discord의 !버튼역할패널을 사용합니다.</p>
+              <select id="button_role_ids" multiple size="8"></select>
+            </div>
           </div>
+        </div>
+
+        <div id="panel-reactions" class="dash-panel">
+          <div class="panel-toolbar">
+            <div><h3 data-ko="✨ GIF 자동반응" data-en="✨ GIF reactions">✨ GIF 자동반응</h3><p class="micro" data-ko="Discord의 !자동GIF · !GIF모드 · !슈퍼반응 · !GIF유저반응과 같은 설정을 사용합니다." data-en="Uses the same settings as !autogif, !gifmode, !superreaction and !usergif.">Discord의 !자동GIF · !GIF모드 · !슈퍼반응 · !GIF유저반응과 같은 설정을 사용합니다.</p></div>
+            <button id="saveReactionBtn" class="btn primary" type="button" disabled data-ko="GIF 설정 저장" data-en="Save GIF settings">GIF 설정 저장</button>
+          </div>
+          <div id="reactionForm" class="settings-form muted-form">
+            <div class="setting-section">
+              <h3 data-ko="⚡ 런타임" data-en="⚡ Runtime">⚡ 런타임</h3>
+              <label class="toggle-row"><span data-ko="자동 GIF 반응" data-en="Automatic GIF reactions">자동 GIF 반응</span><input id="reaction_enabled" type="checkbox"><i></i></label>
+              <label class="toggle-row"><span data-ko="봇 결과 메시지 반응" data-en="React to bot result messages">봇 결과 메시지 반응</span><input id="reaction_bot_messages" type="checkbox"><i></i></label>
+              <label class="toggle-row"><span data-ko="유저 대화 스마트 GIF" data-en="Smart GIFs on user chat">유저 대화 스마트 GIF</span><input id="reaction_user_messages" type="checkbox"><i></i></label>
+              <label class="toggle-row"><span data-ko="기존 자동이모지 GIF 업그레이드" data-en="Upgrade legacy auto reactions to GIF">기존 자동이모지 GIF 업그레이드</span><input id="reaction_upgrade" type="checkbox"><i></i></label>
+              <label class="toggle-row"><span data-ko="정적 이모지 fallback" data-en="Static emoji fallback">정적 이모지 fallback</span><input id="reaction_static_fallback" type="checkbox"><i></i></label>
+            </div>
+            <div class="setting-section">
+              <h3 data-ko="💥 반응 강도" data-en="💥 Reaction intensity">💥 반응 강도</h3>
+              <label><span data-ko="기본 모드" data-en="Base mode">기본 모드</span><select id="reaction_mode"><option value="standard" data-ko="표준 · 최대 1개" data-en="Standard · up to 1">표준 · 최대 1개</option><option value="vivid" data-ko="화려 · 최대 2개" data-en="Vivid · up to 2">화려 · 최대 2개</option></select></label>
+              <label class="toggle-row emphasis-toggle"><span><b data-ko="5개 슈퍼 스타일" data-en="5-reaction Super Style">5개 슈퍼 스타일</b><small data-ko="상황별 4세트 + 실제 GIF 순환" data-en="4 scenes per context + rotating GIFs">상황별 4세트 + 실제 GIF 순환</small></span><input id="reaction_super_style" type="checkbox"><i></i></label>
+              <p class="micro" data-ko="※ Discord 네이티브 BURST 슈퍼 반응은 아닙니다. ABADDON이 움직이는 커스텀 이모지 최대 5개를 자동으로 조합합니다." data-en="This is not Discord native BURST. ABADDON automatically combines up to five animated custom emoji reactions.">※ Discord 네이티브 BURST 슈퍼 반응은 아닙니다. ABADDON이 움직이는 커스텀 이모지 최대 5개를 자동으로 조합합니다.</p>
+            </div>
+            <div class="setting-section wide">
+              <div class="section-heading-line"><div><h3 data-ko="📈 GIF 상태" data-en="📈 GIF status">📈 GIF 상태</h3><p id="reactionSourceStatus" class="micro">불러오는 중...</p></div><button id="copyGifTest" class="small-action" type="button">!GIF테스트 복사</button></div>
+              <div id="reactionStats" class="mini-stat-grid"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="panel-external" class="dash-panel">
+          <div class="panel-toolbar">
+            <div><h3 data-ko="📡 외부 알림" data-en="📡 External alerts">📡 외부 알림</h3><p class="micro" data-ko="이제 YouTube/Twitch 등록도 Discord 명령어 없이 웹에서 할 수 있습니다." data-en="You can now manage YouTube and Twitch alerts directly from the web.">이제 YouTube/Twitch 등록도 Discord 명령어 없이 웹에서 할 수 있습니다.</p></div>
+            <span id="externalEnvStatus" class="status-pill">API 확인 중</span>
+          </div>
+          <div class="external-grid">
+            <section class="setting-section">
+              <h3>📺 YouTube</h3>
+              <p class="micro" data-ko="채널 ID(UC...) · @핸들 · youtube.com/@핸들 주소 사용 가능" data-en="Supports UC channel IDs, @handles, and youtube.com/@handle URLs.">채널 ID(UC...) · @핸들 · youtube.com/@핸들 주소 사용 가능</p>
+              <label><span data-ko="YouTube 채널" data-en="YouTube channel">YouTube 채널</span><input id="youtubeIdentifier" type="text" placeholder="@handle 또는 UC..." maxlength="160"></label>
+              <label><span data-ko="알림 받을 Discord 채널" data-en="Discord notification channel">알림 받을 Discord 채널</span><select id="youtubeNotifyChannel"></select></label>
+              <button id="youtubeAddBtn" class="btn secondary full-btn" type="button" data-ko="YouTube 알림 등록" data-en="Add YouTube alert">YouTube 알림 등록</button>
+              <div id="youtubeList" class="subscription-list"></div>
+            </section>
+            <section class="setting-section">
+              <h3>🟣 Twitch</h3>
+              <p class="micro" data-ko="Twitch 로그인명 또는 twitch.tv/채널 주소를 입력하세요." data-en="Enter a Twitch login or twitch.tv/channel URL.">Twitch 로그인명 또는 twitch.tv/채널 주소를 입력하세요.</p>
+              <label><span data-ko="Twitch 채널" data-en="Twitch channel">Twitch 채널</span><input id="twitchIdentifier" type="text" placeholder="channelname" maxlength="160"></label>
+              <label><span data-ko="알림 받을 Discord 채널" data-en="Discord notification channel">알림 받을 Discord 채널</span><select id="twitchNotifyChannel"></select></label>
+              <button id="twitchAddBtn" class="btn secondary full-btn" type="button" data-ko="Twitch 알림 등록" data-en="Add Twitch alert">Twitch 알림 등록</button>
+              <div id="twitchList" class="subscription-list"></div>
+            </section>
+          </div>
+        </div>
+
+        <div id="panel-commands" class="dash-panel">
+          <div class="panel-toolbar command-toolbar">
+            <div><h3 data-ko="🧭 라이브 명령어 센터" data-en="🧭 Live command center">🧭 라이브 명령어 센터</h3><p class="micro" data-ko="봇에 실제 등록된 공개 명령어를 자동으로 읽습니다. 패치로 명령어가 늘어나도 목록이 자동 갱신됩니다." data-en="Reads the bot's actual registered public commands. New commands appear automatically after a bot update.">봇에 실제 등록된 공개 명령어를 자동으로 읽습니다. 패치로 명령어가 늘어나도 목록이 자동 갱신됩니다.</p></div>
+            <span id="commandTotal" class="status-pill">- commands</span>
+          </div>
+          <div class="command-search-row">
+            <input id="commandSearch" type="search" placeholder="명령어 또는 기능 검색 · 예: 카지노, GIF, 유튜브, 보스" />
+            <button id="clearCommandSearch" class="small-action" type="button" data-ko="초기화" data-en="Clear">초기화</button>
+          </div>
+          <div id="commandCategories" class="category-chips"></div>
+          <div id="commandResults" class="command-results"><p class="micro">명령어 목록을 불러오는 중...</p></div>
         </div>
       </section>
     </section>
   </main>
 
   <footer class="shell footer">
-    <span>ABADDON · v<span data-bot-version>19.0.5</span></span>
-    <span>Website v<span data-web-version>4.5.5</span></span>
+    <span>ABADDON · v<span data-bot-version>19.1.0</span></span>
+    <span>Website v<span data-web-version>4.6.0</span></span>
     <span>Support @jjonga0022</span>
   </footer>
 </body>

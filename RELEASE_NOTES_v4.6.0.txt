@@ -1,0 +1,12 @@
+ABADDON OFFICIAL WEBSITE v4.6.0
+Bot release: v19.1.0
+Release: WEB DASHBOARD FUSION
+
+- Rebuilt dashboard.html as the ABADDON Web Control Center.
+- Reuses the existing authenticated Discord OAuth server-management flow.
+- Core server settings continue writing to the same bot world_data used by Discord commands.
+- Added direct GIF reaction controls including five-reaction Super Style.
+- Added direct YouTube/Twitch alert listing, registration, notification-channel selection and removal.
+- Added a live searchable command catalog sourced from the bot's registered public commands.
+- Secrets remain server-side in Render environment variables.
+- Korean/English dashboard UI included.
