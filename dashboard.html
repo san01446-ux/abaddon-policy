@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ABADDON Discord server dashboard" />
+  <meta name="theme-color" content="#0b0d12" />
+  <title>ABADDON · 서버 대시보드</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="config.js"></script>
+  <script defer src="dashboard.js"></script>
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">A</span><span>ABADDON</span></a>
+    <nav>
+      <a href="index.html" data-ko="홈" data-en="Home">홈</a>
+      <a href="index.html#support" data-ko="지원" data-en="Support">지원</a>
+      <button id="langToggle" class="ghost" type="button">EN</button>
+    </nav>
+  </header>
+
+  <main class="shell dashboard-page">
+    <section class="dashboard-hero">
+      <div>
+        <div class="eyebrow">ABADDON SERVER CONTROL · v<span data-bot-version>18.5.0</span></div>
+        <h1 data-ko="복잡한 명령어 대신, 필요한 설정만." data-en="Only the settings you need.">복잡한 명령어 대신, 필요한 설정만.</h1>
+        <p class="lead" data-ko="Discord로 로그인하면 본인이 관리할 수 있고 ABADDON이 설치된 서버만 표시됩니다." data-en="Sign in with Discord to see only servers you can manage where ABADDON is installed.">Discord로 로그인하면 본인이 관리할 수 있고 ABADDON이 설치된 서버만 표시됩니다.</p>
+      </div>
+      <div class="dashboard-actions">
+        <button id="loginBtn" class="btn primary" type="button" data-ko="Discord로 로그인" data-en="Sign in with Discord">Discord로 로그인</button>
+        <button id="logoutBtn" class="btn secondary hidden" type="button" data-ko="로그아웃" data-en="Log out">로그아웃</button>
+      </div>
+    </section>
+
+    <section id="setupNotice" class="dash-notice hidden"></section>
+    <section id="statusBox" class="dash-notice">대시보드 준비 중...</section>
+
+    <section id="dashboardApp" class="dashboard-grid hidden">
+      <aside class="dash-card server-list-card">
+        <div class="dash-card-head">
+          <div>
+            <span class="eyebrow" data-ko="내 서버" data-en="My servers">내 서버</span>
+            <h2 data-ko="관리할 서버 선택" data-en="Choose a server">관리할 서버 선택</h2>
+          </div>
+        </div>
+        <div id="guildList" class="guild-list"></div>
+      </aside>
+
+      <section class="dash-card settings-card">
+        <div class="dash-card-head">
+          <div>
+            <span class="eyebrow">SERVER SETTINGS</span>
+            <h2 id="guildTitle">서버를 선택하세요</h2>
+          </div>
+          <button id="saveBtn" class="btn primary" type="button" disabled data-ko="설정 저장" data-en="Save settings">설정 저장</button>
+        </div>
+
+        <div id="settingsForm" class="settings-form muted-form">
+          <div class="setting-section">
+            <h3 data-ko="🛡️ 보호" data-en="🛡️ Protection">🛡️ 보호</h3>
+            <label class="toggle-row"><span data-ko="자동 관리" data-en="AutoMod">자동 관리</span><input id="automod_enabled" type="checkbox"><i></i></label>
+            <label class="toggle-row"><span data-ko="초대 링크 차단" data-en="Block invite links">초대 링크 차단</span><input id="invite_block" type="checkbox"><i></i></label>
+            <label class="toggle-row"><span data-ko="금칙어 차단" data-en="Blocked words">금칙어 차단</span><input id="bad_words_enabled" type="checkbox"><i></i></label>
+            <label class="toggle-row"><span data-ko="자동 타임아웃" data-en="Automatic timeout">자동 타임아웃</span><input id="auto_timeout" type="checkbox"><i></i></label>
+          </div>
+
+          <div class="setting-section">
+            <h3 data-ko="🧾 로그·문의" data-en="🧾 Logs & tickets">🧾 로그·문의</h3>
+            <label><span data-ko="기본 로그 채널" data-en="Default log channel">기본 로그 채널</span><select id="log_channel_id"></select></label>
+            <label><span data-ko="문의 기록 채널" data-en="Ticket log channel">문의 기록 채널</span><select id="ticket_log_channel_id"></select></label>
+            <label><span data-ko="문의 카테고리" data-en="Ticket category">문의 카테고리</span><select id="ticket_category_id"></select></label>
+          </div>
+
+          <div class="setting-section">
+            <h3 data-ko="🎮 RPG·커뮤니티" data-en="🎮 RPG & community">🎮 RPG·커뮤니티</h3>
+            <label class="toggle-row"><span data-ko="스토리 기능" data-en="Story features">스토리 기능</span><input id="story_enabled" type="checkbox"><i></i></label>
+            <label class="toggle-row"><span data-ko="도감 알림" data-en="Codex notifications">도감 알림</span><input id="codex_notifications" type="checkbox"><i></i></label>
+            <label class="toggle-row"><span data-ko="튜토리얼 알림" data-en="Tutorial notifications">튜토리얼 알림</span><input id="tutorial_notifications" type="checkbox"><i></i></label>
+            <label class="toggle-row"><span data-ko="임시 음성방" data-en="Temporary voice">임시 음성방</span><input id="temp_voice_enabled" type="checkbox"><i></i></label>
+            <p class="micro" data-ko="임시 음성 로비가 없다면 Discord에서 !임시음성설정 을 한 번 실행해야 합니다." data-en="If no temp-voice lobby exists, run !tempvoicesetup once in Discord.">임시 음성 로비가 없다면 Discord에서 !임시음성설정 을 한 번 실행해야 합니다.</p>
+            <label><span data-ko="공지 채널" data-en="Announcement channel">공지 채널</span><select id="announcement_channel_id"></select></label>
+            <label><span data-ko="RPG 권장 채널" data-en="Recommended RPG channel">RPG 권장 채널</span><select id="rpg_channel_id"></select></label>
+          </div>
+
+          <div class="setting-section wide">
+            <h3 data-ko="🎭 버튼 역할" data-en="🎭 Button roles">🎭 버튼 역할</h3>
+            <p class="micro" data-ko="사용자가 직접 선택해 받을 수 있는 역할을 최대 25개 고르세요. 패널 설치는 Discord에서 !버튼역할패널 을 실행합니다." data-en="Choose up to 25 self-assignable roles. Run !buttonrolepanel in Discord to post the persistent panel.">사용자가 직접 선택해 받을 수 있는 역할을 최대 25개 고르세요. 패널 설치는 Discord에서 !버튼역할패널 을 실행합니다.</p>
+            <select id="button_role_ids" multiple size="8"></select>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="shell footer">
+    <span>ABADDON · v<span data-bot-version>18.5.0</span></span>
+    <span>Website v<span data-web-version>4.2.0</span></span>
+    <span>Support @jjonga0022</span>
+  </footer>
+</body>
+</html>

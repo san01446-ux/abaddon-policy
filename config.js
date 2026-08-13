@@ -1,10 +1,9 @@
 window.ABADDON_CONFIG = {
-  version: "v18.0.1",
-  status: "ONLINE",
-  statusNote: "FINAL ECLIPSE · WEBSITE CLEAN EDITION · 2026-08-07",
-  botInviteUrl: "https://discord.com/oauth2/authorize?client_id=1532237253944934431&permissions=8&integration_type=0&scope=bot+applications.commands",
-  discordUrl: "https://discord.gg/FN2tX7TVMz",
-  eventFeedUrl: "",
-  liveRefreshMs: 15000,
-  staticOnlineFallback: true
+  applicationId: "YOUR_APPLICATION_ID",
+  botInviteUrl: "",
+  supportInvite: "YOUR_PERMANENT_INVITE",
+  supportUsername: "jjonga0022",
+  apiBaseUrl: "https://abaddon-live-feed.onrender.com",
+  botVersion: "18.5.0",
+  websiteVersion: "4.2.0"
 };
