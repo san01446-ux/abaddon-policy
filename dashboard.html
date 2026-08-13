@@ -24,7 +24,7 @@
   <main class="shell dashboard-page">
     <section class="dashboard-hero">
       <div>
-        <div class="eyebrow">ABADDON SERVER CONTROL · v<span data-bot-version>18.6.0</span></div>
+        <div class="eyebrow">ABADDON SERVER CONTROL · v<span data-bot-version>18.9.0</span></div>
         <h1 data-ko="복잡한 명령어 대신, 필요한 설정만." data-en="Only the settings you need.">복잡한 명령어 대신, 필요한 설정만.</h1>
         <p class="lead" data-ko="Discord로 로그인하면 본인이 관리할 수 있고 ABADDON이 설치된 서버만 표시됩니다." data-en="Sign in with Discord to see only servers you can manage where ABADDON is installed.">Discord로 로그인하면 본인이 관리할 수 있고 ABADDON이 설치된 서버만 표시됩니다.</p>
       </div>
@@ -67,6 +67,24 @@
           </div>
 
           <div class="setting-section">
+            <h3 data-ko="👋 자동화" data-en="👋 Automation">👋 자동화</h3>
+            <label><span data-ko="환영 채널" data-en="Welcome channel">환영 채널</span><select id="welcome_channel_id"></select></label>
+            <label><span data-ko="퇴장 채널" data-en="Leave channel">퇴장 채널</span><select id="leave_channel_id"></select></label>
+            <label><span data-ko="신규 자동 역할" data-en="New member autorole">신규 자동 역할</span><select id="autorole_id"></select></label>
+            <p class="micro" data-ko="경품·투표·건의·예약 공지는 Discord에서 !자동화센터 로 관리합니다." data-en="Manage giveaways, polls, suggestions and scheduled posts with !automationcenter in Discord.">경품·투표·건의·예약 공지는 Discord에서 !자동화센터 로 관리합니다.</p>
+          </div>
+
+          <div class="setting-section">
+            <h3 data-ko="🚨 보안" data-en="🚨 Security">🚨 보안</h3>
+            <label class="toggle-row"><span data-ko="안티레이드" data-en="Anti-raid">안티레이드</span><input id="anti_raid_enabled" type="checkbox"><i></i></label>
+            <label class="toggle-row"><span data-ko="레이드 감지 시 자동 잠금" data-en="Auto-lock on raid">레이드 감지 시 자동 잠금</span><input id="anti_raid_auto_lockdown" type="checkbox"><i></i></label>
+            <label class="toggle-row"><span data-ko="파괴행위 폭주 감시" data-en="Destructive burst watch">파괴행위 폭주 감시</span><input id="destructive_watch_enabled" type="checkbox"><i></i></label>
+            <label><span data-ko="감지 건수" data-en="Burst threshold">감지 건수</span><input id="destructive_watch_threshold" type="number" min="2" max="20" value="3"></label>
+            <label><span data-ko="감지 시간(초)" data-en="Window (seconds)">감지 시간(초)</span><input id="destructive_watch_window_seconds" type="number" min="5" max="300" value="20"></label>
+            <p class="micro" data-ko="비상 잠금/해제는 안전을 위해 Discord의 !보안센터 에서 실행합니다." data-en="Emergency lock/unlock stays in Discord under !securitycenter for safety.">비상 잠금/해제는 안전을 위해 Discord의 !보안센터 에서 실행합니다.</p>
+          </div>
+
+          <div class="setting-section">
             <h3 data-ko="🧾 로그·문의" data-en="🧾 Logs & tickets">🧾 로그·문의</h3>
             <label><span data-ko="기본 로그 채널" data-en="Default log channel">기본 로그 채널</span><select id="log_channel_id"></select></label>
             <label><span data-ko="문의 기록 채널" data-en="Ticket log channel">문의 기록 채널</span><select id="ticket_log_channel_id"></select></label>
@@ -85,6 +103,12 @@
           </div>
 
           <div class="setting-section wide">
+            <h3 data-ko="📡 외부 알림" data-en="📡 External alerts">📡 외부 알림</h3>
+            <p class="micro" data-ko="YouTube/Twitch 비밀키는 홈페이지에 저장하지 않습니다. Render 환경변수에서만 읽고 등록은 Discord의 !외부알림센터 에서 합니다." data-en="YouTube/Twitch secrets are never stored on the website. They are read only from Render environment variables; manage subscriptions with !externalalerts in Discord.">YouTube/Twitch 비밀키는 홈페이지에 저장하지 않습니다. Render 환경변수에서만 읽고 등록은 Discord의 !외부알림센터 에서 합니다.</p>
+            <p id="externalStatus" class="micro">외부 알림 상태를 불러오는 중...</p>
+          </div>
+
+          <div class="setting-section wide">
             <h3 data-ko="🎭 버튼 역할" data-en="🎭 Button roles">🎭 버튼 역할</h3>
             <p class="micro" data-ko="사용자가 직접 선택해 받을 수 있는 역할을 최대 25개 고르세요. 패널 설치는 Discord에서 !버튼역할패널 을 실행합니다." data-en="Choose up to 25 self-assignable roles. Run !buttonrolepanel in Discord to post the persistent panel.">사용자가 직접 선택해 받을 수 있는 역할을 최대 25개 고르세요. 패널 설치는 Discord에서 !버튼역할패널 을 실행합니다.</p>
             <select id="button_role_ids" multiple size="8"></select>
@@ -95,8 +119,8 @@
   </main>
 
   <footer class="shell footer">
-    <span>ABADDON · v<span data-bot-version>18.6.0</span></span>
-    <span>Website v<span data-web-version>4.3.0</span></span>
+    <span>ABADDON · v<span data-bot-version>18.9.0</span></span>
+    <span>Website v<span data-web-version>4.4.0</span></span>
     <span>Support @jjonga0022</span>
   </footer>
 </body>

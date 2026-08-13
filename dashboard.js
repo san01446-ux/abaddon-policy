@@ -2,8 +2,8 @@
   const cfg = window.ABADDON_CONFIG || {};
   const apiBase = String(cfg.apiBaseUrl || '').trim().replace(/\/$/, '');
   const invalidApi = !apiBase || apiBase === 'YOUR_RENDER_PUBLIC_URL';
-  const botVersion = cfg.botVersion || '18.6.0';
-  const webVersion = cfg.websiteVersion || '4.2.3';
+  const botVersion = cfg.botVersion || '18.9.0';
+  const webVersion = cfg.websiteVersion || '4.4.0';
   document.querySelectorAll('[data-bot-version]').forEach(el => el.textContent = botVersion);
   document.querySelectorAll('[data-web-version]').forEach(el => el.textContent = webVersion);
 
@@ -74,8 +74,9 @@
     return data;
   }
 
-  const boolIds = ['automod_enabled','invite_block','bad_words_enabled','auto_timeout','story_enabled','codex_notifications','tutorial_notifications','temp_voice_enabled'];
-  const selectIds = ['log_channel_id','ticket_log_channel_id','ticket_category_id','announcement_channel_id','rpg_channel_id'];
+  const boolIds = ['automod_enabled','invite_block','bad_words_enabled','auto_timeout','anti_raid_enabled','anti_raid_auto_lockdown','destructive_watch_enabled','story_enabled','codex_notifications','tutorial_notifications','temp_voice_enabled'];
+  const selectIds = ['welcome_channel_id','leave_channel_id','autorole_id','log_channel_id','ticket_log_channel_id','ticket_category_id','announcement_channel_id','rpg_channel_id'];
+  const numberIds = ['destructive_watch_threshold','destructive_watch_window_seconds'];
 
   const setOptions = (id, rows, current, emptyLabel) => {
     const el = document.getElementById(id);
@@ -88,11 +89,20 @@
     currentSettings = settings;
     currentStructure = structure;
     boolIds.forEach(id => { document.getElementById(id).checked = Boolean(settings[id]); });
+    setOptions('welcome_channel_id', structure.text_channels || [], settings.welcome_channel_id, t('미설정', 'Not set'));
+    setOptions('leave_channel_id', structure.text_channels || [], settings.leave_channel_id, t('미설정', 'Not set'));
+    setOptions('autorole_id', structure.roles || [], settings.autorole_id, t('미설정', 'Not set'));
     setOptions('log_channel_id', structure.text_channels || [], settings.log_channel_id, t('미설정', 'Not set'));
     setOptions('ticket_log_channel_id', structure.text_channels || [], settings.ticket_log_channel_id, t('미설정', 'Not set'));
     setOptions('ticket_category_id', structure.categories || [], settings.ticket_category_id, t('미설정', 'Not set'));
     setOptions('announcement_channel_id', structure.text_channels || [], settings.announcement_channel_id, t('미설정', 'Not set'));
     setOptions('rpg_channel_id', structure.text_channels || [], settings.rpg_channel_id, t('미설정', 'Not set'));
+    numberIds.forEach(id => { const el = document.getElementById(id); if (el) el.value = Number(settings[id] || (id.includes('threshold') ? 3 : 20)); });
+    const ext = document.getElementById('externalStatus');
+    if (ext) ext.textContent = t(
+      `YouTube 환경 ${settings.youtube_api_ready ? '✅' : '➖'} · 등록 ${Number(settings.external_youtube_count || 0)}개 / Twitch 환경 ${settings.twitch_api_ready ? '✅' : '➖'} · 등록 ${Number(settings.external_twitch_count || 0)}개`,
+      `YouTube env ${settings.youtube_api_ready ? '✅' : '➖'} · ${Number(settings.external_youtube_count || 0)} subscription(s) / Twitch env ${settings.twitch_api_ready ? '✅' : '➖'} · ${Number(settings.external_twitch_count || 0)} subscription(s)`
+    );
     const roleSel = document.getElementById('button_role_ids');
     const selected = new Set((settings.button_role_ids || []).map(String));
     roleSel.innerHTML = (structure.roles || []).map(row => `<option value="${row.id}" ${selected.has(String(row.id)) ? 'selected' : ''}>${escapeHtml(row.name)}</option>`).join('');
@@ -126,6 +136,7 @@
     const payload = { guild_id: currentGuild };
     boolIds.forEach(id => payload[id] = document.getElementById(id).checked);
     selectIds.forEach(id => payload[id] = document.getElementById(id).value || '');
+    numberIds.forEach(id => payload[id] = Number(document.getElementById(id).value || 0));
     payload.button_role_ids = Array.from(document.getElementById('button_role_ids').selectedOptions).map(opt => opt.value).slice(0,25);
     try {
       const data = await api('/api/dashboard/settings', {

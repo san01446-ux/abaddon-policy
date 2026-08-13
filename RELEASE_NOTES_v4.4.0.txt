@@ -1,0 +1,8 @@
+ABADDON Website v4.4.0 · BOT v18.9.0
+
+- Server Automation Center 소개 추가
+- Security Command Center 소개 추가
+- YouTube/Twitch External Alerts 소개 추가
+- Dashboard에 환영/퇴장/자동역할, anti-raid, destructive watch 설정 추가
+- 기존 site-v424.css 구조 유지 (CSS 회귀 방지)
+- Bot target updated to v18.9.0

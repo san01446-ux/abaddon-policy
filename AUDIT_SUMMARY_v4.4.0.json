@@ -1,0 +1,11 @@
+{
+  "website_version": "4.4.0",
+  "bot_version": "18.9.0",
+  "html_files": 18,
+  "local_refs": 242,
+  "missing_local_refs": [],
+  "dashboard_expected_ids": 19,
+  "dashboard_missing_ids": [],
+  "secret_assignment_hits": [],
+  "css_exists": true
+}
