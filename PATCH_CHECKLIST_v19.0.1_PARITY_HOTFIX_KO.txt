@@ -1,0 +1,7 @@
+ABADDON Website v4.5.3 · BOT v19.0.1
+
+1. 기존 abaddon-policy 저장소 루트에 이 압축의 내용물을 덮어쓰기
+2. config.js의 기존 공개 설정값 유지 확인
+3. GitHub Pages 배포 후 Ctrl+F5
+4. 한국어/English 페이지 모두 v19.0.1 표시 확인
+5. updates 페이지 최상단 KO/EN PARITY AUDIT HOTFIX 확인

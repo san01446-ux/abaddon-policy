@@ -1721,6 +1721,41 @@ const commands = [
     "d": "아바돈이 만든 투표의 반응 수를 집계하고 결과를 표시합니다."
   },
   {
+    "c": "v19.0.2 Emoji",
+    "cmd": "!emojicenter",
+    "d": "Manage animated emoji reactions, user-message reactions, reaction mode, and Super Style from one panel."
+  },
+  {
+    "c": "v19.0.2 Emoji",
+    "cmd": "!autogif ON/OFF",
+    "d": "Automatically adds semantically matched animated custom-emoji reactions to ABADDON result messages."
+  },
+  {
+    "c": "v19.0.2 Emoji",
+    "cmd": "!gifuserreaction ON/OFF",
+    "d": "Controls whether normal user messages can receive context-aware animated emoji reactions."
+  },
+  {
+    "c": "v19.0.2 Emoji",
+    "cmd": "!gifmode standard/vivid",
+    "d": "Standard uses up to one semantic custom reaction; vivid mode can use up to two."
+  },
+  {
+    "c": "v19.0.2 Emoji",
+    "cmd": "!superreaction ON/OFF",
+    "d": "Enables ABADDON Super Style, combining up to three complementary custom emoji reactions."
+  },
+  {
+    "c": "v19.0.2 Emoji",
+    "cmd": "!emojibank current/status/clear",
+    "d": "Bot-owner control for using the official server as a shared fallback emoji bank across installed servers."
+  },
+  {
+    "c": "v19.0.2 Emoji",
+    "cmd": "!gifscan · !giftest · !giflist · !1902audit",
+    "d": "Scans local/bank animated emojis and checks mapping, reaction output, and the v19.0.2 runtime bridge."
+  },
+  {
     "c": "관리",
     "cmd": "!자동이모지 상태",
     "d": "자동 반응의 채널·키워드·첨부·프리셋 설정을 확인합니다."

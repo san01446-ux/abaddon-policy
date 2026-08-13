@@ -1,0 +1,7 @@
+ABADDON OFFICIAL WEBSITE v4.5.3 · BOT v19.0.1
+
+- KO/EN parity audit hotfix release synced
+- English alias audit false-positive fix noted
+- Startup localization warm-up vs runtime fallback distinction noted
+- ABADDON newcomer branding refinement noted
+- Existing site-v424.css path and root-upload structure preserved

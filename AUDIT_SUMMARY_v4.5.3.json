@@ -1,0 +1,8 @@
+{
+  "website_version": "4.5.3",
+  "bot_version": "19.0.1",
+  "css_path_preserved": "site-v424.css",
+  "root_upload": true,
+  "parity_hotfix_release_note": true,
+  "secrets_embedded": false
+}

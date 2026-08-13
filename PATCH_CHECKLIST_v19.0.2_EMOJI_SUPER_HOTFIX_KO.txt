@@ -1,0 +1,19 @@
+ABADDON BOT v19.0.2 + WEBSITE v4.5.4 체크리스트
+
+[배포]
+1. BOT ZIP은 저장소 루트에 덮어쓰기 (.git 및 /var/data 데이터 유지)
+2. Render apocalypse-bot 재배포
+3. WEBSITE ZIP은 GitHub Pages 저장소 루트에 업로드
+
+[Discord 테스트]
+- 공식 이모지 서버: !이모지뱅크 현재서버
+- !이모지센터
+- !자동GIF ON
+- !슈퍼반응 ON
+- !GIF스캔
+- !GIF테스트
+- !1902검수
+
+[주의]
+- ABADDON 슈퍼 스타일은 최대 3개의 일반 custom emoji reaction 조합입니다.
+- 각 서버의 커스텀 이모지를 우선하고, 없으면 설정된 이모지 뱅크를 fallback으로 사용합니다.

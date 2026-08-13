@@ -1,0 +1,20 @@
+{
+  "website_version": "4.5.4",
+  "bot_version": "19.0.2",
+  "html_files_parsed": 18,
+  "html_parse_errors": [],
+  "checks": {
+    "application_id": true,
+    "bot_invite": true,
+    "support": true,
+    "api_base": true,
+    "bot_version": true,
+    "web_version": true,
+    "site_v424_css": true,
+    "ko_v1902_commands": true,
+    "en_v1902_commands": true,
+    "ko_milestone": true,
+    "en_milestone": true
+  },
+  "result": "PASS"
+}

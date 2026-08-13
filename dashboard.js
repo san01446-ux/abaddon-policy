@@ -2,8 +2,8 @@
   const cfg = window.ABADDON_CONFIG || {};
   const apiBase = String(cfg.apiBaseUrl || '').trim().replace(/\/$/, '');
   const invalidApi = !apiBase || apiBase === 'YOUR_RENDER_PUBLIC_URL';
-  const botVersion = cfg.botVersion || '19.0.1';
-  const webVersion = cfg.websiteVersion || '4.5.1';
+  const botVersion = cfg.botVersion || '19.0.2';
+  const webVersion = cfg.websiteVersion || '4.5.4';
   document.querySelectorAll('[data-bot-version]').forEach(el => el.textContent = botVersion);
   document.querySelectorAll('[data-web-version]').forEach(el => el.textContent = webVersion);
 

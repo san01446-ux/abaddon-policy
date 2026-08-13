@@ -1,0 +1,9 @@
+ABADDON OFFICIAL WEBSITE v4.5.4
+BOT v19.0.2 · ANIMATED EMOJI / SUPER STYLE HOTFIX
+
+- 최신 v19.0.1 KO/EN parity + ABADDON branding 사이트를 그대로 유지
+- 현재 BOT 버전을 v19.0.2로 동기화
+- Animated Emoji / Super Style 업데이트 이정표 추가
+- 한국어/영어 명령어 페이지에 이모지센터, 자동GIF, 슈퍼반응, 이모지뱅크, GIF 검수 명령 추가
+- 기존 공개 config 값/초대 URL/지원 서버/Live Feed 유지
+- site-v424.css 경로와 기존 레이아웃 유지

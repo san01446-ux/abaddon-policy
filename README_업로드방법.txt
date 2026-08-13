@@ -1,6 +1,11 @@
-ABADDON 공식 홈페이지 v4.5.1 · BOT v19.0.1
+ABADDON OFFICIAL WEBSITE v4.5.4 · BOT v19.0.2
 
-Desktop의 abaddon-policy 저장소 폴더 기준:
+이 ZIP은 GitHub Pages 저장소 루트 업로드용입니다.
+압축을 풀면 index.html, config.js, assets, en 등이 바로 보여야 합니다.
+
+현재 패치: ANIMATED EMOJI · SUPER STYLE HOTFIX
+
+[기존 업로드 안내]
 1. .git 폴더는 그대로 둡니다.
 2. 이 ZIP의 내용 전체를 저장소 최상위에 덮어씁니다.
 3. config.js에서 실제 Application ID / 초대주소 / Render apiBaseUrl 값이 유지됐는지 확인합니다.
