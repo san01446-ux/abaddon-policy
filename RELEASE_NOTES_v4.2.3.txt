@@ -1,0 +1,6 @@
+ABADDON Website v4.2.3 FULL REPAIRED
+- Bot target: v18.5.2
+- Rebuilt as a root-upload package (no extra wrapper directory in the ZIP).
+- Preserves legacy full-site assets/pages and the v18.5 dashboard.
+- Adds smart command-discovery guidance for !로그 / !채집 / !장비 / !기능찾기.
+- Keeps unified config compatibility for legacy and current pages.
