@@ -1,0 +1,7 @@
+ABADDON Website v4.2.4 CSS HOTFIX
+
+- Fixed index.html loading the legacy style.css instead of the new landing-page stylesheet.
+- Fixed dashboard.html loading the legacy stylesheet.
+- Added site-v424.css with a new filename to bypass browser/GitHub Pages CSS cache.
+- Legacy BLACK CITY/language pages keep their original style.css intentionally.
+- Bot version remains v18.5.2; bot redeploy is not required for this website-only hotfix.

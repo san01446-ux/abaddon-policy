@@ -24,3 +24,10 @@ BOT v18.5.2 연동 점검
 - !로그
 - !기능찾기 장비
 - !웹대시보드
+
+
+=== v4.2.4 CSS 긴급복구 ===
+1. 이 ZIP 안 파일/폴더를 GitHub abaddon-policy 저장소 최상위에 통째로 덮어씁니다.
+2. 특히 index.html, dashboard.html, site-v424.css, config.js가 반드시 같이 올라가야 합니다.
+3. GitHub Pages 배포 후 Ctrl+F5로 강력 새로고침합니다.
+4. 봇 v18.5.2는 홈페이지 CSS 문제와 무관하므로 재배포할 필요 없습니다.
