@@ -1,0 +1,579 @@
+[
+  {
+    "activity": "work",
+    "state": "success",
+    "file": "assets/v631/activities/work/success/01.jpg",
+    "source_cluster_index": 36,
+    "source": "a_wide_cinematic_post_apocalyptic_urban_scene_in.png",
+    "sha256": "f15ef2ff320376d041de8793b24acda5f4257d923d554ef915745159b17bd56f",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "work",
+    "state": "success",
+    "file": "assets/v631/activities/work/success/02.jpg",
+    "source_cluster_index": 39,
+    "source": "폐허_속_따뜻한_생존자_상점.png",
+    "sha256": "d0562b14f55c869d4760dca5b91772598582348b86f4513e1b936e2ca378c268",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "work",
+    "state": "success",
+    "file": "assets/v631/activities/work/success/03.jpg",
+    "source_cluster_index": 40,
+    "source": "폐허_시장의_따뜻한_통조림_거래.png",
+    "sha256": "440c168d605cd75cf9367a153624a00631345c7475365e974bad167833ce01ef",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "work",
+    "state": "rare",
+    "file": "assets/v631/activities/work/rare/01.jpg",
+    "source_cluster_index": 41,
+    "source": "activities/work/success/07.jpg",
+    "sha256": "85de02d09b909560ea460dadbdb18c050f88bb5d4b8abc4106bd565bef8c9659",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "work",
+    "state": "rare",
+    "file": "assets/v631/activities/work/rare/02.jpg",
+    "source_cluster_index": 17,
+    "source": "activities/fishing/rare/01.jpg",
+    "sha256": "9eff6fd555bcd4a4b40650170e740f9db299f28cb9d704631e6035417f61a5ab",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "work",
+    "state": "failure",
+    "file": "assets/v631/activities/work/failure/01.jpg",
+    "source_cluster_index": 35,
+    "source": "activities/work/failure/03.jpg",
+    "sha256": "235c86d4872de89254c72e6144220f5a42d3ddadfdacd4ce0a528bd6a9312e31",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "work",
+    "state": "failure",
+    "file": "assets/v631/activities/work/failure/02.jpg",
+    "source_cluster_index": 0,
+    "source": "neon_지하_카지노의_카드_테이블.png",
+    "sha256": "f97d7cfef789f0bf7bfdc3f2be29e39a295eb42f211e0186961804468418d2d4",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "work",
+    "state": "encounter",
+    "file": "assets/v631/activities/work/encounter/01.jpg",
+    "source_cluster_index": 37,
+    "source": "녹슨_작업장의_황혼_속_수리공.png",
+    "sha256": "5d5572905410e8dfa0b24b9002863880173da9341810a8ae17b20461c81f163b",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "work",
+    "state": "encounter",
+    "file": "assets/v631/activities/work/encounter/02.jpg",
+    "source_cluster_index": 38,
+    "source": "불빛과_푸른_에너지의_폐허_작업장.png",
+    "sha256": "bb596d2149c4659f7bb29747b6deb920ce56aeb174d1147882a1a64baf8bf6c9",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "work",
+    "state": "encounter_success",
+    "file": "assets/v631/activities/work/encounter_success/01.jpg",
+    "source_cluster_index": 43,
+    "source": "따뜻한_피난처의_수업_시간.png",
+    "sha256": "04100053164c93591ef84c55c135b9f6c688eee4d99f284cb0f2d55e4d2605c0",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "work",
+    "state": "encounter_success",
+    "file": "assets/v631/activities/work/encounter_success/02.jpg",
+    "source_cluster_index": 2,
+    "source": "지하_카지노의_승리_선언.png",
+    "sha256": "5b932dc33fab16c6b8979943b715a5c7903e994f8fafe2d980c6fb9e28bd06dd",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "work",
+    "state": "encounter_failure",
+    "file": "assets/v631/activities/work/encounter_failure/01.jpg",
+    "source_cluster_index": 1,
+    "source": "사이버펑크_지하_도박장의_긴장감.png",
+    "sha256": "bb139ddd6211c002c3f9b998138a687b8aa6ab3e3269b3a6cd8cd192d3ca8e26",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "digging",
+    "state": "success",
+    "file": "assets/v631/activities/digging/success/01.jpg",
+    "source_cluster_index": 7,
+    "source": "폐허에서_보물을_찾는_생존자.png",
+    "sha256": "19999775f75d1b44f8d7f38d742c7c72fe4bd851f71239cb9279aa46e6cc9908",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "digging",
+    "state": "success",
+    "file": "assets/v631/activities/digging/success/02.jpg",
+    "source_cluster_index": 10,
+    "source": "could_you_please_confirm_if_you_d_like_the_title_t.png",
+    "sha256": "89771b37f07602cae0bd81d317d52f91cf60caf234582322405635f8e484540f",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "digging",
+    "state": "success",
+    "file": "assets/v631/activities/digging/success/03.jpg",
+    "source_cluster_index": 11,
+    "source": "activities/digging/rare/02.jpg",
+    "sha256": "a515e89d59b027e521ac6d653b1129442bef794097fe0c97982ed1b5196e165a",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "digging",
+    "state": "rare",
+    "file": "assets/v631/activities/digging/rare/01.jpg",
+    "source_cluster_index": 12,
+    "source": "황금빛_보물을_찾은_폐허의_발굴자.png",
+    "sha256": "49accf9b8ba78598cbf7de7e9ff532ed14f480a95aab01da19e864f188aaca3a",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "digging",
+    "state": "rare",
+    "file": "assets/v631/activities/digging/rare/02.jpg",
+    "source_cluster_index": 13,
+    "source": "황혼의_폐허에서_발견한_보물_상자.png",
+    "sha256": "d7847c7b88d11eac0e8160a929e1463824736a5063555d9efc25880b42d30884",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "digging",
+    "state": "failure",
+    "file": "assets/v631/activities/digging/failure/01.jpg",
+    "source_cluster_index": 8,
+    "source": "짧은_은신처_붕괴_순간.png",
+    "sha256": "4c53d49f83ca7ef711474ee196e8f8ec9556d7374817eade0ac4720f93ed4843",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "digging",
+    "state": "failure",
+    "file": "assets/v631/activities/digging/failure/02.jpg",
+    "source_cluster_index": 9,
+    "source": "버려진_작업장의_스크랩_상자_사고.png",
+    "sha256": "385c34f1bf8ed6c1189d9b4222e017bafa6d0e22640269320772e7c27e0852e2",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "digging",
+    "state": "encounter",
+    "file": "assets/v631/activities/digging/encounter/01.jpg",
+    "source_cluster_index": 23,
+    "source": "지하_광산의_보랏빛_수정_채굴कर_त.png",
+    "sha256": "09284ad13265e76c69ef949241bf592bec490284ff34418407ffc6230ece3eca",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "digging",
+    "state": "encounter",
+    "file": "assets/v631/activities/digging/encounter/02.jpg",
+    "source_cluster_index": 24,
+    "source": "보랏빛_광맥을_깨는_광부.png",
+    "sha256": "54ea88cad9da5ab8c15bc30754f83472663d35c07e2835df0f1716504187f5af",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "digging",
+    "state": "encounter_success",
+    "file": "assets/v631/activities/digging/encounter_success/01.jpg",
+    "source_cluster_index": 25,
+    "source": "광부의_보랏빛_수정_채굴.png",
+    "sha256": "267908441f639f6ee661348f6d50630f943d637772466e2c913bed4551601c4c",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "digging",
+    "state": "encounter_success",
+    "file": "assets/v631/activities/digging/encounter_success/02.jpg",
+    "source_cluster_index": 26,
+    "source": "보라빛_수정_광맥을_깨는_광부.png",
+    "sha256": "8cdbefd77857f5d6686ae80ce842efbb561a720dcf87048ac3a6047d5faff275",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "digging",
+    "state": "encounter_failure",
+    "file": "assets/v631/activities/digging/encounter_failure/01.jpg",
+    "source_cluster_index": 16,
+    "source": "녹빛_항구의_심해_괴어_reglamentary.png",
+    "sha256": "1c9aa8ef9e4952f7550cc84154e2d3a514e176fc3421b95133a273ed293fa4f1",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "gathering",
+    "state": "success",
+    "file": "assets/v631/activities/gathering/success/01.jpg",
+    "source_cluster_index": 19,
+    "source": "폐허_속_식물을_모으는_생존자.png",
+    "sha256": "a03af601b3b19f8dbe3fa69d2065c10d4d197224a65ce91bdeee03b7e20c5ad2",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "gathering",
+    "state": "success",
+    "file": "assets/v631/activities/gathering/success/02.jpg",
+    "source_cluster_index": 20,
+    "source": "폐허_속_식물_채집가.png",
+    "sha256": "eeb5a629aef3dc05546dbb40ae0e2b204bb93d1599283538940e114ea66e4ab4",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "gathering",
+    "state": "success",
+    "file": "assets/v631/activities/gathering/success/03.jpg",
+    "source_cluster_index": 21,
+    "source": "녹빛_폐온실의_식물_수집가.png",
+    "sha256": "469f9ef86d966532304a52cca8362935fba58443b66440457edf31fea7cc5f0e",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "gathering",
+    "state": "rare",
+    "file": "assets/v631/activities/gathering/rare/01.jpg",
+    "source_cluster_index": 22,
+    "source": "폐허_속_빛나는_온실_식물학자.png",
+    "sha256": "499f1d44f974900d13b1476759bba000c57c33253d4d856463adb175b32420b0",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "gathering",
+    "state": "rare",
+    "file": "assets/v631/activities/gathering/rare/02.jpg",
+    "source_cluster_index": 18,
+    "source": "폐허_항구의_빛나는_괴물_낚시.png",
+    "sha256": "06e110b756240da92aac99109afd02b826f0aec14504fdfc50f72ea0016992e9",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "gathering",
+    "state": "failure",
+    "file": "assets/v631/activities/gathering/failure/01.jpg",
+    "source_cluster_index": 44,
+    "source": "지하_작업실의_고대_유물_조사.png",
+    "sha256": "a71d2a805c313c074e5d5aaa2fd24e8e28ee3ec654dda940114600eb79ac16d8",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "gathering",
+    "state": "failure",
+    "file": "assets/v631/activities/gathering/failure/02.jpg",
+    "source_cluster_index": 45,
+    "source": "폐허의_빛을_해독하는_연구자.png",
+    "sha256": "7f71ed16ac57cf13f574720239e85e673bbf6cf93f8fda7cf3dae8e5a6caf119",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "gathering",
+    "state": "encounter",
+    "file": "assets/v631/activities/gathering/encounter/01.jpg",
+    "source_cluster_index": 46,
+    "source": "relics/03.jpg",
+    "sha256": "59454d81e1f5e6dec7711ca20908912d5297dfed6e1529a76e316a4d01b11548",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "gathering",
+    "state": "encounter",
+    "file": "assets/v631/activities/gathering/encounter/02.jpg",
+    "source_cluster_index": 15,
+    "source": "폐허_속_괴물_낚시꾼.png",
+    "sha256": "01778877b047d7ff3421c2dcae53801efa01ba1b4ffc5287467651463cac6e72",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "gathering",
+    "state": "encounter_success",
+    "file": "assets/v631/activities/gathering/encounter_success/01.jpg",
+    "source_cluster_index": 28,
+    "source": "폐허_속_생존_물자_거래_众鑫.png",
+    "sha256": "2bc0c0af093b9ff56eda9eb0d8f1f5c3909c640a61839c5ce6c0752e2a7db5eb",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "gathering",
+    "state": "encounter_success",
+    "file": "assets/v631/activities/gathering/encounter_success/02.jpg",
+    "source_cluster_index": 29,
+    "source": "지하_생존_상점의_따뜻한_거래.png",
+    "sha256": "2916f67654ff791f1dcc3799d3778990e42bf61fe6cd953752a806bc30e7d60a",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "gathering",
+    "state": "encounter_failure",
+    "file": "assets/v631/activities/gathering/encounter_failure/01.jpg",
+    "source_cluster_index": 3,
+    "source": "지하_도박장의_카리스마_딜러.png",
+    "sha256": "1b57a97aef5595925797469e050697183b96b092f91c6e1776986f00ec747f7d",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "woodcutting",
+    "state": "success",
+    "file": "assets/v631/activities/woodcutting/success/01.jpg",
+    "source_cluster_index": 30,
+    "source": "activities/woodcutting/common/01.jpg",
+    "sha256": "4bde861d0d13df223195324e7ec430be115ccba479fcbda5293bede265b20c25",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "woodcutting",
+    "state": "success",
+    "file": "assets/v631/activities/woodcutting/success/02.jpg",
+    "source_cluster_index": 31,
+    "source": "도끼를_휘두르는_생존자와_타락한_나무.png",
+    "sha256": "86e252d5ae77a41e9a7b6d0f816850d4aa881ba84efa12ad18971a8d1cc698fe",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "woodcutting",
+    "state": "success",
+    "file": "assets/v631/activities/woodcutting/success/03.jpg",
+    "source_cluster_index": 32,
+    "source": "독성_나무를_베는_생존자.png",
+    "sha256": "cef8ae4061efd42ec62cf0d3d753c211be6662f1817bc77d4395983ce7a4e9a1",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "woodcutting",
+    "state": "rare",
+    "file": "assets/v631/activities/woodcutting/rare/01.jpg",
+    "source_cluster_index": 33,
+    "source": "el_leñador_y_el_árbol_corrupto.png",
+    "sha256": "4635542640f12b2cdaae1eac00905a42f5736d94d255f673e194959f5f5258ff",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "woodcutting",
+    "state": "rare",
+    "file": "assets/v631/activities/woodcutting/rare/02.jpg",
+    "source_cluster_index": 34,
+    "source": "도끼로_괴목을_베는_생존자.png",
+    "sha256": "07bf5f434ed024b8952637772c1c99cfff2fdd7ddc6034b0055dae93ecd497b7",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "woodcutting",
+    "state": "failure",
+    "file": "assets/v631/activities/woodcutting/failure/01.jpg",
+    "source_cluster_index": 14,
+    "source": "물에_낚인_돌연변이_물고기.png",
+    "sha256": "112766e64cc57916b936d528833cd8511f9808b5768fd467f3dab169f5696f10",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "woodcutting",
+    "state": "failure",
+    "file": "assets/v631/activities/woodcutting/failure/02.jpg",
+    "source_cluster_index": 4,
+    "source": "폐허_공장의_스파크와_생존자.png",
+    "sha256": "bbe68c760e9b39a695943a2a7332b7a1dfe6acf350beac6875fbe168ece50cc9",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "woodcutting",
+    "state": "encounter",
+    "file": "assets/v631/activities/woodcutting/encounter/01.jpg",
+    "source_cluster_index": 5,
+    "source": "용광로에서_벼려지는_사이버_검.png",
+    "sha256": "8ca602e0e2eef918efe060de0ae79bb9a7674d5107ef68f695025c5187fdef25",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "woodcutting",
+    "state": "encounter",
+    "file": "assets/v631/activities/woodcutting/encounter/02.jpg",
+    "source_cluster_index": 6,
+    "source": "톱니와_불꽃의_무기_공방.png",
+    "sha256": "df332dcedc740fb2faa7bebcea29d9ebcaa601e3cf54c43840d8e25dc578107b",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "woodcutting",
+    "state": "encounter_success",
+    "file": "assets/v631/activities/woodcutting/encounter_success/01.jpg",
+    "source_cluster_index": 42,
+    "source": "base/level_0/01.jpg",
+    "sha256": "753f01f6f64c7d7317bdfae05e607ea1ce75e6a9d8d66b47b228a40d70a3ad39",
+    "size": [
+      1280,
+      720
+    ]
+  },
+  {
+    "activity": "woodcutting",
+    "state": "encounter_success",
+    "file": "assets/v631/activities/woodcutting/encounter_success/02.jpg",
+    "source_cluster_index": 51,
+    "source": "폐허_속_황금빛_보물_상자.png",
+    "sha256": "a438290f8185b67b83578c9c34b5743cf16a3268f4d24effb4046e565e6bdf31",
+    "size": [
+      1280,
+      720
+    ],
+    "processing": "blurred_background_contain"
+  },
+  {
+    "activity": "woodcutting",
+    "state": "encounter_failure",
+    "file": "assets/v631/activities/woodcutting/encounter_failure/01.jpg",
+    "source_cluster_index": 50,
+    "source": "보랏빛_수정_광맥을_깨는_광부.png",
+    "sha256": "cb6fb9caca7ba2d1f65894acee937de2c4663c7f9fd84832fe0bfb76893d21e7",
+    "size": [
+      1280,
+      720
+    ]
+  }
+]

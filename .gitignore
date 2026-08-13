@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+*.log
+ABADDON_*_AUDIT.*
+ABADDON_*_PATCH_NOTES*
+ABADDON_*_SPEC*
+ABADDON_*_GUIDE*
+ABADDON_COMMAND_MANIFEST_*

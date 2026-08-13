@@ -1,0 +1,298 @@
+{
+  "_meta": {
+    "version": "11.5.2",
+    "source": "ABADDON generated traditional-pattern hwatu sheet",
+    "months": 12,
+    "cards": 48
+  },
+  "_types": {
+    "1": {
+      "1": {
+        "category": "bright",
+        "name_ko": "송학"
+      },
+      "2": {
+        "category": "ribbon_red_poetry",
+        "name_ko": "송학"
+      },
+      "3": {
+        "category": "junk",
+        "name_ko": "송학"
+      },
+      "4": {
+        "category": "junk",
+        "name_ko": "송학"
+      }
+    },
+    "2": {
+      "1": {
+        "category": "animal_godori",
+        "name_ko": "매화"
+      },
+      "2": {
+        "category": "ribbon_red_poetry",
+        "name_ko": "매화"
+      },
+      "3": {
+        "category": "junk",
+        "name_ko": "매화"
+      },
+      "4": {
+        "category": "junk",
+        "name_ko": "매화"
+      }
+    },
+    "3": {
+      "1": {
+        "category": "bright",
+        "name_ko": "벚꽃"
+      },
+      "2": {
+        "category": "ribbon_red_poetry",
+        "name_ko": "벚꽃"
+      },
+      "3": {
+        "category": "junk",
+        "name_ko": "벚꽃"
+      },
+      "4": {
+        "category": "junk",
+        "name_ko": "벚꽃"
+      }
+    },
+    "4": {
+      "1": {
+        "category": "animal_godori",
+        "name_ko": "등나무"
+      },
+      "2": {
+        "category": "ribbon_red_plain",
+        "name_ko": "등나무"
+      },
+      "3": {
+        "category": "junk",
+        "name_ko": "등나무"
+      },
+      "4": {
+        "category": "junk",
+        "name_ko": "등나무"
+      }
+    },
+    "5": {
+      "1": {
+        "category": "animal",
+        "name_ko": "난초"
+      },
+      "2": {
+        "category": "ribbon_red_plain",
+        "name_ko": "난초"
+      },
+      "3": {
+        "category": "junk",
+        "name_ko": "난초"
+      },
+      "4": {
+        "category": "junk",
+        "name_ko": "난초"
+      }
+    },
+    "6": {
+      "1": {
+        "category": "animal",
+        "name_ko": "모란"
+      },
+      "2": {
+        "category": "ribbon_blue",
+        "name_ko": "모란"
+      },
+      "3": {
+        "category": "junk",
+        "name_ko": "모란"
+      },
+      "4": {
+        "category": "junk",
+        "name_ko": "모란"
+      }
+    },
+    "7": {
+      "1": {
+        "category": "animal",
+        "name_ko": "싸리"
+      },
+      "2": {
+        "category": "ribbon_red_plain",
+        "name_ko": "싸리"
+      },
+      "3": {
+        "category": "junk",
+        "name_ko": "싸리"
+      },
+      "4": {
+        "category": "junk",
+        "name_ko": "싸리"
+      }
+    },
+    "8": {
+      "1": {
+        "category": "bright",
+        "name_ko": "팔공산"
+      },
+      "2": {
+        "category": "animal_godori",
+        "name_ko": "팔공산"
+      },
+      "3": {
+        "category": "junk",
+        "name_ko": "팔공산"
+      },
+      "4": {
+        "category": "junk",
+        "name_ko": "팔공산"
+      }
+    },
+    "9": {
+      "1": {
+        "category": "animal_doublejunk",
+        "name_ko": "국화"
+      },
+      "2": {
+        "category": "ribbon_blue",
+        "name_ko": "국화"
+      },
+      "3": {
+        "category": "junk",
+        "name_ko": "국화"
+      },
+      "4": {
+        "category": "junk",
+        "name_ko": "국화"
+      }
+    },
+    "10": {
+      "1": {
+        "category": "animal",
+        "name_ko": "단풍"
+      },
+      "2": {
+        "category": "ribbon_blue",
+        "name_ko": "단풍"
+      },
+      "3": {
+        "category": "junk",
+        "name_ko": "단풍"
+      },
+      "4": {
+        "category": "junk",
+        "name_ko": "단풍"
+      }
+    },
+    "11": {
+      "1": {
+        "category": "bright",
+        "name_ko": "오동"
+      },
+      "2": {
+        "category": "junk_double",
+        "name_ko": "오동"
+      },
+      "3": {
+        "category": "junk",
+        "name_ko": "오동"
+      },
+      "4": {
+        "category": "junk",
+        "name_ko": "오동"
+      }
+    },
+    "12": {
+      "1": {
+        "category": "bright_rain",
+        "name_ko": "비"
+      },
+      "2": {
+        "category": "animal",
+        "name_ko": "비"
+      },
+      "3": {
+        "category": "ribbon",
+        "name_ko": "비"
+      },
+      "4": {
+        "category": "junk_double",
+        "name_ko": "비"
+      }
+    }
+  },
+  "1": {
+    "1": "cards/m01_c1.png",
+    "2": "cards/m01_c2.png",
+    "3": "cards/m01_c3.png",
+    "4": "cards/m01_c4.png"
+  },
+  "2": {
+    "1": "cards/m02_c1.png",
+    "2": "cards/m02_c2.png",
+    "3": "cards/m02_c3.png",
+    "4": "cards/m02_c4.png"
+  },
+  "3": {
+    "1": "cards/m03_c1.png",
+    "2": "cards/m03_c2.png",
+    "3": "cards/m03_c3.png",
+    "4": "cards/m03_c4.png"
+  },
+  "4": {
+    "1": "cards/m04_c1.png",
+    "2": "cards/m04_c2.png",
+    "3": "cards/m04_c3.png",
+    "4": "cards/m04_c4.png"
+  },
+  "5": {
+    "1": "cards/m05_c1.png",
+    "2": "cards/m05_c2.png",
+    "3": "cards/m05_c3.png",
+    "4": "cards/m05_c4.png"
+  },
+  "6": {
+    "1": "cards/m06_c1.png",
+    "2": "cards/m06_c2.png",
+    "3": "cards/m06_c3.png",
+    "4": "cards/m06_c4.png"
+  },
+  "7": {
+    "1": "cards/m07_c1.png",
+    "2": "cards/m07_c2.png",
+    "3": "cards/m07_c3.png",
+    "4": "cards/m07_c4.png"
+  },
+  "8": {
+    "1": "cards/m08_c1.png",
+    "2": "cards/m08_c2.png",
+    "3": "cards/m08_c3.png",
+    "4": "cards/m08_c4.png"
+  },
+  "9": {
+    "1": "cards/m09_c1.png",
+    "2": "cards/m09_c2.png",
+    "3": "cards/m09_c3.png",
+    "4": "cards/m09_c4.png"
+  },
+  "10": {
+    "1": "cards/m10_c1.png",
+    "2": "cards/m10_c2.png",
+    "3": "cards/m10_c3.png",
+    "4": "cards/m10_c4.png"
+  },
+  "11": {
+    "1": "cards/m11_c1.png",
+    "2": "cards/m11_c2.png",
+    "3": "cards/m11_c3.png",
+    "4": "cards/m11_c4.png"
+  },
+  "12": {
+    "1": "cards/m12_c1.png",
+    "2": "cards/m12_c2.png",
+    "3": "cards/m12_c3.png",
+    "4": "cards/m12_c4.png"
+  }
+}
