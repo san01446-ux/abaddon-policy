@@ -1,0 +1,7 @@
+ABADDON 홈페이지 v4.5.1 · BOT v19.0.1 점검
+1. 메인 페이지 카드/레이아웃 정상
+2. Bot v19.0.1 / Website v4.5.1 표시
+3. 명령어 페이지의 Discord 네이티브 v19 섹션 확인
+4. 대시보드 로그인/서버 선택 확인
+5. 봇 초대/지원 서버/개인정보/약관 링크 확인
+6. config.js의 실제 Application ID / supportInvite / apiBaseUrl 유지 확인

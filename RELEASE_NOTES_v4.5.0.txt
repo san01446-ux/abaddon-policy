@@ -1,0 +1,7 @@
+ABADDON Website v4.5.1 · BOT v19.0.1
+
+- Native Discord v19 feature overview
+- Simple Poll + ON/OFF usage
+- Context menu / User Install / Scheduled Event / thread-forum / Soundboard / AutoMod guide
+- Existing site-v424.css hotfix layout preserved without changing CSS routing
+- Existing Application ID, bot invite, support server and Render API URL preserved

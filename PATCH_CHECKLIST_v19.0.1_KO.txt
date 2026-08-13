@@ -1,0 +1,10 @@
+ABADDON Website v4.5.1 · BOT v19.0.1
+
+- Bot presence rotation hotfix version sync
+- Existing CSS/layout structure preserved
+- No API secret or bot token should be stored in this website package
+
+배포 후 확인
+- 메인 페이지 버전 v19.0.1 / v4.5.1
+- dashboard.html 정상 표시
+- 기존 config.js 실제 값 보존 확인

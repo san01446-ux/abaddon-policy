@@ -1,0 +1,9 @@
+ABADDON 홈페이지 v4.5.1 · BOT v19.0.1 점검
+
+1. 메인 페이지 카드/버튼/CSS 정상
+2. Bot v19.0.1 / Website v4.5.1 표시
+3. 대시보드 Discord 로그인
+4. 환영 채널 / 퇴장 채널 / 자동 역할 저장
+5. 안티레이드 / 자동 잠금 / 파괴감시 저장
+6. 외부 알림 상태 YouTube/Twitch 준비 여부 표시
+7. privacy.html / terms.html / 초대 / 지원 링크 확인

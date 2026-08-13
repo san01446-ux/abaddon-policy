@@ -1,0 +1,7 @@
+ABADDON OFFICIAL WEBSITE v4.5.2 · BOT v19.0.1
+
+- KO/EN same live feature core wording synchronized
+- English update-page Korean leakage fixed
+- ABADDON 1024x1024 server icon asset added
+- Existing CSS paths/structure preserved to avoid layout regression
+- No public secrets added

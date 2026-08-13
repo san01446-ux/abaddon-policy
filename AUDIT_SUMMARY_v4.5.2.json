@@ -1,0 +1,11 @@
+{
+  "website_version": "4.5.2",
+  "bot_version": "19.0.1",
+  "english_html_unintended_hangul_files": [],
+  "server_icon_exists": true,
+  "preserved_css_files": [
+    true,
+    true
+  ],
+  "root_upload_layout": true
+}

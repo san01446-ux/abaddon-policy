@@ -1,0 +1,10 @@
+ABADDON WEBSITE v4.2.2 (paired with BOT v18.5.1)
+
+이번 홈페이지 묶음은 기능 코드 변경 없이 최신 통합본을 유지한 배포 기준본입니다.
+봇은 v18.5.1로 올리고, 홈페이지는 이 기준본을 그대로 사용하면 됩니다.
+
+배포 전/후 체크
+- config.js의 applicationId / supportInvite / apiBaseUrl 값 확인
+- dashboard.html 열림 확인
+- privacy.html / terms.html 링크 확인
+- 봇 배포 후 !웹대시보드 명령과 주소 일치 여부 확인

@@ -1,0 +1,26 @@
+ABADDON 공식 홈페이지 v4.2.3 · BOT v18.5.2 · FULL REPAIRED
+
+이 폴더가 GitHub Pages 저장소의 최상위(root) 내용입니다.
+이번 ZIP은 압축을 열었을 때 index.html / config.js / assets / en 폴더가 바로 보이도록 제작합니다.
+별도의 ABADDON_SITE_FULL... 상위 폴더를 GitHub 저장소 안에 만들지 마세요.
+
+현재 공개 설정
+- Application ID: 1532237253944934431
+- Bot invite: https://discord.com/oauth2/authorize?client_id=1532237253944934431
+- Support: https://discord.gg/FN2tX7TVMz
+- Support DM: jjonga0022
+- API: https://abaddon-live-feed.onrender.com
+- OAuth callback: https://abaddon-live-feed.onrender.com/auth/callback
+
+Desktop에서 배포할 때
+1. 기존 abaddon-policy 저장소 폴더를 백업합니다.
+2. 이 ZIP의 '내용물'을 저장소 최상위에 덮어씁니다.
+3. index.html이 저장소 루트에 있는지 확인합니다.
+4. GitHub Desktop에서 변경사항 확인 → Commit → Push origin.
+5. GitHub Pages가 갱신된 뒤 Ctrl+F5로 강력 새로고침합니다.
+
+BOT v18.5.2 연동 점검
+- !패치점검
+- !로그
+- !기능찾기 장비
+- !웹대시보드
