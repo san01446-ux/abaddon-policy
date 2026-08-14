@@ -1,0 +1,7 @@
+ABADDON Website v5.0.0 / Bot v19.5.0
+
+- FiveM/QBCore Life Server Bridge 공개 안내 추가
+- !인생서버 / !인생접속자 / !인생서버설정 / !인생서버테스트 / !인생서버도움말 명령 안내
+- 한국어/English commands + updates + home feature card 동기화
+- 현재 BOT 버전 v19.5.0 / Website v5.0.0 표기 동기화
+- 기존 Dashboard / Live Feed v1.3.0 구조는 변경 없음

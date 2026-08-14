@@ -1,0 +1,18 @@
+{
+  "website_version": "5.0.0",
+  "bot_version": "19.5.0",
+  "checks": {
+    "root_config_bot_19_5_0": true,
+    "root_config_web_5_0_0": true,
+    "ko_commands_fivem": true,
+    "en_commands_fivem": true,
+    "ko_updates_19_5_0": true,
+    "en_updates_19_5_0": true,
+    "ko_home_card": true,
+    "en_home_card": true,
+    "release_notes": true,
+    "upload_readme_current": true
+  },
+  "passed": 10,
+  "total": 10
+}

@@ -1,15 +1,15 @@
 window.ABADDON_CONFIG = {
-  // v4.9.1 / BOT v19.4.1 full dashboard + English parity + live feed unified config.
+  // v5.1.0 / BOT v19.6.0 full dashboard + English parity + live feed unified config.
   applicationId: "1532237253944934431",
   botInviteUrl: "https://discord.com/oauth2/authorize?client_id=1532237253944934431",
   supportInvite: "https://discord.gg/FN2tX7TVMz",
   supportUsername: "jjonga0022",
   apiBaseUrl: "https://abaddon-live-feed.onrender.com",
-  botVersion: "19.4.1",
-  websiteVersion: "4.9.0",
+  botVersion: "19.6.0",
+  websiteVersion: "5.1.0",
 
   // Backward-compatible keys used by the older full-site pages.
-  version: "v19.4.1",
+  version: "v19.6.0",
   status: "ONLINE",
   statusText: "ONLINE",
   statusNote: "CHZZK · SOOP STREAM ALERTS · WEB DASHBOARD · 2026-08-14",

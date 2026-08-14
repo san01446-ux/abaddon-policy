@@ -1,0 +1,8 @@
+ABADDON OFFICIAL WEBSITE v5.1.0
+BOT v19.6.0 · FiveM/QBCore Two-Way Bridge
+
+- FiveM card updated from read-only status to secure QBCore two-way bridge.
+- Added money add/remove/set, job, item, owned vehicle, revive, announce, kick and character lookup commands.
+- Added FiveM event log / duty-role sync explanation.
+- Added ABADDON LIFE Discord server-renewal layout.
+- Korean/English public command pages and update history synchronized.

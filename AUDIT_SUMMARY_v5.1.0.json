@@ -1,0 +1,13 @@
+{
+  "website_version": "5.1.0",
+  "bot_version": "19.6.0",
+  "date": "2026-08-15",
+  "feature": "ABADDON LIFE FiveM/QBCore two-way bridge",
+  "checks": {
+    "app_js_syntax": true,
+    "dashboard_js_syntax": true,
+    "ko_command_catalog_updated": true,
+    "en_command_catalog_updated": true,
+    "release_notes_updated": true
+  }
+}
