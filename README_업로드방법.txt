@@ -1,11 +1,11 @@
-ABADDON OFFICIAL WEBSITE v4.9.0 · BOT v19.4.0
+ABADDON OFFICIAL WEBSITE v4.9.1 · BOT v19.4.1
 
 GitHub Pages `abaddon-policy` 저장소 ROOT에 이 ZIP의 파일/폴더를 전체 덮어쓴 뒤 Commit/Push하세요.
 ZIP 파일 자체를 올리는 것이 아니라 압축을 푼 내용을 올립니다.
 기존 주소는 그대로 사용합니다.
 https://san01446-ux.github.io/abaddon-policy/
 
-[v4.9.0 핵심]
+[v4.9.1 핵심]
 - 현재 카테고리/채널 구조를 읽는 !서버권한자동설정 미리보기/적용 추가
 - @everyone·운영진 역할·ABADDON 권한만 안전하게 조정하고 자동 백업/복구 ID 제공
 - 일반 멤버 !알림신청 → 운영진 !알림승인 / !알림거절 승인 흐름 추가
@@ -37,9 +37,9 @@ config.js 기본 API
 - Bot Token은 apocalypse-bot Background Worker Environment에만 둡니다.
 
 배포 순서 권장
-1) BOT v19.4.0
+1) BOT v19.4.1
 2) LIVE FEED v1.3.0
-3) Website v4.9.0
+3) Website v4.9.1
 4) /health version 1.3.0 + worker_online true 확인
 5) Discord에서 !웹전체검수, !영문검수
 6) Dashboard 한국어/English 양쪽 확인

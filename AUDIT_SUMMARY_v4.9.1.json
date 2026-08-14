@@ -1,0 +1,29 @@
+{
+  "bot_version": "19.4.1",
+  "website_version": "4.9.1",
+  "python_files": 168,
+  "python_syntax_errors": 0,
+  "top_level_command_declarations": 1486,
+  "new_alias_collisions": {
+    "시작": 1,
+    "start": 1,
+    "quickstart": 1,
+    "begin": 1,
+    "1941검수": 1,
+    "1941audit": 1,
+    "starthubaudit": 1
+  },
+  "legacy_commands_missing": [],
+  "web_checks": {
+    "ko_has_start": true,
+    "en_has_start": true,
+    "ko_current_version": true,
+    "en_current_version": true,
+    "legacy_register_ko": true,
+    "legacy_register_en": true
+  },
+  "english_index_allowed_hangul": [
+    "한국어"
+  ],
+  "live_feed_change_required": false
+}
