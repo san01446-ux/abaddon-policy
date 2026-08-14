@@ -1,0 +1,7 @@
+{
+  "version": "5.1.3",
+  "bot": "19.6.3",
+  "life": "1.4.0",
+  "live_feed": "1.5.0",
+  "bridge_diagnostics": true
+}

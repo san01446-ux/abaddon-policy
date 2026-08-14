@@ -1,0 +1,4 @@
+ABADDON OFFICIAL WEBSITE v5.1.3
+- Bot v19.6.3 current-version display
+- ABADDON LIFE bridge diagnostics command added
+- Live Feed v1.5.0 / LIFE v1.4.0 compatibility note
