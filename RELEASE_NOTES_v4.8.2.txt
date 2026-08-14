@@ -1,0 +1,7 @@
+ABADDON Website v4.8.2 / Bot v19.3.2
+
+- English live Command Center usage parameters fully localized
+- Clean English command descriptions; no Description None placeholders
+- Discord English help / argument-error usage parity documented
+- English slash parameter vocabulary synchronized with the live prefix catalog
+- Korean canonical gameplay callbacks remain unchanged

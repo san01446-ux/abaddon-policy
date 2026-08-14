@@ -1,0 +1,7 @@
+ABADDON Website v4.9.0 / Bot v19.4.0
+
+- Full server permission automation with preview, backup and rollback
+- Regular-member external alert requests with staff approval/rejection
+- Unified YouTube/Twitch/CHZZK/SOOP alert list
+- Unified alert-room notice command with auto pin
+- Korean / English website parity updated

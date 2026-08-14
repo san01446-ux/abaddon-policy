@@ -2,8 +2,8 @@
   const cfg = window.ABADDON_CONFIG || {};
   const apiBase = String(cfg.apiBaseUrl || '').trim().replace(/\/$/, '');
   const invalidApi = !apiBase || apiBase === 'YOUR_RENDER_PUBLIC_URL';
-  const botVersion = cfg.botVersion || '19.3.1';
-  const webVersion = cfg.websiteVersion || '4.8.1';
+  const botVersion = cfg.botVersion || '19.4.0';
+  const webVersion = cfg.websiteVersion || '4.9.0';
   document.querySelectorAll('[data-bot-version]').forEach(el => el.textContent = botVersion);
   document.querySelectorAll('[data-web-version]').forEach(el => el.textContent = webVersion);
 
@@ -325,7 +325,18 @@
       return;
     }
     const visible = rows.slice(0, commandRenderLimit);
-    results.innerHTML = `<div class="command-card-grid">${visible.map(row => { const usage=lang==='en'?(row.usage_en||row.usage):row.usage; const help=lang==='en'?(row.help_en||'No description'):row.help; const aliases=lang==='en'?(row.aliases_en||[]):(row.aliases||[]); return `<article class="command-card"><div class="command-card-head"><code>${escapeHtml(usage)}</code><button class="copy-command" type="button" data-command="${escapeHtml(usage)}">${t('복사','Copy')}</button></div><p>${escapeHtml(help || t('설명 없음','No description'))}</p>${aliases.length ? `<small>${t('별칭','Aliases')}: ${escapeHtml(aliases.slice(0,6).join(' · '))}</small>` : ''}</article>`; }).join('')}</div>` + (visible.length < rows.length ? `<button id="loadMoreCommands" class="btn secondary load-more" type="button">${t(`더 보기 · ${rows.length-visible.length}개 남음`, `Load more · ${rows.length-visible.length} remaining`)}</button>` : '');
+    const hasHangul = value => /[가-힣]/.test(String(value || ''));
+    results.innerHTML = `<div class="command-card-grid">${visible.map(row => {
+      let usage = lang==='en' ? (row.usage_en || `!${row.name_en || 'command'}`) : row.usage;
+      let help = lang==='en' ? (row.help_en || 'Open this ABADDON feature.') : row.help;
+      let aliases = lang==='en' ? (row.aliases_en || []) : (row.aliases || []);
+      if (lang==='en') {
+        if (hasHangul(usage)) usage = `!${String(row.name_en || 'command').replace(/[^A-Za-z0-9_-]/g,'') || 'command'}`;
+        if (hasHangul(help) || /^(description none|none|no description)$/i.test(String(help).trim())) help = 'Open this ABADDON feature.';
+        aliases = aliases.filter(x => !hasHangul(x));
+      }
+      return `<article class="command-card"><div class="command-card-head"><code>${escapeHtml(usage)}</code><button class="copy-command" type="button" data-command="${escapeHtml(usage)}">${t('복사','Copy')}</button></div><p>${escapeHtml(help || t('설명 없음','No description'))}</p>${aliases.length ? `<small>${t('별칭','Aliases')}: ${escapeHtml(aliases.slice(0,6).join(' · '))}</small>` : ''}</article>`;
+    }).join('')}</div>` + (visible.length < rows.length ? `<button id="loadMoreCommands" class="btn secondary load-more" type="button">${t(`더 보기 · ${rows.length-visible.length}개 남음`, `Load more · ${rows.length-visible.length} remaining`)}</button>` : '');
   }
 
   let liveTimer = null;

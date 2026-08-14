@@ -1,0 +1,23 @@
+{
+  "bot_version": "19.3.2",
+  "website_version": "4.8.2",
+  "python_compile": "PASS",
+  "web_js_syntax": "PASS",
+  "decorated_command_functions": 1627,
+  "unique_hangul_callback_parameters": 191,
+  "english_parameter_mapping_gaps": [],
+  "signature_examples": {
+    "[난이도=보통]": "[difficulty=normal]",
+    "<지역>": "<region>",
+    "<아이템> [수량=1]": "<item> [amount=1]",
+    "[대상]": "[target]",
+    "<메시지ID> [상세]": "<message_id> [detail]",
+    "<번호또는ID>": "<number_or_id>"
+  },
+  "english_static_visible_hangul_leaks": {},
+  "description_none_live_generator": false,
+  "discord_english_missing_bad_argument_usage_patch": true,
+  "discord_english_help_clean_generator_patch": true,
+  "slash_parameter_map_synced": true,
+  "frontend_stale_cache_hangul_guard": true
+}

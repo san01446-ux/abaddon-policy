@@ -1,0 +1,6 @@
+{
+  "bot_version": "19.4.0",
+  "website_version": "4.9.0",
+  "features": ["server_permission_automation", "member_alert_requests", "unified_alert_list", "alert_room_notice"],
+  "ko_en_parity": true
+}
