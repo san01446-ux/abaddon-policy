@@ -1,0 +1,10 @@
+ABADDON OFFICIAL WEBSITE v4.8.0 · BOT v19.3.0
+
+- YouTube / Twitch / CHZZK / SOOP 4-platform external alert presentation
+- Korean + English dashboard CHZZK/SOOP controls
+- Korean + English home page copy synchronized
+- Privacy policy external-alert section synchronized
+- v19.3.0 milestone added to Korean + English updates
+- v4.7.1 fast server-switch snapshot/cache and LIVE FEED retained
+
+Deploy: extract and upload all contents to the abaddon-policy GitHub Pages repository root.

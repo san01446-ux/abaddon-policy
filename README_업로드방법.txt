@@ -1,15 +1,16 @@
-ABADDON OFFICIAL WEBSITE v4.7.1 · BOT v19.2.1
+ABADDON OFFICIAL WEBSITE v4.8.0 · BOT v19.3.0
 
 GitHub Pages `abaddon-policy` 저장소 ROOT에 이 ZIP의 파일/폴더를 전체 덮어쓴 뒤 Commit/Push하세요.
 ZIP 파일 자체를 올리는 것이 아니라 압축을 푼 내용을 올립니다.
 기존 주소는 그대로 사용합니다.
 https://san01446-ux.github.io/abaddon-policy/
 
-[v4.7.1 핵심]
-- 서버 선택 시 snapshot 1회 요청으로 전환
-- 명령어 센터를 서버 전환과 분리/캐시
-- 빠른 연속 서버 클릭 시 오래된 응답 무시
-- 최근 서버 화면 30초 즉시 캐시
+[v4.8.0 핵심]
+- 외부 알림센터를 YouTube / Twitch / CHZZK / SOOP 4개 플랫폼으로 확장
+- 한국어 / English Dashboard에 CHZZK·SOOP 등록/삭제/상태 UI 추가
+- 메인 홈페이지의 외부 알림 소개와 개인정보처리방침을 4개 플랫폼 기준으로 동기화
+- 업데이트 페이지에 v19.3.0 릴리즈 기록 추가
+- 기존 v4.7.1 서버 전환 snapshot/cache 최적화와 LIVE FEED 복구를 그대로 유지
 
 [v4.7.0 기반 유지]
 - Dashboard 버튼/탭 로딩 잠금 문제 수정
@@ -35,9 +36,9 @@ config.js 기본 API
 - Bot Token은 apocalypse-bot Background Worker Environment에만 둡니다.
 
 배포 순서 권장
-1) BOT v19.2.1
-2) LIVE FEED v1.2.1
-3) Website v4.7.1
-4) /health version 1.2.1 + worker_online true 확인
+1) BOT v19.3.0
+2) LIVE FEED v1.3.0
+3) Website v4.8.0
+4) /health version 1.3.0 + worker_online true 확인
 5) Discord에서 !웹전체검수, !영문검수
 6) Dashboard 한국어/English 양쪽 확인

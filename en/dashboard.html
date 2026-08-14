@@ -7,9 +7,9 @@
 <meta content="ABADDON Discord server control dashboard" name="description"/>
 <meta content="#0b0d12" name="theme-color"/>
 <title>ABADDON · Server Dashboard</title>
-<link href="../site-v424.css?v=471-switch-fast" rel="stylesheet"/>
-<script defer="" src="config.js?v=471"></script>
-<script defer="" src="../dashboard.js?v=471"></script>
+<link href="../site-v424.css?v=480-streams" rel="stylesheet"/>
+<script defer="" src="config.js?v=480"></script>
+<script defer="" src="../dashboard.js?v=480"></script>
 </head>
 <body>
 <div class="noise"></div>
@@ -25,7 +25,7 @@
 <main class="shell dashboard-page">
 <section class="dashboard-hero">
 <div>
-<div class="eyebrow">ABADDON WEB CONTROL CENTER · BOT v<span data-bot-version="">19.2.1</span></div>
+<div class="eyebrow">ABADDON WEB CONTROL CENTER · BOT v<span data-bot-version="">19.3.0</span></div>
 <h1>Powerful underneath. Simple on top.</h1>
 <p class="lead">Sign in with Discord, choose a server, and manage only what you need. Configure server features directly and search the entire live command catalog.</p>
 </div>
@@ -48,7 +48,7 @@
 <div class="side-separator"></div>
 <div class="dashboard-side-note">
 <strong>🔐 Safe by design</strong>
-<p>Bot tokens, Discord OAuth secrets, and YouTube/Twitch secrets are never stored on this page. They stay in Render environment variables.</p>
+<p>Bot tokens, Discord OAuth secrets, and external-platform API secrets are never stored on this page. They stay in Render environment variables.</p>
 </div>
 </aside>
 <section class="dash-card settings-card fusion-card">
@@ -72,17 +72,17 @@
 <article><span>COMMANDS</span><strong id="statCommands">-</strong><small>public commands</small></article>
 <article><span>MEMBERS</span><strong id="statMembers">-</strong><small>server members</small></article>
 <article><span>GIF</span><strong id="statGif">-</strong><small>local animated emoji</small></article>
-<article><span>ALERTS</span><strong id="statAlerts">-</strong><small>YouTube + Twitch</small></article>
+<article><span>ALERTS</span><strong id="statAlerts">-</strong><small>YouTube + Twitch + CHZZK + SOOP</small></article>
 </div>
 <div class="feature-launch-grid">
 <button class="feature-launch" data-open-panel="settings" type="button"><span>⚙️</span><div><strong>Server settings</strong><small>Security, logs, welcome, roles, RPG</small></div></button>
 <button class="feature-launch" data-open-panel="reactions" type="button"><span>✨</span><div><strong>GIF reactions</strong><small>Standard, vivid, 5-reaction Super Style</small></div></button>
-<button class="feature-launch" data-open-panel="external" type="button"><span>📡</span><div><strong>External alerts</strong><small>Add/remove YouTube and Twitch alerts</small></div></button>
+<button class="feature-launch" data-open-panel="external" type="button"><span>📡</span><div><strong>External alerts</strong><small>Manage YouTube, Twitch, CHZZK and SOOP alerts</small></div></button>
 <button class="feature-launch" data-open-panel="live" type="button"><span>📡</span><div><strong>Live feed</strong><small>Heartbeat, public events, announcements</small></div></button>
 <button class="feature-launch" data-open-panel="commands" type="button"><span>🧭</span><div><strong>All commands</strong><small>Search, filter, and copy the live catalog</small></div></button>
 </div>
 <section class="setting-section wide overview-section">
-<div class="section-heading-line"><div><h3>📊 Current state</h3><p class="micro">Discord commands and this dashboard use the same server configuration data.</p></div><span class="status-pill" id="overviewVersion">v19.2.1</span></div>
+<div class="section-heading-line"><div><h3>📊 Current state</h3><p class="micro">Discord commands and this dashboard use the same server configuration data.</p></div><span class="status-pill" id="overviewVersion">v19.3.0</span></div>
 <div class="overview-flags" id="overviewFlags"></div>
 </section>
 </div>
@@ -195,7 +195,7 @@
 </div>
 <div class="dash-panel" id="panel-external">
 <div class="panel-toolbar">
-<div><h3>📡 External alerts</h3><p class="micro">You can now manage YouTube and Twitch alerts directly from the web.</p></div>
+<div><h3>📡 External alerts</h3><p class="micro">Manage YouTube, Twitch, CHZZK and SOOP notifications from one dashboard.</p></div>
 <span class="status-pill" id="externalEnvStatus">Checking API</span>
 </div>
 <div class="external-grid">
@@ -214,6 +214,22 @@
 <label><span>Discord notification channel</span><select id="twitchNotifyChannel"></select></label>
 <button class="btn secondary full-btn" id="twitchAddBtn" type="button">Add Twitch alert</button>
 <div class="subscription-list" id="twitchList"></div>
+</section>
+<section class="setting-section">
+<h3>🟢 CHZZK</h3>
+<p class="micro">Paste a CHZZK live/channel URL or channel ID. It works immediately; Developer credentials are preferred when configured.</p>
+<label><span>CHZZK channel</span><input id="chzzkIdentifier" maxlength="220" placeholder="CHZZK channel URL or ID" type="text"/></label>
+<label><span>Discord notification channel</span><select id="chzzkNotifyChannel"></select></label>
+<button class="btn secondary full-btn" id="chzzkAddBtn" type="button">Add CHZZK alert</button>
+<div class="subscription-list" id="chzzkList"></div>
+</section>
+<section class="setting-section">
+<h3>🔵 SOOP</h3>
+<p class="micro">SOOP Open API integration is ready. After approval, add SOOP_CLIENT_ID to Render to activate it.</p>
+<label><span>SOOP streamer</span><input id="soopIdentifier" maxlength="220" placeholder="SOOP streamer ID or URL" type="text"/></label>
+<label><span>Discord notification channel</span><select id="soopNotifyChannel"></select></label>
+<button class="btn secondary full-btn" id="soopAddBtn" type="button">Add SOOP alert</button>
+<div class="subscription-list" id="soopList"></div>
 </section>
 </div>
 </div>
@@ -242,8 +258,8 @@
 </section>
 </main>
 <footer class="shell footer">
-<span>ABADDON · v<span data-bot-version="">19.2.1</span></span>
-<span>Website v<span data-web-version="">4.7.1</span></span>
+<span>ABADDON · v<span data-bot-version="">19.3.0</span></span>
+<span>Website v<span data-web-version="">4.8.0</span></span>
 <span>Support @jjonga0022</span>
 </footer>
 </body>

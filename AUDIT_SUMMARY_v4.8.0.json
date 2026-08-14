@@ -1,0 +1,24 @@
+{
+  "product": "ABADDON Official Website",
+  "version": "4.8.0",
+  "bot_version": "19.3.0",
+  "generated_at_utc": "2026-08-14T08:31:13.688082+00:00",
+  "features": [
+    "Four-platform external alert dashboard (YouTube/Twitch/CHZZK/SOOP)",
+    "KO/EN synchronized dashboard and command pages",
+    "CHZZK/SOOP privacy/update/homepage copy synchronized",
+    "Existing live feed and fast server switching retained"
+  ],
+  "validation": {
+    "bot_compileall": "PASS (164 Python files discovered)",
+    "live_feed_py_compile": "PASS",
+    "web_node_check": "PASS (9 JS files)",
+    "html_structural": "PASS (19 HTML pages, duplicate IDs 0, missing local resources 0)",
+    "dashboard_controls": "PASS (YouTube/Twitch/CHZZK/SOOP controls in KO+EN)",
+    "english_hangul_scan": "PASS (only intentional 한국어 language switch)",
+    "v1930_command_alias_collision": "PASS (24 new names, 0 collisions)",
+    "cross_layer_routes": "PASS",
+    "external_stream_api_mock_functional": "PASS",
+    "live_feed_local_http_smoke": "PASS (/health 200 v1.3.0, OAuth 302, CHZZK/SOOP protected routes exist)"
+  }
+}

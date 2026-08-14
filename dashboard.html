@@ -7,9 +7,9 @@
 <meta content="ABADDON Discord server control dashboard" name="description"/>
 <meta content="#0b0d12" name="theme-color"/>
 <title>ABADDON · 서버 대시보드</title>
-<link href="site-v424.css?v=471-switch-fast" rel="stylesheet"/>
-<script defer="" src="config.js?v=471"></script>
-<script defer="" src="dashboard.js?v=471"></script>
+<link href="site-v424.css?v=480-streams" rel="stylesheet"/>
+<script defer="" src="config.js?v=480"></script>
+<script defer="" src="dashboard.js?v=480"></script>
 </head>
 <body>
 <div class="noise"></div>
@@ -25,7 +25,7 @@
 <main class="shell dashboard-page">
 <section class="dashboard-hero">
 <div>
-<div class="eyebrow">ABADDON WEB CONTROL CENTER · BOT v<span data-bot-version="">19.2.1</span></div>
+<div class="eyebrow">ABADDON WEB CONTROL CENTER · BOT v<span data-bot-version="">19.3.0</span></div>
 <h1 data-en="Powerful underneath. Simple on top." data-ko="명령어는 많아도, 사용은 단순하게.">명령어는 많아도, 사용은 단순하게.</h1>
 <p class="lead" data-en="Sign in with Discord, choose a server, and manage only what you need. Configure server features directly and search the entire live command catalog." data-ko="Discord 로그인 → 서버 선택 → 필요한 기능만 클릭. 설정형 기능은 웹에서 직접 저장하고, 전체 명령어는 검색해서 찾을 수 있습니다.">Discord 로그인 → 서버 선택 → 필요한 기능만 클릭. 설정형 기능은 웹에서 직접 저장하고, 전체 명령어는 검색해서 찾을 수 있습니다.</p>
 </div>
@@ -48,7 +48,7 @@
 <div class="side-separator"></div>
 <div class="dashboard-side-note">
 <strong data-en="🔐 Safe by design" data-ko="🔐 안전한 구조">🔐 안전한 구조</strong>
-<p data-en="Bot tokens, Discord OAuth secrets, and YouTube/Twitch secrets are never stored on this page. They stay in Render environment variables." data-ko="Bot Token · Discord OAuth Secret · YouTube/Twitch Secret은 이 페이지에 저장되지 않습니다. Render 환경변수에서만 사용합니다.">Bot Token · Discord OAuth Secret · YouTube/Twitch Secret은 이 페이지에 저장되지 않습니다. Render 환경변수에서만 사용합니다.</p>
+<p data-en="Bot tokens, Discord OAuth secrets, and external-platform API secrets are never stored on this page. They stay in Render environment variables." data-ko="Bot Token · Discord OAuth Secret · 외부 플랫폼 API Secret은 이 페이지에 저장되지 않습니다. Render 환경변수에서만 사용합니다.">Bot Token · Discord OAuth Secret · 외부 플랫폼 API Secret은 이 페이지에 저장되지 않습니다. Render 환경변수에서만 사용합니다.</p>
 </div>
 </aside>
 <section class="dash-card settings-card fusion-card">
@@ -72,17 +72,17 @@
 <article><span>COMMANDS</span><strong id="statCommands">-</strong><small data-en="public commands" data-ko="공개 명령어">공개 명령어</small></article>
 <article><span>MEMBERS</span><strong id="statMembers">-</strong><small data-en="server members" data-ko="서버 멤버">서버 멤버</small></article>
 <article><span>GIF</span><strong id="statGif">-</strong><small data-en="local animated emoji" data-ko="로컬 움직이는 이모지">로컬 움직이는 이모지</small></article>
-<article><span>ALERTS</span><strong id="statAlerts">-</strong><small data-en="YouTube + Twitch" data-ko="YouTube + Twitch">YouTube + Twitch</small></article>
+<article><span>ALERTS</span><strong id="statAlerts">-</strong><small data-en="YouTube + Twitch + CHZZK + SOOP" data-ko="YouTube + Twitch + CHZZK + SOOP">YouTube + Twitch + CHZZK + SOOP</small></article>
 </div>
 <div class="feature-launch-grid">
 <button class="feature-launch" data-open-panel="settings" type="button"><span>⚙️</span><div><strong data-en="Server settings" data-ko="서버 설정">서버 설정</strong><small data-en="Security, logs, welcome, roles, RPG" data-ko="보안·로그·환영·역할·RPG">보안·로그·환영·역할·RPG</small></div></button>
 <button class="feature-launch" data-open-panel="reactions" type="button"><span>✨</span><div><strong data-en="GIF reactions" data-ko="GIF 자동반응">GIF 자동반응</strong><small data-en="Standard, vivid, 5-reaction Super Style" data-ko="표준/화려/5개 슈퍼 스타일">표준/화려/5개 슈퍼 스타일</small></div></button>
-<button class="feature-launch" data-open-panel="external" type="button"><span>📡</span><div><strong data-en="External alerts" data-ko="외부 알림">외부 알림</strong><small data-en="Add/remove YouTube and Twitch alerts" data-ko="YouTube·Twitch 등록/삭제">YouTube·Twitch 등록/삭제</small></div></button>
+<button class="feature-launch" data-open-panel="external" type="button"><span>📡</span><div><strong data-en="External alerts" data-ko="외부 알림">외부 알림</strong><small data-en="Manage YouTube, Twitch, CHZZK and SOOP alerts" data-ko="YouTube·Twitch·CHZZK·SOOP 관리">YouTube·Twitch·CHZZK·SOOP 관리</small></div></button>
 <button class="feature-launch" data-open-panel="live" type="button"><span>📡</span><div><strong data-en="Live feed" data-ko="실시간 로그">실시간 로그</strong><small data-en="Heartbeat, public events, announcements" data-ko="서버 심박·공개 이벤트·공지">서버 심박·공개 이벤트·공지</small></div></button>
 <button class="feature-launch" data-open-panel="commands" type="button"><span>🧭</span><div><strong data-en="All commands" data-ko="전체 명령어">전체 명령어</strong><small data-en="Search, filter, and copy the live catalog" data-ko="라이브 목록 검색·분류·복사">라이브 목록 검색·분류·복사</small></div></button>
 </div>
 <section class="setting-section wide overview-section">
-<div class="section-heading-line"><div><h3 data-en="📊 Current state" data-ko="📊 현재 상태">📊 현재 상태</h3><p class="micro" data-en="Discord commands and this dashboard use the same server configuration data." data-ko="Discord 명령어와 웹 대시보드가 같은 서버 설정 데이터를 사용합니다.">Discord 명령어와 웹 대시보드가 같은 서버 설정 데이터를 사용합니다.</p></div><span class="status-pill" id="overviewVersion">v19.2.1</span></div>
+<div class="section-heading-line"><div><h3 data-en="📊 Current state" data-ko="📊 현재 상태">📊 현재 상태</h3><p class="micro" data-en="Discord commands and this dashboard use the same server configuration data." data-ko="Discord 명령어와 웹 대시보드가 같은 서버 설정 데이터를 사용합니다.">Discord 명령어와 웹 대시보드가 같은 서버 설정 데이터를 사용합니다.</p></div><span class="status-pill" id="overviewVersion">v19.3.0</span></div>
 <div class="overview-flags" id="overviewFlags"></div>
 </section>
 </div>
@@ -195,14 +195,14 @@
 </div>
 <div class="dash-panel" id="panel-external">
 <div class="panel-toolbar">
-<div><h3 data-en="📡 External alerts" data-ko="📡 외부 알림">📡 외부 알림</h3><p class="micro" data-en="You can now manage YouTube and Twitch alerts directly from the web." data-ko="이제 YouTube/Twitch 등록도 Discord 명령어 없이 웹에서 할 수 있습니다.">이제 YouTube/Twitch 등록도 Discord 명령어 없이 웹에서 할 수 있습니다.</p></div>
+<div><h3 data-en="📡 External alerts" data-ko="📡 외부 알림">📡 외부 알림</h3><p class="micro" data-en="Manage YouTube, Twitch, CHZZK and SOOP notifications from one dashboard." data-ko="YouTube·Twitch·CHZZK·SOOP 알림을 한 대시보드에서 관리합니다.">YouTube·Twitch·CHZZK·SOOP 알림을 한 대시보드에서 관리합니다.</p></div>
 <span class="status-pill" id="externalEnvStatus">API 확인 중</span>
 </div>
 <div class="external-grid">
 <section class="setting-section">
 <h3>📺 YouTube</h3>
 <p class="micro" data-en="Supports UC channel IDs, @handles, and youtube.com/@handle URLs." data-ko="채널 ID(UC...) · @핸들 · youtube.com/@핸들 주소 사용 가능">채널 ID(UC...) · @핸들 · youtube.com/@핸들 주소 사용 가능</p>
-<label><span data-en="YouTube channel" data-ko="YouTube 채널">YouTube 채널</span><input id="youtubeIdentifier" maxlength="160" placeholder="@handle 또는 UC..." type="text"/></label>
+<label><span data-en="YouTube channel" data-ko="YouTube 채널">YouTube 채널</span><input id="youtubeIdentifier" maxlength="160" placeholder="@핸들 또는 UC..." type="text"/></label>
 <label><span data-en="Discord notification channel" data-ko="알림 받을 Discord 채널">알림 받을 Discord 채널</span><select id="youtubeNotifyChannel"></select></label>
 <button class="btn secondary full-btn" data-en="Add YouTube alert" data-ko="YouTube 알림 등록" id="youtubeAddBtn" type="button">YouTube 알림 등록</button>
 <div class="subscription-list" id="youtubeList"></div>
@@ -214,6 +214,22 @@
 <label><span data-en="Discord notification channel" data-ko="알림 받을 Discord 채널">알림 받을 Discord 채널</span><select id="twitchNotifyChannel"></select></label>
 <button class="btn secondary full-btn" data-en="Add Twitch alert" data-ko="Twitch 알림 등록" id="twitchAddBtn" type="button">Twitch 알림 등록</button>
 <div class="subscription-list" id="twitchList"></div>
+</section>
+<section class="setting-section">
+<h3>🟢 CHZZK</h3>
+<p class="micro" data-en="Paste a CHZZK live/channel URL or channel ID. Works immediately; Developer credentials are used when configured." data-ko="치지직 채널 URL 또는 채널 ID를 입력하세요. 바로 사용할 수 있고 Developer 키가 있으면 우선 사용합니다.">치지직 채널 URL 또는 채널 ID를 입력하세요. 바로 사용할 수 있고 Developer 키가 있으면 우선 사용합니다.</p>
+<label><span data-en="CHZZK channel" data-ko="CHZZK 채널">CHZZK 채널</span><input id="chzzkIdentifier" maxlength="220" placeholder="CHZZK 채널 URL 또는 ID" type="text"/></label>
+<label><span data-en="Discord notification channel" data-ko="알림 받을 Discord 채널">알림 받을 Discord 채널</span><select id="chzzkNotifyChannel"></select></label>
+<button class="btn secondary full-btn" data-en="Add CHZZK alert" data-ko="CHZZK 알림 등록" id="chzzkAddBtn" type="button">CHZZK 알림 등록</button>
+<div class="subscription-list" id="chzzkList"></div>
+</section>
+<section class="setting-section">
+<h3>🔵 SOOP</h3>
+<p class="micro" data-en="Ready for SOOP Open API. After approval, add SOOP_CLIENT_ID to Render and this panel activates." data-ko="SOOP Open API 연동 준비 완료. 승인 후 Render에 SOOP_CLIENT_ID만 넣으면 활성화됩니다.">SOOP Open API 연동 준비 완료. 승인 후 Render에 SOOP_CLIENT_ID만 넣으면 활성화됩니다.</p>
+<label><span data-en="SOOP streamer" data-ko="SOOP 스트리머">SOOP 스트리머</span><input id="soopIdentifier" maxlength="220" placeholder="SOOP 스트리머 ID 또는 URL" type="text"/></label>
+<label><span data-en="Discord notification channel" data-ko="알림 받을 Discord 채널">알림 받을 Discord 채널</span><select id="soopNotifyChannel"></select></label>
+<button class="btn secondary full-btn" data-en="Add SOOP alert" data-ko="SOOP 알림 등록" id="soopAddBtn" type="button">SOOP 알림 등록</button>
+<div class="subscription-list" id="soopList"></div>
 </section>
 </div>
 </div>
@@ -242,8 +258,8 @@
 </section>
 </main>
 <footer class="shell footer">
-<span>ABADDON · v<span data-bot-version="">19.2.1</span></span>
-<span>Website v<span data-web-version="">4.7.1</span></span>
+<span>ABADDON · v<span data-bot-version="">19.3.0</span></span>
+<span>Website v<span data-web-version="">4.8.0</span></span>
 <span>Support @jjonga0022</span>
 </footer>
 </body>

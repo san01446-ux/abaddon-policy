@@ -2,8 +2,8 @@
   const cfg = window.ABADDON_CONFIG || {};
   const apiBase = String(cfg.apiBaseUrl || '').trim().replace(/\/$/, '');
   const invalidApi = !apiBase || apiBase === 'YOUR_RENDER_PUBLIC_URL';
-  const botVersion = cfg.botVersion || '19.2.1';
-  const webVersion = cfg.websiteVersion || '4.7.1';
+  const botVersion = cfg.botVersion || '19.3.0';
+  const webVersion = cfg.websiteVersion || '4.8.0';
   document.querySelectorAll('[data-bot-version]').forEach(el => el.textContent = botVersion);
   document.querySelectorAll('[data-web-version]').forEach(el => el.textContent = webVersion);
 
@@ -21,6 +21,8 @@
     renderCommands();
     const cs=document.getElementById('commandSearch'); if(cs) cs.placeholder=t('명령어 또는 기능 검색 · 예: 카지노, GIF, 유튜브, 보스','Search commands or features · e.g. casino, GIF, YouTube, boss');
     const yi=document.getElementById('youtubeIdentifier'); if(yi) yi.placeholder=t('@핸들 또는 UC...','@handle or UC...');
+    const ci=document.getElementById('chzzkIdentifier'); if(ci) ci.placeholder=t('CHZZK 채널 URL 또는 ID','CHZZK channel URL or ID');
+    const si=document.getElementById('soopIdentifier'); if(si) si.placeholder=t('SOOP 스트리머 ID 또는 URL','SOOP streamer ID or URL');
     refreshLiveFeed();
   };
   toggle?.addEventListener('click', () => {
@@ -202,6 +204,8 @@
     const guildLocale = document.getElementById('guild_locale'); if (guildLocale) guildLocale.value = settings.guild_locale === 'en' ? 'en' : 'ko';
     setChannelOptions('youtubeNotifyChannel');
     setChannelOptions('twitchNotifyChannel');
+    setChannelOptions('chzzkNotifyChannel');
+    setChannelOptions('soopNotifyChannel');
     form.classList.remove('muted-form');
     saveBtn.disabled = false;
   }
@@ -211,7 +215,7 @@
     document.getElementById('statCommands').textContent = Number(currentOverview.commands || 0).toLocaleString();
     document.getElementById('statMembers').textContent = Number(currentOverview.members || 0).toLocaleString();
     document.getElementById('statGif').textContent = Number(currentOverview.local_gif_count || 0).toLocaleString();
-    document.getElementById('statAlerts').textContent = Number((currentOverview.youtube_subscriptions || 0) + (currentOverview.twitch_subscriptions || 0)).toLocaleString();
+    document.getElementById('statAlerts').textContent = Number((currentOverview.youtube_subscriptions || 0) + (currentOverview.twitch_subscriptions || 0) + (currentOverview.chzzk_subscriptions || 0) + (currentOverview.soop_subscriptions || 0)).toLocaleString();
     document.getElementById('overviewVersion').textContent = `v${currentOverview.version || botVersion}`;
     guildMiniStatus.innerHTML = `<span>👥 ${Number(currentOverview.members || 0).toLocaleString()}</span><span>💬 ${Number(currentOverview.text_channels || 0)}</span><span>🎭 ${Number(currentOverview.roles || 0)}</span>`;
     renderOverviewFlags();
@@ -225,6 +229,8 @@
       [currentOverview.super_style, t('5개 슈퍼 스타일', '5-reaction Super Style')],
       [Number(currentOverview.youtube_subscriptions || 0) > 0, `YouTube ${Number(currentOverview.youtube_subscriptions || 0)}`],
       [Number(currentOverview.twitch_subscriptions || 0) > 0, `Twitch ${Number(currentOverview.twitch_subscriptions || 0)}`],
+      [Number(currentOverview.chzzk_subscriptions || 0) > 0, `CHZZK ${Number(currentOverview.chzzk_subscriptions || 0)}`],
+      [Number(currentOverview.soop_subscriptions || 0) > 0, `SOOP ${Number(currentOverview.soop_subscriptions || 0)}`],
       [true, t(`공개 명령 ${Number(currentOverview.commands || 0).toLocaleString()}개`, `${Number(currentOverview.commands || 0).toLocaleString()} public commands`)],
     ];
     box.innerHTML = flags.map(([on,label]) => `<span class="flag ${on ? 'on' : ''}">${on ? '●' : '○'} ${escapeHtml(label)}</span>`).join('');
@@ -257,23 +263,29 @@
   function renderExternal() {
     const env = document.getElementById('externalEnvStatus');
     if (!env || !currentExternal) return;
-    env.textContent = `YouTube ${currentExternal.youtube_ready ? '✅' : '❌'} · Twitch ${currentExternal.twitch_ready ? '✅' : '❌'}`;
-    env.classList.toggle('warn-pill', !currentExternal.youtube_ready || !currentExternal.twitch_ready);
+    env.textContent = `YouTube ${currentExternal.youtube_ready ? '✅' : '❌'} · Twitch ${currentExternal.twitch_ready ? '✅' : '❌'} · CHZZK ${currentExternal.chzzk_ready ? '✅' : '❌'} · SOOP ${currentExternal.soop_ready ? '✅' : '⏳'}`;
+    env.classList.toggle('warn-pill', !currentExternal.youtube_ready || !currentExternal.twitch_ready || !currentExternal.chzzk_ready || !currentExternal.soop_ready);
+    const meta = {
+      youtube:{list:'youtubeList', id:'channel_id', title:'title'},
+      twitch:{list:'twitchList', id:'login', title:'display_name'},
+      chzzk:{list:'chzzkList', id:'channel_id', title:'channel_name'},
+      soop:{list:'soopList', id:'user_id', title:'display_name'},
+    };
     const renderList = (platform, rows) => {
-      const target = document.getElementById(platform === 'youtube' ? 'youtubeList' : 'twitchList');
+      const m = meta[platform];
+      const target = document.getElementById(m.list);
       if (!target) return;
       if (!rows.length) {
         target.innerHTML = `<p class="empty-state">${t('등록된 알림이 없습니다.', 'No alerts registered.')}</p>`;
         return;
       }
       target.innerHTML = rows.map(row => {
-        const id = platform === 'youtube' ? row.channel_id : row.login;
-        const title = platform === 'youtube' ? row.title : row.display_name;
+        const id = row[m.id] || row.id || '';
+        const title = row[m.title] || id;
         return `<article class="subscription-row"><div><strong>${escapeHtml(title)}</strong><small>#${escapeHtml(channelName(row.notify_channel_id))} · ${escapeHtml(id)}</small></div><button class="remove-sub" type="button" data-platform="${platform}" data-id="${escapeHtml(id)}">${t('삭제','Remove')}</button></article>`;
       }).join('');
     };
-    renderList('youtube', currentExternal.youtube || []);
-    renderList('twitch', currentExternal.twitch || []);
+    ['youtube','twitch','chzzk','soop'].forEach(platform => renderList(platform, currentExternal[platform] || []));
   }
 
   const categoryLabels = {
@@ -511,39 +523,63 @@
     finally { saveReactionBtn.disabled = false; }
   });
 
+  const externalMeta = {
+    youtube:{label:'YouTube', identifier:'youtubeIdentifier', channel:'youtubeNotifyChannel', button:'youtubeAddBtn'},
+    twitch:{label:'Twitch', identifier:'twitchIdentifier', channel:'twitchNotifyChannel', button:'twitchAddBtn'},
+    chzzk:{label:'CHZZK', identifier:'chzzkIdentifier', channel:'chzzkNotifyChannel', button:'chzzkAddBtn'},
+    soop:{label:'SOOP', identifier:'soopIdentifier', channel:'soopNotifyChannel', button:'soopAddBtn'},
+  };
+  const syncExternalOverview = () => {
+    if (!currentOverview) return;
+    currentOverview.youtube_subscriptions=(currentExternal.youtube||[]).length;
+    currentOverview.twitch_subscriptions=(currentExternal.twitch||[]).length;
+    currentOverview.chzzk_subscriptions=(currentExternal.chzzk||[]).length;
+    currentOverview.soop_subscriptions=(currentExternal.soop||[]).length;
+    renderOverview();
+  };
   async function addExternal(platform) {
     if (!currentGuild) return;
-    const isYoutube = platform === 'youtube';
-    const identifierEl = document.getElementById(isYoutube ? 'youtubeIdentifier' : 'twitchIdentifier');
-    const channelEl = document.getElementById(isYoutube ? 'youtubeNotifyChannel' : 'twitchNotifyChannel');
-    const btn = document.getElementById(isYoutube ? 'youtubeAddBtn' : 'twitchAddBtn');
-    const identifier = identifierEl.value.trim(); const notify = channelEl.value;
+    const m = externalMeta[platform];
+    if (!m) return;
+    const identifierEl = document.getElementById(m.identifier);
+    const channelEl = document.getElementById(m.channel);
+    const btn = document.getElementById(m.button);
+    const identifier = identifierEl?.value.trim() || ''; const notify = channelEl?.value || '';
     if (!identifier || !notify) { setStatus(t('채널 주소/이름과 Discord 알림 채널을 모두 선택해주세요.', 'Enter a channel and choose a Discord notification channel.'), 'warn'); return; }
-    btn.disabled = true; setStatus(t(`${isYoutube?'YouTube':'Twitch'} 채널을 확인하고 등록하는 중...`, `Validating and adding ${isYoutube?'YouTube':'Twitch'} channel...`));
+    btn.disabled = true; setStatus(t(`${m.label} 채널을 확인하고 등록하는 중...`, `Validating and adding ${m.label} channel...`));
     try {
       const data = await api(`/api/dashboard/external/${platform}`, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({guild_id:currentGuild, identifier, notify_channel_id:notify}) });
       currentExternal = data.external || currentExternal; identifierEl.value=''; renderExternal();
-      if (currentOverview) { currentOverview.youtube_subscriptions=(currentExternal.youtube||[]).length; currentOverview.twitch_subscriptions=(currentExternal.twitch||[]).length; renderOverview(); } rememberCurrentSnapshot();
-      setStatus(t(`✅ ${isYoutube?'YouTube':'Twitch'} 알림을 등록했습니다.`, `✅ ${isYoutube?'YouTube':'Twitch'} alert added.`), 'ok');
+      syncExternalOverview(); rememberCurrentSnapshot();
+      setStatus(t(`✅ ${m.label} 알림을 등록했습니다.`, `✅ ${m.label} alert added.`), 'ok');
     } catch (err) { setStatus(t(`등록 실패: ${humanError(err.message)}`, `Add failed: ${humanError(err.message)}`), 'error'); }
     finally { btn.disabled = false; }
   }
   const humanError = (code) => ({
-    youtube_identifier_required:t('YouTube 채널을 입력해주세요.','Enter a YouTube channel.'), twitch_identifier_required:t('Twitch 채널을 입력해주세요.','Enter a Twitch channel.'), text_channel_required:t('유효한 Discord 텍스트 채널을 선택해주세요.','Choose a valid Discord text channel.'), youtube_limit_reached:t('YouTube 등록 한도에 도달했습니다.','YouTube alert limit reached.'), twitch_limit_reached:t('Twitch 등록 한도에 도달했습니다.','Twitch alert limit reached.')
+    youtube_identifier_required:t('YouTube 채널을 입력해주세요.','Enter a YouTube channel.'),
+    twitch_identifier_required:t('Twitch 채널을 입력해주세요.','Enter a Twitch channel.'),
+    chzzk_identifier_required:t('CHZZK 채널 URL 또는 ID를 입력해주세요.','Enter a CHZZK channel URL or ID.'),
+    soop_identifier_required:t('SOOP 스트리머 ID 또는 URL을 입력해주세요.','Enter a SOOP streamer ID or URL.'),
+    soop_api_not_ready:t('SOOP API 승인 후 Render에 SOOP_CLIENT_ID를 추가해주세요.','Add SOOP_CLIENT_ID to Render after SOOP API approval.'),
+    text_channel_required:t('유효한 Discord 텍스트 채널을 선택해주세요.','Choose a valid Discord text channel.'),
+    youtube_limit_reached:t('YouTube 등록 한도에 도달했습니다.','YouTube alert limit reached.'),
+    twitch_limit_reached:t('Twitch 등록 한도에 도달했습니다.','Twitch alert limit reached.'),
+    chzzk_limit_reached:t('CHZZK 등록 한도에 도달했습니다.','CHZZK alert limit reached.'),
+    soop_limit_reached:t('SOOP 등록 한도에 도달했습니다.','SOOP alert limit reached.'),
   }[code] || code);
-  document.getElementById('youtubeAddBtn')?.addEventListener('click', () => addExternal('youtube'));
-  document.getElementById('twitchAddBtn')?.addEventListener('click', () => addExternal('twitch'));
+  Object.keys(externalMeta).forEach(platform => document.getElementById(externalMeta[platform].button)?.addEventListener('click', () => addExternal(platform)));
 
   document.addEventListener('click', async (event) => {
     const remove = event.target.closest('.remove-sub');
     if (remove && currentGuild) {
       const platform = remove.dataset.platform, identifier = remove.dataset.id;
-      if (!confirm(t(`이 ${platform === 'youtube' ? 'YouTube' : 'Twitch'} 알림을 삭제할까요?`, `Remove this ${platform === 'youtube' ? 'YouTube' : 'Twitch'} alert?`))) return;
+      const label = externalMeta[platform]?.label || platform;
+      if (!confirm(t(`이 ${label} 알림을 삭제할까요?`, `Remove this ${label} alert?`))) return;
       remove.disabled = true;
       try {
         const data = await api('/api/dashboard/external/remove', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({guild_id:currentGuild,platform,identifier})});
         currentExternal = data.external || currentExternal; renderExternal();
-        if (currentOverview) { currentOverview.youtube_subscriptions=(currentExternal.youtube||[]).length; currentOverview.twitch_subscriptions=(currentExternal.twitch||[]).length; renderOverview(); } rememberCurrentSnapshot();
+        syncExternalOverview(); rememberCurrentSnapshot();
         setStatus(t('✅ 외부 알림을 삭제했습니다.', '✅ External alert removed.'), 'ok');
       } catch (err) { setStatus(t(`삭제 실패: ${err.message}`, `Remove failed: ${err.message}`), 'error'); }
       return;
