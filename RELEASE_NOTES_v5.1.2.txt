@@ -1,0 +1,7 @@
+ABADDON OFFICIAL WEBSITE v5.1.2
+BOT v19.6.2 / ABADDON LIFE v1.3.0 / LIVE FEED v1.4.1
+
+- Current bot/website version synchronized
+- ABADDON LIFE channel permission commands documented
+- v19.6.2 update milestone added in KO/EN
+- FiveM ABADDON LIFE command center updated
