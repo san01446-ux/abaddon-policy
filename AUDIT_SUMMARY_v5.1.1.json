@@ -1,0 +1,15 @@
+{
+  "website_version": "5.1.1",
+  "bot_version": "19.6.1",
+  "date": "2026-08-15",
+  "feature": "additive ABADDON LIFE Discord section",
+  "expected_commands_ko": [
+    "!서버리뉴얼 인생서버미리보기",
+    "!서버리뉴얼 인생서버추가",
+    "!인생서버채널추가"
+  ],
+  "expected_commands_en": [
+    "!lifesectionpreview",
+    "!lifesectionadd"
+  ]
+}

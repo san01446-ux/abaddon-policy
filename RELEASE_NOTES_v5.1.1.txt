@@ -1,0 +1,12 @@
+ABADDON Official Website v5.1.1
+BOT v19.6.1 · ABADDON LIFE Additive Discord Section
+2026-08-15
+
+- 홈페이지 표시 Bot 버전 v19.6.1 동기화
+- FiveM / 인생서버 명령어 섹션에 다음 명령 추가
+  · !서버리뉴얼 인생서버미리보기
+  · !서버리뉴얼 인생서버추가
+  · !인생서버채널추가
+- English 명령어센터에 !lifesectionpreview / !lifesectionadd 추가
+- 업데이트 기록에 v19.6.1 추가
+- v19.6.0 양방향 QBCore 브리지 기록은 역사 항목으로 유지
