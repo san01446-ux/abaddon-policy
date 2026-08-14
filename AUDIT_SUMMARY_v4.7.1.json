@@ -1,0 +1,12 @@
+{
+  "website_version": "4.7.1",
+  "bot_version": "19.2.1",
+  "live_feed_version": "1.2.1",
+  "focus": "dashboard fast server switching / stale-request protection / snapshot caching",
+  "checks": {
+    "dashboard_js_syntax": "PASS",
+    "ko_en_dashboard_shared_runtime": "PASS",
+    "snapshot_endpoint_client": "PASS",
+    "command_center_nonblocking": "PASS"
+  }
+}

@@ -2,8 +2,8 @@
   const cfg = window.ABADDON_CONFIG || {};
   const apiBase = String(cfg.apiBaseUrl || '').trim().replace(/\/$/, '');
   const invalidApi = !apiBase || apiBase === 'YOUR_RENDER_PUBLIC_URL';
-  const botVersion = cfg.botVersion || '19.2.0';
-  const webVersion = cfg.websiteVersion || '4.7.0';
+  const botVersion = cfg.botVersion || '19.2.1';
+  const webVersion = cfg.websiteVersion || '4.7.1';
   document.querySelectorAll('[data-bot-version]').forEach(el => el.textContent = botVersion);
   document.querySelectorAll('[data-web-version]').forEach(el => el.textContent = webVersion);
 
@@ -44,6 +44,11 @@
   let currentCommands = [];
   let activeCommandCategory = 'all';
   let commandRenderLimit = 120;
+  let guildLoadSeq = 0;
+  let guildLoadController = null;
+  let commandLoadPromise = null;
+  const guildSnapshotCache = new Map();
+  const SNAPSHOT_CACHE_MS = 30000;
 
   const loginBtn = document.getElementById('loginBtn');
   const logoutBtn = document.getElementById('logoutBtn');
@@ -90,12 +95,46 @@
   });
 
   async function api(path, options={}) {
+    const timeoutMs = Math.max(1000, Number(options.timeoutMs || 18000));
+    const externalSignal = options.signal || null;
+    const controller = new AbortController();
+    const abortFromExternal = () => controller.abort();
+    if (externalSignal) {
+      if (externalSignal.aborted) controller.abort();
+      else externalSignal.addEventListener('abort', abortFromExternal, {once:true});
+    }
+    const timer = window.setTimeout(() => controller.abort(), timeoutMs);
     const headers = { ...authHeaders(), ...(options.headers || {}) };
-    const res = await fetch(`${apiBase}${path}`, { ...options, headers });
-    let data = {};
-    try { data = await res.json(); } catch (_) {}
-    if (!res.ok) throw new Error(data.error || data.detail || `HTTP ${res.status}`);
-    return data;
+    const fetchOptions = { ...options, headers, signal: controller.signal };
+    delete fetchOptions.timeoutMs;
+    try {
+      const res = await fetch(`${apiBase}${path}`, fetchOptions);
+      let data = {};
+      try { data = await res.json(); } catch (_) {}
+      if (!res.ok) throw new Error(data.error || data.detail || `HTTP ${res.status}`);
+      return data;
+    } catch (err) {
+      if (controller.signal.aborted) throw new Error(externalSignal?.aborted ? 'request_cancelled' : 'request_timeout');
+      throw err;
+    } finally {
+      window.clearTimeout(timer);
+      if (externalSignal) externalSignal.removeEventListener('abort', abortFromExternal);
+    }
+  }
+
+  const delay = (ms) => new Promise(resolve => window.setTimeout(resolve, ms));
+  async function apiRetry(path, options={}, attempts=2) {
+    let lastErr = null;
+    for (let i=0; i<attempts; i++) {
+      try { return await api(path, options); }
+      catch (err) {
+        lastErr = err;
+        const code = String(err?.message || err || '');
+        if (code === 'request_cancelled' || code === 'superseded' || !/worker_timeout|request_timeout|HTTP 503/i.test(code) || i === attempts - 1) throw err;
+        await delay(450 + (i * 350));
+      }
+    }
+    throw lastErr || new Error('request_failed');
   }
 
   function switchPanel(name) {
@@ -315,42 +354,116 @@
     liveTimer = window.setInterval(() => { if (!document.hidden) refreshLiveFeed(); }, Math.max(10000, Number(cfg.liveRefreshMs)||15000));
   }
 
-  async function chooseGuild(id, name) {
-    currentGuild = id; guildTitle.textContent = name;
-    currentSettings = currentStructure = currentOverview = currentReactions = currentExternal = null;
-    saveBtn.disabled = true; saveReactionBtn.disabled = true; form.classList.add('muted-form'); reactionForm.classList.add('muted-form');
-    setStatus(t('서버 기능을 불러오는 중...', 'Loading server features...'));
-    document.querySelectorAll('.guild-item').forEach(el => el.classList.toggle('active', el.dataset.id === id));
+  function applySnapshot(data) {
+    currentSettings = data.settings || {};
+    currentStructure = data.structure || {};
+    currentOverview = data.overview || {};
+    currentReactions = data.reactions || {};
+    currentExternal = data.external || {};
+    renderSettings(currentSettings, currentStructure);
+    renderOverview();
+    renderReactions();
+    renderExternal();
+    form.classList.remove('muted-form');
+    reactionForm.classList.remove('muted-form');
+    saveBtn.disabled = false;
+    saveReactionBtn.disabled = false;
+  }
 
-    const failures = [];
-    const [settingsResult, structureResult] = await Promise.allSettled([
-      api(`/api/dashboard/settings?guild_id=${encodeURIComponent(id)}`),
-      api(`/api/dashboard/structure?guild_id=${encodeURIComponent(id)}`),
-    ]);
-    if (structureResult.status === 'fulfilled') currentStructure = structureResult.value.structure || {};
-    else failures.push(`structure: ${structureResult.reason?.message || 'failed'}`);
-    if (settingsResult.status === 'fulfilled') currentSettings = settingsResult.value.settings || {};
-    else failures.push(`settings: ${settingsResult.reason?.message || 'failed'}`);
-    if (currentSettings && currentStructure) renderSettings(currentSettings, currentStructure);
-
-    const loaders = [
-      ['overview', () => api(`/api/dashboard/overview?guild_id=${encodeURIComponent(id)}`), data => { currentOverview=data.overview||{}; renderOverview(); }],
-      ['reactions', () => api(`/api/dashboard/reactions?guild_id=${encodeURIComponent(id)}`), data => { currentReactions=data.reactions||{}; renderReactions(); }],
-      ['external', () => api(`/api/dashboard/external?guild_id=${encodeURIComponent(id)}`), data => { currentExternal=data.external||{}; renderExternal(); }],
-      ['commands', () => currentCommands.length ? Promise.resolve({commands:currentCommands}) : api(`/api/dashboard/commands?guild_id=${encodeURIComponent(id)}`), data => { currentCommands=data.commands||currentCommands||[]; commandRenderLimit=120; renderCommands(); }],
-    ];
-    const results = await Promise.allSettled(loaders.map(x => x[1]()));
-    results.forEach((result, idx) => {
-      if (result.status === 'fulfilled') loaders[idx][2](result.value);
-      else failures.push(`${loaders[idx][0]}: ${result.reason?.message || 'failed'}`);
+  function rememberCurrentSnapshot() {
+    if (!currentGuild || !currentSettings || !currentStructure) return;
+    guildSnapshotCache.set(String(currentGuild), {
+      at: Date.now(),
+      data: {
+        settings: currentSettings, structure: currentStructure, overview: currentOverview || {},
+        reactions: currentReactions || {}, external: currentExternal || {}, version: botVersion
+      }
     });
+  }
 
-    // A slow optional panel must never lock the settings that loaded successfully.
-    if (currentSettings && currentStructure) { form.classList.remove('muted-form'); saveBtn.disabled=false; }
-    if (currentReactions) { reactionForm.classList.remove('muted-form'); saveReactionBtn.disabled=false; }
-    refreshLiveFeed();
-    if (!failures.length) setStatus(t('✅ 전체 웹 제어 기능이 연결되었습니다.', '✅ All web control features are connected.'), 'ok');
-    else setStatus(t(`⚠️ 일부 기능만 지연/실패했습니다. 가능한 메뉴는 바로 사용할 수 있습니다. · ${failures.join(' | ')}`, `⚠️ Some panels are delayed/unavailable. Loaded controls remain usable. · ${failures.join(' | ')}`), 'warn');
+  function ensureCommandCatalog(guildId, loadSeq) {
+    if (currentCommands.length) { renderCommands(); return Promise.resolve(currentCommands); }
+    if (commandLoadPromise) return commandLoadPromise;
+    const results = document.getElementById('commandResults');
+    if (results) results.innerHTML = `<p class="empty-state">${t('명령어 센터를 백그라운드에서 불러오는 중...', 'Loading the command center in the background...')}</p>`;
+    commandLoadPromise = apiRetry(`/api/dashboard/commands?guild_id=${encodeURIComponent(guildId)}`, {timeoutMs:17000}, 2)
+      .then(data => {
+        currentCommands = data.commands || [];
+        commandRenderLimit = 120;
+        renderCommands();
+        return currentCommands;
+      })
+      .catch(err => {
+        const code = String(err?.message || err || '');
+        if (results) results.innerHTML = `<p class="empty-state">${t('명령어 목록을 잠시 후 자동으로 다시 불러옵니다.', 'The command catalogue will retry shortly.')}</p>`;
+        window.setTimeout(() => { if (!currentCommands.length && currentGuild) ensureCommandCatalog(currentGuild, guildLoadSeq); }, 12000);
+        if (loadSeq === guildLoadSeq && !/request_cancelled|superseded/.test(code)) {
+          setStatus(t(`⚠️ 서버 설정은 사용 가능합니다. 명령어 센터만 재연결 중입니다. · ${code}`, `⚠️ Server controls are ready. Only the command center is reconnecting. · ${code}`), 'warn');
+        }
+        return [];
+      })
+      .finally(() => { commandLoadPromise = null; });
+    return commandLoadPromise;
+  }
+
+  async function chooseGuild(id, name) {
+    const loadSeq = ++guildLoadSeq;
+    if (guildLoadController) guildLoadController.abort();
+    guildLoadController = new AbortController();
+    const signal = guildLoadController.signal;
+
+    currentGuild = String(id);
+    guildTitle.textContent = name;
+    document.querySelectorAll('.guild-item').forEach(el => el.classList.toggle('active', el.dataset.id === String(id)));
+
+    const cached = guildSnapshotCache.get(String(id));
+    const cacheFresh = cached && (Date.now() - Number(cached.at || 0) < SNAPSHOT_CACHE_MS);
+    if (cached?.data) {
+      applySnapshot(cached.data);
+      setStatus(t('⚡ 저장된 서버 화면을 즉시 표시했습니다. 최신 상태를 확인하는 중...', '⚡ Showing the cached server view immediately while refreshing...'));
+    } else {
+      currentSettings = currentStructure = currentOverview = currentReactions = currentExternal = null;
+      saveBtn.disabled = true; saveReactionBtn.disabled = true;
+      form.classList.add('muted-form'); reactionForm.classList.add('muted-form');
+      guildMiniStatus.innerHTML = `<span>${t('불러오는 중…','Loading…')}</span>`;
+      setStatus(t('서버 핵심 설정을 불러오는 중...', 'Loading core server settings...'));
+    }
+
+    // Start the guild snapshot first. The global 1,489+ command catalogue is
+    // intentionally delayed so its first build can never sit in front of a server switch.
+    const snapshotPromise = apiRetry(`/api/dashboard/snapshot?guild_id=${encodeURIComponent(id)}`, {signal, timeoutMs:17000}, 2);
+    window.setTimeout(() => {
+      if (loadSeq === guildLoadSeq && !currentCommands.length) ensureCommandCatalog(String(id), loadSeq);
+    }, 900);
+
+    if (cacheFresh) {
+      // A fresh 30-second browser cache makes rapid back-and-forth switching instant.
+      // Refresh in the background instead of making the user wait.
+      setStatus(t('✅ 서버 전환 완료. 최신 상태는 백그라운드에서 동기화됩니다.', '✅ Server switched. Fresh state is syncing in the background.'), 'ok');
+    }
+
+    try {
+      const data = await snapshotPromise;
+      if (loadSeq !== guildLoadSeq || signal.aborted || currentGuild !== String(id)) return;
+      applySnapshot(data);
+      guildSnapshotCache.set(String(id), {at:Date.now(), data});
+      refreshLiveFeed();
+      const workerMs = Number(data.worker_ms || 0);
+      setStatus(t(
+        `✅ 서버 전환 완료${workerMs ? ` · Worker ${workerMs.toFixed(1)}ms` : ''}`,
+        `✅ Server switched${workerMs ? ` · Worker ${workerMs.toFixed(1)}ms` : ''}`
+      ), 'ok');
+    } catch (err) {
+      const code = String(err?.message || err || '');
+      if (loadSeq !== guildLoadSeq || code === 'request_cancelled' || code === 'superseded') return;
+      if (cached?.data) {
+        setStatus(t(`⚠️ 최신 동기화가 지연되어 직전 캐시 화면을 유지합니다. 서버를 다시 누르면 즉시 재시도합니다. · ${code}`, `⚠️ Refresh is delayed; the cached view remains usable. Click the server again to retry immediately. · ${code}`), 'warn');
+      } else {
+        form.classList.add('muted-form'); reactionForm.classList.add('muted-form');
+        saveBtn.disabled = true; saveReactionBtn.disabled = true;
+        setStatus(t(`서버 설정을 불러오지 못했습니다. 잠시 후 다시 눌러주세요. · ${code}`, `Could not load this server. Please retry in a moment. · ${code}`), 'error');
+      }
+    }
   }
 
   saveBtn?.addEventListener('click', async () => {
@@ -369,7 +482,7 @@
     payload.guild_locale = document.getElementById('guild_locale')?.value || 'ko';
     try {
       const data = await api('/api/dashboard/settings', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) });
-      currentSettings = data.settings || payload;
+      currentSettings = data.settings || payload; rememberCurrentSnapshot();
       setStatus(t('✅ 저장 완료. Discord 명령어에서도 같은 설정이 바로 보입니다.', '✅ Saved. Discord commands now see the same settings.'), 'ok');
     } catch (err) { setStatus(t(`저장 실패: ${err.message}`, `Save failed: ${err.message}`), 'error'); }
     finally { saveBtn.disabled = false; }
@@ -392,6 +505,7 @@
       const data = await api('/api/dashboard/reactions', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) });
       currentReactions = data.reactions || payload; renderReactions();
       if (currentOverview) { currentOverview.reaction_enabled=currentReactions.enabled; currentOverview.super_style=currentReactions.super_style; renderOverview(); }
+      rememberCurrentSnapshot();
       setStatus(t('✅ GIF 설정 저장 완료. Discord의 !이모지센터와 동일한 값입니다.', '✅ GIF settings saved. These are the same values used by !emojicenter.'), 'ok');
     } catch (err) { setStatus(t(`GIF 설정 저장 실패: ${err.message}`, `GIF settings failed: ${err.message}`), 'error'); }
     finally { saveReactionBtn.disabled = false; }
@@ -409,7 +523,7 @@
     try {
       const data = await api(`/api/dashboard/external/${platform}`, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({guild_id:currentGuild, identifier, notify_channel_id:notify}) });
       currentExternal = data.external || currentExternal; identifierEl.value=''; renderExternal();
-      if (currentOverview) { currentOverview.youtube_subscriptions=(currentExternal.youtube||[]).length; currentOverview.twitch_subscriptions=(currentExternal.twitch||[]).length; renderOverview(); }
+      if (currentOverview) { currentOverview.youtube_subscriptions=(currentExternal.youtube||[]).length; currentOverview.twitch_subscriptions=(currentExternal.twitch||[]).length; renderOverview(); } rememberCurrentSnapshot();
       setStatus(t(`✅ ${isYoutube?'YouTube':'Twitch'} 알림을 등록했습니다.`, `✅ ${isYoutube?'YouTube':'Twitch'} alert added.`), 'ok');
     } catch (err) { setStatus(t(`등록 실패: ${humanError(err.message)}`, `Add failed: ${humanError(err.message)}`), 'error'); }
     finally { btn.disabled = false; }
@@ -429,7 +543,7 @@
       try {
         const data = await api('/api/dashboard/external/remove', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({guild_id:currentGuild,platform,identifier})});
         currentExternal = data.external || currentExternal; renderExternal();
-        if (currentOverview) { currentOverview.youtube_subscriptions=(currentExternal.youtube||[]).length; currentOverview.twitch_subscriptions=(currentExternal.twitch||[]).length; renderOverview(); }
+        if (currentOverview) { currentOverview.youtube_subscriptions=(currentExternal.youtube||[]).length; currentOverview.twitch_subscriptions=(currentExternal.twitch||[]).length; renderOverview(); } rememberCurrentSnapshot();
         setStatus(t('✅ 외부 알림을 삭제했습니다.', '✅ External alert removed.'), 'ok');
       } catch (err) { setStatus(t(`삭제 실패: ${err.message}`, `Remove failed: ${err.message}`), 'error'); }
       return;
