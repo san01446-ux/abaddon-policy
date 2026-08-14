@@ -1,0 +1,34 @@
+{
+  "website_version": "4.7.0",
+  "bot_version": "19.2.0",
+  "generated_at_kst": "2026-08-14",
+  "javascript_files": 9,
+  "javascript_syntax_failures": [],
+  "html_pages": 19,
+  "duplicate_ids": {},
+  "broken_local_references": [],
+  "dashboard_wiring": {
+    "ko": {
+      "missing_required_controls": [],
+      "missing_panel_targets": [],
+      "missing_hardcoded_js_ids": [],
+      "tab_count": 6
+    },
+    "en": {
+      "missing_required_controls": [],
+      "missing_panel_targets": [],
+      "missing_hardcoded_js_ids": [],
+      "tab_count": 6
+    }
+  },
+  "english_hangul_remaining_except_language_switch": {},
+  "live_feed_home_restored": true,
+  "live_feed_english_home": true,
+  "live_feed_dashboard_tab": true,
+  "native_english_dashboard": true,
+  "dashboard_optional_api_isolation": true,
+  "browser_click_automation": "not_run: Chromium navigation is blocked by the execution sandbox administrator policy; static DOM/event/API wiring audits were used instead.",
+  "english_command_center_prefers_english_fields": true,
+  "english_live_feed_prefers_bilingual_event_fields": true,
+  "english_dashboard_live_prefers_bilingual_event_fields": true
+}

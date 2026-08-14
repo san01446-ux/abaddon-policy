@@ -1,7 +1,7 @@
 (() => {
   const cfg = window.ABADDON_CONFIG || {};
-  const botVersion = cfg.botVersion || "19.1.1";
-  const webVersion = cfg.websiteVersion || "4.6.1";
+  const botVersion = cfg.botVersion || "19.2.0";
+  const webVersion = cfg.websiteVersion || "4.7.0";
   document.querySelectorAll('[data-bot-version]').forEach(el => el.textContent = botVersion);
   document.querySelectorAll('[data-web-version]').forEach(el => el.textContent = webVersion);
 
@@ -20,7 +20,8 @@
   const supportBtn = document.getElementById('supportBtn');
   if (supportBtn) supportBtn.href = supportUrl;
 
-  let lang = localStorage.getItem('abaddon-lang') || 'ko';
+  const forcedEnglishPage = location.pathname.includes('/en/');
+  let lang = forcedEnglishPage ? 'en' : (localStorage.getItem('abaddon-lang') || 'ko');
   const toggle = document.getElementById('langToggle');
   const apply = () => {
     document.documentElement.lang = lang;
@@ -33,6 +34,7 @@
     lang = lang === 'en' ? 'ko' : 'en';
     localStorage.setItem('abaddon-lang', lang);
     apply();
+    window.dispatchEvent(new CustomEvent('abaddon-language-changed', {detail:{lang}}));
   });
   apply();
 })();

@@ -2,12 +2,14 @@
   const cfg = window.ABADDON_CONFIG || {};
   const apiBase = String(cfg.apiBaseUrl || '').trim().replace(/\/$/, '');
   const invalidApi = !apiBase || apiBase === 'YOUR_RENDER_PUBLIC_URL';
-  const botVersion = cfg.botVersion || '19.1.1';
-  const webVersion = cfg.websiteVersion || '4.6.1';
+  const botVersion = cfg.botVersion || '19.2.0';
+  const webVersion = cfg.websiteVersion || '4.7.0';
   document.querySelectorAll('[data-bot-version]').forEach(el => el.textContent = botVersion);
   document.querySelectorAll('[data-web-version]').forEach(el => el.textContent = webVersion);
 
-  let lang = localStorage.getItem('abaddon-lang') === 'en' ? 'en' : 'ko';
+  const defaultLang = document.documentElement.dataset.defaultLang === 'en' || location.pathname.includes('/en/') ? 'en' : 'ko';
+  const forcedEnglishPage = location.pathname.includes('/en/');
+  let lang = forcedEnglishPage ? 'en' : (localStorage.getItem('abaddon-lang') === 'en' ? 'en' : (localStorage.getItem('abaddon-lang') === 'ko' ? 'ko' : defaultLang));
   const t = (ko, en) => lang === 'en' ? en : ko;
   const toggle = document.getElementById('langToggle');
   const applyLang = () => {
@@ -17,6 +19,9 @@
     renderOverviewFlags();
     renderExternal();
     renderCommands();
+    const cs=document.getElementById('commandSearch'); if(cs) cs.placeholder=t('명령어 또는 기능 검색 · 예: 카지노, GIF, 유튜브, 보스','Search commands or features · e.g. casino, GIF, YouTube, boss');
+    const yi=document.getElementById('youtubeIdentifier'); if(yi) yi.placeholder=t('@핸들 또는 UC...','@handle or UC...');
+    refreshLiveFeed();
   };
   toggle?.addEventListener('click', () => {
     lang = lang === 'en' ? 'ko' : 'en';
@@ -54,7 +59,7 @@
   const reactionForm = document.getElementById('reactionForm');
 
   const authHeaders = () => session ? { Authorization: `Bearer ${session}` } : {};
-  const setStatus = (text, type='') => { statusBox.textContent = text; statusBox.className = `dash-notice ${type}`.trim(); };
+  const setStatus = (text, type='') => { if (!statusBox) return; statusBox.textContent = text; statusBox.className = `dash-notice ${type}`.trim(); };
   const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const copyText = async (text) => {
     try {
@@ -96,13 +101,14 @@
   function switchPanel(name) {
     document.querySelectorAll('.dash-tab').forEach(btn => btn.classList.toggle('active', btn.dataset.panel === name));
     document.querySelectorAll('.dash-panel').forEach(panel => panel.classList.toggle('active', panel.id === `panel-${name}`));
+    if (name === 'live') { refreshLiveFeed(); ensureLiveTimer(); }
   }
   document.querySelectorAll('.dash-tab').forEach(btn => btn.addEventListener('click', () => switchPanel(btn.dataset.panel)));
   document.querySelectorAll('[data-open-panel]').forEach(btn => btn.addEventListener('click', () => switchPanel(btn.dataset.openPanel)));
 
-  const boolIds = ['automod_enabled','invite_block','bad_words_enabled','auto_timeout','anti_raid_enabled','anti_raid_auto_lockdown','destructive_watch_enabled','story_enabled','codex_notifications','tutorial_notifications','temp_voice_enabled'];
-  const selectIds = ['welcome_channel_id','leave_channel_id','autorole_id','log_channel_id','ticket_log_channel_id','ticket_category_id','announcement_channel_id','rpg_channel_id'];
-  const numberIds = ['destructive_watch_threshold','destructive_watch_window_seconds'];
+  const boolIds = ['automod_enabled','spam_block','mention_spam_block','invite_block','bad_words_enabled','auto_timeout','anti_raid_enabled','anti_raid_auto_lockdown','destructive_watch_enabled','story_enabled','codex_notifications','tutorial_notifications','temp_voice_enabled'];
+  const selectIds = ['welcome_channel_id','welcome_notice_channel_id','welcome_rules_channel_id','welcome_register_channel_id','leave_channel_id','autorole_id','anti_raid_quarantine_role_id','log_channel_id','log_security_channel_id','log_message_channel_id','log_member_channel_id','log_operation_channel_id','ticket_log_channel_id','ticket_category_id','temp_voice_lobby_id','temp_voice_category_id','announcement_channel_id','rpg_channel_id'];
+  const numberIds = ['spam_count','spam_seconds','mention_limit','timeout_minutes','anti_raid_join_limit','anti_raid_window_seconds','anti_raid_min_account_age_days','destructive_watch_threshold','destructive_watch_window_seconds'];
 
   const setOptions = (id, rows, current, emptyLabel) => {
     const el = document.getElementById(id);
@@ -116,19 +122,45 @@
     currentSettings = settings; currentStructure = structure;
     boolIds.forEach(id => { const el = document.getElementById(id); if (el) el.checked = Boolean(settings[id]); });
     setOptions('welcome_channel_id', structure.text_channels || [], settings.welcome_channel_id, t('미설정', 'Not set'));
+    setOptions('welcome_notice_channel_id', structure.text_channels || [], settings.welcome_notice_channel_id, t('미설정', 'Not set'));
+    setOptions('welcome_rules_channel_id', structure.text_channels || [], settings.welcome_rules_channel_id, t('미설정', 'Not set'));
+    setOptions('welcome_register_channel_id', structure.text_channels || [], settings.welcome_register_channel_id, t('미설정', 'Not set'));
     setOptions('leave_channel_id', structure.text_channels || [], settings.leave_channel_id, t('미설정', 'Not set'));
     setOptions('autorole_id', structure.roles || [], settings.autorole_id, t('미설정', 'Not set'));
+    setOptions('anti_raid_quarantine_role_id', structure.roles || [], settings.anti_raid_quarantine_role_id, t('미설정', 'Not set'));
     setOptions('log_channel_id', structure.text_channels || [], settings.log_channel_id, t('미설정', 'Not set'));
+    setOptions('log_security_channel_id', structure.text_channels || [], settings.log_security_channel_id, t('미설정', 'Not set'));
+    setOptions('log_message_channel_id', structure.text_channels || [], settings.log_message_channel_id, t('미설정', 'Not set'));
+    setOptions('log_member_channel_id', structure.text_channels || [], settings.log_member_channel_id, t('미설정', 'Not set'));
+    setOptions('log_operation_channel_id', structure.text_channels || [], settings.log_operation_channel_id, t('미설정', 'Not set'));
     setOptions('ticket_log_channel_id', structure.text_channels || [], settings.ticket_log_channel_id, t('미설정', 'Not set'));
     setOptions('ticket_category_id', structure.categories || [], settings.ticket_category_id, t('미설정', 'Not set'));
+    setOptions('temp_voice_lobby_id', structure.voice_channels || [], settings.temp_voice_lobby_id, t('미설정', 'Not set'));
+    setOptions('temp_voice_category_id', structure.categories || [], settings.temp_voice_category_id, t('미설정', 'Not set'));
     setOptions('announcement_channel_id', structure.text_channels || [], settings.announcement_channel_id, t('미설정', 'Not set'));
     setOptions('rpg_channel_id', structure.text_channels || [], settings.rpg_channel_id, t('미설정', 'Not set'));
-    numberIds.forEach(id => { const el = document.getElementById(id); if (el) el.value = Number(settings[id] || (id.includes('threshold') ? 3 : 20)); });
+    const numericDefaults = {spam_count:6, spam_seconds:8, mention_limit:5, timeout_minutes:10, anti_raid_join_limit:6, anti_raid_window_seconds:25, anti_raid_min_account_age_days:3, destructive_watch_threshold:3, destructive_watch_window_seconds:20};
+    numberIds.forEach(id => { const el = document.getElementById(id); if (el) el.value = Number(settings[id] ?? numericDefaults[id] ?? 0); });
     const roleSel = document.getElementById('button_role_ids');
     if (roleSel) {
       const selected = new Set((settings.button_role_ids || []).map(String));
       roleSel.innerHTML = (structure.roles || []).map(row => `<option value="${escapeHtml(row.id)}" ${selected.has(String(row.id)) ? 'selected' : ''}>${escapeHtml(row.name)}</option>`).join('');
     }
+    const modSel = document.getElementById('mod_role_ids');
+    if (modSel) {
+      const selected = new Set((settings.mod_role_ids || []).map(String));
+      modSel.innerHTML = (structure.roles || []).map(row => `<option value="${escapeHtml(row.id)}" ${selected.has(String(row.id)) ? 'selected' : ''}>${escapeHtml(row.name)}</option>`).join('');
+    }
+    const setMulti = (id, rows, values) => {
+      const el = document.getElementById(id); if (!el) return;
+      const selected = new Set((values || []).map(String));
+      el.innerHTML = (rows || []).map(row => `<option value="${escapeHtml(row.id)}" ${selected.has(String(row.id)) ? 'selected' : ''}>${escapeHtml(row.name)}</option>`).join('');
+    };
+    setMulti('automod_exempt_channel_ids', structure.text_channels || [], settings.automod_exempt_channel_ids || []);
+    setMulti('invite_exempt_channel_ids', structure.text_channels || [], settings.invite_exempt_channel_ids || []);
+    const badWords = document.getElementById('bad_word_list'); if (badWords) badWords.value = (settings.bad_word_list || []).join('\n');
+    const roleTitle = document.getElementById('button_role_title'); if (roleTitle) roleTitle.value = settings.button_role_title || '';
+    const guildLocale = document.getElementById('guild_locale'); if (guildLocale) guildLocale.value = settings.guild_locale === 'en' ? 'en' : 'ko';
     setChannelOptions('youtubeNotifyChannel');
     setChannelOptions('twitchNotifyChannel');
     form.classList.remove('muted-form');
@@ -214,7 +246,7 @@
     return currentCommands.filter(row => {
       if (activeCommandCategory !== 'all' && row.category !== activeCommandCategory) return false;
       if (!q) return true;
-      const blob = `${row.name} ${(row.aliases || []).join(' ')} ${row.help || ''} ${row.usage || ''}`.toLowerCase();
+      const blob = `${row.name} ${row.name_en || ''} ${(row.aliases || []).join(' ')} ${(row.aliases_en || []).join(' ')} ${row.help || ''} ${row.help_en || ''} ${row.usage || ''} ${row.usage_en || ''}`.toLowerCase();
       return blob.includes(q);
     });
   }
@@ -242,7 +274,45 @@
       return;
     }
     const visible = rows.slice(0, commandRenderLimit);
-    results.innerHTML = `<div class="command-card-grid">${visible.map(row => `<article class="command-card"><div class="command-card-head"><code>${escapeHtml(row.usage)}</code><button class="copy-command" type="button" data-command="${escapeHtml(row.usage)}">${t('복사','Copy')}</button></div><p>${escapeHtml(row.help || t('설명 없음','No description'))}</p>${(row.aliases||[]).length ? `<small>${t('별칭','Aliases')}: ${escapeHtml(row.aliases.slice(0,6).join(' · '))}</small>` : ''}</article>`).join('')}</div>` + (visible.length < rows.length ? `<button id="loadMoreCommands" class="btn secondary load-more" type="button">${t(`더 보기 · ${rows.length-visible.length}개 남음`, `Load more · ${rows.length-visible.length} remaining`)}</button>` : '');
+    results.innerHTML = `<div class="command-card-grid">${visible.map(row => { const usage=lang==='en'?(row.usage_en||row.usage):row.usage; const help=lang==='en'?(row.help_en||'No description'):row.help; const aliases=lang==='en'?(row.aliases_en||[]):(row.aliases||[]); return `<article class="command-card"><div class="command-card-head"><code>${escapeHtml(usage)}</code><button class="copy-command" type="button" data-command="${escapeHtml(usage)}">${t('복사','Copy')}</button></div><p>${escapeHtml(help || t('설명 없음','No description'))}</p>${aliases.length ? `<small>${t('별칭','Aliases')}: ${escapeHtml(aliases.slice(0,6).join(' · '))}</small>` : ''}</article>`; }).join('')}</div>` + (visible.length < rows.length ? `<button id="loadMoreCommands" class="btn secondary load-more" type="button">${t(`더 보기 · ${rows.length-visible.length}개 남음`, `Load more · ${rows.length-visible.length} remaining`)}</button>` : '');
+  }
+
+  let liveTimer = null;
+  const liveEscape = escapeHtml;
+  const liveTime = (value) => {
+    if (!value) return t('방금 전','just now');
+    const d = new Date(value); if (Number.isNaN(d.getTime())) return '-';
+    return new Intl.DateTimeFormat(lang === 'en' ? 'en-US' : 'ko-KR', {month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).format(d);
+  };
+  async function refreshLiveFeed() {
+    const root = document.getElementById('dashboardLiveEvents');
+    if (!root || invalidApi) return;
+    try {
+      const [statusRes, eventsRes] = await Promise.all([
+        fetch(`${apiBase}/api/status`, {cache:'no-store'}),
+        fetch(`${apiBase}/api/events?limit=12`, {cache:'no-store'}),
+      ]);
+      const status = await statusRes.json(); const feed = await eventsRes.json();
+      if (!statusRes.ok || !eventsRes.ok) throw new Error(`HTTP ${statusRes.status}/${eventsRes.status}`);
+      const online = Boolean(status.online || status.worker_fresh);
+      const state = document.getElementById('liveFeedState'); if (state) { state.textContent=online?t('온라인','ONLINE'):t('기동/재연결 중','STARTING'); state.classList.toggle('ok-pill',online); }
+      const stats = document.getElementById('liveFeedStats');
+      if (stats) stats.innerHTML = [
+        [t('서버','Guilds'), Number(status.guilds || 0).toLocaleString()],
+        [t('멤버','Members'), Number(status.members || 0).toLocaleString()],
+        [t('지연','Latency'), `${Number(status.latency_ms || 0)}ms`],
+        [t('업데이트','Updated'), liveTime(status.generated_at || status.received_at)],
+      ].map(([a,b])=>`<div><span>${liveEscape(a)}</span><strong>${liveEscape(b)}</strong></div>`).join('');
+      const rows = Array.isArray(feed.events) ? feed.events : [];
+      root.innerHTML = rows.length ? rows.map(ev=>{ const evTitle=(lang==='en'?ev.title_en:ev.title)||ev.title||t('종말 기록','Live event'); const evMessage=(lang==='en'?ev.message_en:ev.message)||(lang==='en'?'':ev.message)||''; return `<article class="dashboard-live-event"><span>${ev.type==='announcement'?'📢':ev.type==='enhance'?'⚒️':'◆'}</span><div><strong>${liveEscape(evTitle)}</strong><p>${liveEscape(evMessage)}</p>${ev.actor?`<small>— ${liveEscape(ev.actor)}</small>`:''}</div><time>${liveEscape(liveTime(ev.created_at))}</time></article>`; }).join('') : `<p class="empty-state">${t('아직 공개 실시간 기록이 없습니다.','No public live events yet.')}</p>`;
+    } catch (err) {
+      const state = document.getElementById('liveFeedState'); if (state) state.textContent=t('재연결 중','RECONNECTING');
+      root.innerHTML = `<p class="empty-state">${t('실시간 피드에 다시 연결하는 중입니다.','Reconnecting to the live feed.')}</p>`;
+    }
+  }
+  function ensureLiveTimer() {
+    if (liveTimer) return;
+    liveTimer = window.setInterval(() => { if (!document.hidden) refreshLiveFeed(); }, Math.max(10000, Number(cfg.liveRefreshMs)||15000));
   }
 
   async function chooseGuild(id, name) {
@@ -251,24 +321,36 @@
     saveBtn.disabled = true; saveReactionBtn.disabled = true; form.classList.add('muted-form'); reactionForm.classList.add('muted-form');
     setStatus(t('서버 기능을 불러오는 중...', 'Loading server features...'));
     document.querySelectorAll('.guild-item').forEach(el => el.classList.toggle('active', el.dataset.id === id));
-    try {
-      const [settingsData, structureData, overviewData, reactionData, externalData, commandData] = await Promise.all([
-        api(`/api/dashboard/settings?guild_id=${encodeURIComponent(id)}`),
-        api(`/api/dashboard/structure?guild_id=${encodeURIComponent(id)}`),
-        api(`/api/dashboard/overview?guild_id=${encodeURIComponent(id)}`),
-        api(`/api/dashboard/reactions?guild_id=${encodeURIComponent(id)}`),
-        api(`/api/dashboard/external?guild_id=${encodeURIComponent(id)}`),
-        currentCommands.length ? Promise.resolve({commands:currentCommands}) : api(`/api/dashboard/commands?guild_id=${encodeURIComponent(id)}`),
-      ]);
-      renderSettings(settingsData.settings || {}, structureData.structure || {});
-      currentOverview = overviewData.overview || {}; renderOverview();
-      currentReactions = reactionData.reactions || {}; renderReactions();
-      currentExternal = externalData.external || {}; renderExternal();
-      currentCommands = commandData.commands || currentCommands || []; commandRenderLimit = 120; renderCommands();
-      setStatus(t('✅ 서버 설정·GIF·외부 알림·명령어 센터가 연결되었습니다.', '✅ Server settings, GIF reactions, external alerts, and the command center are connected.'), 'ok');
-    } catch (err) {
-      setStatus(t(`불러오기 실패: ${err.message}`, `Load failed: ${err.message}`), 'error');
-    }
+
+    const failures = [];
+    const [settingsResult, structureResult] = await Promise.allSettled([
+      api(`/api/dashboard/settings?guild_id=${encodeURIComponent(id)}`),
+      api(`/api/dashboard/structure?guild_id=${encodeURIComponent(id)}`),
+    ]);
+    if (structureResult.status === 'fulfilled') currentStructure = structureResult.value.structure || {};
+    else failures.push(`structure: ${structureResult.reason?.message || 'failed'}`);
+    if (settingsResult.status === 'fulfilled') currentSettings = settingsResult.value.settings || {};
+    else failures.push(`settings: ${settingsResult.reason?.message || 'failed'}`);
+    if (currentSettings && currentStructure) renderSettings(currentSettings, currentStructure);
+
+    const loaders = [
+      ['overview', () => api(`/api/dashboard/overview?guild_id=${encodeURIComponent(id)}`), data => { currentOverview=data.overview||{}; renderOverview(); }],
+      ['reactions', () => api(`/api/dashboard/reactions?guild_id=${encodeURIComponent(id)}`), data => { currentReactions=data.reactions||{}; renderReactions(); }],
+      ['external', () => api(`/api/dashboard/external?guild_id=${encodeURIComponent(id)}`), data => { currentExternal=data.external||{}; renderExternal(); }],
+      ['commands', () => currentCommands.length ? Promise.resolve({commands:currentCommands}) : api(`/api/dashboard/commands?guild_id=${encodeURIComponent(id)}`), data => { currentCommands=data.commands||currentCommands||[]; commandRenderLimit=120; renderCommands(); }],
+    ];
+    const results = await Promise.allSettled(loaders.map(x => x[1]()));
+    results.forEach((result, idx) => {
+      if (result.status === 'fulfilled') loaders[idx][2](result.value);
+      else failures.push(`${loaders[idx][0]}: ${result.reason?.message || 'failed'}`);
+    });
+
+    // A slow optional panel must never lock the settings that loaded successfully.
+    if (currentSettings && currentStructure) { form.classList.remove('muted-form'); saveBtn.disabled=false; }
+    if (currentReactions) { reactionForm.classList.remove('muted-form'); saveReactionBtn.disabled=false; }
+    refreshLiveFeed();
+    if (!failures.length) setStatus(t('✅ 전체 웹 제어 기능이 연결되었습니다.', '✅ All web control features are connected.'), 'ok');
+    else setStatus(t(`⚠️ 일부 기능만 지연/실패했습니다. 가능한 메뉴는 바로 사용할 수 있습니다. · ${failures.join(' | ')}`, `⚠️ Some panels are delayed/unavailable. Loaded controls remain usable. · ${failures.join(' | ')}`), 'warn');
   }
 
   saveBtn?.addEventListener('click', async () => {
@@ -277,8 +359,14 @@
     const payload = { guild_id: currentGuild };
     boolIds.forEach(id => payload[id] = document.getElementById(id).checked);
     selectIds.forEach(id => payload[id] = document.getElementById(id).value || '');
-    numberIds.forEach(id => payload[id] = Number(document.getElementById(id).value || 0));
+    numberIds.forEach(id => payload[id] = Number(document.getElementById(id)?.value || 0));
+    payload.automod_exempt_channel_ids = Array.from(document.getElementById('automod_exempt_channel_ids')?.selectedOptions || []).map(opt => opt.value).slice(0,100);
+    payload.invite_exempt_channel_ids = Array.from(document.getElementById('invite_exempt_channel_ids')?.selectedOptions || []).map(opt => opt.value).slice(0,100);
+    payload.bad_word_list = String(document.getElementById('bad_word_list')?.value || '').split(/[\n,]+/).map(x => x.trim()).filter(Boolean).slice(0,100);
     payload.button_role_ids = Array.from(document.getElementById('button_role_ids').selectedOptions).map(opt => opt.value).slice(0,25);
+    payload.mod_role_ids = Array.from(document.getElementById('mod_role_ids')?.selectedOptions || []).map(opt => opt.value).slice(0,25);
+    payload.button_role_title = document.getElementById('button_role_title')?.value || '';
+    payload.guild_locale = document.getElementById('guild_locale')?.value || 'ko';
     try {
       const data = await api('/api/dashboard/settings', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) });
       currentSettings = data.settings || payload;
@@ -355,7 +443,8 @@
 
   document.getElementById('commandSearch')?.addEventListener('input', () => { commandRenderLimit=120; renderCommands(); });
   document.getElementById('clearCommandSearch')?.addEventListener('click', () => { document.getElementById('commandSearch').value=''; activeCommandCategory='all'; commandRenderLimit=120; renderCommands(); });
-  document.getElementById('copyGifTest')?.addEventListener('click', () => copyText('!GIF테스트'));
+  document.getElementById('copyGifTest')?.addEventListener('click', () => copyText(t('!GIF테스트','!giftest')));
+  document.getElementById('dashboardLiveRefresh')?.addEventListener('click', refreshLiveFeed);
 
   async function boot() {
     applyLang();
@@ -386,5 +475,6 @@
     }
   }
 
+  ensureLiveTimer();
   boot();
 })();

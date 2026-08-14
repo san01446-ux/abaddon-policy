@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html data-default-lang="en" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="ABADDON Discord server control dashboard" name="description"/>
+<meta content="#0b0d12" name="theme-color"/>
+<title>ABADDON · Server Dashboard</title>
+<link href="../site-v424.css?v=470-full-control" rel="stylesheet"/>
+<script defer="" src="config.js?v=470"></script>
+<script defer="" src="../dashboard.js?v=470"></script>
+</head>
+<body>
+<div class="noise"></div>
+<header class="topbar">
+<a class="brand" href="index.html"><span class="brand-mark">A</span><span>ABADDON</span></a>
+<nav>
+<a href="index.html">Home</a>
+<a href="commands.html">Commands</a>
+<a href="index.html#support">Support</a>
+<a class="ghost" href="../dashboard.html">한국어</a>
+</nav>
+</header>
+<main class="shell dashboard-page">
+<section class="dashboard-hero">
+<div>
+<div class="eyebrow">ABADDON WEB CONTROL CENTER · BOT v<span data-bot-version="">19.2.0</span></div>
+<h1>Powerful underneath. Simple on top.</h1>
+<p class="lead">Sign in with Discord, choose a server, and manage only what you need. Configure server features directly and search the entire live command catalog.</p>
+</div>
+<div class="dashboard-actions">
+<button class="btn primary" id="loginBtn" type="button">Sign in with Discord</button>
+<button class="btn secondary hidden" id="logoutBtn" type="button">Log out</button>
+</div>
+</section>
+<section class="dash-notice hidden" id="setupNotice"></section>
+<section class="dash-notice" id="statusBox">Preparing dashboard...</section>
+<section class="dashboard-grid dashboard-grid-fusion hidden" id="dashboardApp">
+<aside class="dash-card server-list-card">
+<div class="dash-card-head compact-head">
+<div>
+<span class="eyebrow">My servers</span>
+<h2>Choose server</h2>
+</div>
+</div>
+<div class="guild-list" id="guildList"></div>
+<div class="side-separator"></div>
+<div class="dashboard-side-note">
+<strong>🔐 Safe by design</strong>
+<p>Bot tokens, Discord OAuth secrets, and YouTube/Twitch secrets are never stored on this page. They stay in Render environment variables.</p>
+</div>
+</aside>
+<section class="dash-card settings-card fusion-card">
+<div class="dash-card-head dashboard-title-row">
+<div>
+<span class="eyebrow">SERVER CONTROL</span>
+<h2 id="guildTitle">Choose a server</h2>
+</div>
+<div class="guild-mini-status" id="guildMiniStatus"></div>
+</div>
+<nav aria-label="Dashboard sections" class="dashboard-tabs">
+<button class="dash-tab active" data-panel="overview" type="button">Overview</button>
+<button class="dash-tab" data-panel="settings" type="button">Server settings</button>
+<button class="dash-tab" data-panel="reactions" type="button">GIF reactions</button>
+<button class="dash-tab" data-panel="external" type="button">External alerts</button>
+<button class="dash-tab" data-panel="live" type="button">Live feed</button>
+<button class="dash-tab" data-panel="commands" type="button">Command center</button>
+</nav>
+<div class="dash-panel active" id="panel-overview">
+<div class="overview-stats" id="overviewStats">
+<article><span>COMMANDS</span><strong id="statCommands">-</strong><small>public commands</small></article>
+<article><span>MEMBERS</span><strong id="statMembers">-</strong><small>server members</small></article>
+<article><span>GIF</span><strong id="statGif">-</strong><small>local animated emoji</small></article>
+<article><span>ALERTS</span><strong id="statAlerts">-</strong><small>YouTube + Twitch</small></article>
+</div>
+<div class="feature-launch-grid">
+<button class="feature-launch" data-open-panel="settings" type="button"><span>⚙️</span><div><strong>Server settings</strong><small>Security, logs, welcome, roles, RPG</small></div></button>
+<button class="feature-launch" data-open-panel="reactions" type="button"><span>✨</span><div><strong>GIF reactions</strong><small>Standard, vivid, 5-reaction Super Style</small></div></button>
+<button class="feature-launch" data-open-panel="external" type="button"><span>📡</span><div><strong>External alerts</strong><small>Add/remove YouTube and Twitch alerts</small></div></button>
+<button class="feature-launch" data-open-panel="live" type="button"><span>📡</span><div><strong>Live feed</strong><small>Heartbeat, public events, announcements</small></div></button>
+<button class="feature-launch" data-open-panel="commands" type="button"><span>🧭</span><div><strong>All commands</strong><small>Search, filter, and copy the live catalog</small></div></button>
+</div>
+<section class="setting-section wide overview-section">
+<div class="section-heading-line"><div><h3>📊 Current state</h3><p class="micro">Discord commands and this dashboard use the same server configuration data.</p></div><span class="status-pill" id="overviewVersion">v19.2.0</span></div>
+<div class="overview-flags" id="overviewFlags"></div>
+</section>
+</div>
+<div class="dash-panel" id="panel-settings">
+<div class="panel-toolbar">
+<div><h3>⚙️ Server settings</h3><p class="micro">Edits the same values used by the existing Discord setup commands.</p></div>
+<button class="btn primary" disabled="" id="saveBtn" type="button">Save settings</button>
+</div>
+<div class="settings-form muted-form" id="settingsForm">
+<div class="setting-section">
+<h3>🛡️ Protection</h3>
+<label class="toggle-row"><span>AutoMod</span><input id="automod_enabled" type="checkbox"/><i></i></label>
+<label class="toggle-row"><span>Spam detection</span><input id="spam_block" type="checkbox"/><i></i></label>
+<label class="toggle-row"><span>Mention-spam detection</span><input id="mention_spam_block" type="checkbox"/><i></i></label>
+<label class="toggle-row"><span>Block invite links</span><input id="invite_block" type="checkbox"/><i></i></label>
+<label class="toggle-row"><span>Blocked words</span><input id="bad_words_enabled" type="checkbox"/><i></i></label>
+<label class="toggle-row"><span>Automatic timeout</span><input id="auto_timeout" type="checkbox"/><i></i></label>
+<div class="advanced-grid">
+<label><span>Spam message count</span><input id="spam_count" max="30" min="3" type="number" value="6"/></label>
+<label><span>Spam window (seconds)</span><input id="spam_seconds" max="60" min="2" type="number" value="8"/></label>
+<label><span>Mention limit</span><input id="mention_limit" max="30" min="2" type="number" value="5"/></label>
+<label><span>Automatic timeout (minutes)</span><input id="timeout_minutes" max="1440" min="1" type="number" value="10"/></label>
+</div>
+<label><span>AutoMod exempt channels</span><select id="automod_exempt_channel_ids" multiple="" size="5"></select></label>
+<label><span>Invite-block exempt channels</span><select id="invite_exempt_channel_ids" multiple="" size="5"></select></label>
+<label><span>Blocked-word list</span><textarea id="bad_word_list" maxlength="4200" placeholder="One entry per line" rows="5"></textarea></label>
+<p class="micro">Store up to 100 blocked words, separated by lines or commas.</p></div>
+<div class="setting-section">
+<h3>👋 Automation</h3>
+<label><span>Welcome channel</span><select id="welcome_channel_id"></select></label>
+<label><span>Leave channel</span><select id="leave_channel_id"></select></label>
+<label><span>New member autorole</span><select id="autorole_id"></select></label>
+<label><span>Registration channel</span><select id="welcome_register_channel_id"></select></label>
+<label><span>Rules channel</span><select id="welcome_rules_channel_id"></select></label>
+<label><span>Welcome notice channel</span><select id="welcome_notice_channel_id"></select></label><p class="micro">Giveaways, polls, suggestions and scheduled posts remain available through !automationcenter in Discord.</p>
+</div>
+<div class="setting-section">
+<h3>🚨 Security</h3>
+<label class="toggle-row"><span>Anti-raid</span><input id="anti_raid_enabled" type="checkbox"/><i></i></label>
+<label class="toggle-row"><span>Auto-lock on raid</span><input id="anti_raid_auto_lockdown" type="checkbox"/><i></i></label>
+<label class="toggle-row"><span>Destructive burst watch</span><input id="destructive_watch_enabled" type="checkbox"/><i></i></label>
+<label><span>Burst threshold</span><input id="destructive_watch_threshold" max="20" min="2" type="number" value="3"/></label>
+<label><span>Window (seconds)</span><input id="destructive_watch_window_seconds" max="300" min="5" type="number" value="20"/></label>
+<label><span>Quarantine role</span><select id="anti_raid_quarantine_role_id"></select></label>
+<div class="advanced-grid">
+<label><span>Raid join limit</span><input id="anti_raid_join_limit" max="50" min="3" type="number" value="6"/></label>
+<label><span>Raid join window (seconds)</span><input id="anti_raid_window_seconds" max="300" min="5" type="number" value="25"/></label>
+<label><span>Minimum account age (days)</span><input id="anti_raid_min_account_age_days" max="365" min="0" type="number" value="3"/></label>
+</div><p class="micro">Destructive emergency lock/unlock actions remain Discord-only under !securitycenter for safety.</p>
+</div>
+<div class="setting-section">
+<h3>🧾 Logs &amp; tickets</h3>
+<label><span>Default log channel</span><select id="log_channel_id"></select></label><label><span>Security log channel</span><select id="log_security_channel_id"></select></label>
+<label><span>Message log channel</span><select id="log_message_channel_id"></select></label>
+<label><span>Member log channel</span><select id="log_member_channel_id"></select></label>
+<label><span>Operations log channel</span><select id="log_operation_channel_id"></select></label>
+<label><span>Ticket log channel</span><select id="ticket_log_channel_id"></select></label>
+<label><span>Ticket category</span><select id="ticket_category_id"></select></label>
+</div>
+<div class="setting-section">
+<h3>🎮 RPG &amp; community</h3>
+<label class="toggle-row"><span>Story features</span><input id="story_enabled" type="checkbox"/><i></i></label>
+<label class="toggle-row"><span>Codex notifications</span><input id="codex_notifications" type="checkbox"/><i></i></label>
+<label class="toggle-row"><span>Tutorial notifications</span><input id="tutorial_notifications" type="checkbox"/><i></i></label>
+<label class="toggle-row"><span>Temporary voice</span><input id="temp_voice_enabled" type="checkbox"/><i></i></label><label><span>Temporary-voice lobby</span><select id="temp_voice_lobby_id"></select></label>
+<label><span>Temporary-voice category</span><select id="temp_voice_category_id"></select></label>
+<p class="micro">If no temp-voice lobby exists, run !tempvoicesetup once in Discord.</p>
+<label><span>Announcement channel</span><select id="announcement_channel_id"></select></label>
+<label><span>Recommended RPG channel</span><select id="rpg_channel_id"></select></label>
+</div>
+<div class="setting-section">
+<h3>🌐 Language &amp; moderators</h3>
+<label><span>Server default language</span><select id="guild_locale"><option value="ko">Korean</option><option value="en">English</option></select></label>
+<label><span>Moderator roles</span><select id="mod_role_ids" multiple="" size="6"></select></label>
+<p class="micro">A user's personal language choice overrides the server default.</p>
+</div>
+<div class="setting-section">
+<h3>🎭 Button roles</h3>
+<label><span>Role panel title</span><input id="button_role_title" maxlength="80" placeholder="Choose notification roles" type="text"/></label>
+<p class="micro">Choose up to 25 self-assignable roles. Posting the persistent panel remains available through !buttonrolepanel in Discord.</p>
+<select id="button_role_ids" multiple="" size="8"></select>
+</div>
+</div>
+</div>
+<div class="dash-panel" id="panel-reactions">
+<div class="panel-toolbar">
+<div><h3>✨ GIF reactions</h3><p class="micro">Uses the same settings as !autogif, !gifmode, !superreaction and !usergif.</p></div>
+<button class="btn primary" disabled="" id="saveReactionBtn" type="button">Save GIF settings</button>
+</div>
+<div class="settings-form muted-form" id="reactionForm">
+<div class="setting-section">
+<h3>⚡ Runtime</h3>
+<label class="toggle-row"><span>Automatic GIF reactions</span><input id="reaction_enabled" type="checkbox"/><i></i></label>
+<label class="toggle-row"><span>React to bot result messages</span><input id="reaction_bot_messages" type="checkbox"/><i></i></label>
+<label class="toggle-row"><span>Smart GIFs on user chat</span><input id="reaction_user_messages" type="checkbox"/><i></i></label>
+<label class="toggle-row"><span>Upgrade legacy auto reactions to GIF</span><input id="reaction_upgrade" type="checkbox"/><i></i></label>
+<label class="toggle-row"><span>Static emoji fallback</span><input id="reaction_static_fallback" type="checkbox"/><i></i></label>
+</div>
+<div class="setting-section">
+<h3>💥 Reaction intensity</h3>
+<label><span>Base mode</span><select id="reaction_mode"><option value="standard">Standard · up to 1</option><option value="vivid">Vivid · up to 2</option></select></label>
+<label class="toggle-row emphasis-toggle"><span><b>5-reaction Super Style</b><small>4 scenes per context + rotating GIFs</small></span><input id="reaction_super_style" type="checkbox"/><i></i></label>
+<p class="micro">This is not Discord native BURST. ABADDON automatically combines up to five animated custom emoji reactions.</p>
+</div>
+<div class="setting-section wide">
+<div class="section-heading-line"><div><h3>📈 GIF status</h3><p class="micro" id="reactionSourceStatus">Loading...</p></div><button class="small-action" id="copyGifTest" type="button">Copy !giftest</button></div>
+<div class="mini-stat-grid" id="reactionStats"></div>
+</div>
+</div>
+</div>
+<div class="dash-panel" id="panel-external">
+<div class="panel-toolbar">
+<div><h3>📡 External alerts</h3><p class="micro">You can now manage YouTube and Twitch alerts directly from the web.</p></div>
+<span class="status-pill" id="externalEnvStatus">Checking API</span>
+</div>
+<div class="external-grid">
+<section class="setting-section">
+<h3>📺 YouTube</h3>
+<p class="micro">Supports UC channel IDs, @handles, and youtube.com/@handle URLs.</p>
+<label><span>YouTube channel</span><input id="youtubeIdentifier" maxlength="160" placeholder="@handle or UC..." type="text"/></label>
+<label><span>Discord notification channel</span><select id="youtubeNotifyChannel"></select></label>
+<button class="btn secondary full-btn" id="youtubeAddBtn" type="button">Add YouTube alert</button>
+<div class="subscription-list" id="youtubeList"></div>
+</section>
+<section class="setting-section">
+<h3>🟣 Twitch</h3>
+<p class="micro">Enter a Twitch login or twitch.tv/channel URL.</p>
+<label><span>Twitch channel</span><input id="twitchIdentifier" maxlength="160" placeholder="channelname" type="text"/></label>
+<label><span>Discord notification channel</span><select id="twitchNotifyChannel"></select></label>
+<button class="btn secondary full-btn" id="twitchAddBtn" type="button">Add Twitch alert</button>
+<div class="subscription-list" id="twitchList"></div>
+</section>
+</div>
+</div>
+<div class="dash-panel" id="panel-live">
+<div class="panel-toolbar">
+<div><h3>📡 ABADDON Live Feed</h3><p class="micro">Shows Background Worker heartbeat plus public events and operator announcements safe for the website.</p></div>
+<button class="small-action" id="dashboardLiveRefresh" type="button">Refresh</button>
+</div>
+<div class="section-heading-line live-dashboard-heading"><span class="status-pill" id="liveFeedState">-</span></div>
+<div class="mini-stat-grid live-stat-grid" id="liveFeedStats"></div>
+<div class="dashboard-live-events" id="dashboardLiveEvents"><p class="micro">Connecting to the live feed...</p></div>
+</div>
+<div class="dash-panel" id="panel-commands">
+<div class="panel-toolbar command-toolbar">
+<div><h3>🧭 Live command center</h3><p class="micro">Reads the bot's actual registered public commands. New commands appear automatically after a bot update.</p></div>
+<span class="status-pill" id="commandTotal">- commands</span>
+</div>
+<div class="command-search-row">
+<input id="commandSearch" placeholder="Search commands or features · e.g. casino, GIF, YouTube, boss" type="search"/>
+<button class="small-action" id="clearCommandSearch" type="button">Clear</button>
+</div>
+<div class="category-chips" id="commandCategories"></div>
+<div class="command-results" id="commandResults"><p class="micro">Loading command catalog...</p></div>
+</div>
+</section>
+</section>
+</main>
+<footer class="shell footer">
+<span>ABADDON · v<span data-bot-version="">19.2.0</span></span>
+<span>Website v<span data-web-version="">4.7.0</span></span>
+<span>Support @jjonga0022</span>
+</footer>
+</body>
+</html>
