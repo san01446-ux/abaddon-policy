@@ -1,0 +1,5 @@
+ABADDON OFFICIAL WEBSITE v5.1.4
+- Bot v19.6.4 current-version display
+- Emergency maintenance mode commands documented
+- Command-guide KeyError(hint) hotfix documented
+- Existing ABADDON LIFE / Live Feed integration pages preserved

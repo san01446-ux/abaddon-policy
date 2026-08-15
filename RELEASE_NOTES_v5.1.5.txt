@@ -1,0 +1,5 @@
+ABADDON OFFICIAL WEBSITE v5.1.5
+- Bot v19.6.5 current-version display
+- Korean/English update history synchronized
+- Ops logs / UI error watch / English Server Mirror feature notes added
+- ABADDON LIFE v2.7.1 compatibility retained

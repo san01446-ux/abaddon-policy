@@ -1,0 +1,7 @@
+{
+  "version": "5.1.4",
+  "bot": "19.6.4",
+  "maintenance_mode_documented": true,
+  "command_guide_hint_guard": true,
+  "previous_integrations_preserved": true
+}
