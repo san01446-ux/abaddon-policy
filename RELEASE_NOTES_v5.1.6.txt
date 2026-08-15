@@ -1,0 +1,7 @@
+ABADDON OFFICIAL WEBSITE v5.1.6
+- Full Korean/English privacy-policy parity refresh
+- English privacy page expanded to cover OAuth, AI features, vote verification, sessions, external alerts and deletion requests
+- Prominent KO/EN language switch added directly to Privacy pages
+- hreflang alternate links added for Korean and English Privacy pages
+- English update history no longer exposes Korean-only maintenance command labels in prose
+- Bot v19.6.5 / ABADDON LIFE v2.7.1 compatibility retained

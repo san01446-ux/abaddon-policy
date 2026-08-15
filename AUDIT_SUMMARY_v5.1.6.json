@@ -1,0 +1,9 @@
+{
+  "version": "5.1.6",
+  "bot": "19.6.5",
+  "life": "2.7.1",
+  "privacy_ko_en_parity": true,
+  "english_privacy_user_facing_hangul_except_language_switch": 0,
+  "privacy_hreflang": true,
+  "english_update_korean_maintenance_labels_removed": true
+}
