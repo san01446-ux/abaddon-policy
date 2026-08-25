@@ -1,0 +1,31 @@
+{
+  "version": "5.2.0",
+  "date": "2026-08-26",
+  "compatibility": {
+    "bot": "20.4.7",
+    "live_feed": "1.14.0",
+    "abaddon_life": "2.10.0",
+    "outbreak": "2.10.0"
+  },
+  "updated_surfaces": [
+    "Korean and English home pages",
+    "Korean and English command guides",
+    "Korean and English update history",
+    "Korean and English dashboard",
+    "Public Live Feed UI",
+    "Backward-compatible shared configuration"
+  ],
+  "preserved_contracts": [
+    "Dashboard setting field names",
+    "Discord OAuth routes",
+    "Live Feed public endpoints",
+    "Worker relay operations",
+    "FiveM/QBCore bridge routes",
+    "Existing static pages and assets"
+  ],
+  "security": {
+    "developer_commands_removed_from_public_guide": true,
+    "secrets_added_to_static_site": false,
+    "new_remote_mutation_endpoints": false
+  }
+}

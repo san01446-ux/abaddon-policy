@@ -1,0 +1,18 @@
+ABADDON OFFICIAL WEBSITE v5.2.0
+BOT v20.4.7 / LIVE FEED v1.14.0 SYNC
+Date: 2026-08-26
+
+Updated
+- Unified Korean and English configuration on Bot v20.4.7 / Website v5.2.0.
+- Fixed the Korean root configuration that still reported Bot v18.5.0 / Website v4.2.0.
+- Added current music, optional AI chat, 100-floor pixel roguelike, notification onboarding, multiple temporary-voice lobbies, sleep rooms, bump-reminder and archive-first official-renewal information.
+- Added current public command entry points in Korean and English.
+- Removed developer-only patch/audit/diagnostic/maintenance/test/internal-log commands from public command guides.
+- Preserved the existing Discord OAuth dashboard, live command catalog, settings payload, external alerts, Live Feed and FiveM/QBCore surfaces.
+- Clarified that the original single temporary-voice fields remain for backward compatibility; v20.4.7 multi-lobby/sleep-room management stays in Discord.
+- Added bot-version display and new event runes to the public Live Feed UI.
+
+Not changed
+- Bot source, Dockerfile, runtime, start command, database and saved data.
+- Existing website API endpoint names or dashboard setting keys.
+- Relay secrets, OAuth secrets or public event structures.

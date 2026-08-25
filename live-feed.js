@@ -23,7 +23,8 @@
     return new Intl.DateTimeFormat(lang() === 'en' ? 'en-US' : 'ko-KR', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'}).format(date);
   };
   const rune = (type) => ({
-    system:'◆', combat:'⚔', boss:'☠', world:'◈', economy:'₵', guild:'♜', craft:'⚒', story:'✦', event:'✹', casino:'♠', social:'☍'
+    system:'◆', combat:'⚔', boss:'☠', world:'◈', economy:'₵', guild:'♜', craft:'⚒', story:'✦', event:'✹', casino:'♠', social:'☍',
+    music:'♫', voice:'◉', ai:'✧', community:'⌂', outbreak:'☣', announcement:'!'
   }[String(type || '').toLowerCase()] || '◇');
 
   async function getJson(path) {
@@ -47,6 +48,7 @@
         [t('멤버','Members'), num(status.members)],
         [t('지연','Latency'), `${num(status.latency_ms)} ms`],
         [t('공개 이벤트','Public events'), num(status.event_count)],
+        [t('봇 버전','Bot version'), String((status.version && status.version !== 'unknown' ? status.version : status.compatibility?.bot) || cfg.botVersion || '-')],
       ];
       stats.innerHTML = cards.map(([label,value]) => `<div class="public-live-stat"><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join('');
     }

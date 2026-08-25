@@ -8,8 +8,8 @@
 <meta content="#0b0d12" name="theme-color"/>
 <title>ABADDON · 서버 대시보드</title>
 <link href="site-v424.css?v=490-permissionalerts" rel="stylesheet"/>
-<script defer="" src="config.js?v=511-life"></script>
-<script defer="" src="dashboard.js?v=511-life"></script>
+<script defer="" src="config.js?v=520-bot2047"></script>
+<script defer="" src="dashboard.js?v=520-bot2047"></script>
 </head>
 <body>
 <div class="noise"></div>
@@ -25,7 +25,7 @@
 <main class="shell dashboard-page">
 <section class="dashboard-hero">
 <div>
-<div class="eyebrow">ABADDON WEB CONTROL CENTER · BOT v<span data-bot-version="">19.6.1</span></div>
+<div class="eyebrow">ABADDON WEB CONTROL CENTER · BOT v<span data-bot-version="">20.4.7</span></div>
 <h1 data-en="Powerful underneath. Simple on top." data-ko="명령어는 많아도, 사용은 단순하게.">명령어는 많아도, 사용은 단순하게.</h1>
 <p class="lead" data-en="Sign in with Discord, choose a server, and manage only what you need. Configure server features directly and search the entire live command catalog." data-ko="Discord 로그인 → 서버 선택 → 필요한 기능만 클릭. 설정형 기능은 웹에서 직접 저장하고, 전체 명령어는 검색해서 찾을 수 있습니다.">Discord 로그인 → 서버 선택 → 필요한 기능만 클릭. 설정형 기능은 웹에서 직접 저장하고, 전체 명령어는 검색해서 찾을 수 있습니다.</p>
 </div>
@@ -82,7 +82,7 @@
 <button class="feature-launch" data-open-panel="commands" type="button"><span>🧭</span><div><strong data-en="All commands" data-ko="전체 명령어">전체 명령어</strong><small data-en="Search, filter, and copy the live catalog" data-ko="라이브 목록 검색·분류·복사">라이브 목록 검색·분류·복사</small></div></button>
 </div>
 <section class="setting-section wide overview-section">
-<div class="section-heading-line"><div><h3 data-en="📊 Current state" data-ko="📊 현재 상태">📊 현재 상태</h3><p class="micro" data-en="Discord commands and this dashboard use the same server configuration data." data-ko="Discord 명령어와 웹 대시보드가 같은 서버 설정 데이터를 사용합니다.">Discord 명령어와 웹 대시보드가 같은 서버 설정 데이터를 사용합니다.</p></div><span class="status-pill" id="overviewVersion">v19.6.1</span></div>
+<div class="section-heading-line"><div><h3 data-en="📊 Current state" data-ko="📊 현재 상태">📊 현재 상태</h3><p class="micro" data-en="Discord commands and this dashboard use the same server configuration data." data-ko="Discord 명령어와 웹 대시보드가 같은 서버 설정 데이터를 사용합니다.">Discord 명령어와 웹 대시보드가 같은 서버 설정 데이터를 사용합니다.</p></div><span class="status-pill" id="overviewVersion">v20.4.7</span></div>
 <div class="overview-flags" id="overviewFlags"></div>
 </section>
 </div>
@@ -149,7 +149,8 @@
 <label class="toggle-row"><span data-en="Tutorial notifications" data-ko="튜토리얼 알림">튜토리얼 알림</span><input id="tutorial_notifications" type="checkbox"/><i></i></label>
 <label class="toggle-row"><span data-en="Temporary voice" data-ko="임시 음성방">임시 음성방</span><input id="temp_voice_enabled" type="checkbox"/><i></i></label><label><span data-en="Temporary-voice lobby" data-ko="임시 음성 로비">임시 음성 로비</span><select id="temp_voice_lobby_id"></select></label>
 <label><span data-en="Temporary-voice category" data-ko="임시 음성 카테고리">임시 음성 카테고리</span><select id="temp_voice_category_id"></select></label>
-<p class="micro" data-en="If no temp-voice lobby exists, run !tempvoicesetup once in Discord." data-ko="임시 음성 로비가 없다면 Discord에서 !임시음성설정을 한 번 실행해야 합니다.">임시 음성 로비가 없다면 Discord에서 !임시음성설정을 한 번 실행해야 합니다.</p>
+<p class="micro" data-en="This legacy-compatible field manages the original lobby. If none exists, run !temp_voice_setup once in Discord." data-ko="이 항목은 기존 단일 로비 호환 설정입니다. 로비가 없다면 Discord에서 !임시음성설정을 한 번 실행하세요.">이 항목은 기존 단일 로비 호환 설정입니다. 로비가 없다면 Discord에서 !임시음성설정을 한 번 실행하세요.</p>
+<p class="micro" data-en="v20.4.7 multiple named lobbies and sleep rooms are managed safely in Discord with !temproomlist and !sleeproomstatus; no new relay mutation was added." data-ko="v20.4.7 다중 이름별 로비·수면방은 Discord의 !임시음성목록·!수면방상태에서 안전하게 관리합니다. 새 Relay 변경 명령은 추가하지 않았습니다.">v20.4.7 다중 이름별 로비·수면방은 Discord의 !임시음성목록·!수면방상태에서 안전하게 관리합니다. 새 Relay 변경 명령은 추가하지 않았습니다.</p>
 <label><span data-en="Announcement channel" data-ko="공지 채널">공지 채널</span><select id="announcement_channel_id"></select></label>
 <label><span data-en="Recommended RPG channel" data-ko="RPG 권장 채널">RPG 권장 채널</span><select id="rpg_channel_id"></select></label>
 </div>
@@ -258,8 +259,8 @@
 </section>
 </main>
 <footer class="shell footer">
-<span>ABADDON · v<span data-bot-version="">19.6.1</span></span>
-<span>Website v<span data-web-version="">4.9.0</span></span>
+<span>ABADDON · v<span data-bot-version="">20.4.7</span></span>
+<span>Website v<span data-web-version="">5.2.0</span></span>
 <span>Support @jjonga0022</span>
 </footer>
 </body>
