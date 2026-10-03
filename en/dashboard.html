@@ -8,8 +8,8 @@
 <meta content="#0b0d12" name="theme-color"/>
 <title>ABADDON · Server Dashboard</title>
 <link href="../site-v424.css?v=490-permissionalerts" rel="stylesheet"/>
-<script defer="" src="config.js?v=520-bot2047"></script>
-<script defer="" src="../dashboard.js?v=520-bot2047"></script>
+<script defer="" src="config.js?v=530-bot2056"></script>
+<script defer="" src="../dashboard.js?v=530-bot2056"></script>
 </head>
 <body>
 <div class="noise"></div>
@@ -25,7 +25,7 @@
 <main class="shell dashboard-page">
 <section class="dashboard-hero">
 <div>
-<div class="eyebrow">ABADDON WEB CONTROL CENTER · BOT v<span data-bot-version="">20.4.7</span></div>
+<div class="eyebrow">ABADDON WEB CONTROL CENTER · BOT v<span data-bot-version="">20.5.6</span></div>
 <h1>Powerful underneath. Simple on top.</h1>
 <p class="lead">Sign in with Discord, choose a server, and manage only what you need. Configure server features directly and search the entire live command catalog.</p>
 </div>
@@ -80,10 +80,15 @@
 <button class="feature-launch" data-open-panel="external" type="button"><span>📡</span><div><strong>External alerts</strong><small>Manage YouTube, Twitch, CHZZK and SOOP alerts</small></div></button>
 <button class="feature-launch" data-open-panel="live" type="button"><span>📡</span><div><strong>Live feed</strong><small>Heartbeat, public events, announcements</small></div></button>
 <button class="feature-launch" data-open-panel="commands" type="button"><span>🧭</span><div><strong>All commands</strong><small>Search, filter, and copy the live catalog</small></div></button>
+<button class="feature-launch" onclick="window.open('https://discord.com/oauth2/authorize?client_id=1555794601598525470&amp;scope=bot%20applications.commands&amp;permissions=3230720', '_blank', 'noopener')" type="button"><span>🎵</span><div><strong>ABADDON Music</strong><small>Music runs on a dedicated bot · Invite it</small></div></button>
 </div>
 <section class="setting-section wide overview-section">
-<div class="section-heading-line"><div><h3>📊 Current state</h3><p class="micro">Discord commands and this dashboard use the same server configuration data.</p></div><span class="status-pill" id="overviewVersion">v20.4.7</span></div>
+<div class="section-heading-line"><div><h3>📊 Current state</h3><p class="micro">Discord commands and this dashboard use the same server configuration data.</p></div><span class="status-pill" id="overviewVersion">v20.5.6</span></div>
 <div class="overview-flags" id="overviewFlags"></div>
+</section>
+<section class="setting-section wide overview-section">
+<div class="section-heading-line"><div><h3>🆕 New in v20.5</h3><p class="micro">Available in Discord right now.</p></div></div>
+<div class="command-card-grid"><article class="command-card"><div class="command-card-head"><code>!시작</code></div><p>New here? Start with this: buttons guide you from sign-up through tutorial rewards.</p></article><article class="command-card"><div class="command-card-head"><code>!가입</code></div><p>Join as a survivor instantly (no access word) and get 1,000 food.</p></article><article class="command-card"><div class="command-card-head"><code>!서버순위</code></div><p>Weekly server-vs-server ranking by active survivors. Managers can hide the server name.</p></article><article class="command-card"><div class="command-card-head"><code>!뮤직 재생</code></div><p>Music is handled by ABADDON Music. Set the idle time with !music idle 1-60.</p></article></div>
 </section>
 </div>
 <div class="dash-panel" id="panel-settings">
@@ -150,7 +155,7 @@
 <label class="toggle-row"><span>Temporary voice</span><input id="temp_voice_enabled" type="checkbox"/><i></i></label><label><span>Temporary-voice lobby</span><select id="temp_voice_lobby_id"></select></label>
 <label><span>Temporary-voice category</span><select id="temp_voice_category_id"></select></label>
 <p class="micro">This legacy-compatible field manages the original lobby. If none exists, run !temp_voice_setup once in Discord.</p>
-<p class="micro">v20.4.7 multiple named lobbies and sleep rooms are managed safely in Discord with !temproomlist and !sleeproomstatus; no new relay mutation was added.</p>
+<p class="micro">Multiple named lobbies and sleep rooms are managed in Discord with !temproomlist and !sleeproomstatus.</p>
 <label><span>Announcement channel</span><select id="announcement_channel_id"></select></label>
 <label><span>Recommended RPG channel</span><select id="rpg_channel_id"></select></label>
 </div>
@@ -259,8 +264,8 @@
 </section>
 </main>
 <footer class="shell footer">
-<span>ABADDON · v<span data-bot-version="">20.4.7</span></span>
-<span>Website v<span data-web-version="">5.2.0</span></span>
+<span>ABADDON · v<span data-bot-version="">20.5.6</span></span>
+<span>Website v<span data-web-version="">5.3.0</span></span>
 <span>Support @jjonga0022</span>
 </footer>
 </body>
