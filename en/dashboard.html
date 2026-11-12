@@ -154,8 +154,8 @@
 <label class="toggle-row"><span>Tutorial notifications</span><input id="tutorial_notifications" type="checkbox"/><i></i></label>
 <label class="toggle-row"><span>Temporary voice</span><input id="temp_voice_enabled" type="checkbox"/><i></i></label><label><span>Temporary-voice lobby</span><select id="temp_voice_lobby_id"></select></label>
 <label><span>Temporary-voice category</span><select id="temp_voice_category_id"></select></label>
-<p class="micro">This legacy-compatible field manages the original lobby and only turns on when a lobby voice channel is selected. Installing new lobbies (!temp_voice_setup) is limited to the ABADDON team.</p>
-<p class="micro">Multiple named lobbies and sleep rooms are managed in Discord with !temproomlist and !sleeproomstatus.</p>
+<p class="micro">This legacy-compatible field manages the original lobby and only turns on when a lobby voice channel is selected. Server admins (Manage Server) can install new lobbies themselves in Discord with !temp_voice_setup.</p>
+<p class="micro">Server admins set up multiple named lobbies and sleep rooms in Discord with !temp_voice_setup name and !sleeproomsetup, then manage them with !temproomlist and !sleeproomstatus.</p>
 <label><span>Announcement channel</span><select id="announcement_channel_id"></select></label>
 <label><span>Recommended RPG channel</span><select id="rpg_channel_id"></select></label>
 </div>
@@ -168,7 +168,7 @@
 <div class="setting-section">
 <h3>🎭 Button roles</h3>
 <label><span>Role panel title</span><input id="button_role_title" maxlength="80" placeholder="Choose notification roles" type="text"/></label>
-<p class="micro">Choose up to 25 self-assignable roles. Posting the panel (!buttonrolepanel) is limited to the ABADDON team; ask in the support server to post it.</p>
+<p class="micro">Choose up to 25 self-assignable roles. After saving, a server admin posts the panel by running !buttonrolepanel in the channel you want.</p>
 <select id="button_role_ids" multiple="" size="8"></select>
 </div>
 </div>

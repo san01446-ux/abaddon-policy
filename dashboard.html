@@ -154,8 +154,8 @@
 <label class="toggle-row"><span data-en="Tutorial notifications" data-ko="튜토리얼 알림">튜토리얼 알림</span><input id="tutorial_notifications" type="checkbox"/><i></i></label>
 <label class="toggle-row"><span data-en="Temporary voice" data-ko="임시 음성방">임시 음성방</span><input id="temp_voice_enabled" type="checkbox"/><i></i></label><label><span data-en="Temporary-voice lobby" data-ko="임시 음성 로비">임시 음성 로비</span><select id="temp_voice_lobby_id"></select></label>
 <label><span data-en="Temporary-voice category" data-ko="임시 음성 카테고리">임시 음성 카테고리</span><select id="temp_voice_category_id"></select></label>
-<p class="micro" data-en="This legacy-compatible field manages the original lobby and only turns on when a lobby voice channel is selected. Installing new lobbies (!temp_voice_setup) is limited to the ABADDON team." data-ko="이 항목은 기존 단일 로비 호환 설정이며, 로비 음성 채널을 선택해야 켜집니다. 새 로비 설치(!임시음성설정)는 ABADDON 운영진 전용입니다.">이 항목은 기존 단일 로비 호환 설정이며, 로비 음성 채널을 선택해야 켜집니다. 새 로비 설치(!임시음성설정)는 ABADDON 운영진 전용입니다.</p>
-<p class="micro" data-en="Multiple named lobbies and sleep rooms are managed in Discord with !temproomlist and !sleeproomstatus." data-ko="다중 이름별 로비·수면방은 Discord의 !임시음성목록·!수면방상태에서 관리합니다.">다중 이름별 로비·수면방은 Discord의 !임시음성목록·!수면방상태에서 관리합니다.</p>
+<p class="micro" data-en="This legacy-compatible field manages the original lobby and only turns on when a lobby voice channel is selected. Server admins (Manage Server) can install new lobbies themselves in Discord with !temp_voice_setup." data-ko="이 항목은 기존 단일 로비 호환 설정이며, 로비 음성 채널을 선택해야 켜집니다. 새 로비는 서버 관리자(서버 관리 권한)가 Discord에서 !임시음성설정으로 직접 설치할 수 있습니다.">이 항목은 기존 단일 로비 호환 설정이며, 로비 음성 채널을 선택해야 켜집니다. 새 로비는 서버 관리자(서버 관리 권한)가 Discord에서 !임시음성설정으로 직접 설치할 수 있습니다.</p>
+<p class="micro" data-en="Server admins set up multiple named lobbies and sleep rooms in Discord with !temp_voice_setup name and !sleeproomsetup, then manage them with !temproomlist and !sleeproomstatus." data-ko="다중 이름별 로비·수면방은 서버 관리자가 Discord에서 !임시음성설정 이름·!수면방설정으로 설치하고 !임시음성목록·!수면방상태에서 관리합니다.">다중 이름별 로비·수면방은 서버 관리자가 Discord에서 !임시음성설정 이름·!수면방설정으로 설치하고 !임시음성목록·!수면방상태에서 관리합니다.</p>
 <label><span data-en="Announcement channel" data-ko="공지 채널">공지 채널</span><select id="announcement_channel_id"></select></label>
 <label><span data-en="Recommended RPG channel" data-ko="RPG 권장 채널">RPG 권장 채널</span><select id="rpg_channel_id"></select></label>
 </div>
@@ -168,7 +168,7 @@
 <div class="setting-section">
 <h3 data-en="🎭 Button roles" data-ko="🎭 버튼 역할">🎭 버튼 역할</h3>
 <label><span data-en="Role panel title" data-ko="역할 패널 제목">역할 패널 제목</span><input id="button_role_title" maxlength="80" placeholder="알림 역할 선택" type="text"/></label>
-<p class="micro" data-en="Choose up to 25 self-assignable roles. Posting the panel (!buttonrolepanel) is limited to the ABADDON team; ask in the support server to post it." data-ko="사용자가 직접 받을 수 있는 역할을 최대 25개 선택합니다. 패널 게시(!버튼역할패널)는 ABADDON 운영진 전용이므로 지원 서버에 요청하세요.">사용자가 직접 받을 수 있는 역할을 최대 25개 선택합니다. 패널 게시(!버튼역할패널)는 ABADDON 운영진 전용이므로 지원 서버에 요청하세요.</p>
+<p class="micro" data-en="Choose up to 25 self-assignable roles. After saving, a server admin posts the panel by running !buttonrolepanel in the channel you want." data-ko="사용자가 직접 받을 수 있는 역할을 최대 25개 선택합니다. 저장한 뒤 서버 관리자가 원하는 채널에서 !버튼역할패널을 실행하면 패널이 게시됩니다.">사용자가 직접 받을 수 있는 역할을 최대 25개 선택합니다. 저장한 뒤 서버 관리자가 원하는 채널에서 !버튼역할패널을 실행하면 패널이 게시됩니다.</p>
 <select id="button_role_ids" multiple="" size="8"></select>
 </div>
 </div>
