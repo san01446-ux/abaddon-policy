@@ -19,7 +19,7 @@
     renderOverviewFlags();
     renderExternal();
     renderCommands();
-    const cs=document.getElementById('commandSearch'); if(cs) cs.placeholder=t('명령어 또는 기능 검색 · 예: 카지노, GIF, 유튜브, 보스','Search commands or features · e.g. casino, GIF, YouTube, boss');
+    const cs=document.getElementById('commandSearch'); if(cs) cs.placeholder=t('명령어 또는 기능 검색 · 예: 카지노, GIF, 서버순위, 보스','Search commands or features · e.g. casino, GIF, serverrank, boss');
     const yi=document.getElementById('youtubeIdentifier'); if(yi) yi.placeholder=t('@핸들 또는 UC...','@handle or UC...');
     const ci=document.getElementById('chzzkIdentifier'); if(ci) ci.placeholder=t('CHZZK 채널 URL 또는 ID','CHZZK channel URL or ID');
     const si=document.getElementById('soopIdentifier'); if(si) si.placeholder=t('SOOP 스트리머 ID 또는 URL','SOOP streamer ID or URL');
@@ -49,6 +49,9 @@
   let guildLoadSeq = 0;
   let guildLoadController = null;
   let commandLoadPromise = null;
+  // Runtime bot version from the public live-feed status. The relay's overview/snapshot
+  // "version" field is a dashboard-module label (e.g. 19.3.2), not the deployed bot.
+  let liveRuntimeVersion = '';
   const guildSnapshotCache = new Map();
   const SNAPSHOT_CACHE_MS = 30000;
 
@@ -78,6 +81,7 @@
     }
   };
 
+  const oauthError = new URLSearchParams(location.search).get('error');
   if (invalidApi) {
     setupNotice.classList.remove('hidden');
     setupNotice.innerHTML = t(
@@ -113,7 +117,11 @@
       const res = await fetch(`${apiBase}${path}`, fetchOptions);
       let data = {};
       try { data = await res.json(); } catch (_) {}
-      if (!res.ok) throw new Error(data.error || data.detail || `HTTP ${res.status}`);
+      if (!res.ok) {
+        const code = data.error || data.detail || `HTTP ${res.status}`;
+        if (code === 'login_required' && session) expireSession();
+        throw new Error(code);
+      }
       return data;
     } catch (err) {
       if (controller.signal.aborted) throw new Error(externalSignal?.aborted ? 'request_cancelled' : 'request_timeout');
@@ -122,6 +130,12 @@
       window.clearTimeout(timer);
       if (externalSignal) externalSignal.removeEventListener('abort', abortFromExternal);
     }
+  }
+
+  function expireSession() {
+    sessionStorage.removeItem('abaddon-session'); session = '';
+    loginBtn?.classList.remove('hidden'); logoutBtn?.classList.add('hidden');
+    setStatus(t('로그인이 만료되었습니다. 다시 로그인해주세요.', 'Session expired. Please sign in again.'), 'warn');
   }
 
   const delay = (ms) => new Promise(resolve => window.setTimeout(resolve, ms));
@@ -216,9 +230,14 @@
     document.getElementById('statMembers').textContent = Number(currentOverview.members || 0).toLocaleString();
     document.getElementById('statGif').textContent = Number(currentOverview.local_gif_count || 0).toLocaleString();
     document.getElementById('statAlerts').textContent = Number((currentOverview.youtube_subscriptions || 0) + (currentOverview.twitch_subscriptions || 0) + (currentOverview.chzzk_subscriptions || 0) + (currentOverview.soop_subscriptions || 0)).toLocaleString();
-    document.getElementById('overviewVersion').textContent = `v${currentOverview.version || botVersion}`;
+    renderRuntimeVersion();
     guildMiniStatus.innerHTML = `<span>👥 ${Number(currentOverview.members || 0).toLocaleString()}</span><span>💬 ${Number(currentOverview.text_channels || 0)}</span><span>🎭 ${Number(currentOverview.roles || 0)}</span>`;
     renderOverviewFlags();
+  }
+
+  function renderRuntimeVersion() {
+    const pill = document.getElementById('overviewVersion');
+    if (pill) pill.textContent = `v${liveRuntimeVersion || botVersion}`;
   }
 
   function renderOverviewFlags() {
@@ -357,6 +376,8 @@
       const status = await statusRes.json(); const feed = await eventsRes.json();
       if (!statusRes.ok || !eventsRes.ok) throw new Error(`HTTP ${statusRes.status}/${eventsRes.status}`);
       const online = Boolean(status.online || status.worker_fresh);
+      const runtime = String(status.version || '').replace(/^v/i, '').trim();
+      if (/^\d+(\.\d+)+$/.test(runtime)) { liveRuntimeVersion = runtime; renderRuntimeVersion(); }
       const state = document.getElementById('liveFeedState'); if (state) { state.textContent=online?t('온라인','ONLINE'):t('기동/재연결 중','STARTING'); state.classList.toggle('ok-pill',online); }
       const stats = document.getElementById('liveFeedStats');
       if (stats) stats.innerHTML = [
@@ -478,7 +499,7 @@
       ), 'ok');
     } catch (err) {
       const code = String(err?.message || err || '');
-      if (loadSeq !== guildLoadSeq || code === 'request_cancelled' || code === 'superseded') return;
+      if (loadSeq !== guildLoadSeq || code === 'request_cancelled' || code === 'superseded' || code === 'login_required') return;
       if (cached?.data) {
         setStatus(t(`⚠️ 최신 동기화가 지연되어 직전 캐시 화면을 유지합니다. 서버를 다시 누르면 즉시 재시도합니다. · ${code}`, `⚠️ Refresh is delayed; the cached view remains usable. Click the server again to retry immediately. · ${code}`), 'warn');
       } else {
@@ -577,6 +598,8 @@
     twitch_limit_reached:t('Twitch 등록 한도에 도달했습니다.','Twitch alert limit reached.'),
     chzzk_limit_reached:t('CHZZK 등록 한도에 도달했습니다.','CHZZK alert limit reached.'),
     soop_limit_reached:t('SOOP 등록 한도에 도달했습니다.','SOOP alert limit reached.'),
+    worker_offline:t('봇이 재시작 중입니다. 잠시 후 다시 시도해주세요.','The bot is restarting. Please retry in a moment.'),
+    worker_timeout:t('봇 응답이 늦습니다. 잠시 후 다시 시도해주세요.','The bot is responding slowly. Please retry in a moment.'),
   }[code] || code);
   Object.keys(externalMeta).forEach(platform => document.getElementById(externalMeta[platform].button)?.addEventListener('click', () => addExternal(platform)));
 
@@ -604,14 +627,16 @@
 
   document.getElementById('commandSearch')?.addEventListener('input', () => { commandRenderLimit=120; renderCommands(); });
   document.getElementById('clearCommandSearch')?.addEventListener('click', () => { document.getElementById('commandSearch').value=''; activeCommandCategory='all'; commandRenderLimit=120; renderCommands(); });
-  document.getElementById('copyGifTest')?.addEventListener('click', () => copyText(t('!GIF테스트','!giftest')));
+  // !GIF테스트 is creator-only since the v20.4 developer lock; !이모지센터 is the public GIF hub.
+  document.getElementById('copyGifTest')?.addEventListener('click', () => copyText(t('!이모지센터','!emojicenter')));
   document.getElementById('dashboardLiveRefresh')?.addEventListener('click', refreshLiveFeed);
 
   async function boot() {
     applyLang();
     if (invalidApi) return;
     if (!session) {
-      setStatus(t('Discord로 로그인하면 관리 가능한 ABADDON 서버와 기능이 표시됩니다.', 'Sign in with Discord to see manageable ABADDON servers and features.'));
+      if (oauthError) setStatus(t(`Discord 로그인이 완료되지 않았습니다(${oauthError}). 다시 로그인해주세요.`, `Discord sign-in did not complete (${oauthError}). Please try again.`), 'warn');
+      else setStatus(t('Discord로 로그인하면 관리 가능한 ABADDON 서버와 기능이 표시됩니다.', 'Sign in with Discord to see manageable ABADDON servers and features.'));
       loginBtn.classList.remove('hidden'); logoutBtn.classList.add('hidden'); return;
     }
     loginBtn.classList.add('hidden'); logoutBtn.classList.remove('hidden');
@@ -629,9 +654,7 @@
       chooseGuild(guilds[0].id, guilds[0].name);
     } catch (err) {
       if (String(err.message).includes('login_required')) {
-        sessionStorage.removeItem('abaddon-session'); session='';
-        setStatus(t('로그인이 만료되었습니다. 다시 로그인해주세요.', 'Session expired. Please sign in again.'), 'warn');
-        loginBtn.classList.remove('hidden'); logoutBtn.classList.add('hidden');
+        expireSession();
       } else setStatus(t(`대시보드 연결 실패: ${err.message}`, `Dashboard connection failed: ${err.message}`), 'error');
     }
   }

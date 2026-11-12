@@ -77,57 +77,64 @@
 <p>노래는 전용 봇 <b>아바돈 뮤직봇</b>이 담당합니다. 음성 채널에 들어간 뒤 <code>!뮤직 재생 곡명</code>을 입력하세요. <code>반복</code>은 off/one/all, <code>자동재생</code>을 켜면 대기열이 끝난 뒤 비슷한 곡을 이어서 틀고, <code>대기시간</code>(1~60분)으로 노래가 끝난 뒤 나가기까지의 시간을 정합니다. 자동재생·대기시간·볼륨 변경은 서버 관리자 또는 DJ 역할이 필요합니다. <a href="dashboard.html">뮤직봇 초대하기 →</a></p>
 </section>
 <section class="command-cat">
+<h2>🆕 처음 시작 · v20.5</h2>
+<div class="cmd-list">
+<button class="cmd" data-copy="!시작">!시작</button>
+<button class="cmd" data-copy="!가입">!가입</button>
+<button class="cmd" data-copy="!서버순위">!서버순위</button>
+<button class="cmd" data-copy="!서버순위공개 끄기">!서버순위공개</button>
+<button class="cmd" data-copy="!추천">!추천</button>
+<button class="cmd" data-copy="!정보">!정보</button>
+</div>
+<p>처음 왔다면 <code>!시작</code> 하나면 됩니다. 가입부터 튜토리얼 보상까지 버튼으로 안내하며, 예전 <code>!처음</code> · <code>!첫10분</code>도 같은 화면을 엽니다. <code>!서버순위</code>는 이번 주 활동 생존자 수로 매긴 서버 대항 순위이고, 관리자는 <code>!서버순위공개 끄기</code>로 서버 이름을 숨길 수 있습니다.</p>
+</section>
+<section class="command-cat">
 <h2>☣️ 최신 핵심 기능 · v20.5.7</h2>
 <div class="cmd-list">
 <button class="cmd" data-copy="!솔로원정">!솔로원정</button>
-<button class="cmd" data-copy="!뮤직 재생 검색어">!뮤직 재생</button>
-<button class="cmd" data-copy="!뮤직 검색 검색어">!뮤직 검색</button>
-<button class="cmd" data-copy="!뮤직 큐">!뮤직 큐</button>
 <button class="cmd" data-copy="!알림설정">!알림설정</button>
 <button class="cmd" data-copy="!AI상태">!AI상태</button>
 <button class="cmd" data-copy="!AI도움">!AI도움</button>
-<button class="cmd" data-copy="!임시음성설정 게임이름">!임시음성설정</button>
 <button class="cmd" data-copy="!임시음성목록">!임시음성목록</button>
-<button class="cmd" data-copy="!수면방설정 수면방">!수면방설정</button>
 <button class="cmd" data-copy="!수면방상태">!수면방상태</button>
 </div>
-<p>100층 도트 로그라이크, 한·영 뮤직 플레이어, 선택형 AI 대화·개인 DM 알림, 게임별 다중 임시 음성 로비와 수면방을 반영했습니다. 임시 음성·수면방 설치 명령은 서버 관리 권한이 필요할 수 있습니다.</p>
+<p>100층 도트 로그라이크, 선택형 AI 대화·개인 DM 알림, 게임별 다중 임시 음성 로비와 수면방을 반영했습니다. 음성 로비·수면방 설치는 ABADDON 운영진 전용이며, 설치된 로비는 누구나 사용할 수 있습니다.</p>
 </section>
 <section class="command-cat">
 <h2>🌐 웹 대시보드 · v20.5.7</h2>
 <div class="cmd-list">
 <button class="cmd" data-copy="!웹기능센터">!웹기능센터</button>
 </div>
-<p>설정형 기능은 인증 웹 대시보드에서 관리하고, LIVE 명령어센터는 공개 명령 전체를 검색합니다. 게임 실행형 기능은 Discord에서 그대로 사용합니다.</p>
+<p>외부 알림 등록·삭제, 보안·로그·환영 설정, GIF 반응, 버튼 역할은 인증 <a href="dashboard.html">웹 대시보드</a>에서 관리하고, LIVE 명령어센터는 공개 명령 전체를 검색합니다. 게임 실행형 기능은 Discord에서 그대로 사용합니다.</p>
 </section>
 <section class="command-cat">
 <h2>📡 외부 방송 알림 · 4 플랫폼</h2>
 <div class="cmd-list">
 <button class="cmd" data-copy="!외부알림센터">!외부알림센터</button>
-<button class="cmd" data-copy="!치지직알림등록 채널URL #알림채널">!치지직알림등록</button>
-<button class="cmd" data-copy="!치지직알림목록">!치지직알림목록</button>
-<button class="cmd" data-copy="!숲알림등록 스트리머ID #알림채널">!숲알림등록</button>
-<button class="cmd" data-copy="!숲알림목록">!숲알림목록</button>
-<button class="cmd" data-copy="!외부API설정안내">!외부API설정안내</button>
+<button class="cmd" data-copy="!알림목록">!알림목록</button>
+<button class="cmd" data-copy="!외부알림상태">!외부알림상태</button>
+<button class="cmd" data-copy="!알림신청안내">!알림신청안내</button>
+<button class="cmd" data-copy="!알림신청 치지직 채널URL">!알림신청</button>
+<button class="cmd" data-copy="!내알림신청">!내알림신청</button>
+<button class="cmd" data-copy="!알림신청목록">!알림신청목록</button>
+<button class="cmd" data-copy="!알림승인 신청ID">!알림승인</button>
 </div>
-<p>YouTube·Twitch·치지직(CHZZK)·SOOP 알림을 통합 관리합니다. SOOP은 API 승인 후 <code>SOOP_CLIENT_ID</code>를 Bot Worker에 추가하면 활성화됩니다.</p>
+<p>YouTube·Twitch·치지직(CHZZK)·SOOP 알림 등록·삭제는 서버 관리자가 <a href="dashboard.html">웹 대시보드</a> [외부 알림] 탭에서 합니다. 일반 멤버는 <code>!알림신청</code>으로 요청하고 운영진이 <code>!알림승인</code>으로 승인합니다. SOOP은 API 승인 후 <code>SOOP_CLIENT_ID</code>를 Bot Worker에 추가하면 활성화됩니다.</p>
 </section>
 <section class="command-cat">
-<h2>🛰️ Discord 네이티브 v19</h2>
+<h2>🛰️ Discord 네이티브</h2>
 <div class="cmd-list">
 <button class="cmd" data-copy="!디스코드센터">!디스코드센터</button>
 <button class="cmd" data-copy="!투표 오늘 월드보스 갈까요?">!투표</button>
+<button class="cmd" data-copy="!경품">!경품</button>
+<button class="cmd" data-copy="!건의">!건의</button>
 <button class="cmd" data-copy="!이벤트만들기">!이벤트만들기</button>
 <button class="cmd" data-copy="!일정이벤트 일정ID">!일정이벤트</button>
-<button class="cmd" data-copy="!스레드자동 ON">!스레드자동 ON</button>
-<button class="cmd" data-copy="!건의포럼 ON #포럼">!건의포럼 ON</button>
 <button class="cmd" data-copy="!사운드보드">!사운드보드</button>
-<button class="cmd" data-copy="!디스코드자동관리 ON">!디스코드자동관리 ON</button>
 <button class="cmd" data-copy="!알림 ON">!알림 ON</button>
 <button class="cmd" data-copy="!개인설치">!개인설치</button>
-<button class="cmd" data-copy="!외부API설정안내">!외부API설정안내</button>
 </div>
-<p>토글 기능은 ON/OFF를 기본 표기로 사용하며 기존 켜기/끄기도 호환됩니다.</p>
+<p>토글 기능은 ON/OFF를 기본 표기로 사용하며 기존 켜기/끄기도 호환됩니다. 이벤트 만들기·일정 연동은 운영진 권한이 필요합니다.</p>
 </section>
 <section class="command-cat">
 <h2>🔎 스마트 기능 탐색</h2>
@@ -158,11 +165,11 @@
 <h2>🧿 메인 RPG</h2>
 <div class="cmd-list">
 <button class="cmd" data-copy="!아바돈">!아바돈</button>
-<button class="cmd" data-copy="!초보생존">!초보생존</button>
 <button class="cmd" data-copy="!오늘의루프">!오늘의루프</button>
 <button class="cmd" data-copy="!스토리나침반">!스토리나침반</button>
 <button class="cmd" data-copy="!최종일식">!최종일식</button>
 <button class="cmd" data-copy="!솔로원정">!솔로원정</button>
+<button class="cmd" data-copy="!단말기">!단말기</button>
 </div>
 </article>
 <article class="command-cat">
@@ -170,8 +177,9 @@
 <div class="cmd-list">
 <button class="cmd" data-copy="!생산센터">!생산센터</button>
 <button class="cmd" data-copy="!장비">!장비</button>
-<button class="cmd" data-copy="!제작">!제작</button>
+<button class="cmd" data-copy="!제작목록">!제작목록</button>
 <button class="cmd" data-copy="!카지노">!카지노</button>
+<button class="cmd" data-copy="!카드게임">!카드게임</button>
 <button class="cmd" data-copy="!도박정보">!도박정보</button>
 <button class="cmd" data-copy="!탈것도감">!탈것도감</button>
 </div>
@@ -182,6 +190,7 @@
 <button class="cmd" data-copy="!살아있는세계">!살아있는세계</button>
 <button class="cmd" data-copy="!오늘의세계사건">!오늘의세계사건</button>
 <button class="cmd" data-copy="!의뢰소">!의뢰소</button>
+<button class="cmd" data-copy="!도시">!도시</button>
 <button class="cmd" data-copy="!도시꾸미기">!도시꾸미기</button>
 <button class="cmd" data-copy="!도시효과">!도시효과</button>
 <button class="cmd" data-copy="!세력평판">!세력평판</button>
